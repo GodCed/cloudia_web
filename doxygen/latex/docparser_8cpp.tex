@@ -1,0 +1,167 @@
+\hypertarget{docparser_8cpp}{}\section{Référence du fichier src/docparser.cpp}
+\label{docparser_8cpp}\index{src/docparser.\+cpp@{src/docparser.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$qfile.\+h$>$}\\*
+{\ttfamily \#include $<$qfileinfo.\+h$>$}\\*
+{\ttfamily \#include $<$qcstring.\+h$>$}\\*
+{\ttfamily \#include $<$qstack.\+h$>$}\\*
+{\ttfamily \#include $<$qdict.\+h$>$}\\*
+{\ttfamily \#include $<$qregexp.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}doxygen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debug.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pagedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}docparser.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doctokenizer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cmdmapper.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}printdocvisitor.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}section.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}searchindex.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}language.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}portable.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cite.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}arguments.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}vhdldocgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}groupdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}classlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}filedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}memberdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}namespacedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}reflist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}formula.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}growbuf.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}markdown.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}htmlentity.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_doc_parser_context}{Doc\+Parser\+Context}
+\item 
+struct \hyperlink{struct_active_row_span}{Active\+Row\+Span}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{docparser_8cpp_a32adf79142f0a426b5e782fb7cd4cad3}{D\+B\+G}(x)~do \{\} \hyperlink{xmlcode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{while}(0)
+\item 
+\#define \hyperlink{docparser_8cpp_a70e94735e6ecdae48725e0c4254a2689}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+A\+S\+S\+E\+R\+T}(x)~do \{\} \hyperlink{xmlcode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{while}(0)
+\item 
+\#define \hyperlink{docparser_8cpp_ae818631ff5b78ea72bf803ddaf39e987}{C\+H\+E\+C\+K\+\_\+\+F\+O\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D}(str,  action)
+\end{DoxyCompactItemize}
+\subsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{struct_active_row_span}{Active\+Row\+Span} $>$ \hyperlink{docparser_8cpp_a486358ab2c74d18909cc23eebc0c7b0d}{Row\+Span\+List}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_root}{Doc\+Root} $\ast$ \hyperlink{docparser_8cpp_a1f525f879c340ff8fbef1bda54d70853}{validating\+Parse\+Doc} (const char $\ast$file\+Name, int start\+Line, \hyperlink{class_definition}{Definition} $\ast$ctx, \hyperlink{class_member_def}{Member\+Def} $\ast$md, const char $\ast$input, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} index\+Words, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} is\+Example, const char $\ast$example\+Name, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} single\+Line, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} link\+From\+Index)
+\item 
+\hyperlink{class_doc_text}{Doc\+Text} $\ast$ \hyperlink{docparser_8cpp_ab262357e441414087d286c794d228c8b}{validating\+Parse\+Text} (const char $\ast$input)
+\item 
+void \hyperlink{docparser_8cpp_a65f2cff3b8aaf536ddccc75b44811a0c}{doc\+Find\+Sections} (const char $\ast$input, \hyperlink{class_definition}{Definition} $\ast$\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}, \hyperlink{class_member_group}{Member\+Group} $\ast$mg, const char $\ast$file\+Name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{docparser_8cpp_ae818631ff5b78ea72bf803ddaf39e987}{}\index{docparser.\+cpp@{docparser.\+cpp}!C\+H\+E\+C\+K\+\_\+\+F\+O\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D@{C\+H\+E\+C\+K\+\_\+\+F\+O\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D}}
+\index{C\+H\+E\+C\+K\+\_\+\+F\+O\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D@{C\+H\+E\+C\+K\+\_\+\+F\+O\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D}!docparser.\+cpp@{docparser.\+cpp}}
+\subsubsection[{C\+H\+E\+C\+K\+\_\+\+F\+O\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K\+\_\+\+F\+O\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D(
+\begin{DoxyParamCaption}
+\item[{}]{str, }
+\item[{}]{action}
+\end{DoxyParamCaption}
+)}\label{docparser_8cpp_ae818631ff5b78ea72bf803ddaf39e987}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \textcolor{keywordflow}{if} ((\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}+\textcolor{keyword}{sizeof}(str)<len) && \hyperlink{qcstring_8h_ad8f2d3f8270302405ca8e92c771d176a}{qstrncmp}(data+\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}+1,str,\textcolor{keyword}{sizeof}(str)-1)==0) \(\backslash\)
+   \{ \hyperlink{058__bracket__recursion_8tcl_a2aaa92757686acea102cba3475f0c13b}{j}=\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}+\textcolor{keyword}{sizeof}(str); action; \} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\hypertarget{docparser_8cpp_a32adf79142f0a426b5e782fb7cd4cad3}{}\index{docparser.\+cpp@{docparser.\+cpp}!D\+B\+G@{D\+B\+G}}
+\index{D\+B\+G@{D\+B\+G}!docparser.\+cpp@{docparser.\+cpp}}
+\subsubsection[{D\+B\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+B\+G(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~do \{\} {\bf while}(0)}\label{docparser_8cpp_a32adf79142f0a426b5e782fb7cd4cad3}
+\hypertarget{docparser_8cpp_a70e94735e6ecdae48725e0c4254a2689}{}\index{docparser.\+cpp@{docparser.\+cpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+A\+S\+S\+E\+R\+T@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+A\+S\+S\+E\+R\+T}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+A\+S\+S\+E\+R\+T@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+A\+S\+S\+E\+R\+T}!docparser.\+cpp@{docparser.\+cpp}}
+\subsubsection[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+A\+S\+S\+E\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+A\+S\+S\+E\+R\+T(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~do \{\} {\bf while}(0)}\label{docparser_8cpp_a70e94735e6ecdae48725e0c4254a2689}
+
+
+\subsection{Documentation des définitions de type}
+\hypertarget{docparser_8cpp_a486358ab2c74d18909cc23eebc0c7b0d}{}\index{docparser.\+cpp@{docparser.\+cpp}!Row\+Span\+List@{Row\+Span\+List}}
+\index{Row\+Span\+List@{Row\+Span\+List}!docparser.\+cpp@{docparser.\+cpp}}
+\subsubsection[{Row\+Span\+List}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Q\+List}$<${\bf Active\+Row\+Span}$>$ {\bf Row\+Span\+List}}\label{docparser_8cpp_a486358ab2c74d18909cc23eebc0c7b0d}
+List of \hyperlink{struct_active_row_span}{Active\+Row\+Span} classes. 
+
+\subsection{Documentation des fonctions}
+\hypertarget{docparser_8cpp_a65f2cff3b8aaf536ddccc75b44811a0c}{}\index{docparser.\+cpp@{docparser.\+cpp}!doc\+Find\+Sections@{doc\+Find\+Sections}}
+\index{doc\+Find\+Sections@{doc\+Find\+Sections}!docparser.\+cpp@{docparser.\+cpp}}
+\subsubsection[{doc\+Find\+Sections(const char $\ast$input, Definition $\ast$d, Member\+Group $\ast$mg, const char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void doc\+Find\+Sections (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{input, }
+\item[{{\bf Definition} $\ast$}]{d, }
+\item[{{\bf Member\+Group} $\ast$}]{m, }
+\item[{const char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{docparser_8cpp_a65f2cff3b8aaf536ddccc75b44811a0c}
+Searches for section and anchor commands in the input \hypertarget{docparser_8cpp_a1f525f879c340ff8fbef1bda54d70853}{}\index{docparser.\+cpp@{docparser.\+cpp}!validating\+Parse\+Doc@{validating\+Parse\+Doc}}
+\index{validating\+Parse\+Doc@{validating\+Parse\+Doc}!docparser.\+cpp@{docparser.\+cpp}}
+\subsubsection[{validating\+Parse\+Doc(const char $\ast$file\+Name, int start\+Line, Definition $\ast$ctx, Member\+Def $\ast$md, const char $\ast$input, bool index\+Words, bool is\+Example, const char $\ast$example\+Name, bool single\+Line, bool link\+From\+Index)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Doc\+Root}$\ast$ validating\+Parse\+Doc (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name, }
+\item[{int}]{start\+Line, }
+\item[{{\bf Definition} $\ast$}]{context, }
+\item[{{\bf Member\+Def} $\ast$}]{md, }
+\item[{const char $\ast$}]{input, }
+\item[{{\bf bool}}]{index\+Words, }
+\item[{{\bf bool}}]{is\+Example, }
+\item[{const char $\ast$}]{example\+Name = {\ttfamily 0}, }
+\item[{{\bf bool}}]{single\+Line = {\ttfamily {\bf F\+A\+L\+S\+E}}, }
+\item[{{\bf bool}}]{link\+From\+Index = {\ttfamily {\bf F\+A\+L\+S\+E}}}
+\end{DoxyParamCaption}
+)}\label{docparser_8cpp_a1f525f879c340ff8fbef1bda54d70853}
+Main entry point for the documentation parser. 
+\begin{DoxyParams}{Paramètres}
+{\em file\+Name} & File in which the documentation block is found (or the name of the example file in case is\+Example is T\+R\+U\+E). \\
+\hline
+{\em start\+Line} & Line at which the documentation block is found. \\
+\hline
+{\em context} & Class or namespace to which this block belongs. \\
+\hline
+{\em md} & Member definition to which the documentation belongs. Can be 0. \\
+\hline
+{\em input} & \hyperlink{class_string}{String} representation of the documentation block. \\
+\hline
+{\em index\+Words} & Indicates whether or not words should be put in the search index. \\
+\hline
+{\em is\+Example} & T\+R\+U\+E if the documentation belongs to an example. \\
+\hline
+{\em example\+Name} & Base name of the example file (0 if is\+Example is F\+A\+L\+S\+E). \\
+\hline
+{\em single\+Line} & Output should be presented on a single line, so without starting a new paragraph at the end. \\
+\hline
+{\em link\+From\+Index} & T\+R\+U\+E if the documentation is generated from an index page. In this case context is not used to determine the relative path when making a link. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Root node of the abstract syntax tree. Ownership of the pointer is handed over to the caller. 
+\end{DoxyReturn}
+\hypertarget{docparser_8cpp_ab262357e441414087d286c794d228c8b}{}\index{docparser.\+cpp@{docparser.\+cpp}!validating\+Parse\+Text@{validating\+Parse\+Text}}
+\index{validating\+Parse\+Text@{validating\+Parse\+Text}!docparser.\+cpp@{docparser.\+cpp}}
+\subsubsection[{validating\+Parse\+Text(const char $\ast$input)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Doc\+Text}$\ast$ validating\+Parse\+Text (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{input}
+\end{DoxyParamCaption}
+)}\label{docparser_8cpp_ab262357e441414087d286c794d228c8b}
+Main entry point for parsing simple text fragments. These fragments are limited to words, whitespace and symbols. 

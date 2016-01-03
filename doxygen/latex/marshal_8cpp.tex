@@ -1,0 +1,486 @@
+\hypertarget{marshal_8cpp}{}\section{Référence du fichier src/marshal.cpp}
+\label{marshal_8cpp}\index{src/marshal.\+cpp@{src/marshal.\+cpp}}
+{\ttfamily \#include $<$qfile.\+h$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}sortdict.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}marshal.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}entry.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}section.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}memberlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}definition.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}groupdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}example.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}arguments.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{marshal_8cpp_ab7770a7f0d95e67620ff6ed347a07a56}{H\+E\+A\+D\+E\+R}~(\textquotesingle{}\hyperlink{class_d}{D}\textquotesingle{}$<$$<$24)+(\textquotesingle{}O\textquotesingle{}$<$$<$16)+(\textquotesingle{}X\textquotesingle{}$<$$<$8)+\textquotesingle{}!\textquotesingle{}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{marshal_8cpp_ac84b090bca1a8b427e30aa45b91b0152}{marshal\+Int} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, int v)
+\item 
+void \hyperlink{marshal_8cpp_a9b70754078d8d25e53cea4163861d0b6}{marshal\+U\+Int} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} v)
+\item 
+void \hyperlink{marshal_8cpp_a5769b9e33a81fc611e81d923eccfdc4c}{marshal\+U\+Int64} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{qglobal_8h_a29940ae63ec06c9998bba873e25407ad}{uint64} v)
+\item 
+void \hyperlink{marshal_8cpp_aa5db1f451e1fa0c9c62b186a4c076723}{marshal\+Bool} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b})
+\item 
+void \hyperlink{marshal_8cpp_a3c1647b7b22e4f3def34827e2e2b9197}{marshal\+Q\+C\+String} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, const \hyperlink{class_q_c_string}{Q\+C\+String} \&str)
+\item 
+void \hyperlink{marshal_8cpp_a96024fc062c53af7f18eaccd3f2b872f}{marshal\+Q\+G\+String} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, const \hyperlink{class_q_g_string}{Q\+G\+String} \&str)
+\item 
+void \hyperlink{marshal_8cpp_a84124e6d8601d35b614be5a90e830a4e}{marshal\+Argument\+List} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{class_argument_list}{Argument\+List} $\ast$arg\+List)
+\item 
+void \hyperlink{marshal_8cpp_a02845e404c81106714eeef74afea1c30}{marshal\+Argument\+Lists} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{class_argument_list}{Argument\+List} $>$ $\ast$arg\+Lists)
+\item 
+void \hyperlink{marshal_8cpp_afa2c6746b4717eedb4f25a70c3850cea}{marshal\+Base\+Info\+List} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{struct_base_info}{Base\+Info} $>$ $\ast$base\+List)
+\item 
+void \hyperlink{marshal_8cpp_ae62c8d5fa49b72f88e5bbcb41a93bba0}{marshal\+Grouping\+List} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{struct_grouping}{Grouping} $>$ $\ast$groups)
+\item 
+void \hyperlink{marshal_8cpp_a3d106e8564364051c90a83dfdd063306}{marshal\+Section\+Info\+List} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{struct_section_info}{Section\+Info} $>$ $\ast$anchors)
+\item 
+void \hyperlink{marshal_8cpp_a056d7b89c3c39dbd1af6f9eb28f1db19}{marshal\+Item\+Info\+List} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{struct_list_item_info}{List\+Item\+Info} $>$ $\ast$sli)
+\item 
+void \hyperlink{marshal_8cpp_ada5049b8b4a842ec632f54db37c50462}{marshal\+Obj\+Pointer} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, void $\ast$obj)
+\item 
+void \hyperlink{marshal_8cpp_afdf5dc85005a565b4b80cba7db74a63c}{marshal\+Section\+Dict} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{class_section_dict}{Section\+Dict} $\ast$sections)
+\item 
+void \hyperlink{marshal_8cpp_a664aecfb1775a4cf9ff94ba389b828e6}{marshal\+Member\+S\+Dict} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{class_member_s_dict}{Member\+S\+Dict} $\ast$member\+S\+Dict)
+\item 
+void \hyperlink{marshal_8cpp_af76cd1ec9eb73f5a4cbad06c48c27f0f}{marshal\+Doc\+Info} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{struct_doc_info}{Doc\+Info} $\ast$doc\+Info)
+\item 
+void \hyperlink{marshal_8cpp_a96092cb7501de5bd93cbda3c2b96d546}{marshal\+Brief\+Info} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{struct_brief_info}{Brief\+Info} $\ast$brief\+Info)
+\item 
+void \hyperlink{marshal_8cpp_a207fb0a43b496dcf79a06701b57c93c5}{marshal\+Body\+Info} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{struct_body_info}{Body\+Info} $\ast$body\+Info)
+\item 
+void \hyperlink{marshal_8cpp_a87b42ee40f1aebe170eef5b27e15a4c5}{marshal\+Group\+List} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{class_group_list}{Group\+List} $\ast$group\+List)
+\item 
+void \hyperlink{marshal_8cpp_a8113ab36bebb2ffd0602b5fc7f004ca1}{marshal\+Member\+List} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{class_member_list}{Member\+List} $\ast$ml)
+\item 
+void \hyperlink{marshal_8cpp_a9bb73b50ace476f2108d5189675b450f}{marshal\+Example\+S\+Dict} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{class_example_s_dict}{Example\+S\+Dict} $\ast$ed)
+\item 
+void \hyperlink{marshal_8cpp_a26813d97b71c2ef287e057b2f5530164}{marshal\+Member\+Lists} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{class_s_dict}{S\+Dict}$<$ \hyperlink{class_member_list}{Member\+List} $>$ $\ast$mls)
+\item 
+void \hyperlink{marshal_8cpp_a185602a643d5e8f3b6f0ae03ca99852c}{marshal\+Entry} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{class_entry}{Entry} $\ast$\hyperlink{060__command__switch_8tcl_aff65a51a703804e0ad1adbcfd76c86f8}{e})
+\item 
+void \hyperlink{marshal_8cpp_ae4a34dbf2a47e8d951f44561701f7d14}{marshal\+Entry\+Tree} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{class_entry}{Entry} $\ast$\hyperlink{060__command__switch_8tcl_aff65a51a703804e0ad1adbcfd76c86f8}{e})
+\item 
+int \hyperlink{marshal_8cpp_a255d4c42f0fa053036e5746bf14d7eea}{unmarshal\+Int} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{marshal_8cpp_a54d89e92a9d11449c9c5b213681eea85}{unmarshal\+U\+Int} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{qglobal_8h_a29940ae63ec06c9998bba873e25407ad}{uint64} \hyperlink{marshal_8cpp_a37c333c4d2237c486fbc444da438228f}{unmarshal\+U\+Int64} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{marshal_8cpp_a2caf6352c2d7698a031e002a5d925432}{unmarshal\+Bool} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{marshal_8cpp_ae5a6fd22ea172db6618676276751b574}{unmarshal\+Q\+C\+String} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_q_g_string}{Q\+G\+String} \hyperlink{marshal_8cpp_a91f63ee894ca3b3e77acfd57c7c3e841}{unmarshal\+Q\+G\+String} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_argument_list}{Argument\+List} $\ast$ \hyperlink{marshal_8cpp_abae504ddd3883a74185762be17f8b1d3}{unmarshal\+Argument\+List} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{class_argument_list}{Argument\+List} $>$ $\ast$ \hyperlink{marshal_8cpp_aed4cbcaefb61e43c1b8088f210aea56e}{unmarshal\+Argument\+Lists} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{struct_base_info}{Base\+Info} $>$ $\ast$ \hyperlink{marshal_8cpp_a35b9b88b788180c1e87fc0938f6d0ee8}{unmarshal\+Base\+Info\+List} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{struct_grouping}{Grouping} $>$ $\ast$ \hyperlink{marshal_8cpp_a290cc79b7f8e523f41e81543fd16f7ac}{unmarshal\+Grouping\+List} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{struct_section_info}{Section\+Info} $>$ $\ast$ \hyperlink{marshal_8cpp_a7f782e8d49b8db8559e39c3f09425c53}{unmarshal\+Section\+Info\+List} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{struct_list_item_info}{List\+Item\+Info} $>$ $\ast$ \hyperlink{marshal_8cpp_aa0dd7a23f5df2a3eb0e0833ef281ca06}{unmarshal\+Item\+Info\+List} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+void $\ast$ \hyperlink{marshal_8cpp_a05df47a88dbdb3801f53f4ff1fb56924}{unmarshal\+Obj\+Pointer} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_section_dict}{Section\+Dict} $\ast$ \hyperlink{marshal_8cpp_aa0228247f6a8b1b7dcb4175ee153592f}{unmarshal\+Section\+Dict} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_member_s_dict}{Member\+S\+Dict} $\ast$ \hyperlink{marshal_8cpp_af822b0fa8c5cfbdb5905b4f6d33478da}{unmarshal\+Member\+S\+Dict} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{struct_doc_info}{Doc\+Info} $\ast$ \hyperlink{marshal_8cpp_a9a57fb24cf8c6ec3e40eeede849872d0}{unmarshal\+Doc\+Info} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{struct_brief_info}{Brief\+Info} $\ast$ \hyperlink{marshal_8cpp_ac75f74abd69f013d6f10d831e305d2ea}{unmarshal\+Brief\+Info} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{struct_body_info}{Body\+Info} $\ast$ \hyperlink{marshal_8cpp_a9c5457eaf8116c000ffe69e259ed54c5}{unmarshal\+Body\+Info} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_group_list}{Group\+List} $\ast$ \hyperlink{marshal_8cpp_a40b02cffa1abd6b64ddf4edb4f9313d4}{unmarshal\+Group\+List} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_member_list}{Member\+List} $\ast$ \hyperlink{marshal_8cpp_a6aa68d597ae5c8b86a0000e93e0dfd84}{unmarshal\+Member\+List} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_example_s_dict}{Example\+S\+Dict} $\ast$ \hyperlink{marshal_8cpp_a216a37cc315a7717178205902f6e4207}{unmarshal\+Example\+S\+Dict} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_s_dict}{S\+Dict}$<$ \hyperlink{class_member_list}{Member\+List} $>$ $\ast$ \hyperlink{marshal_8cpp_a795faa051fbf5d8893a21c2d6b7aedbc}{unmarshal\+Member\+Lists} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_entry}{Entry} $\ast$ \hyperlink{marshal_8cpp_a9493009573b4ea1d93564a055379cbf0}{unmarshal\+Entry} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_entry}{Entry} $\ast$ \hyperlink{marshal_8cpp_a67a83de01f7ea58d576ab00c222f3456}{unmarshal\+Entry\+Tree} (\hyperlink{class_storage_intf}{Storage\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{marshal_8cpp_ab7770a7f0d95e67620ff6ed347a07a56}{}\index{marshal.\+cpp@{marshal.\+cpp}!H\+E\+A\+D\+E\+R@{H\+E\+A\+D\+E\+R}}
+\index{H\+E\+A\+D\+E\+R@{H\+E\+A\+D\+E\+R}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{H\+E\+A\+D\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+E\+A\+D\+E\+R~(\textquotesingle{}{\bf D}\textquotesingle{}$<$$<$24)+(\textquotesingle{}O\textquotesingle{}$<$$<$16)+(\textquotesingle{}X\textquotesingle{}$<$$<$8)+\textquotesingle{}!\textquotesingle{}}\label{marshal_8cpp_ab7770a7f0d95e67620ff6ed347a07a56}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{marshal_8cpp_a84124e6d8601d35b614be5a90e830a4e}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Argument\+List@{marshal\+Argument\+List}}
+\index{marshal\+Argument\+List@{marshal\+Argument\+List}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Argument\+List(\+Storage\+Intf $\ast$s, Argument\+List $\ast$arg\+List)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Argument\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf Argument\+List} $\ast$}]{arg\+List}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a84124e6d8601d35b614be5a90e830a4e}
+\hypertarget{marshal_8cpp_a02845e404c81106714eeef74afea1c30}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Argument\+Lists@{marshal\+Argument\+Lists}}
+\index{marshal\+Argument\+Lists@{marshal\+Argument\+Lists}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Argument\+Lists(\+Storage\+Intf $\ast$s, Q\+List$<$ Argument\+List $>$ $\ast$arg\+Lists)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Argument\+Lists (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf Q\+List}$<$ {\bf Argument\+List} $>$ $\ast$}]{arg\+Lists}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a02845e404c81106714eeef74afea1c30}
+\hypertarget{marshal_8cpp_afa2c6746b4717eedb4f25a70c3850cea}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Base\+Info\+List@{marshal\+Base\+Info\+List}}
+\index{marshal\+Base\+Info\+List@{marshal\+Base\+Info\+List}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Base\+Info\+List(\+Storage\+Intf $\ast$s, Q\+List$<$ Base\+Info $>$ $\ast$base\+List)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Base\+Info\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf Q\+List}$<$ {\bf Base\+Info} $>$ $\ast$}]{base\+List}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_afa2c6746b4717eedb4f25a70c3850cea}
+\hypertarget{marshal_8cpp_a207fb0a43b496dcf79a06701b57c93c5}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Body\+Info@{marshal\+Body\+Info}}
+\index{marshal\+Body\+Info@{marshal\+Body\+Info}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Body\+Info(\+Storage\+Intf $\ast$s, Body\+Info $\ast$body\+Info)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Body\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf Body\+Info} $\ast$}]{body\+Info}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a207fb0a43b496dcf79a06701b57c93c5}
+\hypertarget{marshal_8cpp_aa5db1f451e1fa0c9c62b186a4c076723}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Bool@{marshal\+Bool}}
+\index{marshal\+Bool@{marshal\+Bool}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Bool(\+Storage\+Intf $\ast$s, bool b)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Bool (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf bool}}]{b}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_aa5db1f451e1fa0c9c62b186a4c076723}
+\hypertarget{marshal_8cpp_a96092cb7501de5bd93cbda3c2b96d546}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Brief\+Info@{marshal\+Brief\+Info}}
+\index{marshal\+Brief\+Info@{marshal\+Brief\+Info}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Brief\+Info(\+Storage\+Intf $\ast$s, Brief\+Info $\ast$brief\+Info)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Brief\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf Brief\+Info} $\ast$}]{brief\+Info}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a96092cb7501de5bd93cbda3c2b96d546}
+\hypertarget{marshal_8cpp_af76cd1ec9eb73f5a4cbad06c48c27f0f}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Doc\+Info@{marshal\+Doc\+Info}}
+\index{marshal\+Doc\+Info@{marshal\+Doc\+Info}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Doc\+Info(\+Storage\+Intf $\ast$s, Doc\+Info $\ast$doc\+Info)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Doc\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf Doc\+Info} $\ast$}]{doc\+Info}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_af76cd1ec9eb73f5a4cbad06c48c27f0f}
+\hypertarget{marshal_8cpp_a185602a643d5e8f3b6f0ae03ca99852c}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Entry@{marshal\+Entry}}
+\index{marshal\+Entry@{marshal\+Entry}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Entry(\+Storage\+Intf $\ast$s, Entry $\ast$e)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Entry (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf Entry} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a185602a643d5e8f3b6f0ae03ca99852c}
+\hypertarget{marshal_8cpp_ae4a34dbf2a47e8d951f44561701f7d14}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Entry\+Tree@{marshal\+Entry\+Tree}}
+\index{marshal\+Entry\+Tree@{marshal\+Entry\+Tree}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Entry\+Tree(\+Storage\+Intf $\ast$s, Entry $\ast$e)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Entry\+Tree (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf Entry} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_ae4a34dbf2a47e8d951f44561701f7d14}
+\hypertarget{marshal_8cpp_a9bb73b50ace476f2108d5189675b450f}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Example\+S\+Dict@{marshal\+Example\+S\+Dict}}
+\index{marshal\+Example\+S\+Dict@{marshal\+Example\+S\+Dict}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Example\+S\+Dict(\+Storage\+Intf $\ast$s, Example\+S\+Dict $\ast$ed)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Example\+S\+Dict (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf Example\+S\+Dict} $\ast$}]{ed}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a9bb73b50ace476f2108d5189675b450f}
+\hypertarget{marshal_8cpp_ae62c8d5fa49b72f88e5bbcb41a93bba0}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Grouping\+List@{marshal\+Grouping\+List}}
+\index{marshal\+Grouping\+List@{marshal\+Grouping\+List}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Grouping\+List(\+Storage\+Intf $\ast$s, Q\+List$<$ Grouping $>$ $\ast$groups)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Grouping\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf Q\+List}$<$ {\bf Grouping} $>$ $\ast$}]{groups}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_ae62c8d5fa49b72f88e5bbcb41a93bba0}
+\hypertarget{marshal_8cpp_a87b42ee40f1aebe170eef5b27e15a4c5}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Group\+List@{marshal\+Group\+List}}
+\index{marshal\+Group\+List@{marshal\+Group\+List}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Group\+List(\+Storage\+Intf $\ast$s, Group\+List $\ast$group\+List)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Group\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf Group\+List} $\ast$}]{group\+List}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a87b42ee40f1aebe170eef5b27e15a4c5}
+\hypertarget{marshal_8cpp_ac84b090bca1a8b427e30aa45b91b0152}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Int@{marshal\+Int}}
+\index{marshal\+Int@{marshal\+Int}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Int(\+Storage\+Intf $\ast$s, int v)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Int (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{int}]{v}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_ac84b090bca1a8b427e30aa45b91b0152}
+\hypertarget{marshal_8cpp_a056d7b89c3c39dbd1af6f9eb28f1db19}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Item\+Info\+List@{marshal\+Item\+Info\+List}}
+\index{marshal\+Item\+Info\+List@{marshal\+Item\+Info\+List}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Item\+Info\+List(\+Storage\+Intf $\ast$s, Q\+List$<$ List\+Item\+Info $>$ $\ast$sli)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Item\+Info\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf Q\+List}$<$ {\bf List\+Item\+Info} $>$ $\ast$}]{sli}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a056d7b89c3c39dbd1af6f9eb28f1db19}
+\hypertarget{marshal_8cpp_a8113ab36bebb2ffd0602b5fc7f004ca1}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Member\+List@{marshal\+Member\+List}}
+\index{marshal\+Member\+List@{marshal\+Member\+List}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Member\+List(\+Storage\+Intf $\ast$s, Member\+List $\ast$ml)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Member\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf Member\+List} $\ast$}]{ml}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a8113ab36bebb2ffd0602b5fc7f004ca1}
+\hypertarget{marshal_8cpp_a26813d97b71c2ef287e057b2f5530164}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Member\+Lists@{marshal\+Member\+Lists}}
+\index{marshal\+Member\+Lists@{marshal\+Member\+Lists}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Member\+Lists(\+Storage\+Intf $\ast$s, S\+Dict$<$ Member\+List $>$ $\ast$mls)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Member\+Lists (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf S\+Dict}$<$ {\bf Member\+List} $>$ $\ast$}]{mls}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a26813d97b71c2ef287e057b2f5530164}
+\hypertarget{marshal_8cpp_a664aecfb1775a4cf9ff94ba389b828e6}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Member\+S\+Dict@{marshal\+Member\+S\+Dict}}
+\index{marshal\+Member\+S\+Dict@{marshal\+Member\+S\+Dict}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Member\+S\+Dict(\+Storage\+Intf $\ast$s, Member\+S\+Dict $\ast$member\+S\+Dict)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Member\+S\+Dict (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf Member\+S\+Dict} $\ast$}]{member\+S\+Dict}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a664aecfb1775a4cf9ff94ba389b828e6}
+\hypertarget{marshal_8cpp_ada5049b8b4a842ec632f54db37c50462}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Obj\+Pointer@{marshal\+Obj\+Pointer}}
+\index{marshal\+Obj\+Pointer@{marshal\+Obj\+Pointer}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Obj\+Pointer(\+Storage\+Intf $\ast$s, void $\ast$obj)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Obj\+Pointer (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{void $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_ada5049b8b4a842ec632f54db37c50462}
+\hypertarget{marshal_8cpp_a3c1647b7b22e4f3def34827e2e2b9197}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Q\+C\+String@{marshal\+Q\+C\+String}}
+\index{marshal\+Q\+C\+String@{marshal\+Q\+C\+String}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Q\+C\+String(\+Storage\+Intf $\ast$s, const Q\+C\+String \&str)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Q\+C\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{const {\bf Q\+C\+String} \&}]{str}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a3c1647b7b22e4f3def34827e2e2b9197}
+\hypertarget{marshal_8cpp_a96024fc062c53af7f18eaccd3f2b872f}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Q\+G\+String@{marshal\+Q\+G\+String}}
+\index{marshal\+Q\+G\+String@{marshal\+Q\+G\+String}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Q\+G\+String(\+Storage\+Intf $\ast$s, const Q\+G\+String \&str)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Q\+G\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{const {\bf Q\+G\+String} \&}]{str}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a96024fc062c53af7f18eaccd3f2b872f}
+\hypertarget{marshal_8cpp_afdf5dc85005a565b4b80cba7db74a63c}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Section\+Dict@{marshal\+Section\+Dict}}
+\index{marshal\+Section\+Dict@{marshal\+Section\+Dict}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Section\+Dict(\+Storage\+Intf $\ast$s, Section\+Dict $\ast$sections)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Section\+Dict (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf Section\+Dict} $\ast$}]{sections}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_afdf5dc85005a565b4b80cba7db74a63c}
+\hypertarget{marshal_8cpp_a3d106e8564364051c90a83dfdd063306}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+Section\+Info\+List@{marshal\+Section\+Info\+List}}
+\index{marshal\+Section\+Info\+List@{marshal\+Section\+Info\+List}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+Section\+Info\+List(\+Storage\+Intf $\ast$s, Q\+List$<$ Section\+Info $>$ $\ast$anchors)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+Section\+Info\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf Q\+List}$<$ {\bf Section\+Info} $>$ $\ast$}]{anchors}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a3d106e8564364051c90a83dfdd063306}
+\hypertarget{marshal_8cpp_a9b70754078d8d25e53cea4163861d0b6}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+U\+Int@{marshal\+U\+Int}}
+\index{marshal\+U\+Int@{marshal\+U\+Int}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+U\+Int(\+Storage\+Intf $\ast$s, uint v)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+U\+Int (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf uint}}]{v}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a9b70754078d8d25e53cea4163861d0b6}
+\hypertarget{marshal_8cpp_a5769b9e33a81fc611e81d923eccfdc4c}{}\index{marshal.\+cpp@{marshal.\+cpp}!marshal\+U\+Int64@{marshal\+U\+Int64}}
+\index{marshal\+U\+Int64@{marshal\+U\+Int64}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{marshal\+U\+Int64(\+Storage\+Intf $\ast$s, uint64 v)}]{\setlength{\rightskip}{0pt plus 5cm}void marshal\+U\+Int64 (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s, }
+\item[{{\bf uint64}}]{v}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a5769b9e33a81fc611e81d923eccfdc4c}
+\hypertarget{marshal_8cpp_abae504ddd3883a74185762be17f8b1d3}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Argument\+List@{unmarshal\+Argument\+List}}
+\index{unmarshal\+Argument\+List@{unmarshal\+Argument\+List}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Argument\+List(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Argument\+List}$\ast$ unmarshal\+Argument\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_abae504ddd3883a74185762be17f8b1d3}
+\hypertarget{marshal_8cpp_aed4cbcaefb61e43c1b8088f210aea56e}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Argument\+Lists@{unmarshal\+Argument\+Lists}}
+\index{unmarshal\+Argument\+Lists@{unmarshal\+Argument\+Lists}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Argument\+Lists(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+List}$<${\bf Argument\+List}$>$$\ast$ unmarshal\+Argument\+Lists (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_aed4cbcaefb61e43c1b8088f210aea56e}
+\hypertarget{marshal_8cpp_a35b9b88b788180c1e87fc0938f6d0ee8}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Base\+Info\+List@{unmarshal\+Base\+Info\+List}}
+\index{unmarshal\+Base\+Info\+List@{unmarshal\+Base\+Info\+List}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Base\+Info\+List(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+List}$<${\bf Base\+Info}$>$$\ast$ unmarshal\+Base\+Info\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a35b9b88b788180c1e87fc0938f6d0ee8}
+\hypertarget{marshal_8cpp_a9c5457eaf8116c000ffe69e259ed54c5}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Body\+Info@{unmarshal\+Body\+Info}}
+\index{unmarshal\+Body\+Info@{unmarshal\+Body\+Info}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Body\+Info(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Body\+Info}$\ast$ unmarshal\+Body\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a9c5457eaf8116c000ffe69e259ed54c5}
+\hypertarget{marshal_8cpp_a2caf6352c2d7698a031e002a5d925432}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Bool@{unmarshal\+Bool}}
+\index{unmarshal\+Bool@{unmarshal\+Bool}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Bool(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} unmarshal\+Bool (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a2caf6352c2d7698a031e002a5d925432}
+\hypertarget{marshal_8cpp_ac75f74abd69f013d6f10d831e305d2ea}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Brief\+Info@{unmarshal\+Brief\+Info}}
+\index{unmarshal\+Brief\+Info@{unmarshal\+Brief\+Info}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Brief\+Info(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Brief\+Info}$\ast$ unmarshal\+Brief\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_ac75f74abd69f013d6f10d831e305d2ea}
+\hypertarget{marshal_8cpp_a9a57fb24cf8c6ec3e40eeede849872d0}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Doc\+Info@{unmarshal\+Doc\+Info}}
+\index{unmarshal\+Doc\+Info@{unmarshal\+Doc\+Info}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Doc\+Info(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Doc\+Info}$\ast$ unmarshal\+Doc\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a9a57fb24cf8c6ec3e40eeede849872d0}
+\hypertarget{marshal_8cpp_a9493009573b4ea1d93564a055379cbf0}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Entry@{unmarshal\+Entry}}
+\index{unmarshal\+Entry@{unmarshal\+Entry}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Entry(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entry}$\ast$ unmarshal\+Entry (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a9493009573b4ea1d93564a055379cbf0}
+\hypertarget{marshal_8cpp_a67a83de01f7ea58d576ab00c222f3456}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Entry\+Tree@{unmarshal\+Entry\+Tree}}
+\index{unmarshal\+Entry\+Tree@{unmarshal\+Entry\+Tree}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Entry\+Tree(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entry}$\ast$ unmarshal\+Entry\+Tree (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a67a83de01f7ea58d576ab00c222f3456}
+\hypertarget{marshal_8cpp_a216a37cc315a7717178205902f6e4207}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Example\+S\+Dict@{unmarshal\+Example\+S\+Dict}}
+\index{unmarshal\+Example\+S\+Dict@{unmarshal\+Example\+S\+Dict}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Example\+S\+Dict(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Example\+S\+Dict}$\ast$ unmarshal\+Example\+S\+Dict (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a216a37cc315a7717178205902f6e4207}
+\hypertarget{marshal_8cpp_a290cc79b7f8e523f41e81543fd16f7ac}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Grouping\+List@{unmarshal\+Grouping\+List}}
+\index{unmarshal\+Grouping\+List@{unmarshal\+Grouping\+List}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Grouping\+List(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+List}$<${\bf Grouping}$>$$\ast$ unmarshal\+Grouping\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a290cc79b7f8e523f41e81543fd16f7ac}
+\hypertarget{marshal_8cpp_a40b02cffa1abd6b64ddf4edb4f9313d4}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Group\+List@{unmarshal\+Group\+List}}
+\index{unmarshal\+Group\+List@{unmarshal\+Group\+List}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Group\+List(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Group\+List}$\ast$ unmarshal\+Group\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a40b02cffa1abd6b64ddf4edb4f9313d4}
+\hypertarget{marshal_8cpp_a255d4c42f0fa053036e5746bf14d7eea}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Int@{unmarshal\+Int}}
+\index{unmarshal\+Int@{unmarshal\+Int}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Int(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}int unmarshal\+Int (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a255d4c42f0fa053036e5746bf14d7eea}
+\hypertarget{marshal_8cpp_aa0dd7a23f5df2a3eb0e0833ef281ca06}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Item\+Info\+List@{unmarshal\+Item\+Info\+List}}
+\index{unmarshal\+Item\+Info\+List@{unmarshal\+Item\+Info\+List}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Item\+Info\+List(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+List}$<${\bf List\+Item\+Info}$>$$\ast$ unmarshal\+Item\+Info\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_aa0dd7a23f5df2a3eb0e0833ef281ca06}
+\hypertarget{marshal_8cpp_a6aa68d597ae5c8b86a0000e93e0dfd84}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Member\+List@{unmarshal\+Member\+List}}
+\index{unmarshal\+Member\+List@{unmarshal\+Member\+List}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Member\+List(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Member\+List}$\ast$ unmarshal\+Member\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a6aa68d597ae5c8b86a0000e93e0dfd84}
+\hypertarget{marshal_8cpp_a795faa051fbf5d8893a21c2d6b7aedbc}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Member\+Lists@{unmarshal\+Member\+Lists}}
+\index{unmarshal\+Member\+Lists@{unmarshal\+Member\+Lists}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Member\+Lists(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+Dict}$<${\bf Member\+List}$>$$\ast$ unmarshal\+Member\+Lists (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a795faa051fbf5d8893a21c2d6b7aedbc}
+\hypertarget{marshal_8cpp_af822b0fa8c5cfbdb5905b4f6d33478da}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Member\+S\+Dict@{unmarshal\+Member\+S\+Dict}}
+\index{unmarshal\+Member\+S\+Dict@{unmarshal\+Member\+S\+Dict}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Member\+S\+Dict(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Member\+S\+Dict}$\ast$ unmarshal\+Member\+S\+Dict (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_af822b0fa8c5cfbdb5905b4f6d33478da}
+\hypertarget{marshal_8cpp_a05df47a88dbdb3801f53f4ff1fb56924}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Obj\+Pointer@{unmarshal\+Obj\+Pointer}}
+\index{unmarshal\+Obj\+Pointer@{unmarshal\+Obj\+Pointer}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Obj\+Pointer(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ unmarshal\+Obj\+Pointer (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a05df47a88dbdb3801f53f4ff1fb56924}
+\hypertarget{marshal_8cpp_ae5a6fd22ea172db6618676276751b574}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Q\+C\+String@{unmarshal\+Q\+C\+String}}
+\index{unmarshal\+Q\+C\+String@{unmarshal\+Q\+C\+String}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Q\+C\+String(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} unmarshal\+Q\+C\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_ae5a6fd22ea172db6618676276751b574}
+\hypertarget{marshal_8cpp_a91f63ee894ca3b3e77acfd57c7c3e841}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Q\+G\+String@{unmarshal\+Q\+G\+String}}
+\index{unmarshal\+Q\+G\+String@{unmarshal\+Q\+G\+String}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Q\+G\+String(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+G\+String} unmarshal\+Q\+G\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a91f63ee894ca3b3e77acfd57c7c3e841}
+\hypertarget{marshal_8cpp_aa0228247f6a8b1b7dcb4175ee153592f}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Section\+Dict@{unmarshal\+Section\+Dict}}
+\index{unmarshal\+Section\+Dict@{unmarshal\+Section\+Dict}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Section\+Dict(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Section\+Dict}$\ast$ unmarshal\+Section\+Dict (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_aa0228247f6a8b1b7dcb4175ee153592f}
+\hypertarget{marshal_8cpp_a7f782e8d49b8db8559e39c3f09425c53}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+Section\+Info\+List@{unmarshal\+Section\+Info\+List}}
+\index{unmarshal\+Section\+Info\+List@{unmarshal\+Section\+Info\+List}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+Section\+Info\+List(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+List}$<${\bf Section\+Info}$>$$\ast$ unmarshal\+Section\+Info\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a7f782e8d49b8db8559e39c3f09425c53}
+\hypertarget{marshal_8cpp_a54d89e92a9d11449c9c5b213681eea85}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+U\+Int@{unmarshal\+U\+Int}}
+\index{unmarshal\+U\+Int@{unmarshal\+U\+Int}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+U\+Int(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint} unmarshal\+U\+Int (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a54d89e92a9d11449c9c5b213681eea85}
+\hypertarget{marshal_8cpp_a37c333c4d2237c486fbc444da438228f}{}\index{marshal.\+cpp@{marshal.\+cpp}!unmarshal\+U\+Int64@{unmarshal\+U\+Int64}}
+\index{unmarshal\+U\+Int64@{unmarshal\+U\+Int64}!marshal.\+cpp@{marshal.\+cpp}}
+\subsubsection[{unmarshal\+U\+Int64(\+Storage\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64} unmarshal\+U\+Int64 (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{marshal_8cpp_a37c333c4d2237c486fbc444da438228f}

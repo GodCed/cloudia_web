@@ -1,0 +1,190 @@
+\hypertarget{class_entry_nav}{}\section{Référence de la classe Entry\+Nav}
+\label{class_entry_nav}\index{Entry\+Nav@{Entry\+Nav}}
+
+
+{\ttfamily \#include $<$entry.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_entry_nav_a778223f04da2618c47b697d33d10559d}{Entry\+Nav} (\hyperlink{class_entry_nav}{Entry\+Nav} $\ast$\hyperlink{class_entry_nav_ad81958481115dc8d88c74756d8278c5f}{parent}, \hyperlink{class_entry}{Entry} $\ast$\hyperlink{060__command__switch_8tcl_aff65a51a703804e0ad1adbcfd76c86f8}{e})
+\item 
+\hyperlink{class_entry_nav_a146c0cb4e53cf34eafae961189be08a7}{$\sim$\+Entry\+Nav} ()
+\item 
+void \hyperlink{class_entry_nav_af988d3085b14c1fa584d934a31a1e494}{add\+Child} (\hyperlink{class_entry_nav}{Entry\+Nav} $\ast$)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_entry_nav_ae8baa4eaf2eca2a813110c5272fba763}{load\+Entry} (\hyperlink{class_file_storage}{File\+Storage} $\ast$storage)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_entry_nav_a51daafd4189df04bf0df6504b3c4b1f5}{save\+Entry} (\hyperlink{class_entry}{Entry} $\ast$\hyperlink{060__command__switch_8tcl_aff65a51a703804e0ad1adbcfd76c86f8}{e}, \hyperlink{class_file_storage}{File\+Storage} $\ast$storage)
+\item 
+void \hyperlink{class_entry_nav_a935101b752fb22f735e62b83721f325c}{set\+Entry} (\hyperlink{class_entry}{Entry} $\ast$\hyperlink{060__command__switch_8tcl_aff65a51a703804e0ad1adbcfd76c86f8}{e})
+\item 
+void \hyperlink{class_entry_nav_a1475c94b8cb03e8731d852190b8efc64}{release\+Entry} ()
+\item 
+void \hyperlink{class_entry_nav_aa9d8db3a7fb50142d976111658e7c2f8}{change\+Section} (int \hyperlink{class_entry_nav_a20d879ec204d36042d7e4da2294a7567}{section})
+\item 
+void \hyperlink{class_entry_nav_a527cd33c59bd801382b73f26a42e2b64}{set\+File\+Def} (\hyperlink{class_file_def}{File\+Def} $\ast$fd)
+\item 
+\hyperlink{class_entry}{Entry} $\ast$ \hyperlink{class_entry_nav_ae83c2f83749522f31bf96e2bbb46e04c}{entry} () const 
+\item 
+int \hyperlink{class_entry_nav_a20d879ec204d36042d7e4da2294a7567}{section} () const 
+\item 
+\hyperlink{types_8h_a9974623ce72fc23df5d64426b9178bf2}{Src\+Lang\+Ext} \hyperlink{class_entry_nav_a4baef4385b2c51eee0afbe3dfdd222ea}{lang} () const 
+\item 
+const \hyperlink{class_q_c_string}{Q\+C\+String} \& \hyperlink{class_entry_nav_aa6c45f37e3ab65056807dc3246bf6e5c}{type} () const 
+\item 
+const \hyperlink{class_q_c_string}{Q\+C\+String} \& \hyperlink{class_entry_nav_a4a518be1a66143bf1706ff5d29208181}{name} () const 
+\item 
+\hyperlink{struct_tag_info}{Tag\+Info} $\ast$ \hyperlink{class_entry_nav_acd74509ccbdf99f56d87238979ac419f}{tag\+Info} () const 
+\item 
+const \hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{class_entry_nav}{Entry\+Nav} $>$ $\ast$ \hyperlink{class_entry_nav_a7b56e89137f8d93d36a0fc9c51eeb2d1}{children} () const 
+\item 
+\hyperlink{class_entry_nav}{Entry\+Nav} $\ast$ \hyperlink{class_entry_nav_ad81958481115dc8d88c74756d8278c5f}{parent} () const 
+\item 
+\hyperlink{class_file_def}{File\+Def} $\ast$ \hyperlink{class_entry_nav_af3753c9dea44d3a05b80d99f9034dc3d}{file\+Def} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Wrapper for a node in the \hyperlink{class_entry}{Entry} tree.
+
+Allows navigating through the \hyperlink{class_entry}{Entry} tree and load and storing \hyperlink{class_entry}{Entry} objects persistently to disk. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_entry_nav_a778223f04da2618c47b697d33d10559d}{}\index{Entry\+Nav@{Entry\+Nav}!Entry\+Nav@{Entry\+Nav}}
+\index{Entry\+Nav@{Entry\+Nav}!Entry\+Nav@{Entry\+Nav}}
+\subsubsection[{Entry\+Nav(\+Entry\+Nav $\ast$parent, Entry $\ast$e)}]{\setlength{\rightskip}{0pt plus 5cm}Entry\+Nav\+::\+Entry\+Nav (
+\begin{DoxyParamCaption}
+\item[{{\bf Entry\+Nav} $\ast$}]{parent, }
+\item[{{\bf Entry} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}\label{class_entry_nav_a778223f04da2618c47b697d33d10559d}
+\hypertarget{class_entry_nav_a146c0cb4e53cf34eafae961189be08a7}{}\index{Entry\+Nav@{Entry\+Nav}!````~Entry\+Nav@{$\sim$\+Entry\+Nav}}
+\index{````~Entry\+Nav@{$\sim$\+Entry\+Nav}!Entry\+Nav@{Entry\+Nav}}
+\subsubsection[{$\sim$\+Entry\+Nav()}]{\setlength{\rightskip}{0pt plus 5cm}Entry\+Nav\+::$\sim$\+Entry\+Nav (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_entry_nav_a146c0cb4e53cf34eafae961189be08a7}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_entry_nav_af988d3085b14c1fa584d934a31a1e494}{}\index{Entry\+Nav@{Entry\+Nav}!add\+Child@{add\+Child}}
+\index{add\+Child@{add\+Child}!Entry\+Nav@{Entry\+Nav}}
+\subsubsection[{add\+Child(\+Entry\+Nav $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Entry\+Nav\+::add\+Child (
+\begin{DoxyParamCaption}
+\item[{{\bf Entry\+Nav} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}\label{class_entry_nav_af988d3085b14c1fa584d934a31a1e494}
+\hypertarget{class_entry_nav_aa9d8db3a7fb50142d976111658e7c2f8}{}\index{Entry\+Nav@{Entry\+Nav}!change\+Section@{change\+Section}}
+\index{change\+Section@{change\+Section}!Entry\+Nav@{Entry\+Nav}}
+\subsubsection[{change\+Section(int section)}]{\setlength{\rightskip}{0pt plus 5cm}void Entry\+Nav\+::change\+Section (
+\begin{DoxyParamCaption}
+\item[{int}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_entry_nav_aa9d8db3a7fb50142d976111658e7c2f8}
+\hypertarget{class_entry_nav_a7b56e89137f8d93d36a0fc9c51eeb2d1}{}\index{Entry\+Nav@{Entry\+Nav}!children@{children}}
+\index{children@{children}!Entry\+Nav@{Entry\+Nav}}
+\subsubsection[{children() const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Q\+List}$<${\bf Entry\+Nav}$>$$\ast$ Entry\+Nav\+::children (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_entry_nav_a7b56e89137f8d93d36a0fc9c51eeb2d1}
+\hypertarget{class_entry_nav_ae83c2f83749522f31bf96e2bbb46e04c}{}\index{Entry\+Nav@{Entry\+Nav}!entry@{entry}}
+\index{entry@{entry}!Entry\+Nav@{Entry\+Nav}}
+\subsubsection[{entry() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entry}$\ast$ Entry\+Nav\+::entry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_entry_nav_ae83c2f83749522f31bf96e2bbb46e04c}
+\hypertarget{class_entry_nav_af3753c9dea44d3a05b80d99f9034dc3d}{}\index{Entry\+Nav@{Entry\+Nav}!file\+Def@{file\+Def}}
+\index{file\+Def@{file\+Def}!Entry\+Nav@{Entry\+Nav}}
+\subsubsection[{file\+Def() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf File\+Def}$\ast$ Entry\+Nav\+::file\+Def (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_entry_nav_af3753c9dea44d3a05b80d99f9034dc3d}
+\hypertarget{class_entry_nav_a4baef4385b2c51eee0afbe3dfdd222ea}{}\index{Entry\+Nav@{Entry\+Nav}!lang@{lang}}
+\index{lang@{lang}!Entry\+Nav@{Entry\+Nav}}
+\subsubsection[{lang() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Src\+Lang\+Ext} Entry\+Nav\+::lang (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_entry_nav_a4baef4385b2c51eee0afbe3dfdd222ea}
+\hypertarget{class_entry_nav_ae8baa4eaf2eca2a813110c5272fba763}{}\index{Entry\+Nav@{Entry\+Nav}!load\+Entry@{load\+Entry}}
+\index{load\+Entry@{load\+Entry}!Entry\+Nav@{Entry\+Nav}}
+\subsubsection[{load\+Entry(\+File\+Storage $\ast$storage)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Entry\+Nav\+::load\+Entry (
+\begin{DoxyParamCaption}
+\item[{{\bf File\+Storage} $\ast$}]{storage}
+\end{DoxyParamCaption}
+)}\label{class_entry_nav_ae8baa4eaf2eca2a813110c5272fba763}
+\hypertarget{class_entry_nav_a4a518be1a66143bf1706ff5d29208181}{}\index{Entry\+Nav@{Entry\+Nav}!name@{name}}
+\index{name@{name}!Entry\+Nav@{Entry\+Nav}}
+\subsubsection[{name() const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Q\+C\+String}\& Entry\+Nav\+::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_entry_nav_a4a518be1a66143bf1706ff5d29208181}
+\hypertarget{class_entry_nav_ad81958481115dc8d88c74756d8278c5f}{}\index{Entry\+Nav@{Entry\+Nav}!parent@{parent}}
+\index{parent@{parent}!Entry\+Nav@{Entry\+Nav}}
+\subsubsection[{parent() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entry\+Nav}$\ast$ Entry\+Nav\+::parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_entry_nav_ad81958481115dc8d88c74756d8278c5f}
+\hypertarget{class_entry_nav_a1475c94b8cb03e8731d852190b8efc64}{}\index{Entry\+Nav@{Entry\+Nav}!release\+Entry@{release\+Entry}}
+\index{release\+Entry@{release\+Entry}!Entry\+Nav@{Entry\+Nav}}
+\subsubsection[{release\+Entry()}]{\setlength{\rightskip}{0pt plus 5cm}void Entry\+Nav\+::release\+Entry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_entry_nav_a1475c94b8cb03e8731d852190b8efc64}
+\hypertarget{class_entry_nav_a51daafd4189df04bf0df6504b3c4b1f5}{}\index{Entry\+Nav@{Entry\+Nav}!save\+Entry@{save\+Entry}}
+\index{save\+Entry@{save\+Entry}!Entry\+Nav@{Entry\+Nav}}
+\subsubsection[{save\+Entry(\+Entry $\ast$e, File\+Storage $\ast$storage)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Entry\+Nav\+::save\+Entry (
+\begin{DoxyParamCaption}
+\item[{{\bf Entry} $\ast$}]{e, }
+\item[{{\bf File\+Storage} $\ast$}]{storage}
+\end{DoxyParamCaption}
+)}\label{class_entry_nav_a51daafd4189df04bf0df6504b3c4b1f5}
+\hypertarget{class_entry_nav_a20d879ec204d36042d7e4da2294a7567}{}\index{Entry\+Nav@{Entry\+Nav}!section@{section}}
+\index{section@{section}!Entry\+Nav@{Entry\+Nav}}
+\subsubsection[{section() const }]{\setlength{\rightskip}{0pt plus 5cm}int Entry\+Nav\+::section (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_entry_nav_a20d879ec204d36042d7e4da2294a7567}
+\hypertarget{class_entry_nav_a935101b752fb22f735e62b83721f325c}{}\index{Entry\+Nav@{Entry\+Nav}!set\+Entry@{set\+Entry}}
+\index{set\+Entry@{set\+Entry}!Entry\+Nav@{Entry\+Nav}}
+\subsubsection[{set\+Entry(\+Entry $\ast$e)}]{\setlength{\rightskip}{0pt plus 5cm}void Entry\+Nav\+::set\+Entry (
+\begin{DoxyParamCaption}
+\item[{{\bf Entry} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}\label{class_entry_nav_a935101b752fb22f735e62b83721f325c}
+\hypertarget{class_entry_nav_a527cd33c59bd801382b73f26a42e2b64}{}\index{Entry\+Nav@{Entry\+Nav}!set\+File\+Def@{set\+File\+Def}}
+\index{set\+File\+Def@{set\+File\+Def}!Entry\+Nav@{Entry\+Nav}}
+\subsubsection[{set\+File\+Def(\+File\+Def $\ast$fd)}]{\setlength{\rightskip}{0pt plus 5cm}void Entry\+Nav\+::set\+File\+Def (
+\begin{DoxyParamCaption}
+\item[{{\bf File\+Def} $\ast$}]{fd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_entry_nav_a527cd33c59bd801382b73f26a42e2b64}
+\hypertarget{class_entry_nav_acd74509ccbdf99f56d87238979ac419f}{}\index{Entry\+Nav@{Entry\+Nav}!tag\+Info@{tag\+Info}}
+\index{tag\+Info@{tag\+Info}!Entry\+Nav@{Entry\+Nav}}
+\subsubsection[{tag\+Info() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tag\+Info}$\ast$ Entry\+Nav\+::tag\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_entry_nav_acd74509ccbdf99f56d87238979ac419f}
+\hypertarget{class_entry_nav_aa6c45f37e3ab65056807dc3246bf6e5c}{}\index{Entry\+Nav@{Entry\+Nav}!type@{type}}
+\index{type@{type}!Entry\+Nav@{Entry\+Nav}}
+\subsubsection[{type() const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Q\+C\+String}\& Entry\+Nav\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_entry_nav_aa6c45f37e3ab65056807dc3246bf6e5c}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{entry_8h}{entry.\+h}\item 
+src/\hyperlink{entry_8cpp}{entry.\+cpp}\end{DoxyCompactItemize}

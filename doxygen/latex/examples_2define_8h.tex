@@ -1,0 +1,38 @@
+\hypertarget{examples_2define_8h}{}\section{Référence du fichier examples/define.h}
+\label{examples_2define_8h}\index{examples/define.\+h@{examples/define.\+h}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{examples_2define_8h_a996f7be338ccb40d1a2a5abc1ad61759}{A\+B\+S}(x)~(((x)$>$0)?(x)\+:-\/(x))
+\item 
+\#define \hyperlink{examples_2define_8h_aacc3ee1a7f283f8ef65cea31f4436a95}{M\+A\+X}(x,  \hyperlink{058__bracket__recursion_8tcl_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{y})~((x)$>$(\hyperlink{058__bracket__recursion_8tcl_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{y})?(x)\+:(\hyperlink{058__bracket__recursion_8tcl_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{y}))
+\item 
+\#define \hyperlink{examples_2define_8h_a74e75242132eaabbc1c512488a135926}{M\+I\+N}(x,  \hyperlink{058__bracket__recursion_8tcl_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{y})~((x)$>$(\hyperlink{058__bracket__recursion_8tcl_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{y})?(\hyperlink{058__bracket__recursion_8tcl_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{y})\+:(x))
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{examples_2define_8h_a996f7be338ccb40d1a2a5abc1ad61759}{}\index{examples/define.\+h@{examples/define.\+h}!A\+B\+S@{A\+B\+S}}
+\index{A\+B\+S@{A\+B\+S}!examples/define.\+h@{examples/define.\+h}}
+\subsubsection[{A\+B\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+B\+S(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(((x)$>$0)?(x)\+:-\/(x))}\label{examples_2define_8h_a996f7be338ccb40d1a2a5abc1ad61759}
+Computes the absolute value of its argument {\itshape x}. \hypertarget{examples_2define_8h_aacc3ee1a7f283f8ef65cea31f4436a95}{}\index{examples/define.\+h@{examples/define.\+h}!M\+A\+X@{M\+A\+X}}
+\index{M\+A\+X@{M\+A\+X}!examples/define.\+h@{examples/define.\+h}}
+\subsubsection[{M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{{\bf y}}
+\end{DoxyParamCaption}
+)~((x)$>$({\bf y})?(x)\+:({\bf y}))}\label{examples_2define_8h_aacc3ee1a7f283f8ef65cea31f4436a95}
+Computes the maximum of {\itshape x} and {\itshape y}. \hypertarget{examples_2define_8h_a74e75242132eaabbc1c512488a135926}{}\index{examples/define.\+h@{examples/define.\+h}!M\+I\+N@{M\+I\+N}}
+\index{M\+I\+N@{M\+I\+N}!examples/define.\+h@{examples/define.\+h}}
+\subsubsection[{M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+N(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{{\bf y}}
+\end{DoxyParamCaption}
+)~((x)$>$({\bf y})?({\bf y})\+:(x))}\label{examples_2define_8h_a74e75242132eaabbc1c512488a135926}
+Computes the minimum of {\itshape x} and {\itshape y}. 

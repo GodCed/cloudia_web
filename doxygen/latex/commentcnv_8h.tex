@@ -1,0 +1,25 @@
+\hypertarget{commentcnv_8h}{}\section{Référence du fichier src/commentcnv.h}
+\label{commentcnv_8h}\index{src/commentcnv.\+h@{src/commentcnv.\+h}}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{commentcnv_8h_ae2fa662b327be8a947cf7a627721e51f}{convert\+Cpp\+Comments} (\hyperlink{class_buf_str}{Buf\+Str} $\ast$in\+Buf, \hyperlink{class_buf_str}{Buf\+Str} $\ast$out\+Buf, const char $\ast$file\+Name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{commentcnv_8h_ae2fa662b327be8a947cf7a627721e51f}{}\index{commentcnv.\+h@{commentcnv.\+h}!convert\+Cpp\+Comments@{convert\+Cpp\+Comments}}
+\index{convert\+Cpp\+Comments@{convert\+Cpp\+Comments}!commentcnv.\+h@{commentcnv.\+h}}
+\subsubsection[{convert\+Cpp\+Comments(\+Buf\+Str $\ast$in\+Buf, Buf\+Str $\ast$out\+Buf, const char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void convert\+Cpp\+Comments (
+\begin{DoxyParamCaption}
+\item[{{\bf Buf\+Str} $\ast$}]{in\+Buf, }
+\item[{{\bf Buf\+Str} $\ast$}]{out\+Buf, }
+\item[{const char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{commentcnv_8h_ae2fa662b327be8a947cf7a627721e51f}
+This function does three things\+:
+\begin{DoxyEnumerate}
+\item It converts multi-\/line C++ style comment blocks (that are aligned) to \hyperlink{class_c}{C} style comment blocks (if M\+U\+L\+T\+I\+L\+I\+N\+E\+\_\+\+C\+P\+P\+\_\+\+I\+S\+\_\+\+B\+R\+I\+E\+F is set to N\+O).
+\item It replaces aliases with their definition (see A\+L\+I\+A\+S\+E\+S)
+\item It handles conditional sections (cond...endcond blocks) 
+\end{DoxyEnumerate}

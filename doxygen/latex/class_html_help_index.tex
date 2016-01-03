@@ -1,0 +1,104 @@
+\hypertarget{class_html_help_index}{}\section{Référence de la classe Html\+Help\+Index}
+\label{class_html_help_index}\index{Html\+Help\+Index@{Html\+Help\+Index}}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_html_help_index_a9a6f1abc33b6d3679229d9dbd5ed92d9}{Html\+Help\+Index} (\hyperlink{class_html_help}{Html\+Help} $\ast$help)
+\item 
+\hyperlink{class_html_help_index_a0b68b2ca104803c3a6dc76a18aa05f13}{$\sim$\+Html\+Help\+Index} ()
+\item 
+void \hyperlink{class_html_help_index_aa6f679550c81eee3249f29395ad7e174}{add\+Item} (const char $\ast$first, const char $\ast$second, const char $\ast$url, const char $\ast$anchor, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} has\+Link, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} reversed)
+\item 
+void \hyperlink{class_html_help_index_aa7658c0bcf38f46aed6664cd5dbd1be1}{write\+Fields} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t})
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\hyperlink{class_a}{A} helper class for \hyperlink{class_html_help}{Html\+Help} that manages a two level index in alphabetical order. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_html_help_index_a9a6f1abc33b6d3679229d9dbd5ed92d9}{}\index{Html\+Help\+Index@{Html\+Help\+Index}!Html\+Help\+Index@{Html\+Help\+Index}}
+\index{Html\+Help\+Index@{Html\+Help\+Index}!Html\+Help\+Index@{Html\+Help\+Index}}
+\subsubsection[{Html\+Help\+Index(\+Html\+Help $\ast$help)}]{\setlength{\rightskip}{0pt plus 5cm}Html\+Help\+Index\+::\+Html\+Help\+Index (
+\begin{DoxyParamCaption}
+\item[{{\bf Html\+Help} $\ast$}]{help}
+\end{DoxyParamCaption}
+)}\label{class_html_help_index_a9a6f1abc33b6d3679229d9dbd5ed92d9}
+Constructs a new \hyperlink{class_html_help}{Html\+Help} index \hypertarget{class_html_help_index_a0b68b2ca104803c3a6dc76a18aa05f13}{}\index{Html\+Help\+Index@{Html\+Help\+Index}!````~Html\+Help\+Index@{$\sim$\+Html\+Help\+Index}}
+\index{````~Html\+Help\+Index@{$\sim$\+Html\+Help\+Index}!Html\+Help\+Index@{Html\+Help\+Index}}
+\subsubsection[{$\sim$\+Html\+Help\+Index()}]{\setlength{\rightskip}{0pt plus 5cm}Html\+Help\+Index\+::$\sim$\+Html\+Help\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_html_help_index_a0b68b2ca104803c3a6dc76a18aa05f13}
+Destroys the \hyperlink{class_html_help}{Html\+Help} index 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_html_help_index_aa6f679550c81eee3249f29395ad7e174}{}\index{Html\+Help\+Index@{Html\+Help\+Index}!add\+Item@{add\+Item}}
+\index{add\+Item@{add\+Item}!Html\+Help\+Index@{Html\+Help\+Index}}
+\subsubsection[{add\+Item(const char $\ast$first, const char $\ast$second, const char $\ast$url, const char $\ast$anchor, bool has\+Link, bool reversed)}]{\setlength{\rightskip}{0pt plus 5cm}void Html\+Help\+Index\+::add\+Item (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{level1, }
+\item[{const char $\ast$}]{level2, }
+\item[{const char $\ast$}]{url, }
+\item[{const char $\ast$}]{anchor, }
+\item[{{\bf bool}}]{has\+Link, }
+\item[{{\bf bool}}]{reversed}
+\end{DoxyParamCaption}
+)}\label{class_html_help_index_aa6f679550c81eee3249f29395ad7e174}
+Stores an item in the index if it is not already present. Items are stored in alphetical order, by sorting on the concatenation of {\itshape level1} and {\itshape level2} (if present).
+
+
+\begin{DoxyParams}{Paramètres}
+{\em level1} & the string at level 1 in the index. \\
+\hline
+{\em level2} & the string at level 2 in the index (or 0 if not applicable). \\
+\hline
+{\em url} & the url of the documentation (without .html extension). \\
+\hline
+{\em anchor} & the anchor of the documentation within the page. \\
+\hline
+{\em has\+Link} & if true, the url (without anchor) can be used in the level1 item, when writing the header of a list of level2 items. \\
+\hline
+{\em reversed} & T\+R\+U\+E if level1 is the member name and level2 the compound name. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_html_help_index_aa7658c0bcf38f46aed6664cd5dbd1be1}{}\index{Html\+Help\+Index@{Html\+Help\+Index}!write\+Fields@{write\+Fields}}
+\index{write\+Fields@{write\+Fields}!Html\+Help\+Index@{Html\+Help\+Index}}
+\subsubsection[{write\+Fields(\+F\+Text\+Stream \&t)}]{\setlength{\rightskip}{0pt plus 5cm}void Html\+Help\+Index\+::write\+Fields (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t}
+\end{DoxyParamCaption}
+)}\label{class_html_help_index_aa7658c0bcf38f46aed6664cd5dbd1be1}
+Writes the sorted list of index items into a html like list.
+
+An list of calls with {\ttfamily name = level1,level2} as follows\+: 
+\begin{DoxyPre}
+  a1,b1
+  a1,b2
+  a2,b1
+  a2,b2
+  a3
+  a4,b1
+\end{DoxyPre}
+
+
+Will result in the following list\+:
+
+
+\begin{DoxyPre}
+  a1       -> link to url if hasLink==TRUE
+    b1     -> link to url::anchor
+    b2     -> link to url::anchor
+  a2       -> link to url if hasLink==TRUE
+    b1     -> link to url::anchor
+    b2     -> link to url::anchor
+  a3       -> link to url if hasLink==TRUE
+  a4       -> link to url if hasLink==TRUE
+    b1     -> link to url::anchor 
+\end{DoxyPre}
+ 
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{htmlhelp_8cpp}{htmlhelp.\+cpp}\end{DoxyCompactItemize}

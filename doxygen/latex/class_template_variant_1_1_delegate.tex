@@ -1,0 +1,79 @@
+\hypertarget{class_template_variant_1_1_delegate}{}\section{Référence de la classe Template\+Variant\+:\+:Delegate}
+\label{class_template_variant_1_1_delegate}\index{Template\+Variant\+::\+Delegate@{Template\+Variant\+::\+Delegate}}
+
+
+Helper class to create a delegate that can store a function/method call.  
+
+
+
+
+{\ttfamily \#include $<$template.\+h$>$}
+
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_template_variant}{Template\+Variant}($\ast$ \hyperlink{class_template_variant_1_1_delegate_ae02c3848db4a42a6bc88f81f5166923a}{Stub\+Type}) (const void $\ast$obj, const \hyperlink{class_q_value_list}{Q\+Value\+List}$<$ \hyperlink{class_template_variant}{Template\+Variant} $>$ \&args)
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_template_variant_1_1_delegate_a0c79ac8ba5b3adf918124449aed0db8d}{Delegate} ()
+\item 
+\hyperlink{class_template_variant}{Template\+Variant} \hyperlink{class_template_variant_1_1_delegate_a257d78d846735739620ab33918e7899f}{operator()} (const \hyperlink{class_q_value_list}{Q\+Value\+List}$<$ \hyperlink{class_template_variant}{Template\+Variant} $>$ \&args) const 
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T , Template\+Variant(\+T\+::$\ast$)(const Q\+Value\+List$<$ Template\+Variant $>$ \&) const T\+Method$>$ }\\static \hyperlink{class_template_variant_1_1_delegate}{Delegate} \hyperlink{class_template_variant_1_1_delegate_a6a013222ab665507469657d09c07c92b}{from\+Method} (const T $\ast$object\+Ptr)
+\item 
+static \hyperlink{class_template_variant_1_1_delegate}{Delegate} \hyperlink{class_template_variant_1_1_delegate_a226f1f2e20f6d26fea2d989fd91bd8a8}{from\+Function} (const void $\ast$obj, \hyperlink{class_template_variant_1_1_delegate_ae02c3848db4a42a6bc88f81f5166923a}{Stub\+Type} \hyperlink{036__link_8c_affb6da6cff1b57cdf8efc0123dceac9b}{func})
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Helper class to create a delegate that can store a function/method call. 
+
+\subsection{Documentation des définitions de type membres}
+\hypertarget{class_template_variant_1_1_delegate_ae02c3848db4a42a6bc88f81f5166923a}{}\index{Template\+Variant\+::\+Delegate@{Template\+Variant\+::\+Delegate}!Stub\+Type@{Stub\+Type}}
+\index{Stub\+Type@{Stub\+Type}!Template\+Variant\+::\+Delegate@{Template\+Variant\+::\+Delegate}}
+\subsubsection[{Stub\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Template\+Variant}($\ast$ Template\+Variant\+::\+Delegate\+::\+Stub\+Type) (const void $\ast$obj, const {\bf Q\+Value\+List}$<$ {\bf Template\+Variant} $>$ \&args)}\label{class_template_variant_1_1_delegate_ae02c3848db4a42a6bc88f81f5166923a}
+Callback type to use when creating a delegate from a function. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_template_variant_1_1_delegate_a0c79ac8ba5b3adf918124449aed0db8d}{}\index{Template\+Variant\+::\+Delegate@{Template\+Variant\+::\+Delegate}!Delegate@{Delegate}}
+\index{Delegate@{Delegate}!Template\+Variant\+::\+Delegate@{Template\+Variant\+::\+Delegate}}
+\subsubsection[{Delegate()}]{\setlength{\rightskip}{0pt plus 5cm}Template\+Variant\+::\+Delegate\+::\+Delegate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_variant_1_1_delegate_a0c79ac8ba5b3adf918124449aed0db8d}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_template_variant_1_1_delegate_a226f1f2e20f6d26fea2d989fd91bd8a8}{}\index{Template\+Variant\+::\+Delegate@{Template\+Variant\+::\+Delegate}!from\+Function@{from\+Function}}
+\index{from\+Function@{from\+Function}!Template\+Variant\+::\+Delegate@{Template\+Variant\+::\+Delegate}}
+\subsubsection[{from\+Function(const void $\ast$obj, Stub\+Type func)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Delegate} Template\+Variant\+::\+Delegate\+::from\+Function (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{obj, }
+\item[{{\bf Stub\+Type}}]{func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_template_variant_1_1_delegate_a226f1f2e20f6d26fea2d989fd91bd8a8}
+Creates a delegate given an object, and a plain function. \hypertarget{class_template_variant_1_1_delegate_a6a013222ab665507469657d09c07c92b}{}\index{Template\+Variant\+::\+Delegate@{Template\+Variant\+::\+Delegate}!from\+Method@{from\+Method}}
+\index{from\+Method@{from\+Method}!Template\+Variant\+::\+Delegate@{Template\+Variant\+::\+Delegate}}
+\subsubsection[{from\+Method(const T $\ast$object\+Ptr)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T , Template\+Variant(\+T\+::$\ast$)(const Q\+Value\+List$<$ Template\+Variant $>$ \&) const T\+Method$>$ static {\bf Delegate} Template\+Variant\+::\+Delegate\+::from\+Method (
+\begin{DoxyParamCaption}
+\item[{const T $\ast$}]{object\+Ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_template_variant_1_1_delegate_a6a013222ab665507469657d09c07c92b}
+Creates a delegate given an object. The method to call is passed as a template parameter \hypertarget{class_template_variant_1_1_delegate_a257d78d846735739620ab33918e7899f}{}\index{Template\+Variant\+::\+Delegate@{Template\+Variant\+::\+Delegate}!operator()@{operator()}}
+\index{operator()@{operator()}!Template\+Variant\+::\+Delegate@{Template\+Variant\+::\+Delegate}}
+\subsubsection[{operator()(const Q\+Value\+List$<$ Template\+Variant $>$ \&args) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Variant} Template\+Variant\+::\+Delegate\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Value\+List}$<$ {\bf Template\+Variant} $>$ \&}]{args}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_variant_1_1_delegate_a257d78d846735739620ab33918e7899f}
+Invokes the function/method stored in the delegate 
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{template_8h}{template.\+h}\end{DoxyCompactItemize}

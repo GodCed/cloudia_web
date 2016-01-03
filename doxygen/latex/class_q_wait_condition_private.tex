@@ -1,0 +1,91 @@
+\hypertarget{class_q_wait_condition_private}{}\section{Référence de la classe Q\+Wait\+Condition\+Private}
+\label{class_q_wait_condition_private}\index{Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_q_wait_condition_private_a2864b8d283d2a2c757e825e5dc8a24d0}{wait} ()
+\item 
+\hyperlink{class_q_wait_condition_event}{Q\+Wait\+Condition\+Event} $\ast$ \hyperlink{class_q_wait_condition_private_a7cf44da862c6a1fca494253cd0568f53}{pre} ()
+\item 
+void \hyperlink{class_q_wait_condition_private_a0d3212d380cfcebb7d2e5b02084779c2}{wait} (\hyperlink{class_q_wait_condition_event}{Q\+Wait\+Condition\+Event} $\ast$wce)
+\item 
+void \hyperlink{class_q_wait_condition_private_af61c25946c95528afeb30c4ac26e4f40}{post} (\hyperlink{class_q_wait_condition_event}{Q\+Wait\+Condition\+Event} $\ast$wce)
+\end{DoxyCompactItemize}
+\subsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+pthread\+\_\+mutex\+\_\+t \hyperlink{class_q_wait_condition_private_a361375d2df4f05c0dddfc1f95832a73b}{mutex}
+\item 
+pthread\+\_\+cond\+\_\+t \hyperlink{class_q_wait_condition_private_abcfdb90df4a7edd76960e7ce3e7d11c7}{cond}
+\item 
+int \hyperlink{class_q_wait_condition_private_ae4a4fc8e92470eb0a2032dd9a1cd0c92}{waiters}
+\item 
+int \hyperlink{class_q_wait_condition_private_aa89133c3205f41565f70014242dbb6ba}{wakeups}
+\item 
+\hyperlink{class_q_mutex}{Q\+Mutex} \hyperlink{class_q_wait_condition_private_ae775be2a78da7b5bfc8e6159a5b1a230}{mtx}
+\item 
+\hyperlink{class_event_queue}{Event\+Queue} \hyperlink{class_q_wait_condition_private_ab312b34eeb97bd25d20b86b9fff1de16}{queue}
+\item 
+\hyperlink{class_event_queue}{Event\+Queue} \hyperlink{class_q_wait_condition_private_a3b96ce780ed74cb13bcee57f7044f24a}{free\+Queue}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_wait_condition_private_af61c25946c95528afeb30c4ac26e4f40}{}\index{Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}!post@{post}}
+\index{post@{post}!Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}}
+\subsubsection[{post(\+Q\+Wait\+Condition\+Event $\ast$wce)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Wait\+Condition\+Private\+::post (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Wait\+Condition\+Event} $\ast$}]{wce}
+\end{DoxyParamCaption}
+)}\label{class_q_wait_condition_private_af61c25946c95528afeb30c4ac26e4f40}
+\hypertarget{class_q_wait_condition_private_a7cf44da862c6a1fca494253cd0568f53}{}\index{Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}!pre@{pre}}
+\index{pre@{pre}!Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}}
+\subsubsection[{pre()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Wait\+Condition\+Event} $\ast$ Q\+Wait\+Condition\+Private\+::pre (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_wait_condition_private_a7cf44da862c6a1fca494253cd0568f53}
+\hypertarget{class_q_wait_condition_private_a2864b8d283d2a2c757e825e5dc8a24d0}{}\index{Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}!wait@{wait}}
+\index{wait@{wait}!Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}}
+\subsubsection[{wait()}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Wait\+Condition\+Private\+::wait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_wait_condition_private_a2864b8d283d2a2c757e825e5dc8a24d0}
+\hypertarget{class_q_wait_condition_private_a0d3212d380cfcebb7d2e5b02084779c2}{}\index{Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}!wait@{wait}}
+\index{wait@{wait}!Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}}
+\subsubsection[{wait(\+Q\+Wait\+Condition\+Event $\ast$wce)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Wait\+Condition\+Private\+::wait (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Wait\+Condition\+Event} $\ast$}]{wce}
+\end{DoxyParamCaption}
+)}\label{class_q_wait_condition_private_a0d3212d380cfcebb7d2e5b02084779c2}
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_q_wait_condition_private_abcfdb90df4a7edd76960e7ce3e7d11c7}{}\index{Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}!cond@{cond}}
+\index{cond@{cond}!Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}}
+\subsubsection[{cond}]{\setlength{\rightskip}{0pt plus 5cm}pthread\+\_\+cond\+\_\+t Q\+Wait\+Condition\+Private\+::cond}\label{class_q_wait_condition_private_abcfdb90df4a7edd76960e7ce3e7d11c7}
+\hypertarget{class_q_wait_condition_private_a3b96ce780ed74cb13bcee57f7044f24a}{}\index{Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}!free\+Queue@{free\+Queue}}
+\index{free\+Queue@{free\+Queue}!Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}}
+\subsubsection[{free\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Event\+Queue} Q\+Wait\+Condition\+Private\+::free\+Queue}\label{class_q_wait_condition_private_a3b96ce780ed74cb13bcee57f7044f24a}
+\hypertarget{class_q_wait_condition_private_ae775be2a78da7b5bfc8e6159a5b1a230}{}\index{Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}!mtx@{mtx}}
+\index{mtx@{mtx}!Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}}
+\subsubsection[{mtx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Mutex} Q\+Wait\+Condition\+Private\+::mtx}\label{class_q_wait_condition_private_ae775be2a78da7b5bfc8e6159a5b1a230}
+\hypertarget{class_q_wait_condition_private_a361375d2df4f05c0dddfc1f95832a73b}{}\index{Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}!mutex@{mutex}}
+\index{mutex@{mutex}!Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}}
+\subsubsection[{mutex}]{\setlength{\rightskip}{0pt plus 5cm}pthread\+\_\+mutex\+\_\+t Q\+Wait\+Condition\+Private\+::mutex}\label{class_q_wait_condition_private_a361375d2df4f05c0dddfc1f95832a73b}
+\hypertarget{class_q_wait_condition_private_ab312b34eeb97bd25d20b86b9fff1de16}{}\index{Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}!queue@{queue}}
+\index{queue@{queue}!Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}}
+\subsubsection[{queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Event\+Queue} Q\+Wait\+Condition\+Private\+::queue}\label{class_q_wait_condition_private_ab312b34eeb97bd25d20b86b9fff1de16}
+\hypertarget{class_q_wait_condition_private_ae4a4fc8e92470eb0a2032dd9a1cd0c92}{}\index{Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}!waiters@{waiters}}
+\index{waiters@{waiters}!Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}}
+\subsubsection[{waiters}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Wait\+Condition\+Private\+::waiters}\label{class_q_wait_condition_private_ae4a4fc8e92470eb0a2032dd9a1cd0c92}
+\hypertarget{class_q_wait_condition_private_aa89133c3205f41565f70014242dbb6ba}{}\index{Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}!wakeups@{wakeups}}
+\index{wakeups@{wakeups}!Q\+Wait\+Condition\+Private@{Q\+Wait\+Condition\+Private}}
+\subsubsection[{wakeups}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Wait\+Condition\+Private\+::wakeups}\label{class_q_wait_condition_private_aa89133c3205f41565f70014242dbb6ba}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qwaitcondition__unix_8cpp}{qwaitcondition\+\_\+unix.\+cpp}\item 
+qtools/\hyperlink{qwaitcondition__win32_8cpp}{qwaitcondition\+\_\+win32.\+cpp}\end{DoxyCompactItemize}

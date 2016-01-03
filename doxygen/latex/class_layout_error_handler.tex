@@ -1,0 +1,91 @@
+\hypertarget{class_layout_error_handler}{}\section{Référence de la classe Layout\+Error\+Handler}
+\label{class_layout_error_handler}\index{Layout\+Error\+Handler@{Layout\+Error\+Handler}}
+Graphe d\textquotesingle{}héritage de Layout\+Error\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_layout_error_handler}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_layout_error_handler_ab8c68291771ab718868961ed340cb97b}{Layout\+Error\+Handler} (const char $\ast$\hyperlink{tclscanner_8cpp_a9ffad97216456d27984aacce395adf85}{fn})
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_layout_error_handler_a463dfca8796fee3c40a08817d1af64be}{warning} (const \hyperlink{class_q_xml_parse_exception}{Q\+Xml\+Parse\+Exception} \&exception)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_layout_error_handler_a7981be5cbf89e7f5bf27b3d75a821726}{error} (const \hyperlink{class_q_xml_parse_exception}{Q\+Xml\+Parse\+Exception} \&exception)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_layout_error_handler_aca31cecb0d737ede70e22c86d038bbb4}{fatal\+Error} (const \hyperlink{class_q_xml_parse_exception}{Q\+Xml\+Parse\+Exception} \&exception)
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_layout_error_handler_a042664a153147e99f4ee0cb3bdf76418}{error\+String} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_layout_error_handler_ab8c68291771ab718868961ed340cb97b}{}\index{Layout\+Error\+Handler@{Layout\+Error\+Handler}!Layout\+Error\+Handler@{Layout\+Error\+Handler}}
+\index{Layout\+Error\+Handler@{Layout\+Error\+Handler}!Layout\+Error\+Handler@{Layout\+Error\+Handler}}
+\subsubsection[{Layout\+Error\+Handler(const char $\ast$fn)}]{\setlength{\rightskip}{0pt plus 5cm}Layout\+Error\+Handler\+::\+Layout\+Error\+Handler (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_layout_error_handler_ab8c68291771ab718868961ed340cb97b}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_layout_error_handler_a7981be5cbf89e7f5bf27b3d75a821726}{}\index{Layout\+Error\+Handler@{Layout\+Error\+Handler}!error@{error}}
+\index{error@{error}!Layout\+Error\+Handler@{Layout\+Error\+Handler}}
+\subsubsection[{error(const Q\+Xml\+Parse\+Exception \&exception)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Layout\+Error\+Handler\+::error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Xml\+Parse\+Exception} \&}]{exception}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_layout_error_handler_a7981be5cbf89e7f5bf27b3d75a821726}
+\hyperlink{class_a}{A} reader might use this function to report a recoverable error. \hyperlink{class_a}{A} recoverable error corresponds to the definiton of \char`\"{}error\char`\"{} in section 1.\+2 of the X\+M\+L 1.\+0 specification.
+
+The reader must continue to provide normal parsing events after invoking this function.
+
+If this function returns F\+A\+L\+S\+E the reader will stop parsing and will report an error. The reader will use the function \hyperlink{class_layout_error_handler_a042664a153147e99f4ee0cb3bdf76418}{error\+String()} to get the error message that will be used for reporting the error. 
+
+Implémente \hyperlink{class_q_xml_error_handler_aa7e25c4198fa16a0312fd48e5718217c}{Q\+Xml\+Error\+Handler}.
+
+\hypertarget{class_layout_error_handler_a042664a153147e99f4ee0cb3bdf76418}{}\index{Layout\+Error\+Handler@{Layout\+Error\+Handler}!error\+String@{error\+String}}
+\index{error\+String@{error\+String}!Layout\+Error\+Handler@{Layout\+Error\+Handler}}
+\subsubsection[{error\+String()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Layout\+Error\+Handler\+::error\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_layout_error_handler_a042664a153147e99f4ee0cb3bdf76418}
+The reader calls this function to get an error string if any of the handler functions returns F\+A\+L\+S\+E to him. 
+
+Implémente \hyperlink{class_q_xml_error_handler_a7b265803d41782e6207b497fe09beff0}{Q\+Xml\+Error\+Handler}.
+
+\hypertarget{class_layout_error_handler_aca31cecb0d737ede70e22c86d038bbb4}{}\index{Layout\+Error\+Handler@{Layout\+Error\+Handler}!fatal\+Error@{fatal\+Error}}
+\index{fatal\+Error@{fatal\+Error}!Layout\+Error\+Handler@{Layout\+Error\+Handler}}
+\subsubsection[{fatal\+Error(const Q\+Xml\+Parse\+Exception \&exception)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Layout\+Error\+Handler\+::fatal\+Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Xml\+Parse\+Exception} \&}]{exception}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_layout_error_handler_aca31cecb0d737ede70e22c86d038bbb4}
+\hyperlink{class_a}{A} reader must use this function to report a non-\/recoverable error.
+
+If this function returns T\+R\+U\+E the reader might try to go on parsing and reporting further errors; but no regular parsing events are reported. 
+
+Implémente \hyperlink{class_q_xml_error_handler_aaa8c1ad1b42a5257cf2344c7fe101797}{Q\+Xml\+Error\+Handler}.
+
+\hypertarget{class_layout_error_handler_a463dfca8796fee3c40a08817d1af64be}{}\index{Layout\+Error\+Handler@{Layout\+Error\+Handler}!warning@{warning}}
+\index{warning@{warning}!Layout\+Error\+Handler@{Layout\+Error\+Handler}}
+\subsubsection[{warning(const Q\+Xml\+Parse\+Exception \&exception)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Layout\+Error\+Handler\+::warning (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Xml\+Parse\+Exception} \&}]{exception}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_layout_error_handler_a463dfca8796fee3c40a08817d1af64be}
+\hyperlink{class_a}{A} reader might use this function to report a warning. Warnings are conditions that are not errors or fatal errors as defined by the X\+M\+L 1.\+0 specification.
+
+If this function returns F\+A\+L\+S\+E the reader will stop parsing and will report an error. The reader will use the function \hyperlink{class_layout_error_handler_a042664a153147e99f4ee0cb3bdf76418}{error\+String()} to get the error message that will be used for reporting the error. 
+
+Implémente \hyperlink{class_q_xml_error_handler_a79ae0cce3316a76b7777c6e90b101afe}{Q\+Xml\+Error\+Handler}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{layout_8cpp}{layout.\+cpp}\end{DoxyCompactItemize}

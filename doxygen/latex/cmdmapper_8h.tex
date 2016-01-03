@@ -1,0 +1,574 @@
+\hypertarget{cmdmapper_8h}{}\section{Référence du fichier src/cmdmapper.h}
+\label{cmdmapper_8h}\index{src/cmdmapper.\+h@{src/cmdmapper.\+h}}
+{\ttfamily \#include $<$qdict.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_mapper}{Mapper}
+\item 
+struct \hyperlink{struct_mappers}{Mappers}
+\end{DoxyCompactItemize}
+\subsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352}{Command\+Type} \{ \\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a59c51f88aeda3ea6351f01c9c70b9ac7}{C\+M\+D\+\_\+\+U\+N\+K\+N\+O\+W\+N} = 0, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a46f97c0157cebb6ac65f5e6f4170b320}{C\+M\+D\+\_\+\+A\+D\+D\+I\+N\+D\+E\+X} = 1, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a09f01a9578d7bd6c25aeb04f900408a7}{C\+M\+D\+\_\+\+A\+M\+P} = 2, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a2ccf6f47c5b51878ea810ddef9969c2d}{C\+M\+D\+\_\+\+A\+N\+C\+H\+O\+R} = 3, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a08d080ed693ae3d57daeeadba389b28e}{C\+M\+D\+\_\+\+A\+T} = 4, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352af8ebefd0fa31474105e85b3ac921339c}{C\+M\+D\+\_\+\+A\+T\+T\+E\+N\+T\+I\+O\+N} = 5 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ac8b40ab6cfa015c5510896e978b217b3}{C\+M\+D\+\_\+\+A\+U\+T\+H\+O\+R} = 6 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a391a0d10fe9a019553ec57d9cb1d4b80}{C\+M\+D\+\_\+\+A\+U\+T\+H\+O\+R\+S} = 7 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352abe2881ab8d2d66c0e8193c00381e3909}{C\+M\+D\+\_\+\+B\+O\+L\+D} = 8, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a0bce2c912e5c4a050a5e6a85c204ee42}{C\+M\+D\+\_\+\+B\+S\+L\+A\+S\+H} = 9, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a8ab4f4613d5c037b9c56432a504b6d28}{C\+M\+D\+\_\+\+C\+O\+D\+E} = 10, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a92c4be5128f4e797696eb7820adc9b70}{C\+M\+D\+\_\+\+C\+O\+P\+Y\+D\+O\+C} = 11, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a86e8e7aeaa2295e4450f9f995bdaf2a8}{C\+M\+D\+\_\+\+D\+A\+T\+E} = 12 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352af3806ce757d79f91163410b8243d475f}{C\+M\+D\+\_\+\+D\+O\+L\+L\+A\+R} = 13, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a015760c7f8c8938ed8e3fa97edd06ebf}{C\+M\+D\+\_\+\+D\+O\+N\+T\+I\+N\+C\+L\+U\+D\+E} = 14, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a03af4e9e21a23eb1628ed875f0156867}{C\+M\+D\+\_\+\+D\+O\+T\+F\+I\+L\+E} = 15, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aac985a4be59c37a5bda46b6c5607a8ed}{C\+M\+D\+\_\+\+E\+M\+P\+H\+A\+S\+I\+S} = 16, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352afd5d9d62bc72addbf29c3184c296798f}{C\+M\+D\+\_\+\+E\+N\+D\+C\+O\+D\+E} = 17, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aa2b25243d360e41264458cb803d4a22e}{C\+M\+D\+\_\+\+E\+N\+D\+H\+T\+M\+L\+O\+N\+L\+Y} = 18, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a110122ca57971285ef331a7f970736fa}{C\+M\+D\+\_\+\+E\+N\+D\+L\+A\+T\+E\+X\+O\+N\+L\+Y} = 19, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aa4dc70d377e34b2a60453c8a1b674381}{C\+M\+D\+\_\+\+E\+N\+D\+L\+I\+N\+K} = 20, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ab144f71820405a27afae416e579bca4a}{C\+M\+D\+\_\+\+E\+N\+D\+S\+E\+C\+R\+E\+F\+L\+I\+S\+T} = 21, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a2b0b8a261825e20981d225db5e593e82}{C\+M\+D\+\_\+\+E\+N\+D\+V\+E\+R\+B\+A\+T\+I\+M} = 22, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352acdd92cdea978475a76af7c309b1b894c}{C\+M\+D\+\_\+\+E\+N\+D\+X\+M\+L\+O\+N\+L\+Y} = 23, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352abe401b90d4d1c2a955cfede5a03adb22}{C\+M\+D\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N} = 24 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352af05d1a0f394992a9a446d10753e9a05f}{C\+M\+D\+\_\+\+F\+O\+R\+M\+U\+L\+A} = 25, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a726d9578393b5e3b465db7f8c229a01e}{C\+M\+D\+\_\+\+G\+R\+E\+A\+T\+E\+R} = 26, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a47da9933b5dff07d6afae70cbfa647b8}{C\+M\+D\+\_\+\+H\+A\+S\+H} = 27, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352adae53dd7c50f13a85a89b1dc0b8d4041}{C\+M\+D\+\_\+\+H\+T\+M\+L\+I\+N\+C\+L\+U\+D\+E} = 28, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a9f761cf9e2aac1ac177ef0bac1151302}{C\+M\+D\+\_\+\+H\+T\+M\+L\+O\+N\+L\+Y} = 29, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a489f5bfe07b9122b07ae95603b620637}{C\+M\+D\+\_\+\+I\+M\+A\+G\+E} = 30, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ab4d1c975213dd44975bc7d120dde4a2a}{C\+M\+D\+\_\+\+I\+N\+C\+L\+U\+D\+E} = 31, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a6665d8f0bcf614404cc57821e7be1d8c}{C\+M\+D\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L} = 32, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ae4d4c7c2d623f6ce76f6dd671e243e6e}{C\+M\+D\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+R\+E\+F} = 33, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ad8c7abc774834caafe87e7c2bd407666}{C\+M\+D\+\_\+\+I\+N\+V\+A\+R\+I\+A\+N\+T} = 34 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a60b538ad584eaab529e7a73e5e6acf8e}{C\+M\+D\+\_\+\+L\+A\+T\+E\+X\+O\+N\+L\+Y} = 35, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a3a961d60636b316ed52bd72bcf3f048c}{C\+M\+D\+\_\+\+L\+E\+S\+S} = 36, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a55101ef8bab305f40ec71ee8c7ccb77b}{C\+M\+D\+\_\+\+L\+I} = 37, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352abb221177213477f4650b63a6d506b291}{C\+M\+D\+\_\+\+L\+I\+N\+E} = 38, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a3a0100e6a1ada0c023dbd1b9ff769577}{C\+M\+D\+\_\+\+L\+I\+N\+E\+B\+R\+E\+A\+K} = 39, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a0b5a9ce6f811adbe3d817d249fbe44d4}{C\+M\+D\+\_\+\+L\+I\+N\+K} = 40, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352acdac039ffed313b2d399933d181ae9c3}{C\+M\+D\+\_\+\+N\+O\+T\+E} = 41 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ada5569a23faea46f5ff18a775d01d8a5}{C\+M\+D\+\_\+\+P\+A\+R} = 42 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ad01b24f526e012f70137bed8e5a71b68}{C\+M\+D\+\_\+\+P\+A\+R\+A\+M} = 43 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aca96e5cf3753309844d0949454f78161}{C\+M\+D\+\_\+\+P\+E\+R\+C\+E\+N\+T} = 44, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a280d5532836e7a1c79bf385018735299}{C\+M\+D\+\_\+\+P\+O\+S\+T} = 45 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a59a35d52b97a447d756c2ee16357ba3b}{C\+M\+D\+\_\+\+P\+R\+E} = 46 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a7b8f06ae1e48af487c6e23a69ad11bc9}{C\+M\+D\+\_\+\+R\+E\+F} = 47, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ae803793081803c1927138f9ea69f6d1b}{C\+M\+D\+\_\+\+S\+E\+C\+R\+E\+F\+I\+T\+E\+M} = 48, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a77763768ec706ff41b93ccdfbfbc9fc8}{C\+M\+D\+\_\+\+R\+E\+M\+A\+R\+K} = 49 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a958f04212c5e4a3510a98dd4ddc9cacc}{C\+M\+D\+\_\+\+R\+E\+T\+U\+R\+N} = 50 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a3b1b41352af0687e5a3539dc3fa71306}{C\+M\+D\+\_\+\+R\+E\+T\+V\+A\+L} = 51 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a05dedb991f617814382fc008c9b254af}{C\+M\+D\+\_\+\+S\+A} = 52 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a55a71bd5670f7e2a3effaf7099f8414b}{C\+M\+D\+\_\+\+S\+E\+C\+R\+E\+F\+L\+I\+S\+T} = 53, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352afbaa664ecc659219f06dd197e53d1103}{C\+M\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N} = 54, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a526362e9cbc278da3be397e44f8ddd8d}{C\+M\+D\+\_\+\+S\+U\+B\+P\+A\+G\+E} = 55, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aac8616a48c4f1b08d9ee7e7169900649}{C\+M\+D\+\_\+\+S\+U\+B\+S\+E\+C\+T\+I\+O\+N} = 56, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a01b80164671b4c46dc9dcc302634ea1b}{C\+M\+D\+\_\+\+S\+U\+B\+S\+U\+B\+S\+E\+C\+T\+I\+O\+N} = 57, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a91d6f6827880e5e6451c1b9876c029ef}{C\+M\+D\+\_\+\+P\+A\+R\+A\+G\+R\+A\+P\+H} = 58, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aa1a49deb0b26369db95f89dd292794dc}{C\+M\+D\+\_\+\+S\+I\+N\+C\+E} = 59 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a4805c5dee0868ae46a6847b11ea5bd79}{C\+M\+D\+\_\+\+S\+K\+I\+P} = 60, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a0552286c010906901ded70c1c725d286}{C\+M\+D\+\_\+\+S\+K\+I\+P\+L\+I\+N\+E} = 61, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a55acb16c15841c9059f446aae9b08557}{C\+M\+D\+\_\+\+S\+T\+A\+R\+T\+C\+O\+D\+E} = 62, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a6f4e61a229d6b794cfaf7d244312409b}{C\+M\+D\+\_\+\+J\+A\+V\+A\+L\+I\+N\+K} = 63, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a5e4da2a4060874b9235b0ae87fdfafe9}{C\+M\+D\+\_\+\+U\+N\+T\+I\+L} = 64, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a8e2892d5b3845a0640ea21108f4ecf8f}{C\+M\+D\+\_\+\+V\+E\+R\+B\+A\+T\+I\+M} = 65, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aa23cdd46a729b71b24b6e916a2ad6a3d}{C\+M\+D\+\_\+\+V\+E\+R\+B\+I\+N\+C\+L\+U\+D\+E} = 66, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a775afaef84c85d8173a20debb1a9e2ef}{C\+M\+D\+\_\+\+V\+E\+R\+S\+I\+O\+N} = 67 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a8ebff95a3a1eced8424b411a58129570}{C\+M\+D\+\_\+\+W\+A\+R\+N\+I\+N\+G} = 68 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a9a05dbb51dd0e9c99e2f5f8afeee9e34}{C\+M\+D\+\_\+\+X\+R\+E\+F\+I\+T\+E\+M} = 69 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a5ea1f3b68bcc06282c8e4e8ffc04e577}{C\+M\+D\+\_\+\+X\+M\+L\+O\+N\+L\+Y} = 70, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352acc3ae0ca27b8c1e16ff656218fe75ffd}{C\+M\+D\+\_\+\+D\+O\+T} = 71, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ab5c456e1b599f22a99f6fca83d72c4c2}{C\+M\+D\+\_\+\+E\+N\+D\+D\+O\+T} = 72, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a0b9cfdde6af11b21f723efc74101ca91}{C\+M\+D\+\_\+\+M\+S\+C} = 73, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aa5b691035efafbcce28a68e1f545bca7}{C\+M\+D\+\_\+\+E\+N\+D\+M\+S\+C} = 74, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352abe7a854cf21231a81d1d038b8faabd34}{C\+M\+D\+\_\+\+M\+A\+N\+O\+N\+L\+Y} = 75, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352abc7effe66a73c5de9e6483e3d0e443cd}{C\+M\+D\+\_\+\+E\+N\+D\+M\+A\+N\+O\+N\+L\+Y} = 76, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352af3aaa6101991074c124285bd40b25251}{C\+M\+D\+\_\+\+I\+N\+C\+W\+I\+T\+H\+L\+I\+N\+E\+S} = 77, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a19dea03fa05253a4c24ec5b831fb4620}{C\+M\+D\+\_\+\+I\+N\+H\+E\+R\+I\+T\+D\+O\+C} = 78, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a23ffe75d48cf03af7ffe387ab0ea9b8c}{C\+M\+D\+\_\+\+T\+P\+A\+R\+A\+M} = 79 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ae54a3da6d5ec9d3de242797ba200d340}{C\+M\+D\+\_\+\+C\+O\+P\+Y\+B\+R\+I\+E\+F} = 80, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a82223f58b6dcbfe3634c578b15b60705}{C\+M\+D\+\_\+\+C\+O\+P\+Y\+D\+E\+T\+A\+I\+L\+S} = 81, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a58a61c08767e3f10d7eaea740ec7f4bd}{C\+M\+D\+\_\+\+Q\+U\+O\+T\+E} = 82, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352adb64829d249746c970285f75fc0119b3}{C\+M\+D\+\_\+\+M\+S\+C\+F\+I\+L\+E} = 83, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ab05528d9341e59cb0a4417c78f7b4612}{C\+M\+D\+\_\+\+D\+C\+O\+L\+O\+N} = 84, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a3f984fb2659e79ea8db1451708cd2418}{C\+M\+D\+\_\+\+C\+O\+P\+Y\+R\+I\+G\+H\+T} = 85 $\vert$ S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aef3bd5b15cfda05777564054f3d51519}{C\+M\+D\+\_\+\+C\+I\+T\+E} = 86, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aa52a134d53b7dae853c6ddd7c0d32762}{C\+M\+D\+\_\+\+S\+N\+I\+P\+P\+E\+T} = 87, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a416b36a42a1f59b90554459d5136ba59}{C\+M\+D\+\_\+\+R\+T\+F\+O\+N\+L\+Y} = 88, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a9b7320a3db24c2c2297ac3885a794f77}{C\+M\+D\+\_\+\+E\+N\+D\+R\+T\+F\+O\+N\+L\+Y} = 89, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a909f9b752cc4cb5ac167c49a60c693e3}{C\+M\+D\+\_\+\+P\+I\+P\+E} = 90, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352afb92f40faabf2a23a7613fa45ef9b41f}{C\+M\+D\+\_\+\+V\+H\+D\+L\+F\+L\+O\+W} = 91, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a6a1b6ba7045be9a9ff5e53c4ba3a7cd2}{C\+M\+D\+\_\+\+D\+B\+O\+N\+L\+Y} = 92, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a689e44582ab16371bf0e4abe0b0df8bd}{C\+M\+D\+\_\+\+E\+N\+D\+D\+B\+O\+N\+L\+Y} = 93, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a14e860729ef7343b20b23f57c2005734}{C\+M\+D\+\_\+\+E\+N\+D\+I\+N\+T\+E\+R\+N\+A\+L} = 94, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a3558fa3cad78186718c5c61b2d22366a}{C\+M\+D\+\_\+\+P\+A\+R\+B\+L\+O\+C\+K} = 95, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a5b101f3e704ea6146fe97a7b6c46a253}{C\+M\+D\+\_\+\+E\+N\+D\+P\+A\+R\+B\+L\+O\+C\+K} = 96, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ab01143b543d34b4ae565fd418120b1a0}{C\+M\+D\+\_\+\+D\+I\+A\+F\+I\+L\+E} = 97, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aaf70c5e32de19a4e981a629b5d05c87e}{C\+M\+D\+\_\+\+L\+A\+T\+E\+X\+I\+N\+C\+L\+U\+D\+E} = 98, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a30aa17eaef4a68dc70659edf21a3c566}{C\+M\+D\+\_\+\+N\+D\+A\+S\+H} = 99, 
+\\*
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a6f63169f10a8f37288a93f138c942201}{C\+M\+D\+\_\+\+M\+D\+A\+S\+H} = 100, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a04ec9e037c704e3f55bac3a126a58a1d}{C\+M\+D\+\_\+\+S\+T\+A\+R\+T\+U\+M\+L} = 101, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352af37765a3c794a81d62b2bd21b0056995}{C\+M\+D\+\_\+\+E\+N\+D\+U\+M\+L} = 102, 
+\hyperlink{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a79245f26137bb9bd110a6b3891d20918}{C\+M\+D\+\_\+\+S\+E\+T\+S\+C\+O\+P\+E} = 103
+ \}
+\item 
+enum \hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273}{Html\+Tag\+Type} \{ \\*
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ac1934c403fc4e8aec69c8057dbf5eba8}{H\+T\+M\+L\+\_\+\+U\+N\+K\+N\+O\+W\+N} = 0, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ac192733ecef2b440a2912e131b199297}{H\+T\+M\+L\+\_\+\+C\+E\+N\+T\+E\+R} = 1, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a3aed8f95115b0405658ecce503a542f2}{H\+T\+M\+L\+\_\+\+T\+A\+B\+L\+E} = 2, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a8629572501ea907937bc7ab85a22a791}{H\+T\+M\+L\+\_\+\+C\+A\+P\+T\+I\+O\+N} = 3, 
+\\*
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273adceacc537ebc8bef56297fbc0a36ad43}{H\+T\+M\+L\+\_\+\+S\+M\+A\+L\+L} = 4, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a979f58b8a091b20ba4df27c44f1302ad}{H\+T\+M\+L\+\_\+\+C\+O\+D\+E} = 5, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a436583682852de8309cf69f86b703ded}{H\+T\+M\+L\+\_\+\+I\+M\+G} = 6, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a999fc50baf874925425d9137df1c81e6}{H\+T\+M\+L\+\_\+\+P\+R\+E} = 7, 
+\\*
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273acc736af404043a5fb485bad648969714}{H\+T\+M\+L\+\_\+\+S\+U\+B} = 8, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ab33821a069d677ced94c2d9b5b95cfdf}{H\+T\+M\+L\+\_\+\+S\+U\+P} = 9, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a965236d24833e4787f78c558191e3194}{H\+T\+M\+L\+\_\+\+T\+R} = 10, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a0f65add9809a92b33af57c861072420d}{H\+T\+M\+L\+\_\+\+T\+D} = 11, 
+\\*
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a8d77dde5aa6ca897a799e50b50c97e03}{H\+T\+M\+L\+\_\+\+T\+H} = 12, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a09a9451950d718b0f27763fa26f170a9}{H\+T\+M\+L\+\_\+\+O\+L} = 13, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a2e79ca260235f3a4cf4cb056908d1785}{H\+T\+M\+L\+\_\+\+U\+L} = 14, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a5b427daa465f1ea1296910a246c456b6}{H\+T\+M\+L\+\_\+\+L\+I} = 15, 
+\\*
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273aac52e15bdb0841a553a6b25c1d8066e7}{H\+T\+M\+L\+\_\+\+E\+M\+P\+H\+A\+S\+I\+S} = 16, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a2db3fc04fb060767f561d6ee6e119ad8}{H\+T\+M\+L\+\_\+\+H\+R} = 17, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a7bceb89c29cacf6c836060d3228dcd8c}{H\+T\+M\+L\+\_\+\+D\+L} = 18, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a71fe5f07a7733918d072beab57d26285}{H\+T\+M\+L\+\_\+\+D\+T} = 19, 
+\\*
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a03e14ddd1a8f94ed1b3994c0e248568f}{H\+T\+M\+L\+\_\+\+D\+D} = 20, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273af9d8009956ca8e2a982cf4131637872b}{H\+T\+M\+L\+\_\+\+B\+R} = 21, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a960ff78b8fbc63b696e964b01d1af9f0}{H\+T\+M\+L\+\_\+\+A} = 22, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273aebdeae081cb7486e59697f060c626791}{H\+T\+M\+L\+\_\+\+B\+O\+L\+D} = 23, 
+\\*
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a8823a8ff4016f2ca9c638ba4a8fafcca}{H\+T\+M\+L\+\_\+\+P} = 24, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a71751dfa9ae957e90cacaad5f0b02271}{H\+T\+M\+L\+\_\+\+H1} = 25, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a623314b6e2c02f8cf6549eeb5d4fd53e}{H\+T\+M\+L\+\_\+\+H2} = 26, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ab8f1bc95822a1243cf1cf1ccc49a757e}{H\+T\+M\+L\+\_\+\+H3} = 27, 
+\\*
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a2a914deb52931b494bd62c97e0dbfc94}{H\+T\+M\+L\+\_\+\+H4} = 28, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ab26b52ed0aa1da4e9c891102f25bd477}{H\+T\+M\+L\+\_\+\+H5} = 29, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ac4f15cb20d64c462bd4f5ec18fb2d425}{H\+T\+M\+L\+\_\+\+H6} = 30, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a6691bc0d237372b68eca687beb8e4e7c}{H\+T\+M\+L\+\_\+\+S\+P\+A\+N} = 31, 
+\\*
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a925f75c7504312dc7251ecde932a062d}{H\+T\+M\+L\+\_\+\+D\+I\+V} = 32, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ae6c12d9ab8e8c89628707b178ce5c986}{H\+T\+M\+L\+\_\+\+B\+L\+O\+C\+K\+Q\+U\+O\+T\+E} = 33, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273adedaab7375bcdd08040b1ba9a6364ea4}{X\+M\+L\+\_\+\+Cmd\+Mask} = 0x100, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a5ce9f148d97c638bc2c457bfe13d249a}{X\+M\+L\+\_\+\+C} = X\+M\+L\+\_\+\+Cmd\+Mask + 0, 
+\\*
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a2bb7e964f4b1a8a2fe5c79fac9533ed1}{X\+M\+L\+\_\+\+C\+O\+D\+E} = X\+M\+L\+\_\+\+Cmd\+Mask + 1, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a761a8eb7adb060a77231c1dcaf6ec7a7}{X\+M\+L\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N} = X\+M\+L\+\_\+\+Cmd\+Mask + 2, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ae627281142418bf3f6ea1ad587b981d0}{X\+M\+L\+\_\+\+E\+X\+A\+M\+P\+L\+E} = X\+M\+L\+\_\+\+Cmd\+Mask + 3, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a17262cd94d4e5c0027a4091a9f2f952a}{X\+M\+L\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N} = X\+M\+L\+\_\+\+Cmd\+Mask + 4, 
+\\*
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a8e4ea382d510d878feb5355e2355fc72}{X\+M\+L\+\_\+\+I\+N\+C\+L\+U\+D\+E} = X\+M\+L\+\_\+\+Cmd\+Mask + 5, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ae70bda34c2d52fea764904c0e4b1fc85}{X\+M\+L\+\_\+\+I\+T\+E\+M} = X\+M\+L\+\_\+\+Cmd\+Mask + 6, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273aaec1100f100092d88ffc3af27bd1866c}{X\+M\+L\+\_\+\+L\+I\+S\+T} = X\+M\+L\+\_\+\+Cmd\+Mask + 7, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ac48592c8ebbff98d76999dd2408a46ef}{X\+M\+L\+\_\+\+L\+I\+S\+T\+H\+E\+A\+D\+E\+R} = X\+M\+L\+\_\+\+Cmd\+Mask + 8, 
+\\*
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273aa696544c534edf109c171ca758bb4702}{X\+M\+L\+\_\+\+P\+A\+R\+A} = X\+M\+L\+\_\+\+Cmd\+Mask + 9, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a54dc1a524b67adcea3e1563afa23cc1d}{X\+M\+L\+\_\+\+P\+A\+R\+A\+M} = X\+M\+L\+\_\+\+Cmd\+Mask + 10, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a4c31f33e40697345228ea9d29bee31d1}{X\+M\+L\+\_\+\+P\+A\+R\+A\+M\+R\+E\+F} = X\+M\+L\+\_\+\+Cmd\+Mask + 11, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273acb790b0b3426646c7a17476479cb84f1}{X\+M\+L\+\_\+\+P\+E\+R\+M\+I\+S\+S\+I\+O\+N} = X\+M\+L\+\_\+\+Cmd\+Mask + 12, 
+\\*
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273aaa1f6b197dc934591767c02cd07e52de}{X\+M\+L\+\_\+\+R\+E\+M\+A\+R\+K\+S} = X\+M\+L\+\_\+\+Cmd\+Mask + 13, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ad3c346b2e4c29ce98d84720d6f64f0fb}{X\+M\+L\+\_\+\+R\+E\+T\+U\+R\+N\+S} = X\+M\+L\+\_\+\+Cmd\+Mask + 14, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273aedc5fef9c81acc3194aff4fb88f733c1}{X\+M\+L\+\_\+\+S\+E\+E} = X\+M\+L\+\_\+\+Cmd\+Mask + 15, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a712c5f27f1403566d33c95ad36b3ba60}{X\+M\+L\+\_\+\+S\+E\+E\+A\+L\+S\+O} = X\+M\+L\+\_\+\+Cmd\+Mask + 16, 
+\\*
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a5e0188b366e11cbaaa19dde14e7f2ad8}{X\+M\+L\+\_\+\+S\+U\+M\+M\+A\+R\+Y} = X\+M\+L\+\_\+\+Cmd\+Mask + 17, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273af3f2f2a8973614ce7f59d399bf05823c}{X\+M\+L\+\_\+\+T\+E\+R\+M} = X\+M\+L\+\_\+\+Cmd\+Mask + 18, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a0497f73782182c5c2260a93261200065}{X\+M\+L\+\_\+\+T\+Y\+P\+E\+P\+A\+R\+A\+M} = X\+M\+L\+\_\+\+Cmd\+Mask + 19, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273afd6e13b735ca1096eec6467d8510944b}{X\+M\+L\+\_\+\+T\+Y\+P\+E\+P\+A\+R\+A\+M\+R\+E\+F} = X\+M\+L\+\_\+\+Cmd\+Mask + 20, 
+\\*
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a987d799b742d02ff52c9ee7779ca6d52}{X\+M\+L\+\_\+\+V\+A\+L\+U\+E} = X\+M\+L\+\_\+\+Cmd\+Mask + 21, 
+\hyperlink{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a6bcf22be79f4c77c446cd03365be6a4e}{X\+M\+L\+\_\+\+I\+N\+H\+E\+R\+I\+T\+D\+O\+C} = X\+M\+L\+\_\+\+Cmd\+Mask + 22
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{cmdmapper_8h_a5c52a0f09760b4ee2a3e66c075d863f4}{S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T} = 0x1000
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation du type de l\textquotesingle{}énumération}
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352}{}\index{cmdmapper.\+h@{cmdmapper.\+h}!Command\+Type@{Command\+Type}}
+\index{Command\+Type@{Command\+Type}!cmdmapper.\+h@{cmdmapper.\+h}}
+\subsubsection[{Command\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Command\+Type}}\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{C\+M\+D\+\_\+\+U\+N\+K\+N\+O\+W\+N@{C\+M\+D\+\_\+\+U\+N\+K\+N\+O\+W\+N}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+U\+N\+K\+N\+O\+W\+N@{C\+M\+D\+\_\+\+U\+N\+K\+N\+O\+W\+N}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a59c51f88aeda3ea6351f01c9c70b9ac7}{}C\+M\+D\+\_\+\+U\+N\+K\+N\+O\+W\+N\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a59c51f88aeda3ea6351f01c9c70b9ac7}
+}]\index{C\+M\+D\+\_\+\+A\+D\+D\+I\+N\+D\+E\+X@{C\+M\+D\+\_\+\+A\+D\+D\+I\+N\+D\+E\+X}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+A\+D\+D\+I\+N\+D\+E\+X@{C\+M\+D\+\_\+\+A\+D\+D\+I\+N\+D\+E\+X}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a46f97c0157cebb6ac65f5e6f4170b320}{}C\+M\+D\+\_\+\+A\+D\+D\+I\+N\+D\+E\+X\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a46f97c0157cebb6ac65f5e6f4170b320}
+}]\index{C\+M\+D\+\_\+\+A\+M\+P@{C\+M\+D\+\_\+\+A\+M\+P}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+A\+M\+P@{C\+M\+D\+\_\+\+A\+M\+P}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a09f01a9578d7bd6c25aeb04f900408a7}{}C\+M\+D\+\_\+\+A\+M\+P\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a09f01a9578d7bd6c25aeb04f900408a7}
+}]\index{C\+M\+D\+\_\+\+A\+N\+C\+H\+O\+R@{C\+M\+D\+\_\+\+A\+N\+C\+H\+O\+R}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+A\+N\+C\+H\+O\+R@{C\+M\+D\+\_\+\+A\+N\+C\+H\+O\+R}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a2ccf6f47c5b51878ea810ddef9969c2d}{}C\+M\+D\+\_\+\+A\+N\+C\+H\+O\+R\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a2ccf6f47c5b51878ea810ddef9969c2d}
+}]\index{C\+M\+D\+\_\+\+A\+T@{C\+M\+D\+\_\+\+A\+T}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+A\+T@{C\+M\+D\+\_\+\+A\+T}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a08d080ed693ae3d57daeeadba389b28e}{}C\+M\+D\+\_\+\+A\+T\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a08d080ed693ae3d57daeeadba389b28e}
+}]\index{C\+M\+D\+\_\+\+A\+T\+T\+E\+N\+T\+I\+O\+N@{C\+M\+D\+\_\+\+A\+T\+T\+E\+N\+T\+I\+O\+N}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+A\+T\+T\+E\+N\+T\+I\+O\+N@{C\+M\+D\+\_\+\+A\+T\+T\+E\+N\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352af8ebefd0fa31474105e85b3ac921339c}{}C\+M\+D\+\_\+\+A\+T\+T\+E\+N\+T\+I\+O\+N\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352af8ebefd0fa31474105e85b3ac921339c}
+}]\index{C\+M\+D\+\_\+\+A\+U\+T\+H\+O\+R@{C\+M\+D\+\_\+\+A\+U\+T\+H\+O\+R}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+A\+U\+T\+H\+O\+R@{C\+M\+D\+\_\+\+A\+U\+T\+H\+O\+R}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ac8b40ab6cfa015c5510896e978b217b3}{}C\+M\+D\+\_\+\+A\+U\+T\+H\+O\+R\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ac8b40ab6cfa015c5510896e978b217b3}
+}]\index{C\+M\+D\+\_\+\+A\+U\+T\+H\+O\+R\+S@{C\+M\+D\+\_\+\+A\+U\+T\+H\+O\+R\+S}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+A\+U\+T\+H\+O\+R\+S@{C\+M\+D\+\_\+\+A\+U\+T\+H\+O\+R\+S}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a391a0d10fe9a019553ec57d9cb1d4b80}{}C\+M\+D\+\_\+\+A\+U\+T\+H\+O\+R\+S\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a391a0d10fe9a019553ec57d9cb1d4b80}
+}]\index{C\+M\+D\+\_\+\+B\+O\+L\+D@{C\+M\+D\+\_\+\+B\+O\+L\+D}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+B\+O\+L\+D@{C\+M\+D\+\_\+\+B\+O\+L\+D}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352abe2881ab8d2d66c0e8193c00381e3909}{}C\+M\+D\+\_\+\+B\+O\+L\+D\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352abe2881ab8d2d66c0e8193c00381e3909}
+}]\index{C\+M\+D\+\_\+\+B\+S\+L\+A\+S\+H@{C\+M\+D\+\_\+\+B\+S\+L\+A\+S\+H}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+B\+S\+L\+A\+S\+H@{C\+M\+D\+\_\+\+B\+S\+L\+A\+S\+H}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a0bce2c912e5c4a050a5e6a85c204ee42}{}C\+M\+D\+\_\+\+B\+S\+L\+A\+S\+H\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a0bce2c912e5c4a050a5e6a85c204ee42}
+}]\index{C\+M\+D\+\_\+\+C\+O\+D\+E@{C\+M\+D\+\_\+\+C\+O\+D\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+C\+O\+D\+E@{C\+M\+D\+\_\+\+C\+O\+D\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a8ab4f4613d5c037b9c56432a504b6d28}{}C\+M\+D\+\_\+\+C\+O\+D\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a8ab4f4613d5c037b9c56432a504b6d28}
+}]\index{C\+M\+D\+\_\+\+C\+O\+P\+Y\+D\+O\+C@{C\+M\+D\+\_\+\+C\+O\+P\+Y\+D\+O\+C}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+C\+O\+P\+Y\+D\+O\+C@{C\+M\+D\+\_\+\+C\+O\+P\+Y\+D\+O\+C}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a92c4be5128f4e797696eb7820adc9b70}{}C\+M\+D\+\_\+\+C\+O\+P\+Y\+D\+O\+C\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a92c4be5128f4e797696eb7820adc9b70}
+}]\index{C\+M\+D\+\_\+\+D\+A\+T\+E@{C\+M\+D\+\_\+\+D\+A\+T\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+D\+A\+T\+E@{C\+M\+D\+\_\+\+D\+A\+T\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a86e8e7aeaa2295e4450f9f995bdaf2a8}{}C\+M\+D\+\_\+\+D\+A\+T\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a86e8e7aeaa2295e4450f9f995bdaf2a8}
+}]\index{C\+M\+D\+\_\+\+D\+O\+L\+L\+A\+R@{C\+M\+D\+\_\+\+D\+O\+L\+L\+A\+R}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+D\+O\+L\+L\+A\+R@{C\+M\+D\+\_\+\+D\+O\+L\+L\+A\+R}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352af3806ce757d79f91163410b8243d475f}{}C\+M\+D\+\_\+\+D\+O\+L\+L\+A\+R\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352af3806ce757d79f91163410b8243d475f}
+}]\index{C\+M\+D\+\_\+\+D\+O\+N\+T\+I\+N\+C\+L\+U\+D\+E@{C\+M\+D\+\_\+\+D\+O\+N\+T\+I\+N\+C\+L\+U\+D\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+D\+O\+N\+T\+I\+N\+C\+L\+U\+D\+E@{C\+M\+D\+\_\+\+D\+O\+N\+T\+I\+N\+C\+L\+U\+D\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a015760c7f8c8938ed8e3fa97edd06ebf}{}C\+M\+D\+\_\+\+D\+O\+N\+T\+I\+N\+C\+L\+U\+D\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a015760c7f8c8938ed8e3fa97edd06ebf}
+}]\index{C\+M\+D\+\_\+\+D\+O\+T\+F\+I\+L\+E@{C\+M\+D\+\_\+\+D\+O\+T\+F\+I\+L\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+D\+O\+T\+F\+I\+L\+E@{C\+M\+D\+\_\+\+D\+O\+T\+F\+I\+L\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a03af4e9e21a23eb1628ed875f0156867}{}C\+M\+D\+\_\+\+D\+O\+T\+F\+I\+L\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a03af4e9e21a23eb1628ed875f0156867}
+}]\index{C\+M\+D\+\_\+\+E\+M\+P\+H\+A\+S\+I\+S@{C\+M\+D\+\_\+\+E\+M\+P\+H\+A\+S\+I\+S}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+E\+M\+P\+H\+A\+S\+I\+S@{C\+M\+D\+\_\+\+E\+M\+P\+H\+A\+S\+I\+S}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aac985a4be59c37a5bda46b6c5607a8ed}{}C\+M\+D\+\_\+\+E\+M\+P\+H\+A\+S\+I\+S\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aac985a4be59c37a5bda46b6c5607a8ed}
+}]\index{C\+M\+D\+\_\+\+E\+N\+D\+C\+O\+D\+E@{C\+M\+D\+\_\+\+E\+N\+D\+C\+O\+D\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+E\+N\+D\+C\+O\+D\+E@{C\+M\+D\+\_\+\+E\+N\+D\+C\+O\+D\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352afd5d9d62bc72addbf29c3184c296798f}{}C\+M\+D\+\_\+\+E\+N\+D\+C\+O\+D\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352afd5d9d62bc72addbf29c3184c296798f}
+}]\index{C\+M\+D\+\_\+\+E\+N\+D\+H\+T\+M\+L\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+E\+N\+D\+H\+T\+M\+L\+O\+N\+L\+Y}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+E\+N\+D\+H\+T\+M\+L\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+E\+N\+D\+H\+T\+M\+L\+O\+N\+L\+Y}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aa2b25243d360e41264458cb803d4a22e}{}C\+M\+D\+\_\+\+E\+N\+D\+H\+T\+M\+L\+O\+N\+L\+Y\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aa2b25243d360e41264458cb803d4a22e}
+}]\index{C\+M\+D\+\_\+\+E\+N\+D\+L\+A\+T\+E\+X\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+E\+N\+D\+L\+A\+T\+E\+X\+O\+N\+L\+Y}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+E\+N\+D\+L\+A\+T\+E\+X\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+E\+N\+D\+L\+A\+T\+E\+X\+O\+N\+L\+Y}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a110122ca57971285ef331a7f970736fa}{}C\+M\+D\+\_\+\+E\+N\+D\+L\+A\+T\+E\+X\+O\+N\+L\+Y\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a110122ca57971285ef331a7f970736fa}
+}]\index{C\+M\+D\+\_\+\+E\+N\+D\+L\+I\+N\+K@{C\+M\+D\+\_\+\+E\+N\+D\+L\+I\+N\+K}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+E\+N\+D\+L\+I\+N\+K@{C\+M\+D\+\_\+\+E\+N\+D\+L\+I\+N\+K}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aa4dc70d377e34b2a60453c8a1b674381}{}C\+M\+D\+\_\+\+E\+N\+D\+L\+I\+N\+K\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aa4dc70d377e34b2a60453c8a1b674381}
+}]\index{C\+M\+D\+\_\+\+E\+N\+D\+S\+E\+C\+R\+E\+F\+L\+I\+S\+T@{C\+M\+D\+\_\+\+E\+N\+D\+S\+E\+C\+R\+E\+F\+L\+I\+S\+T}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+E\+N\+D\+S\+E\+C\+R\+E\+F\+L\+I\+S\+T@{C\+M\+D\+\_\+\+E\+N\+D\+S\+E\+C\+R\+E\+F\+L\+I\+S\+T}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ab144f71820405a27afae416e579bca4a}{}C\+M\+D\+\_\+\+E\+N\+D\+S\+E\+C\+R\+E\+F\+L\+I\+S\+T\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ab144f71820405a27afae416e579bca4a}
+}]\index{C\+M\+D\+\_\+\+E\+N\+D\+V\+E\+R\+B\+A\+T\+I\+M@{C\+M\+D\+\_\+\+E\+N\+D\+V\+E\+R\+B\+A\+T\+I\+M}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+E\+N\+D\+V\+E\+R\+B\+A\+T\+I\+M@{C\+M\+D\+\_\+\+E\+N\+D\+V\+E\+R\+B\+A\+T\+I\+M}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a2b0b8a261825e20981d225db5e593e82}{}C\+M\+D\+\_\+\+E\+N\+D\+V\+E\+R\+B\+A\+T\+I\+M\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a2b0b8a261825e20981d225db5e593e82}
+}]\index{C\+M\+D\+\_\+\+E\+N\+D\+X\+M\+L\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+E\+N\+D\+X\+M\+L\+O\+N\+L\+Y}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+E\+N\+D\+X\+M\+L\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+E\+N\+D\+X\+M\+L\+O\+N\+L\+Y}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352acdd92cdea978475a76af7c309b1b894c}{}C\+M\+D\+\_\+\+E\+N\+D\+X\+M\+L\+O\+N\+L\+Y\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352acdd92cdea978475a76af7c309b1b894c}
+}]\index{C\+M\+D\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N@{C\+M\+D\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N@{C\+M\+D\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352abe401b90d4d1c2a955cfede5a03adb22}{}C\+M\+D\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352abe401b90d4d1c2a955cfede5a03adb22}
+}]\index{C\+M\+D\+\_\+\+F\+O\+R\+M\+U\+L\+A@{C\+M\+D\+\_\+\+F\+O\+R\+M\+U\+L\+A}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+F\+O\+R\+M\+U\+L\+A@{C\+M\+D\+\_\+\+F\+O\+R\+M\+U\+L\+A}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352af05d1a0f394992a9a446d10753e9a05f}{}C\+M\+D\+\_\+\+F\+O\+R\+M\+U\+L\+A\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352af05d1a0f394992a9a446d10753e9a05f}
+}]\index{C\+M\+D\+\_\+\+G\+R\+E\+A\+T\+E\+R@{C\+M\+D\+\_\+\+G\+R\+E\+A\+T\+E\+R}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+G\+R\+E\+A\+T\+E\+R@{C\+M\+D\+\_\+\+G\+R\+E\+A\+T\+E\+R}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a726d9578393b5e3b465db7f8c229a01e}{}C\+M\+D\+\_\+\+G\+R\+E\+A\+T\+E\+R\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a726d9578393b5e3b465db7f8c229a01e}
+}]\index{C\+M\+D\+\_\+\+H\+A\+S\+H@{C\+M\+D\+\_\+\+H\+A\+S\+H}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+H\+A\+S\+H@{C\+M\+D\+\_\+\+H\+A\+S\+H}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a47da9933b5dff07d6afae70cbfa647b8}{}C\+M\+D\+\_\+\+H\+A\+S\+H\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a47da9933b5dff07d6afae70cbfa647b8}
+}]\index{C\+M\+D\+\_\+\+H\+T\+M\+L\+I\+N\+C\+L\+U\+D\+E@{C\+M\+D\+\_\+\+H\+T\+M\+L\+I\+N\+C\+L\+U\+D\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+H\+T\+M\+L\+I\+N\+C\+L\+U\+D\+E@{C\+M\+D\+\_\+\+H\+T\+M\+L\+I\+N\+C\+L\+U\+D\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352adae53dd7c50f13a85a89b1dc0b8d4041}{}C\+M\+D\+\_\+\+H\+T\+M\+L\+I\+N\+C\+L\+U\+D\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352adae53dd7c50f13a85a89b1dc0b8d4041}
+}]\index{C\+M\+D\+\_\+\+H\+T\+M\+L\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+H\+T\+M\+L\+O\+N\+L\+Y}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+H\+T\+M\+L\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+H\+T\+M\+L\+O\+N\+L\+Y}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a9f761cf9e2aac1ac177ef0bac1151302}{}C\+M\+D\+\_\+\+H\+T\+M\+L\+O\+N\+L\+Y\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a9f761cf9e2aac1ac177ef0bac1151302}
+}]\index{C\+M\+D\+\_\+\+I\+M\+A\+G\+E@{C\+M\+D\+\_\+\+I\+M\+A\+G\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+I\+M\+A\+G\+E@{C\+M\+D\+\_\+\+I\+M\+A\+G\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a489f5bfe07b9122b07ae95603b620637}{}C\+M\+D\+\_\+\+I\+M\+A\+G\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a489f5bfe07b9122b07ae95603b620637}
+}]\index{C\+M\+D\+\_\+\+I\+N\+C\+L\+U\+D\+E@{C\+M\+D\+\_\+\+I\+N\+C\+L\+U\+D\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+I\+N\+C\+L\+U\+D\+E@{C\+M\+D\+\_\+\+I\+N\+C\+L\+U\+D\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ab4d1c975213dd44975bc7d120dde4a2a}{}C\+M\+D\+\_\+\+I\+N\+C\+L\+U\+D\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ab4d1c975213dd44975bc7d120dde4a2a}
+}]\index{C\+M\+D\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L@{C\+M\+D\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L@{C\+M\+D\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a6665d8f0bcf614404cc57821e7be1d8c}{}C\+M\+D\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a6665d8f0bcf614404cc57821e7be1d8c}
+}]\index{C\+M\+D\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+R\+E\+F@{C\+M\+D\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+R\+E\+F}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+R\+E\+F@{C\+M\+D\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+R\+E\+F}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ae4d4c7c2d623f6ce76f6dd671e243e6e}{}C\+M\+D\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+R\+E\+F\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ae4d4c7c2d623f6ce76f6dd671e243e6e}
+}]\index{C\+M\+D\+\_\+\+I\+N\+V\+A\+R\+I\+A\+N\+T@{C\+M\+D\+\_\+\+I\+N\+V\+A\+R\+I\+A\+N\+T}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+I\+N\+V\+A\+R\+I\+A\+N\+T@{C\+M\+D\+\_\+\+I\+N\+V\+A\+R\+I\+A\+N\+T}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ad8c7abc774834caafe87e7c2bd407666}{}C\+M\+D\+\_\+\+I\+N\+V\+A\+R\+I\+A\+N\+T\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ad8c7abc774834caafe87e7c2bd407666}
+}]\index{C\+M\+D\+\_\+\+L\+A\+T\+E\+X\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+L\+A\+T\+E\+X\+O\+N\+L\+Y}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+L\+A\+T\+E\+X\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+L\+A\+T\+E\+X\+O\+N\+L\+Y}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a60b538ad584eaab529e7a73e5e6acf8e}{}C\+M\+D\+\_\+\+L\+A\+T\+E\+X\+O\+N\+L\+Y\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a60b538ad584eaab529e7a73e5e6acf8e}
+}]\index{C\+M\+D\+\_\+\+L\+E\+S\+S@{C\+M\+D\+\_\+\+L\+E\+S\+S}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+L\+E\+S\+S@{C\+M\+D\+\_\+\+L\+E\+S\+S}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a3a961d60636b316ed52bd72bcf3f048c}{}C\+M\+D\+\_\+\+L\+E\+S\+S\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a3a961d60636b316ed52bd72bcf3f048c}
+}]\index{C\+M\+D\+\_\+\+L\+I@{C\+M\+D\+\_\+\+L\+I}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+L\+I@{C\+M\+D\+\_\+\+L\+I}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a55101ef8bab305f40ec71ee8c7ccb77b}{}C\+M\+D\+\_\+\+L\+I\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a55101ef8bab305f40ec71ee8c7ccb77b}
+}]\index{C\+M\+D\+\_\+\+L\+I\+N\+E@{C\+M\+D\+\_\+\+L\+I\+N\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+L\+I\+N\+E@{C\+M\+D\+\_\+\+L\+I\+N\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352abb221177213477f4650b63a6d506b291}{}C\+M\+D\+\_\+\+L\+I\+N\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352abb221177213477f4650b63a6d506b291}
+}]\index{C\+M\+D\+\_\+\+L\+I\+N\+E\+B\+R\+E\+A\+K@{C\+M\+D\+\_\+\+L\+I\+N\+E\+B\+R\+E\+A\+K}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+L\+I\+N\+E\+B\+R\+E\+A\+K@{C\+M\+D\+\_\+\+L\+I\+N\+E\+B\+R\+E\+A\+K}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a3a0100e6a1ada0c023dbd1b9ff769577}{}C\+M\+D\+\_\+\+L\+I\+N\+E\+B\+R\+E\+A\+K\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a3a0100e6a1ada0c023dbd1b9ff769577}
+}]\index{C\+M\+D\+\_\+\+L\+I\+N\+K@{C\+M\+D\+\_\+\+L\+I\+N\+K}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+L\+I\+N\+K@{C\+M\+D\+\_\+\+L\+I\+N\+K}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a0b5a9ce6f811adbe3d817d249fbe44d4}{}C\+M\+D\+\_\+\+L\+I\+N\+K\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a0b5a9ce6f811adbe3d817d249fbe44d4}
+}]\index{C\+M\+D\+\_\+\+N\+O\+T\+E@{C\+M\+D\+\_\+\+N\+O\+T\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+N\+O\+T\+E@{C\+M\+D\+\_\+\+N\+O\+T\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352acdac039ffed313b2d399933d181ae9c3}{}C\+M\+D\+\_\+\+N\+O\+T\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352acdac039ffed313b2d399933d181ae9c3}
+}]\index{C\+M\+D\+\_\+\+P\+A\+R@{C\+M\+D\+\_\+\+P\+A\+R}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+P\+A\+R@{C\+M\+D\+\_\+\+P\+A\+R}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ada5569a23faea46f5ff18a775d01d8a5}{}C\+M\+D\+\_\+\+P\+A\+R\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ada5569a23faea46f5ff18a775d01d8a5}
+}]\index{C\+M\+D\+\_\+\+P\+A\+R\+A\+M@{C\+M\+D\+\_\+\+P\+A\+R\+A\+M}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+P\+A\+R\+A\+M@{C\+M\+D\+\_\+\+P\+A\+R\+A\+M}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ad01b24f526e012f70137bed8e5a71b68}{}C\+M\+D\+\_\+\+P\+A\+R\+A\+M\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ad01b24f526e012f70137bed8e5a71b68}
+}]\index{C\+M\+D\+\_\+\+P\+E\+R\+C\+E\+N\+T@{C\+M\+D\+\_\+\+P\+E\+R\+C\+E\+N\+T}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+P\+E\+R\+C\+E\+N\+T@{C\+M\+D\+\_\+\+P\+E\+R\+C\+E\+N\+T}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aca96e5cf3753309844d0949454f78161}{}C\+M\+D\+\_\+\+P\+E\+R\+C\+E\+N\+T\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aca96e5cf3753309844d0949454f78161}
+}]\index{C\+M\+D\+\_\+\+P\+O\+S\+T@{C\+M\+D\+\_\+\+P\+O\+S\+T}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+P\+O\+S\+T@{C\+M\+D\+\_\+\+P\+O\+S\+T}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a280d5532836e7a1c79bf385018735299}{}C\+M\+D\+\_\+\+P\+O\+S\+T\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a280d5532836e7a1c79bf385018735299}
+}]\index{C\+M\+D\+\_\+\+P\+R\+E@{C\+M\+D\+\_\+\+P\+R\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+P\+R\+E@{C\+M\+D\+\_\+\+P\+R\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a59a35d52b97a447d756c2ee16357ba3b}{}C\+M\+D\+\_\+\+P\+R\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a59a35d52b97a447d756c2ee16357ba3b}
+}]\index{C\+M\+D\+\_\+\+R\+E\+F@{C\+M\+D\+\_\+\+R\+E\+F}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+R\+E\+F@{C\+M\+D\+\_\+\+R\+E\+F}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a7b8f06ae1e48af487c6e23a69ad11bc9}{}C\+M\+D\+\_\+\+R\+E\+F\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a7b8f06ae1e48af487c6e23a69ad11bc9}
+}]\index{C\+M\+D\+\_\+\+S\+E\+C\+R\+E\+F\+I\+T\+E\+M@{C\+M\+D\+\_\+\+S\+E\+C\+R\+E\+F\+I\+T\+E\+M}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+S\+E\+C\+R\+E\+F\+I\+T\+E\+M@{C\+M\+D\+\_\+\+S\+E\+C\+R\+E\+F\+I\+T\+E\+M}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ae803793081803c1927138f9ea69f6d1b}{}C\+M\+D\+\_\+\+S\+E\+C\+R\+E\+F\+I\+T\+E\+M\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ae803793081803c1927138f9ea69f6d1b}
+}]\index{C\+M\+D\+\_\+\+R\+E\+M\+A\+R\+K@{C\+M\+D\+\_\+\+R\+E\+M\+A\+R\+K}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+R\+E\+M\+A\+R\+K@{C\+M\+D\+\_\+\+R\+E\+M\+A\+R\+K}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a77763768ec706ff41b93ccdfbfbc9fc8}{}C\+M\+D\+\_\+\+R\+E\+M\+A\+R\+K\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a77763768ec706ff41b93ccdfbfbc9fc8}
+}]\index{C\+M\+D\+\_\+\+R\+E\+T\+U\+R\+N@{C\+M\+D\+\_\+\+R\+E\+T\+U\+R\+N}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+R\+E\+T\+U\+R\+N@{C\+M\+D\+\_\+\+R\+E\+T\+U\+R\+N}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a958f04212c5e4a3510a98dd4ddc9cacc}{}C\+M\+D\+\_\+\+R\+E\+T\+U\+R\+N\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a958f04212c5e4a3510a98dd4ddc9cacc}
+}]\index{C\+M\+D\+\_\+\+R\+E\+T\+V\+A\+L@{C\+M\+D\+\_\+\+R\+E\+T\+V\+A\+L}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+R\+E\+T\+V\+A\+L@{C\+M\+D\+\_\+\+R\+E\+T\+V\+A\+L}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a3b1b41352af0687e5a3539dc3fa71306}{}C\+M\+D\+\_\+\+R\+E\+T\+V\+A\+L\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a3b1b41352af0687e5a3539dc3fa71306}
+}]\index{C\+M\+D\+\_\+\+S\+A@{C\+M\+D\+\_\+\+S\+A}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+S\+A@{C\+M\+D\+\_\+\+S\+A}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a05dedb991f617814382fc008c9b254af}{}C\+M\+D\+\_\+\+S\+A\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a05dedb991f617814382fc008c9b254af}
+}]\index{C\+M\+D\+\_\+\+S\+E\+C\+R\+E\+F\+L\+I\+S\+T@{C\+M\+D\+\_\+\+S\+E\+C\+R\+E\+F\+L\+I\+S\+T}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+S\+E\+C\+R\+E\+F\+L\+I\+S\+T@{C\+M\+D\+\_\+\+S\+E\+C\+R\+E\+F\+L\+I\+S\+T}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a55a71bd5670f7e2a3effaf7099f8414b}{}C\+M\+D\+\_\+\+S\+E\+C\+R\+E\+F\+L\+I\+S\+T\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a55a71bd5670f7e2a3effaf7099f8414b}
+}]\index{C\+M\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N@{C\+M\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N@{C\+M\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352afbaa664ecc659219f06dd197e53d1103}{}C\+M\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352afbaa664ecc659219f06dd197e53d1103}
+}]\index{C\+M\+D\+\_\+\+S\+U\+B\+P\+A\+G\+E@{C\+M\+D\+\_\+\+S\+U\+B\+P\+A\+G\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+S\+U\+B\+P\+A\+G\+E@{C\+M\+D\+\_\+\+S\+U\+B\+P\+A\+G\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a526362e9cbc278da3be397e44f8ddd8d}{}C\+M\+D\+\_\+\+S\+U\+B\+P\+A\+G\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a526362e9cbc278da3be397e44f8ddd8d}
+}]\index{C\+M\+D\+\_\+\+S\+U\+B\+S\+E\+C\+T\+I\+O\+N@{C\+M\+D\+\_\+\+S\+U\+B\+S\+E\+C\+T\+I\+O\+N}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+S\+U\+B\+S\+E\+C\+T\+I\+O\+N@{C\+M\+D\+\_\+\+S\+U\+B\+S\+E\+C\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aac8616a48c4f1b08d9ee7e7169900649}{}C\+M\+D\+\_\+\+S\+U\+B\+S\+E\+C\+T\+I\+O\+N\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aac8616a48c4f1b08d9ee7e7169900649}
+}]\index{C\+M\+D\+\_\+\+S\+U\+B\+S\+U\+B\+S\+E\+C\+T\+I\+O\+N@{C\+M\+D\+\_\+\+S\+U\+B\+S\+U\+B\+S\+E\+C\+T\+I\+O\+N}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+S\+U\+B\+S\+U\+B\+S\+E\+C\+T\+I\+O\+N@{C\+M\+D\+\_\+\+S\+U\+B\+S\+U\+B\+S\+E\+C\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a01b80164671b4c46dc9dcc302634ea1b}{}C\+M\+D\+\_\+\+S\+U\+B\+S\+U\+B\+S\+E\+C\+T\+I\+O\+N\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a01b80164671b4c46dc9dcc302634ea1b}
+}]\index{C\+M\+D\+\_\+\+P\+A\+R\+A\+G\+R\+A\+P\+H@{C\+M\+D\+\_\+\+P\+A\+R\+A\+G\+R\+A\+P\+H}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+P\+A\+R\+A\+G\+R\+A\+P\+H@{C\+M\+D\+\_\+\+P\+A\+R\+A\+G\+R\+A\+P\+H}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a91d6f6827880e5e6451c1b9876c029ef}{}C\+M\+D\+\_\+\+P\+A\+R\+A\+G\+R\+A\+P\+H\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a91d6f6827880e5e6451c1b9876c029ef}
+}]\index{C\+M\+D\+\_\+\+S\+I\+N\+C\+E@{C\+M\+D\+\_\+\+S\+I\+N\+C\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+S\+I\+N\+C\+E@{C\+M\+D\+\_\+\+S\+I\+N\+C\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aa1a49deb0b26369db95f89dd292794dc}{}C\+M\+D\+\_\+\+S\+I\+N\+C\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aa1a49deb0b26369db95f89dd292794dc}
+}]\index{C\+M\+D\+\_\+\+S\+K\+I\+P@{C\+M\+D\+\_\+\+S\+K\+I\+P}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+S\+K\+I\+P@{C\+M\+D\+\_\+\+S\+K\+I\+P}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a4805c5dee0868ae46a6847b11ea5bd79}{}C\+M\+D\+\_\+\+S\+K\+I\+P\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a4805c5dee0868ae46a6847b11ea5bd79}
+}]\index{C\+M\+D\+\_\+\+S\+K\+I\+P\+L\+I\+N\+E@{C\+M\+D\+\_\+\+S\+K\+I\+P\+L\+I\+N\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+S\+K\+I\+P\+L\+I\+N\+E@{C\+M\+D\+\_\+\+S\+K\+I\+P\+L\+I\+N\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a0552286c010906901ded70c1c725d286}{}C\+M\+D\+\_\+\+S\+K\+I\+P\+L\+I\+N\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a0552286c010906901ded70c1c725d286}
+}]\index{C\+M\+D\+\_\+\+S\+T\+A\+R\+T\+C\+O\+D\+E@{C\+M\+D\+\_\+\+S\+T\+A\+R\+T\+C\+O\+D\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+S\+T\+A\+R\+T\+C\+O\+D\+E@{C\+M\+D\+\_\+\+S\+T\+A\+R\+T\+C\+O\+D\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a55acb16c15841c9059f446aae9b08557}{}C\+M\+D\+\_\+\+S\+T\+A\+R\+T\+C\+O\+D\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a55acb16c15841c9059f446aae9b08557}
+}]\index{C\+M\+D\+\_\+\+J\+A\+V\+A\+L\+I\+N\+K@{C\+M\+D\+\_\+\+J\+A\+V\+A\+L\+I\+N\+K}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+J\+A\+V\+A\+L\+I\+N\+K@{C\+M\+D\+\_\+\+J\+A\+V\+A\+L\+I\+N\+K}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a6f4e61a229d6b794cfaf7d244312409b}{}C\+M\+D\+\_\+\+J\+A\+V\+A\+L\+I\+N\+K\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a6f4e61a229d6b794cfaf7d244312409b}
+}]\index{C\+M\+D\+\_\+\+U\+N\+T\+I\+L@{C\+M\+D\+\_\+\+U\+N\+T\+I\+L}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+U\+N\+T\+I\+L@{C\+M\+D\+\_\+\+U\+N\+T\+I\+L}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a5e4da2a4060874b9235b0ae87fdfafe9}{}C\+M\+D\+\_\+\+U\+N\+T\+I\+L\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a5e4da2a4060874b9235b0ae87fdfafe9}
+}]\index{C\+M\+D\+\_\+\+V\+E\+R\+B\+A\+T\+I\+M@{C\+M\+D\+\_\+\+V\+E\+R\+B\+A\+T\+I\+M}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+V\+E\+R\+B\+A\+T\+I\+M@{C\+M\+D\+\_\+\+V\+E\+R\+B\+A\+T\+I\+M}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a8e2892d5b3845a0640ea21108f4ecf8f}{}C\+M\+D\+\_\+\+V\+E\+R\+B\+A\+T\+I\+M\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a8e2892d5b3845a0640ea21108f4ecf8f}
+}]\index{C\+M\+D\+\_\+\+V\+E\+R\+B\+I\+N\+C\+L\+U\+D\+E@{C\+M\+D\+\_\+\+V\+E\+R\+B\+I\+N\+C\+L\+U\+D\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+V\+E\+R\+B\+I\+N\+C\+L\+U\+D\+E@{C\+M\+D\+\_\+\+V\+E\+R\+B\+I\+N\+C\+L\+U\+D\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aa23cdd46a729b71b24b6e916a2ad6a3d}{}C\+M\+D\+\_\+\+V\+E\+R\+B\+I\+N\+C\+L\+U\+D\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aa23cdd46a729b71b24b6e916a2ad6a3d}
+}]\index{C\+M\+D\+\_\+\+V\+E\+R\+S\+I\+O\+N@{C\+M\+D\+\_\+\+V\+E\+R\+S\+I\+O\+N}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+V\+E\+R\+S\+I\+O\+N@{C\+M\+D\+\_\+\+V\+E\+R\+S\+I\+O\+N}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a775afaef84c85d8173a20debb1a9e2ef}{}C\+M\+D\+\_\+\+V\+E\+R\+S\+I\+O\+N\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a775afaef84c85d8173a20debb1a9e2ef}
+}]\index{C\+M\+D\+\_\+\+W\+A\+R\+N\+I\+N\+G@{C\+M\+D\+\_\+\+W\+A\+R\+N\+I\+N\+G}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+W\+A\+R\+N\+I\+N\+G@{C\+M\+D\+\_\+\+W\+A\+R\+N\+I\+N\+G}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a8ebff95a3a1eced8424b411a58129570}{}C\+M\+D\+\_\+\+W\+A\+R\+N\+I\+N\+G\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a8ebff95a3a1eced8424b411a58129570}
+}]\index{C\+M\+D\+\_\+\+X\+R\+E\+F\+I\+T\+E\+M@{C\+M\+D\+\_\+\+X\+R\+E\+F\+I\+T\+E\+M}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+X\+R\+E\+F\+I\+T\+E\+M@{C\+M\+D\+\_\+\+X\+R\+E\+F\+I\+T\+E\+M}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a9a05dbb51dd0e9c99e2f5f8afeee9e34}{}C\+M\+D\+\_\+\+X\+R\+E\+F\+I\+T\+E\+M\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a9a05dbb51dd0e9c99e2f5f8afeee9e34}
+}]\index{C\+M\+D\+\_\+\+X\+M\+L\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+X\+M\+L\+O\+N\+L\+Y}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+X\+M\+L\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+X\+M\+L\+O\+N\+L\+Y}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a5ea1f3b68bcc06282c8e4e8ffc04e577}{}C\+M\+D\+\_\+\+X\+M\+L\+O\+N\+L\+Y\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a5ea1f3b68bcc06282c8e4e8ffc04e577}
+}]\index{C\+M\+D\+\_\+\+D\+O\+T@{C\+M\+D\+\_\+\+D\+O\+T}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+D\+O\+T@{C\+M\+D\+\_\+\+D\+O\+T}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352acc3ae0ca27b8c1e16ff656218fe75ffd}{}C\+M\+D\+\_\+\+D\+O\+T\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352acc3ae0ca27b8c1e16ff656218fe75ffd}
+}]\index{C\+M\+D\+\_\+\+E\+N\+D\+D\+O\+T@{C\+M\+D\+\_\+\+E\+N\+D\+D\+O\+T}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+E\+N\+D\+D\+O\+T@{C\+M\+D\+\_\+\+E\+N\+D\+D\+O\+T}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ab5c456e1b599f22a99f6fca83d72c4c2}{}C\+M\+D\+\_\+\+E\+N\+D\+D\+O\+T\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ab5c456e1b599f22a99f6fca83d72c4c2}
+}]\index{C\+M\+D\+\_\+\+M\+S\+C@{C\+M\+D\+\_\+\+M\+S\+C}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+M\+S\+C@{C\+M\+D\+\_\+\+M\+S\+C}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a0b9cfdde6af11b21f723efc74101ca91}{}C\+M\+D\+\_\+\+M\+S\+C\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a0b9cfdde6af11b21f723efc74101ca91}
+}]\index{C\+M\+D\+\_\+\+E\+N\+D\+M\+S\+C@{C\+M\+D\+\_\+\+E\+N\+D\+M\+S\+C}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+E\+N\+D\+M\+S\+C@{C\+M\+D\+\_\+\+E\+N\+D\+M\+S\+C}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aa5b691035efafbcce28a68e1f545bca7}{}C\+M\+D\+\_\+\+E\+N\+D\+M\+S\+C\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aa5b691035efafbcce28a68e1f545bca7}
+}]\index{C\+M\+D\+\_\+\+M\+A\+N\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+M\+A\+N\+O\+N\+L\+Y}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+M\+A\+N\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+M\+A\+N\+O\+N\+L\+Y}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352abe7a854cf21231a81d1d038b8faabd34}{}C\+M\+D\+\_\+\+M\+A\+N\+O\+N\+L\+Y\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352abe7a854cf21231a81d1d038b8faabd34}
+}]\index{C\+M\+D\+\_\+\+E\+N\+D\+M\+A\+N\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+E\+N\+D\+M\+A\+N\+O\+N\+L\+Y}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+E\+N\+D\+M\+A\+N\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+E\+N\+D\+M\+A\+N\+O\+N\+L\+Y}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352abc7effe66a73c5de9e6483e3d0e443cd}{}C\+M\+D\+\_\+\+E\+N\+D\+M\+A\+N\+O\+N\+L\+Y\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352abc7effe66a73c5de9e6483e3d0e443cd}
+}]\index{C\+M\+D\+\_\+\+I\+N\+C\+W\+I\+T\+H\+L\+I\+N\+E\+S@{C\+M\+D\+\_\+\+I\+N\+C\+W\+I\+T\+H\+L\+I\+N\+E\+S}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+I\+N\+C\+W\+I\+T\+H\+L\+I\+N\+E\+S@{C\+M\+D\+\_\+\+I\+N\+C\+W\+I\+T\+H\+L\+I\+N\+E\+S}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352af3aaa6101991074c124285bd40b25251}{}C\+M\+D\+\_\+\+I\+N\+C\+W\+I\+T\+H\+L\+I\+N\+E\+S\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352af3aaa6101991074c124285bd40b25251}
+}]\index{C\+M\+D\+\_\+\+I\+N\+H\+E\+R\+I\+T\+D\+O\+C@{C\+M\+D\+\_\+\+I\+N\+H\+E\+R\+I\+T\+D\+O\+C}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+I\+N\+H\+E\+R\+I\+T\+D\+O\+C@{C\+M\+D\+\_\+\+I\+N\+H\+E\+R\+I\+T\+D\+O\+C}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a19dea03fa05253a4c24ec5b831fb4620}{}C\+M\+D\+\_\+\+I\+N\+H\+E\+R\+I\+T\+D\+O\+C\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a19dea03fa05253a4c24ec5b831fb4620}
+}]\index{C\+M\+D\+\_\+\+T\+P\+A\+R\+A\+M@{C\+M\+D\+\_\+\+T\+P\+A\+R\+A\+M}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+T\+P\+A\+R\+A\+M@{C\+M\+D\+\_\+\+T\+P\+A\+R\+A\+M}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a23ffe75d48cf03af7ffe387ab0ea9b8c}{}C\+M\+D\+\_\+\+T\+P\+A\+R\+A\+M\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a23ffe75d48cf03af7ffe387ab0ea9b8c}
+}]\index{C\+M\+D\+\_\+\+C\+O\+P\+Y\+B\+R\+I\+E\+F@{C\+M\+D\+\_\+\+C\+O\+P\+Y\+B\+R\+I\+E\+F}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+C\+O\+P\+Y\+B\+R\+I\+E\+F@{C\+M\+D\+\_\+\+C\+O\+P\+Y\+B\+R\+I\+E\+F}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ae54a3da6d5ec9d3de242797ba200d340}{}C\+M\+D\+\_\+\+C\+O\+P\+Y\+B\+R\+I\+E\+F\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ae54a3da6d5ec9d3de242797ba200d340}
+}]\index{C\+M\+D\+\_\+\+C\+O\+P\+Y\+D\+E\+T\+A\+I\+L\+S@{C\+M\+D\+\_\+\+C\+O\+P\+Y\+D\+E\+T\+A\+I\+L\+S}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+C\+O\+P\+Y\+D\+E\+T\+A\+I\+L\+S@{C\+M\+D\+\_\+\+C\+O\+P\+Y\+D\+E\+T\+A\+I\+L\+S}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a82223f58b6dcbfe3634c578b15b60705}{}C\+M\+D\+\_\+\+C\+O\+P\+Y\+D\+E\+T\+A\+I\+L\+S\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a82223f58b6dcbfe3634c578b15b60705}
+}]\index{C\+M\+D\+\_\+\+Q\+U\+O\+T\+E@{C\+M\+D\+\_\+\+Q\+U\+O\+T\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+Q\+U\+O\+T\+E@{C\+M\+D\+\_\+\+Q\+U\+O\+T\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a58a61c08767e3f10d7eaea740ec7f4bd}{}C\+M\+D\+\_\+\+Q\+U\+O\+T\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a58a61c08767e3f10d7eaea740ec7f4bd}
+}]\index{C\+M\+D\+\_\+\+M\+S\+C\+F\+I\+L\+E@{C\+M\+D\+\_\+\+M\+S\+C\+F\+I\+L\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+M\+S\+C\+F\+I\+L\+E@{C\+M\+D\+\_\+\+M\+S\+C\+F\+I\+L\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352adb64829d249746c970285f75fc0119b3}{}C\+M\+D\+\_\+\+M\+S\+C\+F\+I\+L\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352adb64829d249746c970285f75fc0119b3}
+}]\index{C\+M\+D\+\_\+\+D\+C\+O\+L\+O\+N@{C\+M\+D\+\_\+\+D\+C\+O\+L\+O\+N}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+D\+C\+O\+L\+O\+N@{C\+M\+D\+\_\+\+D\+C\+O\+L\+O\+N}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ab05528d9341e59cb0a4417c78f7b4612}{}C\+M\+D\+\_\+\+D\+C\+O\+L\+O\+N\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ab05528d9341e59cb0a4417c78f7b4612}
+}]\index{C\+M\+D\+\_\+\+C\+O\+P\+Y\+R\+I\+G\+H\+T@{C\+M\+D\+\_\+\+C\+O\+P\+Y\+R\+I\+G\+H\+T}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+C\+O\+P\+Y\+R\+I\+G\+H\+T@{C\+M\+D\+\_\+\+C\+O\+P\+Y\+R\+I\+G\+H\+T}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a3f984fb2659e79ea8db1451708cd2418}{}C\+M\+D\+\_\+\+C\+O\+P\+Y\+R\+I\+G\+H\+T\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a3f984fb2659e79ea8db1451708cd2418}
+}]\index{C\+M\+D\+\_\+\+C\+I\+T\+E@{C\+M\+D\+\_\+\+C\+I\+T\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+C\+I\+T\+E@{C\+M\+D\+\_\+\+C\+I\+T\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aef3bd5b15cfda05777564054f3d51519}{}C\+M\+D\+\_\+\+C\+I\+T\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aef3bd5b15cfda05777564054f3d51519}
+}]\index{C\+M\+D\+\_\+\+S\+N\+I\+P\+P\+E\+T@{C\+M\+D\+\_\+\+S\+N\+I\+P\+P\+E\+T}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+S\+N\+I\+P\+P\+E\+T@{C\+M\+D\+\_\+\+S\+N\+I\+P\+P\+E\+T}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aa52a134d53b7dae853c6ddd7c0d32762}{}C\+M\+D\+\_\+\+S\+N\+I\+P\+P\+E\+T\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aa52a134d53b7dae853c6ddd7c0d32762}
+}]\index{C\+M\+D\+\_\+\+R\+T\+F\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+R\+T\+F\+O\+N\+L\+Y}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+R\+T\+F\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+R\+T\+F\+O\+N\+L\+Y}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a416b36a42a1f59b90554459d5136ba59}{}C\+M\+D\+\_\+\+R\+T\+F\+O\+N\+L\+Y\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a416b36a42a1f59b90554459d5136ba59}
+}]\index{C\+M\+D\+\_\+\+E\+N\+D\+R\+T\+F\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+E\+N\+D\+R\+T\+F\+O\+N\+L\+Y}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+E\+N\+D\+R\+T\+F\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+E\+N\+D\+R\+T\+F\+O\+N\+L\+Y}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a9b7320a3db24c2c2297ac3885a794f77}{}C\+M\+D\+\_\+\+E\+N\+D\+R\+T\+F\+O\+N\+L\+Y\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a9b7320a3db24c2c2297ac3885a794f77}
+}]\index{C\+M\+D\+\_\+\+P\+I\+P\+E@{C\+M\+D\+\_\+\+P\+I\+P\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+P\+I\+P\+E@{C\+M\+D\+\_\+\+P\+I\+P\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a909f9b752cc4cb5ac167c49a60c693e3}{}C\+M\+D\+\_\+\+P\+I\+P\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a909f9b752cc4cb5ac167c49a60c693e3}
+}]\index{C\+M\+D\+\_\+\+V\+H\+D\+L\+F\+L\+O\+W@{C\+M\+D\+\_\+\+V\+H\+D\+L\+F\+L\+O\+W}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+V\+H\+D\+L\+F\+L\+O\+W@{C\+M\+D\+\_\+\+V\+H\+D\+L\+F\+L\+O\+W}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352afb92f40faabf2a23a7613fa45ef9b41f}{}C\+M\+D\+\_\+\+V\+H\+D\+L\+F\+L\+O\+W\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352afb92f40faabf2a23a7613fa45ef9b41f}
+}]\index{C\+M\+D\+\_\+\+D\+B\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+D\+B\+O\+N\+L\+Y}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+D\+B\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+D\+B\+O\+N\+L\+Y}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a6a1b6ba7045be9a9ff5e53c4ba3a7cd2}{}C\+M\+D\+\_\+\+D\+B\+O\+N\+L\+Y\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a6a1b6ba7045be9a9ff5e53c4ba3a7cd2}
+}]\index{C\+M\+D\+\_\+\+E\+N\+D\+D\+B\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+E\+N\+D\+D\+B\+O\+N\+L\+Y}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+E\+N\+D\+D\+B\+O\+N\+L\+Y@{C\+M\+D\+\_\+\+E\+N\+D\+D\+B\+O\+N\+L\+Y}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a689e44582ab16371bf0e4abe0b0df8bd}{}C\+M\+D\+\_\+\+E\+N\+D\+D\+B\+O\+N\+L\+Y\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a689e44582ab16371bf0e4abe0b0df8bd}
+}]\index{C\+M\+D\+\_\+\+E\+N\+D\+I\+N\+T\+E\+R\+N\+A\+L@{C\+M\+D\+\_\+\+E\+N\+D\+I\+N\+T\+E\+R\+N\+A\+L}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+E\+N\+D\+I\+N\+T\+E\+R\+N\+A\+L@{C\+M\+D\+\_\+\+E\+N\+D\+I\+N\+T\+E\+R\+N\+A\+L}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a14e860729ef7343b20b23f57c2005734}{}C\+M\+D\+\_\+\+E\+N\+D\+I\+N\+T\+E\+R\+N\+A\+L\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a14e860729ef7343b20b23f57c2005734}
+}]\index{C\+M\+D\+\_\+\+P\+A\+R\+B\+L\+O\+C\+K@{C\+M\+D\+\_\+\+P\+A\+R\+B\+L\+O\+C\+K}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+P\+A\+R\+B\+L\+O\+C\+K@{C\+M\+D\+\_\+\+P\+A\+R\+B\+L\+O\+C\+K}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a3558fa3cad78186718c5c61b2d22366a}{}C\+M\+D\+\_\+\+P\+A\+R\+B\+L\+O\+C\+K\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a3558fa3cad78186718c5c61b2d22366a}
+}]\index{C\+M\+D\+\_\+\+E\+N\+D\+P\+A\+R\+B\+L\+O\+C\+K@{C\+M\+D\+\_\+\+E\+N\+D\+P\+A\+R\+B\+L\+O\+C\+K}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+E\+N\+D\+P\+A\+R\+B\+L\+O\+C\+K@{C\+M\+D\+\_\+\+E\+N\+D\+P\+A\+R\+B\+L\+O\+C\+K}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a5b101f3e704ea6146fe97a7b6c46a253}{}C\+M\+D\+\_\+\+E\+N\+D\+P\+A\+R\+B\+L\+O\+C\+K\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a5b101f3e704ea6146fe97a7b6c46a253}
+}]\index{C\+M\+D\+\_\+\+D\+I\+A\+F\+I\+L\+E@{C\+M\+D\+\_\+\+D\+I\+A\+F\+I\+L\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+D\+I\+A\+F\+I\+L\+E@{C\+M\+D\+\_\+\+D\+I\+A\+F\+I\+L\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ab01143b543d34b4ae565fd418120b1a0}{}C\+M\+D\+\_\+\+D\+I\+A\+F\+I\+L\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352ab01143b543d34b4ae565fd418120b1a0}
+}]\index{C\+M\+D\+\_\+\+L\+A\+T\+E\+X\+I\+N\+C\+L\+U\+D\+E@{C\+M\+D\+\_\+\+L\+A\+T\+E\+X\+I\+N\+C\+L\+U\+D\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+L\+A\+T\+E\+X\+I\+N\+C\+L\+U\+D\+E@{C\+M\+D\+\_\+\+L\+A\+T\+E\+X\+I\+N\+C\+L\+U\+D\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aaf70c5e32de19a4e981a629b5d05c87e}{}C\+M\+D\+\_\+\+L\+A\+T\+E\+X\+I\+N\+C\+L\+U\+D\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352aaf70c5e32de19a4e981a629b5d05c87e}
+}]\index{C\+M\+D\+\_\+\+N\+D\+A\+S\+H@{C\+M\+D\+\_\+\+N\+D\+A\+S\+H}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+N\+D\+A\+S\+H@{C\+M\+D\+\_\+\+N\+D\+A\+S\+H}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a30aa17eaef4a68dc70659edf21a3c566}{}C\+M\+D\+\_\+\+N\+D\+A\+S\+H\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a30aa17eaef4a68dc70659edf21a3c566}
+}]\index{C\+M\+D\+\_\+\+M\+D\+A\+S\+H@{C\+M\+D\+\_\+\+M\+D\+A\+S\+H}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+M\+D\+A\+S\+H@{C\+M\+D\+\_\+\+M\+D\+A\+S\+H}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a6f63169f10a8f37288a93f138c942201}{}C\+M\+D\+\_\+\+M\+D\+A\+S\+H\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a6f63169f10a8f37288a93f138c942201}
+}]\index{C\+M\+D\+\_\+\+S\+T\+A\+R\+T\+U\+M\+L@{C\+M\+D\+\_\+\+S\+T\+A\+R\+T\+U\+M\+L}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+S\+T\+A\+R\+T\+U\+M\+L@{C\+M\+D\+\_\+\+S\+T\+A\+R\+T\+U\+M\+L}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a04ec9e037c704e3f55bac3a126a58a1d}{}C\+M\+D\+\_\+\+S\+T\+A\+R\+T\+U\+M\+L\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a04ec9e037c704e3f55bac3a126a58a1d}
+}]\index{C\+M\+D\+\_\+\+E\+N\+D\+U\+M\+L@{C\+M\+D\+\_\+\+E\+N\+D\+U\+M\+L}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+E\+N\+D\+U\+M\+L@{C\+M\+D\+\_\+\+E\+N\+D\+U\+M\+L}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352af37765a3c794a81d62b2bd21b0056995}{}C\+M\+D\+\_\+\+E\+N\+D\+U\+M\+L\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352af37765a3c794a81d62b2bd21b0056995}
+}]\index{C\+M\+D\+\_\+\+S\+E\+T\+S\+C\+O\+P\+E@{C\+M\+D\+\_\+\+S\+E\+T\+S\+C\+O\+P\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!C\+M\+D\+\_\+\+S\+E\+T\+S\+C\+O\+P\+E@{C\+M\+D\+\_\+\+S\+E\+T\+S\+C\+O\+P\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a79245f26137bb9bd110a6b3891d20918}{}C\+M\+D\+\_\+\+S\+E\+T\+S\+C\+O\+P\+E\label{cmdmapper_8h_a21e038f5b8958e203d28bc4f18472352a79245f26137bb9bd110a6b3891d20918}
+}]\end{description}
+\end{Desc}
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273}{}\index{cmdmapper.\+h@{cmdmapper.\+h}!Html\+Tag\+Type@{Html\+Tag\+Type}}
+\index{Html\+Tag\+Type@{Html\+Tag\+Type}!cmdmapper.\+h@{cmdmapper.\+h}}
+\subsubsection[{Html\+Tag\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Html\+Tag\+Type}}\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{H\+T\+M\+L\+\_\+\+U\+N\+K\+N\+O\+W\+N@{H\+T\+M\+L\+\_\+\+U\+N\+K\+N\+O\+W\+N}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+U\+N\+K\+N\+O\+W\+N@{H\+T\+M\+L\+\_\+\+U\+N\+K\+N\+O\+W\+N}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ac1934c403fc4e8aec69c8057dbf5eba8}{}H\+T\+M\+L\+\_\+\+U\+N\+K\+N\+O\+W\+N\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ac1934c403fc4e8aec69c8057dbf5eba8}
+}]\index{H\+T\+M\+L\+\_\+\+C\+E\+N\+T\+E\+R@{H\+T\+M\+L\+\_\+\+C\+E\+N\+T\+E\+R}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+C\+E\+N\+T\+E\+R@{H\+T\+M\+L\+\_\+\+C\+E\+N\+T\+E\+R}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ac192733ecef2b440a2912e131b199297}{}H\+T\+M\+L\+\_\+\+C\+E\+N\+T\+E\+R\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ac192733ecef2b440a2912e131b199297}
+}]\index{H\+T\+M\+L\+\_\+\+T\+A\+B\+L\+E@{H\+T\+M\+L\+\_\+\+T\+A\+B\+L\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+T\+A\+B\+L\+E@{H\+T\+M\+L\+\_\+\+T\+A\+B\+L\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a3aed8f95115b0405658ecce503a542f2}{}H\+T\+M\+L\+\_\+\+T\+A\+B\+L\+E\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a3aed8f95115b0405658ecce503a542f2}
+}]\index{H\+T\+M\+L\+\_\+\+C\+A\+P\+T\+I\+O\+N@{H\+T\+M\+L\+\_\+\+C\+A\+P\+T\+I\+O\+N}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+C\+A\+P\+T\+I\+O\+N@{H\+T\+M\+L\+\_\+\+C\+A\+P\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a8629572501ea907937bc7ab85a22a791}{}H\+T\+M\+L\+\_\+\+C\+A\+P\+T\+I\+O\+N\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a8629572501ea907937bc7ab85a22a791}
+}]\index{H\+T\+M\+L\+\_\+\+S\+M\+A\+L\+L@{H\+T\+M\+L\+\_\+\+S\+M\+A\+L\+L}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+S\+M\+A\+L\+L@{H\+T\+M\+L\+\_\+\+S\+M\+A\+L\+L}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273adceacc537ebc8bef56297fbc0a36ad43}{}H\+T\+M\+L\+\_\+\+S\+M\+A\+L\+L\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273adceacc537ebc8bef56297fbc0a36ad43}
+}]\index{H\+T\+M\+L\+\_\+\+C\+O\+D\+E@{H\+T\+M\+L\+\_\+\+C\+O\+D\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+C\+O\+D\+E@{H\+T\+M\+L\+\_\+\+C\+O\+D\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a979f58b8a091b20ba4df27c44f1302ad}{}H\+T\+M\+L\+\_\+\+C\+O\+D\+E\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a979f58b8a091b20ba4df27c44f1302ad}
+}]\index{H\+T\+M\+L\+\_\+\+I\+M\+G@{H\+T\+M\+L\+\_\+\+I\+M\+G}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+I\+M\+G@{H\+T\+M\+L\+\_\+\+I\+M\+G}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a436583682852de8309cf69f86b703ded}{}H\+T\+M\+L\+\_\+\+I\+M\+G\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a436583682852de8309cf69f86b703ded}
+}]\index{H\+T\+M\+L\+\_\+\+P\+R\+E@{H\+T\+M\+L\+\_\+\+P\+R\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+P\+R\+E@{H\+T\+M\+L\+\_\+\+P\+R\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a999fc50baf874925425d9137df1c81e6}{}H\+T\+M\+L\+\_\+\+P\+R\+E\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a999fc50baf874925425d9137df1c81e6}
+}]\index{H\+T\+M\+L\+\_\+\+S\+U\+B@{H\+T\+M\+L\+\_\+\+S\+U\+B}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+S\+U\+B@{H\+T\+M\+L\+\_\+\+S\+U\+B}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273acc736af404043a5fb485bad648969714}{}H\+T\+M\+L\+\_\+\+S\+U\+B\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273acc736af404043a5fb485bad648969714}
+}]\index{H\+T\+M\+L\+\_\+\+S\+U\+P@{H\+T\+M\+L\+\_\+\+S\+U\+P}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+S\+U\+P@{H\+T\+M\+L\+\_\+\+S\+U\+P}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ab33821a069d677ced94c2d9b5b95cfdf}{}H\+T\+M\+L\+\_\+\+S\+U\+P\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ab33821a069d677ced94c2d9b5b95cfdf}
+}]\index{H\+T\+M\+L\+\_\+\+T\+R@{H\+T\+M\+L\+\_\+\+T\+R}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+T\+R@{H\+T\+M\+L\+\_\+\+T\+R}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a965236d24833e4787f78c558191e3194}{}H\+T\+M\+L\+\_\+\+T\+R\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a965236d24833e4787f78c558191e3194}
+}]\index{H\+T\+M\+L\+\_\+\+T\+D@{H\+T\+M\+L\+\_\+\+T\+D}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+T\+D@{H\+T\+M\+L\+\_\+\+T\+D}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a0f65add9809a92b33af57c861072420d}{}H\+T\+M\+L\+\_\+\+T\+D\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a0f65add9809a92b33af57c861072420d}
+}]\index{H\+T\+M\+L\+\_\+\+T\+H@{H\+T\+M\+L\+\_\+\+T\+H}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+T\+H@{H\+T\+M\+L\+\_\+\+T\+H}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a8d77dde5aa6ca897a799e50b50c97e03}{}H\+T\+M\+L\+\_\+\+T\+H\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a8d77dde5aa6ca897a799e50b50c97e03}
+}]\index{H\+T\+M\+L\+\_\+\+O\+L@{H\+T\+M\+L\+\_\+\+O\+L}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+O\+L@{H\+T\+M\+L\+\_\+\+O\+L}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a09a9451950d718b0f27763fa26f170a9}{}H\+T\+M\+L\+\_\+\+O\+L\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a09a9451950d718b0f27763fa26f170a9}
+}]\index{H\+T\+M\+L\+\_\+\+U\+L@{H\+T\+M\+L\+\_\+\+U\+L}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+U\+L@{H\+T\+M\+L\+\_\+\+U\+L}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a2e79ca260235f3a4cf4cb056908d1785}{}H\+T\+M\+L\+\_\+\+U\+L\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a2e79ca260235f3a4cf4cb056908d1785}
+}]\index{H\+T\+M\+L\+\_\+\+L\+I@{H\+T\+M\+L\+\_\+\+L\+I}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+L\+I@{H\+T\+M\+L\+\_\+\+L\+I}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a5b427daa465f1ea1296910a246c456b6}{}H\+T\+M\+L\+\_\+\+L\+I\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a5b427daa465f1ea1296910a246c456b6}
+}]\index{H\+T\+M\+L\+\_\+\+E\+M\+P\+H\+A\+S\+I\+S@{H\+T\+M\+L\+\_\+\+E\+M\+P\+H\+A\+S\+I\+S}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+E\+M\+P\+H\+A\+S\+I\+S@{H\+T\+M\+L\+\_\+\+E\+M\+P\+H\+A\+S\+I\+S}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273aac52e15bdb0841a553a6b25c1d8066e7}{}H\+T\+M\+L\+\_\+\+E\+M\+P\+H\+A\+S\+I\+S\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273aac52e15bdb0841a553a6b25c1d8066e7}
+}]\index{H\+T\+M\+L\+\_\+\+H\+R@{H\+T\+M\+L\+\_\+\+H\+R}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+H\+R@{H\+T\+M\+L\+\_\+\+H\+R}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a2db3fc04fb060767f561d6ee6e119ad8}{}H\+T\+M\+L\+\_\+\+H\+R\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a2db3fc04fb060767f561d6ee6e119ad8}
+}]\index{H\+T\+M\+L\+\_\+\+D\+L@{H\+T\+M\+L\+\_\+\+D\+L}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+D\+L@{H\+T\+M\+L\+\_\+\+D\+L}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a7bceb89c29cacf6c836060d3228dcd8c}{}H\+T\+M\+L\+\_\+\+D\+L\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a7bceb89c29cacf6c836060d3228dcd8c}
+}]\index{H\+T\+M\+L\+\_\+\+D\+T@{H\+T\+M\+L\+\_\+\+D\+T}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+D\+T@{H\+T\+M\+L\+\_\+\+D\+T}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a71fe5f07a7733918d072beab57d26285}{}H\+T\+M\+L\+\_\+\+D\+T\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a71fe5f07a7733918d072beab57d26285}
+}]\index{H\+T\+M\+L\+\_\+\+D\+D@{H\+T\+M\+L\+\_\+\+D\+D}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+D\+D@{H\+T\+M\+L\+\_\+\+D\+D}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a03e14ddd1a8f94ed1b3994c0e248568f}{}H\+T\+M\+L\+\_\+\+D\+D\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a03e14ddd1a8f94ed1b3994c0e248568f}
+}]\index{H\+T\+M\+L\+\_\+\+B\+R@{H\+T\+M\+L\+\_\+\+B\+R}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+B\+R@{H\+T\+M\+L\+\_\+\+B\+R}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273af9d8009956ca8e2a982cf4131637872b}{}H\+T\+M\+L\+\_\+\+B\+R\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273af9d8009956ca8e2a982cf4131637872b}
+}]\index{H\+T\+M\+L\+\_\+\+A@{H\+T\+M\+L\+\_\+\+A}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+A@{H\+T\+M\+L\+\_\+\+A}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a960ff78b8fbc63b696e964b01d1af9f0}{}H\+T\+M\+L\+\_\+\+A\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a960ff78b8fbc63b696e964b01d1af9f0}
+}]\index{H\+T\+M\+L\+\_\+\+B\+O\+L\+D@{H\+T\+M\+L\+\_\+\+B\+O\+L\+D}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+B\+O\+L\+D@{H\+T\+M\+L\+\_\+\+B\+O\+L\+D}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273aebdeae081cb7486e59697f060c626791}{}H\+T\+M\+L\+\_\+\+B\+O\+L\+D\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273aebdeae081cb7486e59697f060c626791}
+}]\index{H\+T\+M\+L\+\_\+\+P@{H\+T\+M\+L\+\_\+\+P}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+P@{H\+T\+M\+L\+\_\+\+P}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a8823a8ff4016f2ca9c638ba4a8fafcca}{}H\+T\+M\+L\+\_\+\+P\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a8823a8ff4016f2ca9c638ba4a8fafcca}
+}]\index{H\+T\+M\+L\+\_\+\+H1@{H\+T\+M\+L\+\_\+\+H1}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+H1@{H\+T\+M\+L\+\_\+\+H1}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a71751dfa9ae957e90cacaad5f0b02271}{}H\+T\+M\+L\+\_\+\+H1\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a71751dfa9ae957e90cacaad5f0b02271}
+}]\index{H\+T\+M\+L\+\_\+\+H2@{H\+T\+M\+L\+\_\+\+H2}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+H2@{H\+T\+M\+L\+\_\+\+H2}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a623314b6e2c02f8cf6549eeb5d4fd53e}{}H\+T\+M\+L\+\_\+\+H2\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a623314b6e2c02f8cf6549eeb5d4fd53e}
+}]\index{H\+T\+M\+L\+\_\+\+H3@{H\+T\+M\+L\+\_\+\+H3}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+H3@{H\+T\+M\+L\+\_\+\+H3}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ab8f1bc95822a1243cf1cf1ccc49a757e}{}H\+T\+M\+L\+\_\+\+H3\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ab8f1bc95822a1243cf1cf1ccc49a757e}
+}]\index{H\+T\+M\+L\+\_\+\+H4@{H\+T\+M\+L\+\_\+\+H4}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+H4@{H\+T\+M\+L\+\_\+\+H4}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a2a914deb52931b494bd62c97e0dbfc94}{}H\+T\+M\+L\+\_\+\+H4\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a2a914deb52931b494bd62c97e0dbfc94}
+}]\index{H\+T\+M\+L\+\_\+\+H5@{H\+T\+M\+L\+\_\+\+H5}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+H5@{H\+T\+M\+L\+\_\+\+H5}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ab26b52ed0aa1da4e9c891102f25bd477}{}H\+T\+M\+L\+\_\+\+H5\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ab26b52ed0aa1da4e9c891102f25bd477}
+}]\index{H\+T\+M\+L\+\_\+\+H6@{H\+T\+M\+L\+\_\+\+H6}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+H6@{H\+T\+M\+L\+\_\+\+H6}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ac4f15cb20d64c462bd4f5ec18fb2d425}{}H\+T\+M\+L\+\_\+\+H6\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ac4f15cb20d64c462bd4f5ec18fb2d425}
+}]\index{H\+T\+M\+L\+\_\+\+S\+P\+A\+N@{H\+T\+M\+L\+\_\+\+S\+P\+A\+N}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+S\+P\+A\+N@{H\+T\+M\+L\+\_\+\+S\+P\+A\+N}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a6691bc0d237372b68eca687beb8e4e7c}{}H\+T\+M\+L\+\_\+\+S\+P\+A\+N\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a6691bc0d237372b68eca687beb8e4e7c}
+}]\index{H\+T\+M\+L\+\_\+\+D\+I\+V@{H\+T\+M\+L\+\_\+\+D\+I\+V}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+D\+I\+V@{H\+T\+M\+L\+\_\+\+D\+I\+V}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a925f75c7504312dc7251ecde932a062d}{}H\+T\+M\+L\+\_\+\+D\+I\+V\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a925f75c7504312dc7251ecde932a062d}
+}]\index{H\+T\+M\+L\+\_\+\+B\+L\+O\+C\+K\+Q\+U\+O\+T\+E@{H\+T\+M\+L\+\_\+\+B\+L\+O\+C\+K\+Q\+U\+O\+T\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!H\+T\+M\+L\+\_\+\+B\+L\+O\+C\+K\+Q\+U\+O\+T\+E@{H\+T\+M\+L\+\_\+\+B\+L\+O\+C\+K\+Q\+U\+O\+T\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ae6c12d9ab8e8c89628707b178ce5c986}{}H\+T\+M\+L\+\_\+\+B\+L\+O\+C\+K\+Q\+U\+O\+T\+E\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ae6c12d9ab8e8c89628707b178ce5c986}
+}]\index{X\+M\+L\+\_\+\+Cmd\+Mask@{X\+M\+L\+\_\+\+Cmd\+Mask}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+Cmd\+Mask@{X\+M\+L\+\_\+\+Cmd\+Mask}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273adedaab7375bcdd08040b1ba9a6364ea4}{}X\+M\+L\+\_\+\+Cmd\+Mask\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273adedaab7375bcdd08040b1ba9a6364ea4}
+}]\index{X\+M\+L\+\_\+\+C@{X\+M\+L\+\_\+\+C}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+C@{X\+M\+L\+\_\+\+C}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a5ce9f148d97c638bc2c457bfe13d249a}{}X\+M\+L\+\_\+\+C\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a5ce9f148d97c638bc2c457bfe13d249a}
+}]\index{X\+M\+L\+\_\+\+C\+O\+D\+E@{X\+M\+L\+\_\+\+C\+O\+D\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+C\+O\+D\+E@{X\+M\+L\+\_\+\+C\+O\+D\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a2bb7e964f4b1a8a2fe5c79fac9533ed1}{}X\+M\+L\+\_\+\+C\+O\+D\+E\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a2bb7e964f4b1a8a2fe5c79fac9533ed1}
+}]\index{X\+M\+L\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N@{X\+M\+L\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N@{X\+M\+L\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a761a8eb7adb060a77231c1dcaf6ec7a7}{}X\+M\+L\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a761a8eb7adb060a77231c1dcaf6ec7a7}
+}]\index{X\+M\+L\+\_\+\+E\+X\+A\+M\+P\+L\+E@{X\+M\+L\+\_\+\+E\+X\+A\+M\+P\+L\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+E\+X\+A\+M\+P\+L\+E@{X\+M\+L\+\_\+\+E\+X\+A\+M\+P\+L\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ae627281142418bf3f6ea1ad587b981d0}{}X\+M\+L\+\_\+\+E\+X\+A\+M\+P\+L\+E\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ae627281142418bf3f6ea1ad587b981d0}
+}]\index{X\+M\+L\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N@{X\+M\+L\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N@{X\+M\+L\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a17262cd94d4e5c0027a4091a9f2f952a}{}X\+M\+L\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a17262cd94d4e5c0027a4091a9f2f952a}
+}]\index{X\+M\+L\+\_\+\+I\+N\+C\+L\+U\+D\+E@{X\+M\+L\+\_\+\+I\+N\+C\+L\+U\+D\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+I\+N\+C\+L\+U\+D\+E@{X\+M\+L\+\_\+\+I\+N\+C\+L\+U\+D\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a8e4ea382d510d878feb5355e2355fc72}{}X\+M\+L\+\_\+\+I\+N\+C\+L\+U\+D\+E\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a8e4ea382d510d878feb5355e2355fc72}
+}]\index{X\+M\+L\+\_\+\+I\+T\+E\+M@{X\+M\+L\+\_\+\+I\+T\+E\+M}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+I\+T\+E\+M@{X\+M\+L\+\_\+\+I\+T\+E\+M}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ae70bda34c2d52fea764904c0e4b1fc85}{}X\+M\+L\+\_\+\+I\+T\+E\+M\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ae70bda34c2d52fea764904c0e4b1fc85}
+}]\index{X\+M\+L\+\_\+\+L\+I\+S\+T@{X\+M\+L\+\_\+\+L\+I\+S\+T}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+L\+I\+S\+T@{X\+M\+L\+\_\+\+L\+I\+S\+T}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273aaec1100f100092d88ffc3af27bd1866c}{}X\+M\+L\+\_\+\+L\+I\+S\+T\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273aaec1100f100092d88ffc3af27bd1866c}
+}]\index{X\+M\+L\+\_\+\+L\+I\+S\+T\+H\+E\+A\+D\+E\+R@{X\+M\+L\+\_\+\+L\+I\+S\+T\+H\+E\+A\+D\+E\+R}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+L\+I\+S\+T\+H\+E\+A\+D\+E\+R@{X\+M\+L\+\_\+\+L\+I\+S\+T\+H\+E\+A\+D\+E\+R}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ac48592c8ebbff98d76999dd2408a46ef}{}X\+M\+L\+\_\+\+L\+I\+S\+T\+H\+E\+A\+D\+E\+R\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ac48592c8ebbff98d76999dd2408a46ef}
+}]\index{X\+M\+L\+\_\+\+P\+A\+R\+A@{X\+M\+L\+\_\+\+P\+A\+R\+A}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+P\+A\+R\+A@{X\+M\+L\+\_\+\+P\+A\+R\+A}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273aa696544c534edf109c171ca758bb4702}{}X\+M\+L\+\_\+\+P\+A\+R\+A\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273aa696544c534edf109c171ca758bb4702}
+}]\index{X\+M\+L\+\_\+\+P\+A\+R\+A\+M@{X\+M\+L\+\_\+\+P\+A\+R\+A\+M}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+P\+A\+R\+A\+M@{X\+M\+L\+\_\+\+P\+A\+R\+A\+M}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a54dc1a524b67adcea3e1563afa23cc1d}{}X\+M\+L\+\_\+\+P\+A\+R\+A\+M\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a54dc1a524b67adcea3e1563afa23cc1d}
+}]\index{X\+M\+L\+\_\+\+P\+A\+R\+A\+M\+R\+E\+F@{X\+M\+L\+\_\+\+P\+A\+R\+A\+M\+R\+E\+F}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+P\+A\+R\+A\+M\+R\+E\+F@{X\+M\+L\+\_\+\+P\+A\+R\+A\+M\+R\+E\+F}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a4c31f33e40697345228ea9d29bee31d1}{}X\+M\+L\+\_\+\+P\+A\+R\+A\+M\+R\+E\+F\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a4c31f33e40697345228ea9d29bee31d1}
+}]\index{X\+M\+L\+\_\+\+P\+E\+R\+M\+I\+S\+S\+I\+O\+N@{X\+M\+L\+\_\+\+P\+E\+R\+M\+I\+S\+S\+I\+O\+N}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+P\+E\+R\+M\+I\+S\+S\+I\+O\+N@{X\+M\+L\+\_\+\+P\+E\+R\+M\+I\+S\+S\+I\+O\+N}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273acb790b0b3426646c7a17476479cb84f1}{}X\+M\+L\+\_\+\+P\+E\+R\+M\+I\+S\+S\+I\+O\+N\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273acb790b0b3426646c7a17476479cb84f1}
+}]\index{X\+M\+L\+\_\+\+R\+E\+M\+A\+R\+K\+S@{X\+M\+L\+\_\+\+R\+E\+M\+A\+R\+K\+S}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+R\+E\+M\+A\+R\+K\+S@{X\+M\+L\+\_\+\+R\+E\+M\+A\+R\+K\+S}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273aaa1f6b197dc934591767c02cd07e52de}{}X\+M\+L\+\_\+\+R\+E\+M\+A\+R\+K\+S\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273aaa1f6b197dc934591767c02cd07e52de}
+}]\index{X\+M\+L\+\_\+\+R\+E\+T\+U\+R\+N\+S@{X\+M\+L\+\_\+\+R\+E\+T\+U\+R\+N\+S}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+R\+E\+T\+U\+R\+N\+S@{X\+M\+L\+\_\+\+R\+E\+T\+U\+R\+N\+S}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ad3c346b2e4c29ce98d84720d6f64f0fb}{}X\+M\+L\+\_\+\+R\+E\+T\+U\+R\+N\+S\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273ad3c346b2e4c29ce98d84720d6f64f0fb}
+}]\index{X\+M\+L\+\_\+\+S\+E\+E@{X\+M\+L\+\_\+\+S\+E\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+S\+E\+E@{X\+M\+L\+\_\+\+S\+E\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273aedc5fef9c81acc3194aff4fb88f733c1}{}X\+M\+L\+\_\+\+S\+E\+E\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273aedc5fef9c81acc3194aff4fb88f733c1}
+}]\index{X\+M\+L\+\_\+\+S\+E\+E\+A\+L\+S\+O@{X\+M\+L\+\_\+\+S\+E\+E\+A\+L\+S\+O}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+S\+E\+E\+A\+L\+S\+O@{X\+M\+L\+\_\+\+S\+E\+E\+A\+L\+S\+O}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a712c5f27f1403566d33c95ad36b3ba60}{}X\+M\+L\+\_\+\+S\+E\+E\+A\+L\+S\+O\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a712c5f27f1403566d33c95ad36b3ba60}
+}]\index{X\+M\+L\+\_\+\+S\+U\+M\+M\+A\+R\+Y@{X\+M\+L\+\_\+\+S\+U\+M\+M\+A\+R\+Y}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+S\+U\+M\+M\+A\+R\+Y@{X\+M\+L\+\_\+\+S\+U\+M\+M\+A\+R\+Y}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a5e0188b366e11cbaaa19dde14e7f2ad8}{}X\+M\+L\+\_\+\+S\+U\+M\+M\+A\+R\+Y\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a5e0188b366e11cbaaa19dde14e7f2ad8}
+}]\index{X\+M\+L\+\_\+\+T\+E\+R\+M@{X\+M\+L\+\_\+\+T\+E\+R\+M}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+T\+E\+R\+M@{X\+M\+L\+\_\+\+T\+E\+R\+M}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273af3f2f2a8973614ce7f59d399bf05823c}{}X\+M\+L\+\_\+\+T\+E\+R\+M\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273af3f2f2a8973614ce7f59d399bf05823c}
+}]\index{X\+M\+L\+\_\+\+T\+Y\+P\+E\+P\+A\+R\+A\+M@{X\+M\+L\+\_\+\+T\+Y\+P\+E\+P\+A\+R\+A\+M}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+T\+Y\+P\+E\+P\+A\+R\+A\+M@{X\+M\+L\+\_\+\+T\+Y\+P\+E\+P\+A\+R\+A\+M}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a0497f73782182c5c2260a93261200065}{}X\+M\+L\+\_\+\+T\+Y\+P\+E\+P\+A\+R\+A\+M\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a0497f73782182c5c2260a93261200065}
+}]\index{X\+M\+L\+\_\+\+T\+Y\+P\+E\+P\+A\+R\+A\+M\+R\+E\+F@{X\+M\+L\+\_\+\+T\+Y\+P\+E\+P\+A\+R\+A\+M\+R\+E\+F}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+T\+Y\+P\+E\+P\+A\+R\+A\+M\+R\+E\+F@{X\+M\+L\+\_\+\+T\+Y\+P\+E\+P\+A\+R\+A\+M\+R\+E\+F}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273afd6e13b735ca1096eec6467d8510944b}{}X\+M\+L\+\_\+\+T\+Y\+P\+E\+P\+A\+R\+A\+M\+R\+E\+F\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273afd6e13b735ca1096eec6467d8510944b}
+}]\index{X\+M\+L\+\_\+\+V\+A\+L\+U\+E@{X\+M\+L\+\_\+\+V\+A\+L\+U\+E}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+V\+A\+L\+U\+E@{X\+M\+L\+\_\+\+V\+A\+L\+U\+E}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a987d799b742d02ff52c9ee7779ca6d52}{}X\+M\+L\+\_\+\+V\+A\+L\+U\+E\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a987d799b742d02ff52c9ee7779ca6d52}
+}]\index{X\+M\+L\+\_\+\+I\+N\+H\+E\+R\+I\+T\+D\+O\+C@{X\+M\+L\+\_\+\+I\+N\+H\+E\+R\+I\+T\+D\+O\+C}!cmdmapper.\+h@{cmdmapper.\+h}}\index{cmdmapper.\+h@{cmdmapper.\+h}!X\+M\+L\+\_\+\+I\+N\+H\+E\+R\+I\+T\+D\+O\+C@{X\+M\+L\+\_\+\+I\+N\+H\+E\+R\+I\+T\+D\+O\+C}}\item[{\em 
+\hypertarget{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a6bcf22be79f4c77c446cd03365be6a4e}{}X\+M\+L\+\_\+\+I\+N\+H\+E\+R\+I\+T\+D\+O\+C\label{cmdmapper_8h_a91be16b8342aa3130a4374d78cf42273a6bcf22be79f4c77c446cd03365be6a4e}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des variables}
+\hypertarget{cmdmapper_8h_a5c52a0f09760b4ee2a3e66c075d863f4}{}\index{cmdmapper.\+h@{cmdmapper.\+h}!S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T@{S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T}}
+\index{S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T@{S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T}!cmdmapper.\+h@{cmdmapper.\+h}}
+\subsubsection[{S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T}]{\setlength{\rightskip}{0pt plus 5cm}const int S\+I\+M\+P\+L\+E\+S\+E\+C\+T\+\_\+\+B\+I\+T = 0x1000}\label{cmdmapper_8h_a5c52a0f09760b4ee2a3e66c075d863f4}

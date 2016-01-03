@@ -1,0 +1,749 @@
+\hypertarget{class_i_section}{}\section{Référence de la classe I\+Section}
+\label{class_i_section}\index{I\+Section@{I\+Section}}
+
+
+The interface to a section in the object model.  
+
+
+
+
+{\ttfamily \#include $<$doxmlintf.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de I\+Section\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_i_section}
+\end{center}
+\end{figure}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5}{Section\+Kind} \{ \\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ae04be17098a3edfdb4433de1c25d425a}{Invalid} =0, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a4f0f4b43f52bd23e4f07025bf948c2d8}{User\+Defined}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa6fadf721db9fdce4cc81a4e1f4d78a8}{Pub\+Types}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ac8066fddfabd4a4ddbb46d5d6d937c0d}{Pub\+Funcs}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a28fd2333c152a96ccb293757630bc95a}{Pub\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abbf536bf50647090ad50516825b75f88}{Pub\+Slots}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0397b3eb4853862b833fed5350080b20}{Signals}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a61d0272703ba0d7373b0727583bc044d}{D\+C\+O\+P\+Funcs}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ad69216d7ee2e39c9afd86570af26e787}{Properties}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a977473bf3e46e66397c581f57ed25852}{Events}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9d4f6445a377e48768bff7f5ae0b2c12}{Pub\+Stat\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aefb2b7d7c1ddd42a34ac1d4051844a49}{Pub\+Stat\+Attribs}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a02fa49600636de5f2d1e334793fa5e86}{Pro\+Types}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af60cba939fe8aceb0129875444d91b23}{Pro\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf4da8ee7556214d074163841c0ecd69}{Pro\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf6afeed24a870edb6fba3ef2e8a9478}{Pro\+Slots}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a5307fc8defd7ba61d0fde7002bd6ffd3}{Pro\+Stat\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a46c7118edfc5d628eafb8006ac06c0a4}{Pro\+Stat\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa9ef7829f07c87532c5045b62f5c7852}{Pac\+Types}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a443986cfcd4e22b5be4b4dd47de256e8}{Pac\+Funcs}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a7f4f820818c4dd541cec5d6805b6b948}{Pac\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af534884d038abbf0046994552b613ae5}{Pac\+Stat\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a1c251133f8f0e61e21e2d2b938bc8484}{Pac\+Stat\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abb12f85dc10a9a837d6edbbcf51c461d}{Pri\+Types}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aef0d860c9f0f335fd4fa731c70e8862c}{Pri\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9ae20b653fde26138aaebf77b2c9d10a}{Pri\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a908c16efce0d1d8f2a19e172618c1db6}{Pri\+Slots}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adae8cebb39fb510dbed62312e895f7ec}{Pri\+Stat\+Funcs}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a30a1372c472b50df20bd8bceccb03115}{Pri\+Stat\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a2118d43fad1dfac9605ec02d317d18ce}{Friend}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a942307911f3383da068e01c013e1d16d}{Related}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a8a96f3ebd01c6d7a719c55ab29b34202}{Defines}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aeded4df9c6a6948467f0c236bb787c6c}{Prototypes}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ab3a9fd5e4e4b6445ab9cce92d8a71842}{Typedefs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa8d9b7d13fefb09e1039f169574965bf}{Enums}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a588ffc897dd58c75ae0f9ccc360d4f4f}{Functions}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0a2bd837670fec59dd6083821265dbee}{Variables}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ae04be17098a3edfdb4433de1c25d425a}{Invalid} =0, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a4f0f4b43f52bd23e4f07025bf948c2d8}{User\+Defined}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa6fadf721db9fdce4cc81a4e1f4d78a8}{Pub\+Types}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ac8066fddfabd4a4ddbb46d5d6d937c0d}{Pub\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a28fd2333c152a96ccb293757630bc95a}{Pub\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abbf536bf50647090ad50516825b75f88}{Pub\+Slots}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0397b3eb4853862b833fed5350080b20}{Signals}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a61d0272703ba0d7373b0727583bc044d}{D\+C\+O\+P\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ad69216d7ee2e39c9afd86570af26e787}{Properties}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a977473bf3e46e66397c581f57ed25852}{Events}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9d4f6445a377e48768bff7f5ae0b2c12}{Pub\+Stat\+Funcs}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aefb2b7d7c1ddd42a34ac1d4051844a49}{Pub\+Stat\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a02fa49600636de5f2d1e334793fa5e86}{Pro\+Types}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af60cba939fe8aceb0129875444d91b23}{Pro\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf4da8ee7556214d074163841c0ecd69}{Pro\+Attribs}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf6afeed24a870edb6fba3ef2e8a9478}{Pro\+Slots}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a5307fc8defd7ba61d0fde7002bd6ffd3}{Pro\+Stat\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a46c7118edfc5d628eafb8006ac06c0a4}{Pro\+Stat\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa9ef7829f07c87532c5045b62f5c7852}{Pac\+Types}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a443986cfcd4e22b5be4b4dd47de256e8}{Pac\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a7f4f820818c4dd541cec5d6805b6b948}{Pac\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af534884d038abbf0046994552b613ae5}{Pac\+Stat\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a1c251133f8f0e61e21e2d2b938bc8484}{Pac\+Stat\+Attribs}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abb12f85dc10a9a837d6edbbcf51c461d}{Pri\+Types}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aef0d860c9f0f335fd4fa731c70e8862c}{Pri\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9ae20b653fde26138aaebf77b2c9d10a}{Pri\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a908c16efce0d1d8f2a19e172618c1db6}{Pri\+Slots}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adae8cebb39fb510dbed62312e895f7ec}{Pri\+Stat\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a30a1372c472b50df20bd8bceccb03115}{Pri\+Stat\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a2118d43fad1dfac9605ec02d317d18ce}{Friend}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a942307911f3383da068e01c013e1d16d}{Related}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a8a96f3ebd01c6d7a719c55ab29b34202}{Defines}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aeded4df9c6a6948467f0c236bb787c6c}{Prototypes}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ab3a9fd5e4e4b6445ab9cce92d8a71842}{Typedefs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa8d9b7d13fefb09e1039f169574965bf}{Enums}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a588ffc897dd58c75ae0f9ccc360d4f4f}{Functions}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0a2bd837670fec59dd6083821265dbee}{Variables}
+ \}
+\item 
+enum \hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5}{Section\+Kind} \{ \\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ae04be17098a3edfdb4433de1c25d425a}{Invalid} =0, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a4f0f4b43f52bd23e4f07025bf948c2d8}{User\+Defined}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa6fadf721db9fdce4cc81a4e1f4d78a8}{Pub\+Types}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ac8066fddfabd4a4ddbb46d5d6d937c0d}{Pub\+Funcs}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a28fd2333c152a96ccb293757630bc95a}{Pub\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abbf536bf50647090ad50516825b75f88}{Pub\+Slots}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0397b3eb4853862b833fed5350080b20}{Signals}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a61d0272703ba0d7373b0727583bc044d}{D\+C\+O\+P\+Funcs}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ad69216d7ee2e39c9afd86570af26e787}{Properties}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a977473bf3e46e66397c581f57ed25852}{Events}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9d4f6445a377e48768bff7f5ae0b2c12}{Pub\+Stat\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aefb2b7d7c1ddd42a34ac1d4051844a49}{Pub\+Stat\+Attribs}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a02fa49600636de5f2d1e334793fa5e86}{Pro\+Types}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af60cba939fe8aceb0129875444d91b23}{Pro\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf4da8ee7556214d074163841c0ecd69}{Pro\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf6afeed24a870edb6fba3ef2e8a9478}{Pro\+Slots}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a5307fc8defd7ba61d0fde7002bd6ffd3}{Pro\+Stat\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a46c7118edfc5d628eafb8006ac06c0a4}{Pro\+Stat\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa9ef7829f07c87532c5045b62f5c7852}{Pac\+Types}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a443986cfcd4e22b5be4b4dd47de256e8}{Pac\+Funcs}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a7f4f820818c4dd541cec5d6805b6b948}{Pac\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af534884d038abbf0046994552b613ae5}{Pac\+Stat\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a1c251133f8f0e61e21e2d2b938bc8484}{Pac\+Stat\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abb12f85dc10a9a837d6edbbcf51c461d}{Pri\+Types}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aef0d860c9f0f335fd4fa731c70e8862c}{Pri\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9ae20b653fde26138aaebf77b2c9d10a}{Pri\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a908c16efce0d1d8f2a19e172618c1db6}{Pri\+Slots}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adae8cebb39fb510dbed62312e895f7ec}{Pri\+Stat\+Funcs}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a30a1372c472b50df20bd8bceccb03115}{Pri\+Stat\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a2118d43fad1dfac9605ec02d317d18ce}{Friend}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a942307911f3383da068e01c013e1d16d}{Related}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a8a96f3ebd01c6d7a719c55ab29b34202}{Defines}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aeded4df9c6a6948467f0c236bb787c6c}{Prototypes}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ab3a9fd5e4e4b6445ab9cce92d8a71842}{Typedefs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa8d9b7d13fefb09e1039f169574965bf}{Enums}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a588ffc897dd58c75ae0f9ccc360d4f4f}{Functions}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0a2bd837670fec59dd6083821265dbee}{Variables}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ae04be17098a3edfdb4433de1c25d425a}{Invalid} =0, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a4f0f4b43f52bd23e4f07025bf948c2d8}{User\+Defined}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa6fadf721db9fdce4cc81a4e1f4d78a8}{Pub\+Types}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ac8066fddfabd4a4ddbb46d5d6d937c0d}{Pub\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a28fd2333c152a96ccb293757630bc95a}{Pub\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abbf536bf50647090ad50516825b75f88}{Pub\+Slots}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0397b3eb4853862b833fed5350080b20}{Signals}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a61d0272703ba0d7373b0727583bc044d}{D\+C\+O\+P\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ad69216d7ee2e39c9afd86570af26e787}{Properties}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a977473bf3e46e66397c581f57ed25852}{Events}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9d4f6445a377e48768bff7f5ae0b2c12}{Pub\+Stat\+Funcs}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aefb2b7d7c1ddd42a34ac1d4051844a49}{Pub\+Stat\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a02fa49600636de5f2d1e334793fa5e86}{Pro\+Types}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af60cba939fe8aceb0129875444d91b23}{Pro\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf4da8ee7556214d074163841c0ecd69}{Pro\+Attribs}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf6afeed24a870edb6fba3ef2e8a9478}{Pro\+Slots}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a5307fc8defd7ba61d0fde7002bd6ffd3}{Pro\+Stat\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a46c7118edfc5d628eafb8006ac06c0a4}{Pro\+Stat\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa9ef7829f07c87532c5045b62f5c7852}{Pac\+Types}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a443986cfcd4e22b5be4b4dd47de256e8}{Pac\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a7f4f820818c4dd541cec5d6805b6b948}{Pac\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af534884d038abbf0046994552b613ae5}{Pac\+Stat\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a1c251133f8f0e61e21e2d2b938bc8484}{Pac\+Stat\+Attribs}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abb12f85dc10a9a837d6edbbcf51c461d}{Pri\+Types}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aef0d860c9f0f335fd4fa731c70e8862c}{Pri\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9ae20b653fde26138aaebf77b2c9d10a}{Pri\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a908c16efce0d1d8f2a19e172618c1db6}{Pri\+Slots}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adae8cebb39fb510dbed62312e895f7ec}{Pri\+Stat\+Funcs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a30a1372c472b50df20bd8bceccb03115}{Pri\+Stat\+Attribs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a2118d43fad1dfac9605ec02d317d18ce}{Friend}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a942307911f3383da068e01c013e1d16d}{Related}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a8a96f3ebd01c6d7a719c55ab29b34202}{Defines}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aeded4df9c6a6948467f0c236bb787c6c}{Prototypes}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ab3a9fd5e4e4b6445ab9cce92d8a71842}{Typedefs}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa8d9b7d13fefb09e1039f169574965bf}{Enums}, 
+\\*
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a588ffc897dd58c75ae0f9ccc360d4f4f}{Functions}, 
+\hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0a2bd837670fec59dd6083821265dbee}{Variables}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual const \hyperlink{class_i_string}{I\+String} $\ast$ \hyperlink{class_i_section_a3be72bf2b7bde49e741bb0d8af4df8e6}{kind\+String} () const  =0
+\item 
+virtual \hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5}{Section\+Kind} \hyperlink{class_i_section_aea5541b95f6c5b50fd3cad5794b34d47}{kind} () const  =0
+\item 
+virtual \hyperlink{class_i_doc_root}{I\+Doc\+Root} $\ast$ \hyperlink{class_i_section_a6927694b41def1fdc159e4b21e037ebe}{description} () const  =0
+\item 
+virtual \hyperlink{class_i_member_iterator}{I\+Member\+Iterator} $\ast$ \hyperlink{class_i_section_a37b0fa3669f435713058ca5c7b377e3a}{members} () const  =0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_i_section_aff6aeaf9972edac9b11fe09d74e58c5d}{is\+Static} () const  =0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_i_section_aac1342e8d3db6be3fb5dada6a06bcdb3}{is\+Public} () const  =0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_i_section_a5a55533e4ac46cd3acf226b80452faaf}{is\+Private} () const  =0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_i_section_ad883e4145d8cf50b8fdcb97266845e8d}{is\+Protected} () const  =0
+\item 
+virtual const \hyperlink{class_i_string}{I\+String} $\ast$ \hyperlink{class_i_section_a3be72bf2b7bde49e741bb0d8af4df8e6}{kind\+String} () const  =0
+\item 
+virtual \hyperlink{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5}{Section\+Kind} \hyperlink{class_i_section_aea5541b95f6c5b50fd3cad5794b34d47}{kind} () const  =0
+\item 
+virtual \hyperlink{class_i_doc_root}{I\+Doc\+Root} $\ast$ \hyperlink{class_i_section_a6927694b41def1fdc159e4b21e037ebe}{description} () const  =0
+\item 
+virtual \hyperlink{class_i_member_iterator}{I\+Member\+Iterator} $\ast$ \hyperlink{class_i_section_a37b0fa3669f435713058ca5c7b377e3a}{members} () const  =0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_i_section_aff6aeaf9972edac9b11fe09d74e58c5d}{is\+Static} () const  =0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_i_section_aac1342e8d3db6be3fb5dada6a06bcdb3}{is\+Public} () const  =0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_i_section_a5a55533e4ac46cd3acf226b80452faaf}{is\+Private} () const  =0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_i_section_ad883e4145d8cf50b8fdcb97266845e8d}{is\+Protected} () const  =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+The interface to a section in the object model. 
+
+\hyperlink{class_a}{A} compound can have a number of sections, where each section contains a set of members with the properties implied by the section kind. The \hyperlink{class_i_section_aea5541b95f6c5b50fd3cad5794b34d47}{kind()} method returns the kind of the section. The members of the section can be accessed via \hyperlink{class_i_section_a37b0fa3669f435713058ca5c7b377e3a}{members()}. Apart from using \hyperlink{class_i_section_aea5541b95f6c5b50fd3cad5794b34d47}{kind()}, some of the individual properties of the section can also be inspected via \hyperlink{class_i_section_aff6aeaf9972edac9b11fe09d74e58c5d}{is\+Static()}, \hyperlink{class_i_section_aac1342e8d3db6be3fb5dada6a06bcdb3}{is\+Public()}, \hyperlink{class_i_section_ad883e4145d8cf50b8fdcb97266845e8d}{is\+Protected()} and \hyperlink{class_i_section_a5a55533e4ac46cd3acf226b80452faaf}{is\+Private()}. 
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5}{}\index{I\+Section@{I\+Section}!Section\+Kind@{Section\+Kind}}
+\index{Section\+Kind@{Section\+Kind}!I\+Section@{I\+Section}}
+\subsubsection[{Section\+Kind}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf I\+Section\+::\+Section\+Kind}}\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5}
+Possible section types \begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Invalid@{Invalid}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Invalid@{Invalid}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ae04be17098a3edfdb4433de1c25d425a}{}Invalid\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ae04be17098a3edfdb4433de1c25d425a}
+}]\index{User\+Defined@{User\+Defined}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!User\+Defined@{User\+Defined}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a4f0f4b43f52bd23e4f07025bf948c2d8}{}User\+Defined\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a4f0f4b43f52bd23e4f07025bf948c2d8}
+}]\hyperlink{class_a}{A} user defined member group. \index{Pub\+Types@{Pub\+Types}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Types@{Pub\+Types}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa6fadf721db9fdce4cc81a4e1f4d78a8}{}Pub\+Types\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa6fadf721db9fdce4cc81a4e1f4d78a8}
+}]Public member typedefs. \index{Pub\+Funcs@{Pub\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Funcs@{Pub\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ac8066fddfabd4a4ddbb46d5d6d937c0d}{}Pub\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ac8066fddfabd4a4ddbb46d5d6d937c0d}
+}]Public member functions. \index{Pub\+Attribs@{Pub\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Attribs@{Pub\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a28fd2333c152a96ccb293757630bc95a}{}Pub\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a28fd2333c152a96ccb293757630bc95a}
+}]Public member attributes. \index{Pub\+Slots@{Pub\+Slots}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Slots@{Pub\+Slots}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abbf536bf50647090ad50516825b75f88}{}Pub\+Slots\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abbf536bf50647090ad50516825b75f88}
+}]Public Qt Slots. \index{Signals@{Signals}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Signals@{Signals}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0397b3eb4853862b833fed5350080b20}{}Signals\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0397b3eb4853862b833fed5350080b20}
+}]Qt Signals. \index{D\+C\+O\+P\+Funcs@{D\+C\+O\+P\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!D\+C\+O\+P\+Funcs@{D\+C\+O\+P\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a61d0272703ba0d7373b0727583bc044d}{}D\+C\+O\+P\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a61d0272703ba0d7373b0727583bc044d}
+}]K\+D\+E-\/\+D\+C\+O\+P interface functions. \index{Properties@{Properties}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Properties@{Properties}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ad69216d7ee2e39c9afd86570af26e787}{}Properties\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ad69216d7ee2e39c9afd86570af26e787}
+}]I\+D\+L properties. \index{Events@{Events}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Events@{Events}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a977473bf3e46e66397c581f57ed25852}{}Events\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a977473bf3e46e66397c581f57ed25852}
+}]\hyperlink{class_c}{C}\# events. \index{Pub\+Stat\+Funcs@{Pub\+Stat\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Stat\+Funcs@{Pub\+Stat\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9d4f6445a377e48768bff7f5ae0b2c12}{}Pub\+Stat\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9d4f6445a377e48768bff7f5ae0b2c12}
+}]Public static member functions. \index{Pub\+Stat\+Attribs@{Pub\+Stat\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Stat\+Attribs@{Pub\+Stat\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aefb2b7d7c1ddd42a34ac1d4051844a49}{}Pub\+Stat\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aefb2b7d7c1ddd42a34ac1d4051844a49}
+}]Public static attributes. \index{Pro\+Types@{Pro\+Types}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Types@{Pro\+Types}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a02fa49600636de5f2d1e334793fa5e86}{}Pro\+Types\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a02fa49600636de5f2d1e334793fa5e86}
+}]Protected member typedefs. \index{Pro\+Funcs@{Pro\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Funcs@{Pro\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af60cba939fe8aceb0129875444d91b23}{}Pro\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af60cba939fe8aceb0129875444d91b23}
+}]Protected member functions. \index{Pro\+Attribs@{Pro\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Attribs@{Pro\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf4da8ee7556214d074163841c0ecd69}{}Pro\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf4da8ee7556214d074163841c0ecd69}
+}]Protected member attributes. \index{Pro\+Slots@{Pro\+Slots}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Slots@{Pro\+Slots}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf6afeed24a870edb6fba3ef2e8a9478}{}Pro\+Slots\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf6afeed24a870edb6fba3ef2e8a9478}
+}]Protected slots. \index{Pro\+Stat\+Funcs@{Pro\+Stat\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Stat\+Funcs@{Pro\+Stat\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a5307fc8defd7ba61d0fde7002bd6ffd3}{}Pro\+Stat\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a5307fc8defd7ba61d0fde7002bd6ffd3}
+}]Protected static member functions. \index{Pro\+Stat\+Attribs@{Pro\+Stat\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Stat\+Attribs@{Pro\+Stat\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a46c7118edfc5d628eafb8006ac06c0a4}{}Pro\+Stat\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a46c7118edfc5d628eafb8006ac06c0a4}
+}]Protected static member attributes. \index{Pac\+Types@{Pac\+Types}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Types@{Pac\+Types}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa9ef7829f07c87532c5045b62f5c7852}{}Pac\+Types\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa9ef7829f07c87532c5045b62f5c7852}
+}]Package member typedefs. \index{Pac\+Funcs@{Pac\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Funcs@{Pac\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a443986cfcd4e22b5be4b4dd47de256e8}{}Pac\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a443986cfcd4e22b5be4b4dd47de256e8}
+}]Package member functions. \index{Pac\+Attribs@{Pac\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Attribs@{Pac\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a7f4f820818c4dd541cec5d6805b6b948}{}Pac\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a7f4f820818c4dd541cec5d6805b6b948}
+}]Package member attributes. \index{Pac\+Stat\+Funcs@{Pac\+Stat\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Stat\+Funcs@{Pac\+Stat\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af534884d038abbf0046994552b613ae5}{}Pac\+Stat\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af534884d038abbf0046994552b613ae5}
+}]Package static member functions. \index{Pac\+Stat\+Attribs@{Pac\+Stat\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Stat\+Attribs@{Pac\+Stat\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a1c251133f8f0e61e21e2d2b938bc8484}{}Pac\+Stat\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a1c251133f8f0e61e21e2d2b938bc8484}
+}]Package static member attributes. \index{Pri\+Types@{Pri\+Types}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Types@{Pri\+Types}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abb12f85dc10a9a837d6edbbcf51c461d}{}Pri\+Types\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abb12f85dc10a9a837d6edbbcf51c461d}
+}]Private member typedefs. \index{Pri\+Funcs@{Pri\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Funcs@{Pri\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aef0d860c9f0f335fd4fa731c70e8862c}{}Pri\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aef0d860c9f0f335fd4fa731c70e8862c}
+}]Private member functions. \index{Pri\+Attribs@{Pri\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Attribs@{Pri\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9ae20b653fde26138aaebf77b2c9d10a}{}Pri\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9ae20b653fde26138aaebf77b2c9d10a}
+}]Private member attributes. \index{Pri\+Slots@{Pri\+Slots}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Slots@{Pri\+Slots}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a908c16efce0d1d8f2a19e172618c1db6}{}Pri\+Slots\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a908c16efce0d1d8f2a19e172618c1db6}
+}]Private Qt slots. \index{Pri\+Stat\+Funcs@{Pri\+Stat\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Stat\+Funcs@{Pri\+Stat\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adae8cebb39fb510dbed62312e895f7ec}{}Pri\+Stat\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adae8cebb39fb510dbed62312e895f7ec}
+}]Private static member functions. \index{Pri\+Stat\+Attribs@{Pri\+Stat\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Stat\+Attribs@{Pri\+Stat\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a30a1372c472b50df20bd8bceccb03115}{}Pri\+Stat\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a30a1372c472b50df20bd8bceccb03115}
+}]Private static member attributes. \index{Friend@{Friend}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Friend@{Friend}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a2118d43fad1dfac9605ec02d317d18ce}{}Friend\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a2118d43fad1dfac9605ec02d317d18ce}
+}]Friends. \index{Related@{Related}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Related@{Related}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a942307911f3383da068e01c013e1d16d}{}Related\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a942307911f3383da068e01c013e1d16d}
+}]Function marked as related. \index{Defines@{Defines}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Defines@{Defines}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a8a96f3ebd01c6d7a719c55ab29b34202}{}Defines\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a8a96f3ebd01c6d7a719c55ab29b34202}
+}]Preprocessor defines. \index{Prototypes@{Prototypes}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Prototypes@{Prototypes}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aeded4df9c6a6948467f0c236bb787c6c}{}Prototypes\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aeded4df9c6a6948467f0c236bb787c6c}
+}]Global function prototypes. \index{Typedefs@{Typedefs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Typedefs@{Typedefs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ab3a9fd5e4e4b6445ab9cce92d8a71842}{}Typedefs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ab3a9fd5e4e4b6445ab9cce92d8a71842}
+}]Global typedefs. \index{Enums@{Enums}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Enums@{Enums}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa8d9b7d13fefb09e1039f169574965bf}{}Enums\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa8d9b7d13fefb09e1039f169574965bf}
+}]Enumerations. \index{Functions@{Functions}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Functions@{Functions}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a588ffc897dd58c75ae0f9ccc360d4f4f}{}Functions\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a588ffc897dd58c75ae0f9ccc360d4f4f}
+}]Global functions. \index{Variables@{Variables}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Variables@{Variables}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0a2bd837670fec59dd6083821265dbee}{}Variables\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0a2bd837670fec59dd6083821265dbee}
+}]Global variables. \index{Invalid@{Invalid}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Invalid@{Invalid}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ae04be17098a3edfdb4433de1c25d425a}{}Invalid\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ae04be17098a3edfdb4433de1c25d425a}
+}]\index{User\+Defined@{User\+Defined}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!User\+Defined@{User\+Defined}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a4f0f4b43f52bd23e4f07025bf948c2d8}{}User\+Defined\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a4f0f4b43f52bd23e4f07025bf948c2d8}
+}]\hyperlink{class_a}{A} user defined member group. \index{Pub\+Types@{Pub\+Types}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Types@{Pub\+Types}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa6fadf721db9fdce4cc81a4e1f4d78a8}{}Pub\+Types\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa6fadf721db9fdce4cc81a4e1f4d78a8}
+}]Public member typedefs. \index{Pub\+Funcs@{Pub\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Funcs@{Pub\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ac8066fddfabd4a4ddbb46d5d6d937c0d}{}Pub\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ac8066fddfabd4a4ddbb46d5d6d937c0d}
+}]Public member functions. \index{Pub\+Attribs@{Pub\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Attribs@{Pub\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a28fd2333c152a96ccb293757630bc95a}{}Pub\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a28fd2333c152a96ccb293757630bc95a}
+}]Public member attributes. \index{Pub\+Slots@{Pub\+Slots}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Slots@{Pub\+Slots}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abbf536bf50647090ad50516825b75f88}{}Pub\+Slots\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abbf536bf50647090ad50516825b75f88}
+}]Public Qt Slots. \index{Signals@{Signals}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Signals@{Signals}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0397b3eb4853862b833fed5350080b20}{}Signals\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0397b3eb4853862b833fed5350080b20}
+}]Qt Signals. \index{D\+C\+O\+P\+Funcs@{D\+C\+O\+P\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!D\+C\+O\+P\+Funcs@{D\+C\+O\+P\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a61d0272703ba0d7373b0727583bc044d}{}D\+C\+O\+P\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a61d0272703ba0d7373b0727583bc044d}
+}]K\+D\+E-\/\+D\+C\+O\+P interface functions. \index{Properties@{Properties}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Properties@{Properties}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ad69216d7ee2e39c9afd86570af26e787}{}Properties\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ad69216d7ee2e39c9afd86570af26e787}
+}]I\+D\+L properties. \index{Events@{Events}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Events@{Events}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a977473bf3e46e66397c581f57ed25852}{}Events\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a977473bf3e46e66397c581f57ed25852}
+}]\hyperlink{class_c}{C}\# events. \index{Pub\+Stat\+Funcs@{Pub\+Stat\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Stat\+Funcs@{Pub\+Stat\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9d4f6445a377e48768bff7f5ae0b2c12}{}Pub\+Stat\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9d4f6445a377e48768bff7f5ae0b2c12}
+}]Public static member functions. \index{Pub\+Stat\+Attribs@{Pub\+Stat\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Stat\+Attribs@{Pub\+Stat\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aefb2b7d7c1ddd42a34ac1d4051844a49}{}Pub\+Stat\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aefb2b7d7c1ddd42a34ac1d4051844a49}
+}]Public static attributes. \index{Pro\+Types@{Pro\+Types}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Types@{Pro\+Types}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a02fa49600636de5f2d1e334793fa5e86}{}Pro\+Types\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a02fa49600636de5f2d1e334793fa5e86}
+}]Protected member typedefs. \index{Pro\+Funcs@{Pro\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Funcs@{Pro\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af60cba939fe8aceb0129875444d91b23}{}Pro\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af60cba939fe8aceb0129875444d91b23}
+}]Protected member functions. \index{Pro\+Attribs@{Pro\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Attribs@{Pro\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf4da8ee7556214d074163841c0ecd69}{}Pro\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf4da8ee7556214d074163841c0ecd69}
+}]Protected member attributes. \index{Pro\+Slots@{Pro\+Slots}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Slots@{Pro\+Slots}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf6afeed24a870edb6fba3ef2e8a9478}{}Pro\+Slots\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf6afeed24a870edb6fba3ef2e8a9478}
+}]Protected slots. \index{Pro\+Stat\+Funcs@{Pro\+Stat\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Stat\+Funcs@{Pro\+Stat\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a5307fc8defd7ba61d0fde7002bd6ffd3}{}Pro\+Stat\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a5307fc8defd7ba61d0fde7002bd6ffd3}
+}]Protected static member functions. \index{Pro\+Stat\+Attribs@{Pro\+Stat\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Stat\+Attribs@{Pro\+Stat\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a46c7118edfc5d628eafb8006ac06c0a4}{}Pro\+Stat\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a46c7118edfc5d628eafb8006ac06c0a4}
+}]Protected static member attributes. \index{Pac\+Types@{Pac\+Types}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Types@{Pac\+Types}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa9ef7829f07c87532c5045b62f5c7852}{}Pac\+Types\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa9ef7829f07c87532c5045b62f5c7852}
+}]Package member typedefs. \index{Pac\+Funcs@{Pac\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Funcs@{Pac\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a443986cfcd4e22b5be4b4dd47de256e8}{}Pac\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a443986cfcd4e22b5be4b4dd47de256e8}
+}]Package member functions. \index{Pac\+Attribs@{Pac\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Attribs@{Pac\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a7f4f820818c4dd541cec5d6805b6b948}{}Pac\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a7f4f820818c4dd541cec5d6805b6b948}
+}]Package member attributes. \index{Pac\+Stat\+Funcs@{Pac\+Stat\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Stat\+Funcs@{Pac\+Stat\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af534884d038abbf0046994552b613ae5}{}Pac\+Stat\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af534884d038abbf0046994552b613ae5}
+}]Package static member functions. \index{Pac\+Stat\+Attribs@{Pac\+Stat\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Stat\+Attribs@{Pac\+Stat\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a1c251133f8f0e61e21e2d2b938bc8484}{}Pac\+Stat\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a1c251133f8f0e61e21e2d2b938bc8484}
+}]Package static member attributes. \index{Pri\+Types@{Pri\+Types}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Types@{Pri\+Types}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abb12f85dc10a9a837d6edbbcf51c461d}{}Pri\+Types\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abb12f85dc10a9a837d6edbbcf51c461d}
+}]Private member typedefs. \index{Pri\+Funcs@{Pri\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Funcs@{Pri\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aef0d860c9f0f335fd4fa731c70e8862c}{}Pri\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aef0d860c9f0f335fd4fa731c70e8862c}
+}]Private member functions. \index{Pri\+Attribs@{Pri\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Attribs@{Pri\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9ae20b653fde26138aaebf77b2c9d10a}{}Pri\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9ae20b653fde26138aaebf77b2c9d10a}
+}]Private member attributes. \index{Pri\+Slots@{Pri\+Slots}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Slots@{Pri\+Slots}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a908c16efce0d1d8f2a19e172618c1db6}{}Pri\+Slots\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a908c16efce0d1d8f2a19e172618c1db6}
+}]Private Qt slots. \index{Pri\+Stat\+Funcs@{Pri\+Stat\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Stat\+Funcs@{Pri\+Stat\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adae8cebb39fb510dbed62312e895f7ec}{}Pri\+Stat\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adae8cebb39fb510dbed62312e895f7ec}
+}]Private static member functions. \index{Pri\+Stat\+Attribs@{Pri\+Stat\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Stat\+Attribs@{Pri\+Stat\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a30a1372c472b50df20bd8bceccb03115}{}Pri\+Stat\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a30a1372c472b50df20bd8bceccb03115}
+}]Private static member attributes. \index{Friend@{Friend}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Friend@{Friend}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a2118d43fad1dfac9605ec02d317d18ce}{}Friend\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a2118d43fad1dfac9605ec02d317d18ce}
+}]Friends. \index{Related@{Related}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Related@{Related}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a942307911f3383da068e01c013e1d16d}{}Related\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a942307911f3383da068e01c013e1d16d}
+}]Function marked as related. \index{Defines@{Defines}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Defines@{Defines}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a8a96f3ebd01c6d7a719c55ab29b34202}{}Defines\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a8a96f3ebd01c6d7a719c55ab29b34202}
+}]Preprocessor defines. \index{Prototypes@{Prototypes}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Prototypes@{Prototypes}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aeded4df9c6a6948467f0c236bb787c6c}{}Prototypes\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aeded4df9c6a6948467f0c236bb787c6c}
+}]Global function prototypes. \index{Typedefs@{Typedefs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Typedefs@{Typedefs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ab3a9fd5e4e4b6445ab9cce92d8a71842}{}Typedefs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ab3a9fd5e4e4b6445ab9cce92d8a71842}
+}]Global typedefs. \index{Enums@{Enums}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Enums@{Enums}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa8d9b7d13fefb09e1039f169574965bf}{}Enums\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa8d9b7d13fefb09e1039f169574965bf}
+}]Enumerations. \index{Functions@{Functions}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Functions@{Functions}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a588ffc897dd58c75ae0f9ccc360d4f4f}{}Functions\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a588ffc897dd58c75ae0f9ccc360d4f4f}
+}]Global functions. \index{Variables@{Variables}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Variables@{Variables}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0a2bd837670fec59dd6083821265dbee}{}Variables\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0a2bd837670fec59dd6083821265dbee}
+}]Global variables. \end{description}
+\end{Desc}
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5}{}\index{I\+Section@{I\+Section}!Section\+Kind@{Section\+Kind}}
+\index{Section\+Kind@{Section\+Kind}!I\+Section@{I\+Section}}
+\subsubsection[{Section\+Kind}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf I\+Section\+::\+Section\+Kind}}\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5}
+Possible section types \begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Invalid@{Invalid}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Invalid@{Invalid}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ae04be17098a3edfdb4433de1c25d425a}{}Invalid\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ae04be17098a3edfdb4433de1c25d425a}
+}]\index{User\+Defined@{User\+Defined}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!User\+Defined@{User\+Defined}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a4f0f4b43f52bd23e4f07025bf948c2d8}{}User\+Defined\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a4f0f4b43f52bd23e4f07025bf948c2d8}
+}]\hyperlink{class_a}{A} user defined member group. \index{Pub\+Types@{Pub\+Types}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Types@{Pub\+Types}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa6fadf721db9fdce4cc81a4e1f4d78a8}{}Pub\+Types\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa6fadf721db9fdce4cc81a4e1f4d78a8}
+}]Public member typedefs. \index{Pub\+Funcs@{Pub\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Funcs@{Pub\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ac8066fddfabd4a4ddbb46d5d6d937c0d}{}Pub\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ac8066fddfabd4a4ddbb46d5d6d937c0d}
+}]Public member functions. \index{Pub\+Attribs@{Pub\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Attribs@{Pub\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a28fd2333c152a96ccb293757630bc95a}{}Pub\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a28fd2333c152a96ccb293757630bc95a}
+}]Public member attributes. \index{Pub\+Slots@{Pub\+Slots}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Slots@{Pub\+Slots}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abbf536bf50647090ad50516825b75f88}{}Pub\+Slots\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abbf536bf50647090ad50516825b75f88}
+}]Public Qt Slots. \index{Signals@{Signals}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Signals@{Signals}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0397b3eb4853862b833fed5350080b20}{}Signals\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0397b3eb4853862b833fed5350080b20}
+}]Qt Signals. \index{D\+C\+O\+P\+Funcs@{D\+C\+O\+P\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!D\+C\+O\+P\+Funcs@{D\+C\+O\+P\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a61d0272703ba0d7373b0727583bc044d}{}D\+C\+O\+P\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a61d0272703ba0d7373b0727583bc044d}
+}]K\+D\+E-\/\+D\+C\+O\+P interface functions. \index{Properties@{Properties}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Properties@{Properties}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ad69216d7ee2e39c9afd86570af26e787}{}Properties\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ad69216d7ee2e39c9afd86570af26e787}
+}]I\+D\+L properties. \index{Events@{Events}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Events@{Events}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a977473bf3e46e66397c581f57ed25852}{}Events\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a977473bf3e46e66397c581f57ed25852}
+}]\hyperlink{class_c}{C}\# events. \index{Pub\+Stat\+Funcs@{Pub\+Stat\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Stat\+Funcs@{Pub\+Stat\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9d4f6445a377e48768bff7f5ae0b2c12}{}Pub\+Stat\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9d4f6445a377e48768bff7f5ae0b2c12}
+}]Public static member functions. \index{Pub\+Stat\+Attribs@{Pub\+Stat\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Stat\+Attribs@{Pub\+Stat\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aefb2b7d7c1ddd42a34ac1d4051844a49}{}Pub\+Stat\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aefb2b7d7c1ddd42a34ac1d4051844a49}
+}]Public static attributes. \index{Pro\+Types@{Pro\+Types}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Types@{Pro\+Types}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a02fa49600636de5f2d1e334793fa5e86}{}Pro\+Types\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a02fa49600636de5f2d1e334793fa5e86}
+}]Protected member typedefs. \index{Pro\+Funcs@{Pro\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Funcs@{Pro\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af60cba939fe8aceb0129875444d91b23}{}Pro\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af60cba939fe8aceb0129875444d91b23}
+}]Protected member functions. \index{Pro\+Attribs@{Pro\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Attribs@{Pro\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf4da8ee7556214d074163841c0ecd69}{}Pro\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf4da8ee7556214d074163841c0ecd69}
+}]Protected member attributes. \index{Pro\+Slots@{Pro\+Slots}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Slots@{Pro\+Slots}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf6afeed24a870edb6fba3ef2e8a9478}{}Pro\+Slots\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf6afeed24a870edb6fba3ef2e8a9478}
+}]Protected slots. \index{Pro\+Stat\+Funcs@{Pro\+Stat\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Stat\+Funcs@{Pro\+Stat\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a5307fc8defd7ba61d0fde7002bd6ffd3}{}Pro\+Stat\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a5307fc8defd7ba61d0fde7002bd6ffd3}
+}]Protected static member functions. \index{Pro\+Stat\+Attribs@{Pro\+Stat\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Stat\+Attribs@{Pro\+Stat\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a46c7118edfc5d628eafb8006ac06c0a4}{}Pro\+Stat\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a46c7118edfc5d628eafb8006ac06c0a4}
+}]Protected static member attributes. \index{Pac\+Types@{Pac\+Types}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Types@{Pac\+Types}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa9ef7829f07c87532c5045b62f5c7852}{}Pac\+Types\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa9ef7829f07c87532c5045b62f5c7852}
+}]Package member typedefs. \index{Pac\+Funcs@{Pac\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Funcs@{Pac\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a443986cfcd4e22b5be4b4dd47de256e8}{}Pac\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a443986cfcd4e22b5be4b4dd47de256e8}
+}]Package member functions. \index{Pac\+Attribs@{Pac\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Attribs@{Pac\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a7f4f820818c4dd541cec5d6805b6b948}{}Pac\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a7f4f820818c4dd541cec5d6805b6b948}
+}]Package member attributes. \index{Pac\+Stat\+Funcs@{Pac\+Stat\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Stat\+Funcs@{Pac\+Stat\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af534884d038abbf0046994552b613ae5}{}Pac\+Stat\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af534884d038abbf0046994552b613ae5}
+}]Package static member functions. \index{Pac\+Stat\+Attribs@{Pac\+Stat\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Stat\+Attribs@{Pac\+Stat\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a1c251133f8f0e61e21e2d2b938bc8484}{}Pac\+Stat\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a1c251133f8f0e61e21e2d2b938bc8484}
+}]Package static member attributes. \index{Pri\+Types@{Pri\+Types}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Types@{Pri\+Types}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abb12f85dc10a9a837d6edbbcf51c461d}{}Pri\+Types\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abb12f85dc10a9a837d6edbbcf51c461d}
+}]Private member typedefs. \index{Pri\+Funcs@{Pri\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Funcs@{Pri\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aef0d860c9f0f335fd4fa731c70e8862c}{}Pri\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aef0d860c9f0f335fd4fa731c70e8862c}
+}]Private member functions. \index{Pri\+Attribs@{Pri\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Attribs@{Pri\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9ae20b653fde26138aaebf77b2c9d10a}{}Pri\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9ae20b653fde26138aaebf77b2c9d10a}
+}]Private member attributes. \index{Pri\+Slots@{Pri\+Slots}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Slots@{Pri\+Slots}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a908c16efce0d1d8f2a19e172618c1db6}{}Pri\+Slots\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a908c16efce0d1d8f2a19e172618c1db6}
+}]Private Qt slots. \index{Pri\+Stat\+Funcs@{Pri\+Stat\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Stat\+Funcs@{Pri\+Stat\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adae8cebb39fb510dbed62312e895f7ec}{}Pri\+Stat\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adae8cebb39fb510dbed62312e895f7ec}
+}]Private static member functions. \index{Pri\+Stat\+Attribs@{Pri\+Stat\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Stat\+Attribs@{Pri\+Stat\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a30a1372c472b50df20bd8bceccb03115}{}Pri\+Stat\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a30a1372c472b50df20bd8bceccb03115}
+}]Private static member attributes. \index{Friend@{Friend}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Friend@{Friend}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a2118d43fad1dfac9605ec02d317d18ce}{}Friend\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a2118d43fad1dfac9605ec02d317d18ce}
+}]Friends. \index{Related@{Related}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Related@{Related}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a942307911f3383da068e01c013e1d16d}{}Related\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a942307911f3383da068e01c013e1d16d}
+}]Function marked as related. \index{Defines@{Defines}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Defines@{Defines}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a8a96f3ebd01c6d7a719c55ab29b34202}{}Defines\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a8a96f3ebd01c6d7a719c55ab29b34202}
+}]Preprocessor defines. \index{Prototypes@{Prototypes}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Prototypes@{Prototypes}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aeded4df9c6a6948467f0c236bb787c6c}{}Prototypes\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aeded4df9c6a6948467f0c236bb787c6c}
+}]Global function prototypes. \index{Typedefs@{Typedefs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Typedefs@{Typedefs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ab3a9fd5e4e4b6445ab9cce92d8a71842}{}Typedefs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ab3a9fd5e4e4b6445ab9cce92d8a71842}
+}]Global typedefs. \index{Enums@{Enums}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Enums@{Enums}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa8d9b7d13fefb09e1039f169574965bf}{}Enums\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa8d9b7d13fefb09e1039f169574965bf}
+}]Enumerations. \index{Functions@{Functions}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Functions@{Functions}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a588ffc897dd58c75ae0f9ccc360d4f4f}{}Functions\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a588ffc897dd58c75ae0f9ccc360d4f4f}
+}]Global functions. \index{Variables@{Variables}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Variables@{Variables}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0a2bd837670fec59dd6083821265dbee}{}Variables\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0a2bd837670fec59dd6083821265dbee}
+}]Global variables. \index{Invalid@{Invalid}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Invalid@{Invalid}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ae04be17098a3edfdb4433de1c25d425a}{}Invalid\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ae04be17098a3edfdb4433de1c25d425a}
+}]\index{User\+Defined@{User\+Defined}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!User\+Defined@{User\+Defined}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a4f0f4b43f52bd23e4f07025bf948c2d8}{}User\+Defined\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a4f0f4b43f52bd23e4f07025bf948c2d8}
+}]\hyperlink{class_a}{A} user defined member group. \index{Pub\+Types@{Pub\+Types}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Types@{Pub\+Types}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa6fadf721db9fdce4cc81a4e1f4d78a8}{}Pub\+Types\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa6fadf721db9fdce4cc81a4e1f4d78a8}
+}]Public member typedefs. \index{Pub\+Funcs@{Pub\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Funcs@{Pub\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ac8066fddfabd4a4ddbb46d5d6d937c0d}{}Pub\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ac8066fddfabd4a4ddbb46d5d6d937c0d}
+}]Public member functions. \index{Pub\+Attribs@{Pub\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Attribs@{Pub\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a28fd2333c152a96ccb293757630bc95a}{}Pub\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a28fd2333c152a96ccb293757630bc95a}
+}]Public member attributes. \index{Pub\+Slots@{Pub\+Slots}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Slots@{Pub\+Slots}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abbf536bf50647090ad50516825b75f88}{}Pub\+Slots\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abbf536bf50647090ad50516825b75f88}
+}]Public Qt Slots. \index{Signals@{Signals}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Signals@{Signals}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0397b3eb4853862b833fed5350080b20}{}Signals\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0397b3eb4853862b833fed5350080b20}
+}]Qt Signals. \index{D\+C\+O\+P\+Funcs@{D\+C\+O\+P\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!D\+C\+O\+P\+Funcs@{D\+C\+O\+P\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a61d0272703ba0d7373b0727583bc044d}{}D\+C\+O\+P\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a61d0272703ba0d7373b0727583bc044d}
+}]K\+D\+E-\/\+D\+C\+O\+P interface functions. \index{Properties@{Properties}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Properties@{Properties}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ad69216d7ee2e39c9afd86570af26e787}{}Properties\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ad69216d7ee2e39c9afd86570af26e787}
+}]I\+D\+L properties. \index{Events@{Events}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Events@{Events}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a977473bf3e46e66397c581f57ed25852}{}Events\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a977473bf3e46e66397c581f57ed25852}
+}]\hyperlink{class_c}{C}\# events. \index{Pub\+Stat\+Funcs@{Pub\+Stat\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Stat\+Funcs@{Pub\+Stat\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9d4f6445a377e48768bff7f5ae0b2c12}{}Pub\+Stat\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9d4f6445a377e48768bff7f5ae0b2c12}
+}]Public static member functions. \index{Pub\+Stat\+Attribs@{Pub\+Stat\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pub\+Stat\+Attribs@{Pub\+Stat\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aefb2b7d7c1ddd42a34ac1d4051844a49}{}Pub\+Stat\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aefb2b7d7c1ddd42a34ac1d4051844a49}
+}]Public static attributes. \index{Pro\+Types@{Pro\+Types}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Types@{Pro\+Types}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a02fa49600636de5f2d1e334793fa5e86}{}Pro\+Types\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a02fa49600636de5f2d1e334793fa5e86}
+}]Protected member typedefs. \index{Pro\+Funcs@{Pro\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Funcs@{Pro\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af60cba939fe8aceb0129875444d91b23}{}Pro\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af60cba939fe8aceb0129875444d91b23}
+}]Protected member functions. \index{Pro\+Attribs@{Pro\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Attribs@{Pro\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf4da8ee7556214d074163841c0ecd69}{}Pro\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf4da8ee7556214d074163841c0ecd69}
+}]Protected member attributes. \index{Pro\+Slots@{Pro\+Slots}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Slots@{Pro\+Slots}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf6afeed24a870edb6fba3ef2e8a9478}{}Pro\+Slots\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adf6afeed24a870edb6fba3ef2e8a9478}
+}]Protected slots. \index{Pro\+Stat\+Funcs@{Pro\+Stat\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Stat\+Funcs@{Pro\+Stat\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a5307fc8defd7ba61d0fde7002bd6ffd3}{}Pro\+Stat\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a5307fc8defd7ba61d0fde7002bd6ffd3}
+}]Protected static member functions. \index{Pro\+Stat\+Attribs@{Pro\+Stat\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pro\+Stat\+Attribs@{Pro\+Stat\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a46c7118edfc5d628eafb8006ac06c0a4}{}Pro\+Stat\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a46c7118edfc5d628eafb8006ac06c0a4}
+}]Protected static member attributes. \index{Pac\+Types@{Pac\+Types}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Types@{Pac\+Types}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa9ef7829f07c87532c5045b62f5c7852}{}Pac\+Types\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa9ef7829f07c87532c5045b62f5c7852}
+}]Package member typedefs. \index{Pac\+Funcs@{Pac\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Funcs@{Pac\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a443986cfcd4e22b5be4b4dd47de256e8}{}Pac\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a443986cfcd4e22b5be4b4dd47de256e8}
+}]Package member functions. \index{Pac\+Attribs@{Pac\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Attribs@{Pac\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a7f4f820818c4dd541cec5d6805b6b948}{}Pac\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a7f4f820818c4dd541cec5d6805b6b948}
+}]Package member attributes. \index{Pac\+Stat\+Funcs@{Pac\+Stat\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Stat\+Funcs@{Pac\+Stat\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af534884d038abbf0046994552b613ae5}{}Pac\+Stat\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5af534884d038abbf0046994552b613ae5}
+}]Package static member functions. \index{Pac\+Stat\+Attribs@{Pac\+Stat\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pac\+Stat\+Attribs@{Pac\+Stat\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a1c251133f8f0e61e21e2d2b938bc8484}{}Pac\+Stat\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a1c251133f8f0e61e21e2d2b938bc8484}
+}]Package static member attributes. \index{Pri\+Types@{Pri\+Types}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Types@{Pri\+Types}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abb12f85dc10a9a837d6edbbcf51c461d}{}Pri\+Types\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5abb12f85dc10a9a837d6edbbcf51c461d}
+}]Private member typedefs. \index{Pri\+Funcs@{Pri\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Funcs@{Pri\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aef0d860c9f0f335fd4fa731c70e8862c}{}Pri\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aef0d860c9f0f335fd4fa731c70e8862c}
+}]Private member functions. \index{Pri\+Attribs@{Pri\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Attribs@{Pri\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9ae20b653fde26138aaebf77b2c9d10a}{}Pri\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a9ae20b653fde26138aaebf77b2c9d10a}
+}]Private member attributes. \index{Pri\+Slots@{Pri\+Slots}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Slots@{Pri\+Slots}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a908c16efce0d1d8f2a19e172618c1db6}{}Pri\+Slots\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a908c16efce0d1d8f2a19e172618c1db6}
+}]Private Qt slots. \index{Pri\+Stat\+Funcs@{Pri\+Stat\+Funcs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Stat\+Funcs@{Pri\+Stat\+Funcs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adae8cebb39fb510dbed62312e895f7ec}{}Pri\+Stat\+Funcs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5adae8cebb39fb510dbed62312e895f7ec}
+}]Private static member functions. \index{Pri\+Stat\+Attribs@{Pri\+Stat\+Attribs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Pri\+Stat\+Attribs@{Pri\+Stat\+Attribs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a30a1372c472b50df20bd8bceccb03115}{}Pri\+Stat\+Attribs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a30a1372c472b50df20bd8bceccb03115}
+}]Private static member attributes. \index{Friend@{Friend}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Friend@{Friend}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a2118d43fad1dfac9605ec02d317d18ce}{}Friend\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a2118d43fad1dfac9605ec02d317d18ce}
+}]Friends. \index{Related@{Related}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Related@{Related}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a942307911f3383da068e01c013e1d16d}{}Related\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a942307911f3383da068e01c013e1d16d}
+}]Function marked as related. \index{Defines@{Defines}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Defines@{Defines}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a8a96f3ebd01c6d7a719c55ab29b34202}{}Defines\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a8a96f3ebd01c6d7a719c55ab29b34202}
+}]Preprocessor defines. \index{Prototypes@{Prototypes}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Prototypes@{Prototypes}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aeded4df9c6a6948467f0c236bb787c6c}{}Prototypes\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aeded4df9c6a6948467f0c236bb787c6c}
+}]Global function prototypes. \index{Typedefs@{Typedefs}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Typedefs@{Typedefs}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ab3a9fd5e4e4b6445ab9cce92d8a71842}{}Typedefs\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5ab3a9fd5e4e4b6445ab9cce92d8a71842}
+}]Global typedefs. \index{Enums@{Enums}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Enums@{Enums}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa8d9b7d13fefb09e1039f169574965bf}{}Enums\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5aa8d9b7d13fefb09e1039f169574965bf}
+}]Enumerations. \index{Functions@{Functions}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Functions@{Functions}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a588ffc897dd58c75ae0f9ccc360d4f4f}{}Functions\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a588ffc897dd58c75ae0f9ccc360d4f4f}
+}]Global functions. \index{Variables@{Variables}!I\+Section@{I\+Section}}\index{I\+Section@{I\+Section}!Variables@{Variables}}\item[{\em 
+\hypertarget{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0a2bd837670fec59dd6083821265dbee}{}Variables\label{class_i_section_af768cbfe7056fadbd0a67d26d0ef84e5a0a2bd837670fec59dd6083821265dbee}
+}]Global variables. \end{description}
+\end{Desc}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_i_section_a6927694b41def1fdc159e4b21e037ebe}{}\index{I\+Section@{I\+Section}!description@{description}}
+\index{description@{description}!I\+Section@{I\+Section}}
+\subsubsection[{description() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\+Doc\+Root}$\ast$ I\+Section\+::description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_section_a6927694b41def1fdc159e4b21e037ebe}
+Returns the description attached to this section (for user defined sections, also known as member groups). 
+
+Implémenté dans \hyperlink{class_section_handler_a8927564219547e0631e741b148769bb5}{Section\+Handler}.
+
+\hypertarget{class_i_section_a6927694b41def1fdc159e4b21e037ebe}{}\index{I\+Section@{I\+Section}!description@{description}}
+\index{description@{description}!I\+Section@{I\+Section}}
+\subsubsection[{description() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\+Doc\+Root}$\ast$ I\+Section\+::description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_section_a6927694b41def1fdc159e4b21e037ebe}
+Returns the description attached to this section (for user defined sections, also known as member groups). 
+
+Implémenté dans \hyperlink{class_section_handler_a8927564219547e0631e741b148769bb5}{Section\+Handler}.
+
+\hypertarget{class_i_section_a5a55533e4ac46cd3acf226b80452faaf}{}\index{I\+Section@{I\+Section}!is\+Private@{is\+Private}}
+\index{is\+Private@{is\+Private}!I\+Section@{I\+Section}}
+\subsubsection[{is\+Private() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} I\+Section\+::is\+Private (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_section_a5a55533e4ac46cd3acf226b80452faaf}
+Returns {\ttfamily true} if this section belongs to a private section of a class 
+
+Implémenté dans \hyperlink{class_section_handler_a66631bbf66317d1a144021e2065847f7}{Section\+Handler}.
+
+\hypertarget{class_i_section_a5a55533e4ac46cd3acf226b80452faaf}{}\index{I\+Section@{I\+Section}!is\+Private@{is\+Private}}
+\index{is\+Private@{is\+Private}!I\+Section@{I\+Section}}
+\subsubsection[{is\+Private() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} I\+Section\+::is\+Private (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_section_a5a55533e4ac46cd3acf226b80452faaf}
+Returns {\ttfamily true} if this section belongs to a private section of a class 
+
+Implémenté dans \hyperlink{class_section_handler_a66631bbf66317d1a144021e2065847f7}{Section\+Handler}.
+
+\hypertarget{class_i_section_ad883e4145d8cf50b8fdcb97266845e8d}{}\index{I\+Section@{I\+Section}!is\+Protected@{is\+Protected}}
+\index{is\+Protected@{is\+Protected}!I\+Section@{I\+Section}}
+\subsubsection[{is\+Protected() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} I\+Section\+::is\+Protected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_section_ad883e4145d8cf50b8fdcb97266845e8d}
+Returns {\ttfamily true} if this section belongs to a protected section of a class 
+
+Implémenté dans \hyperlink{class_section_handler_a9b70f0d7bdb86b284e12f72984c50694}{Section\+Handler}.
+
+\hypertarget{class_i_section_ad883e4145d8cf50b8fdcb97266845e8d}{}\index{I\+Section@{I\+Section}!is\+Protected@{is\+Protected}}
+\index{is\+Protected@{is\+Protected}!I\+Section@{I\+Section}}
+\subsubsection[{is\+Protected() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} I\+Section\+::is\+Protected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_section_ad883e4145d8cf50b8fdcb97266845e8d}
+Returns {\ttfamily true} if this section belongs to a protected section of a class 
+
+Implémenté dans \hyperlink{class_section_handler_a9b70f0d7bdb86b284e12f72984c50694}{Section\+Handler}.
+
+\hypertarget{class_i_section_aac1342e8d3db6be3fb5dada6a06bcdb3}{}\index{I\+Section@{I\+Section}!is\+Public@{is\+Public}}
+\index{is\+Public@{is\+Public}!I\+Section@{I\+Section}}
+\subsubsection[{is\+Public() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} I\+Section\+::is\+Public (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_section_aac1342e8d3db6be3fb5dada6a06bcdb3}
+Returns {\ttfamily true} if this section belongs to a public section of a class 
+
+Implémenté dans \hyperlink{class_section_handler_aa539ecbef555e47f4d8d6112fed12965}{Section\+Handler}.
+
+\hypertarget{class_i_section_aac1342e8d3db6be3fb5dada6a06bcdb3}{}\index{I\+Section@{I\+Section}!is\+Public@{is\+Public}}
+\index{is\+Public@{is\+Public}!I\+Section@{I\+Section}}
+\subsubsection[{is\+Public() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} I\+Section\+::is\+Public (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_section_aac1342e8d3db6be3fb5dada6a06bcdb3}
+Returns {\ttfamily true} if this section belongs to a public section of a class 
+
+Implémenté dans \hyperlink{class_section_handler_aa539ecbef555e47f4d8d6112fed12965}{Section\+Handler}.
+
+\hypertarget{class_i_section_aff6aeaf9972edac9b11fe09d74e58c5d}{}\index{I\+Section@{I\+Section}!is\+Static@{is\+Static}}
+\index{is\+Static@{is\+Static}!I\+Section@{I\+Section}}
+\subsubsection[{is\+Static() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} I\+Section\+::is\+Static (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_section_aff6aeaf9972edac9b11fe09d74e58c5d}
+Returns {\ttfamily true} if this section contains statics 
+
+Implémenté dans \hyperlink{class_section_handler_af915ae961f07367201fe79597cecc06a}{Section\+Handler}.
+
+\hypertarget{class_i_section_aff6aeaf9972edac9b11fe09d74e58c5d}{}\index{I\+Section@{I\+Section}!is\+Static@{is\+Static}}
+\index{is\+Static@{is\+Static}!I\+Section@{I\+Section}}
+\subsubsection[{is\+Static() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} I\+Section\+::is\+Static (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_section_aff6aeaf9972edac9b11fe09d74e58c5d}
+Returns {\ttfamily true} if this section contains statics 
+
+Implémenté dans \hyperlink{class_section_handler_af915ae961f07367201fe79597cecc06a}{Section\+Handler}.
+
+\hypertarget{class_i_section_aea5541b95f6c5b50fd3cad5794b34d47}{}\index{I\+Section@{I\+Section}!kind@{kind}}
+\index{kind@{kind}!I\+Section@{I\+Section}}
+\subsubsection[{kind() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Section\+Kind} I\+Section\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_section_aea5541b95f6c5b50fd3cad5794b34d47}
+Returns what kind of section this is 
+
+Implémenté dans \hyperlink{class_section_handler_a8cb80e96b63623ef8f1178f4e436f61f}{Section\+Handler}.
+
+\hypertarget{class_i_section_aea5541b95f6c5b50fd3cad5794b34d47}{}\index{I\+Section@{I\+Section}!kind@{kind}}
+\index{kind@{kind}!I\+Section@{I\+Section}}
+\subsubsection[{kind() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Section\+Kind} I\+Section\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_section_aea5541b95f6c5b50fd3cad5794b34d47}
+Returns what kind of section this is 
+
+Implémenté dans \hyperlink{class_section_handler_a8cb80e96b63623ef8f1178f4e436f61f}{Section\+Handler}.
+
+\hypertarget{class_i_section_a3be72bf2b7bde49e741bb0d8af4df8e6}{}\index{I\+Section@{I\+Section}!kind\+String@{kind\+String}}
+\index{kind\+String@{kind\+String}!I\+Section@{I\+Section}}
+\subsubsection[{kind\+String() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf I\+String}$\ast$ I\+Section\+::kind\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_section_a3be72bf2b7bde49e741bb0d8af4df8e6}
+Returns a string representation of the value returned by \hyperlink{class_i_section_aea5541b95f6c5b50fd3cad5794b34d47}{kind()} 
+
+Implémenté dans \hyperlink{class_section_handler_adccefd5b15916d21d01d2b9ac0d93418}{Section\+Handler}.
+
+\hypertarget{class_i_section_a3be72bf2b7bde49e741bb0d8af4df8e6}{}\index{I\+Section@{I\+Section}!kind\+String@{kind\+String}}
+\index{kind\+String@{kind\+String}!I\+Section@{I\+Section}}
+\subsubsection[{kind\+String() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf I\+String}$\ast$ I\+Section\+::kind\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_section_a3be72bf2b7bde49e741bb0d8af4df8e6}
+Returns a string representation of the value returned by \hyperlink{class_i_section_aea5541b95f6c5b50fd3cad5794b34d47}{kind()} 
+
+Implémenté dans \hyperlink{class_section_handler_adccefd5b15916d21d01d2b9ac0d93418}{Section\+Handler}.
+
+\hypertarget{class_i_section_a37b0fa3669f435713058ca5c7b377e3a}{}\index{I\+Section@{I\+Section}!members@{members}}
+\index{members@{members}!I\+Section@{I\+Section}}
+\subsubsection[{members() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\+Member\+Iterator}$\ast$ I\+Section\+::members (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_section_a37b0fa3669f435713058ca5c7b377e3a}
+Returns an iterator for the members of this section 
+
+Implémenté dans \hyperlink{class_section_handler_a1c52992233ad59fef3ebca9741847e6a}{Section\+Handler}.
+
+\hypertarget{class_i_section_a37b0fa3669f435713058ca5c7b377e3a}{}\index{I\+Section@{I\+Section}!members@{members}}
+\index{members@{members}!I\+Section@{I\+Section}}
+\subsubsection[{members() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\+Member\+Iterator}$\ast$ I\+Section\+::members (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_section_a37b0fa3669f435713058ca5c7b377e3a}
+Returns an iterator for the members of this section 
+
+Implémenté dans \hyperlink{class_section_handler_a1c52992233ad59fef3ebca9741847e6a}{Section\+Handler}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+addon/doxmlparser/include/\hyperlink{include_2doxmlintf_8h}{doxmlintf.\+h}\end{DoxyCompactItemize}

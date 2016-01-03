@@ -1,0 +1,132 @@
+\hypertarget{vhdljjparser_8cpp}{}\section{Référence du fichier src/vhdljjparser.cpp}
+\label{vhdljjparser_8cpp}\index{src/vhdljjparser.\+cpp@{src/vhdljjparser.\+cpp}}
+{\ttfamily \#include $<$qcstring.\+h$>$}\\*
+{\ttfamily \#include $<$qfileinfo.\+h$>$}\\*
+{\ttfamily \#include $<$qstringlist.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}vhdljjparser.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}vhdlcode.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}vhdldocgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doxygen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}language.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}commentscan.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}index.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}definition.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}searchindex.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}outputlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}arguments.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Vhdl\+Parser\+I\+F.\+h\char`\"{}}\\*
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{vhdljjparser_8cpp_adf177b42cfbf90717ae1c9e92cdabe3e}{check\+Multi\+Comment} (\hyperlink{class_q_c_string}{Q\+C\+String} \&qcs, int line)
+\item 
+\hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{class_entry}{Entry} $>$ $\ast$ \hyperlink{vhdljjparser_8cpp_ab569a1d6439cc0b1ce591b94116eb5e5}{get\+Entry\+At\+Line} (const \hyperlink{class_entry}{Entry} $\ast$ce, int line)
+\item 
+\hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{struct_vhdl_conf_node}{Vhdl\+Conf\+Node} $>$ \& \hyperlink{vhdljjparser_8cpp_a5efc2ed713b6083cc1a1484e8f603a4c}{get\+Vhdl\+Configuration} ()
+\item 
+\hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{class_entry}{Entry} $>$ \& \hyperlink{vhdljjparser_8cpp_a3ae4601d4c5d37ca67a882be32425b54}{get\+Vhdl\+Inst\+List} ()
+\item 
+\hyperlink{class_entry}{Entry} $\ast$ \hyperlink{vhdljjparser_8cpp_a65fa8a56ea8d5aa598a4eb1d7384042e}{get\+Vhdl\+Compound} ()
+\item 
+void \hyperlink{vhdljjparser_8cpp_a07e606b2c802b27f575f49b09448a528}{start\+Code\+Block} (int index)
+\item 
+void \hyperlink{vhdljjparser_8cpp_aa5ffc01707f5963ff8cb41ed12472470}{make\+Inline\+Doc} (int end\+Code)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{vhdljjparser_8cpp_ad64d904396d0b116b3f4ff476dcd5198}{is\+Constraint\+File} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&file\+Name, const \hyperlink{class_q_c_string}{Q\+C\+String} \&ext)
+\item 
+void \hyperlink{vhdljjparser_8cpp_adeecb14cdc59d07cc5488e6789ffabdc}{is\+Vhdl\+Doc\+Pending} ()
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{vhdljjparser_8cpp_a7b9aaa04866309e99b55d309f93c2684}{check\+Inline\+Code} (\hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{vhdljjparser_8cpp_a9910424bf5401d657c3b3fdff6fcc152}{doc})
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{vhdljjparser_8cpp_a7b9aaa04866309e99b55d309f93c2684}{}\index{vhdljjparser.\+cpp@{vhdljjparser.\+cpp}!check\+Inline\+Code@{check\+Inline\+Code}}
+\index{check\+Inline\+Code@{check\+Inline\+Code}!vhdljjparser.\+cpp@{vhdljjparser.\+cpp}}
+\subsubsection[{check\+Inline\+Code(\+Q\+C\+String \&doc)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} check\+Inline\+Code (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+C\+String} \&}]{doc}
+\end{DoxyParamCaption}
+)}\label{vhdljjparser_8cpp_a7b9aaa04866309e99b55d309f93c2684}
+\hypertarget{vhdljjparser_8cpp_adf177b42cfbf90717ae1c9e92cdabe3e}{}\index{vhdljjparser.\+cpp@{vhdljjparser.\+cpp}!check\+Multi\+Comment@{check\+Multi\+Comment}}
+\index{check\+Multi\+Comment@{check\+Multi\+Comment}!vhdljjparser.\+cpp@{vhdljjparser.\+cpp}}
+\subsubsection[{check\+Multi\+Comment(\+Q\+C\+String \&qcs, int line)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} check\+Multi\+Comment (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+C\+String} \&}]{qcs, }
+\item[{int}]{line}
+\end{DoxyParamCaption}
+)}\label{vhdljjparser_8cpp_adf177b42cfbf90717ae1c9e92cdabe3e}
+\hypertarget{vhdljjparser_8cpp_ab569a1d6439cc0b1ce591b94116eb5e5}{}\index{vhdljjparser.\+cpp@{vhdljjparser.\+cpp}!get\+Entry\+At\+Line@{get\+Entry\+At\+Line}}
+\index{get\+Entry\+At\+Line@{get\+Entry\+At\+Line}!vhdljjparser.\+cpp@{vhdljjparser.\+cpp}}
+\subsubsection[{get\+Entry\+At\+Line(const Entry $\ast$ce, int line)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+List}$<$ {\bf Entry} $>$ $\ast$ get\+Entry\+At\+Line (
+\begin{DoxyParamCaption}
+\item[{const {\bf Entry} $\ast$}]{ce, }
+\item[{int}]{line}
+\end{DoxyParamCaption}
+)}\label{vhdljjparser_8cpp_ab569a1d6439cc0b1ce591b94116eb5e5}
+\hypertarget{vhdljjparser_8cpp_a65fa8a56ea8d5aa598a4eb1d7384042e}{}\index{vhdljjparser.\+cpp@{vhdljjparser.\+cpp}!get\+Vhdl\+Compound@{get\+Vhdl\+Compound}}
+\index{get\+Vhdl\+Compound@{get\+Vhdl\+Compound}!vhdljjparser.\+cpp@{vhdljjparser.\+cpp}}
+\subsubsection[{get\+Vhdl\+Compound()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entry}$\ast$ get\+Vhdl\+Compound (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{vhdljjparser_8cpp_a65fa8a56ea8d5aa598a4eb1d7384042e}
+\hypertarget{vhdljjparser_8cpp_a5efc2ed713b6083cc1a1484e8f603a4c}{}\index{vhdljjparser.\+cpp@{vhdljjparser.\+cpp}!get\+Vhdl\+Configuration@{get\+Vhdl\+Configuration}}
+\index{get\+Vhdl\+Configuration@{get\+Vhdl\+Configuration}!vhdljjparser.\+cpp@{vhdljjparser.\+cpp}}
+\subsubsection[{get\+Vhdl\+Configuration()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+List}$<${\bf Vhdl\+Conf\+Node}$>$\& get\+Vhdl\+Configuration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{vhdljjparser_8cpp_a5efc2ed713b6083cc1a1484e8f603a4c}
+\hypertarget{vhdljjparser_8cpp_a3ae4601d4c5d37ca67a882be32425b54}{}\index{vhdljjparser.\+cpp@{vhdljjparser.\+cpp}!get\+Vhdl\+Inst\+List@{get\+Vhdl\+Inst\+List}}
+\index{get\+Vhdl\+Inst\+List@{get\+Vhdl\+Inst\+List}!vhdljjparser.\+cpp@{vhdljjparser.\+cpp}}
+\subsubsection[{get\+Vhdl\+Inst\+List()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+List}$<${\bf Entry}$>$\& get\+Vhdl\+Inst\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{vhdljjparser_8cpp_a3ae4601d4c5d37ca67a882be32425b54}
+\hypertarget{vhdljjparser_8cpp_ad64d904396d0b116b3f4ff476dcd5198}{}\index{vhdljjparser.\+cpp@{vhdljjparser.\+cpp}!is\+Constraint\+File@{is\+Constraint\+File}}
+\index{is\+Constraint\+File@{is\+Constraint\+File}!vhdljjparser.\+cpp@{vhdljjparser.\+cpp}}
+\subsubsection[{is\+Constraint\+File(const Q\+C\+String \&file\+Name, const Q\+C\+String \&ext)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} is\+Constraint\+File (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{file\+Name, }
+\item[{const {\bf Q\+C\+String} \&}]{ext}
+\end{DoxyParamCaption}
+)}\label{vhdljjparser_8cpp_ad64d904396d0b116b3f4ff476dcd5198}
+\hypertarget{vhdljjparser_8cpp_adeecb14cdc59d07cc5488e6789ffabdc}{}\index{vhdljjparser.\+cpp@{vhdljjparser.\+cpp}!is\+Vhdl\+Doc\+Pending@{is\+Vhdl\+Doc\+Pending}}
+\index{is\+Vhdl\+Doc\+Pending@{is\+Vhdl\+Doc\+Pending}!vhdljjparser.\+cpp@{vhdljjparser.\+cpp}}
+\subsubsection[{is\+Vhdl\+Doc\+Pending()}]{\setlength{\rightskip}{0pt plus 5cm}void is\+Vhdl\+Doc\+Pending (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{vhdljjparser_8cpp_adeecb14cdc59d07cc5488e6789ffabdc}
+\hypertarget{vhdljjparser_8cpp_aa5ffc01707f5963ff8cb41ed12472470}{}\index{vhdljjparser.\+cpp@{vhdljjparser.\+cpp}!make\+Inline\+Doc@{make\+Inline\+Doc}}
+\index{make\+Inline\+Doc@{make\+Inline\+Doc}!vhdljjparser.\+cpp@{vhdljjparser.\+cpp}}
+\subsubsection[{make\+Inline\+Doc(int end\+Code)}]{\setlength{\rightskip}{0pt plus 5cm}void make\+Inline\+Doc (
+\begin{DoxyParamCaption}
+\item[{int}]{end\+Code}
+\end{DoxyParamCaption}
+)}\label{vhdljjparser_8cpp_aa5ffc01707f5963ff8cb41ed12472470}
+\hypertarget{vhdljjparser_8cpp_a07e606b2c802b27f575f49b09448a528}{}\index{vhdljjparser.\+cpp@{vhdljjparser.\+cpp}!start\+Code\+Block@{start\+Code\+Block}}
+\index{start\+Code\+Block@{start\+Code\+Block}!vhdljjparser.\+cpp@{vhdljjparser.\+cpp}}
+\subsubsection[{start\+Code\+Block(int index)}]{\setlength{\rightskip}{0pt plus 5cm}void start\+Code\+Block (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\label{vhdljjparser_8cpp_a07e606b2c802b27f575f49b09448a528}
+
+
+\subsection{Documentation des variables}
+\hypertarget{vhdljjparser_8cpp_a523a0a657a0db3a8f2ffe3d21a9f1289}{}\index{vhdljjparser.\+cpp@{vhdljjparser.\+cpp}!brief@{brief}}
+\index{brief@{brief}!vhdljjparser.\+cpp@{vhdljjparser.\+cpp}}
+\subsubsection[{brief}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} brief}\label{vhdljjparser_8cpp_a523a0a657a0db3a8f2ffe3d21a9f1289}
+\hypertarget{vhdljjparser_8cpp_a9910424bf5401d657c3b3fdff6fcc152}{}\index{vhdljjparser.\+cpp@{vhdljjparser.\+cpp}!doc@{doc}}
+\index{doc@{doc}!vhdljjparser.\+cpp@{vhdljjparser.\+cpp}}
+\subsubsection[{doc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} doc}\label{vhdljjparser_8cpp_a9910424bf5401d657c3b3fdff6fcc152}
+\hypertarget{vhdljjparser_8cpp_a39f16d585c4531d2bf2562631a775d73}{}\index{vhdljjparser.\+cpp@{vhdljjparser.\+cpp}!pending@{pending}}
+\index{pending@{pending}!vhdljjparser.\+cpp@{vhdljjparser.\+cpp}}
+\subsubsection[{pending}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} pending}\label{vhdljjparser_8cpp_a39f16d585c4531d2bf2562631a775d73}

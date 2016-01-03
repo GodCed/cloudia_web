@@ -1,0 +1,87 @@
+\hypertarget{class_q_xml_input_source}{}\section{Référence de la classe Q\+Xml\+Input\+Source}
+\label{class_q_xml_input_source}\index{Q\+Xml\+Input\+Source@{Q\+Xml\+Input\+Source}}
+
+
+The \hyperlink{class_q_xml_input_source}{Q\+Xml\+Input\+Source} class is the source where X\+M\+L data is read from.  
+
+
+
+
+{\ttfamily \#include $<$qxml.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_xml_input_source_ae01ad9dbd2e6d950fe4d43e7f7ba5e80}{Q\+Xml\+Input\+Source} ()
+\item 
+\hyperlink{class_q_xml_input_source_a301b2d54ab84af500ac65257de94f23d}{Q\+Xml\+Input\+Source} (\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \&stream)
+\item 
+\hyperlink{class_q_xml_input_source_af31832f657ee461a8fbe9b9f9227c218}{Q\+Xml\+Input\+Source} (\hyperlink{class_q_file}{Q\+File} \&file)
+\item 
+virtual \hyperlink{class_q_xml_input_source_ac488a4e4c15218584c36c54bb4d4d78b}{$\sim$\+Q\+Xml\+Input\+Source} ()
+\item 
+virtual const \hyperlink{class_q_string}{Q\+String} \& \hyperlink{class_q_xml_input_source_ae450001e8b1775cd91e93e0d63d201df}{data} () const 
+\item 
+virtual void \hyperlink{class_q_xml_input_source_a3ecfd199af8d72d33a9ef7b919794923}{set\+Data} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d})
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+The \hyperlink{class_q_xml_input_source}{Q\+Xml\+Input\+Source} class is the source where X\+M\+L data is read from. 
+
+X\+M\+L
+
+All subclasses of \hyperlink{class_q_xml_reader}{Q\+Xml\+Reader} read the input from this class. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_xml_input_source_ae01ad9dbd2e6d950fe4d43e7f7ba5e80}{}\index{Q\+Xml\+Input\+Source@{Q\+Xml\+Input\+Source}!Q\+Xml\+Input\+Source@{Q\+Xml\+Input\+Source}}
+\index{Q\+Xml\+Input\+Source@{Q\+Xml\+Input\+Source}!Q\+Xml\+Input\+Source@{Q\+Xml\+Input\+Source}}
+\subsubsection[{Q\+Xml\+Input\+Source()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Xml\+Input\+Source\+::\+Q\+Xml\+Input\+Source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_xml_input_source_ae01ad9dbd2e6d950fe4d43e7f7ba5e80}
+Constructs a input source which contains no data. \hypertarget{class_q_xml_input_source_a301b2d54ab84af500ac65257de94f23d}{}\index{Q\+Xml\+Input\+Source@{Q\+Xml\+Input\+Source}!Q\+Xml\+Input\+Source@{Q\+Xml\+Input\+Source}}
+\index{Q\+Xml\+Input\+Source@{Q\+Xml\+Input\+Source}!Q\+Xml\+Input\+Source@{Q\+Xml\+Input\+Source}}
+\subsubsection[{Q\+Xml\+Input\+Source(\+Q\+Text\+Stream \&stream)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Xml\+Input\+Source\+::\+Q\+Xml\+Input\+Source (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Text\+Stream} \&}]{stream}
+\end{DoxyParamCaption}
+)}\label{class_q_xml_input_source_a301b2d54ab84af500ac65257de94f23d}
+Constructs a input source and get the data from the text stream. \hypertarget{class_q_xml_input_source_af31832f657ee461a8fbe9b9f9227c218}{}\index{Q\+Xml\+Input\+Source@{Q\+Xml\+Input\+Source}!Q\+Xml\+Input\+Source@{Q\+Xml\+Input\+Source}}
+\index{Q\+Xml\+Input\+Source@{Q\+Xml\+Input\+Source}!Q\+Xml\+Input\+Source@{Q\+Xml\+Input\+Source}}
+\subsubsection[{Q\+Xml\+Input\+Source(\+Q\+File \&file)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Xml\+Input\+Source\+::\+Q\+Xml\+Input\+Source (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+File} \&}]{file}
+\end{DoxyParamCaption}
+)}\label{class_q_xml_input_source_af31832f657ee461a8fbe9b9f9227c218}
+Constructs a input source and get the data from a file. If the file cannot be read the input source is empty. \hypertarget{class_q_xml_input_source_ac488a4e4c15218584c36c54bb4d4d78b}{}\index{Q\+Xml\+Input\+Source@{Q\+Xml\+Input\+Source}!````~Q\+Xml\+Input\+Source@{$\sim$\+Q\+Xml\+Input\+Source}}
+\index{````~Q\+Xml\+Input\+Source@{$\sim$\+Q\+Xml\+Input\+Source}!Q\+Xml\+Input\+Source@{Q\+Xml\+Input\+Source}}
+\subsubsection[{$\sim$\+Q\+Xml\+Input\+Source()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Xml\+Input\+Source\+::$\sim$\+Q\+Xml\+Input\+Source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_xml_input_source_ac488a4e4c15218584c36c54bb4d4d78b}
+Destructor. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_xml_input_source_ae450001e8b1775cd91e93e0d63d201df}{}\index{Q\+Xml\+Input\+Source@{Q\+Xml\+Input\+Source}!data@{data}}
+\index{data@{data}!Q\+Xml\+Input\+Source@{Q\+Xml\+Input\+Source}}
+\subsubsection[{data() const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Q\+String} \& Q\+Xml\+Input\+Source\+::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_xml_input_source_ae450001e8b1775cd91e93e0d63d201df}
+Returns all the data this input source contains. \hypertarget{class_q_xml_input_source_a3ecfd199af8d72d33a9ef7b919794923}{}\index{Q\+Xml\+Input\+Source@{Q\+Xml\+Input\+Source}!set\+Data@{set\+Data}}
+\index{set\+Data@{set\+Data}!Q\+Xml\+Input\+Source@{Q\+Xml\+Input\+Source}}
+\subsubsection[{set\+Data(const Q\+String \&d)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Xml\+Input\+Source\+::set\+Data (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{dat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_xml_input_source_a3ecfd199af8d72d33a9ef7b919794923}
+Sets the data of the input source to {\itshape dat}. 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qxml_8h}{qxml.\+h}\item 
+qtools/\hyperlink{qxml_8cpp}{qxml.\+cpp}\end{DoxyCompactItemize}

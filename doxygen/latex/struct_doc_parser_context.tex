@@ -1,0 +1,131 @@
+\hypertarget{struct_doc_parser_context}{}\section{Référence de la structure Doc\+Parser\+Context}
+\label{struct_doc_parser_context}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_definition}{Definition} $\ast$ \hyperlink{struct_doc_parser_context_add383acd336f2e26ecf24c000f31a4e3}{scope}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{struct_doc_parser_context_a440e2d11196fe51c4b5bc991345d866d}{context}
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{struct_doc_parser_context_a9e9561c7ec0edba0d50cdcb482942bea}{in\+See\+Block}
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{struct_doc_parser_context_a5b98ca02af34e324862e5b5b8bbfb207}{xml\+Comment}
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{struct_doc_parser_context_a88cb2bde6d7f9ded45c9d33f33b65bb3}{inside\+Html\+Link}
+\item 
+\hyperlink{class_q_stack}{Q\+Stack}$<$ \hyperlink{class_doc_node}{Doc\+Node} $>$ \hyperlink{struct_doc_parser_context_a813c4ba2030c8b34b2c9d8f1ff6020eb}{node\+Stack}
+\item 
+\hyperlink{class_q_stack}{Q\+Stack}$<$ \hyperlink{class_doc_style_change}{Doc\+Style\+Change} $>$ \hyperlink{struct_doc_parser_context_af6fc30c2dd0edcf5fede2f271316546c}{style\+Stack}
+\item 
+\hyperlink{class_q_stack}{Q\+Stack}$<$ \hyperlink{class_doc_style_change}{Doc\+Style\+Change} $>$ \hyperlink{struct_doc_parser_context_a27b9c48cc75461a3fcf436c60d6af39a}{initial\+Style\+Stack}
+\item 
+\hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{class_definition}{Definition} $>$ \hyperlink{struct_doc_parser_context_a1fc927af6a2675bc3d2f480efbed7533}{copy\+Stack}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{struct_doc_parser_context_a2b4c522f7f52850b1956b1b1504c4f1b}{file\+Name}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{struct_doc_parser_context_a603ea82abcc694bf2aeb91d85378aa0d}{rel\+Path}
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{struct_doc_parser_context_adfc69df470290ef49cf32d0e6cd83556}{has\+Param\+Command}
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{struct_doc_parser_context_ae20ce1c3e50ef1b4399b50f29f61607f}{has\+Return\+Command}
+\item 
+\hyperlink{class_member_def}{Member\+Def} $\ast$ \hyperlink{struct_doc_parser_context_ae598a4b4f7337ef13ffaff9df878a8df}{member\+Def}
+\item 
+Q\+Dict$<$ void $>$ \hyperlink{struct_doc_parser_context_a304223304af1183a5afa3b9a36a921af}{params\+Found}
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{struct_doc_parser_context_aa499773e2ac0458b4f616b07386e5685}{is\+Example}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{struct_doc_parser_context_a688f0551d40b6f51fb0daaa76631502b}{example\+Name}
+\item 
+\hyperlink{class_section_dict}{Section\+Dict} $\ast$ \hyperlink{struct_doc_parser_context_a0e457c01f7cfa2b60d7af671cbf6fc9c}{section\+Dict}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{struct_doc_parser_context_aa2bfd37ddbdec7e8751e6585cc53beb8}{search\+Url}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{struct_doc_parser_context_a741637628985f24ccf69b051638804ca}{include\+File\+Text}
+\item 
+\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{struct_doc_parser_context_a8dca590b7e1548f62368aca98a1f8e5f}{include\+File\+Offset}
+\item 
+\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{struct_doc_parser_context_ada8cb01b66567027d0799c5ce1e5dc2f}{include\+File\+Length}
+\item 
+\hyperlink{struct_token_info}{Token\+Info} $\ast$ \hyperlink{struct_doc_parser_context_a8da54182d40bdc81e85cd29db88230b6}{token}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Parser\textquotesingle{}s context to store all global variables. 
+
+\subsection{Documentation des données membres}
+\hypertarget{struct_doc_parser_context_a440e2d11196fe51c4b5bc991345d866d}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!context@{context}}
+\index{context@{context}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{context}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Parser\+Context\+::context}\label{struct_doc_parser_context_a440e2d11196fe51c4b5bc991345d866d}
+\hypertarget{struct_doc_parser_context_a1fc927af6a2675bc3d2f480efbed7533}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!copy\+Stack@{copy\+Stack}}
+\index{copy\+Stack@{copy\+Stack}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{copy\+Stack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+List}$<${\bf Definition}$>$ Doc\+Parser\+Context\+::copy\+Stack}\label{struct_doc_parser_context_a1fc927af6a2675bc3d2f480efbed7533}
+\hypertarget{struct_doc_parser_context_a688f0551d40b6f51fb0daaa76631502b}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!example\+Name@{example\+Name}}
+\index{example\+Name@{example\+Name}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{example\+Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Parser\+Context\+::example\+Name}\label{struct_doc_parser_context_a688f0551d40b6f51fb0daaa76631502b}
+\hypertarget{struct_doc_parser_context_a2b4c522f7f52850b1956b1b1504c4f1b}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!file\+Name@{file\+Name}}
+\index{file\+Name@{file\+Name}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{file\+Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Parser\+Context\+::file\+Name}\label{struct_doc_parser_context_a2b4c522f7f52850b1956b1b1504c4f1b}
+\hypertarget{struct_doc_parser_context_adfc69df470290ef49cf32d0e6cd83556}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!has\+Param\+Command@{has\+Param\+Command}}
+\index{has\+Param\+Command@{has\+Param\+Command}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{has\+Param\+Command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Doc\+Parser\+Context\+::has\+Param\+Command}\label{struct_doc_parser_context_adfc69df470290ef49cf32d0e6cd83556}
+\hypertarget{struct_doc_parser_context_ae20ce1c3e50ef1b4399b50f29f61607f}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!has\+Return\+Command@{has\+Return\+Command}}
+\index{has\+Return\+Command@{has\+Return\+Command}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{has\+Return\+Command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Doc\+Parser\+Context\+::has\+Return\+Command}\label{struct_doc_parser_context_ae20ce1c3e50ef1b4399b50f29f61607f}
+\hypertarget{struct_doc_parser_context_ada8cb01b66567027d0799c5ce1e5dc2f}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!include\+File\+Length@{include\+File\+Length}}
+\index{include\+File\+Length@{include\+File\+Length}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{include\+File\+Length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint} Doc\+Parser\+Context\+::include\+File\+Length}\label{struct_doc_parser_context_ada8cb01b66567027d0799c5ce1e5dc2f}
+\hypertarget{struct_doc_parser_context_a8dca590b7e1548f62368aca98a1f8e5f}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!include\+File\+Offset@{include\+File\+Offset}}
+\index{include\+File\+Offset@{include\+File\+Offset}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{include\+File\+Offset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint} Doc\+Parser\+Context\+::include\+File\+Offset}\label{struct_doc_parser_context_a8dca590b7e1548f62368aca98a1f8e5f}
+\hypertarget{struct_doc_parser_context_a741637628985f24ccf69b051638804ca}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!include\+File\+Text@{include\+File\+Text}}
+\index{include\+File\+Text@{include\+File\+Text}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{include\+File\+Text}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Parser\+Context\+::include\+File\+Text}\label{struct_doc_parser_context_a741637628985f24ccf69b051638804ca}
+\hypertarget{struct_doc_parser_context_a27b9c48cc75461a3fcf436c60d6af39a}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!initial\+Style\+Stack@{initial\+Style\+Stack}}
+\index{initial\+Style\+Stack@{initial\+Style\+Stack}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{initial\+Style\+Stack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Stack}$<${\bf Doc\+Style\+Change}$>$ Doc\+Parser\+Context\+::initial\+Style\+Stack}\label{struct_doc_parser_context_a27b9c48cc75461a3fcf436c60d6af39a}
+\hypertarget{struct_doc_parser_context_a9e9561c7ec0edba0d50cdcb482942bea}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!in\+See\+Block@{in\+See\+Block}}
+\index{in\+See\+Block@{in\+See\+Block}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{in\+See\+Block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Doc\+Parser\+Context\+::in\+See\+Block}\label{struct_doc_parser_context_a9e9561c7ec0edba0d50cdcb482942bea}
+\hypertarget{struct_doc_parser_context_a88cb2bde6d7f9ded45c9d33f33b65bb3}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!inside\+Html\+Link@{inside\+Html\+Link}}
+\index{inside\+Html\+Link@{inside\+Html\+Link}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{inside\+Html\+Link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Doc\+Parser\+Context\+::inside\+Html\+Link}\label{struct_doc_parser_context_a88cb2bde6d7f9ded45c9d33f33b65bb3}
+\hypertarget{struct_doc_parser_context_aa499773e2ac0458b4f616b07386e5685}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!is\+Example@{is\+Example}}
+\index{is\+Example@{is\+Example}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{is\+Example}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Doc\+Parser\+Context\+::is\+Example}\label{struct_doc_parser_context_aa499773e2ac0458b4f616b07386e5685}
+\hypertarget{struct_doc_parser_context_ae598a4b4f7337ef13ffaff9df878a8df}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!member\+Def@{member\+Def}}
+\index{member\+Def@{member\+Def}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{member\+Def}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Member\+Def}$\ast$ Doc\+Parser\+Context\+::member\+Def}\label{struct_doc_parser_context_ae598a4b4f7337ef13ffaff9df878a8df}
+\hypertarget{struct_doc_parser_context_a813c4ba2030c8b34b2c9d8f1ff6020eb}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!node\+Stack@{node\+Stack}}
+\index{node\+Stack@{node\+Stack}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{node\+Stack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Stack}$<${\bf Doc\+Node}$>$ Doc\+Parser\+Context\+::node\+Stack}\label{struct_doc_parser_context_a813c4ba2030c8b34b2c9d8f1ff6020eb}
+\hypertarget{struct_doc_parser_context_a304223304af1183a5afa3b9a36a921af}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!params\+Found@{params\+Found}}
+\index{params\+Found@{params\+Found}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{params\+Found}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Dict$<$void$>$ Doc\+Parser\+Context\+::params\+Found}\label{struct_doc_parser_context_a304223304af1183a5afa3b9a36a921af}
+\hypertarget{struct_doc_parser_context_a603ea82abcc694bf2aeb91d85378aa0d}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!rel\+Path@{rel\+Path}}
+\index{rel\+Path@{rel\+Path}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{rel\+Path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Parser\+Context\+::rel\+Path}\label{struct_doc_parser_context_a603ea82abcc694bf2aeb91d85378aa0d}
+\hypertarget{struct_doc_parser_context_add383acd336f2e26ecf24c000f31a4e3}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!scope@{scope}}
+\index{scope@{scope}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{scope}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Definition}$\ast$ Doc\+Parser\+Context\+::scope}\label{struct_doc_parser_context_add383acd336f2e26ecf24c000f31a4e3}
+\hypertarget{struct_doc_parser_context_aa2bfd37ddbdec7e8751e6585cc53beb8}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!search\+Url@{search\+Url}}
+\index{search\+Url@{search\+Url}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{search\+Url}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Parser\+Context\+::search\+Url}\label{struct_doc_parser_context_aa2bfd37ddbdec7e8751e6585cc53beb8}
+\hypertarget{struct_doc_parser_context_a0e457c01f7cfa2b60d7af671cbf6fc9c}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!section\+Dict@{section\+Dict}}
+\index{section\+Dict@{section\+Dict}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{section\+Dict}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Section\+Dict}$\ast$ Doc\+Parser\+Context\+::section\+Dict}\label{struct_doc_parser_context_a0e457c01f7cfa2b60d7af671cbf6fc9c}
+\hypertarget{struct_doc_parser_context_af6fc30c2dd0edcf5fede2f271316546c}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!style\+Stack@{style\+Stack}}
+\index{style\+Stack@{style\+Stack}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{style\+Stack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Stack}$<${\bf Doc\+Style\+Change}$>$ Doc\+Parser\+Context\+::style\+Stack}\label{struct_doc_parser_context_af6fc30c2dd0edcf5fede2f271316546c}
+\hypertarget{struct_doc_parser_context_a8da54182d40bdc81e85cd29db88230b6}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!token@{token}}
+\index{token@{token}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{token}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Token\+Info}$\ast$ Doc\+Parser\+Context\+::token}\label{struct_doc_parser_context_a8da54182d40bdc81e85cd29db88230b6}
+\hypertarget{struct_doc_parser_context_a5b98ca02af34e324862e5b5b8bbfb207}{}\index{Doc\+Parser\+Context@{Doc\+Parser\+Context}!xml\+Comment@{xml\+Comment}}
+\index{xml\+Comment@{xml\+Comment}!Doc\+Parser\+Context@{Doc\+Parser\+Context}}
+\subsubsection[{xml\+Comment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Doc\+Parser\+Context\+::xml\+Comment}\label{struct_doc_parser_context_a5b98ca02af34e324862e5b5b8bbfb207}
+
+
+La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{docparser_8cpp}{docparser.\+cpp}\end{DoxyCompactItemize}

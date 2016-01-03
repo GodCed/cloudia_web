@@ -1,0 +1,108 @@
+\hypertarget{class_doc_sec_ref_item}{}\section{Référence de la classe Doc\+Sec\+Ref\+Item}
+\label{class_doc_sec_ref_item}\index{Doc\+Sec\+Ref\+Item@{Doc\+Sec\+Ref\+Item}}
+
+
+{\ttfamily \#include $<$docparser.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Doc\+Sec\+Ref\+Item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doc_sec_ref_item}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_sec_ref_item_a7c6861a721b3168cebab8059e571c475}{Doc\+Sec\+Ref\+Item} (\hyperlink{class_doc_node}{Doc\+Node} $\ast$\hyperlink{class_doc_node_a990d8b983962776a647e6231d38bd329}{parent}, const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{class_doc_sec_ref_item_a7d494ce80677432b2b49ef4d21baa266}{target})
+\item 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadb}{Kind} \hyperlink{class_doc_sec_ref_item_a7461641d829cd19f9a9d73c1cbd4faaa}{kind} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_sec_ref_item_a7d494ce80677432b2b49ef4d21baa266}{target} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_sec_ref_item_aed2cf8a5533caf958c31fc63b2ec5b6c}{file} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_sec_ref_item_a5ef5cce2b6f8def35e1f3694cd84c5c4}{anchor} () const 
+\item 
+void \hyperlink{class_doc_sec_ref_item_a3dda5f27166b11c6a054e6f95d11d9a7}{accept} (\hyperlink{class_doc_visitor}{Doc\+Visitor} $\ast$v)
+\item 
+void \hyperlink{class_doc_sec_ref_item_a35c9d6d150e7faaa88ea9ddfbeadb777}{parse} ()
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Node representing a reference to a section 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_doc_sec_ref_item_a7c6861a721b3168cebab8059e571c475}{}\index{Doc\+Sec\+Ref\+Item@{Doc\+Sec\+Ref\+Item}!Doc\+Sec\+Ref\+Item@{Doc\+Sec\+Ref\+Item}}
+\index{Doc\+Sec\+Ref\+Item@{Doc\+Sec\+Ref\+Item}!Doc\+Sec\+Ref\+Item@{Doc\+Sec\+Ref\+Item}}
+\subsubsection[{Doc\+Sec\+Ref\+Item(\+Doc\+Node $\ast$parent, const Q\+C\+String \&target)}]{\setlength{\rightskip}{0pt plus 5cm}Doc\+Sec\+Ref\+Item\+::\+Doc\+Sec\+Ref\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Node} $\ast$}]{parent, }
+\item[{const {\bf Q\+C\+String} \&}]{target}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_sec_ref_item_a7c6861a721b3168cebab8059e571c475}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_doc_sec_ref_item_a3dda5f27166b11c6a054e6f95d11d9a7}{}\index{Doc\+Sec\+Ref\+Item@{Doc\+Sec\+Ref\+Item}!accept@{accept}}
+\index{accept@{accept}!Doc\+Sec\+Ref\+Item@{Doc\+Sec\+Ref\+Item}}
+\subsubsection[{accept(\+Doc\+Visitor $\ast$v)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Sec\+Ref\+Item\+::accept (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Visitor} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_sec_ref_item_a3dda5f27166b11c6a054e6f95d11d9a7}
+Acceptor function for node visitors. Part of the visitor pattern. 
+\begin{DoxyParams}{Paramètres}
+{\em v} & Abstract visitor. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_doc_node_a5303a550cbe6395663bf9b9dad28cbf1}{Doc\+Node}.
+
+\hypertarget{class_doc_sec_ref_item_a5ef5cce2b6f8def35e1f3694cd84c5c4}{}\index{Doc\+Sec\+Ref\+Item@{Doc\+Sec\+Ref\+Item}!anchor@{anchor}}
+\index{anchor@{anchor}!Doc\+Sec\+Ref\+Item@{Doc\+Sec\+Ref\+Item}}
+\subsubsection[{anchor() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Sec\+Ref\+Item\+::anchor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_sec_ref_item_a5ef5cce2b6f8def35e1f3694cd84c5c4}
+\hypertarget{class_doc_sec_ref_item_aed2cf8a5533caf958c31fc63b2ec5b6c}{}\index{Doc\+Sec\+Ref\+Item@{Doc\+Sec\+Ref\+Item}!file@{file}}
+\index{file@{file}!Doc\+Sec\+Ref\+Item@{Doc\+Sec\+Ref\+Item}}
+\subsubsection[{file() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Sec\+Ref\+Item\+::file (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_sec_ref_item_aed2cf8a5533caf958c31fc63b2ec5b6c}
+\hypertarget{class_doc_sec_ref_item_a7461641d829cd19f9a9d73c1cbd4faaa}{}\index{Doc\+Sec\+Ref\+Item@{Doc\+Sec\+Ref\+Item}!kind@{kind}}
+\index{kind@{kind}!Doc\+Sec\+Ref\+Item@{Doc\+Sec\+Ref\+Item}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kind} Doc\+Sec\+Ref\+Item\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_sec_ref_item_a7461641d829cd19f9a9d73c1cbd4faaa}
+Returns the kind of node. Provides runtime type information 
+
+Implémente \hyperlink{class_doc_node_a92d4aaa169a813ded919aa858024c809}{Doc\+Node}.
+
+\hypertarget{class_doc_sec_ref_item_a35c9d6d150e7faaa88ea9ddfbeadb777}{}\index{Doc\+Sec\+Ref\+Item@{Doc\+Sec\+Ref\+Item}!parse@{parse}}
+\index{parse@{parse}!Doc\+Sec\+Ref\+Item@{Doc\+Sec\+Ref\+Item}}
+\subsubsection[{parse()}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Sec\+Ref\+Item\+::parse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_doc_sec_ref_item_a35c9d6d150e7faaa88ea9ddfbeadb777}
+\hypertarget{class_doc_sec_ref_item_a7d494ce80677432b2b49ef4d21baa266}{}\index{Doc\+Sec\+Ref\+Item@{Doc\+Sec\+Ref\+Item}!target@{target}}
+\index{target@{target}!Doc\+Sec\+Ref\+Item@{Doc\+Sec\+Ref\+Item}}
+\subsubsection[{target() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Sec\+Ref\+Item\+::target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_sec_ref_item_a7d494ce80677432b2b49ef4d21baa266}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{docparser_8h}{docparser.\+h}\item 
+src/\hyperlink{docparser_8cpp}{docparser.\+cpp}\end{DoxyCompactItemize}

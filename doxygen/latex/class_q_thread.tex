@@ -1,0 +1,176 @@
+\hypertarget{class_q_thread}{}\section{Référence de la classe Q\+Thread}
+\label{class_q_thread}\index{Q\+Thread@{Q\+Thread}}
+
+
+{\ttfamily \#include $<$qthread.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Q\+Thread\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_thread}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_thread_a4c49a3f147e0b99829ab49212ba2fb65}{Q\+Thread} ()
+\item 
+virtual \hyperlink{class_q_thread_a489c8d8398e2122aac635869c77005b3}{$\sim$\+Q\+Thread} ()
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_thread_a11f25f6dde018aab910d7587069e1c27}{is\+Finished} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_thread_a5eb889f893cae68f194646d373a1bec7}{is\+Running} () const 
+\item 
+void \hyperlink{class_q_thread_a46863abb95653dd33acee1aaa77c35ed}{start} ()
+\item 
+void \hyperlink{class_q_thread_a0a1310a5a228d6a4fa37484eef5769a5}{terminate} ()
+\item 
+void \hyperlink{class_q_thread_a113d1bab9ba1efba261153a9d71ca72c}{wait} ()
+\item 
+void \hyperlink{class_q_thread_ad715dad9f5dd026de4a518affada1aea}{set\+Stack\+Size} (unsigned int \hyperlink{class_q_thread_ab84f5785f80b5099f7ae198b533e459e}{stack\+Size})
+\item 
+unsigned int \hyperlink{class_q_thread_ab84f5785f80b5099f7ae198b533e459e}{stack\+Size} () const 
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{class_q_thread_aaf77d52b4551aed2847b1c8628ee8143}{ideal\+Thread\+Count} ()
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_q_thread_a4340e01c4d6c199992b9673f1ceaf32d}{started} ()
+\item 
+virtual void \hyperlink{class_q_thread_a931f07f4481c6afa801c59a60342cf4b}{finished} ()
+\item 
+virtual void \hyperlink{class_q_thread_acd3daf2d2a2cd5370e77358eda5fa63d}{terminated} ()
+\item 
+virtual void \hyperlink{class_q_thread_ad0134105f952c8d1d1d758f631a5852c}{run} ()
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_q_thread_a2e612ca58844e5eaa40195970aa02cf5}{Q\+Thread\+Private}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_thread_a4c49a3f147e0b99829ab49212ba2fb65}{}\index{Q\+Thread@{Q\+Thread}!Q\+Thread@{Q\+Thread}}
+\index{Q\+Thread@{Q\+Thread}!Q\+Thread@{Q\+Thread}}
+\subsubsection[{Q\+Thread()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Thread\+::\+Q\+Thread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\label{class_q_thread_a4c49a3f147e0b99829ab49212ba2fb65}
+\hypertarget{class_q_thread_a489c8d8398e2122aac635869c77005b3}{}\index{Q\+Thread@{Q\+Thread}!````~Q\+Thread@{$\sim$\+Q\+Thread}}
+\index{````~Q\+Thread@{$\sim$\+Q\+Thread}!Q\+Thread@{Q\+Thread}}
+\subsubsection[{$\sim$\+Q\+Thread()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Thread\+::$\sim$\+Q\+Thread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_thread_a489c8d8398e2122aac635869c77005b3}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_thread_a931f07f4481c6afa801c59a60342cf4b}{}\index{Q\+Thread@{Q\+Thread}!finished@{finished}}
+\index{finished@{finished}!Q\+Thread@{Q\+Thread}}
+\subsubsection[{finished()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Q\+Thread\+::finished (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_q_thread_a931f07f4481c6afa801c59a60342cf4b}
+\hypertarget{class_q_thread_aaf77d52b4551aed2847b1c8628ee8143}{}\index{Q\+Thread@{Q\+Thread}!ideal\+Thread\+Count@{ideal\+Thread\+Count}}
+\index{ideal\+Thread\+Count@{ideal\+Thread\+Count}!Q\+Thread@{Q\+Thread}}
+\subsubsection[{ideal\+Thread\+Count()}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Thread\+::ideal\+Thread\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_thread_aaf77d52b4551aed2847b1c8628ee8143}
+\hypertarget{class_q_thread_a11f25f6dde018aab910d7587069e1c27}{}\index{Q\+Thread@{Q\+Thread}!is\+Finished@{is\+Finished}}
+\index{is\+Finished@{is\+Finished}!Q\+Thread@{Q\+Thread}}
+\subsubsection[{is\+Finished() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Thread\+::is\+Finished (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_thread_a11f25f6dde018aab910d7587069e1c27}
+\hypertarget{class_q_thread_a5eb889f893cae68f194646d373a1bec7}{}\index{Q\+Thread@{Q\+Thread}!is\+Running@{is\+Running}}
+\index{is\+Running@{is\+Running}!Q\+Thread@{Q\+Thread}}
+\subsubsection[{is\+Running() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Thread\+::is\+Running (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_thread_a5eb889f893cae68f194646d373a1bec7}
+\hypertarget{class_q_thread_ad0134105f952c8d1d1d758f631a5852c}{}\index{Q\+Thread@{Q\+Thread}!run@{run}}
+\index{run@{run}!Q\+Thread@{Q\+Thread}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Q\+Thread\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_q_thread_ad0134105f952c8d1d1d758f631a5852c}
+
+
+Réimplémentée dans \hyperlink{class_dot_worker_thread_a573402f10e5d1b1fba1954a105a1c227}{Dot\+Worker\+Thread}.
+
+\hypertarget{class_q_thread_ad715dad9f5dd026de4a518affada1aea}{}\index{Q\+Thread@{Q\+Thread}!set\+Stack\+Size@{set\+Stack\+Size}}
+\index{set\+Stack\+Size@{set\+Stack\+Size}!Q\+Thread@{Q\+Thread}}
+\subsubsection[{set\+Stack\+Size(unsigned int stack\+Size)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Thread\+::set\+Stack\+Size (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{stack\+Size}
+\end{DoxyParamCaption}
+)}\label{class_q_thread_ad715dad9f5dd026de4a518affada1aea}
+\hypertarget{class_q_thread_ab84f5785f80b5099f7ae198b533e459e}{}\index{Q\+Thread@{Q\+Thread}!stack\+Size@{stack\+Size}}
+\index{stack\+Size@{stack\+Size}!Q\+Thread@{Q\+Thread}}
+\subsubsection[{stack\+Size() const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Q\+Thread\+::stack\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_thread_ab84f5785f80b5099f7ae198b533e459e}
+\hypertarget{class_q_thread_a46863abb95653dd33acee1aaa77c35ed}{}\index{Q\+Thread@{Q\+Thread}!start@{start}}
+\index{start@{start}!Q\+Thread@{Q\+Thread}}
+\subsubsection[{start()}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Thread\+::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_thread_a46863abb95653dd33acee1aaa77c35ed}
+\hypertarget{class_q_thread_a4340e01c4d6c199992b9673f1ceaf32d}{}\index{Q\+Thread@{Q\+Thread}!started@{started}}
+\index{started@{started}!Q\+Thread@{Q\+Thread}}
+\subsubsection[{started()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Q\+Thread\+::started (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_q_thread_a4340e01c4d6c199992b9673f1ceaf32d}
+\hypertarget{class_q_thread_a0a1310a5a228d6a4fa37484eef5769a5}{}\index{Q\+Thread@{Q\+Thread}!terminate@{terminate}}
+\index{terminate@{terminate}!Q\+Thread@{Q\+Thread}}
+\subsubsection[{terminate()}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Thread\+::terminate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_thread_a0a1310a5a228d6a4fa37484eef5769a5}
+\hypertarget{class_q_thread_acd3daf2d2a2cd5370e77358eda5fa63d}{}\index{Q\+Thread@{Q\+Thread}!terminated@{terminated}}
+\index{terminated@{terminated}!Q\+Thread@{Q\+Thread}}
+\subsubsection[{terminated()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Q\+Thread\+::terminated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_q_thread_acd3daf2d2a2cd5370e77358eda5fa63d}
+\hypertarget{class_q_thread_a113d1bab9ba1efba261153a9d71ca72c}{}\index{Q\+Thread@{Q\+Thread}!wait@{wait}}
+\index{wait@{wait}!Q\+Thread@{Q\+Thread}}
+\subsubsection[{wait()}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Thread\+::wait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_thread_a113d1bab9ba1efba261153a9d71ca72c}
+
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_q_thread_a2e612ca58844e5eaa40195970aa02cf5}{}\index{Q\+Thread@{Q\+Thread}!Q\+Thread\+Private@{Q\+Thread\+Private}}
+\index{Q\+Thread\+Private@{Q\+Thread\+Private}!Q\+Thread@{Q\+Thread}}
+\subsubsection[{Q\+Thread\+Private}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Q\+Thread\+Private}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_q_thread_a2e612ca58844e5eaa40195970aa02cf5}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qthread_8h}{qthread.\+h}\item 
+qtools/\hyperlink{qthread_8cpp}{qthread.\+cpp}\item 
+qtools/\hyperlink{qthread__unix_8cpp}{qthread\+\_\+unix.\+cpp}\item 
+qtools/\hyperlink{qthread__win32_8cpp}{qthread\+\_\+win32.\+cpp}\end{DoxyCompactItemize}

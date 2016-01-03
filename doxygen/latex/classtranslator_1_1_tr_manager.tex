@@ -1,0 +1,180 @@
+\hypertarget{classtranslator_1_1_tr_manager}{}\section{Référence de la classe translator.\+Tr\+Manager}
+\label{classtranslator_1_1_tr_manager}\index{translator.\+Tr\+Manager@{translator.\+Tr\+Manager}}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classtranslator_1_1_tr_manager_af2b5c2c3fa0db925e084b057baf62041}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \hyperlink{classtranslator_1_1_tr_manager_a78ac044c68bc34dae3eb194b8a53aa3b}{get\+Bgcolor\+By\+Readable\+Status} (self, readable\+Status)
+\item 
+def \hyperlink{classtranslator_1_1_tr_manager_a84aba0e70020862ec40a29909de43687}{generate\+Translator\+Report} (self)
+\item 
+def \hyperlink{classtranslator_1_1_tr_manager_a61f10f267ebea913b1533ad9ad786753}{generate\+Language\+Doc} (self)
+\end{DoxyCompactItemize}
+\subsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_a9ac11e75a15dd955279279634ce3888c}{script}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_a39bea046d85a50cd1bcff1e6b57afd38}{script\+\_\+name}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_a380ca7992ccadc2a929ad7a44950b7f7}{script\+\_\+path}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_a56491de57ce612c7917a91cbecb7af86}{doxy\+\_\+path}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_a9350d3ae44a846f1d5b70b9ec89024e1}{script\+\_\+arg\+Lst}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_afc5ff8ddd2100ef75060973729f7d401}{doc\+\_\+path}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_aaf0a91a4f90c181466587c9f653cebd4}{src\+\_\+path}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_ab0ec4da4ccb84e1a87c443bddf8ee141}{required\+Methods\+Dic}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_aa219f874035575042c1c03592feeff74}{adapt\+Methods\+Dic}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_aeee786add112effb15f0750ed4733daf}{last\+Modification\+Time}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_a3934327a6aca42c4bc9f696c3a3a964d}{translator\+Report\+File\+Name}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_a2b243212946171f3d0466f03d09c81a6}{maintainers\+File\+Name}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_a219a9629075a57aaecc89eb5ffb8ead1}{language\+Tpl\+File\+Name}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_af157b547e019a15973bbf1bca3a32f26}{language\+Doc\+File\+Name}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_aee60909e77ca9102b085c5aae7399ea1}{lang\+Lst}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_a16dd53bb133743217220931c6b8b56c0}{supported\+Lang\+Readable\+Str}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_af4911a81ff091f9886ea7641109b5a54}{num\+Lang}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_aaf4515efd8f363a794823f9e9b173555}{dox\+Version}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_ab2ee080b368e837b1ccd27b606d2874e}{up\+To\+Date\+Id\+Lst}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_ab0ab22f314fc668c1476c7f20bbce810}{En\+Based\+Id\+Lst}
+\item 
+\hyperlink{classtranslator_1_1_tr_manager_afabfcca1fdc669722755240c6e8b7118}{adapt\+Id\+Lst}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\begin{DoxyVerb}Collects basic info and builds subordinate Transl objects.\end{DoxyVerb}
+ 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classtranslator_1_1_tr_manager_af2b5c2c3fa0db925e084b057baf62041}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{\+\_\+\+\_\+init\+\_\+\+\_\+(self)}]{\setlength{\rightskip}{0pt plus 5cm}def translator.\+Tr\+Manager.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classtranslator_1_1_tr_manager_af2b5c2c3fa0db925e084b057baf62041}
+\begin{DoxyVerb}Determines paths, creates and initializes structures.
+
+The arguments of the script may explicitly say what languages should
+be processed. Write the two letter identifications that are used
+for composing the source filenames, so...
+
+    python translator.py cz
+
+this will process only translator_cz.h source.
+\end{DoxyVerb}
+ 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classtranslator_1_1_tr_manager_a61f10f267ebea913b1533ad9ad786753}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!generate\+Language\+Doc@{generate\+Language\+Doc}}
+\index{generate\+Language\+Doc@{generate\+Language\+Doc}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{generate\+Language\+Doc(self)}]{\setlength{\rightskip}{0pt plus 5cm}def translator.\+Tr\+Manager.\+generate\+Language\+Doc (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classtranslator_1_1_tr_manager_a61f10f267ebea913b1533ad9ad786753}
+\begin{DoxyVerb}Checks the modtime of files and generates language.doc.\end{DoxyVerb}
+ \hypertarget{classtranslator_1_1_tr_manager_a84aba0e70020862ec40a29909de43687}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!generate\+Translator\+Report@{generate\+Translator\+Report}}
+\index{generate\+Translator\+Report@{generate\+Translator\+Report}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{generate\+Translator\+Report(self)}]{\setlength{\rightskip}{0pt plus 5cm}def translator.\+Tr\+Manager.\+generate\+Translator\+Report (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classtranslator_1_1_tr_manager_a84aba0e70020862ec40a29909de43687}
+\begin{DoxyVerb}Generates the translator report.\end{DoxyVerb}
+ \hypertarget{classtranslator_1_1_tr_manager_a78ac044c68bc34dae3eb194b8a53aa3b}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!get\+Bgcolor\+By\+Readable\+Status@{get\+Bgcolor\+By\+Readable\+Status}}
+\index{get\+Bgcolor\+By\+Readable\+Status@{get\+Bgcolor\+By\+Readable\+Status}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{get\+Bgcolor\+By\+Readable\+Status(self, readable\+Status)}]{\setlength{\rightskip}{0pt plus 5cm}def translator.\+Tr\+Manager.\+get\+Bgcolor\+By\+Readable\+Status (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{readable\+Status}
+\end{DoxyParamCaption}
+)}\label{classtranslator_1_1_tr_manager_a78ac044c68bc34dae3eb194b8a53aa3b}
+
+
+\subsection{Documentation des données membres}
+\hypertarget{classtranslator_1_1_tr_manager_afabfcca1fdc669722755240c6e8b7118}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!adapt\+Id\+Lst@{adapt\+Id\+Lst}}
+\index{adapt\+Id\+Lst@{adapt\+Id\+Lst}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{adapt\+Id\+Lst}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+adapt\+Id\+Lst}\label{classtranslator_1_1_tr_manager_afabfcca1fdc669722755240c6e8b7118}
+\hypertarget{classtranslator_1_1_tr_manager_aa219f874035575042c1c03592feeff74}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!adapt\+Methods\+Dic@{adapt\+Methods\+Dic}}
+\index{adapt\+Methods\+Dic@{adapt\+Methods\+Dic}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{adapt\+Methods\+Dic}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+adapt\+Methods\+Dic}\label{classtranslator_1_1_tr_manager_aa219f874035575042c1c03592feeff74}
+\hypertarget{classtranslator_1_1_tr_manager_afc5ff8ddd2100ef75060973729f7d401}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!doc\+\_\+path@{doc\+\_\+path}}
+\index{doc\+\_\+path@{doc\+\_\+path}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{doc\+\_\+path}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+doc\+\_\+path}\label{classtranslator_1_1_tr_manager_afc5ff8ddd2100ef75060973729f7d401}
+\hypertarget{classtranslator_1_1_tr_manager_aaf4515efd8f363a794823f9e9b173555}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!dox\+Version@{dox\+Version}}
+\index{dox\+Version@{dox\+Version}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{dox\+Version}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+dox\+Version}\label{classtranslator_1_1_tr_manager_aaf4515efd8f363a794823f9e9b173555}
+\hypertarget{classtranslator_1_1_tr_manager_a56491de57ce612c7917a91cbecb7af86}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!doxy\+\_\+path@{doxy\+\_\+path}}
+\index{doxy\+\_\+path@{doxy\+\_\+path}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{doxy\+\_\+path}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+doxy\+\_\+path}\label{classtranslator_1_1_tr_manager_a56491de57ce612c7917a91cbecb7af86}
+\hypertarget{classtranslator_1_1_tr_manager_ab0ab22f314fc668c1476c7f20bbce810}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!En\+Based\+Id\+Lst@{En\+Based\+Id\+Lst}}
+\index{En\+Based\+Id\+Lst@{En\+Based\+Id\+Lst}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{En\+Based\+Id\+Lst}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+En\+Based\+Id\+Lst}\label{classtranslator_1_1_tr_manager_ab0ab22f314fc668c1476c7f20bbce810}
+\hypertarget{classtranslator_1_1_tr_manager_aee60909e77ca9102b085c5aae7399ea1}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!lang\+Lst@{lang\+Lst}}
+\index{lang\+Lst@{lang\+Lst}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{lang\+Lst}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+lang\+Lst}\label{classtranslator_1_1_tr_manager_aee60909e77ca9102b085c5aae7399ea1}
+\hypertarget{classtranslator_1_1_tr_manager_af157b547e019a15973bbf1bca3a32f26}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!language\+Doc\+File\+Name@{language\+Doc\+File\+Name}}
+\index{language\+Doc\+File\+Name@{language\+Doc\+File\+Name}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{language\+Doc\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+language\+Doc\+File\+Name}\label{classtranslator_1_1_tr_manager_af157b547e019a15973bbf1bca3a32f26}
+\hypertarget{classtranslator_1_1_tr_manager_a219a9629075a57aaecc89eb5ffb8ead1}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!language\+Tpl\+File\+Name@{language\+Tpl\+File\+Name}}
+\index{language\+Tpl\+File\+Name@{language\+Tpl\+File\+Name}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{language\+Tpl\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+language\+Tpl\+File\+Name}\label{classtranslator_1_1_tr_manager_a219a9629075a57aaecc89eb5ffb8ead1}
+\hypertarget{classtranslator_1_1_tr_manager_aeee786add112effb15f0750ed4733daf}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!last\+Modification\+Time@{last\+Modification\+Time}}
+\index{last\+Modification\+Time@{last\+Modification\+Time}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{last\+Modification\+Time}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+last\+Modification\+Time}\label{classtranslator_1_1_tr_manager_aeee786add112effb15f0750ed4733daf}
+\hypertarget{classtranslator_1_1_tr_manager_a2b243212946171f3d0466f03d09c81a6}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!maintainers\+File\+Name@{maintainers\+File\+Name}}
+\index{maintainers\+File\+Name@{maintainers\+File\+Name}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{maintainers\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+maintainers\+File\+Name}\label{classtranslator_1_1_tr_manager_a2b243212946171f3d0466f03d09c81a6}
+\hypertarget{classtranslator_1_1_tr_manager_af4911a81ff091f9886ea7641109b5a54}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!num\+Lang@{num\+Lang}}
+\index{num\+Lang@{num\+Lang}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{num\+Lang}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+num\+Lang}\label{classtranslator_1_1_tr_manager_af4911a81ff091f9886ea7641109b5a54}
+\hypertarget{classtranslator_1_1_tr_manager_ab0ec4da4ccb84e1a87c443bddf8ee141}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!required\+Methods\+Dic@{required\+Methods\+Dic}}
+\index{required\+Methods\+Dic@{required\+Methods\+Dic}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{required\+Methods\+Dic}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+required\+Methods\+Dic}\label{classtranslator_1_1_tr_manager_ab0ec4da4ccb84e1a87c443bddf8ee141}
+\hypertarget{classtranslator_1_1_tr_manager_a9ac11e75a15dd955279279634ce3888c}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!script@{script}}
+\index{script@{script}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{script}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+script}\label{classtranslator_1_1_tr_manager_a9ac11e75a15dd955279279634ce3888c}
+\hypertarget{classtranslator_1_1_tr_manager_a9350d3ae44a846f1d5b70b9ec89024e1}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!script\+\_\+arg\+Lst@{script\+\_\+arg\+Lst}}
+\index{script\+\_\+arg\+Lst@{script\+\_\+arg\+Lst}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{script\+\_\+arg\+Lst}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+script\+\_\+arg\+Lst}\label{classtranslator_1_1_tr_manager_a9350d3ae44a846f1d5b70b9ec89024e1}
+\hypertarget{classtranslator_1_1_tr_manager_a39bea046d85a50cd1bcff1e6b57afd38}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!script\+\_\+name@{script\+\_\+name}}
+\index{script\+\_\+name@{script\+\_\+name}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{script\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+script\+\_\+name}\label{classtranslator_1_1_tr_manager_a39bea046d85a50cd1bcff1e6b57afd38}
+\hypertarget{classtranslator_1_1_tr_manager_a380ca7992ccadc2a929ad7a44950b7f7}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!script\+\_\+path@{script\+\_\+path}}
+\index{script\+\_\+path@{script\+\_\+path}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{script\+\_\+path}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+script\+\_\+path}\label{classtranslator_1_1_tr_manager_a380ca7992ccadc2a929ad7a44950b7f7}
+\hypertarget{classtranslator_1_1_tr_manager_aaf0a91a4f90c181466587c9f653cebd4}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!src\+\_\+path@{src\+\_\+path}}
+\index{src\+\_\+path@{src\+\_\+path}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{src\+\_\+path}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+src\+\_\+path}\label{classtranslator_1_1_tr_manager_aaf0a91a4f90c181466587c9f653cebd4}
+\hypertarget{classtranslator_1_1_tr_manager_a16dd53bb133743217220931c6b8b56c0}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!supported\+Lang\+Readable\+Str@{supported\+Lang\+Readable\+Str}}
+\index{supported\+Lang\+Readable\+Str@{supported\+Lang\+Readable\+Str}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{supported\+Lang\+Readable\+Str}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+supported\+Lang\+Readable\+Str}\label{classtranslator_1_1_tr_manager_a16dd53bb133743217220931c6b8b56c0}
+\hypertarget{classtranslator_1_1_tr_manager_a3934327a6aca42c4bc9f696c3a3a964d}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!translator\+Report\+File\+Name@{translator\+Report\+File\+Name}}
+\index{translator\+Report\+File\+Name@{translator\+Report\+File\+Name}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{translator\+Report\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+translator\+Report\+File\+Name}\label{classtranslator_1_1_tr_manager_a3934327a6aca42c4bc9f696c3a3a964d}
+\hypertarget{classtranslator_1_1_tr_manager_ab2ee080b368e837b1ccd27b606d2874e}{}\index{translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}!up\+To\+Date\+Id\+Lst@{up\+To\+Date\+Id\+Lst}}
+\index{up\+To\+Date\+Id\+Lst@{up\+To\+Date\+Id\+Lst}!translator\+::\+Tr\+Manager@{translator\+::\+Tr\+Manager}}
+\subsubsection[{up\+To\+Date\+Id\+Lst}]{\setlength{\rightskip}{0pt plus 5cm}translator.\+Tr\+Manager.\+up\+To\+Date\+Id\+Lst}\label{classtranslator_1_1_tr_manager_ab2ee080b368e837b1ccd27b606d2874e}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+doc/\hyperlink{translator_8py}{translator.\+py}\end{DoxyCompactItemize}

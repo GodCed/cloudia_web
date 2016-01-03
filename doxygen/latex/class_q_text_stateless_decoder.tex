@@ -1,0 +1,47 @@
+\hypertarget{class_q_text_stateless_decoder}{}\section{Référence de la classe Q\+Text\+Stateless\+Decoder}
+\label{class_q_text_stateless_decoder}\index{Q\+Text\+Stateless\+Decoder@{Q\+Text\+Stateless\+Decoder}}
+Graphe d\textquotesingle{}héritage de Q\+Text\+Stateless\+Decoder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_text_stateless_decoder}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_text_stateless_decoder_a25882faf6ae2af20a0c8769e65bd88c0}{Q\+Text\+Stateless\+Decoder} (const \hyperlink{class_q_text_codec}{Q\+Text\+Codec} $\ast$)
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_text_stateless_decoder_a4f9dcd7c88b39b8e56b87ce9e6d7fd44}{to\+Unicode} (const char $\ast$chars, int len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_text_stateless_decoder_a25882faf6ae2af20a0c8769e65bd88c0}{}\index{Q\+Text\+Stateless\+Decoder@{Q\+Text\+Stateless\+Decoder}!Q\+Text\+Stateless\+Decoder@{Q\+Text\+Stateless\+Decoder}}
+\index{Q\+Text\+Stateless\+Decoder@{Q\+Text\+Stateless\+Decoder}!Q\+Text\+Stateless\+Decoder@{Q\+Text\+Stateless\+Decoder}}
+\subsubsection[{Q\+Text\+Stateless\+Decoder(const Q\+Text\+Codec $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Text\+Stateless\+Decoder\+::\+Q\+Text\+Stateless\+Decoder (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Text\+Codec} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stateless_decoder_a25882faf6ae2af20a0c8769e65bd88c0}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_text_stateless_decoder_a4f9dcd7c88b39b8e56b87ce9e6d7fd44}{}\index{Q\+Text\+Stateless\+Decoder@{Q\+Text\+Stateless\+Decoder}!to\+Unicode@{to\+Unicode}}
+\index{to\+Unicode@{to\+Unicode}!Q\+Text\+Stateless\+Decoder@{Q\+Text\+Stateless\+Decoder}}
+\subsubsection[{to\+Unicode(const char $\ast$chars, int len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Text\+Stateless\+Decoder\+::to\+Unicode (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{chars, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_text_stateless_decoder_a4f9dcd7c88b39b8e56b87ce9e6d7fd44}
+Converts the first {\itshape len} bytes at {\itshape chars} to Unicode, returning the result.
+
+If not all characters are used (eg. only part of a multi-\/byte encoding is at the end of the characters), the decoder remembers enough state to continue with the next call to this function. 
+
+Implémente \hyperlink{class_q_text_decoder_aec543f7f6670dfda14164268e2da879d}{Q\+Text\+Decoder}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qtextcodec_8cpp}{qtextcodec.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,351 @@
+\hypertarget{doxygen_8cpp}{}\section{Référence du fichier src/doxygen.cpp}
+\label{doxygen_8cpp}\index{src/doxygen.\+cpp@{src/doxygen.\+cpp}}
+{\ttfamily \#include $<$locale.\+h$>$}\\*
+{\ttfamily \#include $<$qfileinfo.\+h$>$}\\*
+{\ttfamily \#include $<$qfile.\+h$>$}\\*
+{\ttfamily \#include $<$qdir.\+h$>$}\\*
+{\ttfamily \#include $<$qdict.\+h$>$}\\*
+{\ttfamily \#include $<$qregexp.\+h$>$}\\*
+{\ttfamily \#include $<$qstrlist.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$sys/stat.\+h$>$}\\*
+{\ttfamily \#include $<$qtextcodec.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$qptrdict.\+h$>$}\\*
+{\ttfamily \#include $<$qtextstream.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}version.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doxygen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scanner.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}entry.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}index.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}logos.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pre.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tagreader.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dot.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}msc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}docparser.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dirdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}outputlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}declinfo.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}htmlgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}latexgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}mangen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}language.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debug.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}htmlhelp.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qhp.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ftvhelp.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}defargs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}rtfgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sqlite3gen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}xmlgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}docbookgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}defgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}perlmodgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}reflist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pagedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bufstr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}commentcnv.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cmdmapper.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}searchindex.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}parserintf.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}htags.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pyscanner.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fortranscanner.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}xmlscanner.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tclscanner.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}code.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}objcache.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}store.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}marshal.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}portable.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}vhdljjparser.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}vhdldocgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}eclipsehelp.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cite.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}filestorage.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}markdown.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}arguments.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}memberlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}layout.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}groupdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}classlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}namespacedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}filename.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}membername.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}membergroup.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}docsets.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}formula.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}settings.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}context.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fileparser.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$signal.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_statistics}{Statistics}
+\item 
+struct \hyperlink{struct_s_t_l_info}{S\+T\+L\+Info}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{doxygen_8cpp_a9c8dfedbf90afbe623df28f60374e704}{R\+E\+C\+U\+R\+S\+E\+\_\+\+E\+N\+T\+R\+Y\+T\+R\+E\+E}(\hyperlink{036__link_8c_affb6da6cff1b57cdf8efc0123dceac9b}{func},  \hyperlink{018__def_8c_a335628f2e9085305224b4f9cc6e95ed5}{var})
+\item 
+\#define \hyperlink{doxygen_8cpp_a00a46160235f50699b76044397fa30b6}{H\+A\+S\+\_\+\+S\+I\+G\+N\+A\+L\+S}
+\end{DoxyCompactItemize}
+\subsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{doxygen_8cpp_a20dd0d19305a4da127968489dc0cc282}{Find\+Base\+Class\+Relation\+\_\+\+Mode} \{ \hyperlink{doxygen_8cpp_a20dd0d19305a4da127968489dc0cc282a6c980be09446a2dd4f17a17e4669385a}{Template\+Instances}, 
+\hyperlink{doxygen_8cpp_a20dd0d19305a4da127968489dc0cc282aa853d9fba4d0c76d851f8b4016375a26}{Documented\+Only}, 
+\hyperlink{doxygen_8cpp_a20dd0d19305a4da127968489dc0cc282a679f8bf08f6fa67f52059bbb4dbc9eed}{Undocumented}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{doxygen_8cpp_ac574253826b0b2a23c4c9bcf2ec89f62}{init\+Resources} ()
+\item 
+void \hyperlink{doxygen_8cpp_a798729dca95209ecdc609807a653a2bf}{clear\+All} ()
+\item 
+void \hyperlink{doxygen_8cpp_a1fc271c95844c5c853386a006d7f89f3}{statistics} ()
+\item 
+\hyperlink{class_argument_list}{Argument\+List} $\ast$ \hyperlink{doxygen_8cpp_a5fd408ae055f67943373c3322079b99d}{get\+Template\+Arguments\+From\+Name} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&name, const \hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{class_argument_list}{Argument\+List} $>$ $\ast$t\+Arg\+Lists)
+\item 
+void \hyperlink{doxygen_8cpp_a21cfa81a6854b108ab53153e9db19d3c}{distribute\+Class\+Group\+Relations} ()
+\item 
+void \hyperlink{doxygen_8cpp_a0b990324e5bf78d6d16824cdf0112aac}{print\+Nav\+Tree} (\hyperlink{class_entry_nav}{Entry\+Nav} $\ast$root\+Nav, int indent)
+\item 
+int \hyperlink{doxygen_8cpp_aeeecc058bceb25924516201e2f349458}{read\+Dir} (\hyperlink{class_q_file_info}{Q\+File\+Info} $\ast$fi, \hyperlink{class_file_name_list}{File\+Name\+List} $\ast$fn\+List, \hyperlink{class_file_name_dict}{File\+Name\+Dict} $\ast$fn\+Dict, \hyperlink{class_string_dict}{String\+Dict} $\ast$excl\+Dict, \hyperlink{class_q_str_list}{Q\+Str\+List} $\ast$pat\+List, \hyperlink{class_q_str_list}{Q\+Str\+List} $\ast$excl\+Pat\+List, \hyperlink{doxygen_8h_a483a8f54773ab93a734f03fa74c60f46}{String\+List} $\ast$result\+List, \hyperlink{class_string_dict}{String\+Dict} $\ast$result\+Dict, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} error\+If\+Not\+Exist, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} recursive, Q\+Dict$<$ void $>$ $\ast$kill\+Dict, Q\+Dict$<$ void $>$ $\ast$paths)
+\item 
+int \hyperlink{doxygen_8cpp_a5773098236bd78b7d8dad1739f60afbd}{read\+File\+Or\+Directory} (const char $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{class_file_name_list}{File\+Name\+List} $\ast$fn\+List, \hyperlink{class_file_name_dict}{File\+Name\+Dict} $\ast$fn\+Dict, \hyperlink{class_string_dict}{String\+Dict} $\ast$excl\+Dict, \hyperlink{class_q_str_list}{Q\+Str\+List} $\ast$pat\+List, \hyperlink{class_q_str_list}{Q\+Str\+List} $\ast$excl\+Pat\+List, \hyperlink{doxygen_8h_a483a8f54773ab93a734f03fa74c60f46}{String\+List} $\ast$result\+List, \hyperlink{class_string_dict}{String\+Dict} $\ast$result\+Dict, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} recursive, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} error\+If\+Not\+Exist, Q\+Dict$<$ void $>$ $\ast$kill\+Dict, Q\+Dict$<$ void $>$ $\ast$paths)
+\item 
+void \hyperlink{doxygen_8cpp_ae8b10293f5f041318bd4109dd2f996ea}{read\+Formula\+Repository} ()
+\item 
+void \hyperlink{doxygen_8cpp_af229513c065c90147eff5559f0844c00}{read\+Aliases} ()
+\item 
+void \hyperlink{doxygen_8cpp_a122070be7aebc9e3ab560b58fdd922c9}{init\+Doxygen} ()
+\item 
+void \hyperlink{doxygen_8cpp_ae12e94f5218f3afc8df4086a2121cd4d}{clean\+Up\+Doxygen} ()
+\item 
+void \hyperlink{doxygen_8cpp_ab0fa1b0c948e78e0d0d749ff1f5740b5}{read\+Configuration} (int argc, char $\ast$$\ast$argv)
+\item 
+void \hyperlink{doxygen_8cpp_a2426bb829c785229969c3052f3e37fb1}{check\+Configuration} ()
+\item 
+void \hyperlink{doxygen_8cpp_a10458b8a16238a4eae5fb5019df747e8}{adjust\+Configuration} ()
+\item 
+void \hyperlink{doxygen_8cpp_a7ed1fdd15e6ed566c33a63fcd30d53c4}{search\+Input\+Files} ()
+\item 
+void \hyperlink{doxygen_8cpp_a59d66805ece9da6ffd55fa4cc8252ef1}{parse\+Input} ()
+\item 
+void \hyperlink{doxygen_8cpp_a3efb8cd50f4362e3d58e72febfb872fa}{generate\+Output} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_statistics}{Statistics} \hyperlink{doxygen_8cpp_ac33de3c79e3a56ba6d47e9338a49511d}{g\+\_\+s}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{doxygen_8cpp_a00a46160235f50699b76044397fa30b6}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!H\+A\+S\+\_\+\+S\+I\+G\+N\+A\+L\+S@{H\+A\+S\+\_\+\+S\+I\+G\+N\+A\+L\+S}}
+\index{H\+A\+S\+\_\+\+S\+I\+G\+N\+A\+L\+S@{H\+A\+S\+\_\+\+S\+I\+G\+N\+A\+L\+S}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{H\+A\+S\+\_\+\+S\+I\+G\+N\+A\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+A\+S\+\_\+\+S\+I\+G\+N\+A\+L\+S}\label{doxygen_8cpp_a00a46160235f50699b76044397fa30b6}
+\hypertarget{doxygen_8cpp_a9c8dfedbf90afbe623df28f60374e704}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!R\+E\+C\+U\+R\+S\+E\+\_\+\+E\+N\+T\+R\+Y\+T\+R\+E\+E@{R\+E\+C\+U\+R\+S\+E\+\_\+\+E\+N\+T\+R\+Y\+T\+R\+E\+E}}
+\index{R\+E\+C\+U\+R\+S\+E\+\_\+\+E\+N\+T\+R\+Y\+T\+R\+E\+E@{R\+E\+C\+U\+R\+S\+E\+\_\+\+E\+N\+T\+R\+Y\+T\+R\+E\+E}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{R\+E\+C\+U\+R\+S\+E\+\_\+\+E\+N\+T\+R\+Y\+T\+R\+E\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+C\+U\+R\+S\+E\+\_\+\+E\+N\+T\+R\+Y\+T\+R\+E\+E(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf func}, }
+\item[{}]{{\bf var}}
+\end{DoxyParamCaption}
+)}\label{doxygen_8cpp_a9c8dfedbf90afbe623df28f60374e704}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \textcolor{keywordflow}{if} (\hyperlink{018__def_8c_a335628f2e9085305224b4f9cc6e95ed5}{var}->children()) \{ \(\backslash\)
+    EntryNavListIterator eli(*\hyperlink{018__def_8c_a335628f2e9085305224b4f9cc6e95ed5}{var}->children()); \(\backslash\)
+    for (;eli.current();++eli) \hyperlink{namespacedocstring_aec1a168f6e16b33f87fe6a37b9208957}{func}(eli.current()); \(\backslash\)
+  \} \} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+
+
+\subsection{Documentation du type de l\textquotesingle{}énumération}
+\hypertarget{doxygen_8cpp_a20dd0d19305a4da127968489dc0cc282}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!Find\+Base\+Class\+Relation\+\_\+\+Mode@{Find\+Base\+Class\+Relation\+\_\+\+Mode}}
+\index{Find\+Base\+Class\+Relation\+\_\+\+Mode@{Find\+Base\+Class\+Relation\+\_\+\+Mode}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{Find\+Base\+Class\+Relation\+\_\+\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Find\+Base\+Class\+Relation\+\_\+\+Mode}}\label{doxygen_8cpp_a20dd0d19305a4da127968489dc0cc282}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Template\+Instances@{Template\+Instances}!doxygen.\+cpp@{doxygen.\+cpp}}\index{doxygen.\+cpp@{doxygen.\+cpp}!Template\+Instances@{Template\+Instances}}\item[{\em 
+\hypertarget{doxygen_8cpp_a20dd0d19305a4da127968489dc0cc282a6c980be09446a2dd4f17a17e4669385a}{}Template\+Instances\label{doxygen_8cpp_a20dd0d19305a4da127968489dc0cc282a6c980be09446a2dd4f17a17e4669385a}
+}]\index{Documented\+Only@{Documented\+Only}!doxygen.\+cpp@{doxygen.\+cpp}}\index{doxygen.\+cpp@{doxygen.\+cpp}!Documented\+Only@{Documented\+Only}}\item[{\em 
+\hypertarget{doxygen_8cpp_a20dd0d19305a4da127968489dc0cc282aa853d9fba4d0c76d851f8b4016375a26}{}Documented\+Only\label{doxygen_8cpp_a20dd0d19305a4da127968489dc0cc282aa853d9fba4d0c76d851f8b4016375a26}
+}]\index{Undocumented@{Undocumented}!doxygen.\+cpp@{doxygen.\+cpp}}\index{doxygen.\+cpp@{doxygen.\+cpp}!Undocumented@{Undocumented}}\item[{\em 
+\hypertarget{doxygen_8cpp_a20dd0d19305a4da127968489dc0cc282a679f8bf08f6fa67f52059bbb4dbc9eed}{}Undocumented\label{doxygen_8cpp_a20dd0d19305a4da127968489dc0cc282a679f8bf08f6fa67f52059bbb4dbc9eed}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{doxygen_8cpp_a10458b8a16238a4eae5fb5019df747e8}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!adjust\+Configuration@{adjust\+Configuration}}
+\index{adjust\+Configuration@{adjust\+Configuration}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{adjust\+Configuration()}]{\setlength{\rightskip}{0pt plus 5cm}void adjust\+Configuration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8cpp_a10458b8a16238a4eae5fb5019df747e8}
+adjust globals that depend on configuration settings. \hypertarget{doxygen_8cpp_a2426bb829c785229969c3052f3e37fb1}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!check\+Configuration@{check\+Configuration}}
+\index{check\+Configuration@{check\+Configuration}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{check\+Configuration()}]{\setlength{\rightskip}{0pt plus 5cm}void check\+Configuration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8cpp_a2426bb829c785229969c3052f3e37fb1}
+check and resolve config options \hypertarget{doxygen_8cpp_ae12e94f5218f3afc8df4086a2121cd4d}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!clean\+Up\+Doxygen@{clean\+Up\+Doxygen}}
+\index{clean\+Up\+Doxygen@{clean\+Up\+Doxygen}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{clean\+Up\+Doxygen()}]{\setlength{\rightskip}{0pt plus 5cm}void clean\+Up\+Doxygen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8cpp_ae12e94f5218f3afc8df4086a2121cd4d}
+\hypertarget{doxygen_8cpp_a798729dca95209ecdc609807a653a2bf}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!clear\+All@{clear\+All}}
+\index{clear\+All@{clear\+All}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{clear\+All()}]{\setlength{\rightskip}{0pt plus 5cm}void clear\+All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8cpp_a798729dca95209ecdc609807a653a2bf}
+\hypertarget{doxygen_8cpp_a21cfa81a6854b108ab53153e9db19d3c}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!distribute\+Class\+Group\+Relations@{distribute\+Class\+Group\+Relations}}
+\index{distribute\+Class\+Group\+Relations@{distribute\+Class\+Group\+Relations}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{distribute\+Class\+Group\+Relations()}]{\setlength{\rightskip}{0pt plus 5cm}void distribute\+Class\+Group\+Relations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8cpp_a21cfa81a6854b108ab53153e9db19d3c}
+\hypertarget{doxygen_8cpp_a3efb8cd50f4362e3d58e72febfb872fa}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!generate\+Output@{generate\+Output}}
+\index{generate\+Output@{generate\+Output}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{generate\+Output()}]{\setlength{\rightskip}{0pt plus 5cm}void generate\+Output (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8cpp_a3efb8cd50f4362e3d58e72febfb872fa}
+add extra languages for which we can only produce syntax highlighted code \hypertarget{doxygen_8cpp_a5fd408ae055f67943373c3322079b99d}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!get\+Template\+Arguments\+From\+Name@{get\+Template\+Arguments\+From\+Name}}
+\index{get\+Template\+Arguments\+From\+Name@{get\+Template\+Arguments\+From\+Name}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{get\+Template\+Arguments\+From\+Name(const Q\+C\+String \&name, const Q\+List$<$ Argument\+List $>$ $\ast$t\+Arg\+Lists)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Argument\+List}$\ast$ get\+Template\+Arguments\+From\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{name, }
+\item[{const {\bf Q\+List}$<$ {\bf Argument\+List} $>$ $\ast$}]{t\+Arg\+Lists}
+\end{DoxyParamCaption}
+)}\label{doxygen_8cpp_a5fd408ae055f67943373c3322079b99d}
+\hypertarget{doxygen_8cpp_a122070be7aebc9e3ab560b58fdd922c9}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!init\+Doxygen@{init\+Doxygen}}
+\index{init\+Doxygen@{init\+Doxygen}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{init\+Doxygen()}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Doxygen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8cpp_a122070be7aebc9e3ab560b58fdd922c9}
+\hypertarget{doxygen_8cpp_ac574253826b0b2a23c4c9bcf2ec89f62}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!init\+Resources@{init\+Resources}}
+\index{init\+Resources@{init\+Resources}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{init\+Resources()}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Resources (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8cpp_ac574253826b0b2a23c4c9bcf2ec89f62}
+\hypertarget{doxygen_8cpp_a59d66805ece9da6ffd55fa4cc8252ef1}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!parse\+Input@{parse\+Input}}
+\index{parse\+Input@{parse\+Input}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{parse\+Input()}]{\setlength{\rightskip}{0pt plus 5cm}void parse\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8cpp_a59d66805ece9da6ffd55fa4cc8252ef1}
+\hypertarget{doxygen_8cpp_a0b990324e5bf78d6d16824cdf0112aac}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!print\+Nav\+Tree@{print\+Nav\+Tree}}
+\index{print\+Nav\+Tree@{print\+Nav\+Tree}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{print\+Nav\+Tree(\+Entry\+Nav $\ast$root\+Nav, int indent)}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Nav\+Tree (
+\begin{DoxyParamCaption}
+\item[{{\bf Entry\+Nav} $\ast$}]{root\+Nav, }
+\item[{int}]{indent}
+\end{DoxyParamCaption}
+)}\label{doxygen_8cpp_a0b990324e5bf78d6d16824cdf0112aac}
+\hypertarget{doxygen_8cpp_af229513c065c90147eff5559f0844c00}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!read\+Aliases@{read\+Aliases}}
+\index{read\+Aliases@{read\+Aliases}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{read\+Aliases()}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Aliases (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8cpp_af229513c065c90147eff5559f0844c00}
+\hypertarget{doxygen_8cpp_ab0fa1b0c948e78e0d0d749ff1f5740b5}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!read\+Configuration@{read\+Configuration}}
+\index{read\+Configuration@{read\+Configuration}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{read\+Configuration(int argc, char $\ast$$\ast$argv)}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Configuration (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{doxygen_8cpp_ab0fa1b0c948e78e0d0d749ff1f5740b5}
+\hypertarget{doxygen_8cpp_aeeecc058bceb25924516201e2f349458}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!read\+Dir@{read\+Dir}}
+\index{read\+Dir@{read\+Dir}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{read\+Dir(\+Q\+File\+Info $\ast$fi, File\+Name\+List $\ast$fn\+List, File\+Name\+Dict $\ast$fn\+Dict, String\+Dict $\ast$excl\+Dict, Q\+Str\+List $\ast$pat\+List, Q\+Str\+List $\ast$excl\+Pat\+List, String\+List $\ast$result\+List, String\+Dict $\ast$result\+Dict, bool error\+If\+Not\+Exist, bool recursive, Q\+Dict$<$ void $>$ $\ast$kill\+Dict, Q\+Dict$<$ void $>$ $\ast$paths)}]{\setlength{\rightskip}{0pt plus 5cm}int read\+Dir (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+File\+Info} $\ast$}]{fi, }
+\item[{{\bf File\+Name\+List} $\ast$}]{fn\+List, }
+\item[{{\bf File\+Name\+Dict} $\ast$}]{fn\+Dict, }
+\item[{{\bf String\+Dict} $\ast$}]{excl\+Dict, }
+\item[{{\bf Q\+Str\+List} $\ast$}]{pat\+List, }
+\item[{{\bf Q\+Str\+List} $\ast$}]{excl\+Pat\+List, }
+\item[{{\bf String\+List} $\ast$}]{result\+List, }
+\item[{{\bf String\+Dict} $\ast$}]{result\+Dict, }
+\item[{{\bf bool}}]{error\+If\+Not\+Exist, }
+\item[{{\bf bool}}]{recursive, }
+\item[{Q\+Dict$<$ void $>$ $\ast$}]{kill\+Dict, }
+\item[{Q\+Dict$<$ void $>$ $\ast$}]{paths}
+\end{DoxyParamCaption}
+)}\label{doxygen_8cpp_aeeecc058bceb25924516201e2f349458}
+\hypertarget{doxygen_8cpp_a5773098236bd78b7d8dad1739f60afbd}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!read\+File\+Or\+Directory@{read\+File\+Or\+Directory}}
+\index{read\+File\+Or\+Directory@{read\+File\+Or\+Directory}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{read\+File\+Or\+Directory(const char $\ast$s, File\+Name\+List $\ast$fn\+List, File\+Name\+Dict $\ast$fn\+Dict, String\+Dict $\ast$excl\+Dict, Q\+Str\+List $\ast$pat\+List, Q\+Str\+List $\ast$excl\+Pat\+List, String\+List $\ast$result\+List, String\+Dict $\ast$result\+Dict, bool recursive, bool error\+If\+Not\+Exist, Q\+Dict$<$ void $>$ $\ast$kill\+Dict, Q\+Dict$<$ void $>$ $\ast$paths)}]{\setlength{\rightskip}{0pt plus 5cm}int read\+File\+Or\+Directory (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s, }
+\item[{{\bf File\+Name\+List} $\ast$}]{fn\+List, }
+\item[{{\bf File\+Name\+Dict} $\ast$}]{fn\+Dict, }
+\item[{{\bf String\+Dict} $\ast$}]{excl\+Dict, }
+\item[{{\bf Q\+Str\+List} $\ast$}]{pat\+List, }
+\item[{{\bf Q\+Str\+List} $\ast$}]{excl\+Pat\+List, }
+\item[{{\bf String\+List} $\ast$}]{result\+List, }
+\item[{{\bf String\+Dict} $\ast$}]{result\+Dict, }
+\item[{{\bf bool}}]{recursive, }
+\item[{{\bf bool}}]{error\+If\+Not\+Exist, }
+\item[{Q\+Dict$<$ void $>$ $\ast$}]{kill\+Dict, }
+\item[{Q\+Dict$<$ void $>$ $\ast$}]{paths}
+\end{DoxyParamCaption}
+)}\label{doxygen_8cpp_a5773098236bd78b7d8dad1739f60afbd}
+\hypertarget{doxygen_8cpp_ae8b10293f5f041318bd4109dd2f996ea}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!read\+Formula\+Repository@{read\+Formula\+Repository}}
+\index{read\+Formula\+Repository@{read\+Formula\+Repository}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{read\+Formula\+Repository()}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Formula\+Repository (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8cpp_ae8b10293f5f041318bd4109dd2f996ea}
+\hypertarget{doxygen_8cpp_a7ed1fdd15e6ed566c33a63fcd30d53c4}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!search\+Input\+Files@{search\+Input\+Files}}
+\index{search\+Input\+Files@{search\+Input\+Files}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{search\+Input\+Files()}]{\setlength{\rightskip}{0pt plus 5cm}void search\+Input\+Files (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8cpp_a7ed1fdd15e6ed566c33a63fcd30d53c4}
+\hypertarget{doxygen_8cpp_a1fc271c95844c5c853386a006d7f89f3}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!statistics@{statistics}}
+\index{statistics@{statistics}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{statistics()}]{\setlength{\rightskip}{0pt plus 5cm}void statistics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8cpp_a1fc271c95844c5c853386a006d7f89f3}
+
+
+\subsection{Documentation des variables}
+\hypertarget{doxygen_8cpp_ac33de3c79e3a56ba6d47e9338a49511d}{}\index{doxygen.\+cpp@{doxygen.\+cpp}!g\+\_\+s@{g\+\_\+s}}
+\index{g\+\_\+s@{g\+\_\+s}!doxygen.\+cpp@{doxygen.\+cpp}}
+\subsubsection[{g\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}class {\bf Statistics}  g\+\_\+s}\label{doxygen_8cpp_ac33de3c79e3a56ba6d47e9338a49511d}

@@ -1,0 +1,236 @@
+\hypertarget{class_s_int_dict}{}\section{Référence du modèle de la classe S\+Int\+Dict$<$ T $>$}
+\label{class_s_int_dict}\index{S\+Int\+Dict$<$ T $>$@{S\+Int\+Dict$<$ T $>$}}
+
+
+{\ttfamily \#include $<$sortdict.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de S\+Int\+Dict$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_int_dict}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_s_int_dict_1_1_iterator}{Iterator}
+\item 
+class \hyperlink{class_s_int_dict_1_1_iterator_dict}{Iterator\+Dict}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_s_int_dict_a3285b0a5debceb2190c4f1cc8f8fd78b}{S\+Int\+Dict} (int size=17)
+\item 
+virtual \hyperlink{class_s_int_dict_a8d2e7da0367e653b432447a9dce7c604}{$\sim$\+S\+Int\+Dict} ()
+\item 
+void \hyperlink{class_s_int_dict_a829c9e4c9827e765145d150ffb18b1ae}{append} (int key, const T $\ast$\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d})
+\item 
+void \hyperlink{class_s_int_dict_a394582f93d6d758a477e86f84087c6a6}{prepend} (int key, const T $\ast$\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d})
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_s_int_dict_a3e7bf8861e4650f5f958000b86b2312a}{remove} (int key)
+\item 
+void \hyperlink{class_s_int_dict_ae205d1b7f76cea9da3f117e830bd7dfa}{sort} ()
+\item 
+void \hyperlink{class_s_int_dict_a16cc84888ede2d895d4df0323608862d}{in\+Sort} (int key, const T $\ast$\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d})
+\item 
+void \hyperlink{class_s_int_dict_aa847c843b8f2509d2021d8db470aa14f}{set\+Auto\+Delete} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} val)
+\item 
+T $\ast$ \hyperlink{class_s_int_dict_a5b08deebe24072f66bdce4fed2a3863d}{find} (int key)
+\item 
+T $\ast$ \hyperlink{class_s_int_dict_a6c7f1a2ccba55d870e39f6e112316f78}{operator\mbox{[}$\,$\mbox{]}} (int key) const 
+\item 
+T $\ast$ \hyperlink{class_s_int_dict_a13bbde7f8fdac65c32e670d627fbdeac}{at} (\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+virtual int \hyperlink{class_s_int_dict_aeb6a4aad9d10d7c48ce4a43f8d72c76f}{compare\+Values} (const T $\ast$item1, const T $\ast$item2) const 
+\item 
+void \hyperlink{class_s_int_dict_ab86a29e18447f3f5347bb29478a2e8f4}{clear} ()
+\item 
+int \hyperlink{class_s_int_dict_a2c5c2a415a61ab3466dabdb1bc441ad7}{count} ()
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_s_int_dict_a9830fc407400559db7e7783cc10a9394}{Iterator}
+\item 
+class \hyperlink{class_s_int_dict_ab362b5ead75b40c212098db068d50ac7}{Iterator\+Dict}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\subsubsection*{template$<$class T$>$class S\+Int\+Dict$<$ T $>$}
+
+Ordered dictionary of elements of type T. Internally uses a \hyperlink{class_q_list}{Q\+List$<$\+T$>$} and a \hyperlink{class_q_int_dict}{Q\+Int\+Dict$<$\+T$>$}. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_s_int_dict_a3285b0a5debceb2190c4f1cc8f8fd78b}{}\index{S\+Int\+Dict@{S\+Int\+Dict}!S\+Int\+Dict@{S\+Int\+Dict}}
+\index{S\+Int\+Dict@{S\+Int\+Dict}!S\+Int\+Dict@{S\+Int\+Dict}}
+\subsubsection[{S\+Int\+Dict(int size=17)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+Int\+Dict}$<$ T $>$\+::{\bf S\+Int\+Dict} (
+\begin{DoxyParamCaption}
+\item[{int}]{size = {\ttfamily 17}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_int_dict_a3285b0a5debceb2190c4f1cc8f8fd78b}
+Create an ordered dictionary. 
+\begin{DoxyParams}{Paramètres}
+{\em size} & The size of the dictionary. Should be a prime number for best distribution of elements. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_s_int_dict_a8d2e7da0367e653b432447a9dce7c604}{}\index{S\+Int\+Dict@{S\+Int\+Dict}!````~S\+Int\+Dict@{$\sim$\+S\+Int\+Dict}}
+\index{````~S\+Int\+Dict@{$\sim$\+S\+Int\+Dict}!S\+Int\+Dict@{S\+Int\+Dict}}
+\subsubsection[{$\sim$\+S\+Int\+Dict()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+Int\+Dict}$<$ T $>$\+::$\sim${\bf S\+Int\+Dict} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_int_dict_a8d2e7da0367e653b432447a9dce7c604}
+Destroys the dictionary 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_s_int_dict_a829c9e4c9827e765145d150ffb18b1ae}{}\index{S\+Int\+Dict@{S\+Int\+Dict}!append@{append}}
+\index{append@{append}!S\+Int\+Dict@{S\+Int\+Dict}}
+\subsubsection[{append(int key, const T $\ast$d)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf S\+Int\+Dict}$<$ T $>$\+::append (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{const T $\ast$}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_int_dict_a829c9e4c9827e765145d150ffb18b1ae}
+Appends a compound to the dictionary. The element is owned by the dictionary. 
+\begin{DoxyParams}{Paramètres}
+{\em key} & The unique key to use to quicky find the item later on. \\
+\hline
+{\em d} & The compound to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_s_int_dict_a5b08deebe24072f66bdce4fed2a3863d}{find()} 
+\end{DoxySeeAlso}
+\hypertarget{class_s_int_dict_a13bbde7f8fdac65c32e670d627fbdeac}{}\index{S\+Int\+Dict@{S\+Int\+Dict}!at@{at}}
+\index{at@{at}!S\+Int\+Dict@{S\+Int\+Dict}}
+\subsubsection[{at(uint i)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf S\+Int\+Dict}$<$ T $>$\+::at (
+\begin{DoxyParamCaption}
+\item[{{\bf uint}}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_int_dict_a13bbde7f8fdac65c32e670d627fbdeac}
+Returns the item at position {\itshape i} in the sorted dictionary \hypertarget{class_s_int_dict_ab86a29e18447f3f5347bb29478a2e8f4}{}\index{S\+Int\+Dict@{S\+Int\+Dict}!clear@{clear}}
+\index{clear@{clear}!S\+Int\+Dict@{S\+Int\+Dict}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf S\+Int\+Dict}$<$ T $>$\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_int_dict_ab86a29e18447f3f5347bb29478a2e8f4}
+Clears the dictionary. Will delete items if \hyperlink{class_s_int_dict_aa847c843b8f2509d2021d8db470aa14f}{set\+Auto\+Delete()} was set to {\ttfamily T\+R\+U\+E}. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_s_int_dict_aa847c843b8f2509d2021d8db470aa14f}{set\+Auto\+Delete} 
+\end{DoxySeeAlso}
+\hypertarget{class_s_int_dict_aeb6a4aad9d10d7c48ce4a43f8d72c76f}{}\index{S\+Int\+Dict@{S\+Int\+Dict}!compare\+Values@{compare\+Values}}
+\index{compare\+Values@{compare\+Values}!S\+Int\+Dict@{S\+Int\+Dict}}
+\subsubsection[{compare\+Values(const T $\ast$item1, const T $\ast$item2) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual int {\bf S\+Int\+Dict}$<$ T $>$\+::compare\+Values (
+\begin{DoxyParamCaption}
+\item[{const T $\ast$}]{item1, }
+\item[{const T $\ast$}]{item2}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_int_dict_aeb6a4aad9d10d7c48ce4a43f8d72c76f}
+Function that is used to compare two items when sorting. Overload this to properly sort items. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_s_int_dict_a16cc84888ede2d895d4df0323608862d}{in\+Sort()} 
+\end{DoxySeeAlso}
+\hypertarget{class_s_int_dict_a2c5c2a415a61ab3466dabdb1bc441ad7}{}\index{S\+Int\+Dict@{S\+Int\+Dict}!count@{count}}
+\index{count@{count}!S\+Int\+Dict@{S\+Int\+Dict}}
+\subsubsection[{count()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ int {\bf S\+Int\+Dict}$<$ T $>$\+::count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_int_dict_a2c5c2a415a61ab3466dabdb1bc441ad7}
+Returns the number of items stored in the dictionary \hypertarget{class_s_int_dict_a5b08deebe24072f66bdce4fed2a3863d}{}\index{S\+Int\+Dict@{S\+Int\+Dict}!find@{find}}
+\index{find@{find}!S\+Int\+Dict@{S\+Int\+Dict}}
+\subsubsection[{find(int key)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf S\+Int\+Dict}$<$ T $>$\+::find (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_int_dict_a5b08deebe24072f66bdce4fed2a3863d}
+Looks up a compound given its key. 
+\begin{DoxyParams}{Paramètres}
+{\em key} & The key to identify this element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+The requested compound or zero if it cannot be found. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_s_int_dict_a829c9e4c9827e765145d150ffb18b1ae}{append()} 
+\end{DoxySeeAlso}
+\hypertarget{class_s_int_dict_a16cc84888ede2d895d4df0323608862d}{}\index{S\+Int\+Dict@{S\+Int\+Dict}!in\+Sort@{in\+Sort}}
+\index{in\+Sort@{in\+Sort}!S\+Int\+Dict@{S\+Int\+Dict}}
+\subsubsection[{in\+Sort(int key, const T $\ast$d)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf S\+Int\+Dict}$<$ T $>$\+::in\+Sort (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{const T $\ast$}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_int_dict_a16cc84888ede2d895d4df0323608862d}
+Inserts a compound into the dictionary in a sorted way. 
+\begin{DoxyParams}{Paramètres}
+{\em key} & The unique key to use to quicky find the item later on. \\
+\hline
+{\em d} & The compound to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_s_int_dict_a5b08deebe24072f66bdce4fed2a3863d}{find()} 
+\end{DoxySeeAlso}
+\hypertarget{class_s_int_dict_a6c7f1a2ccba55d870e39f6e112316f78}{}\index{S\+Int\+Dict@{S\+Int\+Dict}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!S\+Int\+Dict@{S\+Int\+Dict}}
+\subsubsection[{operator[](int key) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf S\+Int\+Dict}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_int_dict_a6c7f1a2ccba55d870e39f6e112316f78}
+Equavalent to \hyperlink{class_s_int_dict_a5b08deebe24072f66bdce4fed2a3863d}{find()}. \hypertarget{class_s_int_dict_a394582f93d6d758a477e86f84087c6a6}{}\index{S\+Int\+Dict@{S\+Int\+Dict}!prepend@{prepend}}
+\index{prepend@{prepend}!S\+Int\+Dict@{S\+Int\+Dict}}
+\subsubsection[{prepend(int key, const T $\ast$d)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf S\+Int\+Dict}$<$ T $>$\+::prepend (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{const T $\ast$}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_int_dict_a394582f93d6d758a477e86f84087c6a6}
+Prepend a compound to the dictionary. The element is owned by the dictionary. 
+\begin{DoxyParams}{Paramètres}
+{\em key} & The unique key to use to quicky find the item later on. \\
+\hline
+{\em d} & The compound to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_s_int_dict_a5b08deebe24072f66bdce4fed2a3863d}{find()} 
+\end{DoxySeeAlso}
+\hypertarget{class_s_int_dict_a3e7bf8861e4650f5f958000b86b2312a}{}\index{S\+Int\+Dict@{S\+Int\+Dict}!remove@{remove}}
+\index{remove@{remove}!S\+Int\+Dict@{S\+Int\+Dict}}
+\subsubsection[{remove(int key)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf bool} {\bf S\+Int\+Dict}$<$ T $>$\+::remove (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_int_dict_a3e7bf8861e4650f5f958000b86b2312a}
+Remove an item from the dictionary \hypertarget{class_s_int_dict_aa847c843b8f2509d2021d8db470aa14f}{}\index{S\+Int\+Dict@{S\+Int\+Dict}!set\+Auto\+Delete@{set\+Auto\+Delete}}
+\index{set\+Auto\+Delete@{set\+Auto\+Delete}!S\+Int\+Dict@{S\+Int\+Dict}}
+\subsubsection[{set\+Auto\+Delete(bool val)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf S\+Int\+Dict}$<$ T $>$\+::set\+Auto\+Delete (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_int_dict_aa847c843b8f2509d2021d8db470aa14f}
+Indicates whether or not the dictionary owns its elements \hypertarget{class_s_int_dict_ae205d1b7f76cea9da3f117e830bd7dfa}{}\index{S\+Int\+Dict@{S\+Int\+Dict}!sort@{sort}}
+\index{sort@{sort}!S\+Int\+Dict@{S\+Int\+Dict}}
+\subsubsection[{sort()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf S\+Int\+Dict}$<$ T $>$\+::sort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_int_dict_ae205d1b7f76cea9da3f117e830bd7dfa}
+Sorts the members of the dictionary. First appending a number of members and then sorting them is faster (O(\+Nlog\+N) than using \hyperlink{class_s_int_dict_a16cc84888ede2d895d4df0323608862d}{in\+Sort()} for each member (O(\+N$^\wedge$2)). 
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_s_int_dict_a9830fc407400559db7e7783cc10a9394}{}\index{S\+Int\+Dict@{S\+Int\+Dict}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!S\+Int\+Dict@{S\+Int\+Dict}}
+\subsubsection[{Iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ friend class {\bf Iterator}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_int_dict_a9830fc407400559db7e7783cc10a9394}
+\hypertarget{class_s_int_dict_ab362b5ead75b40c212098db068d50ac7}{}\index{S\+Int\+Dict@{S\+Int\+Dict}!Iterator\+Dict@{Iterator\+Dict}}
+\index{Iterator\+Dict@{Iterator\+Dict}!S\+Int\+Dict@{S\+Int\+Dict}}
+\subsubsection[{Iterator\+Dict}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ friend class {\bf Iterator\+Dict}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_int_dict_ab362b5ead75b40c212098db068d50ac7}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{sortdict_8h}{sortdict.\+h}\end{DoxyCompactItemize}

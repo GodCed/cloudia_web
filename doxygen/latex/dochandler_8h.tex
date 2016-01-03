@@ -1,0 +1,524 @@
+\hypertarget{dochandler_8h}{}\section{Référence du fichier addon/doxmlparser/src/dochandler.h}
+\label{dochandler_8h}\index{addon/doxmlparser/src/dochandler.\+h@{addon/doxmlparser/src/dochandler.\+h}}
+{\ttfamily \#include $<$qstring.\+h$>$}\\*
+{\ttfamily \#include $<$qlist.\+h$>$}\\*
+{\ttfamily \#include $<$qxml.\+h$>$}\\*
+{\ttfamily \#include $<$doxmlintf.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}stringimpl.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}basehandler.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}baseiterator.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_doc_impl}{Doc\+Impl}
+\item 
+class \hyperlink{class_text_node}{Text\+Node}
+\begin{DoxyCompactList}\small\item\em Node representing a piece of text. \end{DoxyCompactList}\item 
+class \hyperlink{class_markup_modifier_node}{Markup\+Modifier\+Node}
+\begin{DoxyCompactList}\small\item\em Node representing a change in the markup style. \end{DoxyCompactList}\item 
+class \hyperlink{class_markup_handler}{Markup\+Handler}
+\begin{DoxyCompactList}\small\item\em Handles markup commands in the X\+M\+L input. \end{DoxyCompactList}\item 
+class \hyperlink{class_paragraph_handler}{Paragraph\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing a paragraph of text and commands. \end{DoxyCompactList}\item 
+class \hyperlink{class_paragraph_iterator}{Paragraph\+Iterator}
+\item 
+class \hyperlink{class_list_item_handler}{List\+Item\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing a list item. \end{DoxyCompactList}\item 
+class \hyperlink{class_list_item_iterator}{List\+Item\+Iterator}
+\item 
+class \hyperlink{class_ordered_list_handler}{Ordered\+List\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing list of items. \end{DoxyCompactList}\item 
+class \hyperlink{class_ordered_list_iterator}{Ordered\+List\+Iterator}
+\item 
+class \hyperlink{class_toc_list_handler}{Toc\+List\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing table of contents list. \end{DoxyCompactList}\item 
+class \hyperlink{class_toc_list_iterator}{Toc\+List\+Iterator}
+\item 
+class \hyperlink{class_toc_item_handler}{Toc\+Item\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing a table of contents item. \end{DoxyCompactList}\item 
+class \hyperlink{class_itemized_list_handler}{Itemized\+List\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing list of items. \end{DoxyCompactList}\item 
+class \hyperlink{class_itemized_list_iterator}{Itemized\+List\+Iterator}
+\item 
+class \hyperlink{class_parameter_handler}{Parameter\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing a parameter. \end{DoxyCompactList}\item 
+class \hyperlink{class_parameter_item_handler}{Parameter\+Item\+Handler}
+\item 
+class \hyperlink{class_parameter_item_iterator}{Parameter\+Item\+Iterator}
+\item 
+class \hyperlink{class_parameter_list_handler}{Parameter\+List\+Handler}
+\item 
+class \hyperlink{class_parameter_list_iterator}{Parameter\+List\+Iterator}
+\item 
+class \hyperlink{class_line_break_handler}{Line\+Break\+Handler}
+\item 
+class \hyperlink{class_link_handler}{Link\+Handler}
+\item 
+class \hyperlink{class_e_mail_handler}{E\+Mail\+Handler}
+\item 
+class \hyperlink{class_u_link_handler}{U\+Link\+Handler}
+\item 
+class \hyperlink{class_h_ruler_handler}{H\+Ruler\+Handler}
+\item 
+class \hyperlink{class_ref_handler}{Ref\+Handler}
+\item 
+class \hyperlink{class_title_handler}{Title\+Handler}
+\item 
+class \hyperlink{class_title_iterator}{Title\+Iterator}
+\item 
+class \hyperlink{class_simple_sect_handler}{Simple\+Sect\+Handler}
+\item 
+class \hyperlink{class_variable_list_entry_handler}{Variable\+List\+Entry\+Handler}
+\item 
+class \hyperlink{class_variable_list_handler}{Variable\+List\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing a list of named items. \end{DoxyCompactList}\item 
+class \hyperlink{class_variable_list_iterator}{Variable\+List\+Iterator}
+\item 
+class \hyperlink{class_highlight_handler}{Highlight\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing a highlighted text fragment. \end{DoxyCompactList}\item 
+class \hyperlink{class_highlight_iterator}{Highlight\+Iterator}
+\item 
+class \hyperlink{class_code_line_handler}{Code\+Line\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing a line of code. \end{DoxyCompactList}\item 
+class \hyperlink{class_code_line_iterator}{Code\+Line\+Iterator}
+\item 
+class \hyperlink{class_program_listing_handler}{Program\+Listing\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing a program listing. \end{DoxyCompactList}\item 
+class \hyperlink{class_program_listing_iterator}{Program\+Listing\+Iterator}
+\item 
+class \hyperlink{class_formula_handler}{Formula\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing a formula. \end{DoxyCompactList}\item 
+class \hyperlink{class_image_handler}{Image\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing an image. \end{DoxyCompactList}\item 
+class \hyperlink{class_anchor_handler}{Anchor\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing an anchor. \end{DoxyCompactList}\item 
+class \hyperlink{class_dot_file_handler}{Dot\+File\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing a dot file. \end{DoxyCompactList}\item 
+class \hyperlink{class_index_entry_handler}{Index\+Entry\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing an entry in the index. \end{DoxyCompactList}\item 
+class \hyperlink{class_entry_handler}{Entry\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing an entry in the table entry. \end{DoxyCompactList}\item 
+class \hyperlink{class_entry_iterator}{Entry\+Iterator}
+\item 
+class \hyperlink{class_row_handler}{Row\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing an entry in the table row. \end{DoxyCompactList}\item 
+class \hyperlink{class_row_iterator}{Row\+Iterator}
+\item 
+class \hyperlink{class_table_handler}{Table\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing an entry in the table. \end{DoxyCompactList}\item 
+class \hyperlink{class_table_iterator}{Table\+Iterator}
+\item 
+class \hyperlink{class_copy_handler}{Copy\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing a copied piece of documentation. \end{DoxyCompactList}\item 
+class \hyperlink{class_copy_iterator}{Copy\+Iterator}
+\item 
+class \hyperlink{class_verbatim_handler}{Verbatim\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing an preformatted section. \end{DoxyCompactList}\item 
+class \hyperlink{class_symbol_handler}{Symbol\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing an special symbol. \end{DoxyCompactList}\item 
+class \hyperlink{class_doc_section_handler}{Doc\+Section\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing a section. \end{DoxyCompactList}\item 
+class \hyperlink{class_doc_section_para_iterator}{Doc\+Section\+Para\+Iterator}
+\item 
+class \hyperlink{class_doc_section_sub_iterator}{Doc\+Section\+Sub\+Iterator}
+\item 
+class \hyperlink{class_doc_internal_handler}{Doc\+Internal\+Handler}
+\item 
+class \hyperlink{class_doc_internal_para_iterator}{Doc\+Internal\+Para\+Iterator}
+\item 
+class \hyperlink{class_doc_internal_sub_iterator}{Doc\+Internal\+Sub\+Iterator}
+\item 
+class \hyperlink{class_doc_handler}{Doc\+Handler}
+\begin{DoxyCompactList}\small\item\em Node representing a documentation block. \end{DoxyCompactList}\item 
+class \hyperlink{class_doc_iterator}{Doc\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{dochandler_8h_a5df73eeb0fdcdb825f4fcc9f9e6a5a9d}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}(cls)~class cls\#\#Impl \+: public I\#\#cls, public \hyperlink{class_doc_impl}{Doc\+Impl} \{ public\+: virtual $\sim$cls\#\#Impl() \{\} \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{dochandler_8h_a24fec1c3d285d313125b07e6ea05ecba}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+Markup)
+\item 
+\hyperlink{dochandler_8h_a16cee57db23928f95fa08db7a73c71d3}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (\hyperlink{class_doc_para}{Doc\+Para})
+\item 
+\hyperlink{dochandler_8h_ab1852fdb74f8e057ad7c6a20c2a238c1}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (\hyperlink{class_doc_text}{Doc\+Text})
+\item 
+\hyperlink{dochandler_8h_a8a8cf0a9fb8367be9de1932c5e87a9eb}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+Markup\+Modifier)
+\item 
+\hyperlink{dochandler_8h_a6cfb9ec27a212afb3ff42bc8ef3111f2}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+Itemized\+List)
+\item 
+\hyperlink{dochandler_8h_a28717a619ae8b27bb7dd51da9146ed2a}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+Ordered\+List)
+\item 
+\hyperlink{dochandler_8h_a8b37e2841613a7e212aeb533f39486f0}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+List\+Item)
+\item 
+\hyperlink{dochandler_8h_a73cfce8be7497ef399690d3c407de022}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+Parameter\+List)
+\item 
+\hyperlink{dochandler_8h_ac4ff1c1f5f59afdc4627ebb28854043d}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+Parameter\+Item)
+\item 
+\hyperlink{dochandler_8h_ae87ed8bc8ef0e0d0e76edc4dd5a25315}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+Parameter)
+\item 
+\hyperlink{dochandler_8h_a538cf036c53c74274cb398ccfb01dde9}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (\hyperlink{class_doc_title}{Doc\+Title})
+\item 
+\hyperlink{dochandler_8h_ac8a1bda2156daa205ee50bef0eabd281}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (\hyperlink{class_doc_simple_sect}{Doc\+Simple\+Sect})
+\item 
+\hyperlink{dochandler_8h_a5e8beb1348356b94e44a5214ad9784c1}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (\hyperlink{class_doc_ref}{Doc\+Ref})
+\item 
+\hyperlink{dochandler_8h_a481eb667b33fd74064faa8a49a81ffab}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+Variable\+List)
+\item 
+\hyperlink{dochandler_8h_ab23a177de0aebfc728558f1cb5b7ca09}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+Variable\+List\+Entry)
+\item 
+\hyperlink{dochandler_8h_ae67e69441a243896ed480f6a6cfc53ac}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+H\+Ruler)
+\item 
+\hyperlink{dochandler_8h_a864909b1875326573476b9e90a344c48}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (\hyperlink{class_doc_line_break}{Doc\+Line\+Break})
+\item 
+\hyperlink{dochandler_8h_afeb86e5736d7d4e98b5ff87736dcb75f}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+U\+Link)
+\item 
+\hyperlink{dochandler_8h_a9af6a4ec52aac5120ceb38b21512063d}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+E\+Mail)
+\item 
+\hyperlink{dochandler_8h_aff3b9a025eedb59045be2b5bdadba84c}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (\hyperlink{class_doc_link}{Doc\+Link})
+\item 
+\hyperlink{dochandler_8h_a5cd0aa256c74a39c189e17f628b6167b}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+Program\+Listing)
+\item 
+\hyperlink{dochandler_8h_a70f0b3f05b1cd64d00efc72048f36a76}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+Code\+Line)
+\item 
+\hyperlink{dochandler_8h_a815e16772b1e71e9a2ba4c07a4f19629}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+Highlight)
+\item 
+\hyperlink{dochandler_8h_a9ee89b942d03cb1fb8e8eb587c34dd3e}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (\hyperlink{class_doc_formula}{Doc\+Formula})
+\item 
+\hyperlink{dochandler_8h_a691166d61852b7ddf00ec694a3e0278f}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (\hyperlink{class_doc_image}{Doc\+Image})
+\item 
+\hyperlink{dochandler_8h_a691ed1666d651dfed4ca6e2e2bab4f43}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (\hyperlink{class_doc_dot_file}{Doc\+Dot\+File})
+\item 
+\hyperlink{dochandler_8h_a7dd13c772f2e88c4d0f918a84df4618a}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (\hyperlink{class_doc_index_entry}{Doc\+Index\+Entry})
+\item 
+\hyperlink{dochandler_8h_a6465e1c15419d60ca7e3a2754d2475cf}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+Table)
+\item 
+\hyperlink{dochandler_8h_a9c115293b613858cc8eebebc22ad8b7e}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+Row)
+\item 
+\hyperlink{dochandler_8h_ab1d979687a4503c9593071e5eeb6536f}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+Entry)
+\item 
+\hyperlink{dochandler_8h_ac5966b40b425170339314b7963bfbfe7}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (\hyperlink{class_doc_section}{Doc\+Section})
+\item 
+\hyperlink{dochandler_8h_acfc2dcefe898d667767d48b96a8d4ee0}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (\hyperlink{class_doc_verbatim}{Doc\+Verbatim})
+\item 
+\hyperlink{dochandler_8h_afdb699f6979e3b75f33db3669470f29d}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (\hyperlink{class_doc_copy}{Doc\+Copy})
+\item 
+\hyperlink{dochandler_8h_ae1e23634d6d8b914dfd66c4e1203a59b}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+Toc\+List)
+\item 
+\hyperlink{dochandler_8h_a1ad8e1346967eded45b56e54e10f5407}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (Doc\+Toc\+Item)
+\item 
+\hyperlink{dochandler_8h_a735e3d50ae46a46c5fef4ea314f3faea}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (\hyperlink{class_doc_anchor}{Doc\+Anchor})
+\item 
+\hyperlink{dochandler_8h_aa71ecb7da7bc11238d67b55ef1dea08a}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (\hyperlink{class_doc_symbol}{Doc\+Symbol})
+\item 
+\hyperlink{dochandler_8h_a557dc1e4019c98ae6c035f8df683158b}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (\hyperlink{class_doc_internal}{Doc\+Internal})
+\item 
+\hyperlink{dochandler_8h_a133f8945159a6065d79f782046feb6ea}{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L} (\hyperlink{class_doc_root}{Doc\+Root})
+\item 
+void \hyperlink{dochandler_8h_a734d5eaaf912457add8d159c7a567809}{dochandler\+\_\+init} ()
+\item 
+void \hyperlink{dochandler_8h_affbaf34d12e5a654e24ec3eca4c4842a}{dochandler\+\_\+exit} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{dochandler_8h_a5df73eeb0fdcdb825f4fcc9f9e6a5a9d}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(
+\begin{DoxyParamCaption}
+\item[{}]{cls}
+\end{DoxyParamCaption}
+)~class cls\#\#Impl \+: public I\#\#cls, public {\bf Doc\+Impl} \{ public\+: virtual $\sim$cls\#\#Impl() \{\} \}}\label{dochandler_8h_a5df73eeb0fdcdb825f4fcc9f9e6a5a9d}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{dochandler_8h_a24fec1c3d285d313125b07e6ea05ecba}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Markup)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+Markup}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a24fec1c3d285d313125b07e6ea05ecba}
+\hypertarget{dochandler_8h_a16cee57db23928f95fa08db7a73c71d3}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Para)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Para}}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a16cee57db23928f95fa08db7a73c71d3}
+\hypertarget{dochandler_8h_ab1852fdb74f8e057ad7c6a20c2a238c1}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Text)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Text}}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_ab1852fdb74f8e057ad7c6a20c2a238c1}
+\hypertarget{dochandler_8h_a8a8cf0a9fb8367be9de1932c5e87a9eb}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Markup\+Modifier)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+Markup\+Modifier}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a8a8cf0a9fb8367be9de1932c5e87a9eb}
+\hypertarget{dochandler_8h_a6cfb9ec27a212afb3ff42bc8ef3111f2}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Itemized\+List)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+Itemized\+List}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a6cfb9ec27a212afb3ff42bc8ef3111f2}
+\hypertarget{dochandler_8h_a28717a619ae8b27bb7dd51da9146ed2a}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Ordered\+List)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+Ordered\+List}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a28717a619ae8b27bb7dd51da9146ed2a}
+\hypertarget{dochandler_8h_a8b37e2841613a7e212aeb533f39486f0}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+List\+Item)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+List\+Item}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a8b37e2841613a7e212aeb533f39486f0}
+\hypertarget{dochandler_8h_a73cfce8be7497ef399690d3c407de022}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Parameter\+List)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+Parameter\+List}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a73cfce8be7497ef399690d3c407de022}
+\hypertarget{dochandler_8h_ac4ff1c1f5f59afdc4627ebb28854043d}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Parameter\+Item)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+Parameter\+Item}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_ac4ff1c1f5f59afdc4627ebb28854043d}
+\hypertarget{dochandler_8h_ae87ed8bc8ef0e0d0e76edc4dd5a25315}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Parameter)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+Parameter}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_ae87ed8bc8ef0e0d0e76edc4dd5a25315}
+\hypertarget{dochandler_8h_a538cf036c53c74274cb398ccfb01dde9}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Title)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Title}}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a538cf036c53c74274cb398ccfb01dde9}
+\hypertarget{dochandler_8h_ac8a1bda2156daa205ee50bef0eabd281}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Simple\+Sect)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Simple\+Sect}}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_ac8a1bda2156daa205ee50bef0eabd281}
+\hypertarget{dochandler_8h_a5e8beb1348356b94e44a5214ad9784c1}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Ref)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Ref}}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a5e8beb1348356b94e44a5214ad9784c1}
+\hypertarget{dochandler_8h_a481eb667b33fd74064faa8a49a81ffab}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Variable\+List)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+Variable\+List}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a481eb667b33fd74064faa8a49a81ffab}
+\hypertarget{dochandler_8h_ab23a177de0aebfc728558f1cb5b7ca09}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Variable\+List\+Entry)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+Variable\+List\+Entry}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_ab23a177de0aebfc728558f1cb5b7ca09}
+\hypertarget{dochandler_8h_ae67e69441a243896ed480f6a6cfc53ac}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+H\+Ruler)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+H\+Ruler}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_ae67e69441a243896ed480f6a6cfc53ac}
+\hypertarget{dochandler_8h_a864909b1875326573476b9e90a344c48}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Line\+Break)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Line\+Break}}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a864909b1875326573476b9e90a344c48}
+\hypertarget{dochandler_8h_afeb86e5736d7d4e98b5ff87736dcb75f}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+U\+Link)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+U\+Link}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_afeb86e5736d7d4e98b5ff87736dcb75f}
+\hypertarget{dochandler_8h_a9af6a4ec52aac5120ceb38b21512063d}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+E\+Mail)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+E\+Mail}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a9af6a4ec52aac5120ceb38b21512063d}
+\hypertarget{dochandler_8h_aff3b9a025eedb59045be2b5bdadba84c}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Link)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Link}}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_aff3b9a025eedb59045be2b5bdadba84c}
+\hypertarget{dochandler_8h_a5cd0aa256c74a39c189e17f628b6167b}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Program\+Listing)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+Program\+Listing}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a5cd0aa256c74a39c189e17f628b6167b}
+\hypertarget{dochandler_8h_a70f0b3f05b1cd64d00efc72048f36a76}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Code\+Line)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+Code\+Line}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a70f0b3f05b1cd64d00efc72048f36a76}
+\hypertarget{dochandler_8h_a815e16772b1e71e9a2ba4c07a4f19629}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Highlight)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+Highlight}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a815e16772b1e71e9a2ba4c07a4f19629}
+\hypertarget{dochandler_8h_a9ee89b942d03cb1fb8e8eb587c34dd3e}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Formula)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Formula}}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a9ee89b942d03cb1fb8e8eb587c34dd3e}
+\hypertarget{dochandler_8h_a691166d61852b7ddf00ec694a3e0278f}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Image)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Image}}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a691166d61852b7ddf00ec694a3e0278f}
+\hypertarget{dochandler_8h_a691ed1666d651dfed4ca6e2e2bab4f43}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Dot\+File)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Dot\+File}}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a691ed1666d651dfed4ca6e2e2bab4f43}
+\hypertarget{dochandler_8h_a7dd13c772f2e88c4d0f918a84df4618a}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Index\+Entry)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Index\+Entry}}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a7dd13c772f2e88c4d0f918a84df4618a}
+\hypertarget{dochandler_8h_a6465e1c15419d60ca7e3a2754d2475cf}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Table)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+Table}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a6465e1c15419d60ca7e3a2754d2475cf}
+\hypertarget{dochandler_8h_a9c115293b613858cc8eebebc22ad8b7e}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Row)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+Row}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a9c115293b613858cc8eebebc22ad8b7e}
+\hypertarget{dochandler_8h_ab1d979687a4503c9593071e5eeb6536f}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Entry)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+Entry}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_ab1d979687a4503c9593071e5eeb6536f}
+\hypertarget{dochandler_8h_ac5966b40b425170339314b7963bfbfe7}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Section)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Section}}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_ac5966b40b425170339314b7963bfbfe7}
+\hypertarget{dochandler_8h_acfc2dcefe898d667767d48b96a8d4ee0}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Verbatim)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Verbatim}}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_acfc2dcefe898d667767d48b96a8d4ee0}
+\hypertarget{dochandler_8h_afdb699f6979e3b75f33db3669470f29d}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Copy)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Copy}}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_afdb699f6979e3b75f33db3669470f29d}
+\hypertarget{dochandler_8h_ae1e23634d6d8b914dfd66c4e1203a59b}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Toc\+List)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+Toc\+List}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_ae1e23634d6d8b914dfd66c4e1203a59b}
+\hypertarget{dochandler_8h_a1ad8e1346967eded45b56e54e10f5407}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Toc\+Item)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{Doc\+Toc\+Item}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a1ad8e1346967eded45b56e54e10f5407}
+\hypertarget{dochandler_8h_a735e3d50ae46a46c5fef4ea314f3faea}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Anchor)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Anchor}}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a735e3d50ae46a46c5fef4ea314f3faea}
+\hypertarget{dochandler_8h_aa71ecb7da7bc11238d67b55ef1dea08a}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Symbol)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Symbol}}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_aa71ecb7da7bc11238d67b55ef1dea08a}
+\hypertarget{dochandler_8h_a557dc1e4019c98ae6c035f8df683158b}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Internal)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Internal}}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a557dc1e4019c98ae6c035f8df683158b}
+\hypertarget{dochandler_8h_a133f8945159a6065d79f782046feb6ea}{}\index{dochandler.\+h@{dochandler.\+h}!D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L@{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L(\+Doc\+Root)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+C\+L\+S\+\_\+\+I\+M\+P\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Root}}]{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a133f8945159a6065d79f782046feb6ea}
+\hypertarget{dochandler_8h_affbaf34d12e5a654e24ec3eca4c4842a}{}\index{dochandler.\+h@{dochandler.\+h}!dochandler\+\_\+exit@{dochandler\+\_\+exit}}
+\index{dochandler\+\_\+exit@{dochandler\+\_\+exit}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{dochandler\+\_\+exit()}]{\setlength{\rightskip}{0pt plus 5cm}void dochandler\+\_\+exit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_affbaf34d12e5a654e24ec3eca4c4842a}
+\hypertarget{dochandler_8h_a734d5eaaf912457add8d159c7a567809}{}\index{dochandler.\+h@{dochandler.\+h}!dochandler\+\_\+init@{dochandler\+\_\+init}}
+\index{dochandler\+\_\+init@{dochandler\+\_\+init}!dochandler.\+h@{dochandler.\+h}}
+\subsubsection[{dochandler\+\_\+init()}]{\setlength{\rightskip}{0pt plus 5cm}void dochandler\+\_\+init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{dochandler_8h_a734d5eaaf912457add8d159c7a567809}

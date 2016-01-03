@@ -1,0 +1,128 @@
+\hypertarget{class_template_engine}{}\section{Référence de la classe Template\+Engine}
+\label{class_template_engine}\index{Template\+Engine@{Template\+Engine}}
+
+
+Engine to create templates and template contexts.  
+
+
+
+
+{\ttfamily \#include $<$template.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_template_engine_1_1_private}{Private}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_template_engine_1_1_private}{Private} data of the template engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_template_engine_ad12f5d696ed3fc82fd729e1b6892d328}{Template\+Engine} ()
+\item 
+\hyperlink{class_template_engine_a8648e1b96a8c4bff1fe1b2c38a84948b}{$\sim$\+Template\+Engine} ()
+\item 
+\hyperlink{class_template_context}{Template\+Context} $\ast$ \hyperlink{class_template_engine_a2863516c0e38758c45a6ee0de151c740}{create\+Context} () const 
+\item 
+void \hyperlink{class_template_engine_ae3bbdafa4c8c0c912f64300643d0b37f}{destroy\+Context} (\hyperlink{class_template_context}{Template\+Context} $\ast$ctx)
+\item 
+\hyperlink{class_template}{Template} $\ast$ \hyperlink{class_template_engine_a518bcc65a14287f897eebad289ecdd11}{load\+By\+Name} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&file\+Name, int from\+Line)
+\item 
+void \hyperlink{class_template_engine_a6050af3395989e4521969369ea7c2de0}{unload} (\hyperlink{class_template}{Template} $\ast$\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t})
+\item 
+void \hyperlink{class_template_engine_a192b40d554fd8bcc11726204dfa5a0a7}{print\+Include\+Context} (const char $\ast$file\+Name, int line) const 
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_template_engine_a593d2451d446162c730018cba7cf8687}{Template\+Node\+Block}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Engine to create templates and template contexts. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_template_engine_ad12f5d696ed3fc82fd729e1b6892d328}{}\index{Template\+Engine@{Template\+Engine}!Template\+Engine@{Template\+Engine}}
+\index{Template\+Engine@{Template\+Engine}!Template\+Engine@{Template\+Engine}}
+\subsubsection[{Template\+Engine()}]{\setlength{\rightskip}{0pt plus 5cm}Template\+Engine\+::\+Template\+Engine (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_template_engine_ad12f5d696ed3fc82fd729e1b6892d328}
+Create a template engine. \hypertarget{class_template_engine_a8648e1b96a8c4bff1fe1b2c38a84948b}{}\index{Template\+Engine@{Template\+Engine}!````~Template\+Engine@{$\sim$\+Template\+Engine}}
+\index{````~Template\+Engine@{$\sim$\+Template\+Engine}!Template\+Engine@{Template\+Engine}}
+\subsubsection[{$\sim$\+Template\+Engine()}]{\setlength{\rightskip}{0pt plus 5cm}Template\+Engine\+::$\sim$\+Template\+Engine (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_template_engine_a8648e1b96a8c4bff1fe1b2c38a84948b}
+Destroys the template engine. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_template_engine_a2863516c0e38758c45a6ee0de151c740}{}\index{Template\+Engine@{Template\+Engine}!create\+Context@{create\+Context}}
+\index{create\+Context@{create\+Context}!Template\+Engine@{Template\+Engine}}
+\subsubsection[{create\+Context() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Context} $\ast$ Template\+Engine\+::create\+Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_template_engine_a2863516c0e38758c45a6ee0de151c740}
+Creates a new context that can be using to render a template. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_template_af9582cccc21e9aea39bd3fdbc609b03c}{Template\+::render()} 
+\end{DoxySeeAlso}
+\hypertarget{class_template_engine_ae3bbdafa4c8c0c912f64300643d0b37f}{}\index{Template\+Engine@{Template\+Engine}!destroy\+Context@{destroy\+Context}}
+\index{destroy\+Context@{destroy\+Context}!Template\+Engine@{Template\+Engine}}
+\subsubsection[{destroy\+Context(\+Template\+Context $\ast$ctx)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Engine\+::destroy\+Context (
+\begin{DoxyParamCaption}
+\item[{{\bf Template\+Context} $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}\label{class_template_engine_ae3bbdafa4c8c0c912f64300643d0b37f}
+Destroys a context created via \hyperlink{class_template_engine_a2863516c0e38758c45a6ee0de151c740}{create\+Context()}. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em ctx} & The context. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_template_engine_a518bcc65a14287f897eebad289ecdd11}{}\index{Template\+Engine@{Template\+Engine}!load\+By\+Name@{load\+By\+Name}}
+\index{load\+By\+Name@{load\+By\+Name}!Template\+Engine@{Template\+Engine}}
+\subsubsection[{load\+By\+Name(const Q\+C\+String \&file\+Name, int from\+Line)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template} $\ast$ Template\+Engine\+::load\+By\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{file\+Name, }
+\item[{int}]{from\+Line}
+\end{DoxyParamCaption}
+)}\label{class_template_engine_a518bcc65a14287f897eebad289ecdd11}
+Creates a new template whole contents are in a file. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em file\+Name} & The name of the file containing the template data \\
+\hline
+\mbox{\tt in}  & {\em from\+Line} & The line number of the statement that triggered the load \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the new template, the caller will be the owner. 
+\end{DoxyReturn}
+\hypertarget{class_template_engine_a192b40d554fd8bcc11726204dfa5a0a7}{}\index{Template\+Engine@{Template\+Engine}!print\+Include\+Context@{print\+Include\+Context}}
+\index{print\+Include\+Context@{print\+Include\+Context}!Template\+Engine@{Template\+Engine}}
+\subsubsection[{print\+Include\+Context(const char $\ast$file\+Name, int line) const }]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Engine\+::print\+Include\+Context (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name, }
+\item[{int}]{line}
+\end{DoxyParamCaption}
+) const}\label{class_template_engine_a192b40d554fd8bcc11726204dfa5a0a7}
+\hypertarget{class_template_engine_a6050af3395989e4521969369ea7c2de0}{}\index{Template\+Engine@{Template\+Engine}!unload@{unload}}
+\index{unload@{unload}!Template\+Engine@{Template\+Engine}}
+\subsubsection[{unload(\+Template $\ast$t)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Engine\+::unload (
+\begin{DoxyParamCaption}
+\item[{{\bf Template} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\label{class_template_engine_a6050af3395989e4521969369ea7c2de0}
+Indicates that template {\itshape t} is no longer needed. The engine may decide to delete it. 
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_template_engine_a593d2451d446162c730018cba7cf8687}{}\index{Template\+Engine@{Template\+Engine}!Template\+Node\+Block@{Template\+Node\+Block}}
+\index{Template\+Node\+Block@{Template\+Node\+Block}!Template\+Engine@{Template\+Engine}}
+\subsubsection[{Template\+Node\+Block}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Template\+Node\+Block}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_template_engine_a593d2451d446162c730018cba7cf8687}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{template_8h}{template.\+h}\item 
+src/\hyperlink{template_8cpp}{template.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,313 @@
+\hypertarget{class_config_option}{}\section{Référence de la classe Config\+Option}
+\label{class_config_option}\index{Config\+Option@{Config\+Option}}
+
+
+{\ttfamily \#include $<$config.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Config\+Option\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{class_config_option}
+\end{center}
+\end{figure}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_config_option_ad60cb308cdf307e72796dc2fc2a40fda}{Option\+Type} \{ \\*
+\hyperlink{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaade872bcb27f40e3380fb20be7cea9e57}{O\+\_\+\+Info}, 
+\hyperlink{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaa18c0785bb1948fb57402ee80324ef1a7}{O\+\_\+\+List}, 
+\hyperlink{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaa1ba2565ddffed94550a83a5b537e6a31}{O\+\_\+\+Enum}, 
+\hyperlink{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaa3aa84b958a247d79889f28f4244a7d7f}{O\+\_\+\+String}, 
+\\*
+\hyperlink{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaac029c8062b88308de12914e88e12dcd8}{O\+\_\+\+Int}, 
+\hyperlink{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaa306962172c18f2b309fb729e66e32e81}{O\+\_\+\+Bool}, 
+\hyperlink{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaab60c019594029c214e601ec24988d6ac}{O\+\_\+\+Obsolete}, 
+\hyperlink{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaa116df5f47c0442ad31ca0193cf540701}{O\+\_\+\+Disabled}
+ \}
+\item 
+enum \{ \hyperlink{class_config_option_a7e6106faa6a60aebbb84ff484e4ec85faa40e4123355dbeb41dc6ca0c68c0d346}{M\+A\+X\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+L\+E\+N\+G\+T\+H} = 23
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_config_option_a3ce6753bba05ab1ee7e5eaaec6d8f1ac}{Config\+Option} (\hyperlink{class_config_option_ad60cb308cdf307e72796dc2fc2a40fda}{Option\+Type} \hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t})
+\item 
+virtual \hyperlink{class_config_option_ae9ef259a262e4422ade948313b6dd74a}{$\sim$\+Config\+Option} ()
+\item 
+\hyperlink{class_config_option_ad60cb308cdf307e72796dc2fc2a40fda}{Option\+Type} \hyperlink{class_config_option_a9c75888abf6d37cfe9d00ac40ecc474d}{kind} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_config_option_a2f226c32b0c447c1fa628660f42859c4}{name} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_config_option_aca53064314cae27e5e650c780c10015c}{docs} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_config_option_acd3c60d9556e68951d43dc3422024cdb}{depends\+On} () const 
+\item 
+void \hyperlink{class_config_option_a290d4454155543728847a75ade256a32}{add\+Dependency} (const char $\ast$dep)
+\item 
+void \hyperlink{class_config_option_a0ac357ec83d2014603c8d70a00c27a33}{set\+Encoding} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{060__command__switch_8tcl_aff65a51a703804e0ad1adbcfd76c86f8}{e})
+\item 
+void \hyperlink{class_config_option_a5baa3fb6c4fb6ec667eb91172f3f398a}{set\+User\+Comment} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&u)
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_config_option_a4af9c041d81cc919e5aae2210087bc38}{write\+Template} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} sl, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} upd)=0
+\item 
+virtual void \hyperlink{class_config_option_af1d26523f37d742316ddc4c0f9add4fc}{convert\+Str\+To\+Val} ()
+\item 
+virtual void \hyperlink{class_config_option_aeb6ac539f2fe79e07f2baefd5c4d89c1}{subst\+Env\+Vars} ()=0
+\item 
+virtual void \hyperlink{class_config_option_a1dabfad39230674fc07f5f535392fd35}{init} ()
+\item 
+void \hyperlink{class_config_option_a0762b14d6706667da888cd9c56c6f1e7}{write\+Bool\+Value} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} v)
+\item 
+void \hyperlink{class_config_option_a759c9a9621a46b28dcedd5c22a0e271f}{write\+Int\+Value} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, int \hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+void \hyperlink{class_config_option_a6e36e0022317d91fd50398119420ad02}{write\+String\+Value} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+void \hyperlink{class_config_option_abd1fe2acb02bd19ed4ec67b6a60ce446}{write\+String\+List} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, \hyperlink{class_q_str_list}{Q\+Str\+List} \&\hyperlink{060__command__switch_8tcl_aff56f84b49947b84b2a304f51cf8e678}{l})
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_config_option_aa3ef6fe13a480dad1404aee1bb0f2d11}{m\+\_\+spaces}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_config_option_a4f081d447f2443212d0d032da63b20d7}{m\+\_\+name}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_config_option_a28fdea8e9fdf86e73faae697454c17ab}{m\+\_\+doc}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_config_option_a5146ef81dc662e3c5b2f1e9d1f3c600e}{m\+\_\+dependency}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_config_option_a4953007ad225b5996adf18275f59e922}{m\+\_\+encoding}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_config_option_a5e54ead18c124c6c6c03ed3b678a7103}{m\+\_\+user\+Comment}
+\item 
+\hyperlink{class_config_option_ad60cb308cdf307e72796dc2fc2a40fda}{Option\+Type} \hyperlink{class_config_option_a64896a35334d6ab865f8038fb65024ac}{m\+\_\+kind}
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_config_option_ac3da7e21a05bf8852638db7e4dd1b81a}{Config}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Abstract base class for any configuration option. 
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{class_config_option_a7e6106faa6a60aebbb84ff484e4ec85f}{}\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_config_option_a7e6106faa6a60aebbb84ff484e4ec85f}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{M\+A\+X\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+L\+E\+N\+G\+T\+H@{M\+A\+X\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+L\+E\+N\+G\+T\+H}!Config\+Option@{Config\+Option}}\index{Config\+Option@{Config\+Option}!M\+A\+X\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+L\+E\+N\+G\+T\+H@{M\+A\+X\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+L\+E\+N\+G\+T\+H}}\item[{\em 
+\hypertarget{class_config_option_a7e6106faa6a60aebbb84ff484e4ec85faa40e4123355dbeb41dc6ca0c68c0d346}{}M\+A\+X\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+L\+E\+N\+G\+T\+H\label{class_config_option_a7e6106faa6a60aebbb84ff484e4ec85faa40e4123355dbeb41dc6ca0c68c0d346}
+}]Maximum length of an option in the config file. Used for alignment purposes. \end{description}
+\end{Desc}
+\hypertarget{class_config_option_ad60cb308cdf307e72796dc2fc2a40fda}{}\index{Config\+Option@{Config\+Option}!Option\+Type@{Option\+Type}}
+\index{Option\+Type@{Option\+Type}!Config\+Option@{Config\+Option}}
+\subsubsection[{Option\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Config\+Option\+::\+Option\+Type}}\label{class_config_option_ad60cb308cdf307e72796dc2fc2a40fda}
+The type of option \begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{O\+\_\+\+Info@{O\+\_\+\+Info}!Config\+Option@{Config\+Option}}\index{Config\+Option@{Config\+Option}!O\+\_\+\+Info@{O\+\_\+\+Info}}\item[{\em 
+\hypertarget{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaade872bcb27f40e3380fb20be7cea9e57}{}O\+\_\+\+Info\label{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaade872bcb27f40e3380fb20be7cea9e57}
+}]\index{O\+\_\+\+List@{O\+\_\+\+List}!Config\+Option@{Config\+Option}}\index{Config\+Option@{Config\+Option}!O\+\_\+\+List@{O\+\_\+\+List}}\item[{\em 
+\hypertarget{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaa18c0785bb1948fb57402ee80324ef1a7}{}O\+\_\+\+List\label{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaa18c0785bb1948fb57402ee80324ef1a7}
+}]\index{O\+\_\+\+Enum@{O\+\_\+\+Enum}!Config\+Option@{Config\+Option}}\index{Config\+Option@{Config\+Option}!O\+\_\+\+Enum@{O\+\_\+\+Enum}}\item[{\em 
+\hypertarget{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaa1ba2565ddffed94550a83a5b537e6a31}{}O\+\_\+\+Enum\label{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaa1ba2565ddffed94550a83a5b537e6a31}
+}]\index{O\+\_\+\+String@{O\+\_\+\+String}!Config\+Option@{Config\+Option}}\index{Config\+Option@{Config\+Option}!O\+\_\+\+String@{O\+\_\+\+String}}\item[{\em 
+\hypertarget{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaa3aa84b958a247d79889f28f4244a7d7f}{}O\+\_\+\+String\label{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaa3aa84b958a247d79889f28f4244a7d7f}
+}]\index{O\+\_\+\+Int@{O\+\_\+\+Int}!Config\+Option@{Config\+Option}}\index{Config\+Option@{Config\+Option}!O\+\_\+\+Int@{O\+\_\+\+Int}}\item[{\em 
+\hypertarget{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaac029c8062b88308de12914e88e12dcd8}{}O\+\_\+\+Int\label{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaac029c8062b88308de12914e88e12dcd8}
+}]\index{O\+\_\+\+Bool@{O\+\_\+\+Bool}!Config\+Option@{Config\+Option}}\index{Config\+Option@{Config\+Option}!O\+\_\+\+Bool@{O\+\_\+\+Bool}}\item[{\em 
+\hypertarget{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaa306962172c18f2b309fb729e66e32e81}{}O\+\_\+\+Bool\label{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaa306962172c18f2b309fb729e66e32e81}
+}]\index{O\+\_\+\+Obsolete@{O\+\_\+\+Obsolete}!Config\+Option@{Config\+Option}}\index{Config\+Option@{Config\+Option}!O\+\_\+\+Obsolete@{O\+\_\+\+Obsolete}}\item[{\em 
+\hypertarget{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaab60c019594029c214e601ec24988d6ac}{}O\+\_\+\+Obsolete\label{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaab60c019594029c214e601ec24988d6ac}
+}]\index{O\+\_\+\+Disabled@{O\+\_\+\+Disabled}!Config\+Option@{Config\+Option}}\index{Config\+Option@{Config\+Option}!O\+\_\+\+Disabled@{O\+\_\+\+Disabled}}\item[{\em 
+\hypertarget{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaa116df5f47c0442ad31ca0193cf540701}{}O\+\_\+\+Disabled\label{class_config_option_ad60cb308cdf307e72796dc2fc2a40fdaa116df5f47c0442ad31ca0193cf540701}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_config_option_a3ce6753bba05ab1ee7e5eaaec6d8f1ac}{}\index{Config\+Option@{Config\+Option}!Config\+Option@{Config\+Option}}
+\index{Config\+Option@{Config\+Option}!Config\+Option@{Config\+Option}}
+\subsubsection[{Config\+Option(\+Option\+Type t)}]{\setlength{\rightskip}{0pt plus 5cm}Config\+Option\+::\+Config\+Option (
+\begin{DoxyParamCaption}
+\item[{{\bf Option\+Type}}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_config_option_a3ce6753bba05ab1ee7e5eaaec6d8f1ac}
+\hypertarget{class_config_option_ae9ef259a262e4422ade948313b6dd74a}{}\index{Config\+Option@{Config\+Option}!````~Config\+Option@{$\sim$\+Config\+Option}}
+\index{````~Config\+Option@{$\sim$\+Config\+Option}!Config\+Option@{Config\+Option}}
+\subsubsection[{$\sim$\+Config\+Option()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Config\+Option\+::$\sim$\+Config\+Option (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_config_option_ae9ef259a262e4422ade948313b6dd74a}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_config_option_a290d4454155543728847a75ade256a32}{}\index{Config\+Option@{Config\+Option}!add\+Dependency@{add\+Dependency}}
+\index{add\+Dependency@{add\+Dependency}!Config\+Option@{Config\+Option}}
+\subsubsection[{add\+Dependency(const char $\ast$dep)}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+Option\+::add\+Dependency (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dep}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_config_option_a290d4454155543728847a75ade256a32}
+\hypertarget{class_config_option_af1d26523f37d742316ddc4c0f9add4fc}{}\index{Config\+Option@{Config\+Option}!convert\+Str\+To\+Val@{convert\+Str\+To\+Val}}
+\index{convert\+Str\+To\+Val@{convert\+Str\+To\+Val}!Config\+Option@{Config\+Option}}
+\subsubsection[{convert\+Str\+To\+Val()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Config\+Option\+::convert\+Str\+To\+Val (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_config_option_af1d26523f37d742316ddc4c0f9add4fc}
+
+
+Réimplémentée dans \hyperlink{class_config_bool_a5ebdef58b033f43ea09b1e5b0b44e330}{Config\+Bool}, et \hyperlink{class_config_int_ac4e9191ee5da6cef185c07dd686f94fb}{Config\+Int}.
+
+\hypertarget{class_config_option_acd3c60d9556e68951d43dc3422024cdb}{}\index{Config\+Option@{Config\+Option}!depends\+On@{depends\+On}}
+\index{depends\+On@{depends\+On}!Config\+Option@{Config\+Option}}
+\subsubsection[{depends\+On() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Config\+Option\+::depends\+On (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_config_option_acd3c60d9556e68951d43dc3422024cdb}
+\hypertarget{class_config_option_aca53064314cae27e5e650c780c10015c}{}\index{Config\+Option@{Config\+Option}!docs@{docs}}
+\index{docs@{docs}!Config\+Option@{Config\+Option}}
+\subsubsection[{docs() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Config\+Option\+::docs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_config_option_aca53064314cae27e5e650c780c10015c}
+\hypertarget{class_config_option_a1dabfad39230674fc07f5f535392fd35}{}\index{Config\+Option@{Config\+Option}!init@{init}}
+\index{init@{init}!Config\+Option@{Config\+Option}}
+\subsubsection[{init()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Config\+Option\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_config_option_a1dabfad39230674fc07f5f535392fd35}
+
+
+Réimplémentée dans \hyperlink{class_config_bool_a087fdcc229617e80faf798e90fe17439}{Config\+Bool}, \hyperlink{class_config_int_a20733b898775fb0b75c9a3e70662c3bf}{Config\+Int}, \hyperlink{class_config_string_ace07ea2ad1492f238771682286a7b79e}{Config\+String}, \hyperlink{class_config_enum_af827841fdcc6612dd7ff2fb6ec92eaad}{Config\+Enum}, et \hyperlink{class_config_list_a48019d23edc37549f47d41ce41c43298}{Config\+List}.
+
+\hypertarget{class_config_option_a9c75888abf6d37cfe9d00ac40ecc474d}{}\index{Config\+Option@{Config\+Option}!kind@{kind}}
+\index{kind@{kind}!Config\+Option@{Config\+Option}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Option\+Type} Config\+Option\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_config_option_a9c75888abf6d37cfe9d00ac40ecc474d}
+returns the kind of option this is. \hypertarget{class_config_option_a2f226c32b0c447c1fa628660f42859c4}{}\index{Config\+Option@{Config\+Option}!name@{name}}
+\index{name@{name}!Config\+Option@{Config\+Option}}
+\subsubsection[{name() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Config\+Option\+::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_config_option_a2f226c32b0c447c1fa628660f42859c4}
+\hypertarget{class_config_option_a0ac357ec83d2014603c8d70a00c27a33}{}\index{Config\+Option@{Config\+Option}!set\+Encoding@{set\+Encoding}}
+\index{set\+Encoding@{set\+Encoding}!Config\+Option@{Config\+Option}}
+\subsubsection[{set\+Encoding(const Q\+C\+String \&e)}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+Option\+::set\+Encoding (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_config_option_a0ac357ec83d2014603c8d70a00c27a33}
+\hypertarget{class_config_option_a5baa3fb6c4fb6ec667eb91172f3f398a}{}\index{Config\+Option@{Config\+Option}!set\+User\+Comment@{set\+User\+Comment}}
+\index{set\+User\+Comment@{set\+User\+Comment}!Config\+Option@{Config\+Option}}
+\subsubsection[{set\+User\+Comment(const Q\+C\+String \&u)}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+Option\+::set\+User\+Comment (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_config_option_a5baa3fb6c4fb6ec667eb91172f3f398a}
+\hypertarget{class_config_option_aeb6ac539f2fe79e07f2baefd5c4d89c1}{}\index{Config\+Option@{Config\+Option}!subst\+Env\+Vars@{subst\+Env\+Vars}}
+\index{subst\+Env\+Vars@{subst\+Env\+Vars}!Config\+Option@{Config\+Option}}
+\subsubsection[{subst\+Env\+Vars()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Config\+Option\+::subst\+Env\+Vars (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_config_option_aeb6ac539f2fe79e07f2baefd5c4d89c1}
+
+
+Implémenté dans \hyperlink{class_config_disabled_abee32dc488cf8350c44fa2203efd126d}{Config\+Disabled}, \hyperlink{class_config_obsolete_ad301e76c69eb68f61604856fa4180865}{Config\+Obsolete}, \hyperlink{class_config_bool_af9c3c0887533842db8cf9201a5b63486}{Config\+Bool}, \hyperlink{class_config_int_a9c8052e1163a97d8d798b317c2eb1cbf}{Config\+Int}, \hyperlink{class_config_string_a39a8a773cf8ef1c5b31fa1e02b49cb32}{Config\+String}, \hyperlink{class_config_enum_a6bce69a7f2e47d115ad136e56aca8158}{Config\+Enum}, \hyperlink{class_config_list_a46cdc3f64d1799a802fb2d00af2e3f65}{Config\+List}, et \hyperlink{class_config_info_ac8e7248d13bb1c291c9e1547ff1a1fa0}{Config\+Info}.
+
+\hypertarget{class_config_option_a0762b14d6706667da888cd9c56c6f1e7}{}\index{Config\+Option@{Config\+Option}!write\+Bool\+Value@{write\+Bool\+Value}}
+\index{write\+Bool\+Value@{write\+Bool\+Value}!Config\+Option@{Config\+Option}}
+\subsubsection[{write\+Bool\+Value(\+F\+Text\+Stream \&t, bool v)}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+Option\+::write\+Bool\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t, }
+\item[{{\bf bool}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_config_option_a0762b14d6706667da888cd9c56c6f1e7}
+\hypertarget{class_config_option_a759c9a9621a46b28dcedd5c22a0e271f}{}\index{Config\+Option@{Config\+Option}!write\+Int\+Value@{write\+Int\+Value}}
+\index{write\+Int\+Value@{write\+Int\+Value}!Config\+Option@{Config\+Option}}
+\subsubsection[{write\+Int\+Value(\+F\+Text\+Stream \&t, int i)}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+Option\+::write\+Int\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_config_option_a759c9a9621a46b28dcedd5c22a0e271f}
+\hypertarget{class_config_option_abd1fe2acb02bd19ed4ec67b6a60ce446}{}\index{Config\+Option@{Config\+Option}!write\+String\+List@{write\+String\+List}}
+\index{write\+String\+List@{write\+String\+List}!Config\+Option@{Config\+Option}}
+\subsubsection[{write\+String\+List(\+F\+Text\+Stream \&t, Q\+Str\+List \&l)}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+Option\+::write\+String\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t, }
+\item[{{\bf Q\+Str\+List} \&}]{l}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_config_option_abd1fe2acb02bd19ed4ec67b6a60ce446}
+\hypertarget{class_config_option_a6e36e0022317d91fd50398119420ad02}{}\index{Config\+Option@{Config\+Option}!write\+String\+Value@{write\+String\+Value}}
+\index{write\+String\+Value@{write\+String\+Value}!Config\+Option@{Config\+Option}}
+\subsubsection[{write\+String\+Value(\+F\+Text\+Stream \&t, Q\+C\+String \&s)}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+Option\+::write\+String\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t, }
+\item[{{\bf Q\+C\+String} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_config_option_a6e36e0022317d91fd50398119420ad02}
+\hypertarget{class_config_option_a4af9c041d81cc919e5aae2210087bc38}{}\index{Config\+Option@{Config\+Option}!write\+Template@{write\+Template}}
+\index{write\+Template@{write\+Template}!Config\+Option@{Config\+Option}}
+\subsubsection[{write\+Template(\+F\+Text\+Stream \&t, bool sl, bool upd)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Config\+Option\+::write\+Template (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t, }
+\item[{{\bf bool}}]{sl, }
+\item[{{\bf bool}}]{upd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_config_option_a4af9c041d81cc919e5aae2210087bc38}
+
+
+Implémenté dans \hyperlink{class_config_disabled_a5319ee3a5cab4a4e46f3f860b4a7cdcd}{Config\+Disabled}, \hyperlink{class_config_obsolete_a00e20cabc9f351c44d6a76c924903356}{Config\+Obsolete}, \hyperlink{class_config_bool_aab61095cad30bfb2e184eb389d4d4472}{Config\+Bool}, \hyperlink{class_config_int_a2194c67246255b4106f70604c3bfb48d}{Config\+Int}, \hyperlink{class_config_string_a9ba817d1e46850c6000fe2dd6d03ff8e}{Config\+String}, \hyperlink{class_config_enum_aa739cce5633d2e75298bef0f6cf7c84c}{Config\+Enum}, \hyperlink{class_config_list_abd14c6ac16fd90f2e501ab10bb61344f}{Config\+List}, et \hyperlink{class_config_info_a8effa474d1ed0481ad0bdd506cffcc63}{Config\+Info}.
+
+
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_config_option_ac3da7e21a05bf8852638db7e4dd1b81a}{}\index{Config\+Option@{Config\+Option}!Config@{Config}}
+\index{Config@{Config}!Config\+Option@{Config\+Option}}
+\subsubsection[{Config}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Config}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_config_option_ac3da7e21a05bf8852638db7e4dd1b81a}
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_config_option_a5146ef81dc662e3c5b2f1e9d1f3c600e}{}\index{Config\+Option@{Config\+Option}!m\+\_\+dependency@{m\+\_\+dependency}}
+\index{m\+\_\+dependency@{m\+\_\+dependency}!Config\+Option@{Config\+Option}}
+\subsubsection[{m\+\_\+dependency}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Config\+Option\+::m\+\_\+dependency\hspace{0.3cm}{\ttfamily [protected]}}\label{class_config_option_a5146ef81dc662e3c5b2f1e9d1f3c600e}
+\hypertarget{class_config_option_a28fdea8e9fdf86e73faae697454c17ab}{}\index{Config\+Option@{Config\+Option}!m\+\_\+doc@{m\+\_\+doc}}
+\index{m\+\_\+doc@{m\+\_\+doc}!Config\+Option@{Config\+Option}}
+\subsubsection[{m\+\_\+doc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Config\+Option\+::m\+\_\+doc\hspace{0.3cm}{\ttfamily [protected]}}\label{class_config_option_a28fdea8e9fdf86e73faae697454c17ab}
+\hypertarget{class_config_option_a4953007ad225b5996adf18275f59e922}{}\index{Config\+Option@{Config\+Option}!m\+\_\+encoding@{m\+\_\+encoding}}
+\index{m\+\_\+encoding@{m\+\_\+encoding}!Config\+Option@{Config\+Option}}
+\subsubsection[{m\+\_\+encoding}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Config\+Option\+::m\+\_\+encoding\hspace{0.3cm}{\ttfamily [protected]}}\label{class_config_option_a4953007ad225b5996adf18275f59e922}
+\hypertarget{class_config_option_a64896a35334d6ab865f8038fb65024ac}{}\index{Config\+Option@{Config\+Option}!m\+\_\+kind@{m\+\_\+kind}}
+\index{m\+\_\+kind@{m\+\_\+kind}!Config\+Option@{Config\+Option}}
+\subsubsection[{m\+\_\+kind}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Option\+Type} Config\+Option\+::m\+\_\+kind\hspace{0.3cm}{\ttfamily [protected]}}\label{class_config_option_a64896a35334d6ab865f8038fb65024ac}
+\hypertarget{class_config_option_a4f081d447f2443212d0d032da63b20d7}{}\index{Config\+Option@{Config\+Option}!m\+\_\+name@{m\+\_\+name}}
+\index{m\+\_\+name@{m\+\_\+name}!Config\+Option@{Config\+Option}}
+\subsubsection[{m\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Config\+Option\+::m\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_config_option_a4f081d447f2443212d0d032da63b20d7}
+\hypertarget{class_config_option_aa3ef6fe13a480dad1404aee1bb0f2d11}{}\index{Config\+Option@{Config\+Option}!m\+\_\+spaces@{m\+\_\+spaces}}
+\index{m\+\_\+spaces@{m\+\_\+spaces}!Config\+Option@{Config\+Option}}
+\subsubsection[{m\+\_\+spaces}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Config\+Option\+::m\+\_\+spaces\hspace{0.3cm}{\ttfamily [protected]}}\label{class_config_option_aa3ef6fe13a480dad1404aee1bb0f2d11}
+\hypertarget{class_config_option_a5e54ead18c124c6c6c03ed3b678a7103}{}\index{Config\+Option@{Config\+Option}!m\+\_\+user\+Comment@{m\+\_\+user\+Comment}}
+\index{m\+\_\+user\+Comment@{m\+\_\+user\+Comment}!Config\+Option@{Config\+Option}}
+\subsubsection[{m\+\_\+user\+Comment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Config\+Option\+::m\+\_\+user\+Comment\hspace{0.3cm}{\ttfamily [protected]}}\label{class_config_option_a5e54ead18c124c6c6c03ed3b678a7103}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{src_2config_8h}{config.\+h}\item 
+generated\+\_\+src/doxygen/\hyperlink{config_8cpp}{config.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,77 @@
+\hypertarget{md5_8h}{}\section{Référence du fichier libmd5/md5.h}
+\label{md5_8h}\index{libmd5/md5.\+h@{libmd5/md5.\+h}}
+{\ttfamily \#include \char`\"{}md5\+\_\+loc.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_m_d5_context}{M\+D5\+Context}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{md5_8h_ab306c43dedbcb8f0fbe03d020c2c4e2f}{md5byte}~unsigned char
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{md5_8h_a6bdca55813077d1c652a1f63608dac30}{M\+D5\+Init} (struct \hyperlink{struct_m_d5_context}{M\+D5\+Context} $\ast$context)
+\item 
+void \hyperlink{md5_8h_a7735e7e11e4b8fe91be21e8d54ba4cb0}{M\+D5\+Update} (struct \hyperlink{struct_m_d5_context}{M\+D5\+Context} $\ast$context, \hyperlink{md5_8h_ab306c43dedbcb8f0fbe03d020c2c4e2f}{md5byte} const $\ast$buf, unsigned len)
+\item 
+void \hyperlink{md5_8h_a7132b90c03637ae151c1a8befd7989f2}{M\+D5\+Final} (unsigned char digest\mbox{[}16\mbox{]}, struct \hyperlink{struct_m_d5_context}{M\+D5\+Context} $\ast$context)
+\item 
+void \hyperlink{md5_8h_ac6503dc424d32efec87bdc1218b64a07}{M\+D5\+Buffer} (const unsigned char $\ast$buf, unsigned int len, unsigned char sig\mbox{[}16\mbox{]})
+\item 
+void \hyperlink{md5_8h_a9eabc132b9790451ecf81dd73abf4dda}{M\+D5\+Sig\+To\+String} (unsigned char sig\mbox{[}16\mbox{]}, char $\ast$str, int len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{md5_8h_ab306c43dedbcb8f0fbe03d020c2c4e2f}{}\index{md5.\+h@{md5.\+h}!md5byte@{md5byte}}
+\index{md5byte@{md5byte}!md5.\+h@{md5.\+h}}
+\subsubsection[{md5byte}]{\setlength{\rightskip}{0pt plus 5cm}\#define md5byte~unsigned char}\label{md5_8h_ab306c43dedbcb8f0fbe03d020c2c4e2f}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{md5_8h_ac6503dc424d32efec87bdc1218b64a07}{}\index{md5.\+h@{md5.\+h}!M\+D5\+Buffer@{M\+D5\+Buffer}}
+\index{M\+D5\+Buffer@{M\+D5\+Buffer}!md5.\+h@{md5.\+h}}
+\subsubsection[{M\+D5\+Buffer(const unsigned char $\ast$buf, unsigned int len, unsigned char sig[16])}]{\setlength{\rightskip}{0pt plus 5cm}void M\+D5\+Buffer (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$}]{buf, }
+\item[{unsigned int}]{len, }
+\item[{unsigned char}]{sig\mbox{[}16\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{md5_8h_ac6503dc424d32efec87bdc1218b64a07}
+\hypertarget{md5_8h_a7132b90c03637ae151c1a8befd7989f2}{}\index{md5.\+h@{md5.\+h}!M\+D5\+Final@{M\+D5\+Final}}
+\index{M\+D5\+Final@{M\+D5\+Final}!md5.\+h@{md5.\+h}}
+\subsubsection[{M\+D5\+Final(unsigned char digest[16], struct M\+D5\+Context $\ast$context)}]{\setlength{\rightskip}{0pt plus 5cm}void M\+D5\+Final (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{digest\mbox{[}16\mbox{]}, }
+\item[{struct {\bf M\+D5\+Context} $\ast$ context}]{}
+\end{DoxyParamCaption}
+)}\label{md5_8h_a7132b90c03637ae151c1a8befd7989f2}
+\hypertarget{md5_8h_a6bdca55813077d1c652a1f63608dac30}{}\index{md5.\+h@{md5.\+h}!M\+D5\+Init@{M\+D5\+Init}}
+\index{M\+D5\+Init@{M\+D5\+Init}!md5.\+h@{md5.\+h}}
+\subsubsection[{M\+D5\+Init(struct M\+D5\+Context $\ast$context)}]{\setlength{\rightskip}{0pt plus 5cm}void M\+D5\+Init (
+\begin{DoxyParamCaption}
+\item[{struct {\bf M\+D5\+Context} $\ast$ context}]{}
+\end{DoxyParamCaption}
+)}\label{md5_8h_a6bdca55813077d1c652a1f63608dac30}
+\hypertarget{md5_8h_a9eabc132b9790451ecf81dd73abf4dda}{}\index{md5.\+h@{md5.\+h}!M\+D5\+Sig\+To\+String@{M\+D5\+Sig\+To\+String}}
+\index{M\+D5\+Sig\+To\+String@{M\+D5\+Sig\+To\+String}!md5.\+h@{md5.\+h}}
+\subsubsection[{M\+D5\+Sig\+To\+String(unsigned char sig[16], char $\ast$str, int len)}]{\setlength{\rightskip}{0pt plus 5cm}void M\+D5\+Sig\+To\+String (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{sig\mbox{[}16\mbox{]}, }
+\item[{char $\ast$}]{str, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}\label{md5_8h_a9eabc132b9790451ecf81dd73abf4dda}
+\hypertarget{md5_8h_a7735e7e11e4b8fe91be21e8d54ba4cb0}{}\index{md5.\+h@{md5.\+h}!M\+D5\+Update@{M\+D5\+Update}}
+\index{M\+D5\+Update@{M\+D5\+Update}!md5.\+h@{md5.\+h}}
+\subsubsection[{M\+D5\+Update(struct M\+D5\+Context $\ast$context, md5byte const $\ast$buf, unsigned len)}]{\setlength{\rightskip}{0pt plus 5cm}void M\+D5\+Update (
+\begin{DoxyParamCaption}
+\item[{struct {\bf M\+D5\+Context} $\ast$ context}]{, }
+\item[{{\bf md5byte} const $\ast$}]{buf, }
+\item[{unsigned}]{len}
+\end{DoxyParamCaption}
+)}\label{md5_8h_a7735e7e11e4b8fe91be21e8d54ba4cb0}

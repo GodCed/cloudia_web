@@ -1,0 +1,127 @@
+\hypertarget{class_doc_section}{}\section{Référence de la classe Doc\+Section}
+\label{class_doc_section}\index{Doc\+Section@{Doc\+Section}}
+
+
+{\ttfamily \#include $<$docparser.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Doc\+Section\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doc_section}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_section_aba57080652e8febfe7bb550438d59df7}{Doc\+Section} (\hyperlink{class_doc_node}{Doc\+Node} $\ast$\hyperlink{class_doc_node_a990d8b983962776a647e6231d38bd329}{parent}, int \hyperlink{class_doc_section_a8dc6eaf3ab872e02f71570a7df0571b4}{level}, const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{class_doc_section_ade8a1e9d2414fa80e0549a9ca8d46121}{id})
+\item 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadb}{Kind} \hyperlink{class_doc_section_a0a88929cb01b6ce40417cffccc62baae}{kind} () const 
+\item 
+int \hyperlink{class_doc_section_a8dc6eaf3ab872e02f71570a7df0571b4}{level} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_section_a04decc0584018ae55d8ac9262d9b105f}{title} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_section_a995432e6366efd49d70ac381e04ad264}{anchor} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_section_ade8a1e9d2414fa80e0549a9ca8d46121}{id} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_section_a2041de375eb77b572e00470f97355e85}{file} () const 
+\item 
+void \hyperlink{class_doc_section_a18117f5ac173ad791c25cd0620703909}{accept} (\hyperlink{class_doc_visitor}{Doc\+Visitor} $\ast$v)
+\item 
+int \hyperlink{class_doc_section_a7c92ebabb4381f1bd83cd5f1db4ebc15}{parse} ()
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Node representing a normal section 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_doc_section_aba57080652e8febfe7bb550438d59df7}{}\index{Doc\+Section@{Doc\+Section}!Doc\+Section@{Doc\+Section}}
+\index{Doc\+Section@{Doc\+Section}!Doc\+Section@{Doc\+Section}}
+\subsubsection[{Doc\+Section(\+Doc\+Node $\ast$parent, int level, const Q\+C\+String \&id)}]{\setlength{\rightskip}{0pt plus 5cm}Doc\+Section\+::\+Doc\+Section (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Node} $\ast$}]{parent, }
+\item[{int}]{level, }
+\item[{const {\bf Q\+C\+String} \&}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_section_aba57080652e8febfe7bb550438d59df7}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_doc_section_a18117f5ac173ad791c25cd0620703909}{}\index{Doc\+Section@{Doc\+Section}!accept@{accept}}
+\index{accept@{accept}!Doc\+Section@{Doc\+Section}}
+\subsubsection[{accept(\+Doc\+Visitor $\ast$v)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Section\+::accept (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Visitor} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_section_a18117f5ac173ad791c25cd0620703909}
+Acceptor function for node visitors. Part of the visitor pattern. 
+\begin{DoxyParams}{Paramètres}
+{\em v} & Abstract visitor. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_doc_node_a5303a550cbe6395663bf9b9dad28cbf1}{Doc\+Node}.
+
+\hypertarget{class_doc_section_a995432e6366efd49d70ac381e04ad264}{}\index{Doc\+Section@{Doc\+Section}!anchor@{anchor}}
+\index{anchor@{anchor}!Doc\+Section@{Doc\+Section}}
+\subsubsection[{anchor() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Section\+::anchor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_section_a995432e6366efd49d70ac381e04ad264}
+\hypertarget{class_doc_section_a2041de375eb77b572e00470f97355e85}{}\index{Doc\+Section@{Doc\+Section}!file@{file}}
+\index{file@{file}!Doc\+Section@{Doc\+Section}}
+\subsubsection[{file() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Section\+::file (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_section_a2041de375eb77b572e00470f97355e85}
+\hypertarget{class_doc_section_ade8a1e9d2414fa80e0549a9ca8d46121}{}\index{Doc\+Section@{Doc\+Section}!id@{id}}
+\index{id@{id}!Doc\+Section@{Doc\+Section}}
+\subsubsection[{id() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Section\+::id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_section_ade8a1e9d2414fa80e0549a9ca8d46121}
+\hypertarget{class_doc_section_a0a88929cb01b6ce40417cffccc62baae}{}\index{Doc\+Section@{Doc\+Section}!kind@{kind}}
+\index{kind@{kind}!Doc\+Section@{Doc\+Section}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kind} Doc\+Section\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_section_a0a88929cb01b6ce40417cffccc62baae}
+Returns the kind of node. Provides runtime type information 
+
+Implémente \hyperlink{class_doc_node_a92d4aaa169a813ded919aa858024c809}{Doc\+Node}.
+
+\hypertarget{class_doc_section_a8dc6eaf3ab872e02f71570a7df0571b4}{}\index{Doc\+Section@{Doc\+Section}!level@{level}}
+\index{level@{level}!Doc\+Section@{Doc\+Section}}
+\subsubsection[{level() const }]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Section\+::level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_section_a8dc6eaf3ab872e02f71570a7df0571b4}
+\hypertarget{class_doc_section_a7c92ebabb4381f1bd83cd5f1db4ebc15}{}\index{Doc\+Section@{Doc\+Section}!parse@{parse}}
+\index{parse@{parse}!Doc\+Section@{Doc\+Section}}
+\subsubsection[{parse()}]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Section\+::parse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_doc_section_a7c92ebabb4381f1bd83cd5f1db4ebc15}
+\hypertarget{class_doc_section_a04decc0584018ae55d8ac9262d9b105f}{}\index{Doc\+Section@{Doc\+Section}!title@{title}}
+\index{title@{title}!Doc\+Section@{Doc\+Section}}
+\subsubsection[{title() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Section\+::title (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_section_a04decc0584018ae55d8ac9262d9b105f}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{docparser_8h}{docparser.\+h}\item 
+src/\hyperlink{docparser_8cpp}{docparser.\+cpp}\end{DoxyCompactItemize}

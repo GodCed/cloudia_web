@@ -1,0 +1,116 @@
+\hypertarget{group__template__api}{}\section{Template A\+P\+I}
+\label{group__template__api}\index{Template A\+P\+I@{Template A\+P\+I}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_template_variant}{Template\+Variant}
+\begin{DoxyCompactList}\small\item\em Variant type which can hold one value of a fixed set of types. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_variant_1_1_delegate}{Template\+Variant\+::\+Delegate}
+\begin{DoxyCompactList}\small\item\em Helper class to create a delegate that can store a function/method call. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_auto_ref}{Template\+Auto\+Ref$<$ T $>$}
+\item 
+class \hyperlink{class_template_list_intf}{Template\+List\+Intf}
+\begin{DoxyCompactList}\small\item\em Abstract read-\/only interface for a context value of type list. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_list_intf_1_1_const_iterator}{Template\+List\+Intf\+::\+Const\+Iterator}
+\begin{DoxyCompactList}\small\item\em Abstract interface for a iterator of a list. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_list}{Template\+List}
+\begin{DoxyCompactList}\small\item\em Default implementation of a context value of type list. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_struct_intf}{Template\+Struct\+Intf}
+\begin{DoxyCompactList}\small\item\em Abstract interface for a context value of type struct. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_struct}{Template\+Struct}
+\begin{DoxyCompactList}\small\item\em Default implementation of a context value of type struct. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_escape_intf}{Template\+Escape\+Intf}
+\begin{DoxyCompactList}\small\item\em Interface used to escape characters in a string. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_spaceless_intf}{Template\+Spaceless\+Intf}
+\begin{DoxyCompactList}\small\item\em Interface used to remove redundant spaces inside a spaceless block. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_context}{Template\+Context}
+\begin{DoxyCompactList}\small\item\em Abstract interface for a template context. \end{DoxyCompactList}\item 
+class \hyperlink{class_template}{Template}
+\begin{DoxyCompactList}\small\item\em Abstract interface for a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_engine}{Template\+Engine}
+\begin{DoxyCompactList}\small\item\em Engine to create templates and template contexts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__template__api_ga4c0d322ba971480bfbd2a8f418eadc81}{Template\+Variant\+::\+Type} \{ \\*
+\hyperlink{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81ac64bfef699f6847ca4a1589b5057a943}{Template\+Variant\+::\+None}, 
+\hyperlink{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81aaa4ac74b26768c0a9aae405dc0ab4291}{Template\+Variant\+::\+Bool}, 
+\hyperlink{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81af502b2f0adb48b330d54c141ab7d6b17}{Template\+Variant\+::\+Integer}, 
+\hyperlink{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81a97c566900c9dce7f38cb2c1fd9e6890d}{Template\+Variant\+::\+String}, 
+\\*
+\hyperlink{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81a95bec7591d52d9a3e93851d6cb6f3064}{Template\+Variant\+::\+Struct}, 
+\hyperlink{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81a06b8f56fd37b6285112638c331f29252}{Template\+Variant\+::\+List}, 
+\hyperlink{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81afa78594f4b9f7fa93f71ef39deae0323}{Template\+Variant\+::\+Function}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+This is the A\+P\+I for a \href{https://docs.djangoproject.com/en/1.6/topics/templates/}{\tt Django} compatible template system written in C++. It is somewhat inspired by Stephen Kelly\textquotesingle{}s \href{http://www.gitorious.org/grantlee/pages/Home}{\tt Grantlee}.
+
+\hyperlink{class_a}{A} template is simply a text file. \hyperlink{class_a}{A} template contains {\bfseries variables}, which get replaced with values when the template is evaluated, and {\bfseries tags}, which control the logic of the template.
+
+Variables look like this\+: {\ttfamily \{\{ variable \}\}} When the template engine encounters a variable, it evaluates that variable and replaces it with the result. Variable names consist of any combination of alphanumeric characters and the underscore (\char`\"{}\+\_\+\char`\"{}). Use a dot (.) to access attributes of a structured variable.
+
+One can modify variables for display by using {\bfseries filters}, for example\+: {\ttfamily \{\{ value$\vert$default\+:\char`\"{}nothing\char`\"{} \}\}}
+
+Tags look like this\+: {\ttfamily \{\% tag \%\}}. Tags are more complex than variables\+: Some create text in the output, some control flow by performing loops or logic, and some load external information into the template to be used by later variables.
+
+To comment-\/out part of a line in a template, use the comment syntax\+: {\ttfamily \{\# comment text \#\}}.
+
+Supported Django tags\+:
+\begin{DoxyItemize}
+\item {\ttfamily for ... empty ... endfor}
+\item {\ttfamily if ... else ... endif}
+\item {\ttfamily block ... endblock}
+\item {\ttfamily extend}
+\item {\ttfamily include}
+\item {\ttfamily with ... endwith}
+\item {\ttfamily spaceless ... endspaceless}
+\item {\ttfamily cycle}
+\end{DoxyItemize}
+
+Extension tags\+:
+\begin{DoxyItemize}
+\item {\ttfamily create} which instantiates a template and writes the result to a file. The syntax is `\{\% create \textquotesingle{}filename\textquotesingle{} from \textquotesingle{}template\textquotesingle{} \%\}{\ttfamily . -\/}recursetree{\ttfamily  -\/}markers{\ttfamily  -\/}msg{\ttfamily ...}endmsg{\ttfamily  -\/}set`
+\end{DoxyItemize}
+
+Supported Django filters\+:
+\begin{DoxyItemize}
+\item {\ttfamily default}
+\item {\ttfamily length}
+\item {\ttfamily add}
+\item {\ttfamily divisibleby}
+\end{DoxyItemize}
+
+Extension filters\+:
+\begin{DoxyItemize}
+\item {\ttfamily strip\+Path}
+\item {\ttfamily nowrap}
+\item {\ttfamily prepend}
+\item {\ttfamily append} 
+\end{DoxyItemize}
+
+\subsection{Documentation du type de l\textquotesingle{}énumération}
+\hypertarget{group__template__api_ga4c0d322ba971480bfbd2a8f418eadc81}{}\index{Template A\+P\+I@{Template A\+P\+I}!Type@{Type}}
+\index{Type@{Type}!Template A\+P\+I@{Template A\+P\+I}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Template\+Variant\+::\+Type}}\label{group__template__api_ga4c0d322ba971480bfbd2a8f418eadc81}
+Types of data that can be stored in a \hyperlink{class_template_variant}{Template\+Variant} \begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{None@{None}!Template A\+P\+I@{Template A\+P\+I}}\index{Template A\+P\+I@{Template A\+P\+I}!None@{None}}\item[{\em 
+\hypertarget{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81ac64bfef699f6847ca4a1589b5057a943}{}None\label{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81ac64bfef699f6847ca4a1589b5057a943}
+}]\index{Bool@{Bool}!Template A\+P\+I@{Template A\+P\+I}}\index{Template A\+P\+I@{Template A\+P\+I}!Bool@{Bool}}\item[{\em 
+\hypertarget{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81aaa4ac74b26768c0a9aae405dc0ab4291}{}Bool\label{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81aaa4ac74b26768c0a9aae405dc0ab4291}
+}]\index{Integer@{Integer}!Template A\+P\+I@{Template A\+P\+I}}\index{Template A\+P\+I@{Template A\+P\+I}!Integer@{Integer}}\item[{\em 
+\hypertarget{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81af502b2f0adb48b330d54c141ab7d6b17}{}Integer\label{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81af502b2f0adb48b330d54c141ab7d6b17}
+}]\index{String@{String}!Template A\+P\+I@{Template A\+P\+I}}\index{Template A\+P\+I@{Template A\+P\+I}!String@{String}}\item[{\em 
+\hypertarget{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81a97c566900c9dce7f38cb2c1fd9e6890d}{}String\label{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81a97c566900c9dce7f38cb2c1fd9e6890d}
+}]\index{Struct@{Struct}!Template A\+P\+I@{Template A\+P\+I}}\index{Template A\+P\+I@{Template A\+P\+I}!Struct@{Struct}}\item[{\em 
+\hypertarget{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81a95bec7591d52d9a3e93851d6cb6f3064}{}Struct\label{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81a95bec7591d52d9a3e93851d6cb6f3064}
+}]\index{List@{List}!Template A\+P\+I@{Template A\+P\+I}}\index{Template A\+P\+I@{Template A\+P\+I}!List@{List}}\item[{\em 
+\hypertarget{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81a06b8f56fd37b6285112638c331f29252}{}List\label{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81a06b8f56fd37b6285112638c331f29252}
+}]\index{Function@{Function}!Template A\+P\+I@{Template A\+P\+I}}\index{Template A\+P\+I@{Template A\+P\+I}!Function@{Function}}\item[{\em 
+\hypertarget{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81afa78594f4b9f7fa93f71ef39deae0323}{}Function\label{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81afa78594f4b9f7fa93f71ef39deae0323}
+}]\end{description}
+\end{Desc}

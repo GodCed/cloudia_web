@@ -1,0 +1,288 @@
+\hypertarget{class_input_string}{}\section{Référence de la classe Input\+String}
+\label{class_input_string}\index{Input\+String@{Input\+String}}
+
+
+{\ttfamily \#include $<$inputstring.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Input\+String\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_input_string}
+\end{center}
+\end{figure}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_input_string_a7cfa8b8ad573f92ac8a7c850cf63b04b}{String\+Mode} \{ \\*
+\hyperlink{class_input_string_a7cfa8b8ad573f92ac8a7c850cf63b04ba0cbd32588c030dc97ed6e1b72b1b30fe}{String\+Free} =0, 
+\hyperlink{class_input_string_a7cfa8b8ad573f92ac8a7c850cf63b04bab80e3ab060857be7afbe794fafbf2e83}{String\+File} =1, 
+\hyperlink{class_input_string_a7cfa8b8ad573f92ac8a7c850cf63b04bad821dc39434460a3a5ac9c2690c4fef0}{String\+Dir} =2, 
+\hyperlink{class_input_string_a7cfa8b8ad573f92ac8a7c850cf63b04ba003b56b3a2598d5dc0d898e0ab139268}{String\+Fixed} =3, 
+\\*
+\hyperlink{class_input_string_a7cfa8b8ad573f92ac8a7c850cf63b04ba6d3e3657ef106bd471a2eddbafedafe1}{String\+Image} =4
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Connecteurs publics}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_input_string_a1ef14657fbc414a6f15ca1f624d7da92}{reset} ()
+\item 
+void \hyperlink{class_input_string_aa5dd91fe260eb01b911a4206e6653449}{set\+Value} (const \hyperlink{class_q_string}{Q\+String} \&)
+\end{DoxyCompactItemize}
+\subsection*{Signaux}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_input_string_a652dc4c0483d77606295f32febcb746b}{changed} ()
+\item 
+void \hyperlink{class_input_string_a9699d3bf0385d30c100c5cf2fb63012d}{show\+Help} (\hyperlink{class_input}{Input} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_input_string_adacf356342e5fa2e55f5774364614dab}{Input\+String} (Q\+Grid\+Layout $\ast$layout, int \&row, const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_input_string_ae41fde1d4de62d762094778a91d3afe2}{id}, const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{class_input_string_a7cfa8b8ad573f92ac8a7c850cf63b04b}{String\+Mode} \hyperlink{060__command__switch_8tcl_a78d127e8bda64d4471ac811ad512fbd9}{m}, const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_input_string_ae8c833a186bc89fb7c1c62bdeea192ff}{docs}, const \hyperlink{class_q_string}{Q\+String} \&abs\+Path=\hyperlink{class_q_string}{Q\+String}())
+\item 
+\hyperlink{class_input_string_ab0bf51a9bdba883dd504ae890dc1533a}{$\sim$\+Input\+String} ()
+\item 
+void \hyperlink{class_input_string_aa8cc8ac64be65a059936950ad1e65ba8}{add\+Value} (\hyperlink{class_q_string}{Q\+String} \hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+void \hyperlink{class_input_string_a943d2ad1525a07c3b8852de90ac04d00}{set\+Default} ()
+\item 
+Q\+Variant \& \hyperlink{class_input_string_a9c3a16a3861e950f8790d8c7e157cdc1}{value} ()
+\item 
+void \hyperlink{class_input_string_a0f19d3ccb9191a54b94e1b290b525742}{update} ()
+\item 
+\hyperlink{class_input_a4138334795f6330759839617744e20a9}{Kind} \hyperlink{class_input_string_af404b1b40894f7c4dd35239be66edca6}{kind} () const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_input_string_ae8c833a186bc89fb7c1c62bdeea192ff}{docs} () const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_input_string_ae41fde1d4de62d762094778a91d3afe2}{id} () const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_input_string_ab68dd8e3de51ec030e2b09f6dc8acd42}{template\+Docs} () const 
+\item 
+void \hyperlink{class_input_string_a46b5ce5badcf1c6df3a891810cb91e41}{add\+Dependency} (\hyperlink{class_input}{Input} $\ast$)
+\item 
+void \hyperlink{class_input_string_add9620f611a4e69090232a7b15c7e74e}{set\+Enabled} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})
+\item 
+void \hyperlink{class_input_string_afc5b4853b2226058f4b996c114967f81}{update\+Dependencies} ()
+\item 
+void \hyperlink{class_input_string_ae515cffbe50507d2c97ffa3ea36cade0}{write\+Value} (\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, \hyperlink{class_q_text_codec}{Q\+Text\+Codec} $\ast$codec)
+\item 
+void \hyperlink{class_input_string_af6b070828f85757ca6cf565288ab1dd1}{set\+Template\+Docs} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_input_string_ae8c833a186bc89fb7c1c62bdeea192ff}{docs})
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{class_input_string_a7cfa8b8ad573f92ac8a7c850cf63b04b}{}\index{Input\+String@{Input\+String}!String\+Mode@{String\+Mode}}
+\index{String\+Mode@{String\+Mode}!Input\+String@{Input\+String}}
+\subsubsection[{String\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Input\+String\+::\+String\+Mode}}\label{class_input_string_a7cfa8b8ad573f92ac8a7c850cf63b04b}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{String\+Free@{String\+Free}!Input\+String@{Input\+String}}\index{Input\+String@{Input\+String}!String\+Free@{String\+Free}}\item[{\em 
+\hypertarget{class_input_string_a7cfa8b8ad573f92ac8a7c850cf63b04ba0cbd32588c030dc97ed6e1b72b1b30fe}{}String\+Free\label{class_input_string_a7cfa8b8ad573f92ac8a7c850cf63b04ba0cbd32588c030dc97ed6e1b72b1b30fe}
+}]\index{String\+File@{String\+File}!Input\+String@{Input\+String}}\index{Input\+String@{Input\+String}!String\+File@{String\+File}}\item[{\em 
+\hypertarget{class_input_string_a7cfa8b8ad573f92ac8a7c850cf63b04bab80e3ab060857be7afbe794fafbf2e83}{}String\+File\label{class_input_string_a7cfa8b8ad573f92ac8a7c850cf63b04bab80e3ab060857be7afbe794fafbf2e83}
+}]\index{String\+Dir@{String\+Dir}!Input\+String@{Input\+String}}\index{Input\+String@{Input\+String}!String\+Dir@{String\+Dir}}\item[{\em 
+\hypertarget{class_input_string_a7cfa8b8ad573f92ac8a7c850cf63b04bad821dc39434460a3a5ac9c2690c4fef0}{}String\+Dir\label{class_input_string_a7cfa8b8ad573f92ac8a7c850cf63b04bad821dc39434460a3a5ac9c2690c4fef0}
+}]\index{String\+Fixed@{String\+Fixed}!Input\+String@{Input\+String}}\index{Input\+String@{Input\+String}!String\+Fixed@{String\+Fixed}}\item[{\em 
+\hypertarget{class_input_string_a7cfa8b8ad573f92ac8a7c850cf63b04ba003b56b3a2598d5dc0d898e0ab139268}{}String\+Fixed\label{class_input_string_a7cfa8b8ad573f92ac8a7c850cf63b04ba003b56b3a2598d5dc0d898e0ab139268}
+}]\index{String\+Image@{String\+Image}!Input\+String@{Input\+String}}\index{Input\+String@{Input\+String}!String\+Image@{String\+Image}}\item[{\em 
+\hypertarget{class_input_string_a7cfa8b8ad573f92ac8a7c850cf63b04ba6d3e3657ef106bd471a2eddbafedafe1}{}String\+Image\label{class_input_string_a7cfa8b8ad573f92ac8a7c850cf63b04ba6d3e3657ef106bd471a2eddbafedafe1}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_input_string_adacf356342e5fa2e55f5774364614dab}{}\index{Input\+String@{Input\+String}!Input\+String@{Input\+String}}
+\index{Input\+String@{Input\+String}!Input\+String@{Input\+String}}
+\subsubsection[{Input\+String(\+Q\+Grid\+Layout $\ast$layout, int \&row, const Q\+String \&id, const Q\+String \&s, String\+Mode m, const Q\+String \&docs, const Q\+String \&abs\+Path=\+Q\+String())}]{\setlength{\rightskip}{0pt plus 5cm}Input\+String\+::\+Input\+String (
+\begin{DoxyParamCaption}
+\item[{Q\+Grid\+Layout $\ast$}]{layout, }
+\item[{int \&}]{row, }
+\item[{const {\bf Q\+String} \&}]{id, }
+\item[{const {\bf Q\+String} \&}]{s, }
+\item[{{\bf String\+Mode}}]{m, }
+\item[{const {\bf Q\+String} \&}]{docs, }
+\item[{const {\bf Q\+String} \&}]{abs\+Path = {\ttfamily {\bf Q\+String}()}}
+\end{DoxyParamCaption}
+)}\label{class_input_string_adacf356342e5fa2e55f5774364614dab}
+\hypertarget{class_input_string_ab0bf51a9bdba883dd504ae890dc1533a}{}\index{Input\+String@{Input\+String}!````~Input\+String@{$\sim$\+Input\+String}}
+\index{````~Input\+String@{$\sim$\+Input\+String}!Input\+String@{Input\+String}}
+\subsubsection[{$\sim$\+Input\+String()}]{\setlength{\rightskip}{0pt plus 5cm}Input\+String\+::$\sim$\+Input\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_input_string_ab0bf51a9bdba883dd504ae890dc1533a}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_input_string_a46b5ce5badcf1c6df3a891810cb91e41}{}\index{Input\+String@{Input\+String}!add\+Dependency@{add\+Dependency}}
+\index{add\+Dependency@{add\+Dependency}!Input\+String@{Input\+String}}
+\subsubsection[{add\+Dependency(\+Input $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+String\+::add\+Dependency (
+\begin{DoxyParamCaption}
+\item[{{\bf Input} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_input_string_a46b5ce5badcf1c6df3a891810cb91e41}
+
+
+Implémente \hyperlink{class_input_ac7db8341f42bd6313fc5370f8dea0394}{Input}.
+
+\hypertarget{class_input_string_aa8cc8ac64be65a059936950ad1e65ba8}{}\index{Input\+String@{Input\+String}!add\+Value@{add\+Value}}
+\index{add\+Value@{add\+Value}!Input\+String@{Input\+String}}
+\subsubsection[{add\+Value(\+Q\+String s)}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+String\+::add\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+String}}]{s}
+\end{DoxyParamCaption}
+)}\label{class_input_string_aa8cc8ac64be65a059936950ad1e65ba8}
+\hypertarget{class_input_string_a652dc4c0483d77606295f32febcb746b}{}\index{Input\+String@{Input\+String}!changed@{changed}}
+\index{changed@{changed}!Input\+String@{Input\+String}}
+\subsubsection[{changed}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+String\+::changed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\label{class_input_string_a652dc4c0483d77606295f32febcb746b}
+\hypertarget{class_input_string_ae8c833a186bc89fb7c1c62bdeea192ff}{}\index{Input\+String@{Input\+String}!docs@{docs}}
+\index{docs@{docs}!Input\+String@{Input\+String}}
+\subsubsection[{docs() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Input\+String\+::docs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_input_string_ae8c833a186bc89fb7c1c62bdeea192ff}
+
+
+Implémente \hyperlink{class_input_af0cf2f0042064e90ccabe2d8b55f2a45}{Input}.
+
+\hypertarget{class_input_string_ae41fde1d4de62d762094778a91d3afe2}{}\index{Input\+String@{Input\+String}!id@{id}}
+\index{id@{id}!Input\+String@{Input\+String}}
+\subsubsection[{id() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Input\+String\+::id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_input_string_ae41fde1d4de62d762094778a91d3afe2}
+
+
+Implémente \hyperlink{class_input_a5b54bd6c8aa55a0cdf892594766e6dbe}{Input}.
+
+\hypertarget{class_input_string_af404b1b40894f7c4dd35239be66edca6}{}\index{Input\+String@{Input\+String}!kind@{kind}}
+\index{kind@{kind}!Input\+String@{Input\+String}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kind} Input\+String\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_input_string_af404b1b40894f7c4dd35239be66edca6}
+
+
+Implémente \hyperlink{class_input_ae5753682055225699b21f97354a317f0}{Input}.
+
+\hypertarget{class_input_string_a1ef14657fbc414a6f15ca1f624d7da92}{}\index{Input\+String@{Input\+String}!reset@{reset}}
+\index{reset@{reset}!Input\+String@{Input\+String}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+String\+::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\label{class_input_string_a1ef14657fbc414a6f15ca1f624d7da92}
+\hypertarget{class_input_string_a943d2ad1525a07c3b8852de90ac04d00}{}\index{Input\+String@{Input\+String}!set\+Default@{set\+Default}}
+\index{set\+Default@{set\+Default}!Input\+String@{Input\+String}}
+\subsubsection[{set\+Default()}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+String\+::set\+Default (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_input_string_a943d2ad1525a07c3b8852de90ac04d00}
+\hypertarget{class_input_string_add9620f611a4e69090232a7b15c7e74e}{}\index{Input\+String@{Input\+String}!set\+Enabled@{set\+Enabled}}
+\index{set\+Enabled@{set\+Enabled}!Input\+String@{Input\+String}}
+\subsubsection[{set\+Enabled(bool)}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+String\+::set\+Enabled (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_input_string_add9620f611a4e69090232a7b15c7e74e}
+
+
+Implémente \hyperlink{class_input_a29e1927059a522781963fc8d0a872822}{Input}.
+
+\hypertarget{class_input_string_af6b070828f85757ca6cf565288ab1dd1}{}\index{Input\+String@{Input\+String}!set\+Template\+Docs@{set\+Template\+Docs}}
+\index{set\+Template\+Docs@{set\+Template\+Docs}!Input\+String@{Input\+String}}
+\subsubsection[{set\+Template\+Docs(const Q\+String \&docs)}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+String\+::set\+Template\+Docs (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{docs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_input_string_af6b070828f85757ca6cf565288ab1dd1}
+
+
+Implémente \hyperlink{class_input_a88188054c6f323aa45226c91101850d9}{Input}.
+
+\hypertarget{class_input_string_aa5dd91fe260eb01b911a4206e6653449}{}\index{Input\+String@{Input\+String}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!Input\+String@{Input\+String}}
+\subsubsection[{set\+Value}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+String\+::set\+Value (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\label{class_input_string_aa5dd91fe260eb01b911a4206e6653449}
+\hypertarget{class_input_string_a9699d3bf0385d30c100c5cf2fb63012d}{}\index{Input\+String@{Input\+String}!show\+Help@{show\+Help}}
+\index{show\+Help@{show\+Help}!Input\+String@{Input\+String}}
+\subsubsection[{show\+Help}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+String\+::show\+Help (
+\begin{DoxyParamCaption}
+\item[{{\bf Input} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\label{class_input_string_a9699d3bf0385d30c100c5cf2fb63012d}
+\hypertarget{class_input_string_ab68dd8e3de51ec030e2b09f6dc8acd42}{}\index{Input\+String@{Input\+String}!template\+Docs@{template\+Docs}}
+\index{template\+Docs@{template\+Docs}!Input\+String@{Input\+String}}
+\subsubsection[{template\+Docs() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Input\+String\+::template\+Docs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_input_string_ab68dd8e3de51ec030e2b09f6dc8acd42}
+
+
+Implémente \hyperlink{class_input_aa080eb91625dc520aa3fe873b5f576da}{Input}.
+
+\hypertarget{class_input_string_a0f19d3ccb9191a54b94e1b290b525742}{}\index{Input\+String@{Input\+String}!update@{update}}
+\index{update@{update}!Input\+String@{Input\+String}}
+\subsubsection[{update()}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+String\+::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_input_string_a0f19d3ccb9191a54b94e1b290b525742}
+
+
+Implémente \hyperlink{class_input_a0436098ba644b5a7f643dd0c2d33d26a}{Input}.
+
+\hypertarget{class_input_string_afc5b4853b2226058f4b996c114967f81}{}\index{Input\+String@{Input\+String}!update\+Dependencies@{update\+Dependencies}}
+\index{update\+Dependencies@{update\+Dependencies}!Input\+String@{Input\+String}}
+\subsubsection[{update\+Dependencies()}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+String\+::update\+Dependencies (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_input_string_afc5b4853b2226058f4b996c114967f81}
+
+
+Implémente \hyperlink{class_input_a8758a9e88aecbbd9be1d438ba5b8454c}{Input}.
+
+\hypertarget{class_input_string_a9c3a16a3861e950f8790d8c7e157cdc1}{}\index{Input\+String@{Input\+String}!value@{value}}
+\index{value@{value}!Input\+String@{Input\+String}}
+\subsubsection[{value()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Variant \& Input\+String\+::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_input_string_a9c3a16a3861e950f8790d8c7e157cdc1}
+
+
+Implémente \hyperlink{class_input_a72c6ccd2eff708b1f91b8503427ec312}{Input}.
+
+\hypertarget{class_input_string_ae515cffbe50507d2c97ffa3ea36cade0}{}\index{Input\+String@{Input\+String}!write\+Value@{write\+Value}}
+\index{write\+Value@{write\+Value}!Input\+String@{Input\+String}}
+\subsubsection[{write\+Value(\+Q\+Text\+Stream \&t, Q\+Text\+Codec $\ast$codec)}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+String\+::write\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Text\+Stream} \&}]{t, }
+\item[{{\bf Q\+Text\+Codec} $\ast$}]{codec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_input_string_ae515cffbe50507d2c97ffa3ea36cade0}
+
+
+Implémente \hyperlink{class_input_a761f73fb00d6e0e3e391edafcfde1134}{Input}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+addon/doxywizard/\hyperlink{inputstring_8h}{inputstring.\+h}\item 
+addon/doxywizard/\hyperlink{inputstring_8cpp}{inputstring.\+cpp}\end{DoxyCompactItemize}

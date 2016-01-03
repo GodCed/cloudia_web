@@ -1,0 +1,88 @@
+\hypertarget{class_template_node_tree}{}\section{Référence de la classe Template\+Node\+Tree}
+\label{class_template_node_tree}\index{Template\+Node\+Tree@{Template\+Node\+Tree}}
+
+
+Class representing an \textquotesingle{}tree\textquotesingle{} tag in a template.  
+
+
+Graphe d\textquotesingle{}héritage de Template\+Node\+Tree\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_template_node_tree}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_template_node_tree_a7073702e447b60cf5163f0114330ae34}{Template\+Node\+Tree} (\hyperlink{class_template_parser}{Template\+Parser} $\ast$parser, \hyperlink{class_template_node}{Template\+Node} $\ast$\hyperlink{class_template_node_a69a306ef84e62af9fe57bf9aacc94536}{parent}, int line, const \hyperlink{class_q_c_string}{Q\+C\+String} \&data)
+\item 
+\hyperlink{class_template_node_tree_acbb8c5f2c5455cb70c4aaf8ca0611523}{$\sim$\+Template\+Node\+Tree} ()
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_template_node_tree_a9e003555c8ce1065a8446e3a26b64888}{render\+Children} (const Tree\+Context $\ast$ctx)
+\item 
+void \hyperlink{class_template_node_tree_a69eb441fb4be81adaab307cbfb158363}{render} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&ts, \hyperlink{class_template_context}{Template\+Context} $\ast$\hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_template_variant}{Template\+Variant} \hyperlink{class_template_node_tree_a6498efbb0c72959a78b55e54fd499d39}{render\+Children\+Stub} (const void $\ast$ctx, const \hyperlink{class_q_value_list}{Q\+Value\+List}$<$ \hyperlink{class_template_variant}{Template\+Variant} $>$ \&)
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Class representing an \textquotesingle{}tree\textquotesingle{} tag in a template. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_template_node_tree_a7073702e447b60cf5163f0114330ae34}{}\index{Template\+Node\+Tree@{Template\+Node\+Tree}!Template\+Node\+Tree@{Template\+Node\+Tree}}
+\index{Template\+Node\+Tree@{Template\+Node\+Tree}!Template\+Node\+Tree@{Template\+Node\+Tree}}
+\subsubsection[{Template\+Node\+Tree(\+Template\+Parser $\ast$parser, Template\+Node $\ast$parent, int line, const Q\+C\+String \&data)}]{\setlength{\rightskip}{0pt plus 5cm}Template\+Node\+Tree\+::\+Template\+Node\+Tree (
+\begin{DoxyParamCaption}
+\item[{{\bf Template\+Parser} $\ast$}]{parser, }
+\item[{{\bf Template\+Node} $\ast$}]{parent, }
+\item[{int}]{line, }
+\item[{const {\bf Q\+C\+String} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_node_tree_a7073702e447b60cf5163f0114330ae34}
+\hypertarget{class_template_node_tree_acbb8c5f2c5455cb70c4aaf8ca0611523}{}\index{Template\+Node\+Tree@{Template\+Node\+Tree}!````~Template\+Node\+Tree@{$\sim$\+Template\+Node\+Tree}}
+\index{````~Template\+Node\+Tree@{$\sim$\+Template\+Node\+Tree}!Template\+Node\+Tree@{Template\+Node\+Tree}}
+\subsubsection[{$\sim$\+Template\+Node\+Tree()}]{\setlength{\rightskip}{0pt plus 5cm}Template\+Node\+Tree\+::$\sim$\+Template\+Node\+Tree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_node_tree_acbb8c5f2c5455cb70c4aaf8ca0611523}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_template_node_tree_a69eb441fb4be81adaab307cbfb158363}{}\index{Template\+Node\+Tree@{Template\+Node\+Tree}!render@{render}}
+\index{render@{render}!Template\+Node\+Tree@{Template\+Node\+Tree}}
+\subsubsection[{render(\+F\+Text\+Stream \&ts, Template\+Context $\ast$c)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Node\+Tree\+::render (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{ts, }
+\item[{{\bf Template\+Context} $\ast$}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_template_node_tree_a69eb441fb4be81adaab307cbfb158363}
+
+
+Implémente \hyperlink{class_template_node_adb2714489a8bb9aee4fc97c0d16eb6f4}{Template\+Node}.
+
+\hypertarget{class_template_node_tree_a9e003555c8ce1065a8446e3a26b64888}{}\index{Template\+Node\+Tree@{Template\+Node\+Tree}!render\+Children@{render\+Children}}
+\index{render\+Children@{render\+Children}!Template\+Node\+Tree@{Template\+Node\+Tree}}
+\subsubsection[{render\+Children(const Tree\+Context $\ast$ctx)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Template\+Node\+Tree\+::render\+Children (
+\begin{DoxyParamCaption}
+\item[{const Tree\+Context $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_node_tree_a9e003555c8ce1065a8446e3a26b64888}
+\hypertarget{class_template_node_tree_a6498efbb0c72959a78b55e54fd499d39}{}\index{Template\+Node\+Tree@{Template\+Node\+Tree}!render\+Children\+Stub@{render\+Children\+Stub}}
+\index{render\+Children\+Stub@{render\+Children\+Stub}!Template\+Node\+Tree@{Template\+Node\+Tree}}
+\subsubsection[{render\+Children\+Stub(const void $\ast$ctx, const Q\+Value\+List$<$ Template\+Variant $>$ \&)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Template\+Variant} Template\+Node\+Tree\+::render\+Children\+Stub (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{ctx, }
+\item[{const {\bf Q\+Value\+List}$<$ {\bf Template\+Variant} $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_template_node_tree_a6498efbb0c72959a78b55e54fd499d39}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{template_8cpp}{template.\+cpp}\end{DoxyCompactItemize}

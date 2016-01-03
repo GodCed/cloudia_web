@@ -1,0 +1,118 @@
+\hypertarget{docbookgen_8cpp}{}\section{Référence du fichier src/docbookgen.cpp}
+\label{docbookgen_8cpp}\index{src/docbookgen.\+cpp@{src/docbookgen.\+cpp}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$qdir.\+h$>$}\\*
+{\ttfamily \#include $<$qfile.\+h$>$}\\*
+{\ttfamily \#include $<$qtextstream.\+h$>$}\\*
+{\ttfamily \#include $<$qintdict.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}docbookgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doxygen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}classlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}defargs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}outputgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dot.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pagedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}filename.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}version.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}docbookvisitor.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}docparser.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}language.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}parserintf.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}arguments.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}memberlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}groupdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}memberdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}namespacedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}membername.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}membergroup.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dirdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}section.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_docbook_section_mapper}{Docbook\+Section\+Mapper}
+\item 
+class \hyperlink{class_text_generator_docbook_impl}{Text\+Generator\+Docbook\+Impl}
+\item 
+class \hyperlink{class_docbook_code_generator}{Docbook\+Code\+Generator}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{docbookgen_8cpp_a72e66067731a340037c60b0774b24ef4}{Docbook\+\_\+\+D\+B}(x)~do \{\} \hyperlink{xmlcode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{while}(0)
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{docbookgen_8cpp_a4f434ac07c24c1f12efe8dc6deebeaf7}{write\+Docbook\+String} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, const char $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+void \hyperlink{docbookgen_8cpp_a129120c9ff6077ad1e275c7a2e025fa6}{write\+Docbook\+Code\+String} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, const char $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, int \&col)
+\item 
+void \hyperlink{docbookgen_8cpp_a57f84c8aceb6385de37ccf4e97ed9304}{write\+Docbook\+Link} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, const char $\ast$, const char $\ast$compound\+Id, const char $\ast$anchor\+Id, const char $\ast$text, const char $\ast$)
+\item 
+void \hyperlink{docbookgen_8cpp_ae559fdfbda19d3bcaf0dd2717056a24d}{write\+Docbook\+Code\+Block} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, \hyperlink{class_file_def}{File\+Def} $\ast$fd)
+\item 
+void \hyperlink{docbookgen_8cpp_a09919552be0473b1635d437c0c450edb}{generate\+Docbook} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{docbookgen_8cpp_a72e66067731a340037c60b0774b24ef4}{}\index{docbookgen.\+cpp@{docbookgen.\+cpp}!Docbook\+\_\+\+D\+B@{Docbook\+\_\+\+D\+B}}
+\index{Docbook\+\_\+\+D\+B@{Docbook\+\_\+\+D\+B}!docbookgen.\+cpp@{docbookgen.\+cpp}}
+\subsubsection[{Docbook\+\_\+\+D\+B}]{\setlength{\rightskip}{0pt plus 5cm}\#define Docbook\+\_\+\+D\+B(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~do \{\} {\bf while}(0)}\label{docbookgen_8cpp_a72e66067731a340037c60b0774b24ef4}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{docbookgen_8cpp_a09919552be0473b1635d437c0c450edb}{}\index{docbookgen.\+cpp@{docbookgen.\+cpp}!generate\+Docbook@{generate\+Docbook}}
+\index{generate\+Docbook@{generate\+Docbook}!docbookgen.\+cpp@{docbookgen.\+cpp}}
+\subsubsection[{generate\+Docbook()}]{\setlength{\rightskip}{0pt plus 5cm}void generate\+Docbook (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{docbookgen_8cpp_a09919552be0473b1635d437c0c450edb}
+M\+A\+I\+N\+P\+A\+G\+E D\+O\+C\+U\+M\+E\+N\+T\+A\+T\+I\+O\+N
+
+M\+O\+D\+U\+L\+E G\+R\+O\+U\+P D\+O\+C\+U\+M\+E\+N\+T\+A\+T\+I\+O\+N \hypertarget{docbookgen_8cpp_ae559fdfbda19d3bcaf0dd2717056a24d}{}\index{docbookgen.\+cpp@{docbookgen.\+cpp}!write\+Docbook\+Code\+Block@{write\+Docbook\+Code\+Block}}
+\index{write\+Docbook\+Code\+Block@{write\+Docbook\+Code\+Block}!docbookgen.\+cpp@{docbookgen.\+cpp}}
+\subsubsection[{write\+Docbook\+Code\+Block(\+F\+Text\+Stream \&t, File\+Def $\ast$fd)}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Docbook\+Code\+Block (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t, }
+\item[{{\bf File\+Def} $\ast$}]{fd}
+\end{DoxyParamCaption}
+)}\label{docbookgen_8cpp_ae559fdfbda19d3bcaf0dd2717056a24d}
+\hypertarget{docbookgen_8cpp_a129120c9ff6077ad1e275c7a2e025fa6}{}\index{docbookgen.\+cpp@{docbookgen.\+cpp}!write\+Docbook\+Code\+String@{write\+Docbook\+Code\+String}}
+\index{write\+Docbook\+Code\+String@{write\+Docbook\+Code\+String}!docbookgen.\+cpp@{docbookgen.\+cpp}}
+\subsubsection[{write\+Docbook\+Code\+String(\+F\+Text\+Stream \&t, const char $\ast$s, int \&col)}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Docbook\+Code\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t, }
+\item[{const char $\ast$}]{s, }
+\item[{int \&}]{col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{docbookgen_8cpp_a129120c9ff6077ad1e275c7a2e025fa6}
+\hypertarget{docbookgen_8cpp_a57f84c8aceb6385de37ccf4e97ed9304}{}\index{docbookgen.\+cpp@{docbookgen.\+cpp}!write\+Docbook\+Link@{write\+Docbook\+Link}}
+\index{write\+Docbook\+Link@{write\+Docbook\+Link}!docbookgen.\+cpp@{docbookgen.\+cpp}}
+\subsubsection[{write\+Docbook\+Link(\+F\+Text\+Stream \&t, const char $\ast$, const char $\ast$compound\+Id, const char $\ast$anchor\+Id, const char $\ast$text, const char $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Docbook\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t, }
+\item[{const char $\ast$}]{, }
+\item[{const char $\ast$}]{compound\+Id, }
+\item[{const char $\ast$}]{anchor\+Id, }
+\item[{const char $\ast$}]{text, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{docbookgen_8cpp_a57f84c8aceb6385de37ccf4e97ed9304}
+\hypertarget{docbookgen_8cpp_a4f434ac07c24c1f12efe8dc6deebeaf7}{}\index{docbookgen.\+cpp@{docbookgen.\+cpp}!write\+Docbook\+String@{write\+Docbook\+String}}
+\index{write\+Docbook\+String@{write\+Docbook\+String}!docbookgen.\+cpp@{docbookgen.\+cpp}}
+\subsubsection[{write\+Docbook\+String(\+F\+Text\+Stream \&t, const char $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Docbook\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t, }
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{docbookgen_8cpp_a4f434ac07c24c1f12efe8dc6deebeaf7}

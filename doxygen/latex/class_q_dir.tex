@@ -1,0 +1,1047 @@
+\hypertarget{class_q_dir}{}\section{Référence de la classe Q\+Dir}
+\label{class_q_dir}\index{Q\+Dir@{Q\+Dir}}
+
+
+Traverses directory structures and contents in a platform-\/independent way.  
+
+
+
+
+{\ttfamily \#include $<$qdir.\+h$>$}
+
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1}{Filter\+Spec} \{ \\*
+\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1aec15ecbbb66c4035f1beac420620c455}{Dirs} = 0x001, 
+\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a24042aebd6c53e6c913b359fb2271b12}{Files} = 0x002, 
+\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a708a9ec117537510e1871c096617cac2}{Drives} = 0x004, 
+\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a9cdaf38ee54b903bb6cd3bc00444e046}{No\+Sym\+Links} = 0x008, 
+\\*
+\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a6a41a0538f66bdc9d57e12c15da80352}{All} = 0x007, 
+\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a0cafe3372b457a38a86c045c617c5bbd}{Type\+Mask} = 0x00\+F, 
+\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1ac12c5e5cd2ee45d09190a0b0a47c8548}{Readable} = 0x010, 
+\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1ac41aa37937c831406cbdf39639deefc0}{Writable} = 0x020, 
+\\*
+\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a0b1d1933226ee3a3b9af43260eefccda}{Executable} = 0x040, 
+\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1af3293542b2a3757f2af666ae41941821}{R\+W\+E\+Mask} = 0x070, 
+\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a27a59f1a04c63b278aa9c486e4aab533}{Modified} = 0x080, 
+\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a45175d70d3af4f89973fa88076d58821}{Hidden} = 0x100, 
+\\*
+\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1ada244a6ba6ca9587ebffeefa65ce8d6b}{System} = 0x200, 
+\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a62a191157b0ccf07f8b289a93c73c071}{Access\+Mask} = 0x3\+F0, 
+\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a592073bc83aaadb4120fb7a9fdf1016c}{Default\+Filter} = -\/1
+ \}
+\item 
+enum \hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994c}{Sort\+Spec} \{ \\*
+\hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994caa826dc828303a0b91b0f7215ab8ebea2}{Name} = 0x00, 
+\hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994ca90da0d923d555ba9ff55033a63aabd77}{Time} = 0x01, 
+\hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994ca519486e697ac94dc212391f52602989a}{Size} = 0x02, 
+\hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994ca82972f053552dc03c2654f1feeb35786}{Unsorted} = 0x03, 
+\\*
+\hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994ca6754d79464bc1e20e908a8521c4dfd10}{Sort\+By\+Mask} = 0x03, 
+\hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994caa3f79d41ecf87e969966fc3841f22cfe}{Dirs\+First} = 0x04, 
+\hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994cac0c522ab29bfb765565ec2c5fefe2074}{Reversed} = 0x08, 
+\hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994ca66b6c27f615e5c92ba48da265007db5d}{Ignore\+Case} = 0x10, 
+\\*
+\hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994ca34834a05408264ddaae5f0259fb79038}{Default\+Sort} = -\/1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_dir_a78cf34af6b7e0ffa3d11ef0ba0ecd403}{Q\+Dir} ()
+\item 
+\hyperlink{class_q_dir_ad4f09eb0858b034f2b2edff184e1f50d}{Q\+Dir} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_dir_adc89b85ad2479f2b3baf899bfbe48f7f}{path}, const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_dir_a8d501954ccb9e48d8e675c85c60ec57a}{name\+Filter}=\hyperlink{class_q_string_ad5c6b3d92cd7034d555365fd39bfdf4b}{Q\+String\+::null}, int sort\+Spec=\hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994caa826dc828303a0b91b0f7215ab8ebea2}{Name}$\vert$\hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994ca66b6c27f615e5c92ba48da265007db5d}{Ignore\+Case}, int filter\+Spec=\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a6a41a0538f66bdc9d57e12c15da80352}{All})
+\item 
+\hyperlink{class_q_dir_a16e6aedc84e9e1a5c10ded811b6510b3}{Q\+Dir} (const \hyperlink{class_q_dir}{Q\+Dir} \&)
+\item 
+virtual \hyperlink{class_q_dir_a1f28124d07dac6de42de73f074e7dbec}{$\sim$\+Q\+Dir} ()
+\item 
+\hyperlink{class_q_dir}{Q\+Dir} \& \hyperlink{class_q_dir_a3be7ccbacac7fa0e2fd2143259d0e04b}{operator=} (const \hyperlink{class_q_dir}{Q\+Dir} \&)
+\item 
+\hyperlink{class_q_dir}{Q\+Dir} \& \hyperlink{class_q_dir_a157b465ee1cb0ab76947e6f9d07f8715}{operator=} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_dir_adc89b85ad2479f2b3baf899bfbe48f7f}{path})
+\item 
+virtual void \hyperlink{class_q_dir_ac947989c99aecbfebd509088b8834715}{set\+Path} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_dir_adc89b85ad2479f2b3baf899bfbe48f7f}{path})
+\item 
+virtual \hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_dir_adc89b85ad2479f2b3baf899bfbe48f7f}{path} () const 
+\item 
+virtual \hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_dir_a884038b1ff47d15d4d763326698f0481}{abs\+Path} () const 
+\item 
+virtual \hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_dir_a134133cb23364ce504a13a1e748232bc}{canonical\+Path} () const 
+\item 
+virtual \hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_dir_a12b679447f94f6eb194ec9bfb2a6d8a4}{dir\+Name} () const 
+\item 
+virtual \hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_dir_a5a94f451c6a1a268228878b1add20bf0}{file\+Path} (const \hyperlink{class_q_string}{Q\+String} \&file\+Name, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} accept\+Abs\+Path=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E}) const 
+\item 
+virtual \hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_dir_af85dfc097c27c98c2f96bff380530970}{abs\+File\+Path} (const \hyperlink{class_q_string}{Q\+String} \&file\+Name, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} accept\+Abs\+Path=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E}) const 
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_dir_a5a58d7a5387627fa479f2ac376895e6a}{cd} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_dir_a12b679447f94f6eb194ec9bfb2a6d8a4}{dir\+Name}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} accept\+Abs\+Path=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E})
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_dir_a22a212babdfa332de6ee9d07f96dc2ba}{cd\+Up} ()
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_dir_a8d501954ccb9e48d8e675c85c60ec57a}{name\+Filter} () const 
+\item 
+virtual void \hyperlink{class_q_dir_a26b95e183a9ba9410219a3ce4d8c3416}{set\+Name\+Filter} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_dir_a8d501954ccb9e48d8e675c85c60ec57a}{name\+Filter})
+\item 
+\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1}{Filter\+Spec} \hyperlink{class_q_dir_a987d4eb30710296adf551c2b48118b28}{filter} () const 
+\item 
+virtual void \hyperlink{class_q_dir_a68d9e723870b5f8226353dc6047a35ee}{set\+Filter} (int filter\+Spec)
+\item 
+\hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994c}{Sort\+Spec} \hyperlink{class_q_dir_a49f5647b906fb9eb358a84bbc2e213c3}{sorting} () const 
+\item 
+virtual void \hyperlink{class_q_dir_a65280d204cd65975953e3eb2a63da778}{set\+Sorting} (int sort\+Spec)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_dir_a398803de11f488f7a8b748b953d73d18}{match\+All\+Dirs} () const 
+\item 
+virtual void \hyperlink{class_q_dir_aec96bf79103196eefd2a38ff74aeadd0}{set\+Match\+All\+Dirs} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})
+\item 
+\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{class_q_dir_ac48855e1aead59d7b6cc5752f12d0556}{count} () const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_dir_a3fc0548fca3c4e761622a71b343c98a7}{operator\mbox{[}$\,$\mbox{]}} (int) const 
+\item 
+virtual \hyperlink{class_q_str_list}{Q\+Str\+List} \hyperlink{class_q_dir_a4b7889f91d79b5547cbef1c2bc6724e1}{encoded\+Entry\+List} (int filter\+Spec=\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a592073bc83aaadb4120fb7a9fdf1016c}{Default\+Filter}, int sort\+Spec=\hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994ca34834a05408264ddaae5f0259fb79038}{Default\+Sort}) const 
+\item 
+virtual \hyperlink{class_q_str_list}{Q\+Str\+List} \hyperlink{class_q_dir_a2ce2dc8f717796ede60cea70c1363575}{encoded\+Entry\+List} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_dir_a8d501954ccb9e48d8e675c85c60ec57a}{name\+Filter}, int filter\+Spec=\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a592073bc83aaadb4120fb7a9fdf1016c}{Default\+Filter}, int sort\+Spec=\hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994ca34834a05408264ddaae5f0259fb79038}{Default\+Sort}) const 
+\item 
+virtual \hyperlink{class_q_string_list}{Q\+String\+List} \hyperlink{class_q_dir_a468530017006c1eeea94c78d264964aa}{entry\+List} (int filter\+Spec=\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a592073bc83aaadb4120fb7a9fdf1016c}{Default\+Filter}, int sort\+Spec=\hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994ca34834a05408264ddaae5f0259fb79038}{Default\+Sort}) const 
+\item 
+virtual \hyperlink{class_q_string_list}{Q\+String\+List} \hyperlink{class_q_dir_afd821ad3e452d9a07a4027276b4297ba}{entry\+List} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_dir_a8d501954ccb9e48d8e675c85c60ec57a}{name\+Filter}, int filter\+Spec=\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a592073bc83aaadb4120fb7a9fdf1016c}{Default\+Filter}, int sort\+Spec=\hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994ca34834a05408264ddaae5f0259fb79038}{Default\+Sort}) const 
+\item 
+virtual const \hyperlink{qdir_8h_a2bab9b680b49f76a34224e15eb238642}{Q\+File\+Info\+List} $\ast$ \hyperlink{class_q_dir_aa67974b4e5452af01677d2d57991f36a}{entry\+Info\+List} (int filter\+Spec=\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a592073bc83aaadb4120fb7a9fdf1016c}{Default\+Filter}, int sort\+Spec=\hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994ca34834a05408264ddaae5f0259fb79038}{Default\+Sort}) const 
+\item 
+virtual const \hyperlink{qdir_8h_a2bab9b680b49f76a34224e15eb238642}{Q\+File\+Info\+List} $\ast$ \hyperlink{class_q_dir_a9439ea6b331957f38dbad981c4d050ef}{entry\+Info\+List} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_dir_a8d501954ccb9e48d8e675c85c60ec57a}{name\+Filter}, int filter\+Spec=\hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a592073bc83aaadb4120fb7a9fdf1016c}{Default\+Filter}, int sort\+Spec=\hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994ca34834a05408264ddaae5f0259fb79038}{Default\+Sort}) const 
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_dir_ab85d98ede6a4f9cfefd18c5472530548}{mkdir} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_dir_a12b679447f94f6eb194ec9bfb2a6d8a4}{dir\+Name}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} accept\+Abs\+Path=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E}) const 
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_dir_a1c2f73242e6c485b9e4b697560c846da}{rmdir} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_dir_a12b679447f94f6eb194ec9bfb2a6d8a4}{dir\+Name}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} accept\+Abs\+Path=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E}) const 
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_dir_ad973387ed744650508d00b3da579efcf}{is\+Readable} () const 
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_dir_a1294085ddb97ecd3643b700feb3fabea}{exists} () const 
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_dir_a44c8042bcce4b07fffc0c907b9842604}{is\+Root} () const 
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_dir_a0d7232dab091230bfabb81ba2d2329ef}{is\+Relative} () const 
+\item 
+virtual void \hyperlink{class_q_dir_a0c05c8978b3b4158233f809e4d30c55d}{convert\+To\+Abs} ()
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_dir_a4d2c37c4d14327b0966f7a0017e4a8d6}{operator==} (const \hyperlink{class_q_dir}{Q\+Dir} \&) const 
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_dir_a197368441ba4e956e4b9707471196cce}{operator!=} (const \hyperlink{class_q_dir}{Q\+Dir} \&) const 
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_dir_aca44a22e3f1355bc74fdd96e0af052c9}{remove} (const \hyperlink{class_q_string}{Q\+String} \&file\+Name, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} accept\+Abs\+Path=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E})
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_dir_a403c5efd21e686cadee2cf4d7059ab19}{rename} (const \hyperlink{class_q_string}{Q\+String} \&name, const \hyperlink{class_q_string}{Q\+String} \&new\+Name, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} accept\+Abs\+Paths=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E})
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_dir_a83bb64d2d9e4f7bf0d9d9d0896165be6}{exists} (const \hyperlink{class_q_string}{Q\+String} \&name, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} accept\+Abs\+Path=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E})
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_dir_a2cb829f147b7225abab1e5915ae62264}{convert\+Separators} (const \hyperlink{class_q_string}{Q\+String} \&path\+Name)
+\item 
+static const \hyperlink{qdir_8h_a2bab9b680b49f76a34224e15eb238642}{Q\+File\+Info\+List} $\ast$ \hyperlink{class_q_dir_a549c0fc27cf5b4b24310558fe477e178}{drives} ()
+\item 
+static char \hyperlink{class_q_dir_a8e851d9a1f839208ef0141fde43b414d}{separator} ()
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_dir_a61b45775b8b1e2d9ebe069e481f5dc9d}{set\+Current} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_dir_adc89b85ad2479f2b3baf899bfbe48f7f}{path})
+\item 
+static \hyperlink{class_q_dir}{Q\+Dir} \hyperlink{class_q_dir_a697f013a5d4ae0c805546a2dd8f55707}{current} ()
+\item 
+static \hyperlink{class_q_dir}{Q\+Dir} \hyperlink{class_q_dir_ab3881e8a981cc34ede0e6e57a1135c20}{home} ()
+\item 
+static \hyperlink{class_q_dir}{Q\+Dir} \hyperlink{class_q_dir_a61d528e4d5689e81d9c27d68dbd19f64}{root} ()
+\item 
+static \hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_dir_a987a313fb7600142ed761109991f5a8c}{current\+Dir\+Path} ()
+\item 
+static \hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_dir_ac112ea98a56191b8b0d84cd967472b39}{home\+Dir\+Path} ()
+\item 
+static \hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_dir_a66d4102cf6087d51057f8fbd0028def9}{root\+Dir\+Path} ()
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_dir_aa78de265f6e5e198a90b4d0252a42df3}{match} (const \hyperlink{class_q_string_list}{Q\+String\+List} \&filters, const \hyperlink{class_q_string}{Q\+String} \&file\+Name)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_dir_a72a73a1e4d9bf42ec4307a70605b77b9}{match} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_dir_a987d4eb30710296adf551c2b48118b28}{filter}, const \hyperlink{class_q_string}{Q\+String} \&file\+Name)
+\item 
+static \hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_dir_ad38037708dc754f5bdd877c145dbbb19}{clean\+Dir\+Path} (const \hyperlink{class_q_string}{Q\+String} \&dir\+Path)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_dir_a500524767f07a8cf127392859cc41d49}{is\+Relative\+Path} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_dir_adc89b85ad2479f2b3baf899bfbe48f7f}{path})
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Traverses directory structures and contents in a platform-\/independent way. 
+
+\hyperlink{class_a}{A} \hyperlink{class_q_dir}{Q\+Dir} can point to a file using either a relative or an absolute file path. Absolute file paths begin with the directory separator (\textquotesingle{}/\textquotesingle{}) or a drive specification (not applicable to U\+N\+I\+X). Relative file names begin with a directory name or a file name and specify a path relative to the current directory.
+
+An example of an absolute path is the string \char`\"{}/tmp/quartz\char`\"{}, a relative path might look like \char`\"{}src/fatlib\char`\"{}. You can use the function \hyperlink{class_q_dir_a0d7232dab091230bfabb81ba2d2329ef}{is\+Relative()} to check if a \hyperlink{class_q_dir}{Q\+Dir} is using a relative or an absolute file path. You can call the function \hyperlink{class_q_dir_a0c05c8978b3b4158233f809e4d30c55d}{convert\+To\+Abs()} to convert a relative \hyperlink{class_q_dir}{Q\+Dir} to an absolute one.
+
+The directory \char`\"{}example\char`\"{} under the current directory is checked for existence in the example below\+:
+
+
+\begin{DoxyCode}
+\hyperlink{class_q_dir}{QDir} \hyperlink{058__bracket__recursion_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}( \textcolor{stringliteral}{"example"} );          \textcolor{comment}{// "./example"}
+\textcolor{keywordflow}{if} ( !d.\hyperlink{class_q_dir_a1294085ddb97ecd3643b700feb3fabea}{exists}() )
+\hyperlink{qglobal_8cpp_addd9b8ef474319fc95ba80d46fbd1e94}{qWarning}( \textcolor{stringliteral}{"Cannot find the example directory"} );
+\end{DoxyCode}
+
+
+If you always use \textquotesingle{}/\textquotesingle{} as a directory separator, Qt will translate your paths to conform to the underlying operating system.
+
+\hyperlink{class_q_dir_a5a58d7a5387627fa479f2ac376895e6a}{cd()} and \hyperlink{class_q_dir_a22a212babdfa332de6ee9d07f96dc2ba}{cd\+Up()} can be used to navigate the directory tree. Note that the logical cd and cd\+Up operations are not performed if the new directory does not exist.
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_dir}{QDir} d = \hyperlink{class_q_dir_a61d528e4d5689e81d9c27d68dbd19f64}{QDir::root}();            \textcolor{comment}{// "/"}
+\textcolor{keywordflow}{if} ( !d.\hyperlink{class_q_dir_a5a58d7a5387627fa479f2ac376895e6a}{cd}(\textcolor{stringliteral}{"tmp"}) ) \{         \textcolor{comment}{// "/tmp"}
+\hyperlink{qglobal_8cpp_addd9b8ef474319fc95ba80d46fbd1e94}{qWarning}( \textcolor{stringliteral}{"Cannot find the \(\backslash\)"/tmp\(\backslash\)" directory"} );
+\} \textcolor{keywordflow}{else} \{
+\hyperlink{class_q_file}{QFile} \hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}( d.\hyperlink{class_q_dir_a5a94f451c6a1a268228878b1add20bf0}{filePath}(\textcolor{stringliteral}{"ex1.txt"}) ); \textcolor{comment}{// "/tmp/ex1.txt"}
+\textcolor{keywordflow}{if} ( !\hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}.open(\hyperlink{qiodevice_8h_a69bfa1f7d1434237360ca27f7205dc48}{IO\_ReadWrite}) )
+    \hyperlink{qglobal_8cpp_addd9b8ef474319fc95ba80d46fbd1e94}{qWarning}( \textcolor{stringliteral}{"Cannot create the file %s"}, \hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}.name() );
+\}
+\end{DoxyCode}
+
+
+To read the contents of a directory you can use the \hyperlink{class_q_dir_a468530017006c1eeea94c78d264964aa}{entry\+List()} and \hyperlink{class_q_dir_aa67974b4e5452af01677d2d57991f36a}{entry\+Info\+List()} functions.
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include <stdio.h>}
+\textcolor{preprocessor}{#include <\hyperlink{qdir_8h}{qdir.h}>}
+
+\textcolor{comment}{//}
+\textcolor{comment}{// This program scans the current directory and lists all files}
+\textcolor{comment}{// that are not symbolic links, sorted by size with the smallest files}
+\textcolor{comment}{// first.}
+\textcolor{comment}{//}
+
+\textcolor{keywordtype}{int} \hyperlink{addon_2doxmlparser_2examples_2metrics_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}( \textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} **argv )
+\{
+\hyperlink{class_q_dir}{QDir} \hyperlink{058__bracket__recursion_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d};
+d.\hyperlink{class_q_dir_a68d9e723870b5f8226353dc6047a35ee}{setFilter}( \hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a24042aebd6c53e6c913b359fb2271b12}{QDir::Files} | \hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a45175d70d3af4f89973fa88076d58821}{QDir::Hidden} | 
+      \hyperlink{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a9cdaf38ee54b903bb6cd3bc00444e046}{QDir::NoSymLinks} );
+d.\hyperlink{class_q_dir_a65280d204cd65975953e3eb2a63da778}{setSorting}( \hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994ca519486e697ac94dc212391f52602989a}{QDir::Size} | \hyperlink{class_q_dir_a428a858abe9593efc498b6641b41994cac0c522ab29bfb765565ec2c5fefe2074}{QDir::Reversed} );
+
+\textcolor{keyword}{const} \hyperlink{class_q_internal_list}{QFileInfoList} *list = d.\hyperlink{class_q_dir_aa67974b4e5452af01677d2d57991f36a}{entryInfoList}();
+\hyperlink{class_q_internal_list_iterator}{QFileInfoListIterator} it( *list );    \textcolor{comment}{// create list iterator}
+\hyperlink{class_q_file_info}{QFileInfo} *fi;                \textcolor{comment}{// pointer for traversing}
+
+printf( \textcolor{stringliteral}{"     BYTES FILENAME\(\backslash\)n"} );    \textcolor{comment}{// print header}
+\textcolor{keywordflow}{while} ( (fi=it.current()) ) \{     \textcolor{comment}{// for each file...}
+    printf( \textcolor{stringliteral}{"%10li %s\(\backslash\)n"}, fi->\hyperlink{class_q_file_info_a0828a6759b013f6d05a5579ba60c21d4}{size}(), fi->\hyperlink{class_q_file_info_aabf62d1b0490784be027aa3de085bec1}{fileName}().\hyperlink{class_q_string_a382f147bd56024111e9b7a43feebe1cd}{data}() );
+    ++it;             \textcolor{comment}{// goto next list element}
+\}
+\}
+\end{DoxyCode}
+ 
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1}{}\index{Q\+Dir@{Q\+Dir}!Filter\+Spec@{Filter\+Spec}}
+\index{Filter\+Spec@{Filter\+Spec}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{Filter\+Spec}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Q\+Dir\+::\+Filter\+Spec}}\label{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1}
+This enum describes how \hyperlink{class_q_dir}{Q\+Dir} is to select what entries in a directory to return. The filter value is specified by or-\/ing together values from the following list\+: 
+\begin{DoxyItemize}
+\item {\ttfamily Dirs} -\/ List directories only 
+\item {\ttfamily Files} -\/ List files only
+
+
+\item {\ttfamily Drives} -\/ List disk drives (does nothing under unix) 
+\item {\ttfamily No\+Sym\+Links} -\/ Do not list symbolic links (where they exist) 
+\item {\ttfamily Readable} -\/ List files for which the application has read access. 
+\item {\ttfamily Writable} -\/ List files for which the application has write access. 
+\item {\ttfamily Executable} -\/ List files for which the application has execute access 
+\item {\ttfamily Modified} -\/ Only list files that have been modified (does nothing under unix) 
+\item {\ttfamily Hidden} -\/ List hidden files (on unix, files starting with a .) 
+\item {\ttfamily System} -\/ List system files (does nothing under unix) 
+\end{DoxyItemize}
+
+If you do not set any of {\ttfamily Readable}, {\ttfamily Writable} or {\ttfamily Executable}, \hyperlink{class_q_dir}{Q\+Dir} will set all three of them. This makes the default easy to write and at the same time useful.
+
+Examples\+: {\ttfamily Readable$\vert$\+Writable} means list all files for which the application has read access, write access or both. {\ttfamily Dirs$\vert$\+Drives} means list drives, directories, all files that the application can read, write or execute, and also symlinks to such files/directories. \begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Dirs@{Dirs}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Dirs@{Dirs}}\item[{\em 
+\hypertarget{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1aec15ecbbb66c4035f1beac420620c455}{}Dirs\label{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1aec15ecbbb66c4035f1beac420620c455}
+}]\index{Files@{Files}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Files@{Files}}\item[{\em 
+\hypertarget{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a24042aebd6c53e6c913b359fb2271b12}{}Files\label{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a24042aebd6c53e6c913b359fb2271b12}
+}]\index{Drives@{Drives}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Drives@{Drives}}\item[{\em 
+\hypertarget{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a708a9ec117537510e1871c096617cac2}{}Drives\label{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a708a9ec117537510e1871c096617cac2}
+}]\index{No\+Sym\+Links@{No\+Sym\+Links}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!No\+Sym\+Links@{No\+Sym\+Links}}\item[{\em 
+\hypertarget{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a9cdaf38ee54b903bb6cd3bc00444e046}{}No\+Sym\+Links\label{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a9cdaf38ee54b903bb6cd3bc00444e046}
+}]\index{All@{All}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!All@{All}}\item[{\em 
+\hypertarget{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a6a41a0538f66bdc9d57e12c15da80352}{}All\label{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a6a41a0538f66bdc9d57e12c15da80352}
+}]\index{Type\+Mask@{Type\+Mask}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Type\+Mask@{Type\+Mask}}\item[{\em 
+\hypertarget{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a0cafe3372b457a38a86c045c617c5bbd}{}Type\+Mask\label{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a0cafe3372b457a38a86c045c617c5bbd}
+}]\index{Readable@{Readable}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Readable@{Readable}}\item[{\em 
+\hypertarget{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1ac12c5e5cd2ee45d09190a0b0a47c8548}{}Readable\label{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1ac12c5e5cd2ee45d09190a0b0a47c8548}
+}]\index{Writable@{Writable}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Writable@{Writable}}\item[{\em 
+\hypertarget{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1ac41aa37937c831406cbdf39639deefc0}{}Writable\label{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1ac41aa37937c831406cbdf39639deefc0}
+}]\index{Executable@{Executable}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Executable@{Executable}}\item[{\em 
+\hypertarget{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a0b1d1933226ee3a3b9af43260eefccda}{}Executable\label{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a0b1d1933226ee3a3b9af43260eefccda}
+}]\index{R\+W\+E\+Mask@{R\+W\+E\+Mask}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!R\+W\+E\+Mask@{R\+W\+E\+Mask}}\item[{\em 
+\hypertarget{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1af3293542b2a3757f2af666ae41941821}{}R\+W\+E\+Mask\label{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1af3293542b2a3757f2af666ae41941821}
+}]\index{Modified@{Modified}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Modified@{Modified}}\item[{\em 
+\hypertarget{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a27a59f1a04c63b278aa9c486e4aab533}{}Modified\label{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a27a59f1a04c63b278aa9c486e4aab533}
+}]\index{Hidden@{Hidden}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Hidden@{Hidden}}\item[{\em 
+\hypertarget{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a45175d70d3af4f89973fa88076d58821}{}Hidden\label{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a45175d70d3af4f89973fa88076d58821}
+}]\index{System@{System}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!System@{System}}\item[{\em 
+\hypertarget{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1ada244a6ba6ca9587ebffeefa65ce8d6b}{}System\label{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1ada244a6ba6ca9587ebffeefa65ce8d6b}
+}]\index{Access\+Mask@{Access\+Mask}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Access\+Mask@{Access\+Mask}}\item[{\em 
+\hypertarget{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a62a191157b0ccf07f8b289a93c73c071}{}Access\+Mask\label{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a62a191157b0ccf07f8b289a93c73c071}
+}]\index{Default\+Filter@{Default\+Filter}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Default\+Filter@{Default\+Filter}}\item[{\em 
+\hypertarget{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a592073bc83aaadb4120fb7a9fdf1016c}{}Default\+Filter\label{class_q_dir_a8b8c5b4f0028081f094c85129b8cc8b1a592073bc83aaadb4120fb7a9fdf1016c}
+}]\end{description}
+\end{Desc}
+\hypertarget{class_q_dir_a428a858abe9593efc498b6641b41994c}{}\index{Q\+Dir@{Q\+Dir}!Sort\+Spec@{Sort\+Spec}}
+\index{Sort\+Spec@{Sort\+Spec}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{Sort\+Spec}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Q\+Dir\+::\+Sort\+Spec}}\label{class_q_dir_a428a858abe9593efc498b6641b41994c}
+This enum describes how \hyperlink{class_q_dir}{Q\+Dir} is to sort entries in a directory when it returns a list of them. The sort value is specified by or-\/ing together values from the following list\+: 
+\begin{DoxyItemize}
+\item {\ttfamily Name} -\/ sort by name 
+\item {\ttfamily Time} -\/ sort by time (modification time) 
+\item {\ttfamily Size} -\/ sort by file size 
+\item {\ttfamily Unsorted} -\/ do not sort
+
+
+\item {\ttfamily Dirs\+First} -\/ put all directories first in the list 
+\item {\ttfamily Reversed} -\/ reverse the sort order 
+\item {\ttfamily Ignore\+Case} -\/ sort case-\/insensitively
+
+
+\end{DoxyItemize}
+
+You can only specify one of the first four. If you specify both {\ttfamily Dirs\+First} and {\ttfamily Reversed}, directories are still put first but the list is otherwise reversed. \begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Name@{Name}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Name@{Name}}\item[{\em 
+\hypertarget{class_q_dir_a428a858abe9593efc498b6641b41994caa826dc828303a0b91b0f7215ab8ebea2}{}Name\label{class_q_dir_a428a858abe9593efc498b6641b41994caa826dc828303a0b91b0f7215ab8ebea2}
+}]\index{Time@{Time}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Time@{Time}}\item[{\em 
+\hypertarget{class_q_dir_a428a858abe9593efc498b6641b41994ca90da0d923d555ba9ff55033a63aabd77}{}Time\label{class_q_dir_a428a858abe9593efc498b6641b41994ca90da0d923d555ba9ff55033a63aabd77}
+}]\index{Size@{Size}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Size@{Size}}\item[{\em 
+\hypertarget{class_q_dir_a428a858abe9593efc498b6641b41994ca519486e697ac94dc212391f52602989a}{}Size\label{class_q_dir_a428a858abe9593efc498b6641b41994ca519486e697ac94dc212391f52602989a}
+}]\index{Unsorted@{Unsorted}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Unsorted@{Unsorted}}\item[{\em 
+\hypertarget{class_q_dir_a428a858abe9593efc498b6641b41994ca82972f053552dc03c2654f1feeb35786}{}Unsorted\label{class_q_dir_a428a858abe9593efc498b6641b41994ca82972f053552dc03c2654f1feeb35786}
+}]\index{Sort\+By\+Mask@{Sort\+By\+Mask}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Sort\+By\+Mask@{Sort\+By\+Mask}}\item[{\em 
+\hypertarget{class_q_dir_a428a858abe9593efc498b6641b41994ca6754d79464bc1e20e908a8521c4dfd10}{}Sort\+By\+Mask\label{class_q_dir_a428a858abe9593efc498b6641b41994ca6754d79464bc1e20e908a8521c4dfd10}
+}]\index{Dirs\+First@{Dirs\+First}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Dirs\+First@{Dirs\+First}}\item[{\em 
+\hypertarget{class_q_dir_a428a858abe9593efc498b6641b41994caa3f79d41ecf87e969966fc3841f22cfe}{}Dirs\+First\label{class_q_dir_a428a858abe9593efc498b6641b41994caa3f79d41ecf87e969966fc3841f22cfe}
+}]\index{Reversed@{Reversed}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Reversed@{Reversed}}\item[{\em 
+\hypertarget{class_q_dir_a428a858abe9593efc498b6641b41994cac0c522ab29bfb765565ec2c5fefe2074}{}Reversed\label{class_q_dir_a428a858abe9593efc498b6641b41994cac0c522ab29bfb765565ec2c5fefe2074}
+}]\index{Ignore\+Case@{Ignore\+Case}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Ignore\+Case@{Ignore\+Case}}\item[{\em 
+\hypertarget{class_q_dir_a428a858abe9593efc498b6641b41994ca66b6c27f615e5c92ba48da265007db5d}{}Ignore\+Case\label{class_q_dir_a428a858abe9593efc498b6641b41994ca66b6c27f615e5c92ba48da265007db5d}
+}]\index{Default\+Sort@{Default\+Sort}!Q\+Dir@{Q\+Dir}}\index{Q\+Dir@{Q\+Dir}!Default\+Sort@{Default\+Sort}}\item[{\em 
+\hypertarget{class_q_dir_a428a858abe9593efc498b6641b41994ca34834a05408264ddaae5f0259fb79038}{}Default\+Sort\label{class_q_dir_a428a858abe9593efc498b6641b41994ca34834a05408264ddaae5f0259fb79038}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_dir_a78cf34af6b7e0ffa3d11ef0ba0ecd403}{}\index{Q\+Dir@{Q\+Dir}!Q\+Dir@{Q\+Dir}}
+\index{Q\+Dir@{Q\+Dir}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{Q\+Dir()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Dir\+::\+Q\+Dir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_dir_a78cf34af6b7e0ffa3d11ef0ba0ecd403}
+Constructs a \hyperlink{class_q_dir}{Q\+Dir} pointing to the current directory. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_a987a313fb7600142ed761109991f5a8c}{current\+Dir\+Path()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_ad4f09eb0858b034f2b2edff184e1f50d}{}\index{Q\+Dir@{Q\+Dir}!Q\+Dir@{Q\+Dir}}
+\index{Q\+Dir@{Q\+Dir}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{Q\+Dir(const Q\+String \&path, const Q\+String \&name\+Filter=\+Q\+String\+::null, int sort\+Spec=\+Name\texttt{"|}Ignore\+Case, int filter\+Spec=\+All)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Dir\+::\+Q\+Dir (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{path, }
+\item[{const {\bf Q\+String} \&}]{name\+Filter = {\ttfamily {\bf Q\+String\+::null}}, }
+\item[{int}]{sort\+Spec = {\ttfamily {\bf Name}~$\vert$~{\bf Ignore\+Case}}, }
+\item[{int}]{filter\+Spec = {\ttfamily {\bf All}}}
+\end{DoxyParamCaption}
+)}\label{class_q_dir_ad4f09eb0858b034f2b2edff184e1f50d}
+Constructs a \hyperlink{class_q_dir}{Q\+Dir}.
+
+\begin{DoxyItemize}
+\item {\itshape path} is the directory. \item {\itshape name\+Filter} is the file name filter. \item {\itshape sort\+Spec} is the sort specification, which describes how to sort the files in the directory. \item {\itshape filter\+Spec} is the filter specification, which describes how to filter the files in the directory.\end{DoxyItemize}
+Most of these arguments (except {\itshape path}) have optional values.
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// lists all files in /tmp}
+
+\hyperlink{class_q_dir}{QDir} \hyperlink{058__bracket__recursion_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}( \textcolor{stringliteral}{"/tmp"} );
+\textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i=0; i<d.\hyperlink{class_q_dir_ac48855e1aead59d7b6cc5752f12d0556}{count}(); i++ )
+printf( \textcolor{stringliteral}{"%s\(\backslash\)n"}, d[i] );
+\end{DoxyCode}
+
+
+If {\itshape path} is \char`\"{}\char`\"{} or null, the directory is set to \char`\"{}.\char`\"{} (the current directory). If {\itshape name\+Filter} is \char`\"{}\char`\"{} or null, it is set to \char`\"{}$\ast$\char`\"{} (all files).
+
+No check is made to ensure that the directory exists.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_a1294085ddb97ecd3643b700feb3fabea}{exists()}, \hyperlink{class_q_dir_ac947989c99aecbfebd509088b8834715}{set\+Path()}, \hyperlink{class_q_dir_a26b95e183a9ba9410219a3ce4d8c3416}{set\+Name\+Filter()}, \hyperlink{class_q_dir_a68d9e723870b5f8226353dc6047a35ee}{set\+Filter()}, \hyperlink{class_q_dir_a65280d204cd65975953e3eb2a63da778}{set\+Sorting()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a16e6aedc84e9e1a5c10ded811b6510b3}{}\index{Q\+Dir@{Q\+Dir}!Q\+Dir@{Q\+Dir}}
+\index{Q\+Dir@{Q\+Dir}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{Q\+Dir(const Q\+Dir \&)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Dir\+::\+Q\+Dir (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Dir} \&}]{d}
+\end{DoxyParamCaption}
+)}\label{class_q_dir_a16e6aedc84e9e1a5c10ded811b6510b3}
+Constructs a \hyperlink{class_q_dir}{Q\+Dir} that is a copy of the given directory. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_a3be7ccbacac7fa0e2fd2143259d0e04b}{operator=()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a1f28124d07dac6de42de73f074e7dbec}{}\index{Q\+Dir@{Q\+Dir}!````~Q\+Dir@{$\sim$\+Q\+Dir}}
+\index{````~Q\+Dir@{$\sim$\+Q\+Dir}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{$\sim$\+Q\+Dir()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Dir\+::$\sim$\+Q\+Dir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a1f28124d07dac6de42de73f074e7dbec}
+Destructs the \hyperlink{class_q_dir}{Q\+Dir} and cleans up. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_dir_af85dfc097c27c98c2f96bff380530970}{}\index{Q\+Dir@{Q\+Dir}!abs\+File\+Path@{abs\+File\+Path}}
+\index{abs\+File\+Path@{abs\+File\+Path}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{abs\+File\+Path(const Q\+String \&file\+Name, bool accept\+Abs\+Path=\+T\+R\+U\+E) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Dir\+::abs\+File\+Path (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{file\+Name, }
+\item[{{\bf bool}}]{accept\+Abs\+Path = {\ttfamily {\bf T\+R\+U\+E}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_af85dfc097c27c98c2f96bff380530970}
+Returns the absolute path name of a file in the directory. Does N\+O\+T check if the file actually exists in the directory. Redundant multiple separators or \char`\"{}.\char`\"{} and \char`\"{}..\char`\"{} directories in {\itshape file\+Name} will N\+O\+T be removed (see \hyperlink{class_q_dir_ad38037708dc754f5bdd877c145dbbb19}{clean\+Dir\+Path()}).
+
+If {\itshape accept\+Abs\+Path} is T\+R\+U\+E a {\itshape file\+Name} starting with a separator (\textquotesingle{}/\textquotesingle{}) will be returned without change. if {\itshape accept\+Abs\+Path} is F\+A\+L\+S\+E an absolute path will be appended to the directory path.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_a5a94f451c6a1a268228878b1add20bf0}{file\+Path()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a884038b1ff47d15d4d763326698f0481}{}\index{Q\+Dir@{Q\+Dir}!abs\+Path@{abs\+Path}}
+\index{abs\+Path@{abs\+Path}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{abs\+Path() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Dir\+::abs\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a884038b1ff47d15d4d763326698f0481}
+Returns the absolute (a path that starts with \textquotesingle{}/\textquotesingle{}) path, which may contain symbolic links, but never contains redundant \char`\"{}.\char`\"{}, \char`\"{}..\char`\"{} or multiple separators.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_ac947989c99aecbfebd509088b8834715}{set\+Path()}, \hyperlink{class_q_dir_a134133cb23364ce504a13a1e748232bc}{canonical\+Path()}, \hyperlink{class_q_dir_a1294085ddb97ecd3643b700feb3fabea}{exists()}, \hyperlink{class_q_dir_ad38037708dc754f5bdd877c145dbbb19}{clean\+Dir\+Path()}, \hyperlink{class_q_dir_a12b679447f94f6eb194ec9bfb2a6d8a4}{dir\+Name()}, \hyperlink{class_q_dir_af85dfc097c27c98c2f96bff380530970}{abs\+File\+Path()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a134133cb23364ce504a13a1e748232bc}{}\index{Q\+Dir@{Q\+Dir}!canonical\+Path@{canonical\+Path}}
+\index{canonical\+Path@{canonical\+Path}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{canonical\+Path() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Dir\+::canonical\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a134133cb23364ce504a13a1e748232bc}
+\hypertarget{class_q_dir_a5a58d7a5387627fa479f2ac376895e6a}{}\index{Q\+Dir@{Q\+Dir}!cd@{cd}}
+\index{cd@{cd}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{cd(const Q\+String \&dir\+Name, bool accept\+Abs\+Path=\+T\+R\+U\+E)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Dir\+::cd (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{dir\+Name, }
+\item[{{\bf bool}}]{accept\+Abs\+Path = {\ttfamily {\bf T\+R\+U\+E}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a5a58d7a5387627fa479f2ac376895e6a}
+Changes directory by descending into the given directory. Returns T\+R\+U\+E if the new directory exists and is readable. Note that the logical cd operation is N\+O\+T performed if the new directory does not exist.
+
+If {\itshape accept\+Abs\+Path} is T\+R\+U\+E a path starting with a separator (\textquotesingle{}/\textquotesingle{}) will cd to the absolute directory, if {\itshape accept\+Abs\+Path} is F\+A\+L\+S\+E any number of separators at the beginning of {\itshape dir\+Name} will be removed.
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_dir}{QDir} d = \hyperlink{class_q_dir_ab3881e8a981cc34ede0e6e57a1135c20}{QDir::home}();  \textcolor{comment}{// now points to home directory}
+\textcolor{keywordflow}{if} ( !d.\hyperlink{class_q_dir_a5a58d7a5387627fa479f2ac376895e6a}{cd}(\textcolor{stringliteral}{"c++"}) ) \{     \textcolor{comment}{// now points to "c++" under home directory if OK}
+    \hyperlink{class_q_file_info}{QFileInfo} fi( d, \textcolor{stringliteral}{"c++"} );
+    \textcolor{keywordflow}{if} ( fi.\hyperlink{class_q_file_info_aef52b667c4809f0e0061c6f39ab72aea}{exists}() ) \{
+    \textcolor{keywordflow}{if} ( fi.\hyperlink{class_q_file_info_a93aecba4bcd72253d925e6028e8756f8}{isDir}() )
+        \hyperlink{qglobal_8cpp_addd9b8ef474319fc95ba80d46fbd1e94}{qWarning}( \textcolor{stringliteral}{"Cannot cd into \(\backslash\)"%s\(\backslash\)"."}, (\textcolor{keywordtype}{char}*)d.\hyperlink{class_q_dir_af85dfc097c27c98c2f96bff380530970}{absFilePath}(\textcolor{stringliteral}{"c++"}) );
+    \textcolor{keywordflow}{else}
+        \hyperlink{qglobal_8cpp_addd9b8ef474319fc95ba80d46fbd1e94}{qWarning}( \textcolor{stringliteral}{"Cannot create directory \(\backslash\)"%s\(\backslash\)"\(\backslash\)n"}
+           \textcolor{stringliteral}{"A file named \(\backslash\)"c++\(\backslash\)" already exists in \(\backslash\)"%s\(\backslash\)""},
+           (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)d.\hyperlink{class_q_dir_af85dfc097c27c98c2f96bff380530970}{absFilePath}(\textcolor{stringliteral}{"c++"}),
+           (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)d.\hyperlink{class_q_dir_adc89b85ad2479f2b3baf899bfbe48f7f}{path}() );
+    \textcolor{keywordflow}{return};
+    \} \textcolor{keywordflow}{else} \{
+    \hyperlink{qglobal_8cpp_addd9b8ef474319fc95ba80d46fbd1e94}{qWarning}( \textcolor{stringliteral}{"Creating directory \(\backslash\)"%s\(\backslash\)""},
+       (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *) d.\hyperlink{class_q_dir_af85dfc097c27c98c2f96bff380530970}{absFilePath}(\textcolor{stringliteral}{"c++"}) );
+    \textcolor{keywordflow}{if} ( !d.\hyperlink{class_q_dir_ab85d98ede6a4f9cfefd18c5472530548}{mkdir}( \textcolor{stringliteral}{"c++"} ) ) \{
+        \hyperlink{qglobal_8cpp_addd9b8ef474319fc95ba80d46fbd1e94}{qWarning}(\textcolor{stringliteral}{"Could not create directory \(\backslash\)"%s\(\backslash\)""},
+          (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)d.\hyperlink{class_q_dir_af85dfc097c27c98c2f96bff380530970}{absFilePath}(\textcolor{stringliteral}{"c++"}) );
+        \textcolor{keywordflow}{return};
+    \}
+    \}
+\}
+\end{DoxyCode}
+
+
+Calling cd( \char`\"{}..\char`\"{} ) is equivalent to calling \hyperlink{class_q_dir_a22a212babdfa332de6ee9d07f96dc2ba}{cd\+Up()}.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_a22a212babdfa332de6ee9d07f96dc2ba}{cd\+Up()}, \hyperlink{class_q_dir_ad973387ed744650508d00b3da579efcf}{is\+Readable()}, \hyperlink{class_q_dir_a1294085ddb97ecd3643b700feb3fabea}{exists()}, \hyperlink{class_q_dir_adc89b85ad2479f2b3baf899bfbe48f7f}{path()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a22a212babdfa332de6ee9d07f96dc2ba}{}\index{Q\+Dir@{Q\+Dir}!cd\+Up@{cd\+Up}}
+\index{cd\+Up@{cd\+Up}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{cd\+Up()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Dir\+::cd\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a22a212babdfa332de6ee9d07f96dc2ba}
+Changes directory by moving one directory up the path followed to arrive at the current directory.
+
+Returns T\+R\+U\+E if the new directory exists and is readable. Note that the logical \hyperlink{class_q_dir_a22a212babdfa332de6ee9d07f96dc2ba}{cd\+Up()} operation is not performed if the new directory does not exist.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_a5a58d7a5387627fa479f2ac376895e6a}{cd()}, \hyperlink{class_q_dir_ad973387ed744650508d00b3da579efcf}{is\+Readable()}, \hyperlink{class_q_dir_a1294085ddb97ecd3643b700feb3fabea}{exists()}, \hyperlink{class_q_dir_adc89b85ad2479f2b3baf899bfbe48f7f}{path()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_ad38037708dc754f5bdd877c145dbbb19}{}\index{Q\+Dir@{Q\+Dir}!clean\+Dir\+Path@{clean\+Dir\+Path}}
+\index{clean\+Dir\+Path@{clean\+Dir\+Path}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{clean\+Dir\+Path(const Q\+String \&dir\+Path)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Dir\+::clean\+Dir\+Path (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{file\+Path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_dir_ad38037708dc754f5bdd877c145dbbb19}
+Removes all multiple directory separators (\textquotesingle{}/\textquotesingle{}) and resolves any \char`\"{}.\char`\"{} or \char`\"{}..\char`\"{} found in the path.
+
+Symbolic links are kept. This function does not return the canonical path, but rather the most simplified version of the input. \char`\"{}../stuff\char`\"{} becomes \char`\"{}stuff\char`\"{}, \char`\"{}stuff/../nonsense\char`\"{} becomes \char`\"{}nonsense\char`\"{} and \char`\"{}\textbackslash{}\textbackslash{}stuff\textbackslash{}\textbackslash{}more\textbackslash{}\textbackslash{}..\textbackslash{}\textbackslash{}nonsense\char`\"{} becomes \char`\"{}\textbackslash{}\textbackslash{}stuff\textbackslash{}\textbackslash{}nonsense\char`\"{}.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_a884038b1ff47d15d4d763326698f0481}{abs\+Path()} \hyperlink{class_q_dir_a134133cb23364ce504a13a1e748232bc}{canonical\+Path()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a2cb829f147b7225abab1e5915ae62264}{}\index{Q\+Dir@{Q\+Dir}!convert\+Separators@{convert\+Separators}}
+\index{convert\+Separators@{convert\+Separators}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{convert\+Separators(const Q\+String \&path\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Dir\+::convert\+Separators (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{path\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_dir_a2cb829f147b7225abab1e5915ae62264}
+Converts the \textquotesingle{}/\textquotesingle{} separators in {\itshape path\+Name} to system native separators. Returns the translated string.
+
+On Windows, convert\+Separators(\char`\"{}c\+:/winnt/system32\char`\"{}) returns \char`\"{}c\+:\textbackslash{}winnt\textbackslash{}system32\char`\"{}.
+
+No conversion is done on U\+N\+I\+X. \hypertarget{class_q_dir_a0c05c8978b3b4158233f809e4d30c55d}{}\index{Q\+Dir@{Q\+Dir}!convert\+To\+Abs@{convert\+To\+Abs}}
+\index{convert\+To\+Abs@{convert\+To\+Abs}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{convert\+To\+Abs()}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Dir\+::convert\+To\+Abs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a0c05c8978b3b4158233f809e4d30c55d}
+Converts the directory path to an absolute path. If it is already absolute nothing is done.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_a0d7232dab091230bfabb81ba2d2329ef}{is\+Relative()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_ac48855e1aead59d7b6cc5752f12d0556}{}\index{Q\+Dir@{Q\+Dir}!count@{count}}
+\index{count@{count}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{count() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint} Q\+Dir\+::count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_dir_ac48855e1aead59d7b6cc5752f12d0556}
+Returns the number of files that was found. Equivalent to \hyperlink{class_q_dir_a468530017006c1eeea94c78d264964aa}{entry\+List()}.\hyperlink{class_q_dir_ac48855e1aead59d7b6cc5752f12d0556}{count()}. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_a3fc0548fca3c4e761622a71b343c98a7}{operator\mbox{[}$\,$\mbox{]}()}, \hyperlink{class_q_dir_a468530017006c1eeea94c78d264964aa}{entry\+List()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a697f013a5d4ae0c805546a2dd8f55707}{}\index{Q\+Dir@{Q\+Dir}!current@{current}}
+\index{current@{current}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{current()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Dir} Q\+Dir\+::current (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_dir_a697f013a5d4ae0c805546a2dd8f55707}
+Returns the current directory. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_a987a313fb7600142ed761109991f5a8c}{current\+Dir\+Path()}, \hyperlink{class_q_dir_a78cf34af6b7e0ffa3d11ef0ba0ecd403}{Q\+Dir\+::\+Q\+Dir()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a987a313fb7600142ed761109991f5a8c}{}\index{Q\+Dir@{Q\+Dir}!current\+Dir\+Path@{current\+Dir\+Path}}
+\index{current\+Dir\+Path@{current\+Dir\+Path}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{current\+Dir\+Path()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Dir\+::current\+Dir\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_dir_a987a313fb7600142ed761109991f5a8c}
+\hypertarget{class_q_dir_a12b679447f94f6eb194ec9bfb2a6d8a4}{}\index{Q\+Dir@{Q\+Dir}!dir\+Name@{dir\+Name}}
+\index{dir\+Name@{dir\+Name}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{dir\+Name() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Dir\+::dir\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a12b679447f94f6eb194ec9bfb2a6d8a4}
+Returns the name of the directory, this is N\+O\+T the same as the path, e.\+g. a directory with the name \char`\"{}mail\char`\"{}, might have the path \char`\"{}/var/spool/mail\char`\"{}. If the directory has no name (e.\+g. the root directory) a null string is returned.
+
+No check is made to ensure that a directory with this name actually exists.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_adc89b85ad2479f2b3baf899bfbe48f7f}{path()}, \hyperlink{class_q_dir_a884038b1ff47d15d4d763326698f0481}{abs\+Path()}, \hyperlink{class_q_dir_af85dfc097c27c98c2f96bff380530970}{abs\+File\+Path()}, \hyperlink{class_q_dir_a1294085ddb97ecd3643b700feb3fabea}{exists()}, \hyperlink{class_q_string_abbd7059384540a4337dfb86362727507}{Q\+String\+::is\+Null()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a549c0fc27cf5b4b24310558fe477e178}{}\index{Q\+Dir@{Q\+Dir}!drives@{drives}}
+\index{drives@{drives}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{drives()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Q\+File\+Info\+List} $\ast$ Q\+Dir\+::drives (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_dir_a549c0fc27cf5b4b24310558fe477e178}
+\hypertarget{class_q_dir_a4b7889f91d79b5547cbef1c2bc6724e1}{}\index{Q\+Dir@{Q\+Dir}!encoded\+Entry\+List@{encoded\+Entry\+List}}
+\index{encoded\+Entry\+List@{encoded\+Entry\+List}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{encoded\+Entry\+List(int filter\+Spec=\+Default\+Filter, int sort\+Spec=\+Default\+Sort) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Str\+List} Q\+Dir\+::encoded\+Entry\+List (
+\begin{DoxyParamCaption}
+\item[{int}]{filter\+Spec = {\ttfamily {\bf Default\+Filter}}, }
+\item[{int}]{sort\+Spec = {\ttfamily {\bf Default\+Sort}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a4b7889f91d79b5547cbef1c2bc6724e1}
+This function is included to easy porting from Qt 1.\+x to Qt 2.\+0, it is the same as \hyperlink{class_q_dir_a468530017006c1eeea94c78d264964aa}{entry\+List()}, but encodes the filenames as 8-\/bit strings using Q\+File\+::encoded\+Name().
+
+It is more efficient to use \hyperlink{class_q_dir_a468530017006c1eeea94c78d264964aa}{entry\+List()}. \hypertarget{class_q_dir_a2ce2dc8f717796ede60cea70c1363575}{}\index{Q\+Dir@{Q\+Dir}!encoded\+Entry\+List@{encoded\+Entry\+List}}
+\index{encoded\+Entry\+List@{encoded\+Entry\+List}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{encoded\+Entry\+List(const Q\+String \&name\+Filter, int filter\+Spec=\+Default\+Filter, int sort\+Spec=\+Default\+Sort) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Str\+List} Q\+Dir\+::encoded\+Entry\+List (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{name\+Filter, }
+\item[{int}]{filter\+Spec = {\ttfamily {\bf Default\+Filter}}, }
+\item[{int}]{sort\+Spec = {\ttfamily {\bf Default\+Sort}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a2ce2dc8f717796ede60cea70c1363575}
+This function is included to easy porting from Qt 1.\+x to Qt 2.\+0, it is the same as \hyperlink{class_q_dir_a468530017006c1eeea94c78d264964aa}{entry\+List()}, but encodes the filenames as 8-\/bit strings using Q\+File\+::encoded\+Name().
+
+It is more efficient to use \hyperlink{class_q_dir_a468530017006c1eeea94c78d264964aa}{entry\+List()}. \hypertarget{class_q_dir_aa67974b4e5452af01677d2d57991f36a}{}\index{Q\+Dir@{Q\+Dir}!entry\+Info\+List@{entry\+Info\+List}}
+\index{entry\+Info\+List@{entry\+Info\+List}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{entry\+Info\+List(int filter\+Spec=\+Default\+Filter, int sort\+Spec=\+Default\+Sort) const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Q\+File\+Info\+List} $\ast$ Q\+Dir\+::entry\+Info\+List (
+\begin{DoxyParamCaption}
+\item[{int}]{filter\+Spec = {\ttfamily {\bf Default\+Filter}}, }
+\item[{int}]{sort\+Spec = {\ttfamily {\bf Default\+Sort}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_aa67974b4e5452af01677d2d57991f36a}
+Returns a list of \hyperlink{class_q_file_info}{Q\+File\+Info} objects for all files and directories in the directory pointed to using the \hyperlink{class_q_dir_a65280d204cd65975953e3eb2a63da778}{set\+Sorting()}, \hyperlink{class_q_dir_a68d9e723870b5f8226353dc6047a35ee}{set\+Filter()} and \hyperlink{class_q_dir_a26b95e183a9ba9410219a3ce4d8c3416}{set\+Name\+Filter()} specifications.
+
+The the filter and sorting specifications can be overridden using the {\itshape filter\+Spec} and {\itshape sort\+Spec} arguments.
+
+Returns 0 if the directory is unreadable or does not exist.
+
+The returned pointer is a const pointer to a Q\+File\+Info\+List. The list is owned by the \hyperlink{class_q_dir}{Q\+Dir} object and will be reused on the next call to \hyperlink{class_q_dir_aa67974b4e5452af01677d2d57991f36a}{entry\+Info\+List()} for the same \hyperlink{class_q_dir}{Q\+Dir} instance. If you want to keep the entries of the list after a subsequent call to this function you will need to copy them.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_a468530017006c1eeea94c78d264964aa}{entry\+List()}, \hyperlink{class_q_dir_a26b95e183a9ba9410219a3ce4d8c3416}{set\+Name\+Filter()}, \hyperlink{class_q_dir_a65280d204cd65975953e3eb2a63da778}{set\+Sorting()}, \hyperlink{class_q_dir_a68d9e723870b5f8226353dc6047a35ee}{set\+Filter()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a9439ea6b331957f38dbad981c4d050ef}{}\index{Q\+Dir@{Q\+Dir}!entry\+Info\+List@{entry\+Info\+List}}
+\index{entry\+Info\+List@{entry\+Info\+List}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{entry\+Info\+List(const Q\+String \&name\+Filter, int filter\+Spec=\+Default\+Filter, int sort\+Spec=\+Default\+Sort) const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Q\+File\+Info\+List} $\ast$ Q\+Dir\+::entry\+Info\+List (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{name\+Filter, }
+\item[{int}]{filter\+Spec = {\ttfamily {\bf Default\+Filter}}, }
+\item[{int}]{sort\+Spec = {\ttfamily {\bf Default\+Sort}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a9439ea6b331957f38dbad981c4d050ef}
+Returns a list of \hyperlink{class_q_file_info}{Q\+File\+Info} objects for all files and directories in the directory pointed to using the \hyperlink{class_q_dir_a65280d204cd65975953e3eb2a63da778}{set\+Sorting()}, \hyperlink{class_q_dir_a68d9e723870b5f8226353dc6047a35ee}{set\+Filter()} and \hyperlink{class_q_dir_a26b95e183a9ba9410219a3ce4d8c3416}{set\+Name\+Filter()} specifications.
+
+The the filter and sorting specifications can be overridden using the {\itshape name\+Filter}, {\itshape filter\+Spec} and {\itshape sort\+Spec} arguments.
+
+Returns 0 if the directory is unreadable or does not exist.
+
+The returned pointer is a const pointer to a Q\+File\+Info\+List. The list is owned by the \hyperlink{class_q_dir}{Q\+Dir} object and will be reused on the next call to \hyperlink{class_q_dir_aa67974b4e5452af01677d2d57991f36a}{entry\+Info\+List()} for the same \hyperlink{class_q_dir}{Q\+Dir} instance. If you want to keep the entries of the list after a subsequent call to this function you will need to copy them.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_a468530017006c1eeea94c78d264964aa}{entry\+List()}, \hyperlink{class_q_dir_a26b95e183a9ba9410219a3ce4d8c3416}{set\+Name\+Filter()}, \hyperlink{class_q_dir_a65280d204cd65975953e3eb2a63da778}{set\+Sorting()}, \hyperlink{class_q_dir_a68d9e723870b5f8226353dc6047a35ee}{set\+Filter()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a468530017006c1eeea94c78d264964aa}{}\index{Q\+Dir@{Q\+Dir}!entry\+List@{entry\+List}}
+\index{entry\+List@{entry\+List}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{entry\+List(int filter\+Spec=\+Default\+Filter, int sort\+Spec=\+Default\+Sort) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String\+List} Q\+Dir\+::entry\+List (
+\begin{DoxyParamCaption}
+\item[{int}]{filter\+Spec = {\ttfamily {\bf Default\+Filter}}, }
+\item[{int}]{sort\+Spec = {\ttfamily {\bf Default\+Sort}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a468530017006c1eeea94c78d264964aa}
+Returns a list of the names of all files and directories in the directory indicated by the \hyperlink{class_q_dir_a65280d204cd65975953e3eb2a63da778}{set\+Sorting()}, \hyperlink{class_q_dir_a68d9e723870b5f8226353dc6047a35ee}{set\+Filter()} and \hyperlink{class_q_dir_a26b95e183a9ba9410219a3ce4d8c3416}{set\+Name\+Filter()} specifications.
+
+The the filter and sorting specifications can be overridden using the {\itshape filter\+Spec} and {\itshape sort\+Spec} arguments.
+
+Returns an empty list if the directory is unreadable or does not exist.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_aa67974b4e5452af01677d2d57991f36a}{entry\+Info\+List()}, \hyperlink{class_q_dir_a26b95e183a9ba9410219a3ce4d8c3416}{set\+Name\+Filter()}, \hyperlink{class_q_dir_a65280d204cd65975953e3eb2a63da778}{set\+Sorting()}, \hyperlink{class_q_dir_a68d9e723870b5f8226353dc6047a35ee}{set\+Filter()}, \hyperlink{class_q_dir_a4b7889f91d79b5547cbef1c2bc6724e1}{encoded\+Entry\+List()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_afd821ad3e452d9a07a4027276b4297ba}{}\index{Q\+Dir@{Q\+Dir}!entry\+List@{entry\+List}}
+\index{entry\+List@{entry\+List}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{entry\+List(const Q\+String \&name\+Filter, int filter\+Spec=\+Default\+Filter, int sort\+Spec=\+Default\+Sort) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String\+List} Q\+Dir\+::entry\+List (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{name\+Filter, }
+\item[{int}]{filter\+Spec = {\ttfamily {\bf Default\+Filter}}, }
+\item[{int}]{sort\+Spec = {\ttfamily {\bf Default\+Sort}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_afd821ad3e452d9a07a4027276b4297ba}
+Returns a list of the names of all files and directories in the directory indicated by the \hyperlink{class_q_dir_a65280d204cd65975953e3eb2a63da778}{set\+Sorting()}, \hyperlink{class_q_dir_a68d9e723870b5f8226353dc6047a35ee}{set\+Filter()} and \hyperlink{class_q_dir_a26b95e183a9ba9410219a3ce4d8c3416}{set\+Name\+Filter()} specifications.
+
+The the filter and sorting specifications can be overridden using the {\itshape name\+Filter}, {\itshape filter\+Spec} and {\itshape sort\+Spec} arguments.
+
+Returns and empty list if the directory is unreadable or does not exist.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_aa67974b4e5452af01677d2d57991f36a}{entry\+Info\+List()}, \hyperlink{class_q_dir_a26b95e183a9ba9410219a3ce4d8c3416}{set\+Name\+Filter()}, \hyperlink{class_q_dir_a65280d204cd65975953e3eb2a63da778}{set\+Sorting()}, \hyperlink{class_q_dir_a68d9e723870b5f8226353dc6047a35ee}{set\+Filter()}, \hyperlink{class_q_dir_a4b7889f91d79b5547cbef1c2bc6724e1}{encoded\+Entry\+List()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a1294085ddb97ecd3643b700feb3fabea}{}\index{Q\+Dir@{Q\+Dir}!exists@{exists}}
+\index{exists@{exists}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{exists() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Dir\+::exists (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a1294085ddb97ecd3643b700feb3fabea}
+Returns T\+R\+U\+E if the directory exists. (If a file with the same name is found this function will of course return F\+A\+L\+S\+E).
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_aef52b667c4809f0e0061c6f39ab72aea}{Q\+File\+Info\+::exists()}, \hyperlink{class_q_file_a92e45baef18c7ed566cfe51837e8c7ae}{Q\+File\+::exists()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a83bb64d2d9e4f7bf0d9d9d0896165be6}{}\index{Q\+Dir@{Q\+Dir}!exists@{exists}}
+\index{exists@{exists}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{exists(const Q\+String \&name, bool accept\+Abs\+Path=\+T\+R\+U\+E)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Dir\+::exists (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{name, }
+\item[{{\bf bool}}]{accept\+Abs\+Path = {\ttfamily {\bf T\+R\+U\+E}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a83bb64d2d9e4f7bf0d9d9d0896165be6}
+Checks for existence of a file.
+
+If {\itshape accept\+Abs\+Paths} is T\+R\+U\+E a path starting with a separator (\textquotesingle{}/\textquotesingle{}) will check the file with the absolute path, if {\itshape accept\+Abs\+Path} is F\+A\+L\+S\+E any number of separators at the beginning of {\itshape name} will be removed.
+
+Returns T\+R\+U\+E if the file exists, otherwise F\+A\+L\+S\+E.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_aef52b667c4809f0e0061c6f39ab72aea}{Q\+File\+Info\+::exists()}, \hyperlink{class_q_file_a92e45baef18c7ed566cfe51837e8c7ae}{Q\+File\+::exists()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a5a94f451c6a1a268228878b1add20bf0}{}\index{Q\+Dir@{Q\+Dir}!file\+Path@{file\+Path}}
+\index{file\+Path@{file\+Path}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{file\+Path(const Q\+String \&file\+Name, bool accept\+Abs\+Path=\+T\+R\+U\+E) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Dir\+::file\+Path (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{file\+Name, }
+\item[{{\bf bool}}]{accept\+Abs\+Path = {\ttfamily {\bf T\+R\+U\+E}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a5a94f451c6a1a268228878b1add20bf0}
+Returns the path name of a file in the directory. Does N\+O\+T check if the file actually exists in the directory. If the \hyperlink{class_q_dir}{Q\+Dir} is relative the returned path name will also be relative. Redundant multiple separators or \char`\"{}.\char`\"{} and \char`\"{}..\char`\"{} directories in {\itshape file\+Name} will not be removed (see \hyperlink{class_q_dir_ad38037708dc754f5bdd877c145dbbb19}{clean\+Dir\+Path()}).
+
+If {\itshape accept\+Abs\+Path} is T\+R\+U\+E a {\itshape file\+Name} starting with a separator (\textquotesingle{}/\textquotesingle{}) will be returned without change. If {\itshape accept\+Abs\+Path} is F\+A\+L\+S\+E an absolute path will be appended to the directory path.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_af85dfc097c27c98c2f96bff380530970}{abs\+File\+Path()}, \hyperlink{class_q_dir_a0d7232dab091230bfabb81ba2d2329ef}{is\+Relative()}, \hyperlink{class_q_dir_a134133cb23364ce504a13a1e748232bc}{canonical\+Path()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a987d4eb30710296adf551c2b48118b28}{}\index{Q\+Dir@{Q\+Dir}!filter@{filter}}
+\index{filter@{filter}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{filter() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Dir\+::\+Filter\+Spec} Q\+Dir\+::filter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_dir_a987d4eb30710296adf551c2b48118b28}
+Returns the value set by \hyperlink{class_q_dir_a68d9e723870b5f8226353dc6047a35ee}{set\+Filter()} \hypertarget{class_q_dir_ab3881e8a981cc34ede0e6e57a1135c20}{}\index{Q\+Dir@{Q\+Dir}!home@{home}}
+\index{home@{home}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{home()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Dir} Q\+Dir\+::home (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_dir_ab3881e8a981cc34ede0e6e57a1135c20}
+Returns the home directory. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_ac112ea98a56191b8b0d84cd967472b39}{home\+Dir\+Path()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_ac112ea98a56191b8b0d84cd967472b39}{}\index{Q\+Dir@{Q\+Dir}!home\+Dir\+Path@{home\+Dir\+Path}}
+\index{home\+Dir\+Path@{home\+Dir\+Path}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{home\+Dir\+Path()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Dir\+::home\+Dir\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_dir_ac112ea98a56191b8b0d84cd967472b39}
+Returns the absolute path for the user\textquotesingle{}s home directory, \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_ab3881e8a981cc34ede0e6e57a1135c20}{home()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_ad973387ed744650508d00b3da579efcf}{}\index{Q\+Dir@{Q\+Dir}!is\+Readable@{is\+Readable}}
+\index{is\+Readable@{is\+Readable}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{is\+Readable() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Dir\+::is\+Readable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_ad973387ed744650508d00b3da579efcf}
+\hypertarget{class_q_dir_a0d7232dab091230bfabb81ba2d2329ef}{}\index{Q\+Dir@{Q\+Dir}!is\+Relative@{is\+Relative}}
+\index{is\+Relative@{is\+Relative}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{is\+Relative() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Dir\+::is\+Relative (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a0d7232dab091230bfabb81ba2d2329ef}
+Returns T\+R\+U\+E if the directory path is relative to the current directory, F\+A\+L\+S\+E if the path is absolute (e.\+g. under U\+N\+I\+X a path is relative if it does not start with a \textquotesingle{}/\textquotesingle{}).
+
+According to Einstein this function should always return T\+R\+U\+E.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_a0c05c8978b3b4158233f809e4d30c55d}{convert\+To\+Abs()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a500524767f07a8cf127392859cc41d49}{}\index{Q\+Dir@{Q\+Dir}!is\+Relative\+Path@{is\+Relative\+Path}}
+\index{is\+Relative\+Path@{is\+Relative\+Path}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{is\+Relative\+Path(const Q\+String \&path)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Dir\+::is\+Relative\+Path (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_dir_a500524767f07a8cf127392859cc41d49}
+\hypertarget{class_q_dir_a44c8042bcce4b07fffc0c907b9842604}{}\index{Q\+Dir@{Q\+Dir}!is\+Root@{is\+Root}}
+\index{is\+Root@{is\+Root}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{is\+Root() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Dir\+::is\+Root (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a44c8042bcce4b07fffc0c907b9842604}
+\hypertarget{class_q_dir_aa78de265f6e5e198a90b4d0252a42df3}{}\index{Q\+Dir@{Q\+Dir}!match@{match}}
+\index{match@{match}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{match(const Q\+String\+List \&filters, const Q\+String \&file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Dir\+::match (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String\+List} \&}]{filters, }
+\item[{const {\bf Q\+String} \&}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_dir_aa78de265f6e5e198a90b4d0252a42df3}
+Returns T\+R\+U\+E if the {\itshape file\+Name} matches one of the wildcards in the list {\itshape filters}. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_reg_exp}{Q\+Reg\+Exp} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a72a73a1e4d9bf42ec4307a70605b77b9}{}\index{Q\+Dir@{Q\+Dir}!match@{match}}
+\index{match@{match}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{match(const Q\+String \&filter, const Q\+String \&file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Dir\+::match (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{filter, }
+\item[{const {\bf Q\+String} \&}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_dir_a72a73a1e4d9bf42ec4307a70605b77b9}
+Returns T\+R\+U\+E if the {\itshape file\+Name} matches the wildcard {\itshape filter}. {\itshape Filter} may also contain multiple wildcards separated by spaces or semicolons. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_reg_exp}{Q\+Reg\+Exp} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a398803de11f488f7a8b748b953d73d18}{}\index{Q\+Dir@{Q\+Dir}!match\+All\+Dirs@{match\+All\+Dirs}}
+\index{match\+All\+Dirs@{match\+All\+Dirs}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{match\+All\+Dirs() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Dir\+::match\+All\+Dirs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_dir_a398803de11f488f7a8b748b953d73d18}
+Returns the value set by \hyperlink{class_q_dir_aec96bf79103196eefd2a38ff74aeadd0}{set\+Match\+All\+Dirs()}
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_aec96bf79103196eefd2a38ff74aeadd0}{set\+Match\+All\+Dirs()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_ab85d98ede6a4f9cfefd18c5472530548}{}\index{Q\+Dir@{Q\+Dir}!mkdir@{mkdir}}
+\index{mkdir@{mkdir}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{mkdir(const Q\+String \&dir\+Name, bool accept\+Abs\+Path=\+T\+R\+U\+E) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Dir\+::mkdir (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{dir\+Name, }
+\item[{{\bf bool}}]{accept\+Abs\+Path = {\ttfamily {\bf T\+R\+U\+E}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_ab85d98ede6a4f9cfefd18c5472530548}
+\hypertarget{class_q_dir_a8d501954ccb9e48d8e675c85c60ec57a}{}\index{Q\+Dir@{Q\+Dir}!name\+Filter@{name\+Filter}}
+\index{name\+Filter@{name\+Filter}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{name\+Filter() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Dir\+::name\+Filter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_dir_a8d501954ccb9e48d8e675c85c60ec57a}
+Returns the string set by \hyperlink{class_q_dir_a26b95e183a9ba9410219a3ce4d8c3416}{set\+Name\+Filter()} \hypertarget{class_q_dir_a197368441ba4e956e4b9707471196cce}{}\index{Q\+Dir@{Q\+Dir}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{operator"!=(const Q\+Dir \&) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Dir\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Dir} \&}]{d}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_q_dir_a197368441ba4e956e4b9707471196cce}
+Returns T\+R\+U\+E if the {\itshape d} and this dir have different path or different sort/filter settings, otherwise F\+A\+L\+S\+E. \hypertarget{class_q_dir_a3be7ccbacac7fa0e2fd2143259d0e04b}{}\index{Q\+Dir@{Q\+Dir}!operator=@{operator=}}
+\index{operator=@{operator=}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{operator=(const Q\+Dir \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Dir} \& Q\+Dir\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Dir} \&}]{d}
+\end{DoxyParamCaption}
+)}\label{class_q_dir_a3be7ccbacac7fa0e2fd2143259d0e04b}
+Makes a copy of d and assigns it to this \hyperlink{class_q_dir}{Q\+Dir}. \hypertarget{class_q_dir_a157b465ee1cb0ab76947e6f9d07f8715}{}\index{Q\+Dir@{Q\+Dir}!operator=@{operator=}}
+\index{operator=@{operator=}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{operator=(const Q\+String \&path)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Dir} \& Q\+Dir\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{path}
+\end{DoxyParamCaption}
+)}\label{class_q_dir_a157b465ee1cb0ab76947e6f9d07f8715}
+Sets the directory path to be the given path. \hypertarget{class_q_dir_a4d2c37c4d14327b0966f7a0017e4a8d6}{}\index{Q\+Dir@{Q\+Dir}!operator==@{operator==}}
+\index{operator==@{operator==}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{operator==(const Q\+Dir \&) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Dir\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Dir} \&}]{d}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a4d2c37c4d14327b0966f7a0017e4a8d6}
+Returns T\+R\+U\+E if the {\itshape d} and this dir have the same path and all sort and filter settings are equal, otherwise F\+A\+L\+S\+E. \hypertarget{class_q_dir_a3fc0548fca3c4e761622a71b343c98a7}{}\index{Q\+Dir@{Q\+Dir}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{operator[](int) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Dir\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}\label{class_q_dir_a3fc0548fca3c4e761622a71b343c98a7}
+Returns the file name at position {\itshape index} in the list of found file names. Equivalent to \hyperlink{class_q_dir_a468530017006c1eeea94c78d264964aa}{entry\+List()}.at(index).
+
+Returns null if the {\itshape index} is out of range or if the \hyperlink{class_q_dir_a468530017006c1eeea94c78d264964aa}{entry\+List()} function failed.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_ac48855e1aead59d7b6cc5752f12d0556}{count()}, \hyperlink{class_q_dir_a468530017006c1eeea94c78d264964aa}{entry\+List()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_adc89b85ad2479f2b3baf899bfbe48f7f}{}\index{Q\+Dir@{Q\+Dir}!path@{path}}
+\index{path@{path}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{path() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Dir\+::path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_q_dir_adc89b85ad2479f2b3baf899bfbe48f7f}
+Returns the path, this may contain symbolic links, but never contains redundant \char`\"{}.\char`\"{}, \char`\"{}..\char`\"{} or multiple separators.
+
+The returned path can be either absolute or relative (see \hyperlink{class_q_dir_ac947989c99aecbfebd509088b8834715}{set\+Path()}).
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_ac947989c99aecbfebd509088b8834715}{set\+Path()}, \hyperlink{class_q_dir_a884038b1ff47d15d4d763326698f0481}{abs\+Path()}, \hyperlink{class_q_dir_a1294085ddb97ecd3643b700feb3fabea}{exists()}, \hyperlink{class_q_dir_ad38037708dc754f5bdd877c145dbbb19}{clean\+Dir\+Path()}, \hyperlink{class_q_dir_a12b679447f94f6eb194ec9bfb2a6d8a4}{dir\+Name()}, \hyperlink{class_q_dir_af85dfc097c27c98c2f96bff380530970}{abs\+File\+Path()}, \hyperlink{class_q_dir_a2cb829f147b7225abab1e5915ae62264}{convert\+Separators()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_aca44a22e3f1355bc74fdd96e0af052c9}{}\index{Q\+Dir@{Q\+Dir}!remove@{remove}}
+\index{remove@{remove}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{remove(const Q\+String \&file\+Name, bool accept\+Abs\+Path=\+T\+R\+U\+E)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Dir\+::remove (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{file\+Name, }
+\item[{{\bf bool}}]{accept\+Abs\+Path = {\ttfamily {\bf T\+R\+U\+E}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_aca44a22e3f1355bc74fdd96e0af052c9}
+Removes a file.
+
+If {\itshape accept\+Abs\+Path} is T\+R\+U\+E a path starting with a separator (\textquotesingle{}/\textquotesingle{}) will remove the file with the absolute path, if {\itshape accept\+Abs\+Path} is F\+A\+L\+S\+E any number of separators at the beginning of {\itshape file\+Name} will be removed.
+
+Returns T\+R\+U\+E if successful, otherwise F\+A\+L\+S\+E. \hypertarget{class_q_dir_a403c5efd21e686cadee2cf4d7059ab19}{}\index{Q\+Dir@{Q\+Dir}!rename@{rename}}
+\index{rename@{rename}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{rename(const Q\+String \&name, const Q\+String \&new\+Name, bool accept\+Abs\+Paths=\+T\+R\+U\+E)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Dir\+::rename (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{name, }
+\item[{const {\bf Q\+String} \&}]{new\+Name, }
+\item[{{\bf bool}}]{accept\+Abs\+Paths = {\ttfamily {\bf T\+R\+U\+E}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a403c5efd21e686cadee2cf4d7059ab19}
+\hypertarget{class_q_dir_a1c2f73242e6c485b9e4b697560c846da}{}\index{Q\+Dir@{Q\+Dir}!rmdir@{rmdir}}
+\index{rmdir@{rmdir}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{rmdir(const Q\+String \&dir\+Name, bool accept\+Abs\+Path=\+T\+R\+U\+E) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Dir\+::rmdir (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{dir\+Name, }
+\item[{{\bf bool}}]{accept\+Abs\+Path = {\ttfamily {\bf T\+R\+U\+E}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a1c2f73242e6c485b9e4b697560c846da}
+\hypertarget{class_q_dir_a61d528e4d5689e81d9c27d68dbd19f64}{}\index{Q\+Dir@{Q\+Dir}!root@{root}}
+\index{root@{root}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{root()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Dir} Q\+Dir\+::root (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_dir_a61d528e4d5689e81d9c27d68dbd19f64}
+Returns the root directory. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_a66d4102cf6087d51057f8fbd0028def9}{root\+Dir\+Path()} \hyperlink{class_q_dir_a549c0fc27cf5b4b24310558fe477e178}{drives()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a66d4102cf6087d51057f8fbd0028def9}{}\index{Q\+Dir@{Q\+Dir}!root\+Dir\+Path@{root\+Dir\+Path}}
+\index{root\+Dir\+Path@{root\+Dir\+Path}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{root\+Dir\+Path()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Dir\+::root\+Dir\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_dir_a66d4102cf6087d51057f8fbd0028def9}
+\hypertarget{class_q_dir_a8e851d9a1f839208ef0141fde43b414d}{}\index{Q\+Dir@{Q\+Dir}!separator@{separator}}
+\index{separator@{separator}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{separator()}]{\setlength{\rightskip}{0pt plus 5cm}char Q\+Dir\+::separator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_dir_a8e851d9a1f839208ef0141fde43b414d}
+Returns the native directory separator; \textquotesingle{}/\textquotesingle{} under U\+N\+I\+X and \textquotesingle{}\textbackslash{}\textquotesingle{} under M\+S-\/\+D\+O\+S, Windows N\+T and O\+S/2.
+
+You do not need to use this function to build file paths. If you always use \textquotesingle{}/\textquotesingle{}, Qt will translate your paths to conform to the underlying operating system. \hypertarget{class_q_dir_a61b45775b8b1e2d9ebe069e481f5dc9d}{}\index{Q\+Dir@{Q\+Dir}!set\+Current@{set\+Current}}
+\index{set\+Current@{set\+Current}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{set\+Current(const Q\+String \&path)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Dir\+::set\+Current (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_dir_a61b45775b8b1e2d9ebe069e481f5dc9d}
+\hypertarget{class_q_dir_a68d9e723870b5f8226353dc6047a35ee}{}\index{Q\+Dir@{Q\+Dir}!set\+Filter@{set\+Filter}}
+\index{set\+Filter@{set\+Filter}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{set\+Filter(int filter\+Spec)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Dir\+::set\+Filter (
+\begin{DoxyParamCaption}
+\item[{int}]{filter\+Spec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a68d9e723870b5f8226353dc6047a35ee}
+Sets the filter used by \hyperlink{class_q_dir_a468530017006c1eeea94c78d264964aa}{entry\+List()} and \hyperlink{class_q_dir_aa67974b4e5452af01677d2d57991f36a}{entry\+Info\+List()}. The filter is used to specify the kind of files that should be returned by \hyperlink{class_q_dir_a468530017006c1eeea94c78d264964aa}{entry\+List()} and \hyperlink{class_q_dir_aa67974b4e5452af01677d2d57991f36a}{entry\+Info\+List()}.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_a987d4eb30710296adf551c2b48118b28}{filter()}, \hyperlink{class_q_dir_a26b95e183a9ba9410219a3ce4d8c3416}{set\+Name\+Filter()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_aec96bf79103196eefd2a38ff74aeadd0}{}\index{Q\+Dir@{Q\+Dir}!set\+Match\+All\+Dirs@{set\+Match\+All\+Dirs}}
+\index{set\+Match\+All\+Dirs@{set\+Match\+All\+Dirs}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{set\+Match\+All\+Dirs(bool)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Dir\+::set\+Match\+All\+Dirs (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{enable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_aec96bf79103196eefd2a38ff74aeadd0}
+If {\itshape enable} is T\+R\+U\+E, all directories will be listed (even if they do not match the filter or the name filter), otherwise only matched directories will be listed.
+
+\begin{DoxyRefDesc}{Bogue}
+\item[\hyperlink{bug__bug000002}{Bogue}]Currently, directories that do not match the filter will not be included (the name filter will be ignored as expected).\end{DoxyRefDesc}
+
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_a398803de11f488f7a8b748b953d73d18}{match\+All\+Dirs()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a26b95e183a9ba9410219a3ce4d8c3416}{}\index{Q\+Dir@{Q\+Dir}!set\+Name\+Filter@{set\+Name\+Filter}}
+\index{set\+Name\+Filter@{set\+Name\+Filter}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{set\+Name\+Filter(const Q\+String \&name\+Filter)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Dir\+::set\+Name\+Filter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{name\+Filter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a26b95e183a9ba9410219a3ce4d8c3416}
+Sets the name filter used by \hyperlink{class_q_dir_a468530017006c1eeea94c78d264964aa}{entry\+List()} and \hyperlink{class_q_dir_aa67974b4e5452af01677d2d57991f36a}{entry\+Info\+List()}.
+
+The name filter is a wildcarding filter that understands \char`\"{}$\ast$\char`\"{} and \char`\"{}?\char`\"{} wildcards, You may specify several filter entries separated by a \char`\"{} \char`\"{} or a \char`\"{};\char`\"{}. If you want \hyperlink{class_q_dir_a468530017006c1eeea94c78d264964aa}{entry\+List()} and \hyperlink{class_q_dir_aa67974b4e5452af01677d2d57991f36a}{entry\+Info\+List()} to list all files ending with \char`\"{}.\+cpp\char`\"{} and all files ending with \char`\"{}.\+h\char`\"{}, you simply call dir.\+set\+Name\+Filter(\char`\"{}$\ast$.\+cpp $\ast$.\+h\char`\"{}) or dir.\+set\+Name\+Filter(\char`\"{}$\ast$.\+cpp;$\ast$.\+h\char`\"{})
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_a8d501954ccb9e48d8e675c85c60ec57a}{name\+Filter()}, \hyperlink{class_q_dir_a68d9e723870b5f8226353dc6047a35ee}{set\+Filter()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_ac947989c99aecbfebd509088b8834715}{}\index{Q\+Dir@{Q\+Dir}!set\+Path@{set\+Path}}
+\index{set\+Path@{set\+Path}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{set\+Path(const Q\+String \&path)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Dir\+::set\+Path (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_ac947989c99aecbfebd509088b8834715}
+Sets the path of the directory. The path is cleaned of redundant \char`\"{}.\char`\"{}, \char`\"{}..\char`\"{} and multiple separators. No check is made to ensure that a directory with this path exists.
+
+The path can be either absolute or relative. Absolute paths begin with the directory separator (\textquotesingle{}/\textquotesingle{}) or a drive specification (not applicable to U\+N\+I\+X). Relative file names begin with a directory name or a file name and specify a path relative to the current directory. An example of an absolute path is the string \char`\"{}/tmp/quartz\char`\"{}, a relative path might look like \char`\"{}src/fatlib\char`\"{}. You can use the function \hyperlink{class_q_dir_a0d7232dab091230bfabb81ba2d2329ef}{is\+Relative()} to check if a \hyperlink{class_q_dir}{Q\+Dir} is using a relative or an absolute file path. You can call the function \hyperlink{class_q_dir_a0c05c8978b3b4158233f809e4d30c55d}{convert\+To\+Abs()} to convert a relative \hyperlink{class_q_dir}{Q\+Dir} to an absolute one.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_adc89b85ad2479f2b3baf899bfbe48f7f}{path()}, \hyperlink{class_q_dir_a884038b1ff47d15d4d763326698f0481}{abs\+Path()}, \hyperlink{class_q_dir_a1294085ddb97ecd3643b700feb3fabea}{exists()}, \hyperlink{class_q_dir_ad38037708dc754f5bdd877c145dbbb19}{clean\+Dir\+Path()}, \hyperlink{class_q_dir_a12b679447f94f6eb194ec9bfb2a6d8a4}{dir\+Name()}, \hyperlink{class_q_dir_af85dfc097c27c98c2f96bff380530970}{abs\+File\+Path()}, \hyperlink{class_q_dir_a0d7232dab091230bfabb81ba2d2329ef}{is\+Relative()}, \hyperlink{class_q_dir_a0c05c8978b3b4158233f809e4d30c55d}{convert\+To\+Abs()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_dir_a65280d204cd65975953e3eb2a63da778}{}\index{Q\+Dir@{Q\+Dir}!set\+Sorting@{set\+Sorting}}
+\index{set\+Sorting@{set\+Sorting}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{set\+Sorting(int sort\+Spec)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Dir\+::set\+Sorting (
+\begin{DoxyParamCaption}
+\item[{int}]{sort\+Spec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_dir_a65280d204cd65975953e3eb2a63da778}
+Sets the sorting order used by \hyperlink{class_q_dir_a468530017006c1eeea94c78d264964aa}{entry\+List()} and \hyperlink{class_q_dir_aa67974b4e5452af01677d2d57991f36a}{entry\+Info\+List()}.
+
+The {\itshape sort\+Spec} is specified by or-\/ing values from the enum Sort\+Spec. The different values are\+:
+
+One of these\+: 
+\begin{DoxyDescription}
+\item[Name]Sort by name (alphabetical order). 
+\item[Time]Sort by time (most recent first). 
+\item[Size]Sort by size (largest first). 
+\item[Unsorted]Use the operating system order (U\+N\+I\+X does N\+O\+T sort alphabetically).
+
+O\+Red with zero or more of these\+:
+
+
+\item[Dirs\+First]Always put directory names first. 
+\item[Reversed]Reverse sort order. 
+\item[Ignore\+Case]Ignore case when sorting by name. 
+\end{DoxyDescription}\hypertarget{class_q_dir_a49f5647b906fb9eb358a84bbc2e213c3}{}\index{Q\+Dir@{Q\+Dir}!sorting@{sorting}}
+\index{sorting@{sorting}!Q\+Dir@{Q\+Dir}}
+\subsubsection[{sorting() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Dir\+::\+Sort\+Spec} Q\+Dir\+::sorting (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_dir_a49f5647b906fb9eb358a84bbc2e213c3}
+Returns the value set by \hyperlink{class_q_dir_a65280d204cd65975953e3eb2a63da778}{set\+Sorting()}
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_dir_a65280d204cd65975953e3eb2a63da778}{set\+Sorting()} 
+\end{DoxySeeAlso}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qdir_8h}{qdir.\+h}\item 
+qtools/\hyperlink{qdir_8cpp}{qdir.\+cpp}\item 
+qtools/\hyperlink{qdir__unix_8cpp}{qdir\+\_\+unix.\+cpp}\item 
+qtools/\hyperlink{qdir__win32_8cpp}{qdir\+\_\+win32.\+cpp}\end{DoxyCompactItemize}

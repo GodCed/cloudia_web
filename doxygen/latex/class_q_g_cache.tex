@@ -1,0 +1,297 @@
+\hypertarget{class_q_g_cache}{}\section{Référence de la classe Q\+G\+Cache}
+\label{class_q_g_cache}\index{Q\+G\+Cache@{Q\+G\+Cache}}
+
+
+The \hyperlink{class_q_g_cache}{Q\+G\+Cache} class is an internal class for implementing \hyperlink{class_q_cache}{Q\+Cache} template classes.  
+
+
+
+
+{\ttfamily \#include $<$qgcache.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Q\+G\+Cache\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_q_g_cache}
+\end{center}
+\end{figure}
+\subsection*{Types protégés}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_q_g_cache_a1dcb303ef4795be3117374c386c5574a}{Key\+Type} \{ \hyperlink{class_q_g_cache_a1dcb303ef4795be3117374c386c5574aa2472087ab1f78be15986e5e2b6cb1ef0}{String\+Key}, 
+\hyperlink{class_q_g_cache_a1dcb303ef4795be3117374c386c5574aa5bcd941ba61a2218d5433b2a50cc0582}{Ascii\+Key}, 
+\hyperlink{class_q_g_cache_a1dcb303ef4795be3117374c386c5574aa84c6761d9e7f494b1d43b6b6760ec2b5}{Int\+Key}, 
+\hyperlink{class_q_g_cache_a1dcb303ef4795be3117374c386c5574aa8c2fd7732118638d4c5212f547aae9ca}{Ptr\+Key}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_g_cache_a993236be98f96a207a872b3990db0be7}{Q\+G\+Cache} (int \hyperlink{class_q_g_cache_a9cae2408617b643d01ac9818013e784a}{max\+Cost}, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{class_q_g_cache_ac14bb53df3baf244dbe5bccbee87dc7c}{size}, \hyperlink{class_q_g_cache_a1dcb303ef4795be3117374c386c5574a}{Key\+Type} kt, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} case\+Sensitive, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} copy\+Keys)
+\item 
+\hyperlink{class_q_g_cache_ac99ee21a13fa085b60012717c3bfd3e4}{Q\+G\+Cache} (const \hyperlink{class_q_g_cache}{Q\+G\+Cache} \&)
+\item 
+\hyperlink{class_q_g_cache_abe3d03e77dc54bb4dc1b872a4a83cd46}{$\sim$\+Q\+G\+Cache} ()
+\item 
+\hyperlink{class_q_g_cache}{Q\+G\+Cache} \& \hyperlink{class_q_g_cache_aa58dc5bf77c3846e89cc46f0124bc6fc}{operator=} (const \hyperlink{class_q_g_cache}{Q\+G\+Cache} \&)
+\item 
+\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{class_q_g_cache_a876e0b62df6e993a49d0afc496d53732}{count} () const 
+\item 
+\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{class_q_g_cache_ac14bb53df3baf244dbe5bccbee87dc7c}{size} () const 
+\item 
+int \hyperlink{class_q_g_cache_a9cae2408617b643d01ac9818013e784a}{max\+Cost} () const 
+\item 
+int \hyperlink{class_q_g_cache_aac0647ab4473a766a7663aafb8599a82}{total\+Cost} () const 
+\item 
+void \hyperlink{class_q_g_cache_ac168417e27bd435675361b710692e7a8}{set\+Max\+Cost} (int \hyperlink{class_q_g_cache_a9cae2408617b643d01ac9818013e784a}{max\+Cost})
+\item 
+void \hyperlink{class_q_g_cache_a3e0d8ce359e64a8793ef7f9d79dc546b}{clear} ()
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_g_cache_a115d46416492c26746ed3f1e6b4ae9f6}{insert\+\_\+string} (const \hyperlink{class_q_string}{Q\+String} \&key, \hyperlink{class_q_collection_ac6f3ddbf999e31fb797927f71ae6b5d7}{Q\+Collection\+::\+Item}, int cost, int priority)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_g_cache_a2746f839f86692c8b9039cab3128337e}{insert\+\_\+other} (const char $\ast$key, \hyperlink{class_q_collection_ac6f3ddbf999e31fb797927f71ae6b5d7}{Q\+Collection\+::\+Item}, int cost, int priority)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_g_cache_aff2d410561a6e4b92bdb5d74b48212ad}{remove\+\_\+string} (const \hyperlink{class_q_string}{Q\+String} \&key)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_g_cache_a56c49e66aeb6b25295200730a0e700d8}{remove\+\_\+other} (const char $\ast$key)
+\item 
+\hyperlink{class_q_collection_ac6f3ddbf999e31fb797927f71ae6b5d7}{Q\+Collection\+::\+Item} \hyperlink{class_q_g_cache_a4b15c35953469e7fbcddb09745d97b9f}{take\+\_\+string} (const \hyperlink{class_q_string}{Q\+String} \&key)
+\item 
+\hyperlink{class_q_collection_ac6f3ddbf999e31fb797927f71ae6b5d7}{Q\+Collection\+::\+Item} \hyperlink{class_q_g_cache_aadb5340c0a6678cfa0d8352757b0be93}{take\+\_\+other} (const char $\ast$key)
+\item 
+\hyperlink{class_q_collection_ac6f3ddbf999e31fb797927f71ae6b5d7}{Q\+Collection\+::\+Item} \hyperlink{class_q_g_cache_aff8f50207cc01d9ad02440cf5d60cfc8}{find\+\_\+string} (const \hyperlink{class_q_string}{Q\+String} \&key, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} ref=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E}) const 
+\item 
+\hyperlink{class_q_collection_ac6f3ddbf999e31fb797927f71ae6b5d7}{Q\+Collection\+::\+Item} \hyperlink{class_q_g_cache_ab9689a87908168bf1638623ae1ab164b}{find\+\_\+other} (const char $\ast$key, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} ref=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E}) const 
+\item 
+void \hyperlink{class_q_g_cache_a8224a93e5ae7983695921145ee271399}{statistics} () const 
+\item 
+int \hyperlink{class_q_g_cache_a361c9c79abdd8a13cc236df74b1a36c6}{hits} () const 
+\item 
+int \hyperlink{class_q_g_cache_a6206e03872f5f17903234c0225ef1515}{misses} () const 
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_q_g_cache_a37933afdeb94bef86bf66aca84fc229c}{Q\+G\+Cache\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+The \hyperlink{class_q_g_cache}{Q\+G\+Cache} class is an internal class for implementing \hyperlink{class_q_cache}{Q\+Cache} template classes. 
+
+\hyperlink{class_q_g_cache}{Q\+G\+Cache} is a strictly internal class that acts as a base class for the \hyperlink{}{collection classes} \hyperlink{class_q_cache}{Q\+Cache} and Q\+Int\+Cache. 
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{class_q_g_cache_a1dcb303ef4795be3117374c386c5574a}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!Key\+Type@{Key\+Type}}
+\index{Key\+Type@{Key\+Type}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{Key\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Q\+G\+Cache\+::\+Key\+Type}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_cache_a1dcb303ef4795be3117374c386c5574a}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{String\+Key@{String\+Key}!Q\+G\+Cache@{Q\+G\+Cache}}\index{Q\+G\+Cache@{Q\+G\+Cache}!String\+Key@{String\+Key}}\item[{\em 
+\hypertarget{class_q_g_cache_a1dcb303ef4795be3117374c386c5574aa2472087ab1f78be15986e5e2b6cb1ef0}{}String\+Key\label{class_q_g_cache_a1dcb303ef4795be3117374c386c5574aa2472087ab1f78be15986e5e2b6cb1ef0}
+}]\index{Ascii\+Key@{Ascii\+Key}!Q\+G\+Cache@{Q\+G\+Cache}}\index{Q\+G\+Cache@{Q\+G\+Cache}!Ascii\+Key@{Ascii\+Key}}\item[{\em 
+\hypertarget{class_q_g_cache_a1dcb303ef4795be3117374c386c5574aa5bcd941ba61a2218d5433b2a50cc0582}{}Ascii\+Key\label{class_q_g_cache_a1dcb303ef4795be3117374c386c5574aa5bcd941ba61a2218d5433b2a50cc0582}
+}]\index{Int\+Key@{Int\+Key}!Q\+G\+Cache@{Q\+G\+Cache}}\index{Q\+G\+Cache@{Q\+G\+Cache}!Int\+Key@{Int\+Key}}\item[{\em 
+\hypertarget{class_q_g_cache_a1dcb303ef4795be3117374c386c5574aa84c6761d9e7f494b1d43b6b6760ec2b5}{}Int\+Key\label{class_q_g_cache_a1dcb303ef4795be3117374c386c5574aa84c6761d9e7f494b1d43b6b6760ec2b5}
+}]\index{Ptr\+Key@{Ptr\+Key}!Q\+G\+Cache@{Q\+G\+Cache}}\index{Q\+G\+Cache@{Q\+G\+Cache}!Ptr\+Key@{Ptr\+Key}}\item[{\em 
+\hypertarget{class_q_g_cache_a1dcb303ef4795be3117374c386c5574aa8c2fd7732118638d4c5212f547aae9ca}{}Ptr\+Key\label{class_q_g_cache_a1dcb303ef4795be3117374c386c5574aa8c2fd7732118638d4c5212f547aae9ca}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_g_cache_a993236be98f96a207a872b3990db0be7}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!Q\+G\+Cache@{Q\+G\+Cache}}
+\index{Q\+G\+Cache@{Q\+G\+Cache}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{Q\+G\+Cache(int max\+Cost, uint size, Key\+Type kt, bool case\+Sensitive, bool copy\+Keys)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+G\+Cache\+::\+Q\+G\+Cache (
+\begin{DoxyParamCaption}
+\item[{int}]{max\+Cost, }
+\item[{{\bf uint}}]{size, }
+\item[{{\bf Key\+Type}}]{kt, }
+\item[{{\bf bool}}]{case\+Sensitive, }
+\item[{{\bf bool}}]{copy\+Keys}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_cache_a993236be98f96a207a872b3990db0be7}
+\hypertarget{class_q_g_cache_ac99ee21a13fa085b60012717c3bfd3e4}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!Q\+G\+Cache@{Q\+G\+Cache}}
+\index{Q\+G\+Cache@{Q\+G\+Cache}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{Q\+G\+Cache(const Q\+G\+Cache \&)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+G\+Cache\+::\+Q\+G\+Cache (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+G\+Cache} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_cache_ac99ee21a13fa085b60012717c3bfd3e4}
+\hypertarget{class_q_g_cache_abe3d03e77dc54bb4dc1b872a4a83cd46}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!````~Q\+G\+Cache@{$\sim$\+Q\+G\+Cache}}
+\index{````~Q\+G\+Cache@{$\sim$\+Q\+G\+Cache}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{$\sim$\+Q\+G\+Cache()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+G\+Cache\+::$\sim$\+Q\+G\+Cache (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_cache_abe3d03e77dc54bb4dc1b872a4a83cd46}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_g_cache_a3e0d8ce359e64a8793ef7f9d79dc546b}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!clear@{clear}}
+\index{clear@{clear}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+G\+Cache\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_q_g_cache_a3e0d8ce359e64a8793ef7f9d79dc546b}
+Removes all objects from the collection. The objects will be deleted if auto-\/delete has been enabled. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_collection_a6ed41913c76bfba54be6da26015ee3f3}{set\+Auto\+Delete()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_collection_a92416cc22907550389aad04c26be2f77}{Q\+Collection}.
+
+
+
+Réimplémentée dans \hyperlink{class_q_cache_a23066e089d1e7de0fc1f5ba85bd05719}{Q\+Cache$<$ Lookup\+Info $>$}.
+
+\hypertarget{class_q_g_cache_a876e0b62df6e993a49d0afc496d53732}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!count@{count}}
+\index{count@{count}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{count() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint} Q\+G\+Cache\+::count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_q_g_cache_a876e0b62df6e993a49d0afc496d53732}
+Returns the number of objects in the collection. 
+
+Implémente \hyperlink{class_q_collection_a5886fc69a22cbb6fb5d462651a1c1d50}{Q\+Collection}.
+
+
+
+Réimplémentée dans \hyperlink{class_q_cache_a9767ca63042d879082d53f3e983bd4a6}{Q\+Cache$<$ Lookup\+Info $>$}.
+
+\hypertarget{class_q_g_cache_ab9689a87908168bf1638623ae1ab164b}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!find\+\_\+other@{find\+\_\+other}}
+\index{find\+\_\+other@{find\+\_\+other}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{find\+\_\+other(const char $\ast$key, bool ref=\+T\+R\+U\+E) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Collection\+::\+Item} Q\+G\+Cache\+::find\+\_\+other (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{{\bf bool}}]{ref = {\ttfamily {\bf T\+R\+U\+E}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_cache_ab9689a87908168bf1638623ae1ab164b}
+\hypertarget{class_q_g_cache_aff8f50207cc01d9ad02440cf5d60cfc8}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!find\+\_\+string@{find\+\_\+string}}
+\index{find\+\_\+string@{find\+\_\+string}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{find\+\_\+string(const Q\+String \&key, bool ref=\+T\+R\+U\+E) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Collection\+::\+Item} Q\+G\+Cache\+::find\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{key, }
+\item[{{\bf bool}}]{ref = {\ttfamily {\bf T\+R\+U\+E}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_cache_aff8f50207cc01d9ad02440cf5d60cfc8}
+\hypertarget{class_q_g_cache_a361c9c79abdd8a13cc236df74b1a36c6}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!hits@{hits}}
+\index{hits@{hits}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{hits() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+G\+Cache\+::hits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_cache_a361c9c79abdd8a13cc236df74b1a36c6}
+\hypertarget{class_q_g_cache_a2746f839f86692c8b9039cab3128337e}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!insert\+\_\+other@{insert\+\_\+other}}
+\index{insert\+\_\+other@{insert\+\_\+other}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{insert\+\_\+other(const char $\ast$key, Q\+Collection\+::\+Item, int cost, int priority)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+G\+Cache\+::insert\+\_\+other (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{{\bf Q\+Collection\+::\+Item}}]{data, }
+\item[{int}]{cost, }
+\item[{int}]{priority}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_cache_a2746f839f86692c8b9039cab3128337e}
+\hypertarget{class_q_g_cache_a115d46416492c26746ed3f1e6b4ae9f6}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!insert\+\_\+string@{insert\+\_\+string}}
+\index{insert\+\_\+string@{insert\+\_\+string}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{insert\+\_\+string(const Q\+String \&key, Q\+Collection\+::\+Item, int cost, int priority)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+G\+Cache\+::insert\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{key, }
+\item[{{\bf Q\+Collection\+::\+Item}}]{data, }
+\item[{int}]{cost, }
+\item[{int}]{priority}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_cache_a115d46416492c26746ed3f1e6b4ae9f6}
+\hypertarget{class_q_g_cache_a9cae2408617b643d01ac9818013e784a}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!max\+Cost@{max\+Cost}}
+\index{max\+Cost@{max\+Cost}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{max\+Cost() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+G\+Cache\+::max\+Cost (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_q_g_cache_a9cae2408617b643d01ac9818013e784a}
+\hypertarget{class_q_g_cache_a6206e03872f5f17903234c0225ef1515}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!misses@{misses}}
+\index{misses@{misses}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{misses() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+G\+Cache\+::misses (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_cache_a6206e03872f5f17903234c0225ef1515}
+\hypertarget{class_q_g_cache_aa58dc5bf77c3846e89cc46f0124bc6fc}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!operator=@{operator=}}
+\index{operator=@{operator=}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{operator=(const Q\+G\+Cache \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+G\+Cache} \& Q\+G\+Cache\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+G\+Cache} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_cache_aa58dc5bf77c3846e89cc46f0124bc6fc}
+\hypertarget{class_q_g_cache_a56c49e66aeb6b25295200730a0e700d8}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!remove\+\_\+other@{remove\+\_\+other}}
+\index{remove\+\_\+other@{remove\+\_\+other}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{remove\+\_\+other(const char $\ast$key)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+G\+Cache\+::remove\+\_\+other (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_cache_a56c49e66aeb6b25295200730a0e700d8}
+\hypertarget{class_q_g_cache_aff2d410561a6e4b92bdb5d74b48212ad}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!remove\+\_\+string@{remove\+\_\+string}}
+\index{remove\+\_\+string@{remove\+\_\+string}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{remove\+\_\+string(const Q\+String \&key)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+G\+Cache\+::remove\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_cache_aff2d410561a6e4b92bdb5d74b48212ad}
+\hypertarget{class_q_g_cache_ac168417e27bd435675361b710692e7a8}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!set\+Max\+Cost@{set\+Max\+Cost}}
+\index{set\+Max\+Cost@{set\+Max\+Cost}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{set\+Max\+Cost(int max\+Cost)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+G\+Cache\+::set\+Max\+Cost (
+\begin{DoxyParamCaption}
+\item[{int}]{max\+Cost}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_cache_ac168417e27bd435675361b710692e7a8}
+\hypertarget{class_q_g_cache_ac14bb53df3baf244dbe5bccbee87dc7c}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!size@{size}}
+\index{size@{size}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{size() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint} Q\+G\+Cache\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_q_g_cache_ac14bb53df3baf244dbe5bccbee87dc7c}
+\hypertarget{class_q_g_cache_a8224a93e5ae7983695921145ee271399}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!statistics@{statistics}}
+\index{statistics@{statistics}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{statistics() const }]{\setlength{\rightskip}{0pt plus 5cm}void Q\+G\+Cache\+::statistics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_cache_a8224a93e5ae7983695921145ee271399}
+\hypertarget{class_q_g_cache_aadb5340c0a6678cfa0d8352757b0be93}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!take\+\_\+other@{take\+\_\+other}}
+\index{take\+\_\+other@{take\+\_\+other}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{take\+\_\+other(const char $\ast$key)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Collection\+::\+Item} Q\+G\+Cache\+::take\+\_\+other (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_cache_aadb5340c0a6678cfa0d8352757b0be93}
+\hypertarget{class_q_g_cache_a4b15c35953469e7fbcddb09745d97b9f}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!take\+\_\+string@{take\+\_\+string}}
+\index{take\+\_\+string@{take\+\_\+string}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{take\+\_\+string(const Q\+String \&key)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Collection\+::\+Item} Q\+G\+Cache\+::take\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_cache_a4b15c35953469e7fbcddb09745d97b9f}
+\hypertarget{class_q_g_cache_aac0647ab4473a766a7663aafb8599a82}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!total\+Cost@{total\+Cost}}
+\index{total\+Cost@{total\+Cost}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{total\+Cost() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+G\+Cache\+::total\+Cost (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_q_g_cache_aac0647ab4473a766a7663aafb8599a82}
+
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_q_g_cache_a37933afdeb94bef86bf66aca84fc229c}{}\index{Q\+G\+Cache@{Q\+G\+Cache}!Q\+G\+Cache\+Iterator@{Q\+G\+Cache\+Iterator}}
+\index{Q\+G\+Cache\+Iterator@{Q\+G\+Cache\+Iterator}!Q\+G\+Cache@{Q\+G\+Cache}}
+\subsubsection[{Q\+G\+Cache\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Q\+G\+Cache\+Iterator}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_q_g_cache_a37933afdeb94bef86bf66aca84fc229c}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qgcache_8h}{qgcache.\+h}\item 
+qtools/\hyperlink{qgcache_8cpp}{qgcache.\+cpp}\end{DoxyCompactItemize}

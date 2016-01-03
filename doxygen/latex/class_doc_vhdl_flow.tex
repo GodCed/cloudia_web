@@ -1,0 +1,89 @@
+\hypertarget{class_doc_vhdl_flow}{}\section{Référence de la classe Doc\+Vhdl\+Flow}
+\label{class_doc_vhdl_flow}\index{Doc\+Vhdl\+Flow@{Doc\+Vhdl\+Flow}}
+
+
+{\ttfamily \#include $<$docparser.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Doc\+Vhdl\+Flow\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doc_vhdl_flow}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_vhdl_flow_accbe4d668c89baf4b123d9f2453c7c22}{Doc\+Vhdl\+Flow} (\hyperlink{class_doc_node}{Doc\+Node} $\ast$\hyperlink{class_doc_node_a990d8b983962776a647e6231d38bd329}{parent})
+\item 
+void \hyperlink{class_doc_vhdl_flow_afe55c9c5bf1a823e78d6aa3ea3f0777b}{parse} ()
+\item 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadb}{Kind} \hyperlink{class_doc_vhdl_flow_a8fdb29b6f93e88bf2e45510c6b712f17}{kind} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_doc_vhdl_flow_a5b87893dd7549619f309c37386095ac8}{has\+Caption} ()
+\item 
+void \hyperlink{class_doc_vhdl_flow_ad17bde1b8f83295658f79669479c9262}{accept} (\hyperlink{class_doc_visitor}{Doc\+Visitor} $\ast$v)
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Node representing a V\+H\+D\+L flow chart 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_doc_vhdl_flow_accbe4d668c89baf4b123d9f2453c7c22}{}\index{Doc\+Vhdl\+Flow@{Doc\+Vhdl\+Flow}!Doc\+Vhdl\+Flow@{Doc\+Vhdl\+Flow}}
+\index{Doc\+Vhdl\+Flow@{Doc\+Vhdl\+Flow}!Doc\+Vhdl\+Flow@{Doc\+Vhdl\+Flow}}
+\subsubsection[{Doc\+Vhdl\+Flow(\+Doc\+Node $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Doc\+Vhdl\+Flow\+::\+Doc\+Vhdl\+Flow (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Node} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_doc_vhdl_flow_accbe4d668c89baf4b123d9f2453c7c22}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_doc_vhdl_flow_ad17bde1b8f83295658f79669479c9262}{}\index{Doc\+Vhdl\+Flow@{Doc\+Vhdl\+Flow}!accept@{accept}}
+\index{accept@{accept}!Doc\+Vhdl\+Flow@{Doc\+Vhdl\+Flow}}
+\subsubsection[{accept(\+Doc\+Visitor $\ast$v)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Vhdl\+Flow\+::accept (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Visitor} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_vhdl_flow_ad17bde1b8f83295658f79669479c9262}
+Acceptor function for node visitors. Part of the visitor pattern. 
+\begin{DoxyParams}{Paramètres}
+{\em v} & Abstract visitor. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_doc_node_a5303a550cbe6395663bf9b9dad28cbf1}{Doc\+Node}.
+
+\hypertarget{class_doc_vhdl_flow_a5b87893dd7549619f309c37386095ac8}{}\index{Doc\+Vhdl\+Flow@{Doc\+Vhdl\+Flow}!has\+Caption@{has\+Caption}}
+\index{has\+Caption@{has\+Caption}!Doc\+Vhdl\+Flow@{Doc\+Vhdl\+Flow}}
+\subsubsection[{has\+Caption()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Doc\+Vhdl\+Flow\+::has\+Caption (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_vhdl_flow_a5b87893dd7549619f309c37386095ac8}
+\hypertarget{class_doc_vhdl_flow_a8fdb29b6f93e88bf2e45510c6b712f17}{}\index{Doc\+Vhdl\+Flow@{Doc\+Vhdl\+Flow}!kind@{kind}}
+\index{kind@{kind}!Doc\+Vhdl\+Flow@{Doc\+Vhdl\+Flow}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kind} Doc\+Vhdl\+Flow\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_vhdl_flow_a8fdb29b6f93e88bf2e45510c6b712f17}
+Returns the kind of node. Provides runtime type information 
+
+Implémente \hyperlink{class_doc_node_a92d4aaa169a813ded919aa858024c809}{Doc\+Node}.
+
+\hypertarget{class_doc_vhdl_flow_afe55c9c5bf1a823e78d6aa3ea3f0777b}{}\index{Doc\+Vhdl\+Flow@{Doc\+Vhdl\+Flow}!parse@{parse}}
+\index{parse@{parse}!Doc\+Vhdl\+Flow@{Doc\+Vhdl\+Flow}}
+\subsubsection[{parse()}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Vhdl\+Flow\+::parse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_doc_vhdl_flow_afe55c9c5bf1a823e78d6aa3ea3f0777b}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{docparser_8h}{docparser.\+h}\item 
+src/\hyperlink{docparser_8cpp}{docparser.\+cpp}\end{DoxyCompactItemize}

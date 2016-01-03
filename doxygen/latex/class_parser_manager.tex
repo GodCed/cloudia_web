@@ -1,0 +1,93 @@
+\hypertarget{class_parser_manager}{}\section{Référence de la classe Parser\+Manager}
+\label{class_parser_manager}\index{Parser\+Manager@{Parser\+Manager}}
+
+
+Manages programming language parsers.  
+
+
+
+
+{\ttfamily \#include $<$parserintf.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_parser_manager_a6d40c2ea132a10d04515db91b170023c}{Parser\+Manager} ()
+\item 
+\hyperlink{class_parser_manager_aacefe905bd0f76c05d346537c1e31ad8}{$\sim$\+Parser\+Manager} ()
+\item 
+void \hyperlink{class_parser_manager_a14594ae0488507a53c9700d7b2722719}{register\+Default\+Parser} (\hyperlink{class_parser_interface}{Parser\+Interface} $\ast$parser)
+\item 
+void \hyperlink{class_parser_manager_a04ff0e1b281d0b10b42688f6bce1d296}{register\+Parser} (const char $\ast$name, \hyperlink{class_parser_interface}{Parser\+Interface} $\ast$parser)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_parser_manager_a2184813c0cd50eda1cf6ce74bf50d8b5}{register\+Extension} (const char $\ast$extension, const char $\ast$parser\+Name)
+\item 
+\hyperlink{class_parser_interface}{Parser\+Interface} $\ast$ \hyperlink{class_parser_manager_a69f9874c260df7559242ec5833051ac5}{get\+Parser} (const char $\ast$extension)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Manages programming language parsers. 
+
+This class manages the language parsers in the system. One can register parsers, and obtain a parser given a file extension. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_parser_manager_a6d40c2ea132a10d04515db91b170023c}{}\index{Parser\+Manager@{Parser\+Manager}!Parser\+Manager@{Parser\+Manager}}
+\index{Parser\+Manager@{Parser\+Manager}!Parser\+Manager@{Parser\+Manager}}
+\subsubsection[{Parser\+Manager()}]{\setlength{\rightskip}{0pt plus 5cm}Parser\+Manager\+::\+Parser\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_parser_manager_a6d40c2ea132a10d04515db91b170023c}
+Creates the parser manager object. \hypertarget{class_parser_manager_aacefe905bd0f76c05d346537c1e31ad8}{}\index{Parser\+Manager@{Parser\+Manager}!````~Parser\+Manager@{$\sim$\+Parser\+Manager}}
+\index{````~Parser\+Manager@{$\sim$\+Parser\+Manager}!Parser\+Manager@{Parser\+Manager}}
+\subsubsection[{$\sim$\+Parser\+Manager()}]{\setlength{\rightskip}{0pt plus 5cm}Parser\+Manager\+::$\sim$\+Parser\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_parser_manager_aacefe905bd0f76c05d346537c1e31ad8}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_parser_manager_a69f9874c260df7559242ec5833051ac5}{}\index{Parser\+Manager@{Parser\+Manager}!get\+Parser@{get\+Parser}}
+\index{get\+Parser@{get\+Parser}!Parser\+Manager@{Parser\+Manager}}
+\subsubsection[{get\+Parser(const char $\ast$extension)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parser\+Interface}$\ast$ Parser\+Manager\+::get\+Parser (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{extension}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_parser_manager_a69f9874c260df7559242ec5833051ac5}
+Gets the interface to the parser associated with given {\itshape extension}. If there is no parser explicitly registered for the supplied extension, the interface to the default parser will be returned. \hypertarget{class_parser_manager_a14594ae0488507a53c9700d7b2722719}{}\index{Parser\+Manager@{Parser\+Manager}!register\+Default\+Parser@{register\+Default\+Parser}}
+\index{register\+Default\+Parser@{register\+Default\+Parser}!Parser\+Manager@{Parser\+Manager}}
+\subsubsection[{register\+Default\+Parser(\+Parser\+Interface $\ast$parser)}]{\setlength{\rightskip}{0pt plus 5cm}void Parser\+Manager\+::register\+Default\+Parser (
+\begin{DoxyParamCaption}
+\item[{{\bf Parser\+Interface} $\ast$}]{parser}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_parser_manager_a14594ae0488507a53c9700d7b2722719}
+\hypertarget{class_parser_manager_a2184813c0cd50eda1cf6ce74bf50d8b5}{}\index{Parser\+Manager@{Parser\+Manager}!register\+Extension@{register\+Extension}}
+\index{register\+Extension@{register\+Extension}!Parser\+Manager@{Parser\+Manager}}
+\subsubsection[{register\+Extension(const char $\ast$extension, const char $\ast$parser\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Parser\+Manager\+::register\+Extension (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{extension, }
+\item[{const char $\ast$}]{parser\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_parser_manager_a2184813c0cd50eda1cf6ce74bf50d8b5}
+Registers a file {\itshape extension} with a parser with name {\itshape parser\+Name}. Returns T\+R\+U\+E if the extension was successfully registered. \hypertarget{class_parser_manager_a04ff0e1b281d0b10b42688f6bce1d296}{}\index{Parser\+Manager@{Parser\+Manager}!register\+Parser@{register\+Parser}}
+\index{register\+Parser@{register\+Parser}!Parser\+Manager@{Parser\+Manager}}
+\subsubsection[{register\+Parser(const char $\ast$name, Parser\+Interface $\ast$parser)}]{\setlength{\rightskip}{0pt plus 5cm}void Parser\+Manager\+::register\+Parser (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{{\bf Parser\+Interface} $\ast$}]{parser}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_parser_manager_a04ff0e1b281d0b10b42688f6bce1d296}
+Registers an additional parser. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em name} & \hyperlink{class_a}{A} symbolic name of the parser, i.\+e. \char`\"{}c\char`\"{}, \char`\"{}python\char`\"{}, \char`\"{}fortran\char`\"{}, \char`\"{}vhdl\char`\"{}, ... \\
+\hline
+\mbox{\tt in}  & {\em parser} & The parser that is to be used for the given name. \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{parserintf_8h}{parserintf.\+h}\end{DoxyCompactItemize}

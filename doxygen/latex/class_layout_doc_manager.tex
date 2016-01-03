@@ -1,0 +1,127 @@
+\hypertarget{class_layout_doc_manager}{}\section{Référence de la classe Layout\+Doc\+Manager}
+\label{class_layout_doc_manager}\index{Layout\+Doc\+Manager@{Layout\+Doc\+Manager}}
+
+
+Singleton providing access to the (user configurable) layout of the documentation.  
+
+
+
+
+{\ttfamily \#include $<$layout.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_layout_doc_manager_1_1_private}{Private}
+\end{DoxyCompactItemize}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94}{Layout\+Part} \{ \\*
+\hyperlink{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94a797b00e87a4a6eacc27a6452d4d8eb57}{Class}, 
+\hyperlink{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94ad342856294e002e934e11e0b7b1de590}{Namespace}, 
+\hyperlink{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94afda79cb94a5e0b00b5928c2946421043}{File}, 
+\hyperlink{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94a6e34173fdd2293ad484e27cfb5eeffd9}{Group}, 
+\\*
+\hyperlink{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94a02b696ad1d3b28cc595a6e9fb537c85f}{Directory}, 
+\hyperlink{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94a5d59ec29416e7a603f2a68ee9e718ed5}{Nr\+Parts}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{struct_layout_doc_entry}{Layout\+Doc\+Entry} $>$ \& \hyperlink{class_layout_doc_manager_ada1c4dc32df1e43b5f1d9987e68ec974}{doc\+Entries} (\hyperlink{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94}{Layout\+Part} part) const 
+\item 
+\hyperlink{struct_layout_nav_entry}{Layout\+Nav\+Entry} $\ast$ \hyperlink{class_layout_doc_manager_afea2ba78b05ae6d721b9b39c24b4ace0}{root\+Nav\+Entry} () const 
+\item 
+void \hyperlink{class_layout_doc_manager_ade92fd2ccfa31a7bd8b152848d224053}{parse} (\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, const char $\ast$file\+Name)
+\item 
+void \hyperlink{class_layout_doc_manager_a920748477d4262faf758d21ddbe2329d}{init} ()
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_layout_doc_manager}{Layout\+Doc\+Manager} \& \hyperlink{class_layout_doc_manager_a87bc2288833b8769bd03e47c58fbba6a}{instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_layout_doc_manager_aaa876b66a7f0c8c8766635655c0dff49}{Layout\+Parser}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Singleton providing access to the (user configurable) layout of the documentation. 
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94}{}\index{Layout\+Doc\+Manager@{Layout\+Doc\+Manager}!Layout\+Part@{Layout\+Part}}
+\index{Layout\+Part@{Layout\+Part}!Layout\+Doc\+Manager@{Layout\+Doc\+Manager}}
+\subsubsection[{Layout\+Part}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Layout\+Doc\+Manager\+::\+Layout\+Part}}\label{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Class@{Class}!Layout\+Doc\+Manager@{Layout\+Doc\+Manager}}\index{Layout\+Doc\+Manager@{Layout\+Doc\+Manager}!Class@{Class}}\item[{\em 
+\hypertarget{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94a797b00e87a4a6eacc27a6452d4d8eb57}{}Class\label{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94a797b00e87a4a6eacc27a6452d4d8eb57}
+}]\index{Namespace@{Namespace}!Layout\+Doc\+Manager@{Layout\+Doc\+Manager}}\index{Layout\+Doc\+Manager@{Layout\+Doc\+Manager}!Namespace@{Namespace}}\item[{\em 
+\hypertarget{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94ad342856294e002e934e11e0b7b1de590}{}Namespace\label{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94ad342856294e002e934e11e0b7b1de590}
+}]\index{File@{File}!Layout\+Doc\+Manager@{Layout\+Doc\+Manager}}\index{Layout\+Doc\+Manager@{Layout\+Doc\+Manager}!File@{File}}\item[{\em 
+\hypertarget{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94afda79cb94a5e0b00b5928c2946421043}{}File\label{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94afda79cb94a5e0b00b5928c2946421043}
+}]\index{Group@{Group}!Layout\+Doc\+Manager@{Layout\+Doc\+Manager}}\index{Layout\+Doc\+Manager@{Layout\+Doc\+Manager}!Group@{Group}}\item[{\em 
+\hypertarget{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94a6e34173fdd2293ad484e27cfb5eeffd9}{}Group\label{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94a6e34173fdd2293ad484e27cfb5eeffd9}
+}]\index{Directory@{Directory}!Layout\+Doc\+Manager@{Layout\+Doc\+Manager}}\index{Layout\+Doc\+Manager@{Layout\+Doc\+Manager}!Directory@{Directory}}\item[{\em 
+\hypertarget{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94a02b696ad1d3b28cc595a6e9fb537c85f}{}Directory\label{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94a02b696ad1d3b28cc595a6e9fb537c85f}
+}]\index{Nr\+Parts@{Nr\+Parts}!Layout\+Doc\+Manager@{Layout\+Doc\+Manager}}\index{Layout\+Doc\+Manager@{Layout\+Doc\+Manager}!Nr\+Parts@{Nr\+Parts}}\item[{\em 
+\hypertarget{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94a5d59ec29416e7a603f2a68ee9e718ed5}{}Nr\+Parts\label{class_layout_doc_manager_aee13a925ea1f915c542ecd7f579ebc94a5d59ec29416e7a603f2a68ee9e718ed5}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_layout_doc_manager_ada1c4dc32df1e43b5f1d9987e68ec974}{}\index{Layout\+Doc\+Manager@{Layout\+Doc\+Manager}!doc\+Entries@{doc\+Entries}}
+\index{doc\+Entries@{doc\+Entries}!Layout\+Doc\+Manager@{Layout\+Doc\+Manager}}
+\subsubsection[{doc\+Entries(\+Layout\+Part part) const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Q\+List}$<$ {\bf Layout\+Doc\+Entry} $>$ \& Layout\+Doc\+Manager\+::doc\+Entries (
+\begin{DoxyParamCaption}
+\item[{{\bf Layout\+Doc\+Manager\+::\+Layout\+Part}}]{part}
+\end{DoxyParamCaption}
+) const}\label{class_layout_doc_manager_ada1c4dc32df1e43b5f1d9987e68ec974}
+Returns the list of \hyperlink{struct_layout_doc_entry}{Layout\+Doc\+Entry}\textquotesingle{}s in representation order for a given page identified by {\itshape part}. \hypertarget{class_layout_doc_manager_a920748477d4262faf758d21ddbe2329d}{}\index{Layout\+Doc\+Manager@{Layout\+Doc\+Manager}!init@{init}}
+\index{init@{init}!Layout\+Doc\+Manager@{Layout\+Doc\+Manager}}
+\subsubsection[{init()}]{\setlength{\rightskip}{0pt plus 5cm}void Layout\+Doc\+Manager\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_layout_doc_manager_a920748477d4262faf758d21ddbe2329d}
+\hypertarget{class_layout_doc_manager_a87bc2288833b8769bd03e47c58fbba6a}{}\index{Layout\+Doc\+Manager@{Layout\+Doc\+Manager}!instance@{instance}}
+\index{instance@{instance}!Layout\+Doc\+Manager@{Layout\+Doc\+Manager}}
+\subsubsection[{instance()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Layout\+Doc\+Manager} \& Layout\+Doc\+Manager\+::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_layout_doc_manager_a87bc2288833b8769bd03e47c58fbba6a}
+Returns a reference to this singleton. \hypertarget{class_layout_doc_manager_ade92fd2ccfa31a7bd8b152848d224053}{}\index{Layout\+Doc\+Manager@{Layout\+Doc\+Manager}!parse@{parse}}
+\index{parse@{parse}!Layout\+Doc\+Manager@{Layout\+Doc\+Manager}}
+\subsubsection[{parse(\+Q\+Text\+Stream \&t, const char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Layout\+Doc\+Manager\+::parse (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Text\+Stream} \&}]{t, }
+\item[{const char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{class_layout_doc_manager_ade92fd2ccfa31a7bd8b152848d224053}
+Parses a user provided layout \hypertarget{class_layout_doc_manager_afea2ba78b05ae6d721b9b39c24b4ace0}{}\index{Layout\+Doc\+Manager@{Layout\+Doc\+Manager}!root\+Nav\+Entry@{root\+Nav\+Entry}}
+\index{root\+Nav\+Entry@{root\+Nav\+Entry}!Layout\+Doc\+Manager@{Layout\+Doc\+Manager}}
+\subsubsection[{root\+Nav\+Entry() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Layout\+Nav\+Entry} $\ast$ Layout\+Doc\+Manager\+::root\+Nav\+Entry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_layout_doc_manager_afea2ba78b05ae6d721b9b39c24b4ace0}
+returns the (invisible) root of the navigation tree. 
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_layout_doc_manager_aaa876b66a7f0c8c8766635655c0dff49}{}\index{Layout\+Doc\+Manager@{Layout\+Doc\+Manager}!Layout\+Parser@{Layout\+Parser}}
+\index{Layout\+Parser@{Layout\+Parser}!Layout\+Doc\+Manager@{Layout\+Doc\+Manager}}
+\subsubsection[{Layout\+Parser}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Layout\+Parser}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_layout_doc_manager_aaa876b66a7f0c8c8766635655c0dff49}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{layout_8h}{layout.\+h}\item 
+src/\hyperlink{layout_8cpp}{layout.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,1079 @@
+\hypertarget{class_vhdl_doc_gen}{}\section{Référence de la classe Vhdl\+Doc\+Gen}
+\label{class_vhdl_doc_gen}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+
+
+{\ttfamily \#include $<$vhdldocgen.\+h$>$}
+
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_vhdl_doc_gen_a010ab08982f29df8c0f3d3f0f642f0f0}{Vhdl\+Classes} \{ \hyperlink{class_vhdl_doc_gen_a010ab08982f29df8c0f3d3f0f642f0f0a0f87010297b89ed715ad63fccec9b90e}{E\+N\+T\+I\+T\+Y\+C\+L\+A\+S\+S}, 
+\hyperlink{class_vhdl_doc_gen_a010ab08982f29df8c0f3d3f0f642f0f0a4cdc00f213301fb089eb3906a07efd20}{P\+A\+C\+K\+B\+O\+D\+Y\+C\+L\+A\+S\+S}, 
+\hyperlink{class_vhdl_doc_gen_a010ab08982f29df8c0f3d3f0f642f0f0ae0c7e4401e472ec3153e9793e240a431}{A\+R\+C\+H\+I\+T\+E\+C\+T\+U\+R\+E\+C\+L\+A\+S\+S}, 
+\hyperlink{class_vhdl_doc_gen_a010ab08982f29df8c0f3d3f0f642f0f0ae69513dd677b13d97b6a2e3ae445d1ef}{P\+A\+C\+K\+A\+G\+E\+C\+L\+A\+S\+S}
+ \}
+\item 
+enum \hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6}{Vhdl\+Key\+Words} \{ \\*
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6ace1559d6b194d1712298e2d0040d7107}{L\+I\+B\+R\+A\+R\+Y} =1, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a604511e3915904fbe25310051952f859}{E\+N\+T\+I\+T\+Y}, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6ae421d9c7eca60207baf35f4cbd0b1da2}{P\+A\+C\+K\+A\+G\+E\+\_\+\+B\+O\+D\+Y}, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a523358537aff4699052d808da11a58ab}{A\+R\+C\+H\+I\+T\+E\+C\+T\+U\+R\+E}, 
+\\*
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a28636405fd1d55082e41bae5b5b3c3a5}{P\+A\+C\+K\+A\+G\+E}, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a74fd577ccb143927e3b8dbd90242ea82}{A\+T\+T\+R\+I\+B\+U\+T\+E}, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a425d57cd5b88c50bf8d6a7f30f9aad5f}{S\+I\+G\+N\+A\+L}, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a6e8760b776ac93d18d10f76f3e9b92a0}{C\+O\+M\+P\+O\+N\+E\+N\+T}, 
+\\*
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a0893bf5a72275367a8e6a3721c9086f6}{C\+O\+N\+S\+T\+A\+N\+T}, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a0a5e79aae981605ec80283206d115283}{T\+Y\+P\+E}, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a0cd6b2634cdb63a17c75b4b223681084}{S\+U\+B\+T\+Y\+P\+E}, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a5b3da2e7667eed3c6f771079cda86e12}{F\+U\+N\+C\+T\+I\+O\+N}, 
+\\*
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6af57d3961a03bd6b9bd2de810a5158370}{R\+E\+C\+O\+R\+D}, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a25acdad40807693c8face87fa6a34dae}{P\+R\+O\+C\+E\+D\+U\+R\+E}, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6aeab873f5f9da8d43d0f5b730e9b4ca8f}{U\+S\+E}, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6ad8826a2843d98d994f2451775f57851f}{P\+R\+O\+C\+E\+S\+S}, 
+\\*
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a96a5769416db537592ac9bd778e1ba15}{P\+O\+R\+T}, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a9f02979facca94d4d0113e895224a27e}{U\+N\+I\+T\+S}, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a21dd6922b9f777cb0eca071002740a49}{G\+E\+N\+E\+R\+I\+C}, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6ad66184819af212c8e56c4c69765df23c}{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+I\+O\+N}, 
+\\*
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a16a7b9d37ce120789952ba9bebec0b8c}{G\+R\+O\+U\+P}, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a9f13ba47aabd6d1e602ccfacf08ae2fd}{V\+F\+I\+L\+E}, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a77f8601e3486282da0da7d4f5fb794db}{S\+H\+A\+R\+E\+D\+V\+A\+R\+I\+A\+B\+L\+E}, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a69fc9806e87f3f09d80b348be3c8e4dc}{C\+O\+N\+F\+I\+G}, 
+\\*
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a7793acc4468024b56c723d5b696163e5}{A\+L\+I\+A\+S}, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6aff47a9945ac0d2a4d504f95904173750}{M\+I\+S\+C\+E\+L\+L\+A\+N\+E\+O\+U\+S}, 
+\hyperlink{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a3634e4fcc00b052fe7b55fd319d009c9}{U\+C\+F\+\_\+\+C\+O\+N\+S\+T}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_vhdl_doc_gen_a9c81282909ce97e85d0f42a4e2bd3b1e}{Vhdl\+Doc\+Gen} ()
+\item 
+virtual \hyperlink{class_vhdl_doc_gen_acc05e81acd9943236e3530a0beba9f86}{$\sim$\+Vhdl\+Doc\+Gen} ()
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_vhdl_doc_gen_a987fee1e906fac322dda62613525a8f9}{init} ()
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_vhdl_doc_gen_ac5508320d1d3754b484107c49cfec5a7}{convert\+File\+Name\+To\+Class\+Name} (\hyperlink{class_q_c_string}{Q\+C\+String} name)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_ac7d0f125a2bffca08e8c52644bf8c6f2}{is\+Sub\+Class} (\hyperlink{class_class_def}{Class\+Def} $\ast$cd, \hyperlink{class_class_def}{Class\+Def} $\ast$scd, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} follow\+Instances, int level)
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_vhdl_doc_gen_aede8c70a47e630b7a4b562b599304121}{get\+Index\+Word} (const char $\ast$, int index)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a82a05cf7bd081febd19a0065eed17098}{delete\+Char\+Rev} (\hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, char \hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})
+\item 
+static void \hyperlink{class_vhdl_doc_gen_ae4bf0d0561d8ef807b56c1f29765713e}{delete\+All\+Chars} (\hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, char \hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})
+\item 
+static void \hyperlink{class_vhdl_doc_gen_a42d423663159ccd360d8838005662343}{parse\+Func\+Proto} (const char $\ast$text, \hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{struct_argument}{Argument} $>$ \&, \hyperlink{class_q_c_string}{Q\+C\+String} \&name, \hyperlink{class_q_c_string}{Q\+C\+String} \&ret, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{vhdljjparser_8cpp_a9910424bf5401d657c3b3fdff6fcc152}{doc}=false)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_ab8681769cd2f027fbf46a4836d3825e9}{compute\+Vhdl\+Component\+Relations} ()
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} $\ast$ \hyperlink{class_vhdl_doc_gen_a0338d8a473042e0ce824cd33def75544}{find\+Key\+Word} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&word)
+\item 
+static \hyperlink{class_class_def}{Class\+Def} $\ast$ \hyperlink{class_vhdl_doc_gen_ad890048820909df255f6ee3f95d6ed80}{get\+Package\+Name} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&name)
+\item 
+static \hyperlink{class_member_def}{Member\+Def} $\ast$ \hyperlink{class_vhdl_doc_gen_ac10fcedd625d329dc0013ee40e8546a7}{find\+Member} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&class\+Name, const \hyperlink{class_q_c_string}{Q\+C\+String} \&mem\+Name)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_a00216e37afbb1841a9631a80379b7f0a}{find\+All\+Packages} (\hyperlink{class_class_def}{Class\+Def} $\ast$)
+\item 
+static \hyperlink{class_member_def}{Member\+Def} $\ast$ \hyperlink{class_vhdl_doc_gen_a69d1010e9addd89076e51cb78ddf029f}{find\+Member\+Def} (\hyperlink{class_class_def}{Class\+Def} $\ast$cd, const \hyperlink{class_q_c_string}{Q\+C\+String} \&key, \hyperlink{types_8h_abe8ad5992f8938a28f918f51b199aa19}{Member\+List\+Type} type)
+\item 
+static \hyperlink{class_class_def}{Class\+Def} $\ast$ \hyperlink{class_vhdl_doc_gen_ac766b60a818a192ef5492bcee794a0ea}{get\+Class} (const char $\ast$name)
+\item 
+static \hyperlink{class_member_def}{Member\+Def} $\ast$ \hyperlink{class_vhdl_doc_gen_aded31b275385b372f3bb0d4182dd990e}{find\+Function} (const \hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{struct_argument}{Argument} $>$ \&ql, const \hyperlink{class_q_c_string}{Q\+C\+String} \&name, const \hyperlink{class_q_c_string}{Q\+C\+String} \&package, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} type)
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_vhdl_doc_gen_ad5d4c791af3f2943467c7c7af558d83a}{get\+Class\+Title} (const \hyperlink{class_class_def}{Class\+Def} $\ast$)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_a67f47b8dc11d967ee47e9bda86fff7e0}{write\+Inline\+Class\+Link} (const \hyperlink{class_class_def}{Class\+Def} $\ast$, \hyperlink{class_output_list}{Output\+List} \&ol)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_afc349098219c01208def69e00f05e0e2}{write\+Tag\+File} (\hyperlink{class_member_def}{Member\+Def} $\ast$mdef, \hyperlink{class_f_text_stream}{F\+Text\+Stream} \&tag\+File)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_adb04cd03e2039ecab3a0a8f31ee4c890}{is\+Constraint} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a57efdf5bddd0b36667c8aa21256ebac7}{is\+Config} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_af13dd5eb831c1df008b0fd41928f4b7c}{is\+Alias} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a3f582b69841bae3ec6f1281604b6f0c8}{is\+Library} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_ae3c19429669d382581ba37aee5f39278}{is\+Generic} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a73186f5d1ba5e6c11c6f006708da79a6}{is\+Port} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_ad3fdc795bf951ef11221894512b8bc6c}{is\+Component} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_aca017e059b8a2972c2cad968800c0564}{is\+Package} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a65218023c4970a90f3bce70938a99781}{is\+Entity} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a2c3cdcd27394531385ccd8c56257edc1}{is\+Constant} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a8ab98ceef0a36aea7a15c548ec9aa455}{is\+V\+Type} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_ab57f7d02afdd7034f78894b20e6ff4aa}{is\+Sub\+Type} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a8808d28bf43d889892a8b6bad0793d7d}{is\+Vhdl\+Function} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a212ea7da7de8f22c3ca1dd14a38a67ef}{is\+Process} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a07199651d2f493ee3afe42975df77efb}{is\+Signal} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a2dc9e668acc7c79f211709e2a0eeccad}{is\+Attribute} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a7fb01b11d2a225ee8d8c43a56862be8b}{is\+Signals} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_aed906dd71cdcb8aca1bc6e3f9fba9732}{is\+Procedure} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_ac0634a061165ad22c27eef2ac12057d0}{is\+Record} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a0281ffc4e374d27d703419ae289e3b8c}{is\+Architecture} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a4861484cc952d96afcfe277cf958aff0}{is\+Unit} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_ab6e9aff43352b39d31806d0616e2c7af}{is\+Package\+Body} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a877e8a81695500e7ad5ed8d76fdbaffc}{is\+Variable} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a7ac9c26b1b0fb7402cc58acaf569df89}{is\+File} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a069c8ad206be372bd948cc8e964218ed}{is\+Group} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_ab9e42b2cf2d969dcc943ec355d4fa6b2}{is\+Comp\+Inst} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a55ef68e914c38033a48b6fdac2907689}{is\+Misc} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef)
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_vhdl_doc_gen_a3ff9c5f9b1c16d7212fafcd9e7275223}{tr\+Type\+String} (\hyperlink{qglobal_8h_a29940ae63ec06c9998bba873e25407ad}{uint64} type)
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_vhdl_doc_gen_a1f0a09f2f2d063e9fc551ee62473eb43}{tr\+Vhdl\+Type} (\hyperlink{qglobal_8h_a29940ae63ec06c9998bba873e25407ad}{uint64} type, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} sing=true)
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_vhdl_doc_gen_a0a7d5c59311faa783cc3ec3daea29826}{tr\+Design\+Unit\+Hierarchy} ()
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_vhdl_doc_gen_a8b0fd3c3e1ae7d234f3671b29525cf9e}{tr\+Design\+Unit\+List} ()
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_vhdl_doc_gen_a58b89b76fb84bb4bcfa1e482d3b9e727}{tr\+Design\+Unit\+Members} ()
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_vhdl_doc_gen_af4139f69442e7c7d0ced59570e34f1c3}{tr\+Design\+Unit\+List\+Description} ()
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_vhdl_doc_gen_a796d5fa8a62c0e734d75e37126786714}{tr\+Design\+Units} ()
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_vhdl_doc_gen_a2905e0b83f5e95ca79104ac61c52ee7d}{tr\+Design\+Unit\+Index} ()
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_vhdl_doc_gen_a49df715b5535e59f36c266c67cbf514f}{tr\+Function\+And\+Proc} ()
+\item 
+static void \hyperlink{class_vhdl_doc_gen_a802a7b8116fa1b8b46895c25a32c5677}{prepare\+Comment} (\hyperlink{class_q_c_string}{Q\+C\+String} \&)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_aacccadab8f7d60dc0e4b2892ea724c2b}{format\+String} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&, \hyperlink{class_output_list}{Output\+List} \&ol, const \hyperlink{class_member_def}{Member\+Def} $\ast$)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_a0b58904c2803fe64c007b6c3ddda086e}{write\+Format\+String} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&, \hyperlink{class_output_list}{Output\+List} \&ol, const \hyperlink{class_member_def}{Member\+Def} $\ast$)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_ab1d66321a2c118a9376b65aeb598a49c}{write\+Function\+Proto} (\hyperlink{class_output_list}{Output\+List} \&ol, const \hyperlink{class_argument_list}{Argument\+List} $\ast$al, const \hyperlink{class_member_def}{Member\+Def} $\ast$)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_a94ad80db8536156393a701496506c052}{write\+Process\+Proto} (\hyperlink{class_output_list}{Output\+List} \&ol, const \hyperlink{class_argument_list}{Argument\+List} $\ast$al, const \hyperlink{class_member_def}{Member\+Def} $\ast$)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_a94da80078b9bba291b1c1af056eca6a4}{write\+Procedure\+Proto} (\hyperlink{class_output_list}{Output\+List} \&ol, const \hyperlink{class_argument_list}{Argument\+List} $\ast$al, const \hyperlink{class_member_def}{Member\+Def} $\ast$)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a8c40c856602e19b4fe421c9572d618b7}{write\+Func\+Proc\+Docu} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef, \hyperlink{class_output_list}{Output\+List} \&ol, const \hyperlink{class_argument_list}{Argument\+List} $\ast$al, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} type=false)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_a4be0e9c1867f4bdc5a06f1ca54905d4b}{write\+Record\+Proto} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef, \hyperlink{class_output_list}{Output\+List} \&ol, const \hyperlink{class_argument_list}{Argument\+List} $\ast$al)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a0218e5158efa51df8490073c645c9a79}{write\+V\+H\+D\+L\+Type\+Documentation} (const \hyperlink{class_member_def}{Member\+Def} $\ast$mdef, const \hyperlink{class_definition}{Definition} $\ast$\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}, \hyperlink{class_output_list}{Output\+List} \&ol)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_a26d6d3e1a28067a7a5c9f8624f642654}{write\+Vhdl\+Declarations} (\hyperlink{class_member_list}{Member\+List} $\ast$, \hyperlink{class_output_list}{Output\+List} \&, \hyperlink{class_group_def}{Group\+Def} $\ast$, \hyperlink{class_class_def}{Class\+Def} $\ast$, \hyperlink{class_file_def}{File\+Def} $\ast$, \hyperlink{class_namespace_def}{Namespace\+Def} $\ast$)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_ac5c7235e2572f9dab6475d5af835e437}{write\+V\+H\+D\+L\+Declaration} (\hyperlink{class_member_def}{Member\+Def} $\ast$mdef, \hyperlink{class_output_list}{Output\+List} \&ol, \hyperlink{class_class_def}{Class\+Def} $\ast$cd, \hyperlink{class_namespace_def}{Namespace\+Def} $\ast$nd, \hyperlink{class_file_def}{File\+Def} $\ast$fd, \hyperlink{class_group_def}{Group\+Def} $\ast$gd, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} in\+Group)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_ae7a0bfaf11295ea18c656b14fb54203a}{write\+Plain\+V\+H\+D\+L\+Declarations} (\hyperlink{class_member_list}{Member\+List} $\ast$ml, \hyperlink{class_output_list}{Output\+List} \&ol, \hyperlink{class_class_def}{Class\+Def} $\ast$cd, \hyperlink{class_namespace_def}{Namespace\+Def} $\ast$nd, \hyperlink{class_file_def}{File\+Def} $\ast$fd, \hyperlink{class_group_def}{Group\+Def} $\ast$gd, int specifier)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_a30ec463210e92bb4f1cdd02bf1893c86}{write\+V\+H\+D\+L\+Declarations} (\hyperlink{class_member_list}{Member\+List} $\ast$ml, \hyperlink{class_output_list}{Output\+List} \&ol, \hyperlink{class_class_def}{Class\+Def} $\ast$cd, \hyperlink{class_namespace_def}{Namespace\+Def} $\ast$nd, \hyperlink{class_file_def}{File\+Def} $\ast$fd, \hyperlink{class_group_def}{Group\+Def} $\ast$gd, const char $\ast$title, const char $\ast$subtitle, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} show\+Enum\+Values, int type)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a201149bb595839029a622100737e0dea}{write\+Class\+Type} (\hyperlink{class_class_def}{Class\+Def} $\ast$\&, \hyperlink{class_output_list}{Output\+List} \&ol, \hyperlink{class_q_c_string}{Q\+C\+String} \&cname)
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_vhdl_doc_gen_aa77f9467a8af575f85643ececc8cf4e3}{convert\+Argument\+List\+To\+String} (const \hyperlink{class_argument_list}{Argument\+List} $\ast$al, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{060__command__switch_8tcl_af6830d2c644b45088ea8f1f74a46b778}{f})
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_vhdl_doc_gen_a6524e8718f3f956610df4dfc71be204c}{get\+Process\+Number} ()
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_vhdl_doc_gen_a2e65f831a03ff54d13240da96843cd60}{get\+Record\+Number} ()
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_vhdl_doc_gen_a2c4458b0e27e9b97db254d082d1487d2}{get\+Class\+Name} (const \hyperlink{class_class_def}{Class\+Def} $\ast$)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a37b3bf29e7ec4cfe5c453f5a5d4e8f71}{is\+Number} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_vhdl_doc_gen_a4325f5840fe29089b4d3ea4b8c8b0fef}{get\+Protection\+Name} (int prot)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_aa2a0267e84b178cc29681eeaea8cfe35}{parse\+U\+C\+F} (const char $\ast$input, \hyperlink{class_entry}{Entry} $\ast$entity, \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{060__command__switch_8tcl_af6830d2c644b45088ea8f1f74a46b778}{f}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} vendor)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a8879c8899b889e4c595e128841054861}{find\+Constraint\+File} (\hyperlink{struct_layout_nav_entry}{Layout\+Nav\+Entry} $\ast$lne)
+\item 
+static \hyperlink{class_class_def}{Class\+Def} $\ast$ \hyperlink{class_vhdl_doc_gen_a85060afa6fb3a871770412d06d445f62}{find\+Architecture} (const \hyperlink{class_class_def}{Class\+Def} $\ast$cd)
+\item 
+static \hyperlink{class_class_def}{Class\+Def} $\ast$ \hyperlink{class_vhdl_doc_gen_adb468ffc3a78f01a58bd6ca92dcc10ec}{find\+Architecture} (\hyperlink{class_q_c_string}{Q\+C\+String} identifier, \hyperlink{class_q_c_string}{Q\+C\+String} entity\+\_\+name)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_ae08bfd74e8450f8abc4fb3a265d6b24a}{write\+Source} (\hyperlink{class_member_def}{Member\+Def} $\ast$mdef, \hyperlink{class_output_list}{Output\+List} \&ol, \hyperlink{class_q_c_string}{Q\+C\+String} \&cname)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_a62637da4d5b53a0243289ac6a4af2011}{write\+Alphbetical\+Class} (\hyperlink{class_output_list}{Output\+List} \&ol, const \hyperlink{class_class_def}{Class\+Def} $\ast$cd, const \hyperlink{class_q_c_string}{Q\+C\+String} \&)
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_vhdl_doc_gen_a4584e2262b81979f6d9b88c070c78753}{parse\+For\+Config} (\hyperlink{class_q_c_string}{Q\+C\+String} \&entity, \hyperlink{class_q_c_string}{Q\+C\+String} \&arch)
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_vhdl_doc_gen_a411f4f042964d6e24c0376f1378da1a8}{parse\+For\+Binding} (\hyperlink{class_q_c_string}{Q\+C\+String} \&entity, \hyperlink{class_q_c_string}{Q\+C\+String} \&arch)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_a4892ca19efc7055ce4b5c3004ce550ed}{add\+Base\+Class} (\hyperlink{class_class_def}{Class\+Def} $\ast$cd, \hyperlink{class_class_def}{Class\+Def} $\ast$ent)
+\item 
+static \hyperlink{class_class_def}{Class\+Def} $\ast$ \hyperlink{class_vhdl_doc_gen_a03533511b8edfac47bb8e53b9cfb1d3d}{find\+Vhdl\+Class} (const char $\ast$class\+Name)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_a4c14772902ff4d4bf2a55291debd628e}{write\+Overview} (\hyperlink{class_output_list}{Output\+List} \&ol)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_a658c57fb74c0fde61d0002a979710416}{write\+Overview} ()
+\item 
+static void \hyperlink{class_vhdl_doc_gen_a2de08afddfa24b4a037c36ac329185ff}{create\+Flow\+Chart} (const \hyperlink{class_member_def}{Member\+Def} $\ast$)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_a7808cdf56c299daceed3212b65b8a031}{set\+Flow\+Member} (const \hyperlink{class_member_def}{Member\+Def} $\ast$flow\+Member)
+\item 
+static const \hyperlink{class_member_def}{Member\+Def} $\ast$ \hyperlink{class_vhdl_doc_gen_a12b2126cfa1cf80aeab17ae40d673d67}{get\+Flow\+Member} ()
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_vhdl_doc_gen_a7b7df19eb23b1532bc1d05c7ffe6cd76}{is\+Vhdl\+Class} (const \hyperlink{class_entry}{Entry} $\ast$cu)
+\item 
+static void \hyperlink{class_vhdl_doc_gen_a60e16e249eaf1829c224b054ff743ce7}{reset\+Code\+Vhdl\+Parser\+State} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Class for generating documentation specific for V\+H\+D\+L 
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{class_vhdl_doc_gen_a010ab08982f29df8c0f3d3f0f642f0f0}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!Vhdl\+Classes@{Vhdl\+Classes}}
+\index{Vhdl\+Classes@{Vhdl\+Classes}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{Vhdl\+Classes}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Vhdl\+Doc\+Gen\+::\+Vhdl\+Classes}}\label{class_vhdl_doc_gen_a010ab08982f29df8c0f3d3f0f642f0f0}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{E\+N\+T\+I\+T\+Y\+C\+L\+A\+S\+S@{E\+N\+T\+I\+T\+Y\+C\+L\+A\+S\+S}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!E\+N\+T\+I\+T\+Y\+C\+L\+A\+S\+S@{E\+N\+T\+I\+T\+Y\+C\+L\+A\+S\+S}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a010ab08982f29df8c0f3d3f0f642f0f0a0f87010297b89ed715ad63fccec9b90e}{}E\+N\+T\+I\+T\+Y\+C\+L\+A\+S\+S\label{class_vhdl_doc_gen_a010ab08982f29df8c0f3d3f0f642f0f0a0f87010297b89ed715ad63fccec9b90e}
+}]\index{P\+A\+C\+K\+B\+O\+D\+Y\+C\+L\+A\+S\+S@{P\+A\+C\+K\+B\+O\+D\+Y\+C\+L\+A\+S\+S}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!P\+A\+C\+K\+B\+O\+D\+Y\+C\+L\+A\+S\+S@{P\+A\+C\+K\+B\+O\+D\+Y\+C\+L\+A\+S\+S}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a010ab08982f29df8c0f3d3f0f642f0f0a4cdc00f213301fb089eb3906a07efd20}{}P\+A\+C\+K\+B\+O\+D\+Y\+C\+L\+A\+S\+S\label{class_vhdl_doc_gen_a010ab08982f29df8c0f3d3f0f642f0f0a4cdc00f213301fb089eb3906a07efd20}
+}]\index{A\+R\+C\+H\+I\+T\+E\+C\+T\+U\+R\+E\+C\+L\+A\+S\+S@{A\+R\+C\+H\+I\+T\+E\+C\+T\+U\+R\+E\+C\+L\+A\+S\+S}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!A\+R\+C\+H\+I\+T\+E\+C\+T\+U\+R\+E\+C\+L\+A\+S\+S@{A\+R\+C\+H\+I\+T\+E\+C\+T\+U\+R\+E\+C\+L\+A\+S\+S}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a010ab08982f29df8c0f3d3f0f642f0f0ae0c7e4401e472ec3153e9793e240a431}{}A\+R\+C\+H\+I\+T\+E\+C\+T\+U\+R\+E\+C\+L\+A\+S\+S\label{class_vhdl_doc_gen_a010ab08982f29df8c0f3d3f0f642f0f0ae0c7e4401e472ec3153e9793e240a431}
+}]\index{P\+A\+C\+K\+A\+G\+E\+C\+L\+A\+S\+S@{P\+A\+C\+K\+A\+G\+E\+C\+L\+A\+S\+S}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!P\+A\+C\+K\+A\+G\+E\+C\+L\+A\+S\+S@{P\+A\+C\+K\+A\+G\+E\+C\+L\+A\+S\+S}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a010ab08982f29df8c0f3d3f0f642f0f0ae69513dd677b13d97b6a2e3ae445d1ef}{}P\+A\+C\+K\+A\+G\+E\+C\+L\+A\+S\+S\label{class_vhdl_doc_gen_a010ab08982f29df8c0f3d3f0f642f0f0ae69513dd677b13d97b6a2e3ae445d1ef}
+}]\end{description}
+\end{Desc}
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!Vhdl\+Key\+Words@{Vhdl\+Key\+Words}}
+\index{Vhdl\+Key\+Words@{Vhdl\+Key\+Words}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{Vhdl\+Key\+Words}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Vhdl\+Doc\+Gen\+::\+Vhdl\+Key\+Words}}\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{L\+I\+B\+R\+A\+R\+Y@{L\+I\+B\+R\+A\+R\+Y}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!L\+I\+B\+R\+A\+R\+Y@{L\+I\+B\+R\+A\+R\+Y}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6ace1559d6b194d1712298e2d0040d7107}{}L\+I\+B\+R\+A\+R\+Y\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6ace1559d6b194d1712298e2d0040d7107}
+}]\index{E\+N\+T\+I\+T\+Y@{E\+N\+T\+I\+T\+Y}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!E\+N\+T\+I\+T\+Y@{E\+N\+T\+I\+T\+Y}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a604511e3915904fbe25310051952f859}{}E\+N\+T\+I\+T\+Y\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a604511e3915904fbe25310051952f859}
+}]\index{P\+A\+C\+K\+A\+G\+E\+\_\+\+B\+O\+D\+Y@{P\+A\+C\+K\+A\+G\+E\+\_\+\+B\+O\+D\+Y}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!P\+A\+C\+K\+A\+G\+E\+\_\+\+B\+O\+D\+Y@{P\+A\+C\+K\+A\+G\+E\+\_\+\+B\+O\+D\+Y}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6ae421d9c7eca60207baf35f4cbd0b1da2}{}P\+A\+C\+K\+A\+G\+E\+\_\+\+B\+O\+D\+Y\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6ae421d9c7eca60207baf35f4cbd0b1da2}
+}]\index{A\+R\+C\+H\+I\+T\+E\+C\+T\+U\+R\+E@{A\+R\+C\+H\+I\+T\+E\+C\+T\+U\+R\+E}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!A\+R\+C\+H\+I\+T\+E\+C\+T\+U\+R\+E@{A\+R\+C\+H\+I\+T\+E\+C\+T\+U\+R\+E}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a523358537aff4699052d808da11a58ab}{}A\+R\+C\+H\+I\+T\+E\+C\+T\+U\+R\+E\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a523358537aff4699052d808da11a58ab}
+}]\index{P\+A\+C\+K\+A\+G\+E@{P\+A\+C\+K\+A\+G\+E}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!P\+A\+C\+K\+A\+G\+E@{P\+A\+C\+K\+A\+G\+E}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a28636405fd1d55082e41bae5b5b3c3a5}{}P\+A\+C\+K\+A\+G\+E\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a28636405fd1d55082e41bae5b5b3c3a5}
+}]\index{A\+T\+T\+R\+I\+B\+U\+T\+E@{A\+T\+T\+R\+I\+B\+U\+T\+E}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!A\+T\+T\+R\+I\+B\+U\+T\+E@{A\+T\+T\+R\+I\+B\+U\+T\+E}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a74fd577ccb143927e3b8dbd90242ea82}{}A\+T\+T\+R\+I\+B\+U\+T\+E\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a74fd577ccb143927e3b8dbd90242ea82}
+}]\index{S\+I\+G\+N\+A\+L@{S\+I\+G\+N\+A\+L}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!S\+I\+G\+N\+A\+L@{S\+I\+G\+N\+A\+L}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a425d57cd5b88c50bf8d6a7f30f9aad5f}{}S\+I\+G\+N\+A\+L\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a425d57cd5b88c50bf8d6a7f30f9aad5f}
+}]\index{C\+O\+M\+P\+O\+N\+E\+N\+T@{C\+O\+M\+P\+O\+N\+E\+N\+T}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!C\+O\+M\+P\+O\+N\+E\+N\+T@{C\+O\+M\+P\+O\+N\+E\+N\+T}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a6e8760b776ac93d18d10f76f3e9b92a0}{}C\+O\+M\+P\+O\+N\+E\+N\+T\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a6e8760b776ac93d18d10f76f3e9b92a0}
+}]\index{C\+O\+N\+S\+T\+A\+N\+T@{C\+O\+N\+S\+T\+A\+N\+T}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!C\+O\+N\+S\+T\+A\+N\+T@{C\+O\+N\+S\+T\+A\+N\+T}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a0893bf5a72275367a8e6a3721c9086f6}{}C\+O\+N\+S\+T\+A\+N\+T\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a0893bf5a72275367a8e6a3721c9086f6}
+}]\index{T\+Y\+P\+E@{T\+Y\+P\+E}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!T\+Y\+P\+E@{T\+Y\+P\+E}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a0a5e79aae981605ec80283206d115283}{}T\+Y\+P\+E\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a0a5e79aae981605ec80283206d115283}
+}]\index{S\+U\+B\+T\+Y\+P\+E@{S\+U\+B\+T\+Y\+P\+E}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!S\+U\+B\+T\+Y\+P\+E@{S\+U\+B\+T\+Y\+P\+E}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a0cd6b2634cdb63a17c75b4b223681084}{}S\+U\+B\+T\+Y\+P\+E\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a0cd6b2634cdb63a17c75b4b223681084}
+}]\index{F\+U\+N\+C\+T\+I\+O\+N@{F\+U\+N\+C\+T\+I\+O\+N}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!F\+U\+N\+C\+T\+I\+O\+N@{F\+U\+N\+C\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a5b3da2e7667eed3c6f771079cda86e12}{}F\+U\+N\+C\+T\+I\+O\+N\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a5b3da2e7667eed3c6f771079cda86e12}
+}]\index{R\+E\+C\+O\+R\+D@{R\+E\+C\+O\+R\+D}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!R\+E\+C\+O\+R\+D@{R\+E\+C\+O\+R\+D}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6af57d3961a03bd6b9bd2de810a5158370}{}R\+E\+C\+O\+R\+D\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6af57d3961a03bd6b9bd2de810a5158370}
+}]\index{P\+R\+O\+C\+E\+D\+U\+R\+E@{P\+R\+O\+C\+E\+D\+U\+R\+E}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!P\+R\+O\+C\+E\+D\+U\+R\+E@{P\+R\+O\+C\+E\+D\+U\+R\+E}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a25acdad40807693c8face87fa6a34dae}{}P\+R\+O\+C\+E\+D\+U\+R\+E\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a25acdad40807693c8face87fa6a34dae}
+}]\index{U\+S\+E@{U\+S\+E}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!U\+S\+E@{U\+S\+E}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6aeab873f5f9da8d43d0f5b730e9b4ca8f}{}U\+S\+E\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6aeab873f5f9da8d43d0f5b730e9b4ca8f}
+}]\index{P\+R\+O\+C\+E\+S\+S@{P\+R\+O\+C\+E\+S\+S}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!P\+R\+O\+C\+E\+S\+S@{P\+R\+O\+C\+E\+S\+S}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6ad8826a2843d98d994f2451775f57851f}{}P\+R\+O\+C\+E\+S\+S\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6ad8826a2843d98d994f2451775f57851f}
+}]\index{P\+O\+R\+T@{P\+O\+R\+T}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!P\+O\+R\+T@{P\+O\+R\+T}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a96a5769416db537592ac9bd778e1ba15}{}P\+O\+R\+T\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a96a5769416db537592ac9bd778e1ba15}
+}]\index{U\+N\+I\+T\+S@{U\+N\+I\+T\+S}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!U\+N\+I\+T\+S@{U\+N\+I\+T\+S}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a9f02979facca94d4d0113e895224a27e}{}U\+N\+I\+T\+S\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a9f02979facca94d4d0113e895224a27e}
+}]\index{G\+E\+N\+E\+R\+I\+C@{G\+E\+N\+E\+R\+I\+C}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!G\+E\+N\+E\+R\+I\+C@{G\+E\+N\+E\+R\+I\+C}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a21dd6922b9f777cb0eca071002740a49}{}G\+E\+N\+E\+R\+I\+C\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a21dd6922b9f777cb0eca071002740a49}
+}]\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+I\+O\+N@{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+I\+O\+N}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+I\+O\+N@{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6ad66184819af212c8e56c4c69765df23c}{}I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+I\+O\+N\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6ad66184819af212c8e56c4c69765df23c}
+}]\index{G\+R\+O\+U\+P@{G\+R\+O\+U\+P}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!G\+R\+O\+U\+P@{G\+R\+O\+U\+P}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a16a7b9d37ce120789952ba9bebec0b8c}{}G\+R\+O\+U\+P\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a16a7b9d37ce120789952ba9bebec0b8c}
+}]\index{V\+F\+I\+L\+E@{V\+F\+I\+L\+E}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!V\+F\+I\+L\+E@{V\+F\+I\+L\+E}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a9f13ba47aabd6d1e602ccfacf08ae2fd}{}V\+F\+I\+L\+E\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a9f13ba47aabd6d1e602ccfacf08ae2fd}
+}]\index{S\+H\+A\+R\+E\+D\+V\+A\+R\+I\+A\+B\+L\+E@{S\+H\+A\+R\+E\+D\+V\+A\+R\+I\+A\+B\+L\+E}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!S\+H\+A\+R\+E\+D\+V\+A\+R\+I\+A\+B\+L\+E@{S\+H\+A\+R\+E\+D\+V\+A\+R\+I\+A\+B\+L\+E}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a77f8601e3486282da0da7d4f5fb794db}{}S\+H\+A\+R\+E\+D\+V\+A\+R\+I\+A\+B\+L\+E\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a77f8601e3486282da0da7d4f5fb794db}
+}]\index{C\+O\+N\+F\+I\+G@{C\+O\+N\+F\+I\+G}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!C\+O\+N\+F\+I\+G@{C\+O\+N\+F\+I\+G}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a69fc9806e87f3f09d80b348be3c8e4dc}{}C\+O\+N\+F\+I\+G\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a69fc9806e87f3f09d80b348be3c8e4dc}
+}]\index{A\+L\+I\+A\+S@{A\+L\+I\+A\+S}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!A\+L\+I\+A\+S@{A\+L\+I\+A\+S}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a7793acc4468024b56c723d5b696163e5}{}A\+L\+I\+A\+S\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a7793acc4468024b56c723d5b696163e5}
+}]\index{M\+I\+S\+C\+E\+L\+L\+A\+N\+E\+O\+U\+S@{M\+I\+S\+C\+E\+L\+L\+A\+N\+E\+O\+U\+S}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!M\+I\+S\+C\+E\+L\+L\+A\+N\+E\+O\+U\+S@{M\+I\+S\+C\+E\+L\+L\+A\+N\+E\+O\+U\+S}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6aff47a9945ac0d2a4d504f95904173750}{}M\+I\+S\+C\+E\+L\+L\+A\+N\+E\+O\+U\+S\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6aff47a9945ac0d2a4d504f95904173750}
+}]\index{U\+C\+F\+\_\+\+C\+O\+N\+S\+T@{U\+C\+F\+\_\+\+C\+O\+N\+S\+T}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!U\+C\+F\+\_\+\+C\+O\+N\+S\+T@{U\+C\+F\+\_\+\+C\+O\+N\+S\+T}}\item[{\em 
+\hypertarget{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a3634e4fcc00b052fe7b55fd319d009c9}{}U\+C\+F\+\_\+\+C\+O\+N\+S\+T\label{class_vhdl_doc_gen_a3f46a86d0561edb71388774696f6cea6a3634e4fcc00b052fe7b55fd319d009c9}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_vhdl_doc_gen_a9c81282909ce97e85d0f42a4e2bd3b1e}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{Vhdl\+Doc\+Gen()}]{\setlength{\rightskip}{0pt plus 5cm}Vhdl\+Doc\+Gen\+::\+Vhdl\+Doc\+Gen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vhdl_doc_gen_a9c81282909ce97e85d0f42a4e2bd3b1e}
+\hypertarget{class_vhdl_doc_gen_acc05e81acd9943236e3530a0beba9f86}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!````~Vhdl\+Doc\+Gen@{$\sim$\+Vhdl\+Doc\+Gen}}
+\index{````~Vhdl\+Doc\+Gen@{$\sim$\+Vhdl\+Doc\+Gen}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{$\sim$\+Vhdl\+Doc\+Gen()}]{\setlength{\rightskip}{0pt plus 5cm}Vhdl\+Doc\+Gen\+::$\sim$\+Vhdl\+Doc\+Gen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vhdl_doc_gen_acc05e81acd9943236e3530a0beba9f86}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_vhdl_doc_gen_a4892ca19efc7055ce4b5c3004ce550ed}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!add\+Base\+Class@{add\+Base\+Class}}
+\index{add\+Base\+Class@{add\+Base\+Class}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{add\+Base\+Class(\+Class\+Def $\ast$cd, Class\+Def $\ast$ent)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::add\+Base\+Class (
+\begin{DoxyParamCaption}
+\item[{{\bf Class\+Def} $\ast$}]{cd, }
+\item[{{\bf Class\+Def} $\ast$}]{ent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a4892ca19efc7055ce4b5c3004ce550ed}
+\hypertarget{class_vhdl_doc_gen_ab8681769cd2f027fbf46a4836d3825e9}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!compute\+Vhdl\+Component\+Relations@{compute\+Vhdl\+Component\+Relations}}
+\index{compute\+Vhdl\+Component\+Relations@{compute\+Vhdl\+Component\+Relations}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{compute\+Vhdl\+Component\+Relations()}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::compute\+Vhdl\+Component\+Relations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_ab8681769cd2f027fbf46a4836d3825e9}
+\hypertarget{class_vhdl_doc_gen_aa77f9467a8af575f85643ececc8cf4e3}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!convert\+Argument\+List\+To\+String@{convert\+Argument\+List\+To\+String}}
+\index{convert\+Argument\+List\+To\+String@{convert\+Argument\+List\+To\+String}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{convert\+Argument\+List\+To\+String(const Argument\+List $\ast$al, bool f)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Vhdl\+Doc\+Gen\+::convert\+Argument\+List\+To\+String (
+\begin{DoxyParamCaption}
+\item[{const {\bf Argument\+List} $\ast$}]{al, }
+\item[{{\bf bool}}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_aa77f9467a8af575f85643ececc8cf4e3}
+\hypertarget{class_vhdl_doc_gen_ac5508320d1d3754b484107c49cfec5a7}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!convert\+File\+Name\+To\+Class\+Name@{convert\+File\+Name\+To\+Class\+Name}}
+\index{convert\+File\+Name\+To\+Class\+Name@{convert\+File\+Name\+To\+Class\+Name}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{convert\+File\+Name\+To\+Class\+Name(\+Q\+C\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Vhdl\+Doc\+Gen\+::convert\+File\+Name\+To\+Class\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+C\+String}}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_ac5508320d1d3754b484107c49cfec5a7}
+\hypertarget{class_vhdl_doc_gen_a2de08afddfa24b4a037c36ac329185ff}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!create\+Flow\+Chart@{create\+Flow\+Chart}}
+\index{create\+Flow\+Chart@{create\+Flow\+Chart}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{create\+Flow\+Chart(const Member\+Def $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::create\+Flow\+Chart (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a2de08afddfa24b4a037c36ac329185ff}
+\hypertarget{class_vhdl_doc_gen_ae4bf0d0561d8ef807b56c1f29765713e}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!delete\+All\+Chars@{delete\+All\+Chars}}
+\index{delete\+All\+Chars@{delete\+All\+Chars}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{delete\+All\+Chars(\+Q\+C\+String \&s, char c)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::delete\+All\+Chars (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+C\+String} \&}]{s, }
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_ae4bf0d0561d8ef807b56c1f29765713e}
+\hypertarget{class_vhdl_doc_gen_a82a05cf7bd081febd19a0065eed17098}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!delete\+Char\+Rev@{delete\+Char\+Rev}}
+\index{delete\+Char\+Rev@{delete\+Char\+Rev}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{delete\+Char\+Rev(\+Q\+C\+String \&s, char c)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::delete\+Char\+Rev (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+C\+String} \&}]{s, }
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a82a05cf7bd081febd19a0065eed17098}
+deletes a char backwards in a string \hypertarget{class_vhdl_doc_gen_a00216e37afbb1841a9631a80379b7f0a}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!find\+All\+Packages@{find\+All\+Packages}}
+\index{find\+All\+Packages@{find\+All\+Packages}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{find\+All\+Packages(\+Class\+Def $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::find\+All\+Packages (
+\begin{DoxyParamCaption}
+\item[{{\bf Class\+Def} $\ast$}]{cdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a00216e37afbb1841a9631a80379b7f0a}
+finds all included packages of an Entity or Package \hypertarget{class_vhdl_doc_gen_a85060afa6fb3a871770412d06d445f62}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!find\+Architecture@{find\+Architecture}}
+\index{find\+Architecture@{find\+Architecture}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{find\+Architecture(const Class\+Def $\ast$cd)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Class\+Def} $\ast$ Vhdl\+Doc\+Gen\+::find\+Architecture (
+\begin{DoxyParamCaption}
+\item[{const {\bf Class\+Def} $\ast$}]{cd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a85060afa6fb3a871770412d06d445f62}
+\hypertarget{class_vhdl_doc_gen_adb468ffc3a78f01a58bd6ca92dcc10ec}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!find\+Architecture@{find\+Architecture}}
+\index{find\+Architecture@{find\+Architecture}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{find\+Architecture(\+Q\+C\+String identifier, Q\+C\+String entity\+\_\+name)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Class\+Def}$\ast$ Vhdl\+Doc\+Gen\+::find\+Architecture (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+C\+String}}]{identifier, }
+\item[{{\bf Q\+C\+String}}]{entity\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_adb468ffc3a78f01a58bd6ca92dcc10ec}
+\hypertarget{class_vhdl_doc_gen_a8879c8899b889e4c595e128841054861}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!find\+Constraint\+File@{find\+Constraint\+File}}
+\index{find\+Constraint\+File@{find\+Constraint\+File}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{find\+Constraint\+File(\+Layout\+Nav\+Entry $\ast$lne)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::find\+Constraint\+File (
+\begin{DoxyParamCaption}
+\item[{{\bf Layout\+Nav\+Entry} $\ast$}]{lne}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a8879c8899b889e4c595e128841054861}
+\hypertarget{class_vhdl_doc_gen_aded31b275385b372f3bb0d4182dd990e}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!find\+Function@{find\+Function}}
+\index{find\+Function@{find\+Function}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{find\+Function(const Q\+List$<$ Argument $>$ \&ql, const Q\+C\+String \&name, const Q\+C\+String \&package, bool type)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Member\+Def} $\ast$ Vhdl\+Doc\+Gen\+::find\+Function (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+List}$<$ {\bf Argument} $>$ \&}]{ql, }
+\item[{const {\bf Q\+C\+String} \&}]{funcname, }
+\item[{const {\bf Q\+C\+String} \&}]{package, }
+\item[{{\bf bool}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_aded31b275385b372f3bb0d4182dd990e}
+returns the function with the matching argument list is called in vhdlcode.\+l \hypertarget{class_vhdl_doc_gen_a0338d8a473042e0ce824cd33def75544}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!find\+Key\+Word@{find\+Key\+Word}}
+\index{find\+Key\+Word@{find\+Key\+Word}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{find\+Key\+Word(const Q\+C\+String \&word)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} $\ast$ Vhdl\+Doc\+Gen\+::find\+Key\+Word (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{tmp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a0338d8a473042e0ce824cd33def75544}
+returns the color of a keyword \hypertarget{class_vhdl_doc_gen_ac10fcedd625d329dc0013ee40e8546a7}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!find\+Member@{find\+Member}}
+\index{find\+Member@{find\+Member}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{find\+Member(const Q\+C\+String \&class\+Name, const Q\+C\+String \&mem\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Member\+Def} $\ast$ Vhdl\+Doc\+Gen\+::find\+Member (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{class\+Name, }
+\item[{const {\bf Q\+C\+String} \&}]{mem\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_ac10fcedd625d329dc0013ee40e8546a7}
+\hypertarget{class_vhdl_doc_gen_a69d1010e9addd89076e51cb78ddf029f}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!find\+Member\+Def@{find\+Member\+Def}}
+\index{find\+Member\+Def@{find\+Member\+Def}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{find\+Member\+Def(\+Class\+Def $\ast$cd, const Q\+C\+String \&key, Member\+List\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Member\+Def} $\ast$ Vhdl\+Doc\+Gen\+::find\+Member\+Def (
+\begin{DoxyParamCaption}
+\item[{{\bf Class\+Def} $\ast$}]{cd, }
+\item[{const {\bf Q\+C\+String} \&}]{key, }
+\item[{{\bf Member\+List\+Type}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a69d1010e9addd89076e51cb78ddf029f}
+This function returns the entity$\vert$package in which the key (type) is found \hypertarget{class_vhdl_doc_gen_a03533511b8edfac47bb8e53b9cfb1d3d}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!find\+Vhdl\+Class@{find\+Vhdl\+Class}}
+\index{find\+Vhdl\+Class@{find\+Vhdl\+Class}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{find\+Vhdl\+Class(const char $\ast$class\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Class\+Def} $\ast$ Vhdl\+Doc\+Gen\+::find\+Vhdl\+Class (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{class\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a03533511b8edfac47bb8e53b9cfb1d3d}
+\hypertarget{class_vhdl_doc_gen_aacccadab8f7d60dc0e4b2892ea724c2b}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!format\+String@{format\+String}}
+\index{format\+String@{format\+String}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{format\+String(const Q\+C\+String \&, Output\+List \&ol, const Member\+Def $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::format\+String (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s, }
+\item[{{\bf Output\+List} \&}]{ol, }
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_aacccadab8f7d60dc0e4b2892ea724c2b}
+inserts white spaces for better readings and writes a colored string to the output \hypertarget{class_vhdl_doc_gen_ac766b60a818a192ef5492bcee794a0ea}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!get\+Class@{get\+Class}}
+\index{get\+Class@{get\+Class}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{get\+Class(const char $\ast$name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Class\+Def} $\ast$ Vhdl\+Doc\+Gen\+::get\+Class (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_ac766b60a818a192ef5492bcee794a0ea}
+\hypertarget{class_vhdl_doc_gen_a2c4458b0e27e9b97db254d082d1487d2}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!get\+Class\+Name@{get\+Class\+Name}}
+\index{get\+Class\+Name@{get\+Class\+Name}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{get\+Class\+Name(const Class\+Def $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Vhdl\+Doc\+Gen\+::get\+Class\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Class\+Def} $\ast$}]{cd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a2c4458b0e27e9b97db254d082d1487d2}
+\hypertarget{class_vhdl_doc_gen_ad5d4c791af3f2943467c7c7af558d83a}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!get\+Class\+Title@{get\+Class\+Title}}
+\index{get\+Class\+Title@{get\+Class\+Title}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{get\+Class\+Title(const Class\+Def $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Vhdl\+Doc\+Gen\+::get\+Class\+Title (
+\begin{DoxyParamCaption}
+\item[{const {\bf Class\+Def} $\ast$}]{cd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_ad5d4c791af3f2943467c7c7af558d83a}
+returns the class title+ref \hypertarget{class_vhdl_doc_gen_a12b2126cfa1cf80aeab17ae40d673d67}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!get\+Flow\+Member@{get\+Flow\+Member}}
+\index{get\+Flow\+Member@{get\+Flow\+Member}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{get\+Flow\+Member()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Member\+Def} $\ast$ Vhdl\+Doc\+Gen\+::get\+Flow\+Member (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a12b2126cfa1cf80aeab17ae40d673d67}
+\hypertarget{class_vhdl_doc_gen_aede8c70a47e630b7a4b562b599304121}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!get\+Index\+Word@{get\+Index\+Word}}
+\index{get\+Index\+Word@{get\+Index\+Word}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{get\+Index\+Word(const char $\ast$, int index)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Vhdl\+Doc\+Gen\+::get\+Index\+Word (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{c, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_aede8c70a47e630b7a4b562b599304121}
+\hypertarget{class_vhdl_doc_gen_ad890048820909df255f6ee3f95d6ed80}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!get\+Package\+Name@{get\+Package\+Name}}
+\index{get\+Package\+Name@{get\+Package\+Name}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{get\+Package\+Name(const Q\+C\+String \&name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Class\+Def} $\ast$ Vhdl\+Doc\+Gen\+::get\+Package\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_ad890048820909df255f6ee3f95d6ed80}
+\hypertarget{class_vhdl_doc_gen_a6524e8718f3f956610df4dfc71be204c}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!get\+Process\+Number@{get\+Process\+Number}}
+\index{get\+Process\+Number@{get\+Process\+Number}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{get\+Process\+Number()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Vhdl\+Doc\+Gen\+::get\+Process\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a6524e8718f3f956610df4dfc71be204c}
+returns the next number of an anonymous process \hypertarget{class_vhdl_doc_gen_a4325f5840fe29089b4d3ea4b8c8b0fef}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!get\+Protection\+Name@{get\+Protection\+Name}}
+\index{get\+Protection\+Name@{get\+Protection\+Name}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{get\+Protection\+Name(int prot)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Vhdl\+Doc\+Gen\+::get\+Protection\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{prot}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a4325f5840fe29089b4d3ea4b8c8b0fef}
+\hypertarget{class_vhdl_doc_gen_a2e65f831a03ff54d13240da96843cd60}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!get\+Record\+Number@{get\+Record\+Number}}
+\index{get\+Record\+Number@{get\+Record\+Number}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{get\+Record\+Number()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Vhdl\+Doc\+Gen\+::get\+Record\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a2e65f831a03ff54d13240da96843cd60}
+returns the next number of a record$\vert$unit member \hypertarget{class_vhdl_doc_gen_a987fee1e906fac322dda62613525a8f9}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!init@{init}}
+\index{init@{init}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{init()}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a987fee1e906fac322dda62613525a8f9}
+\hypertarget{class_vhdl_doc_gen_af13dd5eb831c1df008b0fd41928f4b7c}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Alias@{is\+Alias}}
+\index{is\+Alias@{is\+Alias}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Alias(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Alias (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_af13dd5eb831c1df008b0fd41928f4b7c}
+\hypertarget{class_vhdl_doc_gen_a0281ffc4e374d27d703419ae289e3b8c}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Architecture@{is\+Architecture}}
+\index{is\+Architecture@{is\+Architecture}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Architecture(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Architecture (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a0281ffc4e374d27d703419ae289e3b8c}
+\hypertarget{class_vhdl_doc_gen_a2dc9e668acc7c79f211709e2a0eeccad}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Attribute@{is\+Attribute}}
+\index{is\+Attribute@{is\+Attribute}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Attribute(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Attribute (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a2dc9e668acc7c79f211709e2a0eeccad}
+\hypertarget{class_vhdl_doc_gen_ab9e42b2cf2d969dcc943ec355d4fa6b2}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Comp\+Inst@{is\+Comp\+Inst}}
+\index{is\+Comp\+Inst@{is\+Comp\+Inst}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Comp\+Inst(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Comp\+Inst (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_ab9e42b2cf2d969dcc943ec355d4fa6b2}
+\hypertarget{class_vhdl_doc_gen_ad3fdc795bf951ef11221894512b8bc6c}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Component@{is\+Component}}
+\index{is\+Component@{is\+Component}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Component(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Component (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_ad3fdc795bf951ef11221894512b8bc6c}
+\hypertarget{class_vhdl_doc_gen_a57efdf5bddd0b36667c8aa21256ebac7}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Config@{is\+Config}}
+\index{is\+Config@{is\+Config}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Config(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Config (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a57efdf5bddd0b36667c8aa21256ebac7}
+\hypertarget{class_vhdl_doc_gen_a2c3cdcd27394531385ccd8c56257edc1}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Constant@{is\+Constant}}
+\index{is\+Constant@{is\+Constant}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Constant(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Constant (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a2c3cdcd27394531385ccd8c56257edc1}
+\hypertarget{class_vhdl_doc_gen_adb04cd03e2039ecab3a0a8f31ee4c890}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Constraint@{is\+Constraint}}
+\index{is\+Constraint@{is\+Constraint}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Constraint(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Constraint (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_adb04cd03e2039ecab3a0a8f31ee4c890}
+\hypertarget{class_vhdl_doc_gen_a65218023c4970a90f3bce70938a99781}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Entity@{is\+Entity}}
+\index{is\+Entity@{is\+Entity}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Entity(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Entity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a65218023c4970a90f3bce70938a99781}
+\hypertarget{class_vhdl_doc_gen_a7ac9c26b1b0fb7402cc58acaf569df89}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+File@{is\+File}}
+\index{is\+File@{is\+File}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+File(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+File (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a7ac9c26b1b0fb7402cc58acaf569df89}
+\hypertarget{class_vhdl_doc_gen_ae3c19429669d382581ba37aee5f39278}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Generic@{is\+Generic}}
+\index{is\+Generic@{is\+Generic}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Generic(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Generic (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_ae3c19429669d382581ba37aee5f39278}
+\hypertarget{class_vhdl_doc_gen_a069c8ad206be372bd948cc8e964218ed}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Group@{is\+Group}}
+\index{is\+Group@{is\+Group}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Group(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Group (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a069c8ad206be372bd948cc8e964218ed}
+\hypertarget{class_vhdl_doc_gen_a3f582b69841bae3ec6f1281604b6f0c8}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Library@{is\+Library}}
+\index{is\+Library@{is\+Library}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Library(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Library (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a3f582b69841bae3ec6f1281604b6f0c8}
+\hypertarget{class_vhdl_doc_gen_a55ef68e914c38033a48b6fdac2907689}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Misc@{is\+Misc}}
+\index{is\+Misc@{is\+Misc}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Misc(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Misc (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a55ef68e914c38033a48b6fdac2907689}
+\hypertarget{class_vhdl_doc_gen_a37b3bf29e7ec4cfe5c453f5a5d4e8f71}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Number@{is\+Number}}
+\index{is\+Number@{is\+Number}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Number(const Q\+C\+String \&s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Number (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a37b3bf29e7ec4cfe5c453f5a5d4e8f71}
+returns T\+R\+U\+E if this string is a number \hypertarget{class_vhdl_doc_gen_aca017e059b8a2972c2cad968800c0564}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Package@{is\+Package}}
+\index{is\+Package@{is\+Package}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Package(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Package (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_aca017e059b8a2972c2cad968800c0564}
+\hypertarget{class_vhdl_doc_gen_ab6e9aff43352b39d31806d0616e2c7af}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Package\+Body@{is\+Package\+Body}}
+\index{is\+Package\+Body@{is\+Package\+Body}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Package\+Body(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Package\+Body (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_ab6e9aff43352b39d31806d0616e2c7af}
+\hypertarget{class_vhdl_doc_gen_a73186f5d1ba5e6c11c6f006708da79a6}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Port@{is\+Port}}
+\index{is\+Port@{is\+Port}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Port(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Port (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a73186f5d1ba5e6c11c6f006708da79a6}
+\hypertarget{class_vhdl_doc_gen_aed906dd71cdcb8aca1bc6e3f9fba9732}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Procedure@{is\+Procedure}}
+\index{is\+Procedure@{is\+Procedure}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Procedure(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Procedure (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_aed906dd71cdcb8aca1bc6e3f9fba9732}
+\hypertarget{class_vhdl_doc_gen_a212ea7da7de8f22c3ca1dd14a38a67ef}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Process@{is\+Process}}
+\index{is\+Process@{is\+Process}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Process(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Process (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a212ea7da7de8f22c3ca1dd14a38a67ef}
+\hypertarget{class_vhdl_doc_gen_ac0634a061165ad22c27eef2ac12057d0}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Record@{is\+Record}}
+\index{is\+Record@{is\+Record}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Record(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Record (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_ac0634a061165ad22c27eef2ac12057d0}
+\hypertarget{class_vhdl_doc_gen_a07199651d2f493ee3afe42975df77efb}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Signal@{is\+Signal}}
+\index{is\+Signal@{is\+Signal}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Signal(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Signal (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a07199651d2f493ee3afe42975df77efb}
+\hypertarget{class_vhdl_doc_gen_a7fb01b11d2a225ee8d8c43a56862be8b}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Signals@{is\+Signals}}
+\index{is\+Signals@{is\+Signals}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Signals(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Signals (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a7fb01b11d2a225ee8d8c43a56862be8b}
+\hypertarget{class_vhdl_doc_gen_ac7d0f125a2bffca08e8c52644bf8c6f2}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Sub\+Class@{is\+Sub\+Class}}
+\index{is\+Sub\+Class@{is\+Sub\+Class}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Sub\+Class(\+Class\+Def $\ast$cd, Class\+Def $\ast$scd, bool follow\+Instances, int level)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Sub\+Class (
+\begin{DoxyParamCaption}
+\item[{{\bf Class\+Def} $\ast$}]{cd, }
+\item[{{\bf Class\+Def} $\ast$}]{scd, }
+\item[{{\bf bool}}]{follow\+Instances, }
+\item[{int}]{level}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_ac7d0f125a2bffca08e8c52644bf8c6f2}
+\hypertarget{class_vhdl_doc_gen_ab57f7d02afdd7034f78894b20e6ff4aa}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Sub\+Type@{is\+Sub\+Type}}
+\index{is\+Sub\+Type@{is\+Sub\+Type}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Sub\+Type(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Sub\+Type (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_ab57f7d02afdd7034f78894b20e6ff4aa}
+\hypertarget{class_vhdl_doc_gen_a4861484cc952d96afcfe277cf958aff0}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Unit@{is\+Unit}}
+\index{is\+Unit@{is\+Unit}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Unit(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Unit (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a4861484cc952d96afcfe277cf958aff0}
+\hypertarget{class_vhdl_doc_gen_a877e8a81695500e7ad5ed8d76fdbaffc}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Variable@{is\+Variable}}
+\index{is\+Variable@{is\+Variable}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Variable(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Variable (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a877e8a81695500e7ad5ed8d76fdbaffc}
+\hypertarget{class_vhdl_doc_gen_a7b7df19eb23b1532bc1d05c7ffe6cd76}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Vhdl\+Class@{is\+Vhdl\+Class}}
+\index{is\+Vhdl\+Class@{is\+Vhdl\+Class}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Vhdl\+Class(const Entry $\ast$cu)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf bool} Vhdl\+Doc\+Gen\+::is\+Vhdl\+Class (
+\begin{DoxyParamCaption}
+\item[{const {\bf Entry} $\ast$}]{cu}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_vhdl_doc_gen_a7b7df19eb23b1532bc1d05c7ffe6cd76}
+\hypertarget{class_vhdl_doc_gen_a8808d28bf43d889892a8b6bad0793d7d}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+Vhdl\+Function@{is\+Vhdl\+Function}}
+\index{is\+Vhdl\+Function@{is\+Vhdl\+Function}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+Vhdl\+Function(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+Vhdl\+Function (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a8808d28bf43d889892a8b6bad0793d7d}
+\hypertarget{class_vhdl_doc_gen_a8ab98ceef0a36aea7a15c548ec9aa455}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!is\+V\+Type@{is\+V\+Type}}
+\index{is\+V\+Type@{is\+V\+Type}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{is\+V\+Type(const Member\+Def $\ast$mdef)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::is\+V\+Type (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a8ab98ceef0a36aea7a15c548ec9aa455}
+\hypertarget{class_vhdl_doc_gen_a411f4f042964d6e24c0376f1378da1a8}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!parse\+For\+Binding@{parse\+For\+Binding}}
+\index{parse\+For\+Binding@{parse\+For\+Binding}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{parse\+For\+Binding(\+Q\+C\+String \&entity, Q\+C\+String \&arch)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Vhdl\+Doc\+Gen\+::parse\+For\+Binding (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+C\+String} \&}]{entity, }
+\item[{{\bf Q\+C\+String} \&}]{arch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a411f4f042964d6e24c0376f1378da1a8}
+\hypertarget{class_vhdl_doc_gen_a4584e2262b81979f6d9b88c070c78753}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!parse\+For\+Config@{parse\+For\+Config}}
+\index{parse\+For\+Config@{parse\+For\+Config}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{parse\+For\+Config(\+Q\+C\+String \&entity, Q\+C\+String \&arch)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Vhdl\+Doc\+Gen\+::parse\+For\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+C\+String} \&}]{entity, }
+\item[{{\bf Q\+C\+String} \&}]{arch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a4584e2262b81979f6d9b88c070c78753}
+\hypertarget{class_vhdl_doc_gen_a42d423663159ccd360d8838005662343}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!parse\+Func\+Proto@{parse\+Func\+Proto}}
+\index{parse\+Func\+Proto@{parse\+Func\+Proto}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{parse\+Func\+Proto(const char $\ast$text, Q\+List$<$ Argument $>$ \&, Q\+C\+String \&name, Q\+C\+String \&ret, bool doc=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::parse\+Func\+Proto (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{text, }
+\item[{{\bf Q\+List}$<$ {\bf Argument} $>$ \&}]{qlist, }
+\item[{{\bf Q\+C\+String} \&}]{name, }
+\item[{{\bf Q\+C\+String} \&}]{ret, }
+\item[{{\bf bool}}]{doc = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a42d423663159ccd360d8838005662343}
+parses a function proto 
+\begin{DoxyParams}{Paramètres}
+{\em text} & function string \\
+\hline
+{\em qlist} & stores the function types \\
+\hline
+{\em name} & points to the function name \\
+\hline
+{\em ret} & Stores the return type \\
+\hline
+{\em doc} & ??? \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_vhdl_doc_gen_aa2a0267e84b178cc29681eeaea8cfe35}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!parse\+U\+C\+F@{parse\+U\+C\+F}}
+\index{parse\+U\+C\+F@{parse\+U\+C\+F}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{parse\+U\+C\+F(const char $\ast$input, Entry $\ast$entity, Q\+C\+String f, bool vendor)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::parse\+U\+C\+F (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{input, }
+\item[{{\bf Entry} $\ast$}]{entity, }
+\item[{{\bf Q\+C\+String}}]{f, }
+\item[{{\bf bool}}]{vendor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_aa2a0267e84b178cc29681eeaea8cfe35}
+\hypertarget{class_vhdl_doc_gen_a802a7b8116fa1b8b46895c25a32c5677}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!prepare\+Comment@{prepare\+Comment}}
+\index{prepare\+Comment@{prepare\+Comment}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{prepare\+Comment(\+Q\+C\+String \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::prepare\+Comment (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+C\+String} \&}]{qcs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a802a7b8116fa1b8b46895c25a32c5677}
+strips the \char`\"{}-\/-\/\char`\"{} prefixes of vhdl comments \hypertarget{class_vhdl_doc_gen_a60e16e249eaf1829c224b054ff743ce7}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!reset\+Code\+Vhdl\+Parser\+State@{reset\+Code\+Vhdl\+Parser\+State}}
+\index{reset\+Code\+Vhdl\+Parser\+State@{reset\+Code\+Vhdl\+Parser\+State}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{reset\+Code\+Vhdl\+Parser\+State()}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::reset\+Code\+Vhdl\+Parser\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a60e16e249eaf1829c224b054ff743ce7}
+\hypertarget{class_vhdl_doc_gen_a7808cdf56c299daceed3212b65b8a031}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!set\+Flow\+Member@{set\+Flow\+Member}}
+\index{set\+Flow\+Member@{set\+Flow\+Member}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{set\+Flow\+Member(const Member\+Def $\ast$flow\+Member)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::set\+Flow\+Member (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{flow\+Member}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a7808cdf56c299daceed3212b65b8a031}
+\hypertarget{class_vhdl_doc_gen_a0a7d5c59311faa783cc3ec3daea29826}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!tr\+Design\+Unit\+Hierarchy@{tr\+Design\+Unit\+Hierarchy}}
+\index{tr\+Design\+Unit\+Hierarchy@{tr\+Design\+Unit\+Hierarchy}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{tr\+Design\+Unit\+Hierarchy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Vhdl\+Doc\+Gen\+::tr\+Design\+Unit\+Hierarchy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a0a7d5c59311faa783cc3ec3daea29826}
+\hypertarget{class_vhdl_doc_gen_a2905e0b83f5e95ca79104ac61c52ee7d}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!tr\+Design\+Unit\+Index@{tr\+Design\+Unit\+Index}}
+\index{tr\+Design\+Unit\+Index@{tr\+Design\+Unit\+Index}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{tr\+Design\+Unit\+Index()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Vhdl\+Doc\+Gen\+::tr\+Design\+Unit\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a2905e0b83f5e95ca79104ac61c52ee7d}
+\hypertarget{class_vhdl_doc_gen_a8b0fd3c3e1ae7d234f3671b29525cf9e}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!tr\+Design\+Unit\+List@{tr\+Design\+Unit\+List}}
+\index{tr\+Design\+Unit\+List@{tr\+Design\+Unit\+List}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{tr\+Design\+Unit\+List()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Vhdl\+Doc\+Gen\+::tr\+Design\+Unit\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a8b0fd3c3e1ae7d234f3671b29525cf9e}
+\hypertarget{class_vhdl_doc_gen_af4139f69442e7c7d0ced59570e34f1c3}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!tr\+Design\+Unit\+List\+Description@{tr\+Design\+Unit\+List\+Description}}
+\index{tr\+Design\+Unit\+List\+Description@{tr\+Design\+Unit\+List\+Description}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{tr\+Design\+Unit\+List\+Description()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Vhdl\+Doc\+Gen\+::tr\+Design\+Unit\+List\+Description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_af4139f69442e7c7d0ced59570e34f1c3}
+\hypertarget{class_vhdl_doc_gen_a58b89b76fb84bb4bcfa1e482d3b9e727}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!tr\+Design\+Unit\+Members@{tr\+Design\+Unit\+Members}}
+\index{tr\+Design\+Unit\+Members@{tr\+Design\+Unit\+Members}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{tr\+Design\+Unit\+Members()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Vhdl\+Doc\+Gen\+::tr\+Design\+Unit\+Members (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a58b89b76fb84bb4bcfa1e482d3b9e727}
+\hypertarget{class_vhdl_doc_gen_a796d5fa8a62c0e734d75e37126786714}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!tr\+Design\+Units@{tr\+Design\+Units}}
+\index{tr\+Design\+Units@{tr\+Design\+Units}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{tr\+Design\+Units()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Vhdl\+Doc\+Gen\+::tr\+Design\+Units (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a796d5fa8a62c0e734d75e37126786714}
+\hypertarget{class_vhdl_doc_gen_a49df715b5535e59f36c266c67cbf514f}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!tr\+Function\+And\+Proc@{tr\+Function\+And\+Proc}}
+\index{tr\+Function\+And\+Proc@{tr\+Function\+And\+Proc}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{tr\+Function\+And\+Proc()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Vhdl\+Doc\+Gen\+::tr\+Function\+And\+Proc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a49df715b5535e59f36c266c67cbf514f}
+\hypertarget{class_vhdl_doc_gen_a3ff9c5f9b1c16d7212fafcd9e7275223}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!tr\+Type\+String@{tr\+Type\+String}}
+\index{tr\+Type\+String@{tr\+Type\+String}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{tr\+Type\+String(uint64 type)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Vhdl\+Doc\+Gen\+::tr\+Type\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf uint64}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a3ff9c5f9b1c16d7212fafcd9e7275223}
+\hypertarget{class_vhdl_doc_gen_a1f0a09f2f2d063e9fc551ee62473eb43}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!tr\+Vhdl\+Type@{tr\+Vhdl\+Type}}
+\index{tr\+Vhdl\+Type@{tr\+Vhdl\+Type}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{tr\+Vhdl\+Type(uint64 type, bool sing=true)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Vhdl\+Doc\+Gen\+::tr\+Vhdl\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf uint64}}]{type, }
+\item[{{\bf bool}}]{sing = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a1f0a09f2f2d063e9fc551ee62473eb43}
+\hypertarget{class_vhdl_doc_gen_a62637da4d5b53a0243289ac6a4af2011}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!write\+Alphbetical\+Class@{write\+Alphbetical\+Class}}
+\index{write\+Alphbetical\+Class@{write\+Alphbetical\+Class}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{write\+Alphbetical\+Class(\+Output\+List \&ol, const Class\+Def $\ast$cd, const Q\+C\+String \&)}]{\setlength{\rightskip}{0pt plus 5cm}static void Vhdl\+Doc\+Gen\+::write\+Alphbetical\+Class (
+\begin{DoxyParamCaption}
+\item[{{\bf Output\+List} \&}]{ol, }
+\item[{const {\bf Class\+Def} $\ast$}]{cd, }
+\item[{const {\bf Q\+C\+String} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a62637da4d5b53a0243289ac6a4af2011}
+\hypertarget{class_vhdl_doc_gen_a201149bb595839029a622100737e0dea}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!write\+Class\+Type@{write\+Class\+Type}}
+\index{write\+Class\+Type@{write\+Class\+Type}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{write\+Class\+Type(\+Class\+Def $\ast$\&, Output\+List \&ol, Q\+C\+String \&cname)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::write\+Class\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Class\+Def} $\ast$\&}]{cd, }
+\item[{{\bf Output\+List} \&}]{ol, }
+\item[{{\bf Q\+C\+String} \&}]{cname}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a201149bb595839029a622100737e0dea}
+\hypertarget{class_vhdl_doc_gen_a0b58904c2803fe64c007b6c3ddda086e}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!write\+Format\+String@{write\+Format\+String}}
+\index{write\+Format\+String@{write\+Format\+String}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{write\+Format\+String(const Q\+C\+String \&, Output\+List \&ol, const Member\+Def $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::write\+Format\+String (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s, }
+\item[{{\bf Output\+List} \&}]{ol, }
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a0b58904c2803fe64c007b6c3ddda086e}
+writes a colored and formatted string \hypertarget{class_vhdl_doc_gen_a8c40c856602e19b4fe421c9572d618b7}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!write\+Func\+Proc\+Docu@{write\+Func\+Proc\+Docu}}
+\index{write\+Func\+Proc\+Docu@{write\+Func\+Proc\+Docu}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{write\+Func\+Proc\+Docu(const Member\+Def $\ast$mdef, Output\+List \&ol, const Argument\+List $\ast$al, bool type=false)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::write\+Func\+Proc\+Docu (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{md, }
+\item[{{\bf Output\+List} \&}]{ol, }
+\item[{const {\bf Argument\+List} $\ast$}]{al, }
+\item[{{\bf bool}}]{type = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a8c40c856602e19b4fe421c9572d618b7}
+writes a function$\vert$procedure documentation to the output \hypertarget{class_vhdl_doc_gen_ab1d66321a2c118a9376b65aeb598a49c}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!write\+Function\+Proto@{write\+Function\+Proto}}
+\index{write\+Function\+Proto@{write\+Function\+Proto}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{write\+Function\+Proto(\+Output\+List \&ol, const Argument\+List $\ast$al, const Member\+Def $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::write\+Function\+Proto (
+\begin{DoxyParamCaption}
+\item[{{\bf Output\+List} \&}]{ol, }
+\item[{const {\bf Argument\+List} $\ast$}]{al, }
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_ab1d66321a2c118a9376b65aeb598a49c}
+writes a function prototype to the output \hypertarget{class_vhdl_doc_gen_a67f47b8dc11d967ee47e9bda86fff7e0}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!write\+Inline\+Class\+Link@{write\+Inline\+Class\+Link}}
+\index{write\+Inline\+Class\+Link@{write\+Inline\+Class\+Link}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{write\+Inline\+Class\+Link(const Class\+Def $\ast$, Output\+List \&ol)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::write\+Inline\+Class\+Link (
+\begin{DoxyParamCaption}
+\item[{const {\bf Class\+Def} $\ast$}]{cd, }
+\item[{{\bf Output\+List} \&}]{ol}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a67f47b8dc11d967ee47e9bda86fff7e0}
+writes an inline link form entity$\vert$package to architecture$\vert$package body and vice verca \hypertarget{class_vhdl_doc_gen_a4c14772902ff4d4bf2a55291debd628e}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!write\+Overview@{write\+Overview}}
+\index{write\+Overview@{write\+Overview}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{write\+Overview(\+Output\+List \&ol)}]{\setlength{\rightskip}{0pt plus 5cm}static void Vhdl\+Doc\+Gen\+::write\+Overview (
+\begin{DoxyParamCaption}
+\item[{{\bf Output\+List} \&}]{ol}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a4c14772902ff4d4bf2a55291debd628e}
+\hypertarget{class_vhdl_doc_gen_a658c57fb74c0fde61d0002a979710416}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!write\+Overview@{write\+Overview}}
+\index{write\+Overview@{write\+Overview}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{write\+Overview()}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::write\+Overview (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a658c57fb74c0fde61d0002a979710416}
+\hypertarget{class_vhdl_doc_gen_ae7a0bfaf11295ea18c656b14fb54203a}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!write\+Plain\+V\+H\+D\+L\+Declarations@{write\+Plain\+V\+H\+D\+L\+Declarations}}
+\index{write\+Plain\+V\+H\+D\+L\+Declarations@{write\+Plain\+V\+H\+D\+L\+Declarations}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{write\+Plain\+V\+H\+D\+L\+Declarations(\+Member\+List $\ast$ml, Output\+List \&ol, Class\+Def $\ast$cd, Namespace\+Def $\ast$nd, File\+Def $\ast$fd, Group\+Def $\ast$gd, int specifier)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::write\+Plain\+V\+H\+D\+L\+Declarations (
+\begin{DoxyParamCaption}
+\item[{{\bf Member\+List} $\ast$}]{ml, }
+\item[{{\bf Output\+List} \&}]{ol, }
+\item[{{\bf Class\+Def} $\ast$}]{cd, }
+\item[{{\bf Namespace\+Def} $\ast$}]{nd, }
+\item[{{\bf File\+Def} $\ast$}]{fd, }
+\item[{{\bf Group\+Def} $\ast$}]{gd, }
+\item[{int}]{specifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_ae7a0bfaf11295ea18c656b14fb54203a}
+\hypertarget{class_vhdl_doc_gen_a94da80078b9bba291b1c1af056eca6a4}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!write\+Procedure\+Proto@{write\+Procedure\+Proto}}
+\index{write\+Procedure\+Proto@{write\+Procedure\+Proto}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{write\+Procedure\+Proto(\+Output\+List \&ol, const Argument\+List $\ast$al, const Member\+Def $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::write\+Procedure\+Proto (
+\begin{DoxyParamCaption}
+\item[{{\bf Output\+List} \&}]{ol, }
+\item[{const {\bf Argument\+List} $\ast$}]{al, }
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a94da80078b9bba291b1c1af056eca6a4}
+writes a procedure prototype to the output \hypertarget{class_vhdl_doc_gen_a94ad80db8536156393a701496506c052}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!write\+Process\+Proto@{write\+Process\+Proto}}
+\index{write\+Process\+Proto@{write\+Process\+Proto}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{write\+Process\+Proto(\+Output\+List \&ol, const Argument\+List $\ast$al, const Member\+Def $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::write\+Process\+Proto (
+\begin{DoxyParamCaption}
+\item[{{\bf Output\+List} \&}]{ol, }
+\item[{const {\bf Argument\+List} $\ast$}]{al, }
+\item[{const {\bf Member\+Def} $\ast$}]{mdef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a94ad80db8536156393a701496506c052}
+writes a process prototype to the output \hypertarget{class_vhdl_doc_gen_a4be0e9c1867f4bdc5a06f1ca54905d4b}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!write\+Record\+Proto@{write\+Record\+Proto}}
+\index{write\+Record\+Proto@{write\+Record\+Proto}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{write\+Record\+Proto(const Member\+Def $\ast$mdef, Output\+List \&ol, const Argument\+List $\ast$al)}]{\setlength{\rightskip}{0pt plus 5cm}static void Vhdl\+Doc\+Gen\+::write\+Record\+Proto (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef, }
+\item[{{\bf Output\+List} \&}]{ol, }
+\item[{const {\bf Argument\+List} $\ast$}]{al}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a4be0e9c1867f4bdc5a06f1ca54905d4b}
+\hypertarget{class_vhdl_doc_gen_ae08bfd74e8450f8abc4fb3a265d6b24a}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!write\+Source@{write\+Source}}
+\index{write\+Source@{write\+Source}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{write\+Source(\+Member\+Def $\ast$mdef, Output\+List \&ol, Q\+C\+String \&cname)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::write\+Source (
+\begin{DoxyParamCaption}
+\item[{{\bf Member\+Def} $\ast$}]{mdef, }
+\item[{{\bf Output\+List} \&}]{ol, }
+\item[{{\bf Q\+C\+String} \&}]{cname}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_ae08bfd74e8450f8abc4fb3a265d6b24a}
+\hypertarget{class_vhdl_doc_gen_afc349098219c01208def69e00f05e0e2}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!write\+Tag\+File@{write\+Tag\+File}}
+\index{write\+Tag\+File@{write\+Tag\+File}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{write\+Tag\+File(\+Member\+Def $\ast$mdef, F\+Text\+Stream \&tag\+File)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::write\+Tag\+File (
+\begin{DoxyParamCaption}
+\item[{{\bf Member\+Def} $\ast$}]{mdef, }
+\item[{{\bf F\+Text\+Stream} \&}]{tag\+File}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_afc349098219c01208def69e00f05e0e2}
+\hypertarget{class_vhdl_doc_gen_ac5c7235e2572f9dab6475d5af835e437}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!write\+V\+H\+D\+L\+Declaration@{write\+V\+H\+D\+L\+Declaration}}
+\index{write\+V\+H\+D\+L\+Declaration@{write\+V\+H\+D\+L\+Declaration}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{write\+V\+H\+D\+L\+Declaration(\+Member\+Def $\ast$mdef, Output\+List \&ol, Class\+Def $\ast$cd, Namespace\+Def $\ast$nd, File\+Def $\ast$fd, Group\+Def $\ast$gd, bool in\+Group)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::write\+V\+H\+D\+L\+Declaration (
+\begin{DoxyParamCaption}
+\item[{{\bf Member\+Def} $\ast$}]{mdef, }
+\item[{{\bf Output\+List} \&}]{ol, }
+\item[{{\bf Class\+Def} $\ast$}]{cd, }
+\item[{{\bf Namespace\+Def} $\ast$}]{nd, }
+\item[{{\bf File\+Def} $\ast$}]{fd, }
+\item[{{\bf Group\+Def} $\ast$}]{gd, }
+\item[{{\bf bool}}]{in\+Group}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_ac5c7235e2572f9dab6475d5af835e437}
+printf(\char`\"{}start\+Member\+Item for \%s\textbackslash{}n\char`\"{},name().data()); \hypertarget{class_vhdl_doc_gen_a26d6d3e1a28067a7a5c9f8624f642654}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!write\+Vhdl\+Declarations@{write\+Vhdl\+Declarations}}
+\index{write\+Vhdl\+Declarations@{write\+Vhdl\+Declarations}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{write\+Vhdl\+Declarations(\+Member\+List $\ast$, Output\+List \&, Group\+Def $\ast$, Class\+Def $\ast$, File\+Def $\ast$, Namespace\+Def $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::write\+Vhdl\+Declarations (
+\begin{DoxyParamCaption}
+\item[{{\bf Member\+List} $\ast$}]{ml, }
+\item[{{\bf Output\+List} \&}]{ol, }
+\item[{{\bf Group\+Def} $\ast$}]{gd, }
+\item[{{\bf Class\+Def} $\ast$}]{cd, }
+\item[{{\bf File\+Def} $\ast$}]{fd, }
+\item[{{\bf Namespace\+Def} $\ast$}]{nd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a26d6d3e1a28067a7a5c9f8624f642654}
+\hypertarget{class_vhdl_doc_gen_a30ec463210e92bb4f1cdd02bf1893c86}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!write\+V\+H\+D\+L\+Declarations@{write\+V\+H\+D\+L\+Declarations}}
+\index{write\+V\+H\+D\+L\+Declarations@{write\+V\+H\+D\+L\+Declarations}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{write\+V\+H\+D\+L\+Declarations(\+Member\+List $\ast$ml, Output\+List \&ol, Class\+Def $\ast$cd, Namespace\+Def $\ast$nd, File\+Def $\ast$fd, Group\+Def $\ast$gd, const char $\ast$title, const char $\ast$subtitle, bool show\+Enum\+Values, int type)}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+Doc\+Gen\+::write\+V\+H\+D\+L\+Declarations (
+\begin{DoxyParamCaption}
+\item[{{\bf Member\+List} $\ast$}]{ml, }
+\item[{{\bf Output\+List} \&}]{ol, }
+\item[{{\bf Class\+Def} $\ast$}]{cd, }
+\item[{{\bf Namespace\+Def} $\ast$}]{nd, }
+\item[{{\bf File\+Def} $\ast$}]{fd, }
+\item[{{\bf Group\+Def} $\ast$}]{gd, }
+\item[{const char $\ast$}]{title, }
+\item[{const char $\ast$}]{subtitle, }
+\item[{{\bf bool}}]{show\+Enum\+Values, }
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a30ec463210e92bb4f1cdd02bf1893c86}
+\hypertarget{class_vhdl_doc_gen_a0218e5158efa51df8490073c645c9a79}{}\index{Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}!write\+V\+H\+D\+L\+Type\+Documentation@{write\+V\+H\+D\+L\+Type\+Documentation}}
+\index{write\+V\+H\+D\+L\+Type\+Documentation@{write\+V\+H\+D\+L\+Type\+Documentation}!Vhdl\+Doc\+Gen@{Vhdl\+Doc\+Gen}}
+\subsubsection[{write\+V\+H\+D\+L\+Type\+Documentation(const Member\+Def $\ast$mdef, const Definition $\ast$d, Output\+List \&ol)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Vhdl\+Doc\+Gen\+::write\+V\+H\+D\+L\+Type\+Documentation (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Def} $\ast$}]{mdef, }
+\item[{const {\bf Definition} $\ast$}]{d, }
+\item[{{\bf Output\+List} \&}]{ol}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vhdl_doc_gen_a0218e5158efa51df8490073c645c9a79}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{vhdldocgen_8h}{vhdldocgen.\+h}\item 
+src/\hyperlink{vhdldocgen_8cpp}{vhdldocgen.\+cpp}\end{DoxyCompactItemize}

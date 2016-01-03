@@ -1,0 +1,172 @@
+\hypertarget{qtextstream_8cpp}{}\section{Référence du fichier qtools/qtextstream.cpp}
+\label{qtextstream_8cpp}\index{qtools/qtextstream.\+cpp@{qtools/qtextstream.\+cpp}}
+{\ttfamily \#include \char`\"{}qtextstream.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qtextcodec.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qregexp.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qbuffer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qfile.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_q_text_stream_private}{Q\+Text\+Stream\+Private}
+\item 
+class \hyperlink{class_q_string_buffer}{Q\+String\+Buffer}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{qtextstream_8cpp_a3ea4882d1064c52544ab9e65e32d849f}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+P\+R\+E\+C\+O\+N\+D}
+\item 
+\#define \hyperlink{qtextstream_8cpp_a55123db83bd340e2d7b6b9441d6bbad8}{I\+\_\+\+S\+H\+O\+R\+T}~0x0010
+\item 
+\#define \hyperlink{qtextstream_8cpp_aa406e2d42b71fd10cb4458c8bdeb9d02}{I\+\_\+\+I\+N\+T}~0x0020
+\item 
+\#define \hyperlink{qtextstream_8cpp_a8de32821eba48c0bbe48863dfb313ca2}{I\+\_\+\+L\+O\+N\+G}~0x0030
+\item 
+\#define \hyperlink{qtextstream_8cpp_a71d44e2aba8b28428d36a2800fee3c5b}{I\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+S\+K}~0x00f0
+\item 
+\#define \hyperlink{qtextstream_8cpp_a8cd7041ba7fddd4726cb2a3aa836bfc3}{I\+\_\+\+B\+A\+S\+E\+\_\+2}~\hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda522c0aff51070556ffcde9b7664743d4}{Q\+T\+S\+::bin}
+\item 
+\#define \hyperlink{qtextstream_8cpp_a4244b7034cf1236c4e4910e922f830ca}{I\+\_\+\+B\+A\+S\+E\+\_\+8}~\hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdaaae446d943e330aa999c7e6b80240c19}{Q\+T\+S\+::oct}
+\item 
+\#define \hyperlink{qtextstream_8cpp_aca52629b77b1c336630a8da0dee9c101}{I\+\_\+\+B\+A\+S\+E\+\_\+10}~\hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdadb3124814a4d120725541629e69f605d}{Q\+T\+S\+::dec}
+\item 
+\#define \hyperlink{qtextstream_8cpp_ad746a03d0a9951b9e54b8a54ed9a5af9}{I\+\_\+\+B\+A\+S\+E\+\_\+16}~\hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda26b652c69f47687937232329578b450b}{Q\+T\+S\+::hex}
+\item 
+\#define \hyperlink{qtextstream_8cpp_a813392cc8b6b68aa3fbaf4862efe4d0c}{I\+\_\+\+B\+A\+S\+E\+\_\+\+M\+A\+S\+K}~(\hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda522c0aff51070556ffcde9b7664743d4}{Q\+T\+S\+::bin} $\vert$ \hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdaaae446d943e330aa999c7e6b80240c19}{Q\+T\+S\+::oct} $\vert$ \hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdadb3124814a4d120725541629e69f605d}{Q\+T\+S\+::dec} $\vert$ \hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda26b652c69f47687937232329578b450b}{Q\+T\+S\+::hex})
+\item 
+\#define \hyperlink{qtextstream_8cpp_a7b27eb912d48c1db1229dcfaa602be76}{I\+\_\+\+S\+I\+G\+N\+E\+D}~0x0100
+\item 
+\#define \hyperlink{qtextstream_8cpp_a85f61af876e12a6b0408b2cf5ddb5d98}{I\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D}~0x0200
+\item 
+\#define \hyperlink{qtextstream_8cpp_a722c6560d1e3787e636f30fa77d5280f}{I\+\_\+\+S\+I\+G\+N\+\_\+\+M\+A\+S\+K}~0x0f00
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{qtextstream_8cpp_a3af909965131f746dc0e0ec4d6a89bbe}{bin} (\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{qtextstream_8cpp_ad03e708ca2851657cb7e1288b33e6c60}{oct} (\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{qtextstream_8cpp_abd5c80c44542dd47c4eacbb3f081d213}{dec} (\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{qtextstream_8cpp_a6b8cf949d067d219879ab5f0bdd19e82}{hex} (\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{qtextstream_8cpp_aab175cb3d03c3b5fe1e57df8b5f1998a}{endl} (\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{qtextstream_8cpp_a9fa3d9088bdb1923c90894d593aeff28}{flush} (\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{qtextstream_8cpp_a7398882ebab3d07d938d06c97c45cc07}{ws} (\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{qtextstream_8cpp_a9c64e2daa423f038f8ff8a9fcbba7342}{reset} (\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{qtextstream_8cpp_a3ea4882d1064c52544ab9e65e32d849f}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+P\+R\+E\+C\+O\+N\+D@{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+P\+R\+E\+C\+O\+N\+D}}
+\index{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+P\+R\+E\+C\+O\+N\+D@{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+P\+R\+E\+C\+O\+N\+D}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+P\+R\+E\+C\+O\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+P\+R\+E\+C\+O\+N\+D}\label{qtextstream_8cpp_a3ea4882d1064c52544ab9e65e32d849f}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} ( !dev ) \{               \hyperlink{qglobal_8cpp_addd9b8ef474319fc95ba80d46fbd1e94}{\(\backslash\)}
+\hyperlink{qglobal_8cpp_addd9b8ef474319fc95ba80d46fbd1e94}{                qWarning}( \textcolor{stringliteral}{"QTextStream: No device"} );   \(\backslash\)
+                return *\textcolor{keyword}{this}; \}
+\end{DoxyCode}
+\hypertarget{qtextstream_8cpp_aca52629b77b1c336630a8da0dee9c101}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!I\+\_\+\+B\+A\+S\+E\+\_\+10@{I\+\_\+\+B\+A\+S\+E\+\_\+10}}
+\index{I\+\_\+\+B\+A\+S\+E\+\_\+10@{I\+\_\+\+B\+A\+S\+E\+\_\+10}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{I\+\_\+\+B\+A\+S\+E\+\_\+10}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+\_\+\+B\+A\+S\+E\+\_\+10~{\bf Q\+T\+S\+::dec}}\label{qtextstream_8cpp_aca52629b77b1c336630a8da0dee9c101}
+\hypertarget{qtextstream_8cpp_ad746a03d0a9951b9e54b8a54ed9a5af9}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!I\+\_\+\+B\+A\+S\+E\+\_\+16@{I\+\_\+\+B\+A\+S\+E\+\_\+16}}
+\index{I\+\_\+\+B\+A\+S\+E\+\_\+16@{I\+\_\+\+B\+A\+S\+E\+\_\+16}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{I\+\_\+\+B\+A\+S\+E\+\_\+16}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+\_\+\+B\+A\+S\+E\+\_\+16~{\bf Q\+T\+S\+::hex}}\label{qtextstream_8cpp_ad746a03d0a9951b9e54b8a54ed9a5af9}
+\hypertarget{qtextstream_8cpp_a8cd7041ba7fddd4726cb2a3aa836bfc3}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!I\+\_\+\+B\+A\+S\+E\+\_\+2@{I\+\_\+\+B\+A\+S\+E\+\_\+2}}
+\index{I\+\_\+\+B\+A\+S\+E\+\_\+2@{I\+\_\+\+B\+A\+S\+E\+\_\+2}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{I\+\_\+\+B\+A\+S\+E\+\_\+2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+\_\+\+B\+A\+S\+E\+\_\+2~{\bf Q\+T\+S\+::bin}}\label{qtextstream_8cpp_a8cd7041ba7fddd4726cb2a3aa836bfc3}
+\hypertarget{qtextstream_8cpp_a4244b7034cf1236c4e4910e922f830ca}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!I\+\_\+\+B\+A\+S\+E\+\_\+8@{I\+\_\+\+B\+A\+S\+E\+\_\+8}}
+\index{I\+\_\+\+B\+A\+S\+E\+\_\+8@{I\+\_\+\+B\+A\+S\+E\+\_\+8}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{I\+\_\+\+B\+A\+S\+E\+\_\+8}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+\_\+\+B\+A\+S\+E\+\_\+8~{\bf Q\+T\+S\+::oct}}\label{qtextstream_8cpp_a4244b7034cf1236c4e4910e922f830ca}
+\hypertarget{qtextstream_8cpp_a813392cc8b6b68aa3fbaf4862efe4d0c}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!I\+\_\+\+B\+A\+S\+E\+\_\+\+M\+A\+S\+K@{I\+\_\+\+B\+A\+S\+E\+\_\+\+M\+A\+S\+K}}
+\index{I\+\_\+\+B\+A\+S\+E\+\_\+\+M\+A\+S\+K@{I\+\_\+\+B\+A\+S\+E\+\_\+\+M\+A\+S\+K}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{I\+\_\+\+B\+A\+S\+E\+\_\+\+M\+A\+S\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+\_\+\+B\+A\+S\+E\+\_\+\+M\+A\+S\+K~({\bf Q\+T\+S\+::bin} $\vert$ {\bf Q\+T\+S\+::oct} $\vert$ {\bf Q\+T\+S\+::dec} $\vert$ {\bf Q\+T\+S\+::hex})}\label{qtextstream_8cpp_a813392cc8b6b68aa3fbaf4862efe4d0c}
+\hypertarget{qtextstream_8cpp_aa406e2d42b71fd10cb4458c8bdeb9d02}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!I\+\_\+\+I\+N\+T@{I\+\_\+\+I\+N\+T}}
+\index{I\+\_\+\+I\+N\+T@{I\+\_\+\+I\+N\+T}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{I\+\_\+\+I\+N\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+\_\+\+I\+N\+T~0x0020}\label{qtextstream_8cpp_aa406e2d42b71fd10cb4458c8bdeb9d02}
+\hypertarget{qtextstream_8cpp_a8de32821eba48c0bbe48863dfb313ca2}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!I\+\_\+\+L\+O\+N\+G@{I\+\_\+\+L\+O\+N\+G}}
+\index{I\+\_\+\+L\+O\+N\+G@{I\+\_\+\+L\+O\+N\+G}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{I\+\_\+\+L\+O\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+\_\+\+L\+O\+N\+G~0x0030}\label{qtextstream_8cpp_a8de32821eba48c0bbe48863dfb313ca2}
+\hypertarget{qtextstream_8cpp_a55123db83bd340e2d7b6b9441d6bbad8}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!I\+\_\+\+S\+H\+O\+R\+T@{I\+\_\+\+S\+H\+O\+R\+T}}
+\index{I\+\_\+\+S\+H\+O\+R\+T@{I\+\_\+\+S\+H\+O\+R\+T}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{I\+\_\+\+S\+H\+O\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+\_\+\+S\+H\+O\+R\+T~0x0010}\label{qtextstream_8cpp_a55123db83bd340e2d7b6b9441d6bbad8}
+\hypertarget{qtextstream_8cpp_a722c6560d1e3787e636f30fa77d5280f}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!I\+\_\+\+S\+I\+G\+N\+\_\+\+M\+A\+S\+K@{I\+\_\+\+S\+I\+G\+N\+\_\+\+M\+A\+S\+K}}
+\index{I\+\_\+\+S\+I\+G\+N\+\_\+\+M\+A\+S\+K@{I\+\_\+\+S\+I\+G\+N\+\_\+\+M\+A\+S\+K}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{I\+\_\+\+S\+I\+G\+N\+\_\+\+M\+A\+S\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+\_\+\+S\+I\+G\+N\+\_\+\+M\+A\+S\+K~0x0f00}\label{qtextstream_8cpp_a722c6560d1e3787e636f30fa77d5280f}
+\hypertarget{qtextstream_8cpp_a7b27eb912d48c1db1229dcfaa602be76}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!I\+\_\+\+S\+I\+G\+N\+E\+D@{I\+\_\+\+S\+I\+G\+N\+E\+D}}
+\index{I\+\_\+\+S\+I\+G\+N\+E\+D@{I\+\_\+\+S\+I\+G\+N\+E\+D}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{I\+\_\+\+S\+I\+G\+N\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+\_\+\+S\+I\+G\+N\+E\+D~0x0100}\label{qtextstream_8cpp_a7b27eb912d48c1db1229dcfaa602be76}
+\hypertarget{qtextstream_8cpp_a71d44e2aba8b28428d36a2800fee3c5b}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!I\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+S\+K@{I\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+S\+K}}
+\index{I\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+S\+K@{I\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+S\+K}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{I\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+S\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+S\+K~0x00f0}\label{qtextstream_8cpp_a71d44e2aba8b28428d36a2800fee3c5b}
+\hypertarget{qtextstream_8cpp_a85f61af876e12a6b0408b2cf5ddb5d98}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!I\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D@{I\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D}}
+\index{I\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D@{I\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{I\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D~0x0200}\label{qtextstream_8cpp_a85f61af876e12a6b0408b2cf5ddb5d98}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{qtextstream_8cpp_a3af909965131f746dc0e0ec4d6a89bbe}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!bin@{bin}}
+\index{bin@{bin}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{bin(\+Q\+Text\+Stream \&s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream}\& bin (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Text\+Stream} \&}]{s}
+\end{DoxyParamCaption}
+)}\label{qtextstream_8cpp_a3af909965131f746dc0e0ec4d6a89bbe}
+\hypertarget{qtextstream_8cpp_abd5c80c44542dd47c4eacbb3f081d213}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!dec@{dec}}
+\index{dec@{dec}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{dec(\+Q\+Text\+Stream \&s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream}\& dec (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Text\+Stream} \&}]{s}
+\end{DoxyParamCaption}
+)}\label{qtextstream_8cpp_abd5c80c44542dd47c4eacbb3f081d213}
+\hypertarget{qtextstream_8cpp_aab175cb3d03c3b5fe1e57df8b5f1998a}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!endl@{endl}}
+\index{endl@{endl}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{endl(\+Q\+Text\+Stream \&s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream}\& endl (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Text\+Stream} \&}]{s}
+\end{DoxyParamCaption}
+)}\label{qtextstream_8cpp_aab175cb3d03c3b5fe1e57df8b5f1998a}
+\hypertarget{qtextstream_8cpp_a9fa3d9088bdb1923c90894d593aeff28}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!flush@{flush}}
+\index{flush@{flush}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{flush(\+Q\+Text\+Stream \&s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream}\& flush (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Text\+Stream} \&}]{s}
+\end{DoxyParamCaption}
+)}\label{qtextstream_8cpp_a9fa3d9088bdb1923c90894d593aeff28}
+\hypertarget{qtextstream_8cpp_a6b8cf949d067d219879ab5f0bdd19e82}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!hex@{hex}}
+\index{hex@{hex}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{hex(\+Q\+Text\+Stream \&s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream}\& hex (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Text\+Stream} \&}]{s}
+\end{DoxyParamCaption}
+)}\label{qtextstream_8cpp_a6b8cf949d067d219879ab5f0bdd19e82}
+\hypertarget{qtextstream_8cpp_ad03e708ca2851657cb7e1288b33e6c60}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!oct@{oct}}
+\index{oct@{oct}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{oct(\+Q\+Text\+Stream \&s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream}\& oct (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Text\+Stream} \&}]{s}
+\end{DoxyParamCaption}
+)}\label{qtextstream_8cpp_ad03e708ca2851657cb7e1288b33e6c60}
+\hypertarget{qtextstream_8cpp_a9c64e2daa423f038f8ff8a9fcbba7342}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!reset@{reset}}
+\index{reset@{reset}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{reset(\+Q\+Text\+Stream \&s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream}\& reset (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Text\+Stream} \&}]{s}
+\end{DoxyParamCaption}
+)}\label{qtextstream_8cpp_a9c64e2daa423f038f8ff8a9fcbba7342}
+\hypertarget{qtextstream_8cpp_a7398882ebab3d07d938d06c97c45cc07}{}\index{qtextstream.\+cpp@{qtextstream.\+cpp}!ws@{ws}}
+\index{ws@{ws}!qtextstream.\+cpp@{qtextstream.\+cpp}}
+\subsubsection[{ws(\+Q\+Text\+Stream \&s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream}\& ws (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Text\+Stream} \&}]{s}
+\end{DoxyParamCaption}
+)}\label{qtextstream_8cpp_a7398882ebab3d07d938d06c97c45cc07}

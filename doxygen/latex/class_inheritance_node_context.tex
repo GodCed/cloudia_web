@@ -1,0 +1,86 @@
+\hypertarget{class_inheritance_node_context}{}\section{Référence de la classe Inheritance\+Node\+Context}
+\label{class_inheritance_node_context}\index{Inheritance\+Node\+Context@{Inheritance\+Node\+Context}}
+
+
+{\ttfamily \#include $<$context.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Inheritance\+Node\+Context\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_inheritance_node_context}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_inheritance_node_context_1_1_private}{Private}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_template_variant}{Template\+Variant} \hyperlink{class_inheritance_node_context_a3f5113eb0ea49fbc54955de6ddcce60a}{get} (const char $\ast$name) const 
+\item 
+virtual int \hyperlink{class_inheritance_node_context_a5184d5ea8a197cb2de5cf66b3c0a9e88}{add\+Ref} ()
+\item 
+virtual int \hyperlink{class_inheritance_node_context_a37fa7b0204b7762070d886d5c1655b8f}{release} ()
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_inheritance_node_context}{Inheritance\+Node\+Context} $\ast$ \hyperlink{class_inheritance_node_context_ade7b2ccc73e861ded7afbc823d30d9f5}{alloc} (\hyperlink{class_class_def}{Class\+Def} $\ast$cd, const \hyperlink{class_q_c_string}{Q\+C\+String} \&name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_inheritance_node_context_a5184d5ea8a197cb2de5cf66b3c0a9e88}{}\index{Inheritance\+Node\+Context@{Inheritance\+Node\+Context}!add\+Ref@{add\+Ref}}
+\index{add\+Ref@{add\+Ref}!Inheritance\+Node\+Context@{Inheritance\+Node\+Context}}
+\subsubsection[{add\+Ref()}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Inheritance\+Node\+Context\+::add\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_inheritance_node_context_a5184d5ea8a197cb2de5cf66b3c0a9e88}
+Increase object\textquotesingle{}s reference count 
+
+Implémente \hyperlink{class_template_struct_intf_a05fe97ad47633beb326f69686faed581}{Template\+Struct\+Intf}.
+
+\hypertarget{class_inheritance_node_context_ade7b2ccc73e861ded7afbc823d30d9f5}{}\index{Inheritance\+Node\+Context@{Inheritance\+Node\+Context}!alloc@{alloc}}
+\index{alloc@{alloc}!Inheritance\+Node\+Context@{Inheritance\+Node\+Context}}
+\subsubsection[{alloc(\+Class\+Def $\ast$cd, const Q\+C\+String \&name)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Inheritance\+Node\+Context}$\ast$ Inheritance\+Node\+Context\+::alloc (
+\begin{DoxyParamCaption}
+\item[{{\bf Class\+Def} $\ast$}]{cd, }
+\item[{const {\bf Q\+C\+String} \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_inheritance_node_context_ade7b2ccc73e861ded7afbc823d30d9f5}
+\hypertarget{class_inheritance_node_context_a3f5113eb0ea49fbc54955de6ddcce60a}{}\index{Inheritance\+Node\+Context@{Inheritance\+Node\+Context}!get@{get}}
+\index{get@{get}!Inheritance\+Node\+Context@{Inheritance\+Node\+Context}}
+\subsubsection[{get(const char $\ast$name) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Variant} Inheritance\+Node\+Context\+::get (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_inheritance_node_context_a3f5113eb0ea49fbc54955de6ddcce60a}
+Gets the value for a field name. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em name} & The name of the field. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_template_struct_intf_afd77683d121b5b6aebc8b6648c46ee20}{Template\+Struct\+Intf}.
+
+\hypertarget{class_inheritance_node_context_a37fa7b0204b7762070d886d5c1655b8f}{}\index{Inheritance\+Node\+Context@{Inheritance\+Node\+Context}!release@{release}}
+\index{release@{release}!Inheritance\+Node\+Context@{Inheritance\+Node\+Context}}
+\subsubsection[{release()}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Inheritance\+Node\+Context\+::release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_inheritance_node_context_a37fa7b0204b7762070d886d5c1655b8f}
+Decreases object\textquotesingle{}s referenc count, destroy object if 0 
+
+Implémente \hyperlink{class_template_struct_intf_a3dce7dd29d3f66a8080b40578e8a5045}{Template\+Struct\+Intf}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{context_8h}{context.\+h}\item 
+src/\hyperlink{context_8cpp}{context.\+cpp}\end{DoxyCompactItemize}

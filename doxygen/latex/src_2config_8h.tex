@@ -1,0 +1,81 @@
+\hypertarget{src_2config_8h}{}\section{Référence du fichier src/config.h}
+\label{src_2config_8h}\index{src/config.\+h@{src/config.\+h}}
+{\ttfamily \#include $<$qstrlist.\+h$>$}\\*
+{\ttfamily \#include $<$qdict.\+h$>$}\\*
+{\ttfamily \#include $<$qlist.\+h$>$}\\*
+{\ttfamily \#include $<$qregexp.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}ftextstream.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_config_option}{Config\+Option}
+\item 
+class \hyperlink{class_config_info}{Config\+Info}
+\item 
+class \hyperlink{class_config_list}{Config\+List}
+\item 
+class \hyperlink{class_config_enum}{Config\+Enum}
+\item 
+class \hyperlink{class_config_string}{Config\+String}
+\item 
+class \hyperlink{class_config_int}{Config\+Int}
+\item 
+class \hyperlink{class_config_bool}{Config\+Bool}
+\item 
+class \hyperlink{class_config_obsolete}{Config\+Obsolete}
+\item 
+class \hyperlink{class_config_disabled}{Config\+Disabled}
+\item 
+class \hyperlink{class_config}{Config}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{src_2config_8h_ad8215ee2de81f98ebd320c3d46cba909}{Config\+\_\+get\+String}(val)~\hyperlink{class_config_ad62b66142ca8c837019cd04de34c8caa}{Config\+::instance}()-\/$>$get\+String(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+,\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+,val)
+\item 
+\#define \hyperlink{src_2config_8h_aee61561de07106aac64b429ab8dcb422}{Config\+\_\+get\+Int}(val)      ~\hyperlink{class_config_ad62b66142ca8c837019cd04de34c8caa}{Config\+::instance}()-\/$>$get\+Int(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+,\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+,val)
+\item 
+\#define \hyperlink{src_2config_8h_a7292d3d409aef1cc52b2d0f5ddbe736d}{Config\+\_\+get\+List}(val)    ~\hyperlink{class_config_ad62b66142ca8c837019cd04de34c8caa}{Config\+::instance}()-\/$>$get\+List(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+,\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+,val)
+\item 
+\#define \hyperlink{src_2config_8h_ab194fe109c05a09196e34e08970c703c}{Config\+\_\+get\+Enum}(val)    ~\hyperlink{class_config_ad62b66142ca8c837019cd04de34c8caa}{Config\+::instance}()-\/$>$get\+Enum(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+,\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+,val)
+\item 
+\#define \hyperlink{src_2config_8h_af606b2e47500af0f003de28dbed75f80}{Config\+\_\+get\+Bool}(val)    ~\hyperlink{class_config_ad62b66142ca8c837019cd04de34c8caa}{Config\+::instance}()-\/$>$get\+Bool(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+,\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+,val)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{src_2config_8h_af606b2e47500af0f003de28dbed75f80}{}\index{src/config.\+h@{src/config.\+h}!Config\+\_\+get\+Bool@{Config\+\_\+get\+Bool}}
+\index{Config\+\_\+get\+Bool@{Config\+\_\+get\+Bool}!src/config.\+h@{src/config.\+h}}
+\subsubsection[{Config\+\_\+get\+Bool}]{\setlength{\rightskip}{0pt plus 5cm}\#define Config\+\_\+get\+Bool(
+\begin{DoxyParamCaption}
+\item[{}]{val}
+\end{DoxyParamCaption}
+)~{\bf Config\+::instance}()-\/$>$get\+Bool(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+,\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+,val)}\label{src_2config_8h_af606b2e47500af0f003de28dbed75f80}
+\hypertarget{src_2config_8h_ab194fe109c05a09196e34e08970c703c}{}\index{src/config.\+h@{src/config.\+h}!Config\+\_\+get\+Enum@{Config\+\_\+get\+Enum}}
+\index{Config\+\_\+get\+Enum@{Config\+\_\+get\+Enum}!src/config.\+h@{src/config.\+h}}
+\subsubsection[{Config\+\_\+get\+Enum}]{\setlength{\rightskip}{0pt plus 5cm}\#define Config\+\_\+get\+Enum(
+\begin{DoxyParamCaption}
+\item[{}]{val}
+\end{DoxyParamCaption}
+)~{\bf Config\+::instance}()-\/$>$get\+Enum(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+,\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+,val)}\label{src_2config_8h_ab194fe109c05a09196e34e08970c703c}
+\hypertarget{src_2config_8h_aee61561de07106aac64b429ab8dcb422}{}\index{src/config.\+h@{src/config.\+h}!Config\+\_\+get\+Int@{Config\+\_\+get\+Int}}
+\index{Config\+\_\+get\+Int@{Config\+\_\+get\+Int}!src/config.\+h@{src/config.\+h}}
+\subsubsection[{Config\+\_\+get\+Int}]{\setlength{\rightskip}{0pt plus 5cm}\#define Config\+\_\+get\+Int(
+\begin{DoxyParamCaption}
+\item[{}]{val}
+\end{DoxyParamCaption}
+)~{\bf Config\+::instance}()-\/$>$get\+Int(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+,\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+,val)}\label{src_2config_8h_aee61561de07106aac64b429ab8dcb422}
+\hypertarget{src_2config_8h_a7292d3d409aef1cc52b2d0f5ddbe736d}{}\index{src/config.\+h@{src/config.\+h}!Config\+\_\+get\+List@{Config\+\_\+get\+List}}
+\index{Config\+\_\+get\+List@{Config\+\_\+get\+List}!src/config.\+h@{src/config.\+h}}
+\subsubsection[{Config\+\_\+get\+List}]{\setlength{\rightskip}{0pt plus 5cm}\#define Config\+\_\+get\+List(
+\begin{DoxyParamCaption}
+\item[{}]{val}
+\end{DoxyParamCaption}
+)~{\bf Config\+::instance}()-\/$>$get\+List(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+,\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+,val)}\label{src_2config_8h_a7292d3d409aef1cc52b2d0f5ddbe736d}
+\hypertarget{src_2config_8h_ad8215ee2de81f98ebd320c3d46cba909}{}\index{src/config.\+h@{src/config.\+h}!Config\+\_\+get\+String@{Config\+\_\+get\+String}}
+\index{Config\+\_\+get\+String@{Config\+\_\+get\+String}!src/config.\+h@{src/config.\+h}}
+\subsubsection[{Config\+\_\+get\+String}]{\setlength{\rightskip}{0pt plus 5cm}\#define Config\+\_\+get\+String(
+\begin{DoxyParamCaption}
+\item[{}]{val}
+\end{DoxyParamCaption}
+)~{\bf Config\+::instance}()-\/$>$get\+String(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+,\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+,val)}\label{src_2config_8h_ad8215ee2de81f98ebd320c3d46cba909}

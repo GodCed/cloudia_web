@@ -1,0 +1,107 @@
+\hypertarget{class_dot_call_graph}{}\section{Référence de la classe Dot\+Call\+Graph}
+\label{class_dot_call_graph}\index{Dot\+Call\+Graph@{Dot\+Call\+Graph}}
+
+
+{\ttfamily \#include $<$dot.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_dot_call_graph_acb6d03dcd52cf3a4d3e8ea623bdb2da0}{Dot\+Call\+Graph} (\hyperlink{class_member_def}{Member\+Def} $\ast$md, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} inverse)
+\item 
+\hyperlink{class_dot_call_graph_a865df0c042f08bec4f4e3a28076b0dd4}{$\sim$\+Dot\+Call\+Graph} ()
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_dot_call_graph_a69cfc401eaaff5a7aa9f1ed27a2c6822}{write\+Graph} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, \hyperlink{dot_8h_ac60ef98d62b78366a17c9f1bda96523f}{Graph\+Output\+Format} gf, \hyperlink{dot_8h_a8680135da08a5ef57cebe20060912dcc}{Embedded\+Output\+Format} ef, const char $\ast$path, const char $\ast$file\+Name, const char $\ast$rel\+Path, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} write\+Image\+Map=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E}, int graph\+Id=-\/1) const 
+\item 
+void \hyperlink{class_dot_call_graph_a37d014d7543ae64f653abdae4988d617}{build\+Graph} (\hyperlink{class_dot_node}{Dot\+Node} $\ast$\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n}, \hyperlink{class_member_def}{Member\+Def} $\ast$md, int distance)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_dot_call_graph_a82315e751c4340bcc736e12413e0f20a}{is\+Trivial} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_dot_call_graph_ad559f85737a504d76d6308d692e58dc3}{is\+Too\+Big} () const 
+\item 
+void \hyperlink{class_dot_call_graph_addf14efc1a3021713c31070fe7e75641}{determine\+Visible\+Nodes} (\hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{class_dot_node}{Dot\+Node} $>$ \&queue, int \&max\+Nodes)
+\item 
+void \hyperlink{class_dot_call_graph_a1bcba0cd9ce18996902651b8d306033d}{determine\+Truncated\+Nodes} (\hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{class_dot_node}{Dot\+Node} $>$ \&queue)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Representation of an call graph 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_dot_call_graph_acb6d03dcd52cf3a4d3e8ea623bdb2da0}{}\index{Dot\+Call\+Graph@{Dot\+Call\+Graph}!Dot\+Call\+Graph@{Dot\+Call\+Graph}}
+\index{Dot\+Call\+Graph@{Dot\+Call\+Graph}!Dot\+Call\+Graph@{Dot\+Call\+Graph}}
+\subsubsection[{Dot\+Call\+Graph(\+Member\+Def $\ast$md, bool inverse)}]{\setlength{\rightskip}{0pt plus 5cm}Dot\+Call\+Graph\+::\+Dot\+Call\+Graph (
+\begin{DoxyParamCaption}
+\item[{{\bf Member\+Def} $\ast$}]{md, }
+\item[{{\bf bool}}]{inverse}
+\end{DoxyParamCaption}
+)}\label{class_dot_call_graph_acb6d03dcd52cf3a4d3e8ea623bdb2da0}
+\hypertarget{class_dot_call_graph_a865df0c042f08bec4f4e3a28076b0dd4}{}\index{Dot\+Call\+Graph@{Dot\+Call\+Graph}!````~Dot\+Call\+Graph@{$\sim$\+Dot\+Call\+Graph}}
+\index{````~Dot\+Call\+Graph@{$\sim$\+Dot\+Call\+Graph}!Dot\+Call\+Graph@{Dot\+Call\+Graph}}
+\subsubsection[{$\sim$\+Dot\+Call\+Graph()}]{\setlength{\rightskip}{0pt plus 5cm}Dot\+Call\+Graph\+::$\sim$\+Dot\+Call\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_dot_call_graph_a865df0c042f08bec4f4e3a28076b0dd4}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_dot_call_graph_a37d014d7543ae64f653abdae4988d617}{}\index{Dot\+Call\+Graph@{Dot\+Call\+Graph}!build\+Graph@{build\+Graph}}
+\index{build\+Graph@{build\+Graph}!Dot\+Call\+Graph@{Dot\+Call\+Graph}}
+\subsubsection[{build\+Graph(\+Dot\+Node $\ast$n, Member\+Def $\ast$md, int distance)}]{\setlength{\rightskip}{0pt plus 5cm}void Dot\+Call\+Graph\+::build\+Graph (
+\begin{DoxyParamCaption}
+\item[{{\bf Dot\+Node} $\ast$}]{n, }
+\item[{{\bf Member\+Def} $\ast$}]{md, }
+\item[{int}]{distance}
+\end{DoxyParamCaption}
+)}\label{class_dot_call_graph_a37d014d7543ae64f653abdae4988d617}
+\hypertarget{class_dot_call_graph_a1bcba0cd9ce18996902651b8d306033d}{}\index{Dot\+Call\+Graph@{Dot\+Call\+Graph}!determine\+Truncated\+Nodes@{determine\+Truncated\+Nodes}}
+\index{determine\+Truncated\+Nodes@{determine\+Truncated\+Nodes}!Dot\+Call\+Graph@{Dot\+Call\+Graph}}
+\subsubsection[{determine\+Truncated\+Nodes(\+Q\+List$<$ Dot\+Node $>$ \&queue)}]{\setlength{\rightskip}{0pt plus 5cm}void Dot\+Call\+Graph\+::determine\+Truncated\+Nodes (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+List}$<$ {\bf Dot\+Node} $>$ \&}]{queue}
+\end{DoxyParamCaption}
+)}\label{class_dot_call_graph_a1bcba0cd9ce18996902651b8d306033d}
+\hypertarget{class_dot_call_graph_addf14efc1a3021713c31070fe7e75641}{}\index{Dot\+Call\+Graph@{Dot\+Call\+Graph}!determine\+Visible\+Nodes@{determine\+Visible\+Nodes}}
+\index{determine\+Visible\+Nodes@{determine\+Visible\+Nodes}!Dot\+Call\+Graph@{Dot\+Call\+Graph}}
+\subsubsection[{determine\+Visible\+Nodes(\+Q\+List$<$ Dot\+Node $>$ \&queue, int \&max\+Nodes)}]{\setlength{\rightskip}{0pt plus 5cm}void Dot\+Call\+Graph\+::determine\+Visible\+Nodes (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+List}$<$ {\bf Dot\+Node} $>$ \&}]{queue, }
+\item[{int \&}]{max\+Nodes}
+\end{DoxyParamCaption}
+)}\label{class_dot_call_graph_addf14efc1a3021713c31070fe7e75641}
+\hypertarget{class_dot_call_graph_ad559f85737a504d76d6308d692e58dc3}{}\index{Dot\+Call\+Graph@{Dot\+Call\+Graph}!is\+Too\+Big@{is\+Too\+Big}}
+\index{is\+Too\+Big@{is\+Too\+Big}!Dot\+Call\+Graph@{Dot\+Call\+Graph}}
+\subsubsection[{is\+Too\+Big() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Dot\+Call\+Graph\+::is\+Too\+Big (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_dot_call_graph_ad559f85737a504d76d6308d692e58dc3}
+\hypertarget{class_dot_call_graph_a82315e751c4340bcc736e12413e0f20a}{}\index{Dot\+Call\+Graph@{Dot\+Call\+Graph}!is\+Trivial@{is\+Trivial}}
+\index{is\+Trivial@{is\+Trivial}!Dot\+Call\+Graph@{Dot\+Call\+Graph}}
+\subsubsection[{is\+Trivial() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Dot\+Call\+Graph\+::is\+Trivial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_dot_call_graph_a82315e751c4340bcc736e12413e0f20a}
+\hypertarget{class_dot_call_graph_a69cfc401eaaff5a7aa9f1ed27a2c6822}{}\index{Dot\+Call\+Graph@{Dot\+Call\+Graph}!write\+Graph@{write\+Graph}}
+\index{write\+Graph@{write\+Graph}!Dot\+Call\+Graph@{Dot\+Call\+Graph}}
+\subsubsection[{write\+Graph(\+F\+Text\+Stream \&t, Graph\+Output\+Format gf, Embedded\+Output\+Format ef, const char $\ast$path, const char $\ast$file\+Name, const char $\ast$rel\+Path, bool write\+Image\+Map=\+T\+R\+U\+E, int graph\+Id=-\/1) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Dot\+Call\+Graph\+::write\+Graph (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t, }
+\item[{{\bf Graph\+Output\+Format}}]{gf, }
+\item[{{\bf Embedded\+Output\+Format}}]{ef, }
+\item[{const char $\ast$}]{path, }
+\item[{const char $\ast$}]{file\+Name, }
+\item[{const char $\ast$}]{rel\+Path, }
+\item[{{\bf bool}}]{write\+Image\+Map = {\ttfamily {\bf T\+R\+U\+E}}, }
+\item[{int}]{graph\+Id = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+) const}\label{class_dot_call_graph_a69cfc401eaaff5a7aa9f1ed27a2c6822}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{dot_8h}{dot.\+h}\item 
+src/\hyperlink{dot_8cpp}{dot.\+cpp}\end{DoxyCompactItemize}

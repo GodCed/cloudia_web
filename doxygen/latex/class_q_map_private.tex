@@ -1,0 +1,213 @@
+\hypertarget{class_q_map_private}{}\section{Référence du modèle de la classe Q\+Map\+Private$<$ Key, T $>$}
+\label{class_q_map_private}\index{Q\+Map\+Private$<$ Key, T $>$@{Q\+Map\+Private$<$ Key, T $>$}}
+
+
+{\ttfamily \#include $<$qmap.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Q\+Map\+Private$<$ Key, T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_q_map_private}
+\end{center}
+\end{figure}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_q_map_iterator}{Q\+Map\+Iterator}$<$ Key, T $>$ \hyperlink{class_q_map_private_a5326545ba578532909650c2f4a8d4d34}{Iterator}
+\item 
+typedef \hyperlink{class_q_map_const_iterator}{Q\+Map\+Const\+Iterator}$<$ Key, T $>$ \hyperlink{class_q_map_private_a579a86f244015186e41bfa3cf85a5054}{Const\+Iterator}
+\item 
+typedef \hyperlink{struct_q_map_node}{Q\+Map\+Node}$<$ Key, T $>$ \hyperlink{class_q_map_private_a14bbee368a168ea06680b51eef901c27}{Node}
+\item 
+typedef \hyperlink{struct_q_map_node}{Q\+Map\+Node}$<$ Key, T $>$ $\ast$ \hyperlink{class_q_map_private_a6b529a90a461f2d2df3e1b2356250fb4}{Node\+Ptr}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_map_private_a4e52679058c7c68f4e188dbb1f81ddf2}{Q\+Map\+Private} ()
+\item 
+\hyperlink{class_q_map_private_a40c49fe36d6aac5a585ff81f219e484a}{Q\+Map\+Private} (const \hyperlink{class_q_map_private}{Q\+Map\+Private}$<$ Key, T $>$ $\ast$\+\_\+map)
+\item 
+\hyperlink{class_q_map_private_ae14c4d1bc4ed98e1ef41fae1db4f70ac}{$\sim$\+Q\+Map\+Private} ()
+\item 
+\hyperlink{class_q_map_private_a6b529a90a461f2d2df3e1b2356250fb4}{Node\+Ptr} \hyperlink{class_q_map_private_ac3ec38438d60e749d58dd6e8d87f8231}{copy} (\hyperlink{class_q_map_private_a6b529a90a461f2d2df3e1b2356250fb4}{Node\+Ptr} \hyperlink{060__command__switch_8tcl_a15229b450f26d8fa1c10bea4f3279f4d}{p})
+\item 
+void \hyperlink{class_q_map_private_a57cf7714f6cd6ce302f6869f61217e03}{clear} ()
+\item 
+void \hyperlink{class_q_map_private_a0317f0056ee635561c57577291950cba}{clear} (\hyperlink{class_q_map_private_a6b529a90a461f2d2df3e1b2356250fb4}{Node\+Ptr} \hyperlink{060__command__switch_8tcl_a15229b450f26d8fa1c10bea4f3279f4d}{p})
+\item 
+\hyperlink{class_q_map_private_a5326545ba578532909650c2f4a8d4d34}{Iterator} \hyperlink{class_q_map_private_a33ad6dc5d5c7c5292c6206445f7ec54a}{begin} ()
+\item 
+\hyperlink{class_q_map_private_a5326545ba578532909650c2f4a8d4d34}{Iterator} \hyperlink{class_q_map_private_ad1b27b1ce057ef786f0d122dc3e71d12}{end} ()
+\item 
+\hyperlink{class_q_map_private_a579a86f244015186e41bfa3cf85a5054}{Const\+Iterator} \hyperlink{class_q_map_private_a0f8a78064813598bd64a4988ebfc425a}{begin} () const 
+\item 
+\hyperlink{class_q_map_private_a579a86f244015186e41bfa3cf85a5054}{Const\+Iterator} \hyperlink{class_q_map_private_a6ff71c9267f089ba9dded6ee00e6f946}{end} () const 
+\item 
+\hyperlink{class_q_map_private_a579a86f244015186e41bfa3cf85a5054}{Const\+Iterator} \hyperlink{class_q_map_private_a72227a7d1023db02808ffb4e763b449a}{find} (const Key \&\hyperlink{060__command__switch_8tcl_a20363f854eb4098a446733d63d34dbc1}{k}) const 
+\item 
+void \hyperlink{class_q_map_private_a7f2f689ac684d8577f79e12cab91dbd4}{remove} (\hyperlink{class_q_map_private_a5326545ba578532909650c2f4a8d4d34}{Iterator} it)
+\item 
+\hyperlink{class_q_map_private_a5326545ba578532909650c2f4a8d4d34}{Iterator} \hyperlink{class_q_map_private_a5d4b166c2058946aec5335ca777b7949}{insert\+Multi} (const Key \&v)
+\item 
+\hyperlink{class_q_map_private_a5326545ba578532909650c2f4a8d4d34}{Iterator} \hyperlink{class_q_map_private_a241ba6529b73bda8e8293227837bae76}{insert\+Single} (const Key \&\hyperlink{060__command__switch_8tcl_a20363f854eb4098a446733d63d34dbc1}{k})
+\item 
+\hyperlink{class_q_map_private_a5326545ba578532909650c2f4a8d4d34}{Iterator} \hyperlink{class_q_map_private_a5cc8d79a81cca31f59d697a120d7319d}{insert} (\hyperlink{struct_q_map_node_base}{Q\+Map\+Node\+Base} $\ast$x, \hyperlink{struct_q_map_node_base}{Q\+Map\+Node\+Base} $\ast$\hyperlink{058__bracket__recursion_8tcl_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{y}, const Key \&\hyperlink{060__command__switch_8tcl_a20363f854eb4098a446733d63d34dbc1}{k})
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+const Key \& \hyperlink{class_q_map_private_a6369be6e42af51852f85851ffca6a42c}{key} (\hyperlink{struct_q_map_node_base}{Q\+Map\+Node\+Base} $\ast$\hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b}) const 
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_map_private_a6b529a90a461f2d2df3e1b2356250fb4}{Node\+Ptr} \hyperlink{class_q_map_private_a68a9e07ff34146b090cbac239851139e}{header}
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Documentation des définitions de type membres}
+\hypertarget{class_q_map_private_a579a86f244015186e41bfa3cf85a5054}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!Const\+Iterator@{Const\+Iterator}}
+\index{Const\+Iterator@{Const\+Iterator}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{Const\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ typedef {\bf Q\+Map\+Const\+Iterator}$<$ Key, T $>$ {\bf Q\+Map\+Private}$<$ Key, T $>$\+::{\bf Const\+Iterator}}\label{class_q_map_private_a579a86f244015186e41bfa3cf85a5054}
+\hypertarget{class_q_map_private_a5326545ba578532909650c2f4a8d4d34}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{Iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ typedef {\bf Q\+Map\+Iterator}$<$ Key, T $>$ {\bf Q\+Map\+Private}$<$ Key, T $>$\+::{\bf Iterator}}\label{class_q_map_private_a5326545ba578532909650c2f4a8d4d34}
+Typedefs \hypertarget{class_q_map_private_a14bbee368a168ea06680b51eef901c27}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!Node@{Node}}
+\index{Node@{Node}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ typedef {\bf Q\+Map\+Node}$<$ Key, T $>$ {\bf Q\+Map\+Private}$<$ Key, T $>$\+::{\bf Node}}\label{class_q_map_private_a14bbee368a168ea06680b51eef901c27}
+\hypertarget{class_q_map_private_a6b529a90a461f2d2df3e1b2356250fb4}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!Node\+Ptr@{Node\+Ptr}}
+\index{Node\+Ptr@{Node\+Ptr}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{Node\+Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ typedef {\bf Q\+Map\+Node}$<$ Key, T $>$$\ast$ {\bf Q\+Map\+Private}$<$ Key, T $>$\+::{\bf Node\+Ptr}}\label{class_q_map_private_a6b529a90a461f2d2df3e1b2356250fb4}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_map_private_a4e52679058c7c68f4e188dbb1f81ddf2}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!Q\+Map\+Private@{Q\+Map\+Private}}
+\index{Q\+Map\+Private@{Q\+Map\+Private}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{Q\+Map\+Private()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ {\bf Q\+Map\+Private}$<$ Key, T $>$\+::{\bf Q\+Map\+Private} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_map_private_a4e52679058c7c68f4e188dbb1f81ddf2}
+Functions \hypertarget{class_q_map_private_a40c49fe36d6aac5a585ff81f219e484a}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!Q\+Map\+Private@{Q\+Map\+Private}}
+\index{Q\+Map\+Private@{Q\+Map\+Private}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{Q\+Map\+Private(const Q\+Map\+Private$<$ Key, T $>$ $\ast$\+\_\+map)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ {\bf Q\+Map\+Private}$<$ Key, T $>$\+::{\bf Q\+Map\+Private} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Map\+Private}$<$ Key, T $>$ $\ast$}]{\+\_\+map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_map_private_a40c49fe36d6aac5a585ff81f219e484a}
+\hypertarget{class_q_map_private_ae14c4d1bc4ed98e1ef41fae1db4f70ac}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!````~Q\+Map\+Private@{$\sim$\+Q\+Map\+Private}}
+\index{````~Q\+Map\+Private@{$\sim$\+Q\+Map\+Private}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{$\sim$\+Q\+Map\+Private()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ {\bf Q\+Map\+Private}$<$ Key, T $>$\+::$\sim${\bf Q\+Map\+Private} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_map_private_ae14c4d1bc4ed98e1ef41fae1db4f70ac}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_map_private_a33ad6dc5d5c7c5292c6206445f7ec54a}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!begin@{begin}}
+\index{begin@{begin}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{begin()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ {\bf Iterator} {\bf Q\+Map\+Private}$<$ Key, T $>$\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_map_private_a33ad6dc5d5c7c5292c6206445f7ec54a}
+\hypertarget{class_q_map_private_a0f8a78064813598bd64a4988ebfc425a}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!begin@{begin}}
+\index{begin@{begin}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{begin() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ {\bf Const\+Iterator} {\bf Q\+Map\+Private}$<$ Key, T $>$\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_map_private_a0f8a78064813598bd64a4988ebfc425a}
+\hypertarget{class_q_map_private_a57cf7714f6cd6ce302f6869f61217e03}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!clear@{clear}}
+\index{clear@{clear}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ void {\bf Q\+Map\+Private}$<$ Key, T $>$\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_map_private_a57cf7714f6cd6ce302f6869f61217e03}
+\hypertarget{class_q_map_private_a0317f0056ee635561c57577291950cba}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!clear@{clear}}
+\index{clear@{clear}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{clear(\+Node\+Ptr p)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ void {\bf Q\+Map\+Private}$<$ Key, T $>$\+::clear (
+\begin{DoxyParamCaption}
+\item[{{\bf Node\+Ptr}}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_map_private_a0317f0056ee635561c57577291950cba}
+\hypertarget{class_q_map_private_ac3ec38438d60e749d58dd6e8d87f8231}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!copy@{copy}}
+\index{copy@{copy}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{copy(\+Node\+Ptr p)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ {\bf Node\+Ptr} {\bf Q\+Map\+Private}$<$ Key, T $>$\+::copy (
+\begin{DoxyParamCaption}
+\item[{{\bf Node\+Ptr}}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_map_private_ac3ec38438d60e749d58dd6e8d87f8231}
+\hypertarget{class_q_map_private_ad1b27b1ce057ef786f0d122dc3e71d12}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!end@{end}}
+\index{end@{end}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{end()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ {\bf Iterator} {\bf Q\+Map\+Private}$<$ Key, T $>$\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_map_private_ad1b27b1ce057ef786f0d122dc3e71d12}
+\hypertarget{class_q_map_private_a6ff71c9267f089ba9dded6ee00e6f946}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!end@{end}}
+\index{end@{end}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{end() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ {\bf Const\+Iterator} {\bf Q\+Map\+Private}$<$ Key, T $>$\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_map_private_a6ff71c9267f089ba9dded6ee00e6f946}
+\hypertarget{class_q_map_private_a72227a7d1023db02808ffb4e763b449a}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!find@{find}}
+\index{find@{find}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{find(const Key \&k) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ {\bf Const\+Iterator} {\bf Q\+Map\+Private}$<$ Key, T $>$\+::find (
+\begin{DoxyParamCaption}
+\item[{const Key \&}]{k}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_map_private_a72227a7d1023db02808ffb4e763b449a}
+\hypertarget{class_q_map_private_a5cc8d79a81cca31f59d697a120d7319d}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!insert@{insert}}
+\index{insert@{insert}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{insert(\+Q\+Map\+Node\+Base $\ast$x, Q\+Map\+Node\+Base $\ast$y, const Key \&k)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ {\bf Iterator} {\bf Q\+Map\+Private}$<$ Key, T $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Map\+Node\+Base} $\ast$}]{x, }
+\item[{{\bf Q\+Map\+Node\+Base} $\ast$}]{y, }
+\item[{const Key \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_map_private_a5cc8d79a81cca31f59d697a120d7319d}
+\hypertarget{class_q_map_private_a5d4b166c2058946aec5335ca777b7949}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!insert\+Multi@{insert\+Multi}}
+\index{insert\+Multi@{insert\+Multi}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{insert\+Multi(const Key \&v)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ {\bf Iterator} {\bf Q\+Map\+Private}$<$ Key, T $>$\+::insert\+Multi (
+\begin{DoxyParamCaption}
+\item[{const Key \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_map_private_a5d4b166c2058946aec5335ca777b7949}
+\hypertarget{class_q_map_private_a241ba6529b73bda8e8293227837bae76}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!insert\+Single@{insert\+Single}}
+\index{insert\+Single@{insert\+Single}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{insert\+Single(const Key \&k)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ {\bf Iterator} {\bf Q\+Map\+Private}$<$ Key, T $>$\+::insert\+Single (
+\begin{DoxyParamCaption}
+\item[{const Key \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_map_private_a241ba6529b73bda8e8293227837bae76}
+\hypertarget{class_q_map_private_a6369be6e42af51852f85851ffca6a42c}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!key@{key}}
+\index{key@{key}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{key(\+Q\+Map\+Node\+Base $\ast$b) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ const Key\& {\bf Q\+Map\+Private}$<$ Key, T $>$\+::key (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Map\+Node\+Base} $\ast$}]{b}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_q_map_private_a6369be6e42af51852f85851ffca6a42c}
+Helpers \hypertarget{class_q_map_private_a7f2f689ac684d8577f79e12cab91dbd4}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!remove@{remove}}
+\index{remove@{remove}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{remove(\+Iterator it)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ void {\bf Q\+Map\+Private}$<$ Key, T $>$\+::remove (
+\begin{DoxyParamCaption}
+\item[{{\bf Iterator}}]{it}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_map_private_a7f2f689ac684d8577f79e12cab91dbd4}
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_q_map_private_a68a9e07ff34146b090cbac239851139e}{}\index{Q\+Map\+Private@{Q\+Map\+Private}!header@{header}}
+\index{header@{header}!Q\+Map\+Private@{Q\+Map\+Private}}
+\subsubsection[{header}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key, class T$>$ {\bf Node\+Ptr} {\bf Q\+Map\+Private}$<$ Key, T $>$\+::header\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_map_private_a68a9e07ff34146b090cbac239851139e}
+Variables 
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qmap_8h}{qmap.\+h}\end{DoxyCompactItemize}

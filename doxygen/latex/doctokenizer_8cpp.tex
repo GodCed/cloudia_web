@@ -1,0 +1,1719 @@
+\hypertarget{doctokenizer_8cpp}{}\section{Référence du fichier generated\+\_\+src/doxygen/doctokenizer.cpp}
+\label{doctokenizer_8cpp}\index{generated\+\_\+src/doxygen/doctokenizer.\+cpp@{generated\+\_\+src/doxygen/doctokenizer.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$qfile.\+h$>$}\\*
+{\ttfamily \#include $<$qstring.\+h$>$}\\*
+{\ttfamily \#include $<$qstack.\+h$>$}\\*
+{\ttfamily \#include $<$qdict.\+h$>$}\\*
+{\ttfamily \#include $<$qregexp.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}doctokenizer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cmdmapper.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}section.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}membergroup.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}definition.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doxygen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}portable.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structyy__buffer__state}{yy\+\_\+buffer\+\_\+state}
+\item 
+struct \hyperlink{structyy__trans__info}{yy\+\_\+trans\+\_\+info}
+\item 
+struct \hyperlink{struct_doc_lexer_context}{Doc\+Lexer\+Context}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a1ae16e642a197fa4948998525813c6f5}{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}~short int
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ac86ea8173dfcfc5c989d3295a77e2f95}{yy\+\_\+create\+\_\+buffer}~\hyperlink{doctokenizer_8cpp_a33b1f31ef9c4e8913333c4219faa7447}{doctokenizer\+Y\+Y\+\_\+create\+\_\+buffer}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ad1868c6b38b45af25a4a0f449912a808}{yy\+\_\+delete\+\_\+buffer}~\hyperlink{doctokenizer_8cpp_a335816cb1f4db45d7ecebd3cdc750da7}{doctokenizer\+Y\+Y\+\_\+delete\+\_\+buffer}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a301f4439c9b191c80db45f5b1a8c7269}{yy\+\_\+flex\+\_\+debug}~\hyperlink{doctokenizer_8cpp_ab58a7ae8bccfe0ea881e4fce12f22c9d}{doctokenizer\+Y\+Y\+\_\+flex\+\_\+debug}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_aa14efad9f9c24106a3e3398a4f6621c2}{yy\+\_\+init\+\_\+buffer}~doctokenizer\+Y\+Y\+\_\+init\+\_\+buffer
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ab01a4c7245136f22a63acac7c0ceb343}{yy\+\_\+flush\+\_\+buffer}~\hyperlink{doctokenizer_8cpp_ac57821f42b45d41955854b3288b4cf4a}{doctokenizer\+Y\+Y\+\_\+flush\+\_\+buffer}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a039fc377fd4784139d8706ba0ae229fa}{yy\+\_\+load\+\_\+buffer\+\_\+state}~doctokenizer\+Y\+Y\+\_\+load\+\_\+buffer\+\_\+state
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a968d5b9e7e06a38bfca977b343d47d5c}{yy\+\_\+switch\+\_\+to\+\_\+buffer}~\hyperlink{doctokenizer_8cpp_a758eaf4e5e9f0a35f985ced124288eb3}{doctokenizer\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_aa789f4617e33fb99594cb04a3688a0c1}{yyin}~\hyperlink{doctokenizer_8h_af0ba89ed7f702071f1f005bdaa810ac8}{doctokenizer\+Y\+Yin}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_afa07a629486cb790560bb95713ec7794}{yyleng}~\hyperlink{doctokenizer_8cpp_a067da8359de18788f58fb01bd4128d38}{doctokenizer\+Y\+Yleng}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a5611300548b2030d86b6ab9168132b88}{yylex}~\hyperlink{doctokenizer_8h_a3e518d095f77b1d681f54a27d8de5ef3}{doctokenizer\+Y\+Ylex}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ad71cf0fddcfe4f61de0929105b33226c}{yylineno}~\hyperlink{doctokenizer_8h_aa2c414f2e33cf9014cad85e137da0e95}{doctokenizer\+Y\+Ylineno}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a4fd44867d448dcb6fc32ea004a15de54}{yyout}~\hyperlink{doctokenizer_8cpp_a18af7383737e52cc59a83dac94b4f735}{doctokenizer\+Y\+Yout}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a2259355ac49295f72feab070a34a9b11}{yyrestart}~\hyperlink{doctokenizer_8cpp_a94913854d681143d57729d0a3ec6f166}{doctokenizer\+Y\+Yrestart}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a0d71f919dbec1ffd74b2460fa7e5ac28}{yytext}~\hyperlink{doctokenizer_8cpp_a5a2c8bd6232d793f3e2cf86de0909509}{doctokenizer\+Y\+Ytext}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a5be541efdb129f7cefb2437f52fe7359}{yywrap}~\hyperlink{doctokenizer_8cpp_a9314d569b10e43e44009c8acb2046563}{doctokenizer\+Y\+Ywrap}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a803397ab738ee8630166680646a2d913}{yyalloc}~\hyperlink{doctokenizer_8cpp_a4b09fdd64e14d6962668f33778960f0e}{doctokenizer\+Y\+Yalloc}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ab1eba250555ca003eb39387bb1a41d39}{yyrealloc}~\hyperlink{doctokenizer_8cpp_a5524a0991249fa656d722bbf9b2217eb}{doctokenizer\+Y\+Yrealloc}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a4fa4368d47620ea80150b516e8884f6b}{yyfree}~\hyperlink{doctokenizer_8cpp_af51fb64eb87a80f64e2c18fe74e038a6}{doctokenizer\+Y\+Yfree}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a3c3d1ef92e93b0bc81d7760a73d5c3b6}{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a243ca1d30872935faf05ea5118ed6fdc}{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}~2
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a90f9d458829400869e47efb68a865677}{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}~5
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ac676bd06869180ea493e9b6d7c078dbb}{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}~35
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a9465c9986fdda27730c9dff8d16a0887}{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_aec980b5a71bbe6d67931df20f0ebaec4}{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_aadcf2a81af243df333b31efa6461ab8e}{I\+N\+T8\+\_\+\+M\+I\+N}~(-\/128)
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ad4e9955955b27624963643eac448118a}{I\+N\+T16\+\_\+\+M\+I\+N}~(-\/32767-\/1)
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a688eb21a22db27c2b2bd5836943cdcbe}{I\+N\+T32\+\_\+\+M\+I\+N}~(-\/2147483647-\/1)
+\item 
+\#define \hyperlink{doctokenizer_8cpp_aaf7f29f45f1a513b4748a4e5014ddf6a}{I\+N\+T8\+\_\+\+M\+A\+X}~(127)
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ac58f2c111cc9989c86db2a7dc4fd84ca}{I\+N\+T16\+\_\+\+M\+A\+X}~(32767)
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a181807730d4a375f848ba139813ce04f}{I\+N\+T32\+\_\+\+M\+A\+X}~(2147483647)
+\item 
+\#define \hyperlink{doctokenizer_8cpp_aeb4e270a084ee26fe73e799861bd0252}{U\+I\+N\+T8\+\_\+\+M\+A\+X}~(255\+U)
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a3ea490c9b3617d4479bd80ef93cd5602}{U\+I\+N\+T16\+\_\+\+M\+A\+X}~(65535\+U)
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ab5eb23180f7cc12b7d6c04a8ec067fdd}{U\+I\+N\+T32\+\_\+\+M\+A\+X}~(4294967295\+U)
+\item 
+\#define \hyperlink{doctokenizer_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}{Y\+Y\+\_\+\+N\+U\+L\+L}~0
+\item 
+\#define \hyperlink{doctokenizer_8cpp_af1185350b7a92cf8aa5324c68850c8a6}{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}(\hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})~((unsigned int) (unsigned char) \hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ab766bbbee08d04b67e3fe599d6900873}{B\+E\+G\+I\+N}~(yy\+\_\+start) = 1 + 2 $\ast$
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a8e14785f9eab7a997d659b25af9584c5}{Y\+Y\+\_\+\+S\+T\+A\+R\+T}~(((yy\+\_\+start) -\/ 1) / 2)
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a32b5b960944f946b192d54f672569cd9}{Y\+Y\+S\+T\+A\+T\+E}~\hyperlink{xmlcode_8cpp_a8e14785f9eab7a997d659b25af9584c5}{Y\+Y\+\_\+\+S\+T\+A\+R\+T}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}(state)~(\hyperlink{xmlcode_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R} + state + 1)
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a0406739e64fb5750cf995d2ae68ce69d}{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}~\hyperlink{doctokenizer_8cpp_a94913854d681143d57729d0a3ec6f166}{doctokenizer\+Y\+Yrestart}(\hyperlink{doctokenizer_8h_af0ba89ed7f702071f1f005bdaa810ac8}{doctokenizer\+Y\+Yin}  )
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}~0
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}~262144
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ac2f8b6fccdc516d96b02ac09a4dc01bd}{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}~((\hyperlink{xmlcode_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E} + 2) $\ast$ sizeof(\hyperlink{code_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{yy\+\_\+state\+\_\+type}))
+\item 
+\#define \hyperlink{doctokenizer_8cpp_aa79d63ed3ff8d2249baf1732a73089f5}{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ae0f2b0b5f04b2338367826b5670774f9}{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_adf4b0db227e07782e28ade353a7ba7a1}{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}~0
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a7f71d7fa2c403eb4b2f38cb9536f3c63}{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}~1
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ad1a0b5ebcabffe388e9e9ebb2619c1fb}{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}~2
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a12e5f3a76911433480bca7f4edba6119}{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{yyless}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a448a4e9041a09588332733c6846c770c}{unput}(\hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})~yyunput( \hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c}, (\hyperlink{xmlcode_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\+\_\+ptr})  )
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a8aaa9e1fa7f13d6954d045ef973a9c84}{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a53579db42834b88199458993912c646d}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}~0
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a609d19f40900ecc2a5f812d9388c21fb}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}~1
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ad689d97c15e807a6116ace7a420cea57}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}~2
+\item 
+\#define \hyperlink{doctokenizer_8cpp_aa093d500a6330d06d8e4760c494fac33}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}~(yy\+\_\+buffer\+\_\+stack)\mbox{[}(yy\+\_\+buffer\+\_\+stack\+\_\+top)\mbox{]}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ac5d478d90ea9a2ecd43d579067a2e89d}{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}~\hyperlink{doctokenizer_8cpp_ac57821f42b45d41955854b3288b4cf4a}{doctokenizer\+Y\+Y\+\_\+flush\+\_\+buffer}(\hyperlink{xmlcode_8cpp_aa093d500a6330d06d8e4760c494fac33}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R} )
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ab7eb911e18655f2f78e63afe5a8a4a12}{yy\+\_\+new\+\_\+buffer}~\hyperlink{doctokenizer_8cpp_a33b1f31ef9c4e8913333c4219faa7447}{doctokenizer\+Y\+Y\+\_\+create\+\_\+buffer}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ac56eb96366c08862bf0efe5d83d1fc4c}{yy\+\_\+set\+\_\+interactive}(is\+\_\+interactive)
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a12e30d13a76a94e78010db9996d39c50}{yy\+\_\+set\+\_\+bol}(at\+\_\+bol)
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a71ca89b3656acd0552f14949a571560b}{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}()~(\hyperlink{xmlcode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}-\/$>$yy\+\_\+at\+\_\+bol)
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a9314d569b10e43e44009c8acb2046563}{doctokenizer\+Y\+Ywrap}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})~1
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ae1ef5933028cbc587d31328e53d11a99}{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\+\_\+ptr}~\hyperlink{doctokenizer_8cpp_a5a2c8bd6232d793f3e2cf86de0909509}{doctokenizer\+Y\+Ytext}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_acc3486d769af4e4b2820346a0093cc79}{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ae558785bb896e090901c2b905f6790c6}{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}~205
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}~206
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a76482842cdcaadf1dbdaf43df38765a2}{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}~0x2000
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a7fce78ee876950ded902364014c917e6}{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}~0x4000
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a835f10dd1ab4bf9a80c4cd80ee6e3058}{R\+E\+J\+E\+C\+T}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a745d37b5e002b2e5f93ad42ea7b554be}{yymore}()~yymore\+\_\+used\+\_\+but\+\_\+not\+\_\+detected
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a68792d73820bc46a71d3d4e613f0b977}{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}~0
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a56858d18c7eda4f53664496ef566f651}{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a15b85de192a189d5a31cdd518e001e6e}{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}~1
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a85523a0c7d95c059d251b4e9829947aa}{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}~1
+\item 
+\#define \hyperlink{doctokenizer_8cpp_aacfdca45fa4beb8b06172525a53c424a}{Y\+Y\+\_\+\+I\+N\+P\+U\+T}(buf,  result,  max\+\_\+size)~result=yyread(buf,max\+\_\+size);
+\item 
+\#define \hyperlink{doctokenizer_8cpp_aa3d063564f6ab16f6d408b8369d0e9ff}{I\+N\+I\+T\+I\+A\+L}~0
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a8d7d6ed033c7c7bc74f2f675748f2061}{St\+\_\+\+Para}~1
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a487d3ef72da47cd53670abd859039991}{St\+\_\+\+Comment}~2
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a8fd5d96209dc37cded1d4b5b302f4905}{St\+\_\+\+Title}~3
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a0fa11ebecb3a4314dcf03ebd7b97d353}{St\+\_\+\+Title\+N}~4
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a481e1a85febe9033b5194677ea202431}{St\+\_\+\+Title\+Q}~5
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a7b438f93e80f2a3df914b97e283123cc}{St\+\_\+\+Title\+A}~6
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a9894ea58149dc13a34dda89f3da85bdb}{St\+\_\+\+Title\+V}~7
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a067b92f7ee768bee1dd1f5c1a1a09c05}{St\+\_\+\+Code}~8
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a19ca49f15c0668285c46ed8d5a275347}{St\+\_\+\+Code\+Opt}~9
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a3c84c65c19aae3cad2941b196d40a546}{St\+\_\+\+Xml\+Code}~10
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a029f7a710facb0c18e94061dd50fe0aa}{St\+\_\+\+Html\+Only}~11
+\item 
+\#define \hyperlink{doctokenizer_8cpp_adab42d316e85fc4004f2627c1c15d130}{St\+\_\+\+Html\+Only\+Option}~12
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a9e6fc27926fc618b43bed57267235e1b}{St\+\_\+\+Man\+Only}~13
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ab454e7c402e8a6878509db2b247203b3}{St\+\_\+\+Latex\+Only}~14
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a896d10a0c464778fd5013f63edc738c1}{St\+\_\+\+Rtf\+Only}~15
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a0be636c8984ab5bb1e81056cf693e0cc}{St\+\_\+\+Xml\+Only}~16
+\item 
+\#define \hyperlink{doctokenizer_8cpp_acfd96cf3da77b15fc4516dc4a97e071d}{St\+\_\+\+Db\+Only}~17
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a1b0b42ccab03235c82780f33f738135c}{St\+\_\+\+Verbatim}~18
+\item 
+\#define \hyperlink{doctokenizer_8cpp_aff95712804e956c547bc46c29b8910bf}{St\+\_\+\+Dot}~19
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a667fa863df083703f9c5cd28637e3694}{St\+\_\+\+Msc}~20
+\item 
+\#define \hyperlink{doctokenizer_8cpp_af79885e13d79d062f24d6ceaae0b9906}{St\+\_\+\+Plant\+U\+M\+L\+Opt}~21
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a1e8074f5a8223a1f9962577fc15177f8}{St\+\_\+\+Plant\+U\+M\+L}~22
+\item 
+\#define \hyperlink{doctokenizer_8cpp_afab9146ed02f560e019321b95824b9f6}{St\+\_\+\+Param}~23
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ac5f8dfaa1353e07efe0a37c1261bc2ae}{St\+\_\+\+X\+Ref\+Item}~24
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a8a75a4c2ca37b0f963f48bbf57cf405a}{St\+\_\+\+X\+Ref\+Item2}~25
+\item 
+\#define \hyperlink{doctokenizer_8cpp_aa2c7baba1fff14e50699a80f9ac595ab}{St\+\_\+\+File}~26
+\item 
+\#define \hyperlink{doctokenizer_8cpp_aacbadeb8c23fe181c5ab137bb7d7dc89}{St\+\_\+\+Pattern}~27
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a8918a3a30ddf51a9406a0657acc90eae}{St\+\_\+\+Link}~28
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a610437306582cb6e233d9698484af98f}{St\+\_\+\+Cite}~29
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ad1d8ca1ab170df6060376bd04e12f766}{St\+\_\+\+Ref}~30
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a66d79fe054e0529babf5ebaf4b96728f}{St\+\_\+\+Ref2}~31
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a6eb92cd9f994056778fd53d8bc90e72f}{St\+\_\+\+Int\+Ref}~32
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a01257d3d805eb2411ee76783c7b1854e}{St\+\_\+\+Text}~33
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ae0276ff9a4f1c90490659d074b74264a}{St\+\_\+\+Skip\+Title}~34
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a91620efe292fa047b89f83c61baa774d}{St\+\_\+\+Anchor}~35
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ae346066c5bb88a5f7eef5d5d44e63e0d}{St\+\_\+\+Snippet}~36
+\item 
+\#define \hyperlink{doctokenizer_8cpp_acdb15472af89e1831d2fa091644040cb}{St\+\_\+\+Set\+Scope}~37
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ab3e7177e8b463dd8598d63c3d8ef9a2c}{St\+\_\+\+Set\+Scope\+End}~38
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ab74a059633e016dc679d6951fdb96a02}{St\+\_\+\+Sections}~39
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a27b7618c05a1bf325cdef63f78791a09}{St\+\_\+\+Sec\+Label1}~40
+\item 
+\#define \hyperlink{doctokenizer_8cpp_aaf233e3f41c734373dc74607909557cc}{St\+\_\+\+Sec\+Label2}~41
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a1311e1893f82c5d6a9989506a8ed373e}{St\+\_\+\+Sec\+Title}~42
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a397fe96ce69a2a8df6733a4eaa5724b0}{St\+\_\+\+Sec\+Skip}~43
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a26938d921de835f6183c02e54cf08828}{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}~void $\ast$
+\item 
+\#define \hyperlink{doctokenizer_8cpp_aab1491ceccb1c95c14320b2903773a1c}{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}~262144
+\item 
+\#define \hyperlink{doctokenizer_8cpp_aad1dc60a04a1d8cfc8b3ded13601e361}{E\+C\+H\+O}~fwrite( \hyperlink{doctokenizer_8cpp_a5a2c8bd6232d793f3e2cf86de0909509}{doctokenizer\+Y\+Ytext}, \hyperlink{doctokenizer_8cpp_a067da8359de18788f58fb01bd4128d38}{doctokenizer\+Y\+Yleng}, 1, \hyperlink{doctokenizer_8cpp_a18af7383737e52cc59a83dac94b4f735}{doctokenizer\+Y\+Yout} )
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ac3286b18a2e91b4571b97df96a118e84}{yyterminate}()~return \hyperlink{xmlcode_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}{Y\+Y\+\_\+\+N\+U\+L\+L}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a227e75c43b9e0cd41529974230be7e75}{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}~25
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}(\hyperlink{message_8h_aba549a028419cd48a3f373037c2c57eb}{msg})~yy\+\_\+fatal\+\_\+error( \hyperlink{message_8h_aba549a028419cd48a3f373037c2c57eb}{msg} )
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a7682c8d9cec0859408d2421fbe4a5570}{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}~1
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ae5b01ac2fa5a6ad5fb97559638abe686}{Y\+Y\+\_\+\+D\+E\+C\+L}~int \hyperlink{doctokenizer_8h_a3e518d095f77b1d681f54a27d8de5ef3}{doctokenizer\+Y\+Ylex} (void)
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a3cc40a460ad7df816678bcc05241e84c}{Y\+Y\+\_\+\+B\+R\+E\+A\+K}~break;
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a690504b662e4281515bf12722df178ba}{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}~2
+\item 
+\#define \hyperlink{doctokenizer_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{yyless}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+\#define \hyperlink{doctokenizer_8cpp_a828cc83270f8f5bb1688e14dd4e28128}{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}~\char`\"{}yytables\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef signed char \hyperlink{doctokenizer_8cpp_a7b0840dff4a2ef1702118aa12264b2a7}{flex\+\_\+int8\+\_\+t}
+\item 
+typedef short int \hyperlink{doctokenizer_8cpp_a2e73b2c75126814585525fb2e9d51159}{flex\+\_\+int16\+\_\+t}
+\item 
+typedef int \hyperlink{doctokenizer_8cpp_a838ce943cf44ef7769480714fc6c3ba9}{flex\+\_\+int32\+\_\+t}
+\item 
+typedef unsigned char \hyperlink{doctokenizer_8cpp_a0fac5ea484f64e75dbe6eba4aa61750c}{flex\+\_\+uint8\+\_\+t}
+\item 
+typedef unsigned short int \hyperlink{doctokenizer_8cpp_ac50cdb9eefbef83a1cec89e3a7f6e1d2}{flex\+\_\+uint16\+\_\+t}
+\item 
+typedef unsigned int \hyperlink{doctokenizer_8cpp_a36869712de12820c73aae736762e8e88}{flex\+\_\+uint32\+\_\+t}
+\item 
+typedef struct \hyperlink{structyy__buffer__state}{yy\+\_\+buffer\+\_\+state} $\ast$ \hyperlink{doctokenizer_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}
+\item 
+typedef size\+\_\+t \hyperlink{doctokenizer_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t}
+\item 
+typedef unsigned char \hyperlink{doctokenizer_8cpp_a1f324b3cb0839eeb90145f0274e6946e}{Y\+Y\+\_\+\+C\+H\+A\+R}
+\item 
+typedef int \hyperlink{doctokenizer_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{yy\+\_\+state\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{doctokenizer_8cpp_a94913854d681143d57729d0a3ec6f166}{doctokenizer\+Y\+Yrestart} (F\+I\+L\+E $\ast$input\+\_\+file)
+\item 
+void \hyperlink{doctokenizer_8cpp_a758eaf4e5e9f0a35f985ced124288eb3}{doctokenizer\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} new\+\_\+buffer)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{doctokenizer_8cpp_a33b1f31ef9c4e8913333c4219faa7447}{doctokenizer\+Y\+Y\+\_\+create\+\_\+buffer} (F\+I\+L\+E $\ast$file, int size)
+\item 
+void \hyperlink{doctokenizer_8cpp_a335816cb1f4db45d7ecebd3cdc750da7}{doctokenizer\+Y\+Y\+\_\+delete\+\_\+buffer} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b})
+\item 
+void \hyperlink{doctokenizer_8cpp_ac57821f42b45d41955854b3288b4cf4a}{doctokenizer\+Y\+Y\+\_\+flush\+\_\+buffer} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b})
+\item 
+void \hyperlink{doctokenizer_8cpp_a26d05b160e72d01f0fd1240ee3003367}{doctokenizer\+Y\+Ypush\+\_\+buffer\+\_\+state} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} new\+\_\+buffer)
+\item 
+void \hyperlink{doctokenizer_8cpp_a0643ef8f7330d9fadd56da5d424fb0ff}{doctokenizer\+Y\+Ypop\+\_\+buffer\+\_\+state} (void)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{doctokenizer_8cpp_a542cf4bf474f1fcf732e785d44658826}{doctokenizer\+Y\+Y\+\_\+scan\+\_\+buffer} (char $\ast$base, \hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} size)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{doctokenizer_8cpp_ac0a62b87a4414492647af25324f27594}{doctokenizer\+Y\+Y\+\_\+scan\+\_\+string} (\hyperlink{xmlcode_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst} char $\ast$yy\+\_\+str)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{doctokenizer_8cpp_a660c971d28b3da91698b406a0f5db232}{doctokenizer\+Y\+Y\+\_\+scan\+\_\+bytes} (\hyperlink{xmlcode_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst} char $\ast$bytes, \hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} len)
+\item 
+void $\ast$ \hyperlink{doctokenizer_8cpp_a4b09fdd64e14d6962668f33778960f0e}{doctokenizer\+Y\+Yalloc} (\hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t})
+\item 
+void $\ast$ \hyperlink{doctokenizer_8cpp_a5524a0991249fa656d722bbf9b2217eb}{doctokenizer\+Y\+Yrealloc} (void $\ast$, \hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t})
+\item 
+void \hyperlink{doctokenizer_8cpp_af51fb64eb87a80f64e2c18fe74e038a6}{doctokenizer\+Y\+Yfree} (void $\ast$)
+\item 
+void \hyperlink{doctokenizer_8cpp_a1ad544019a5d03f9dce8ed0aa7843417}{doctokenizer\+Y\+Ypush\+Context} ()
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{doctokenizer_8cpp_a44e35da7f5bb350b7efbc7d79a6301b9}{doctokenizer\+Y\+Ypop\+Context} ()
+\item 
+const char $\ast$ \hyperlink{doctokenizer_8cpp_a2a98a6f15df23cdeae56a759def54baf}{tok\+To\+String} (int token)
+\item 
+int \hyperlink{doctokenizer_8cpp_a4ec661f2cde9385b1297e2f980a6a8a7}{doctokenizer\+Y\+Ylex\+\_\+destroy} (void)
+\item 
+int \hyperlink{doctokenizer_8cpp_a996319d74fdfea00f5e252ef9a624fb0}{doctokenizer\+Y\+Yget\+\_\+debug} (void)
+\item 
+void \hyperlink{doctokenizer_8cpp_a5f71b35524502bf5ea0b3ba76c5d42f0}{doctokenizer\+Y\+Yset\+\_\+debug} (int debug\+\_\+flag)
+\item 
+\hyperlink{xmlcode_8cpp_a26938d921de835f6183c02e54cf08828}{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E} \hyperlink{doctokenizer_8cpp_a52ecf064ad4d2e0cbcd21604e4a6aeb0}{doctokenizer\+Y\+Yget\+\_\+extra} (void)
+\item 
+void \hyperlink{doctokenizer_8cpp_a3968291e6b415f65c75e274ede58e0b6}{doctokenizer\+Y\+Yset\+\_\+extra} (\hyperlink{xmlcode_8cpp_a26938d921de835f6183c02e54cf08828}{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E} user\+\_\+defined)
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{doctokenizer_8cpp_a2c7d25726b168f93d36d7f8cc500bf1d}{doctokenizer\+Y\+Yget\+\_\+in} (void)
+\item 
+void \hyperlink{doctokenizer_8cpp_a81c41954829105f9ced1ba1419617628}{doctokenizer\+Y\+Yset\+\_\+in} (F\+I\+L\+E $\ast$in\+\_\+str)
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{doctokenizer_8cpp_a14d8a571b4fdaba9ab55dd42f498f261}{doctokenizer\+Y\+Yget\+\_\+out} (void)
+\item 
+void \hyperlink{doctokenizer_8cpp_a41e9ce5c89e0fbe7139ab181e7dd1ba5}{doctokenizer\+Y\+Yset\+\_\+out} (F\+I\+L\+E $\ast$out\+\_\+str)
+\item 
+\hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} \hyperlink{doctokenizer_8cpp_a7a8af2486c16cd3316f4882113069a5b}{doctokenizer\+Y\+Yget\+\_\+leng} (void)
+\item 
+char $\ast$ \hyperlink{doctokenizer_8cpp_a037a1b3b549783ade30ca19d7b33a673}{doctokenizer\+Y\+Yget\+\_\+text} (void)
+\item 
+int \hyperlink{doctokenizer_8cpp_adc68dfdba8c4d86fd179a4c3a4b4e237}{doctokenizer\+Y\+Yget\+\_\+lineno} (void)
+\item 
+void \hyperlink{doctokenizer_8cpp_a7f45bfe19e3f6615f755ec8dd4015cac}{doctokenizer\+Y\+Yset\+\_\+lineno} (int line\+\_\+number)
+\item 
+int \hyperlink{doctokenizer_8cpp_a86550f1a87cdc6a21ac06d277c95c238}{doctokenizer\+Y\+Ylex} (void)
+\item 
+\hyperlink{doctokenizer_8cpp_ad4a65b873df5c05570846b5413b41dfd}{if} (!(yy\+\_\+init))
+\item 
+\hyperlink{doctokenizer_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{while} (1)
+\item 
+int \hyperlink{doctokenizer_8cpp_ab4155ffea05dab2dafae68fd88a0517f}{isatty} (int)
+\item 
+void \hyperlink{doctokenizer_8cpp_a6497989e3c95adbefa694460443ff909}{doctokenizer\+Y\+Y\+Find\+Sections} (const char $\ast$input, \hyperlink{class_definition}{Definition} $\ast$\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}, \hyperlink{class_member_group}{Member\+Group} $\ast$mg, const char $\ast$file\+Name)
+\item 
+void \hyperlink{doctokenizer_8cpp_af0fbfef38dfe206447c10c3ea7630f88}{doctokenizer\+Y\+Yinit} (const char $\ast$input, const char $\ast$file\+Name)
+\item 
+void \hyperlink{doctokenizer_8cpp_a2aaff9c507b173362117117bdd1805de}{doctokenizer\+Y\+Yset\+State\+Para} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_a63c54ed5a866fe6df6e2a3b4b681fdc1}{doctokenizer\+Y\+Yset\+State\+Title} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_aa341f65b931c443a65c1da020f9c0575}{doctokenizer\+Y\+Yset\+State\+Title\+Attr\+Value} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_ad7bbf8187cf8035dae6572bc2074638b}{doctokenizer\+Y\+Yset\+State\+Code} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_a83f3319c16bc4f5ed222920ebe9cd094}{doctokenizer\+Y\+Yset\+State\+Xml\+Code} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_aabc8fb45704f763669cb779ad00eac8d}{doctokenizer\+Y\+Yset\+State\+Html\+Only} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_a0e68fd576eb5c2993f504b19936b2d5b}{doctokenizer\+Y\+Yset\+State\+Man\+Only} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_acae75c924706d62377a86fe38d8b1347}{doctokenizer\+Y\+Yset\+State\+Rtf\+Only} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_a547733a2ce6a8c0e25f5d0749aa3f5fa}{doctokenizer\+Y\+Yset\+State\+Xml\+Only} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_aaa58a7d460684f8f4b4016d68257193e}{doctokenizer\+Y\+Yset\+State\+Db\+Only} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_aedf23d1fdd2d3330e068120f1b322e37}{doctokenizer\+Y\+Yset\+State\+Latex\+Only} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_aef6c57535e24c04a4f4f1c3167f0312b}{doctokenizer\+Y\+Yset\+State\+Verbatim} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_a12284a3bf0d5614ea1aac89c968014d0}{doctokenizer\+Y\+Yset\+State\+Dot} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_ad202c1e9db88a8f5c0d3ddad81729d18}{doctokenizer\+Y\+Yset\+State\+Msc} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_a31888cbfeb5f9296d91f1eaee5ad9506}{doctokenizer\+Y\+Yset\+State\+Plant\+U\+M\+L\+Opt} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_a3dee0207372f2133d318be7ece514767}{doctokenizer\+Y\+Yset\+State\+Plant\+U\+M\+L} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_a80daa02a4a285610d6b9ab7f9e1044f5}{doctokenizer\+Y\+Yset\+State\+Param} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_aed7c2e03ad1c6f387c9f5d1e0b2f6e5c}{doctokenizer\+Y\+Yset\+State\+X\+Ref\+Item} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_af2853fe98871a15614e098082c6390b0}{doctokenizer\+Y\+Yset\+State\+File} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_a46b7b5778fe56263a2f26d53303772fc}{doctokenizer\+Y\+Yset\+State\+Pattern} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_ad41685e7ebe83cd14bf9c36145d93c75}{doctokenizer\+Y\+Yset\+State\+Link} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_af42238f1be74394fdb7436160c708586}{doctokenizer\+Y\+Yset\+State\+Cite} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_aa824631822cf355273c15f3edf7bd962}{doctokenizer\+Y\+Yset\+State\+Ref} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_a4c2f7d7ee941bcc3427479e1e64a30f0}{doctokenizer\+Y\+Yset\+State\+Internal\+Ref} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_a49f0218a87e5afcc197d34cf922b9331}{doctokenizer\+Y\+Yset\+State\+Text} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_a2387759f8b10f2fd7adcfe0c5a6c36fa}{doctokenizer\+Y\+Yset\+State\+Skip\+Title} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_a7cdee9515612b83cdf77ed1b30616d8f}{doctokenizer\+Y\+Yset\+State\+Anchor} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_a2c2487633cc4d3a29c24864e45154748}{doctokenizer\+Y\+Yset\+State\+Snippet} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_ad8ed04eb77a16cf4a29f8fa616de6324}{doctokenizer\+Y\+Yset\+State\+Set\+Scope} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_a98cb372ba6f8aec638e7bb11b1372fbe}{doctokenizer\+Y\+Ycleanup} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_aaa52449c09f622600dae24e48939de13}{doctokenizer\+Y\+Yset\+Inside\+Pre} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b})
+\item 
+void \hyperlink{doctokenizer_8cpp_ad040b79f378a00fdb88db12dbb3a4954}{doctokenizer\+Y\+Ypush\+Back\+Html\+Tag} (const char $\ast$tag)
+\item 
+void \hyperlink{doctokenizer_8cpp_acefc8a01c606a789d98a11eed6ff1902}{doctokenizer\+Y\+Ystart\+Auto\+List} ()
+\item 
+void \hyperlink{doctokenizer_8cpp_a65fd905b670a28c49a6478be6bbfebf3}{doctokenizer\+Y\+Yend\+Auto\+List} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} \hyperlink{doctokenizer_8cpp_a067da8359de18788f58fb01bd4128d38}{doctokenizer\+Y\+Yleng}
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{doctokenizer_8cpp_a14b5831e305b3ba6fa3b94d65844a261}{doctokenizer\+Y\+Yin} = (F\+I\+L\+E $\ast$) 0
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{doctokenizer_8cpp_a18af7383737e52cc59a83dac94b4f735}{doctokenizer\+Y\+Yout} = (F\+I\+L\+E $\ast$) 0
+\item 
+int \hyperlink{doctokenizer_8cpp_aa2c414f2e33cf9014cad85e137da0e95}{doctokenizer\+Y\+Ylineno} = 1
+\item 
+char $\ast$ \hyperlink{doctokenizer_8cpp_a5a2c8bd6232d793f3e2cf86de0909509}{doctokenizer\+Y\+Ytext}
+\item 
+int \hyperlink{doctokenizer_8cpp_ab58a7ae8bccfe0ea881e4fce12f22c9d}{doctokenizer\+Y\+Y\+\_\+flex\+\_\+debug} = 0
+\item 
+\hyperlink{struct_token_info}{Token\+Info} $\ast$ \hyperlink{doctokenizer_8cpp_a31196325b225b79fbc6b5d6683273f02}{g\+\_\+token} = 0
+\item 
+\hyperlink{doctokenizer_8cpp_abcefb20c54ce0f92452cfbb9cf657670}{Y\+Y\+\_\+\+D\+E\+C\+L}
+\item 
+register char $\ast$ \hyperlink{doctokenizer_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\+\_\+cp}
+\item 
+register char $\ast$ \hyperlink{doctokenizer_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\+\_\+bp}
+\item 
+register int \hyperlink{doctokenizer_8cpp_a7ffc8c947830757dd87ad202a6823edd}{yy\+\_\+act}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{doctokenizer_8cpp_ab766bbbee08d04b67e3fe599d6900873}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!B\+E\+G\+I\+N@{B\+E\+G\+I\+N}}
+\index{B\+E\+G\+I\+N@{B\+E\+G\+I\+N}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{B\+E\+G\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+E\+G\+I\+N~(yy\+\_\+start) = 1 + 2 $\ast$}\label{doctokenizer_8cpp_ab766bbbee08d04b67e3fe599d6900873}
+\hypertarget{doctokenizer_8cpp_a9314d569b10e43e44009c8acb2046563}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Ywrap@{doctokenizer\+Y\+Ywrap}}
+\index{doctokenizer\+Y\+Ywrap@{doctokenizer\+Y\+Ywrap}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Ywrap}]{\setlength{\rightskip}{0pt plus 5cm}\#define doctokenizer\+Y\+Ywrap(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)~1}\label{doctokenizer_8cpp_a9314d569b10e43e44009c8acb2046563}
+\hypertarget{doctokenizer_8cpp_aad1dc60a04a1d8cfc8b3ded13601e361}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!E\+C\+H\+O@{E\+C\+H\+O}}
+\index{E\+C\+H\+O@{E\+C\+H\+O}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{E\+C\+H\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+C\+H\+O~fwrite( {\bf doctokenizer\+Y\+Ytext}, {\bf doctokenizer\+Y\+Yleng}, 1, {\bf doctokenizer\+Y\+Yout} )}\label{doctokenizer_8cpp_aad1dc60a04a1d8cfc8b3ded13601e361}
+\hypertarget{doctokenizer_8cpp_adf4b0db227e07782e28ade353a7ba7a1}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}}
+\index{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N~0}\label{doctokenizer_8cpp_adf4b0db227e07782e28ade353a7ba7a1}
+\hypertarget{doctokenizer_8cpp_a7f71d7fa2c403eb4b2f38cb9536f3c63}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}}
+\index{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E~1}\label{doctokenizer_8cpp_a7f71d7fa2c403eb4b2f38cb9536f3c63}
+\hypertarget{doctokenizer_8cpp_ad1a0b5ebcabffe388e9e9ebb2619c1fb}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}}
+\index{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H~2}\label{doctokenizer_8cpp_ad1a0b5ebcabffe388e9e9ebb2619c1fb}
+\hypertarget{doctokenizer_8cpp_a9465c9986fdda27730c9dff8d16a0887}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!F\+L\+E\+X\+\_\+\+B\+E\+T\+A@{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}}
+\index{F\+L\+E\+X\+\_\+\+B\+E\+T\+A@{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+E\+X\+\_\+\+B\+E\+T\+A}\label{doctokenizer_8cpp_a9465c9986fdda27730c9dff8d16a0887}
+\hypertarget{doctokenizer_8cpp_a3c3d1ef92e93b0bc81d7760a73d5c3b6}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R@{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}}
+\index{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R@{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}\label{doctokenizer_8cpp_a3c3d1ef92e93b0bc81d7760a73d5c3b6}
+\hypertarget{doctokenizer_8cpp_aec980b5a71bbe6d67931df20f0ebaec4}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!F\+L\+E\+X\+I\+N\+T\+\_\+\+H@{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}}
+\index{F\+L\+E\+X\+I\+N\+T\+\_\+\+H@{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+E\+X\+I\+N\+T\+\_\+\+H}\label{doctokenizer_8cpp_aec980b5a71bbe6d67931df20f0ebaec4}
+\hypertarget{doctokenizer_8cpp_aa3d063564f6ab16f6d408b8369d0e9ff}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!I\+N\+I\+T\+I\+A\+L@{I\+N\+I\+T\+I\+A\+L}}
+\index{I\+N\+I\+T\+I\+A\+L@{I\+N\+I\+T\+I\+A\+L}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{I\+N\+I\+T\+I\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+I\+T\+I\+A\+L~0}\label{doctokenizer_8cpp_aa3d063564f6ab16f6d408b8369d0e9ff}
+\hypertarget{doctokenizer_8cpp_ac58f2c111cc9989c86db2a7dc4fd84ca}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!I\+N\+T16\+\_\+\+M\+A\+X@{I\+N\+T16\+\_\+\+M\+A\+X}}
+\index{I\+N\+T16\+\_\+\+M\+A\+X@{I\+N\+T16\+\_\+\+M\+A\+X}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{I\+N\+T16\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T16\+\_\+\+M\+A\+X~(32767)}\label{doctokenizer_8cpp_ac58f2c111cc9989c86db2a7dc4fd84ca}
+\hypertarget{doctokenizer_8cpp_ad4e9955955b27624963643eac448118a}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!I\+N\+T16\+\_\+\+M\+I\+N@{I\+N\+T16\+\_\+\+M\+I\+N}}
+\index{I\+N\+T16\+\_\+\+M\+I\+N@{I\+N\+T16\+\_\+\+M\+I\+N}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{I\+N\+T16\+\_\+\+M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T16\+\_\+\+M\+I\+N~(-\/32767-\/1)}\label{doctokenizer_8cpp_ad4e9955955b27624963643eac448118a}
+\hypertarget{doctokenizer_8cpp_a181807730d4a375f848ba139813ce04f}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!I\+N\+T32\+\_\+\+M\+A\+X@{I\+N\+T32\+\_\+\+M\+A\+X}}
+\index{I\+N\+T32\+\_\+\+M\+A\+X@{I\+N\+T32\+\_\+\+M\+A\+X}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{I\+N\+T32\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T32\+\_\+\+M\+A\+X~(2147483647)}\label{doctokenizer_8cpp_a181807730d4a375f848ba139813ce04f}
+\hypertarget{doctokenizer_8cpp_a688eb21a22db27c2b2bd5836943cdcbe}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!I\+N\+T32\+\_\+\+M\+I\+N@{I\+N\+T32\+\_\+\+M\+I\+N}}
+\index{I\+N\+T32\+\_\+\+M\+I\+N@{I\+N\+T32\+\_\+\+M\+I\+N}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{I\+N\+T32\+\_\+\+M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T32\+\_\+\+M\+I\+N~(-\/2147483647-\/1)}\label{doctokenizer_8cpp_a688eb21a22db27c2b2bd5836943cdcbe}
+\hypertarget{doctokenizer_8cpp_aaf7f29f45f1a513b4748a4e5014ddf6a}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!I\+N\+T8\+\_\+\+M\+A\+X@{I\+N\+T8\+\_\+\+M\+A\+X}}
+\index{I\+N\+T8\+\_\+\+M\+A\+X@{I\+N\+T8\+\_\+\+M\+A\+X}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{I\+N\+T8\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T8\+\_\+\+M\+A\+X~(127)}\label{doctokenizer_8cpp_aaf7f29f45f1a513b4748a4e5014ddf6a}
+\hypertarget{doctokenizer_8cpp_aadcf2a81af243df333b31efa6461ab8e}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!I\+N\+T8\+\_\+\+M\+I\+N@{I\+N\+T8\+\_\+\+M\+I\+N}}
+\index{I\+N\+T8\+\_\+\+M\+I\+N@{I\+N\+T8\+\_\+\+M\+I\+N}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{I\+N\+T8\+\_\+\+M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T8\+\_\+\+M\+I\+N~(-\/128)}\label{doctokenizer_8cpp_aadcf2a81af243df333b31efa6461ab8e}
+\hypertarget{doctokenizer_8cpp_a835f10dd1ab4bf9a80c4cd80ee6e3058}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!R\+E\+J\+E\+C\+T@{R\+E\+J\+E\+C\+T}}
+\index{R\+E\+J\+E\+C\+T@{R\+E\+J\+E\+C\+T}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{R\+E\+J\+E\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+J\+E\+C\+T}\label{doctokenizer_8cpp_a835f10dd1ab4bf9a80c4cd80ee6e3058}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\{ \(\backslash\)
+*\hyperlink{doctokenizer_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = (yy\_hold\_char); \textcolor{comment}{/* undo effects of setting up doctokenizerYYtext */} 
+      \hyperlink{doctokenizer_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{\(\backslash\)}
+\hyperlink{doctokenizer_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = (yy\_full\_match); \textcolor{comment}{/* restore poss. backed-over text */} \(\backslash\)
+(yy\_lp) = (yy\_full\_lp); \textcolor{comment}{/* restore orig. accepting pos. */} \(\backslash\)
+(yy\_state\_ptr) = (yy\_full\_state); \textcolor{comment}{/* restore orig. state */} \hyperlink{constexp_8cpp_a86a21c2101611f87781b40b111e65aac}{\(\backslash\)}
+\hyperlink{constexp_8cpp_a86a21c2101611f87781b40b111e65aac}{yy\_current\_state} = *(yy\_state\_ptr); \textcolor{comment}{/* restore curr. state */} \(\backslash\)
+++(yy\_lp); \(\backslash\)
+goto find\_rule; \(\backslash\)
+\}
+\end{DoxyCode}
+\hypertarget{doctokenizer_8cpp_a91620efe292fa047b89f83c61baa774d}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Anchor@{St\+\_\+\+Anchor}}
+\index{St\+\_\+\+Anchor@{St\+\_\+\+Anchor}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Anchor}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Anchor~35}\label{doctokenizer_8cpp_a91620efe292fa047b89f83c61baa774d}
+\hypertarget{doctokenizer_8cpp_a610437306582cb6e233d9698484af98f}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Cite@{St\+\_\+\+Cite}}
+\index{St\+\_\+\+Cite@{St\+\_\+\+Cite}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Cite}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Cite~29}\label{doctokenizer_8cpp_a610437306582cb6e233d9698484af98f}
+\hypertarget{doctokenizer_8cpp_a067b92f7ee768bee1dd1f5c1a1a09c05}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Code@{St\+\_\+\+Code}}
+\index{St\+\_\+\+Code@{St\+\_\+\+Code}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Code}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Code~8}\label{doctokenizer_8cpp_a067b92f7ee768bee1dd1f5c1a1a09c05}
+\hypertarget{doctokenizer_8cpp_a19ca49f15c0668285c46ed8d5a275347}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Code\+Opt@{St\+\_\+\+Code\+Opt}}
+\index{St\+\_\+\+Code\+Opt@{St\+\_\+\+Code\+Opt}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Code\+Opt}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Code\+Opt~9}\label{doctokenizer_8cpp_a19ca49f15c0668285c46ed8d5a275347}
+\hypertarget{doctokenizer_8cpp_a487d3ef72da47cd53670abd859039991}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Comment@{St\+\_\+\+Comment}}
+\index{St\+\_\+\+Comment@{St\+\_\+\+Comment}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Comment}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Comment~2}\label{doctokenizer_8cpp_a487d3ef72da47cd53670abd859039991}
+\hypertarget{doctokenizer_8cpp_acfd96cf3da77b15fc4516dc4a97e071d}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Db\+Only@{St\+\_\+\+Db\+Only}}
+\index{St\+\_\+\+Db\+Only@{St\+\_\+\+Db\+Only}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Db\+Only}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Db\+Only~17}\label{doctokenizer_8cpp_acfd96cf3da77b15fc4516dc4a97e071d}
+\hypertarget{doctokenizer_8cpp_aff95712804e956c547bc46c29b8910bf}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Dot@{St\+\_\+\+Dot}}
+\index{St\+\_\+\+Dot@{St\+\_\+\+Dot}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Dot}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Dot~19}\label{doctokenizer_8cpp_aff95712804e956c547bc46c29b8910bf}
+\hypertarget{doctokenizer_8cpp_aa2c7baba1fff14e50699a80f9ac595ab}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+File@{St\+\_\+\+File}}
+\index{St\+\_\+\+File@{St\+\_\+\+File}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+File}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+File~26}\label{doctokenizer_8cpp_aa2c7baba1fff14e50699a80f9ac595ab}
+\hypertarget{doctokenizer_8cpp_a029f7a710facb0c18e94061dd50fe0aa}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Html\+Only@{St\+\_\+\+Html\+Only}}
+\index{St\+\_\+\+Html\+Only@{St\+\_\+\+Html\+Only}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Html\+Only}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Html\+Only~11}\label{doctokenizer_8cpp_a029f7a710facb0c18e94061dd50fe0aa}
+\hypertarget{doctokenizer_8cpp_adab42d316e85fc4004f2627c1c15d130}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Html\+Only\+Option@{St\+\_\+\+Html\+Only\+Option}}
+\index{St\+\_\+\+Html\+Only\+Option@{St\+\_\+\+Html\+Only\+Option}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Html\+Only\+Option}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Html\+Only\+Option~12}\label{doctokenizer_8cpp_adab42d316e85fc4004f2627c1c15d130}
+\hypertarget{doctokenizer_8cpp_a6eb92cd9f994056778fd53d8bc90e72f}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Int\+Ref@{St\+\_\+\+Int\+Ref}}
+\index{St\+\_\+\+Int\+Ref@{St\+\_\+\+Int\+Ref}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Int\+Ref}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Int\+Ref~32}\label{doctokenizer_8cpp_a6eb92cd9f994056778fd53d8bc90e72f}
+\hypertarget{doctokenizer_8cpp_ab454e7c402e8a6878509db2b247203b3}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Latex\+Only@{St\+\_\+\+Latex\+Only}}
+\index{St\+\_\+\+Latex\+Only@{St\+\_\+\+Latex\+Only}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Latex\+Only}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Latex\+Only~14}\label{doctokenizer_8cpp_ab454e7c402e8a6878509db2b247203b3}
+\hypertarget{doctokenizer_8cpp_a8918a3a30ddf51a9406a0657acc90eae}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Link@{St\+\_\+\+Link}}
+\index{St\+\_\+\+Link@{St\+\_\+\+Link}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Link}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Link~28}\label{doctokenizer_8cpp_a8918a3a30ddf51a9406a0657acc90eae}
+\hypertarget{doctokenizer_8cpp_a9e6fc27926fc618b43bed57267235e1b}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Man\+Only@{St\+\_\+\+Man\+Only}}
+\index{St\+\_\+\+Man\+Only@{St\+\_\+\+Man\+Only}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Man\+Only}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Man\+Only~13}\label{doctokenizer_8cpp_a9e6fc27926fc618b43bed57267235e1b}
+\hypertarget{doctokenizer_8cpp_a667fa863df083703f9c5cd28637e3694}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Msc@{St\+\_\+\+Msc}}
+\index{St\+\_\+\+Msc@{St\+\_\+\+Msc}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Msc}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Msc~20}\label{doctokenizer_8cpp_a667fa863df083703f9c5cd28637e3694}
+\hypertarget{doctokenizer_8cpp_a8d7d6ed033c7c7bc74f2f675748f2061}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Para@{St\+\_\+\+Para}}
+\index{St\+\_\+\+Para@{St\+\_\+\+Para}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Para}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Para~1}\label{doctokenizer_8cpp_a8d7d6ed033c7c7bc74f2f675748f2061}
+\hypertarget{doctokenizer_8cpp_afab9146ed02f560e019321b95824b9f6}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Param@{St\+\_\+\+Param}}
+\index{St\+\_\+\+Param@{St\+\_\+\+Param}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Param}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Param~23}\label{doctokenizer_8cpp_afab9146ed02f560e019321b95824b9f6}
+\hypertarget{doctokenizer_8cpp_aacbadeb8c23fe181c5ab137bb7d7dc89}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Pattern@{St\+\_\+\+Pattern}}
+\index{St\+\_\+\+Pattern@{St\+\_\+\+Pattern}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Pattern}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Pattern~27}\label{doctokenizer_8cpp_aacbadeb8c23fe181c5ab137bb7d7dc89}
+\hypertarget{doctokenizer_8cpp_a1e8074f5a8223a1f9962577fc15177f8}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Plant\+U\+M\+L@{St\+\_\+\+Plant\+U\+M\+L}}
+\index{St\+\_\+\+Plant\+U\+M\+L@{St\+\_\+\+Plant\+U\+M\+L}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Plant\+U\+M\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Plant\+U\+M\+L~22}\label{doctokenizer_8cpp_a1e8074f5a8223a1f9962577fc15177f8}
+\hypertarget{doctokenizer_8cpp_af79885e13d79d062f24d6ceaae0b9906}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Plant\+U\+M\+L\+Opt@{St\+\_\+\+Plant\+U\+M\+L\+Opt}}
+\index{St\+\_\+\+Plant\+U\+M\+L\+Opt@{St\+\_\+\+Plant\+U\+M\+L\+Opt}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Plant\+U\+M\+L\+Opt}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Plant\+U\+M\+L\+Opt~21}\label{doctokenizer_8cpp_af79885e13d79d062f24d6ceaae0b9906}
+\hypertarget{doctokenizer_8cpp_ad1d8ca1ab170df6060376bd04e12f766}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Ref@{St\+\_\+\+Ref}}
+\index{St\+\_\+\+Ref@{St\+\_\+\+Ref}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Ref}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Ref~30}\label{doctokenizer_8cpp_ad1d8ca1ab170df6060376bd04e12f766}
+\hypertarget{doctokenizer_8cpp_a66d79fe054e0529babf5ebaf4b96728f}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Ref2@{St\+\_\+\+Ref2}}
+\index{St\+\_\+\+Ref2@{St\+\_\+\+Ref2}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Ref2}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Ref2~31}\label{doctokenizer_8cpp_a66d79fe054e0529babf5ebaf4b96728f}
+\hypertarget{doctokenizer_8cpp_a896d10a0c464778fd5013f63edc738c1}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Rtf\+Only@{St\+\_\+\+Rtf\+Only}}
+\index{St\+\_\+\+Rtf\+Only@{St\+\_\+\+Rtf\+Only}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Rtf\+Only}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Rtf\+Only~15}\label{doctokenizer_8cpp_a896d10a0c464778fd5013f63edc738c1}
+\hypertarget{doctokenizer_8cpp_a27b7618c05a1bf325cdef63f78791a09}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Sec\+Label1@{St\+\_\+\+Sec\+Label1}}
+\index{St\+\_\+\+Sec\+Label1@{St\+\_\+\+Sec\+Label1}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Sec\+Label1}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Sec\+Label1~40}\label{doctokenizer_8cpp_a27b7618c05a1bf325cdef63f78791a09}
+\hypertarget{doctokenizer_8cpp_aaf233e3f41c734373dc74607909557cc}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Sec\+Label2@{St\+\_\+\+Sec\+Label2}}
+\index{St\+\_\+\+Sec\+Label2@{St\+\_\+\+Sec\+Label2}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Sec\+Label2}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Sec\+Label2~41}\label{doctokenizer_8cpp_aaf233e3f41c734373dc74607909557cc}
+\hypertarget{doctokenizer_8cpp_a397fe96ce69a2a8df6733a4eaa5724b0}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Sec\+Skip@{St\+\_\+\+Sec\+Skip}}
+\index{St\+\_\+\+Sec\+Skip@{St\+\_\+\+Sec\+Skip}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Sec\+Skip}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Sec\+Skip~43}\label{doctokenizer_8cpp_a397fe96ce69a2a8df6733a4eaa5724b0}
+\hypertarget{doctokenizer_8cpp_ab74a059633e016dc679d6951fdb96a02}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Sections@{St\+\_\+\+Sections}}
+\index{St\+\_\+\+Sections@{St\+\_\+\+Sections}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Sections}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Sections~39}\label{doctokenizer_8cpp_ab74a059633e016dc679d6951fdb96a02}
+\hypertarget{doctokenizer_8cpp_a1311e1893f82c5d6a9989506a8ed373e}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Sec\+Title@{St\+\_\+\+Sec\+Title}}
+\index{St\+\_\+\+Sec\+Title@{St\+\_\+\+Sec\+Title}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Sec\+Title}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Sec\+Title~42}\label{doctokenizer_8cpp_a1311e1893f82c5d6a9989506a8ed373e}
+\hypertarget{doctokenizer_8cpp_acdb15472af89e1831d2fa091644040cb}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Set\+Scope@{St\+\_\+\+Set\+Scope}}
+\index{St\+\_\+\+Set\+Scope@{St\+\_\+\+Set\+Scope}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Set\+Scope}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Set\+Scope~37}\label{doctokenizer_8cpp_acdb15472af89e1831d2fa091644040cb}
+\hypertarget{doctokenizer_8cpp_ab3e7177e8b463dd8598d63c3d8ef9a2c}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Set\+Scope\+End@{St\+\_\+\+Set\+Scope\+End}}
+\index{St\+\_\+\+Set\+Scope\+End@{St\+\_\+\+Set\+Scope\+End}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Set\+Scope\+End}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Set\+Scope\+End~38}\label{doctokenizer_8cpp_ab3e7177e8b463dd8598d63c3d8ef9a2c}
+\hypertarget{doctokenizer_8cpp_ae0276ff9a4f1c90490659d074b74264a}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Skip\+Title@{St\+\_\+\+Skip\+Title}}
+\index{St\+\_\+\+Skip\+Title@{St\+\_\+\+Skip\+Title}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Skip\+Title}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Skip\+Title~34}\label{doctokenizer_8cpp_ae0276ff9a4f1c90490659d074b74264a}
+\hypertarget{doctokenizer_8cpp_ae346066c5bb88a5f7eef5d5d44e63e0d}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Snippet@{St\+\_\+\+Snippet}}
+\index{St\+\_\+\+Snippet@{St\+\_\+\+Snippet}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Snippet}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Snippet~36}\label{doctokenizer_8cpp_ae346066c5bb88a5f7eef5d5d44e63e0d}
+\hypertarget{doctokenizer_8cpp_a01257d3d805eb2411ee76783c7b1854e}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Text@{St\+\_\+\+Text}}
+\index{St\+\_\+\+Text@{St\+\_\+\+Text}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Text}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Text~33}\label{doctokenizer_8cpp_a01257d3d805eb2411ee76783c7b1854e}
+\hypertarget{doctokenizer_8cpp_a8fd5d96209dc37cded1d4b5b302f4905}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Title@{St\+\_\+\+Title}}
+\index{St\+\_\+\+Title@{St\+\_\+\+Title}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Title}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Title~3}\label{doctokenizer_8cpp_a8fd5d96209dc37cded1d4b5b302f4905}
+\hypertarget{doctokenizer_8cpp_a7b438f93e80f2a3df914b97e283123cc}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Title\+A@{St\+\_\+\+Title\+A}}
+\index{St\+\_\+\+Title\+A@{St\+\_\+\+Title\+A}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Title\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Title\+A~6}\label{doctokenizer_8cpp_a7b438f93e80f2a3df914b97e283123cc}
+\hypertarget{doctokenizer_8cpp_a0fa11ebecb3a4314dcf03ebd7b97d353}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Title\+N@{St\+\_\+\+Title\+N}}
+\index{St\+\_\+\+Title\+N@{St\+\_\+\+Title\+N}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Title\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Title\+N~4}\label{doctokenizer_8cpp_a0fa11ebecb3a4314dcf03ebd7b97d353}
+\hypertarget{doctokenizer_8cpp_a481e1a85febe9033b5194677ea202431}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Title\+Q@{St\+\_\+\+Title\+Q}}
+\index{St\+\_\+\+Title\+Q@{St\+\_\+\+Title\+Q}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Title\+Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Title\+Q~5}\label{doctokenizer_8cpp_a481e1a85febe9033b5194677ea202431}
+\hypertarget{doctokenizer_8cpp_a9894ea58149dc13a34dda89f3da85bdb}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Title\+V@{St\+\_\+\+Title\+V}}
+\index{St\+\_\+\+Title\+V@{St\+\_\+\+Title\+V}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Title\+V}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Title\+V~7}\label{doctokenizer_8cpp_a9894ea58149dc13a34dda89f3da85bdb}
+\hypertarget{doctokenizer_8cpp_a1b0b42ccab03235c82780f33f738135c}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Verbatim@{St\+\_\+\+Verbatim}}
+\index{St\+\_\+\+Verbatim@{St\+\_\+\+Verbatim}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Verbatim}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Verbatim~18}\label{doctokenizer_8cpp_a1b0b42ccab03235c82780f33f738135c}
+\hypertarget{doctokenizer_8cpp_a3c84c65c19aae3cad2941b196d40a546}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Xml\+Code@{St\+\_\+\+Xml\+Code}}
+\index{St\+\_\+\+Xml\+Code@{St\+\_\+\+Xml\+Code}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Xml\+Code}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Xml\+Code~10}\label{doctokenizer_8cpp_a3c84c65c19aae3cad2941b196d40a546}
+\hypertarget{doctokenizer_8cpp_a0be636c8984ab5bb1e81056cf693e0cc}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+Xml\+Only@{St\+\_\+\+Xml\+Only}}
+\index{St\+\_\+\+Xml\+Only@{St\+\_\+\+Xml\+Only}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+Xml\+Only}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+Xml\+Only~16}\label{doctokenizer_8cpp_a0be636c8984ab5bb1e81056cf693e0cc}
+\hypertarget{doctokenizer_8cpp_ac5f8dfaa1353e07efe0a37c1261bc2ae}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+X\+Ref\+Item@{St\+\_\+\+X\+Ref\+Item}}
+\index{St\+\_\+\+X\+Ref\+Item@{St\+\_\+\+X\+Ref\+Item}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+X\+Ref\+Item}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+X\+Ref\+Item~24}\label{doctokenizer_8cpp_ac5f8dfaa1353e07efe0a37c1261bc2ae}
+\hypertarget{doctokenizer_8cpp_a8a75a4c2ca37b0f963f48bbf57cf405a}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!St\+\_\+\+X\+Ref\+Item2@{St\+\_\+\+X\+Ref\+Item2}}
+\index{St\+\_\+\+X\+Ref\+Item2@{St\+\_\+\+X\+Ref\+Item2}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{St\+\_\+\+X\+Ref\+Item2}]{\setlength{\rightskip}{0pt plus 5cm}\#define St\+\_\+\+X\+Ref\+Item2~25}\label{doctokenizer_8cpp_a8a75a4c2ca37b0f963f48bbf57cf405a}
+\hypertarget{doctokenizer_8cpp_a3ea490c9b3617d4479bd80ef93cd5602}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!U\+I\+N\+T16\+\_\+\+M\+A\+X@{U\+I\+N\+T16\+\_\+\+M\+A\+X}}
+\index{U\+I\+N\+T16\+\_\+\+M\+A\+X@{U\+I\+N\+T16\+\_\+\+M\+A\+X}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{U\+I\+N\+T16\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+I\+N\+T16\+\_\+\+M\+A\+X~(65535\+U)}\label{doctokenizer_8cpp_a3ea490c9b3617d4479bd80ef93cd5602}
+\hypertarget{doctokenizer_8cpp_ab5eb23180f7cc12b7d6c04a8ec067fdd}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!U\+I\+N\+T32\+\_\+\+M\+A\+X@{U\+I\+N\+T32\+\_\+\+M\+A\+X}}
+\index{U\+I\+N\+T32\+\_\+\+M\+A\+X@{U\+I\+N\+T32\+\_\+\+M\+A\+X}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{U\+I\+N\+T32\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+I\+N\+T32\+\_\+\+M\+A\+X~(4294967295\+U)}\label{doctokenizer_8cpp_ab5eb23180f7cc12b7d6c04a8ec067fdd}
+\hypertarget{doctokenizer_8cpp_aeb4e270a084ee26fe73e799861bd0252}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!U\+I\+N\+T8\+\_\+\+M\+A\+X@{U\+I\+N\+T8\+\_\+\+M\+A\+X}}
+\index{U\+I\+N\+T8\+\_\+\+M\+A\+X@{U\+I\+N\+T8\+\_\+\+M\+A\+X}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{U\+I\+N\+T8\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+I\+N\+T8\+\_\+\+M\+A\+X~(255\+U)}\label{doctokenizer_8cpp_aeb4e270a084ee26fe73e799861bd0252}
+\hypertarget{doctokenizer_8cpp_a448a4e9041a09588332733c6846c770c}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!unput@{unput}}
+\index{unput@{unput}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{unput}]{\setlength{\rightskip}{0pt plus 5cm}\#define unput(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf c}}
+\end{DoxyParamCaption}
+)~yyunput( {\bf c}, ({\bf yytext\+\_\+ptr})  )}\label{doctokenizer_8cpp_a448a4e9041a09588332733c6846c770c}
+\hypertarget{doctokenizer_8cpp_a71ca89b3656acd0552f14949a571560b}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L@{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}}
+\index{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L@{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~({\bf Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}-\/$>$yy\+\_\+at\+\_\+bol)}\label{doctokenizer_8cpp_a71ca89b3656acd0552f14949a571560b}
+\hypertarget{doctokenizer_8cpp_a3cc40a460ad7df816678bcc05241e84c}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+B\+R\+E\+A\+K@{Y\+Y\+\_\+\+B\+R\+E\+A\+K}}
+\index{Y\+Y\+\_\+\+B\+R\+E\+A\+K@{Y\+Y\+\_\+\+B\+R\+E\+A\+K}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+R\+E\+A\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+R\+E\+A\+K~break;}\label{doctokenizer_8cpp_a3cc40a460ad7df816678bcc05241e84c}
+\hypertarget{doctokenizer_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E~262144}\label{doctokenizer_8cpp_ae7e51116e747d3390e7a6cfc6532834c}
+\hypertarget{doctokenizer_8cpp_ad689d97c15e807a6116ace7a420cea57}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G~2}\label{doctokenizer_8cpp_ad689d97c15e807a6116ace7a420cea57}
+\hypertarget{doctokenizer_8cpp_a53579db42834b88199458993912c646d}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W~0}\label{doctokenizer_8cpp_a53579db42834b88199458993912c646d}
+\hypertarget{doctokenizer_8cpp_a609d19f40900ecc2a5f812d9388c21fb}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L~1}\label{doctokenizer_8cpp_a609d19f40900ecc2a5f812d9388c21fb}
+\hypertarget{doctokenizer_8cpp_ac86ea8173dfcfc5c989d3295a77e2f95}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yy\+\_\+create\+\_\+buffer@{yy\+\_\+create\+\_\+buffer}}
+\index{yy\+\_\+create\+\_\+buffer@{yy\+\_\+create\+\_\+buffer}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yy\+\_\+create\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+create\+\_\+buffer~{\bf doctokenizer\+Y\+Y\+\_\+create\+\_\+buffer}}\label{doctokenizer_8cpp_ac86ea8173dfcfc5c989d3295a77e2f95}
+\hypertarget{doctokenizer_8cpp_aa093d500a6330d06d8e4760c494fac33}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}}
+\index{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}\label{doctokenizer_8cpp_aa093d500a6330d06d8e4760c494fac33}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+( (yy\_buffer\_stack) \(\backslash\)
+                          ? (yy\_buffer\_stack)[(yy\_buffer\_stack\_top)] \(\backslash\)
+                          : NULL)
+\end{DoxyCode}
+\hypertarget{doctokenizer_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}}
+\index{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E~(yy\+\_\+buffer\+\_\+stack)\mbox{[}(yy\+\_\+buffer\+\_\+stack\+\_\+top)\mbox{]}}\label{doctokenizer_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}
+\hypertarget{doctokenizer_8cpp_ae5b01ac2fa5a6ad5fb97559638abe686}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+D\+E\+C\+L@{Y\+Y\+\_\+\+D\+E\+C\+L}}
+\index{Y\+Y\+\_\+\+D\+E\+C\+L@{Y\+Y\+\_\+\+D\+E\+C\+L}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+D\+E\+C\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+D\+E\+C\+L~int {\bf doctokenizer\+Y\+Ylex} (void)}\label{doctokenizer_8cpp_ae5b01ac2fa5a6ad5fb97559638abe686}
+\hypertarget{doctokenizer_8cpp_a7682c8d9cec0859408d2421fbe4a5570}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S@{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}}
+\index{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S@{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S~1}\label{doctokenizer_8cpp_a7682c8d9cec0859408d2421fbe4a5570}
+\hypertarget{doctokenizer_8cpp_ad1868c6b38b45af25a4a0f449912a808}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yy\+\_\+delete\+\_\+buffer@{yy\+\_\+delete\+\_\+buffer}}
+\index{yy\+\_\+delete\+\_\+buffer@{yy\+\_\+delete\+\_\+buffer}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yy\+\_\+delete\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+delete\+\_\+buffer~{\bf doctokenizer\+Y\+Y\+\_\+delete\+\_\+buffer}}\label{doctokenizer_8cpp_ad1868c6b38b45af25a4a0f449912a808}
+\hypertarget{doctokenizer_8cpp_acc3486d769af4e4b2820346a0093cc79}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}\label{doctokenizer_8cpp_acc3486d769af4e4b2820346a0093cc79}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+(\hyperlink{doctokenizer_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\_ptr}) = \hyperlink{doctokenizer_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}; \hyperlink{doctokenizer_8cpp_a067da8359de18788f58fb01bd4128d38}{\(\backslash\)}
+\hyperlink{doctokenizer_8cpp_a067da8359de18788f58fb01bd4128d38}{    doctokenizerYYleng} = (\hyperlink{doctokenizer_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\_size\_t}) (\hyperlink{doctokenizer_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} - 
+      \hyperlink{doctokenizer_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}); \(\backslash\)
+    (yy\_hold\_char) = *\hyperlink{doctokenizer_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp}; \(\backslash\)
+    *\hyperlink{doctokenizer_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = \textcolor{charliteral}{'\(\backslash\)0'}; \(\backslash\)
+    (yy\_c\_buf\_p) = \hyperlink{doctokenizer_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp};
+\end{DoxyCode}
+\hypertarget{doctokenizer_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}}
+\index{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R~206}\label{doctokenizer_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}
+\hypertarget{doctokenizer_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}}
+\index{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R~0}\label{doctokenizer_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}
+\hypertarget{doctokenizer_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E@{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}}
+\index{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E@{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E~2}\label{doctokenizer_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}
+\hypertarget{doctokenizer_8cpp_a26938d921de835f6183c02e54cf08828}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E@{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}}
+\index{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E@{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E~void $\ast$}\label{doctokenizer_8cpp_a26938d921de835f6183c02e54cf08828}
+\hypertarget{doctokenizer_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R@{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}}
+\index{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R@{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf msg}}
+\end{DoxyParamCaption}
+)~yy\+\_\+fatal\+\_\+error( {\bf msg} )}\label{doctokenizer_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}
+\hypertarget{doctokenizer_8cpp_a301f4439c9b191c80db45f5b1a8c7269}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yy\+\_\+flex\+\_\+debug@{yy\+\_\+flex\+\_\+debug}}
+\index{yy\+\_\+flex\+\_\+debug@{yy\+\_\+flex\+\_\+debug}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yy\+\_\+flex\+\_\+debug}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+flex\+\_\+debug~{\bf doctokenizer\+Y\+Y\+\_\+flex\+\_\+debug}}\label{doctokenizer_8cpp_a301f4439c9b191c80db45f5b1a8c7269}
+\hypertarget{doctokenizer_8cpp_a243ca1d30872935faf05ea5118ed6fdc}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N~2}\label{doctokenizer_8cpp_a243ca1d30872935faf05ea5118ed6fdc}
+\hypertarget{doctokenizer_8cpp_a90f9d458829400869e47efb68a865677}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N~5}\label{doctokenizer_8cpp_a90f9d458829400869e47efb68a865677}
+\hypertarget{doctokenizer_8cpp_ac676bd06869180ea493e9b6d7c078dbb}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N~35}\label{doctokenizer_8cpp_ac676bd06869180ea493e9b6d7c078dbb}
+\hypertarget{doctokenizer_8cpp_ab01a4c7245136f22a63acac7c0ceb343}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yy\+\_\+flush\+\_\+buffer@{yy\+\_\+flush\+\_\+buffer}}
+\index{yy\+\_\+flush\+\_\+buffer@{yy\+\_\+flush\+\_\+buffer}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yy\+\_\+flush\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+flush\+\_\+buffer~{\bf doctokenizer\+Y\+Y\+\_\+flush\+\_\+buffer}}\label{doctokenizer_8cpp_ab01a4c7245136f22a63acac7c0ceb343}
+\hypertarget{doctokenizer_8cpp_ac5d478d90ea9a2ecd43d579067a2e89d}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}}
+\index{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R~{\bf doctokenizer\+Y\+Y\+\_\+flush\+\_\+buffer}({\bf Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R} )}\label{doctokenizer_8cpp_ac5d478d90ea9a2ecd43d579067a2e89d}
+\hypertarget{doctokenizer_8cpp_aa14efad9f9c24106a3e3398a4f6621c2}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yy\+\_\+init\+\_\+buffer@{yy\+\_\+init\+\_\+buffer}}
+\index{yy\+\_\+init\+\_\+buffer@{yy\+\_\+init\+\_\+buffer}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yy\+\_\+init\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+init\+\_\+buffer~doctokenizer\+Y\+Y\+\_\+init\+\_\+buffer}\label{doctokenizer_8cpp_aa14efad9f9c24106a3e3398a4f6621c2}
+\hypertarget{doctokenizer_8cpp_aacfdca45fa4beb8b06172525a53c424a}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+I\+N\+P\+U\+T}}
+\index{Y\+Y\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+I\+N\+P\+U\+T}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+I\+N\+P\+U\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+I\+N\+P\+U\+T(
+\begin{DoxyParamCaption}
+\item[{}]{buf, }
+\item[{}]{result, }
+\item[{}]{max\+\_\+size}
+\end{DoxyParamCaption}
+)~result=yyread(buf,max\+\_\+size);}\label{doctokenizer_8cpp_aacfdca45fa4beb8b06172525a53c424a}
+\hypertarget{doctokenizer_8cpp_a1ae16e642a197fa4948998525813c6f5}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D@{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}}
+\index{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D@{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D~short int}\label{doctokenizer_8cpp_a1ae16e642a197fa4948998525813c6f5}
+\hypertarget{doctokenizer_8cpp_a12e5f3a76911433480bca7f4edba6119}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O@{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}}
+\index{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O@{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a12e5f3a76911433480bca7f4edba6119}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+                yy\_size\_t yyl;\(\backslash\)
+                for ( yyl = \hyperlink{058__bracket__recursion_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n}; yyl < \hyperlink{doctokenizer_8cpp_a067da8359de18788f58fb01bd4128d38}{doctokenizerYYleng}; ++yyl )\(\backslash\)
+                    \textcolor{keywordflow}{if} ( \hyperlink{doctokenizer_8cpp_a5a2c8bd6232d793f3e2cf86de0909509}{doctokenizerYYtext}[yyl] == \textcolor{charliteral}{'\(\backslash\)n'} )\(\backslash\)
+                        --\hyperlink{doctokenizer_8cpp_aa2c414f2e33cf9014cad85e137da0e95}{doctokenizerYYlineno};\(\backslash\)
+            \}\textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\hypertarget{doctokenizer_8cpp_a039fc377fd4784139d8706ba0ae229fa}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yy\+\_\+load\+\_\+buffer\+\_\+state@{yy\+\_\+load\+\_\+buffer\+\_\+state}}
+\index{yy\+\_\+load\+\_\+buffer\+\_\+state@{yy\+\_\+load\+\_\+buffer\+\_\+state}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yy\+\_\+load\+\_\+buffer\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+load\+\_\+buffer\+\_\+state~doctokenizer\+Y\+Y\+\_\+load\+\_\+buffer\+\_\+state}\label{doctokenizer_8cpp_a039fc377fd4784139d8706ba0ae229fa}
+\hypertarget{doctokenizer_8cpp_a68792d73820bc46a71d3d4e613f0b977}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J@{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}}
+\index{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J@{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J~0}\label{doctokenizer_8cpp_a68792d73820bc46a71d3d4e613f0b977}
+\hypertarget{doctokenizer_8cpp_a15b85de192a189d5a31cdd518e001e6e}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E@{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}}
+\index{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E@{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E~1}\label{doctokenizer_8cpp_a15b85de192a189d5a31cdd518e001e6e}
+\hypertarget{doctokenizer_8cpp_ab7eb911e18655f2f78e63afe5a8a4a12}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yy\+\_\+new\+\_\+buffer@{yy\+\_\+new\+\_\+buffer}}
+\index{yy\+\_\+new\+\_\+buffer@{yy\+\_\+new\+\_\+buffer}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yy\+\_\+new\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+new\+\_\+buffer~{\bf doctokenizer\+Y\+Y\+\_\+create\+\_\+buffer}}\label{doctokenizer_8cpp_ab7eb911e18655f2f78e63afe5a8a4a12}
+\hypertarget{doctokenizer_8cpp_a0406739e64fb5750cf995d2ae68ce69d}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E@{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}}
+\index{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E@{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E~{\bf doctokenizer\+Y\+Yrestart}({\bf doctokenizer\+Y\+Yin}  )}\label{doctokenizer_8cpp_a0406739e64fb5750cf995d2ae68ce69d}
+\hypertarget{doctokenizer_8cpp_a85523a0c7d95c059d251b4e9829947aa}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}}
+\index{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T~1}\label{doctokenizer_8cpp_a85523a0c7d95c059d251b4e9829947aa}
+\hypertarget{doctokenizer_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+N\+U\+L\+L@{Y\+Y\+\_\+\+N\+U\+L\+L}}
+\index{Y\+Y\+\_\+\+N\+U\+L\+L@{Y\+Y\+\_\+\+N\+U\+L\+L}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+U\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+U\+L\+L~0}\label{doctokenizer_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}
+\hypertarget{doctokenizer_8cpp_ae558785bb896e090901c2b905f6790c6}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S@{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}}
+\index{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S@{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S~205}\label{doctokenizer_8cpp_ae558785bb896e090901c2b905f6790c6}
+\hypertarget{doctokenizer_8cpp_aab1491ceccb1c95c14320b2903773a1c}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}}
+\index{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E~262144}\label{doctokenizer_8cpp_aab1491ceccb1c95c14320b2903773a1c}
+\hypertarget{doctokenizer_8cpp_a56858d18c7eda4f53664496ef566f651}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T@{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T@{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}\label{doctokenizer_8cpp_a56858d18c7eda4f53664496ef566f651}
+\hypertarget{doctokenizer_8cpp_a690504b662e4281515bf12722df178ba}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P@{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}}
+\index{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P@{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}\label{doctokenizer_8cpp_a690504b662e4281515bf12722df178ba}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} ( \hyperlink{doctokenizer_8cpp_a067da8359de18788f58fb01bd4128d38}{doctokenizerYYleng} > 0 ) \hyperlink{doctokenizer_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{doctokenizer_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{        YY\_CURRENT\_BUFFER\_LVALUE}->yy\_at\_bol = \(\backslash\)
+                (\hyperlink{doctokenizer_8cpp_a5a2c8bd6232d793f3e2cf86de0909509}{doctokenizerYYtext}[\hyperlink{doctokenizer_8cpp_a067da8359de18788f58fb01bd4128d38}{doctokenizerYYleng} - 1] == \textcolor{charliteral}{'\(\backslash\)n'}); 
+      \hyperlink{doctokenizer_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{\(\backslash\)}
+\hyperlink{doctokenizer_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{    YY\_USER\_ACTION}
+\end{DoxyCode}
+\hypertarget{doctokenizer_8cpp_af1185350b7a92cf8aa5324c68850c8a6}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I@{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}}
+\index{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I@{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf c}}
+\end{DoxyParamCaption}
+)~((unsigned int) (unsigned char) {\bf c})}\label{doctokenizer_8cpp_af1185350b7a92cf8aa5324c68850c8a6}
+\hypertarget{doctokenizer_8cpp_a12e30d13a76a94e78010db9996d39c50}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yy\+\_\+set\+\_\+bol@{yy\+\_\+set\+\_\+bol}}
+\index{yy\+\_\+set\+\_\+bol@{yy\+\_\+set\+\_\+bol}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yy\+\_\+set\+\_\+bol}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+set\+\_\+bol(
+\begin{DoxyParamCaption}
+\item[{}]{at\+\_\+bol}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a12e30d13a76a94e78010db9996d39c50}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\{ \hyperlink{doctokenizer_8cpp_ad4a65b873df5c05570846b5413b41dfd}{\(\backslash\)}
+\hyperlink{doctokenizer_8cpp_ad4a65b873df5c05570846b5413b41dfd}{    if} ( ! \hyperlink{doctokenizer_8cpp_aa093d500a6330d06d8e4760c494fac33}{YY\_CURRENT\_BUFFER} )\{\(\backslash\)
+        doctokenizerYYensure\_buffer\_stack (); \hyperlink{doctokenizer_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{doctokenizer_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{        YY\_CURRENT\_BUFFER\_LVALUE} =    \(\backslash\)
+            doctokenizerYY\_create\_buffer(\hyperlink{doctokenizer_8cpp_a14b5831e305b3ba6fa3b94d65844a261}{doctokenizerYYin},
+      \hyperlink{doctokenizer_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{YY\_BUF\_SIZE} ); \(\backslash\)
+    \} \hyperlink{doctokenizer_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{doctokenizer_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{    YY\_CURRENT\_BUFFER\_LVALUE}->yy\_at\_bol = at\_bol; \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{doctokenizer_8cpp_ac56eb96366c08862bf0efe5d83d1fc4c}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yy\+\_\+set\+\_\+interactive@{yy\+\_\+set\+\_\+interactive}}
+\index{yy\+\_\+set\+\_\+interactive@{yy\+\_\+set\+\_\+interactive}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yy\+\_\+set\+\_\+interactive}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+set\+\_\+interactive(
+\begin{DoxyParamCaption}
+\item[{}]{is\+\_\+interactive}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_ac56eb96366c08862bf0efe5d83d1fc4c}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\{ \hyperlink{doctokenizer_8cpp_ad4a65b873df5c05570846b5413b41dfd}{\(\backslash\)}
+\hyperlink{doctokenizer_8cpp_ad4a65b873df5c05570846b5413b41dfd}{    if} ( ! \hyperlink{doctokenizer_8cpp_aa093d500a6330d06d8e4760c494fac33}{YY\_CURRENT\_BUFFER} )\{ \(\backslash\)
+        doctokenizerYYensure\_buffer\_stack (); \hyperlink{doctokenizer_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{doctokenizer_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{        YY\_CURRENT\_BUFFER\_LVALUE} =    \(\backslash\)
+            doctokenizerYY\_create\_buffer(\hyperlink{doctokenizer_8cpp_a14b5831e305b3ba6fa3b94d65844a261}{doctokenizerYYin},
+      \hyperlink{doctokenizer_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{YY\_BUF\_SIZE} ); \(\backslash\)
+    \} \hyperlink{doctokenizer_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{doctokenizer_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{    YY\_CURRENT\_BUFFER\_LVALUE}->yy\_is\_interactive = is\_interactive; \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{doctokenizer_8cpp_ae1ef5933028cbc587d31328e53d11a99}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P@{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}}
+\index{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P@{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}\label{doctokenizer_8cpp_ae1ef5933028cbc587d31328e53d11a99}
+\hypertarget{doctokenizer_8cpp_a8e14785f9eab7a997d659b25af9584c5}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+R\+T@{Y\+Y\+\_\+\+S\+T\+A\+R\+T}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+R\+T@{Y\+Y\+\_\+\+S\+T\+A\+R\+T}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+R\+T~(((yy\+\_\+start) -\/ 1) / 2)}\label{doctokenizer_8cpp_a8e14785f9eab7a997d659b25af9584c5}
+\hypertarget{doctokenizer_8cpp_a227e75c43b9e0cd41529974230be7e75}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R@{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R@{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R~25}\label{doctokenizer_8cpp_a227e75c43b9e0cd41529974230be7e75}
+\hypertarget{doctokenizer_8cpp_ac2f8b6fccdc516d96b02ac09a4dc01bd}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E~(({\bf Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E} + 2) $\ast$ sizeof({\bf yy\+\_\+state\+\_\+type}))}\label{doctokenizer_8cpp_ac2f8b6fccdc516d96b02ac09a4dc01bd}
+\hypertarget{doctokenizer_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F(
+\begin{DoxyParamCaption}
+\item[{}]{state}
+\end{DoxyParamCaption}
+)~({\bf Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R} + state + 1)}\label{doctokenizer_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}
+\hypertarget{doctokenizer_8cpp_a8aaa9e1fa7f13d6954d045ef973a9c84}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}\label{doctokenizer_8cpp_a8aaa9e1fa7f13d6954d045ef973a9c84}
+\hypertarget{doctokenizer_8cpp_a968d5b9e7e06a38bfca977b343d47d5c}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yy\+\_\+switch\+\_\+to\+\_\+buffer@{yy\+\_\+switch\+\_\+to\+\_\+buffer}}
+\index{yy\+\_\+switch\+\_\+to\+\_\+buffer@{yy\+\_\+switch\+\_\+to\+\_\+buffer}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yy\+\_\+switch\+\_\+to\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+switch\+\_\+to\+\_\+buffer~{\bf doctokenizer\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}}\label{doctokenizer_8cpp_a968d5b9e7e06a38bfca977b343d47d5c}
+\hypertarget{doctokenizer_8cpp_a7fce78ee876950ded902364014c917e6}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}}
+\index{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K~0x4000}\label{doctokenizer_8cpp_a7fce78ee876950ded902364014c917e6}
+\hypertarget{doctokenizer_8cpp_a76482842cdcaadf1dbdaf43df38765a2}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}}
+\index{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K~0x2000}\label{doctokenizer_8cpp_a76482842cdcaadf1dbdaf43df38765a2}
+\hypertarget{doctokenizer_8cpp_aa79d63ed3ff8d2249baf1732a73089f5}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}\label{doctokenizer_8cpp_aa79d63ed3ff8d2249baf1732a73089f5}
+\hypertarget{doctokenizer_8cpp_ae0f2b0b5f04b2338367826b5670774f9}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}}
+\index{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}\label{doctokenizer_8cpp_ae0f2b0b5f04b2338367826b5670774f9}
+\hypertarget{doctokenizer_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}\label{doctokenizer_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}
+\hypertarget{doctokenizer_8cpp_a803397ab738ee8630166680646a2d913}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yyalloc@{yyalloc}}
+\index{yyalloc@{yyalloc}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yyalloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf yyalloc}~{\bf doctokenizer\+Y\+Yalloc}}\label{doctokenizer_8cpp_a803397ab738ee8630166680646a2d913}
+\hypertarget{doctokenizer_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yyconst@{yyconst}}
+\index{yyconst@{yyconst}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yyconst}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyconst}\label{doctokenizer_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}
+\hypertarget{doctokenizer_8cpp_a4fa4368d47620ea80150b516e8884f6b}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yyfree@{yyfree}}
+\index{yyfree@{yyfree}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yyfree}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyfree~{\bf doctokenizer\+Y\+Yfree}}\label{doctokenizer_8cpp_a4fa4368d47620ea80150b516e8884f6b}
+\hypertarget{doctokenizer_8cpp_aa789f4617e33fb99594cb04a3688a0c1}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yyin@{yyin}}
+\index{yyin@{yyin}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yyin}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyin~{\bf doctokenizer\+Y\+Yin}}\label{doctokenizer_8cpp_aa789f4617e33fb99594cb04a3688a0c1}
+\hypertarget{doctokenizer_8cpp_afa07a629486cb790560bb95713ec7794}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yyleng@{yyleng}}
+\index{yyleng@{yyleng}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yyleng}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyleng~{\bf doctokenizer\+Y\+Yleng}}\label{doctokenizer_8cpp_afa07a629486cb790560bb95713ec7794}
+\hypertarget{doctokenizer_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yyless@{yyless}}
+\index{yyless@{yyless}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yyless}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyless(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \(\backslash\)
+        \{ \(\backslash\)
+        \textcolor{comment}{/* Undo effects of setting up doctokenizerYYtext. */} \(\backslash\)
+        int yyless\_macro\_arg = (\hyperlink{058__bracket__recursion_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n}); \(\backslash\)
+        YY\_LESS\_LINENO(yyless\_macro\_arg);\(\backslash\)
+        *\hyperlink{doctokenizer_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = (yy\_hold\_char); \hyperlink{doctokenizer_8cpp_a56858d18c7eda4f53664496ef566f651}{\(\backslash\)}
+\hyperlink{doctokenizer_8cpp_a56858d18c7eda4f53664496ef566f651}{        YY\_RESTORE\_YY\_MORE\_OFFSET} \(\backslash\)
+        (yy\_c\_buf\_p) = \hyperlink{doctokenizer_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = \hyperlink{doctokenizer_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp} + yyless\_macro\_arg - \hyperlink{doctokenizer_8cpp_a68792d73820bc46a71d3d4e613f0b977}{YY\_MORE\_ADJ}; 
+      \hyperlink{doctokenizer_8cpp_acc3486d769af4e4b2820346a0093cc79}{\(\backslash\)}
+\hyperlink{doctokenizer_8cpp_acc3486d769af4e4b2820346a0093cc79}{        YY\_DO\_BEFORE\_ACTION}; \textcolor{comment}{/* set up doctokenizerYYtext again */} \(\backslash\)
+        \} \hyperlink{doctokenizer_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{\(\backslash\)}
+\hyperlink{doctokenizer_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{    while} ( 0 )
+\end{DoxyCode}
+\hypertarget{doctokenizer_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yyless@{yyless}}
+\index{yyless@{yyless}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yyless}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyless(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \(\backslash\)
+        \{ \(\backslash\)
+        \textcolor{comment}{/* Undo effects of setting up doctokenizerYYtext. */} \(\backslash\)
+        int yyless\_macro\_arg = (\hyperlink{058__bracket__recursion_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n}); \(\backslash\)
+        YY\_LESS\_LINENO(yyless\_macro\_arg);\hyperlink{doctokenizer_8cpp_a5a2c8bd6232d793f3e2cf86de0909509}{\(\backslash\)}
+\hyperlink{doctokenizer_8cpp_a5a2c8bd6232d793f3e2cf86de0909509}{        doctokenizerYYtext}[\hyperlink{doctokenizer_8cpp_a067da8359de18788f58fb01bd4128d38}{doctokenizerYYleng}] = (yy\_hold\_char); \(\backslash\)
+        (yy\_c\_buf\_p) = \hyperlink{doctokenizer_8cpp_a5a2c8bd6232d793f3e2cf86de0909509}{doctokenizerYYtext} + yyless\_macro\_arg; \(\backslash\)
+        (yy\_hold\_char) = *(yy\_c\_buf\_p); \(\backslash\)
+        *(yy\_c\_buf\_p) = \textcolor{charliteral}{'\(\backslash\)0'}; \hyperlink{doctokenizer_8cpp_a067da8359de18788f58fb01bd4128d38}{\(\backslash\)}
+\hyperlink{doctokenizer_8cpp_a067da8359de18788f58fb01bd4128d38}{        doctokenizerYYleng} = yyless\_macro\_arg; \(\backslash\)
+        \} \hyperlink{doctokenizer_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{\(\backslash\)}
+\hyperlink{doctokenizer_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{    while} ( 0 )
+\end{DoxyCode}
+\hypertarget{doctokenizer_8cpp_a5611300548b2030d86b6ab9168132b88}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yylex@{yylex}}
+\index{yylex@{yylex}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yylex}]{\setlength{\rightskip}{0pt plus 5cm}\#define yylex~{\bf doctokenizer\+Y\+Ylex}}\label{doctokenizer_8cpp_a5611300548b2030d86b6ab9168132b88}
+\hypertarget{doctokenizer_8cpp_ad71cf0fddcfe4f61de0929105b33226c}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yylineno@{yylineno}}
+\index{yylineno@{yylineno}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yylineno}]{\setlength{\rightskip}{0pt plus 5cm}\#define yylineno~{\bf doctokenizer\+Y\+Ylineno}}\label{doctokenizer_8cpp_ad71cf0fddcfe4f61de0929105b33226c}
+\hypertarget{doctokenizer_8cpp_a745d37b5e002b2e5f93ad42ea7b554be}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yymore@{yymore}}
+\index{yymore@{yymore}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yymore}]{\setlength{\rightskip}{0pt plus 5cm}\#define yymore(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~yymore\+\_\+used\+\_\+but\+\_\+not\+\_\+detected}\label{doctokenizer_8cpp_a745d37b5e002b2e5f93ad42ea7b554be}
+\hypertarget{doctokenizer_8cpp_a4fd44867d448dcb6fc32ea004a15de54}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yyout@{yyout}}
+\index{yyout@{yyout}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yyout}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyout~{\bf doctokenizer\+Y\+Yout}}\label{doctokenizer_8cpp_a4fd44867d448dcb6fc32ea004a15de54}
+\hypertarget{doctokenizer_8cpp_ab1eba250555ca003eb39387bb1a41d39}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yyrealloc@{yyrealloc}}
+\index{yyrealloc@{yyrealloc}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yyrealloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyrealloc~{\bf doctokenizer\+Y\+Yrealloc}}\label{doctokenizer_8cpp_ab1eba250555ca003eb39387bb1a41d39}
+\hypertarget{doctokenizer_8cpp_a2259355ac49295f72feab070a34a9b11}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yyrestart@{yyrestart}}
+\index{yyrestart@{yyrestart}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yyrestart}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyrestart~{\bf doctokenizer\+Y\+Yrestart}}\label{doctokenizer_8cpp_a2259355ac49295f72feab070a34a9b11}
+\hypertarget{doctokenizer_8cpp_a32b5b960944f946b192d54f672569cd9}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+S\+T\+A\+T\+E@{Y\+Y\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+S\+T\+A\+T\+E@{Y\+Y\+S\+T\+A\+T\+E}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+S\+T\+A\+T\+E~{\bf Y\+Y\+\_\+\+S\+T\+A\+R\+T}}\label{doctokenizer_8cpp_a32b5b960944f946b192d54f672569cd9}
+\hypertarget{doctokenizer_8cpp_a828cc83270f8f5bb1688e14dd4e28128}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E@{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}}
+\index{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E@{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E~\char`\"{}yytables\char`\"{}}\label{doctokenizer_8cpp_a828cc83270f8f5bb1688e14dd4e28128}
+\hypertarget{doctokenizer_8cpp_ac3286b18a2e91b4571b97df96a118e84}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yyterminate@{yyterminate}}
+\index{yyterminate@{yyterminate}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yyterminate}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyterminate(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~return {\bf Y\+Y\+\_\+\+N\+U\+L\+L}}\label{doctokenizer_8cpp_ac3286b18a2e91b4571b97df96a118e84}
+\hypertarget{doctokenizer_8cpp_a0d71f919dbec1ffd74b2460fa7e5ac28}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yytext@{yytext}}
+\index{yytext@{yytext}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yytext}]{\setlength{\rightskip}{0pt plus 5cm}\#define yytext~{\bf doctokenizer\+Y\+Ytext}}\label{doctokenizer_8cpp_a0d71f919dbec1ffd74b2460fa7e5ac28}
+\hypertarget{doctokenizer_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yytext\+\_\+ptr@{yytext\+\_\+ptr}}
+\index{yytext\+\_\+ptr@{yytext\+\_\+ptr}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yytext\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}\#define yytext\+\_\+ptr~{\bf doctokenizer\+Y\+Ytext}}\label{doctokenizer_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}
+\hypertarget{doctokenizer_8cpp_a5be541efdb129f7cefb2437f52fe7359}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yywrap@{yywrap}}
+\index{yywrap@{yywrap}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yywrap}]{\setlength{\rightskip}{0pt plus 5cm}\#define yywrap~{\bf doctokenizer\+Y\+Ywrap}}\label{doctokenizer_8cpp_a5be541efdb129f7cefb2437f52fe7359}
+
+
+\subsection{Documentation des définitions de type}
+\hypertarget{doctokenizer_8cpp_a2e73b2c75126814585525fb2e9d51159}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!flex\+\_\+int16\+\_\+t@{flex\+\_\+int16\+\_\+t}}
+\index{flex\+\_\+int16\+\_\+t@{flex\+\_\+int16\+\_\+t}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{flex\+\_\+int16\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef short int {\bf flex\+\_\+int16\+\_\+t}}\label{doctokenizer_8cpp_a2e73b2c75126814585525fb2e9d51159}
+\hypertarget{doctokenizer_8cpp_a838ce943cf44ef7769480714fc6c3ba9}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!flex\+\_\+int32\+\_\+t@{flex\+\_\+int32\+\_\+t}}
+\index{flex\+\_\+int32\+\_\+t@{flex\+\_\+int32\+\_\+t}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{flex\+\_\+int32\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf flex\+\_\+int32\+\_\+t}}\label{doctokenizer_8cpp_a838ce943cf44ef7769480714fc6c3ba9}
+\hypertarget{doctokenizer_8cpp_a7b0840dff4a2ef1702118aa12264b2a7}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!flex\+\_\+int8\+\_\+t@{flex\+\_\+int8\+\_\+t}}
+\index{flex\+\_\+int8\+\_\+t@{flex\+\_\+int8\+\_\+t}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{flex\+\_\+int8\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed char {\bf flex\+\_\+int8\+\_\+t}}\label{doctokenizer_8cpp_a7b0840dff4a2ef1702118aa12264b2a7}
+\hypertarget{doctokenizer_8cpp_ac50cdb9eefbef83a1cec89e3a7f6e1d2}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!flex\+\_\+uint16\+\_\+t@{flex\+\_\+uint16\+\_\+t}}
+\index{flex\+\_\+uint16\+\_\+t@{flex\+\_\+uint16\+\_\+t}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{flex\+\_\+uint16\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short int {\bf flex\+\_\+uint16\+\_\+t}}\label{doctokenizer_8cpp_ac50cdb9eefbef83a1cec89e3a7f6e1d2}
+\hypertarget{doctokenizer_8cpp_a36869712de12820c73aae736762e8e88}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!flex\+\_\+uint32\+\_\+t@{flex\+\_\+uint32\+\_\+t}}
+\index{flex\+\_\+uint32\+\_\+t@{flex\+\_\+uint32\+\_\+t}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{flex\+\_\+uint32\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf flex\+\_\+uint32\+\_\+t}}\label{doctokenizer_8cpp_a36869712de12820c73aae736762e8e88}
+\hypertarget{doctokenizer_8cpp_a0fac5ea484f64e75dbe6eba4aa61750c}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!flex\+\_\+uint8\+\_\+t@{flex\+\_\+uint8\+\_\+t}}
+\index{flex\+\_\+uint8\+\_\+t@{flex\+\_\+uint8\+\_\+t}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{flex\+\_\+uint8\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf flex\+\_\+uint8\+\_\+t}}\label{doctokenizer_8cpp_a0fac5ea484f64e75dbe6eba4aa61750c}
+\hypertarget{doctokenizer_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf yy\+\_\+buffer\+\_\+state}$\ast$ {\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}\label{doctokenizer_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}
+\hypertarget{doctokenizer_8cpp_a1f324b3cb0839eeb90145f0274e6946e}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+C\+H\+A\+R}}
+\index{Y\+Y\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+C\+H\+A\+R}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+C\+H\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf Y\+Y\+\_\+\+C\+H\+A\+R}}\label{doctokenizer_8cpp_a1f324b3cb0839eeb90145f0274e6946e}
+\hypertarget{doctokenizer_8cpp_ad557845057f187eec4be07e2717d2afa}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yy\+\_\+size\+\_\+t@{yy\+\_\+size\+\_\+t}}
+\index{yy\+\_\+size\+\_\+t@{yy\+\_\+size\+\_\+t}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yy\+\_\+size\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef size\+\_\+t {\bf yy\+\_\+size\+\_\+t}}\label{doctokenizer_8cpp_ad557845057f187eec4be07e2717d2afa}
+\hypertarget{doctokenizer_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yy\+\_\+state\+\_\+type@{yy\+\_\+state\+\_\+type}}
+\index{yy\+\_\+state\+\_\+type@{yy\+\_\+state\+\_\+type}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yy\+\_\+state\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf yy\+\_\+state\+\_\+type}}\label{doctokenizer_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{doctokenizer_8cpp_a33b1f31ef9c4e8913333c4219faa7447}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Y\+\_\+create\+\_\+buffer@{doctokenizer\+Y\+Y\+\_\+create\+\_\+buffer}}
+\index{doctokenizer\+Y\+Y\+\_\+create\+\_\+buffer@{doctokenizer\+Y\+Y\+\_\+create\+\_\+buffer}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Y\+\_\+create\+\_\+buffer(\+F\+I\+L\+E $\ast$file, int size)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} doctokenizer\+Y\+Y\+\_\+create\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{file, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a33b1f31ef9c4e8913333c4219faa7447}
+Allocate and initialize an input buffer state. 
+\begin{DoxyParams}{Paramètres}
+{\em file} & \hyperlink{class_a}{A} readable stream. \\
+\hline
+{\em size} & The character buffer size in bytes. When in doubt, use {\ttfamily Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the allocated buffer state. 
+\end{DoxyReturn}
+\hypertarget{doctokenizer_8cpp_a335816cb1f4db45d7ecebd3cdc750da7}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Y\+\_\+delete\+\_\+buffer@{doctokenizer\+Y\+Y\+\_\+delete\+\_\+buffer}}
+\index{doctokenizer\+Y\+Y\+\_\+delete\+\_\+buffer@{doctokenizer\+Y\+Y\+\_\+delete\+\_\+buffer}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Y\+\_\+delete\+\_\+buffer(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E b)}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Y\+\_\+delete\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{b}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a335816cb1f4db45d7ecebd3cdc750da7}
+Destroy the buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em b} & a buffer created with \hyperlink{doctokenizer_8cpp_a33b1f31ef9c4e8913333c4219faa7447}{doctokenizer\+Y\+Y\+\_\+create\+\_\+buffer()} \\
+\hline
+\end{DoxyParams}
+\hypertarget{doctokenizer_8cpp_ac57821f42b45d41955854b3288b4cf4a}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Y\+\_\+flush\+\_\+buffer@{doctokenizer\+Y\+Y\+\_\+flush\+\_\+buffer}}
+\index{doctokenizer\+Y\+Y\+\_\+flush\+\_\+buffer@{doctokenizer\+Y\+Y\+\_\+flush\+\_\+buffer}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Y\+\_\+flush\+\_\+buffer(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E b)}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Y\+\_\+flush\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{b}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_ac57821f42b45d41955854b3288b4cf4a}
+Discard all buffered characters. On the next scan, Y\+Y\+\_\+\+I\+N\+P\+U\+T will be called. 
+\begin{DoxyParams}{Paramètres}
+{\em b} & the buffer state to be flushed, usually {\ttfamily Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{doctokenizer_8cpp_a542cf4bf474f1fcf732e785d44658826}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Y\+\_\+scan\+\_\+buffer@{doctokenizer\+Y\+Y\+\_\+scan\+\_\+buffer}}
+\index{doctokenizer\+Y\+Y\+\_\+scan\+\_\+buffer@{doctokenizer\+Y\+Y\+\_\+scan\+\_\+buffer}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Y\+\_\+scan\+\_\+buffer(char $\ast$base, yy\+\_\+size\+\_\+t size)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} doctokenizer\+Y\+Y\+\_\+scan\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{base, }
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{size}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a542cf4bf474f1fcf732e785d44658826}
+Setup the input buffer state to scan directly from a user-\/specified character buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em base} & the character buffer \\
+\hline
+{\em size} & the size in bytes of the character buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the newly allocated buffer state object. 
+\end{DoxyReturn}
+\hypertarget{doctokenizer_8cpp_a660c971d28b3da91698b406a0f5db232}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Y\+\_\+scan\+\_\+bytes@{doctokenizer\+Y\+Y\+\_\+scan\+\_\+bytes}}
+\index{doctokenizer\+Y\+Y\+\_\+scan\+\_\+bytes@{doctokenizer\+Y\+Y\+\_\+scan\+\_\+bytes}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Y\+\_\+scan\+\_\+bytes(yyconst char $\ast$bytes, yy\+\_\+size\+\_\+t len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} doctokenizer\+Y\+Y\+\_\+scan\+\_\+bytes (
+\begin{DoxyParamCaption}
+\item[{{\bf yyconst} char $\ast$}]{yybytes, }
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{\+\_\+yybytes\+\_\+len}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a660c971d28b3da91698b406a0f5db232}
+Setup the input buffer state to scan the given bytes. The next call to \hyperlink{doctokenizer_8cpp_a86550f1a87cdc6a21ac06d277c95c238}{doctokenizer\+Y\+Ylex()} will scan from a {\itshape copy} of {\itshape bytes}. 
+\begin{DoxyParams}{Paramètres}
+{\em bytes} & the byte buffer to scan \\
+\hline
+{\em len} & the number of bytes in the buffer pointed to by {\itshape bytes}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the newly allocated buffer state object. 
+\end{DoxyReturn}
+\hypertarget{doctokenizer_8cpp_ac0a62b87a4414492647af25324f27594}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Y\+\_\+scan\+\_\+string@{doctokenizer\+Y\+Y\+\_\+scan\+\_\+string}}
+\index{doctokenizer\+Y\+Y\+\_\+scan\+\_\+string@{doctokenizer\+Y\+Y\+\_\+scan\+\_\+string}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Y\+\_\+scan\+\_\+string(yyconst char $\ast$yy\+\_\+str)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} doctokenizer\+Y\+Y\+\_\+scan\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{{\bf yyconst} char $\ast$}]{yystr}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_ac0a62b87a4414492647af25324f27594}
+Setup the input buffer state to scan a string. The next call to \hyperlink{doctokenizer_8cpp_a86550f1a87cdc6a21ac06d277c95c238}{doctokenizer\+Y\+Ylex()} will scan from a {\itshape copy} of {\itshape str}. 
+\begin{DoxyParams}{Paramètres}
+{\em yystr} & a N\+U\+L-\/terminated string to scan\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the newly allocated buffer state object. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If you want to scan bytes that may contain N\+U\+L values, then use \hyperlink{doctokenizer_8cpp_a660c971d28b3da91698b406a0f5db232}{doctokenizer\+Y\+Y\+\_\+scan\+\_\+bytes()} instead. 
+\end{DoxyNote}
+\hypertarget{doctokenizer_8cpp_a758eaf4e5e9f0a35f985ced124288eb3}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer@{doctokenizer\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}}
+\index{doctokenizer\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer@{doctokenizer\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E new\+\_\+buffer)}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{new\+\_\+buffer}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a758eaf4e5e9f0a35f985ced124288eb3}
+Switch to a different input buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em new\+\_\+buffer} & The new input buffer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{doctokenizer_8cpp_a4b09fdd64e14d6962668f33778960f0e}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yalloc@{doctokenizer\+Y\+Yalloc}}
+\index{doctokenizer\+Y\+Yalloc@{doctokenizer\+Y\+Yalloc}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yalloc(yy\+\_\+size\+\_\+t)}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ doctokenizer\+Y\+Yalloc (
+\begin{DoxyParamCaption}
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{size}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a4b09fdd64e14d6962668f33778960f0e}
+\hypertarget{doctokenizer_8cpp_a98cb372ba6f8aec638e7bb11b1372fbe}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Ycleanup@{doctokenizer\+Y\+Ycleanup}}
+\index{doctokenizer\+Y\+Ycleanup@{doctokenizer\+Y\+Ycleanup}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Ycleanup()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Ycleanup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a98cb372ba6f8aec638e7bb11b1372fbe}
+\hypertarget{doctokenizer_8cpp_a65fd905b670a28c49a6478be6bbfebf3}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yend\+Auto\+List@{doctokenizer\+Y\+Yend\+Auto\+List}}
+\index{doctokenizer\+Y\+Yend\+Auto\+List@{doctokenizer\+Y\+Yend\+Auto\+List}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yend\+Auto\+List()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yend\+Auto\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a65fd905b670a28c49a6478be6bbfebf3}
+\hypertarget{doctokenizer_8cpp_a6497989e3c95adbefa694460443ff909}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Y\+Find\+Sections@{doctokenizer\+Y\+Y\+Find\+Sections}}
+\index{doctokenizer\+Y\+Y\+Find\+Sections@{doctokenizer\+Y\+Y\+Find\+Sections}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Y\+Find\+Sections(const char $\ast$input, Definition $\ast$d, Member\+Group $\ast$mg, const char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Y\+Find\+Sections (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{input, }
+\item[{{\bf Definition} $\ast$}]{d, }
+\item[{{\bf Member\+Group} $\ast$}]{mg, }
+\item[{const char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a6497989e3c95adbefa694460443ff909}
+\hypertarget{doctokenizer_8cpp_af51fb64eb87a80f64e2c18fe74e038a6}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yfree@{doctokenizer\+Y\+Yfree}}
+\index{doctokenizer\+Y\+Yfree@{doctokenizer\+Y\+Yfree}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yfree(void $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yfree (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_af51fb64eb87a80f64e2c18fe74e038a6}
+\hypertarget{doctokenizer_8cpp_a996319d74fdfea00f5e252ef9a624fb0}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yget\+\_\+debug@{doctokenizer\+Y\+Yget\+\_\+debug}}
+\index{doctokenizer\+Y\+Yget\+\_\+debug@{doctokenizer\+Y\+Yget\+\_\+debug}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yget\+\_\+debug(void)}]{\setlength{\rightskip}{0pt plus 5cm}int doctokenizer\+Y\+Yget\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a996319d74fdfea00f5e252ef9a624fb0}
+\hypertarget{doctokenizer_8cpp_a52ecf064ad4d2e0cbcd21604e4a6aeb0}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yget\+\_\+extra@{doctokenizer\+Y\+Yget\+\_\+extra}}
+\index{doctokenizer\+Y\+Yget\+\_\+extra@{doctokenizer\+Y\+Yget\+\_\+extra}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yget\+\_\+extra(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E} doctokenizer\+Y\+Yget\+\_\+extra (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a52ecf064ad4d2e0cbcd21604e4a6aeb0}
+\hypertarget{doctokenizer_8cpp_a2c7d25726b168f93d36d7f8cc500bf1d}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yget\+\_\+in@{doctokenizer\+Y\+Yget\+\_\+in}}
+\index{doctokenizer\+Y\+Yget\+\_\+in@{doctokenizer\+Y\+Yget\+\_\+in}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yget\+\_\+in(void)}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ doctokenizer\+Y\+Yget\+\_\+in (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a2c7d25726b168f93d36d7f8cc500bf1d}
+Get the input stream. \hypertarget{doctokenizer_8cpp_a7a8af2486c16cd3316f4882113069a5b}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yget\+\_\+leng@{doctokenizer\+Y\+Yget\+\_\+leng}}
+\index{doctokenizer\+Y\+Yget\+\_\+leng@{doctokenizer\+Y\+Yget\+\_\+leng}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yget\+\_\+leng(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf yy\+\_\+size\+\_\+t} doctokenizer\+Y\+Yget\+\_\+leng (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a7a8af2486c16cd3316f4882113069a5b}
+Get the length of the current token. \hypertarget{doctokenizer_8cpp_adc68dfdba8c4d86fd179a4c3a4b4e237}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yget\+\_\+lineno@{doctokenizer\+Y\+Yget\+\_\+lineno}}
+\index{doctokenizer\+Y\+Yget\+\_\+lineno@{doctokenizer\+Y\+Yget\+\_\+lineno}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yget\+\_\+lineno(void)}]{\setlength{\rightskip}{0pt plus 5cm}int doctokenizer\+Y\+Yget\+\_\+lineno (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_adc68dfdba8c4d86fd179a4c3a4b4e237}
+Get the current line number. \hypertarget{doctokenizer_8cpp_a14d8a571b4fdaba9ab55dd42f498f261}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yget\+\_\+out@{doctokenizer\+Y\+Yget\+\_\+out}}
+\index{doctokenizer\+Y\+Yget\+\_\+out@{doctokenizer\+Y\+Yget\+\_\+out}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yget\+\_\+out(void)}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ doctokenizer\+Y\+Yget\+\_\+out (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a14d8a571b4fdaba9ab55dd42f498f261}
+Get the output stream. \hypertarget{doctokenizer_8cpp_a037a1b3b549783ade30ca19d7b33a673}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yget\+\_\+text@{doctokenizer\+Y\+Yget\+\_\+text}}
+\index{doctokenizer\+Y\+Yget\+\_\+text@{doctokenizer\+Y\+Yget\+\_\+text}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yget\+\_\+text(void)}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ doctokenizer\+Y\+Yget\+\_\+text (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a037a1b3b549783ade30ca19d7b33a673}
+Get the current token. \hypertarget{doctokenizer_8cpp_af0fbfef38dfe206447c10c3ea7630f88}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yinit@{doctokenizer\+Y\+Yinit}}
+\index{doctokenizer\+Y\+Yinit@{doctokenizer\+Y\+Yinit}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yinit(const char $\ast$input, const char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yinit (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{input, }
+\item[{const char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_af0fbfef38dfe206447c10c3ea7630f88}
+\hypertarget{doctokenizer_8cpp_a86550f1a87cdc6a21ac06d277c95c238}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Ylex@{doctokenizer\+Y\+Ylex}}
+\index{doctokenizer\+Y\+Ylex@{doctokenizer\+Y\+Ylex}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Ylex(void)}]{\setlength{\rightskip}{0pt plus 5cm}int doctokenizer\+Y\+Ylex (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a86550f1a87cdc6a21ac06d277c95c238}
+\hypertarget{doctokenizer_8cpp_a4ec661f2cde9385b1297e2f980a6a8a7}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Ylex\+\_\+destroy@{doctokenizer\+Y\+Ylex\+\_\+destroy}}
+\index{doctokenizer\+Y\+Ylex\+\_\+destroy@{doctokenizer\+Y\+Ylex\+\_\+destroy}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Ylex\+\_\+destroy(void)}]{\setlength{\rightskip}{0pt plus 5cm}int doctokenizer\+Y\+Ylex\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a4ec661f2cde9385b1297e2f980a6a8a7}
+\hypertarget{doctokenizer_8cpp_a0643ef8f7330d9fadd56da5d424fb0ff}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Ypop\+\_\+buffer\+\_\+state@{doctokenizer\+Y\+Ypop\+\_\+buffer\+\_\+state}}
+\index{doctokenizer\+Y\+Ypop\+\_\+buffer\+\_\+state@{doctokenizer\+Y\+Ypop\+\_\+buffer\+\_\+state}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Ypop\+\_\+buffer\+\_\+state(void)}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Ypop\+\_\+buffer\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a0643ef8f7330d9fadd56da5d424fb0ff}
+Removes and deletes the top of the stack, if present. The next element becomes the new top. \hypertarget{doctokenizer_8cpp_a44e35da7f5bb350b7efbc7d79a6301b9}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Ypop\+Context@{doctokenizer\+Y\+Ypop\+Context}}
+\index{doctokenizer\+Y\+Ypop\+Context@{doctokenizer\+Y\+Ypop\+Context}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Ypop\+Context()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} doctokenizer\+Y\+Ypop\+Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a44e35da7f5bb350b7efbc7d79a6301b9}
+\hypertarget{doctokenizer_8cpp_a26d05b160e72d01f0fd1240ee3003367}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Ypush\+\_\+buffer\+\_\+state@{doctokenizer\+Y\+Ypush\+\_\+buffer\+\_\+state}}
+\index{doctokenizer\+Y\+Ypush\+\_\+buffer\+\_\+state@{doctokenizer\+Y\+Ypush\+\_\+buffer\+\_\+state}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Ypush\+\_\+buffer\+\_\+state(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E new\+\_\+buffer)}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Ypush\+\_\+buffer\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{new\+\_\+buffer}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a26d05b160e72d01f0fd1240ee3003367}
+Pushes the new state onto the stack. The new state becomes the current state. This function will allocate the stack if necessary. 
+\begin{DoxyParams}{Paramètres}
+{\em new\+\_\+buffer} & The new state. \\
+\hline
+\end{DoxyParams}
+\hypertarget{doctokenizer_8cpp_ad040b79f378a00fdb88db12dbb3a4954}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Ypush\+Back\+Html\+Tag@{doctokenizer\+Y\+Ypush\+Back\+Html\+Tag}}
+\index{doctokenizer\+Y\+Ypush\+Back\+Html\+Tag@{doctokenizer\+Y\+Ypush\+Back\+Html\+Tag}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Ypush\+Back\+Html\+Tag(const char $\ast$tag)}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Ypush\+Back\+Html\+Tag (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{tag}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_ad040b79f378a00fdb88db12dbb3a4954}
+\hypertarget{doctokenizer_8cpp_a1ad544019a5d03f9dce8ed0aa7843417}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Ypush\+Context@{doctokenizer\+Y\+Ypush\+Context}}
+\index{doctokenizer\+Y\+Ypush\+Context@{doctokenizer\+Y\+Ypush\+Context}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Ypush\+Context()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Ypush\+Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a1ad544019a5d03f9dce8ed0aa7843417}
+\hypertarget{doctokenizer_8cpp_a5524a0991249fa656d722bbf9b2217eb}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yrealloc@{doctokenizer\+Y\+Yrealloc}}
+\index{doctokenizer\+Y\+Yrealloc@{doctokenizer\+Y\+Yrealloc}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yrealloc(void $\ast$, yy\+\_\+size\+\_\+t)}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ doctokenizer\+Y\+Yrealloc (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr, }
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{size}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a5524a0991249fa656d722bbf9b2217eb}
+\hypertarget{doctokenizer_8cpp_a94913854d681143d57729d0a3ec6f166}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yrestart@{doctokenizer\+Y\+Yrestart}}
+\index{doctokenizer\+Y\+Yrestart@{doctokenizer\+Y\+Yrestart}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yrestart(\+F\+I\+L\+E $\ast$input\+\_\+file)}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yrestart (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{input\+\_\+file}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a94913854d681143d57729d0a3ec6f166}
+Immediately switch to a different input stream. 
+\begin{DoxyParams}{Paramètres}
+{\em input\+\_\+file} & \hyperlink{class_a}{A} readable stream.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function does not reset the start condition to {\ttfamily I\+N\+I\+T\+I\+A\+L} . 
+\end{DoxyNote}
+\hypertarget{doctokenizer_8cpp_a5f71b35524502bf5ea0b3ba76c5d42f0}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+\_\+debug@{doctokenizer\+Y\+Yset\+\_\+debug}}
+\index{doctokenizer\+Y\+Yset\+\_\+debug@{doctokenizer\+Y\+Yset\+\_\+debug}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+\_\+debug(int debug\+\_\+flag)}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{int}]{debug\+\_\+flag}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a5f71b35524502bf5ea0b3ba76c5d42f0}
+\hypertarget{doctokenizer_8cpp_a3968291e6b415f65c75e274ede58e0b6}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+\_\+extra@{doctokenizer\+Y\+Yset\+\_\+extra}}
+\index{doctokenizer\+Y\+Yset\+\_\+extra@{doctokenizer\+Y\+Yset\+\_\+extra}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+\_\+extra(\+Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E user\+\_\+defined)}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+\_\+extra (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}}]{user\+\_\+defined}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a3968291e6b415f65c75e274ede58e0b6}
+\hypertarget{doctokenizer_8cpp_a81c41954829105f9ced1ba1419617628}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+\_\+in@{doctokenizer\+Y\+Yset\+\_\+in}}
+\index{doctokenizer\+Y\+Yset\+\_\+in@{doctokenizer\+Y\+Yset\+\_\+in}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+\_\+in(\+F\+I\+L\+E $\ast$in\+\_\+str)}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+\_\+in (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{in\+\_\+str}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a81c41954829105f9ced1ba1419617628}
+Set the input stream. This does not discard the current input buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em in\+\_\+str} & \hyperlink{class_a}{A} readable stream.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{doctokenizer_8cpp_a758eaf4e5e9f0a35f985ced124288eb3}{doctokenizer\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer} 
+\end{DoxySeeAlso}
+\hypertarget{doctokenizer_8cpp_a7f45bfe19e3f6615f755ec8dd4015cac}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+\_\+lineno@{doctokenizer\+Y\+Yset\+\_\+lineno}}
+\index{doctokenizer\+Y\+Yset\+\_\+lineno@{doctokenizer\+Y\+Yset\+\_\+lineno}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+\_\+lineno(int line\+\_\+number)}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+\_\+lineno (
+\begin{DoxyParamCaption}
+\item[{int}]{line\+\_\+number}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a7f45bfe19e3f6615f755ec8dd4015cac}
+Set the current line number. 
+\begin{DoxyParams}{Paramètres}
+{\em line\+\_\+number} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{doctokenizer_8cpp_a41e9ce5c89e0fbe7139ab181e7dd1ba5}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+\_\+out@{doctokenizer\+Y\+Yset\+\_\+out}}
+\index{doctokenizer\+Y\+Yset\+\_\+out@{doctokenizer\+Y\+Yset\+\_\+out}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+\_\+out(\+F\+I\+L\+E $\ast$out\+\_\+str)}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+\_\+out (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{out\+\_\+str}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a41e9ce5c89e0fbe7139ab181e7dd1ba5}
+\hypertarget{doctokenizer_8cpp_aaa52449c09f622600dae24e48939de13}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+Inside\+Pre@{doctokenizer\+Y\+Yset\+Inside\+Pre}}
+\index{doctokenizer\+Y\+Yset\+Inside\+Pre@{doctokenizer\+Y\+Yset\+Inside\+Pre}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+Inside\+Pre(bool b)}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+Inside\+Pre (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{b}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_aaa52449c09f622600dae24e48939de13}
+\hypertarget{doctokenizer_8cpp_a7cdee9515612b83cdf77ed1b30616d8f}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Anchor@{doctokenizer\+Y\+Yset\+State\+Anchor}}
+\index{doctokenizer\+Y\+Yset\+State\+Anchor@{doctokenizer\+Y\+Yset\+State\+Anchor}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Anchor()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Anchor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a7cdee9515612b83cdf77ed1b30616d8f}
+\hypertarget{doctokenizer_8cpp_af42238f1be74394fdb7436160c708586}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Cite@{doctokenizer\+Y\+Yset\+State\+Cite}}
+\index{doctokenizer\+Y\+Yset\+State\+Cite@{doctokenizer\+Y\+Yset\+State\+Cite}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Cite()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Cite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_af42238f1be74394fdb7436160c708586}
+\hypertarget{doctokenizer_8cpp_ad7bbf8187cf8035dae6572bc2074638b}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Code@{doctokenizer\+Y\+Yset\+State\+Code}}
+\index{doctokenizer\+Y\+Yset\+State\+Code@{doctokenizer\+Y\+Yset\+State\+Code}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Code()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_ad7bbf8187cf8035dae6572bc2074638b}
+\hypertarget{doctokenizer_8cpp_aaa58a7d460684f8f4b4016d68257193e}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Db\+Only@{doctokenizer\+Y\+Yset\+State\+Db\+Only}}
+\index{doctokenizer\+Y\+Yset\+State\+Db\+Only@{doctokenizer\+Y\+Yset\+State\+Db\+Only}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Db\+Only()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Db\+Only (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_aaa58a7d460684f8f4b4016d68257193e}
+\hypertarget{doctokenizer_8cpp_a12284a3bf0d5614ea1aac89c968014d0}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Dot@{doctokenizer\+Y\+Yset\+State\+Dot}}
+\index{doctokenizer\+Y\+Yset\+State\+Dot@{doctokenizer\+Y\+Yset\+State\+Dot}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Dot()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Dot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a12284a3bf0d5614ea1aac89c968014d0}
+\hypertarget{doctokenizer_8cpp_af2853fe98871a15614e098082c6390b0}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+File@{doctokenizer\+Y\+Yset\+State\+File}}
+\index{doctokenizer\+Y\+Yset\+State\+File@{doctokenizer\+Y\+Yset\+State\+File}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+File()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_af2853fe98871a15614e098082c6390b0}
+\hypertarget{doctokenizer_8cpp_aabc8fb45704f763669cb779ad00eac8d}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Html\+Only@{doctokenizer\+Y\+Yset\+State\+Html\+Only}}
+\index{doctokenizer\+Y\+Yset\+State\+Html\+Only@{doctokenizer\+Y\+Yset\+State\+Html\+Only}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Html\+Only()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Html\+Only (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_aabc8fb45704f763669cb779ad00eac8d}
+\hypertarget{doctokenizer_8cpp_a4c2f7d7ee941bcc3427479e1e64a30f0}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Internal\+Ref@{doctokenizer\+Y\+Yset\+State\+Internal\+Ref}}
+\index{doctokenizer\+Y\+Yset\+State\+Internal\+Ref@{doctokenizer\+Y\+Yset\+State\+Internal\+Ref}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Internal\+Ref()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Internal\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a4c2f7d7ee941bcc3427479e1e64a30f0}
+\hypertarget{doctokenizer_8cpp_aedf23d1fdd2d3330e068120f1b322e37}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Latex\+Only@{doctokenizer\+Y\+Yset\+State\+Latex\+Only}}
+\index{doctokenizer\+Y\+Yset\+State\+Latex\+Only@{doctokenizer\+Y\+Yset\+State\+Latex\+Only}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Latex\+Only()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Latex\+Only (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_aedf23d1fdd2d3330e068120f1b322e37}
+\hypertarget{doctokenizer_8cpp_ad41685e7ebe83cd14bf9c36145d93c75}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Link@{doctokenizer\+Y\+Yset\+State\+Link}}
+\index{doctokenizer\+Y\+Yset\+State\+Link@{doctokenizer\+Y\+Yset\+State\+Link}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Link()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_ad41685e7ebe83cd14bf9c36145d93c75}
+\hypertarget{doctokenizer_8cpp_a0e68fd576eb5c2993f504b19936b2d5b}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Man\+Only@{doctokenizer\+Y\+Yset\+State\+Man\+Only}}
+\index{doctokenizer\+Y\+Yset\+State\+Man\+Only@{doctokenizer\+Y\+Yset\+State\+Man\+Only}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Man\+Only()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Man\+Only (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a0e68fd576eb5c2993f504b19936b2d5b}
+\hypertarget{doctokenizer_8cpp_ad202c1e9db88a8f5c0d3ddad81729d18}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Msc@{doctokenizer\+Y\+Yset\+State\+Msc}}
+\index{doctokenizer\+Y\+Yset\+State\+Msc@{doctokenizer\+Y\+Yset\+State\+Msc}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Msc()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Msc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_ad202c1e9db88a8f5c0d3ddad81729d18}
+\hypertarget{doctokenizer_8cpp_a2aaff9c507b173362117117bdd1805de}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Para@{doctokenizer\+Y\+Yset\+State\+Para}}
+\index{doctokenizer\+Y\+Yset\+State\+Para@{doctokenizer\+Y\+Yset\+State\+Para}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Para()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Para (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a2aaff9c507b173362117117bdd1805de}
+\hypertarget{doctokenizer_8cpp_a80daa02a4a285610d6b9ab7f9e1044f5}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Param@{doctokenizer\+Y\+Yset\+State\+Param}}
+\index{doctokenizer\+Y\+Yset\+State\+Param@{doctokenizer\+Y\+Yset\+State\+Param}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Param()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Param (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a80daa02a4a285610d6b9ab7f9e1044f5}
+\hypertarget{doctokenizer_8cpp_a46b7b5778fe56263a2f26d53303772fc}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Pattern@{doctokenizer\+Y\+Yset\+State\+Pattern}}
+\index{doctokenizer\+Y\+Yset\+State\+Pattern@{doctokenizer\+Y\+Yset\+State\+Pattern}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Pattern()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Pattern (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a46b7b5778fe56263a2f26d53303772fc}
+\hypertarget{doctokenizer_8cpp_a3dee0207372f2133d318be7ece514767}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Plant\+U\+M\+L@{doctokenizer\+Y\+Yset\+State\+Plant\+U\+M\+L}}
+\index{doctokenizer\+Y\+Yset\+State\+Plant\+U\+M\+L@{doctokenizer\+Y\+Yset\+State\+Plant\+U\+M\+L}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Plant\+U\+M\+L()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Plant\+U\+M\+L (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a3dee0207372f2133d318be7ece514767}
+\hypertarget{doctokenizer_8cpp_a31888cbfeb5f9296d91f1eaee5ad9506}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Plant\+U\+M\+L\+Opt@{doctokenizer\+Y\+Yset\+State\+Plant\+U\+M\+L\+Opt}}
+\index{doctokenizer\+Y\+Yset\+State\+Plant\+U\+M\+L\+Opt@{doctokenizer\+Y\+Yset\+State\+Plant\+U\+M\+L\+Opt}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Plant\+U\+M\+L\+Opt()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Plant\+U\+M\+L\+Opt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a31888cbfeb5f9296d91f1eaee5ad9506}
+\hypertarget{doctokenizer_8cpp_aa824631822cf355273c15f3edf7bd962}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Ref@{doctokenizer\+Y\+Yset\+State\+Ref}}
+\index{doctokenizer\+Y\+Yset\+State\+Ref@{doctokenizer\+Y\+Yset\+State\+Ref}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Ref()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_aa824631822cf355273c15f3edf7bd962}
+\hypertarget{doctokenizer_8cpp_acae75c924706d62377a86fe38d8b1347}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Rtf\+Only@{doctokenizer\+Y\+Yset\+State\+Rtf\+Only}}
+\index{doctokenizer\+Y\+Yset\+State\+Rtf\+Only@{doctokenizer\+Y\+Yset\+State\+Rtf\+Only}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Rtf\+Only()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Rtf\+Only (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_acae75c924706d62377a86fe38d8b1347}
+\hypertarget{doctokenizer_8cpp_ad8ed04eb77a16cf4a29f8fa616de6324}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Set\+Scope@{doctokenizer\+Y\+Yset\+State\+Set\+Scope}}
+\index{doctokenizer\+Y\+Yset\+State\+Set\+Scope@{doctokenizer\+Y\+Yset\+State\+Set\+Scope}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Set\+Scope()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Set\+Scope (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_ad8ed04eb77a16cf4a29f8fa616de6324}
+\hypertarget{doctokenizer_8cpp_a2387759f8b10f2fd7adcfe0c5a6c36fa}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Skip\+Title@{doctokenizer\+Y\+Yset\+State\+Skip\+Title}}
+\index{doctokenizer\+Y\+Yset\+State\+Skip\+Title@{doctokenizer\+Y\+Yset\+State\+Skip\+Title}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Skip\+Title()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Skip\+Title (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a2387759f8b10f2fd7adcfe0c5a6c36fa}
+\hypertarget{doctokenizer_8cpp_a2c2487633cc4d3a29c24864e45154748}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Snippet@{doctokenizer\+Y\+Yset\+State\+Snippet}}
+\index{doctokenizer\+Y\+Yset\+State\+Snippet@{doctokenizer\+Y\+Yset\+State\+Snippet}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Snippet()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Snippet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a2c2487633cc4d3a29c24864e45154748}
+\hypertarget{doctokenizer_8cpp_a49f0218a87e5afcc197d34cf922b9331}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Text@{doctokenizer\+Y\+Yset\+State\+Text}}
+\index{doctokenizer\+Y\+Yset\+State\+Text@{doctokenizer\+Y\+Yset\+State\+Text}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Text()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Text (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a49f0218a87e5afcc197d34cf922b9331}
+\hypertarget{doctokenizer_8cpp_a63c54ed5a866fe6df6e2a3b4b681fdc1}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Title@{doctokenizer\+Y\+Yset\+State\+Title}}
+\index{doctokenizer\+Y\+Yset\+State\+Title@{doctokenizer\+Y\+Yset\+State\+Title}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Title()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Title (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a63c54ed5a866fe6df6e2a3b4b681fdc1}
+\hypertarget{doctokenizer_8cpp_aa341f65b931c443a65c1da020f9c0575}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Title\+Attr\+Value@{doctokenizer\+Y\+Yset\+State\+Title\+Attr\+Value}}
+\index{doctokenizer\+Y\+Yset\+State\+Title\+Attr\+Value@{doctokenizer\+Y\+Yset\+State\+Title\+Attr\+Value}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Title\+Attr\+Value()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Title\+Attr\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_aa341f65b931c443a65c1da020f9c0575}
+\hypertarget{doctokenizer_8cpp_aef6c57535e24c04a4f4f1c3167f0312b}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Verbatim@{doctokenizer\+Y\+Yset\+State\+Verbatim}}
+\index{doctokenizer\+Y\+Yset\+State\+Verbatim@{doctokenizer\+Y\+Yset\+State\+Verbatim}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Verbatim()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Verbatim (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_aef6c57535e24c04a4f4f1c3167f0312b}
+\hypertarget{doctokenizer_8cpp_a83f3319c16bc4f5ed222920ebe9cd094}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Xml\+Code@{doctokenizer\+Y\+Yset\+State\+Xml\+Code}}
+\index{doctokenizer\+Y\+Yset\+State\+Xml\+Code@{doctokenizer\+Y\+Yset\+State\+Xml\+Code}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Xml\+Code()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Xml\+Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a83f3319c16bc4f5ed222920ebe9cd094}
+\hypertarget{doctokenizer_8cpp_a547733a2ce6a8c0e25f5d0749aa3f5fa}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+Xml\+Only@{doctokenizer\+Y\+Yset\+State\+Xml\+Only}}
+\index{doctokenizer\+Y\+Yset\+State\+Xml\+Only@{doctokenizer\+Y\+Yset\+State\+Xml\+Only}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+Xml\+Only()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+Xml\+Only (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a547733a2ce6a8c0e25f5d0749aa3f5fa}
+\hypertarget{doctokenizer_8cpp_aed7c2e03ad1c6f387c9f5d1e0b2f6e5c}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yset\+State\+X\+Ref\+Item@{doctokenizer\+Y\+Yset\+State\+X\+Ref\+Item}}
+\index{doctokenizer\+Y\+Yset\+State\+X\+Ref\+Item@{doctokenizer\+Y\+Yset\+State\+X\+Ref\+Item}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yset\+State\+X\+Ref\+Item()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Yset\+State\+X\+Ref\+Item (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_aed7c2e03ad1c6f387c9f5d1e0b2f6e5c}
+\hypertarget{doctokenizer_8cpp_acefc8a01c606a789d98a11eed6ff1902}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Ystart\+Auto\+List@{doctokenizer\+Y\+Ystart\+Auto\+List}}
+\index{doctokenizer\+Y\+Ystart\+Auto\+List@{doctokenizer\+Y\+Ystart\+Auto\+List}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Ystart\+Auto\+List()}]{\setlength{\rightskip}{0pt plus 5cm}void doctokenizer\+Y\+Ystart\+Auto\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_acefc8a01c606a789d98a11eed6ff1902}
+\hypertarget{doctokenizer_8cpp_ad4a65b873df5c05570846b5413b41dfd}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!if@{if}}
+\index{if@{if}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{if("!(yy\+\_\+init))}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{!}]{yy\+\_\+init}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_ad4a65b873df5c05570846b5413b41dfd}
+\hypertarget{doctokenizer_8cpp_ab4155ffea05dab2dafae68fd88a0517f}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!isatty@{isatty}}
+\index{isatty@{isatty}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{isatty(int)}]{\setlength{\rightskip}{0pt plus 5cm}int isatty (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_ab4155ffea05dab2dafae68fd88a0517f}
+\hypertarget{doctokenizer_8cpp_a2a98a6f15df23cdeae56a759def54baf}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!tok\+To\+String@{tok\+To\+String}}
+\index{tok\+To\+String@{tok\+To\+String}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{tok\+To\+String(int token)}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ tok\+To\+String (
+\begin{DoxyParamCaption}
+\item[{int}]{token}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a2a98a6f15df23cdeae56a759def54baf}
+\hypertarget{doctokenizer_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!while@{while}}
+\index{while@{while}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{while(1)}]{\setlength{\rightskip}{0pt plus 5cm}while (
+\begin{DoxyParamCaption}
+\item[{1}]{}
+\end{DoxyParamCaption}
+)}\label{doctokenizer_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}
+
+
+\subsection{Documentation des variables}
+\hypertarget{doctokenizer_8cpp_ab58a7ae8bccfe0ea881e4fce12f22c9d}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Y\+\_\+flex\+\_\+debug@{doctokenizer\+Y\+Y\+\_\+flex\+\_\+debug}}
+\index{doctokenizer\+Y\+Y\+\_\+flex\+\_\+debug@{doctokenizer\+Y\+Y\+\_\+flex\+\_\+debug}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Y\+\_\+flex\+\_\+debug}]{\setlength{\rightskip}{0pt plus 5cm}int doctokenizer\+Y\+Y\+\_\+flex\+\_\+debug = 0}\label{doctokenizer_8cpp_ab58a7ae8bccfe0ea881e4fce12f22c9d}
+\hypertarget{doctokenizer_8cpp_a14b5831e305b3ba6fa3b94d65844a261}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yin@{doctokenizer\+Y\+Yin}}
+\index{doctokenizer\+Y\+Yin@{doctokenizer\+Y\+Yin}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yin}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ doctokenizer\+Y\+Yin = (F\+I\+L\+E $\ast$) 0}\label{doctokenizer_8cpp_a14b5831e305b3ba6fa3b94d65844a261}
+\hypertarget{doctokenizer_8cpp_a067da8359de18788f58fb01bd4128d38}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yleng@{doctokenizer\+Y\+Yleng}}
+\index{doctokenizer\+Y\+Yleng@{doctokenizer\+Y\+Yleng}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yleng}]{\setlength{\rightskip}{0pt plus 5cm}{\bf yy\+\_\+size\+\_\+t} doctokenizer\+Y\+Yleng}\label{doctokenizer_8cpp_a067da8359de18788f58fb01bd4128d38}
+\hypertarget{doctokenizer_8cpp_aa2c414f2e33cf9014cad85e137da0e95}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Ylineno@{doctokenizer\+Y\+Ylineno}}
+\index{doctokenizer\+Y\+Ylineno@{doctokenizer\+Y\+Ylineno}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Ylineno}]{\setlength{\rightskip}{0pt plus 5cm}int doctokenizer\+Y\+Ylineno = 1}\label{doctokenizer_8cpp_aa2c414f2e33cf9014cad85e137da0e95}
+\hypertarget{doctokenizer_8cpp_a18af7383737e52cc59a83dac94b4f735}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Yout@{doctokenizer\+Y\+Yout}}
+\index{doctokenizer\+Y\+Yout@{doctokenizer\+Y\+Yout}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Yout}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ doctokenizer\+Y\+Yout = (F\+I\+L\+E $\ast$) 0}\label{doctokenizer_8cpp_a18af7383737e52cc59a83dac94b4f735}
+\hypertarget{doctokenizer_8cpp_a5a2c8bd6232d793f3e2cf86de0909509}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!doctokenizer\+Y\+Ytext@{doctokenizer\+Y\+Ytext}}
+\index{doctokenizer\+Y\+Ytext@{doctokenizer\+Y\+Ytext}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{doctokenizer\+Y\+Ytext}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ doctokenizer\+Y\+Ytext}\label{doctokenizer_8cpp_a5a2c8bd6232d793f3e2cf86de0909509}
+\hypertarget{doctokenizer_8cpp_a31196325b225b79fbc6b5d6683273f02}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!g\+\_\+token@{g\+\_\+token}}
+\index{g\+\_\+token@{g\+\_\+token}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{g\+\_\+token}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Token\+Info}$\ast$ g\+\_\+token = 0}\label{doctokenizer_8cpp_a31196325b225b79fbc6b5d6683273f02}
+\hypertarget{doctokenizer_8cpp_a7ffc8c947830757dd87ad202a6823edd}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yy\+\_\+act@{yy\+\_\+act}}
+\index{yy\+\_\+act@{yy\+\_\+act}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yy\+\_\+act}]{\setlength{\rightskip}{0pt plus 5cm}register int yy\+\_\+act}\label{doctokenizer_8cpp_a7ffc8c947830757dd87ad202a6823edd}
+\hypertarget{doctokenizer_8cpp_a71cf769ce518e8687bf8999b278c65f4}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yy\+\_\+bp@{yy\+\_\+bp}}
+\index{yy\+\_\+bp@{yy\+\_\+bp}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yy\+\_\+bp}]{\setlength{\rightskip}{0pt plus 5cm}register char $\ast$ yy\+\_\+bp}\label{doctokenizer_8cpp_a71cf769ce518e8687bf8999b278c65f4}
+\hypertarget{doctokenizer_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!yy\+\_\+cp@{yy\+\_\+cp}}
+\index{yy\+\_\+cp@{yy\+\_\+cp}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{yy\+\_\+cp}]{\setlength{\rightskip}{0pt plus 5cm}register char$\ast$ yy\+\_\+cp}\label{doctokenizer_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}
+\hypertarget{doctokenizer_8cpp_abcefb20c54ce0f92452cfbb9cf657670}{}\index{doctokenizer.\+cpp@{doctokenizer.\+cpp}!Y\+Y\+\_\+\+D\+E\+C\+L@{Y\+Y\+\_\+\+D\+E\+C\+L}}
+\index{Y\+Y\+\_\+\+D\+E\+C\+L@{Y\+Y\+\_\+\+D\+E\+C\+L}!doctokenizer.\+cpp@{doctokenizer.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+D\+E\+C\+L}]{\setlength{\rightskip}{0pt plus 5cm}Y\+Y\+\_\+\+D\+E\+C\+L}\label{doctokenizer_8cpp_abcefb20c54ce0f92452cfbb9cf657670}
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}
+\{
+    \textcolor{keyword}{register} \hyperlink{code_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{yy\_state\_type} \hyperlink{constexp_8cpp_a86a21c2101611f87781b40b111e65aac}{yy\_current\_state}
+\end{DoxyCode}
+The main scanner function which does all the work. 

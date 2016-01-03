@@ -1,0 +1,68 @@
+\hypertarget{qgvector_8cpp}{}\section{Référence du fichier qtools/qgvector.cpp}
+\label{qgvector_8cpp}\index{qtools/qgvector.\+cpp@{qtools/qgvector.\+cpp}}
+{\ttfamily \#include \char`\"{}qgvector.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qglist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qstring.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qdatastream.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{qgvector_8cpp_a744be15a25921bc466f00a1ac607dda3}{Q\+G\+V\+E\+C\+T\+O\+R\+\_\+\+C\+P\+P}
+\item 
+\#define \hyperlink{qgvector_8cpp_a67bcadbc2a674221c3f4544d1a07ee07}{U\+S\+E\+\_\+\+M\+A\+L\+L\+O\+C}
+\item 
+\#define \hyperlink{qgvector_8cpp_af69046f2f0b96e9d7522622eead76121}{N\+E\+W}(type,  size)~((type$\ast$)malloc(size$\ast$sizeof(type)))
+\item 
+\#define \hyperlink{qgvector_8cpp_ad0f11ecdfb43e4fe1da50b9a56f60a45}{D\+E\+L\+E\+T\+E}(array)~(free((char$\ast$)array))
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{qgvector_8cpp_abab6836e70aa477bb62eb2ef6a23e109}{operator$>$$>$} (\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{class_q_g_vector}{Q\+G\+Vector} \&vec)
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{qgvector_8cpp_aa52fde25695d249eac5b1217ee5c1983}{operator$<$$<$} (\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, const \hyperlink{class_q_g_vector}{Q\+G\+Vector} \&vec)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{qgvector_8cpp_ad0f11ecdfb43e4fe1da50b9a56f60a45}{}\index{qgvector.\+cpp@{qgvector.\+cpp}!D\+E\+L\+E\+T\+E@{D\+E\+L\+E\+T\+E}}
+\index{D\+E\+L\+E\+T\+E@{D\+E\+L\+E\+T\+E}!qgvector.\+cpp@{qgvector.\+cpp}}
+\subsubsection[{D\+E\+L\+E\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+L\+E\+T\+E(
+\begin{DoxyParamCaption}
+\item[{}]{array}
+\end{DoxyParamCaption}
+)~(free((char$\ast$)array))}\label{qgvector_8cpp_ad0f11ecdfb43e4fe1da50b9a56f60a45}
+\hypertarget{qgvector_8cpp_af69046f2f0b96e9d7522622eead76121}{}\index{qgvector.\+cpp@{qgvector.\+cpp}!N\+E\+W@{N\+E\+W}}
+\index{N\+E\+W@{N\+E\+W}!qgvector.\+cpp@{qgvector.\+cpp}}
+\subsubsection[{N\+E\+W}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+E\+W(
+\begin{DoxyParamCaption}
+\item[{}]{type, }
+\item[{}]{size}
+\end{DoxyParamCaption}
+)~((type$\ast$)malloc(size$\ast$sizeof(type)))}\label{qgvector_8cpp_af69046f2f0b96e9d7522622eead76121}
+\hypertarget{qgvector_8cpp_a744be15a25921bc466f00a1ac607dda3}{}\index{qgvector.\+cpp@{qgvector.\+cpp}!Q\+G\+V\+E\+C\+T\+O\+R\+\_\+\+C\+P\+P@{Q\+G\+V\+E\+C\+T\+O\+R\+\_\+\+C\+P\+P}}
+\index{Q\+G\+V\+E\+C\+T\+O\+R\+\_\+\+C\+P\+P@{Q\+G\+V\+E\+C\+T\+O\+R\+\_\+\+C\+P\+P}!qgvector.\+cpp@{qgvector.\+cpp}}
+\subsubsection[{Q\+G\+V\+E\+C\+T\+O\+R\+\_\+\+C\+P\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\+G\+V\+E\+C\+T\+O\+R\+\_\+\+C\+P\+P}\label{qgvector_8cpp_a744be15a25921bc466f00a1ac607dda3}
+\hypertarget{qgvector_8cpp_a67bcadbc2a674221c3f4544d1a07ee07}{}\index{qgvector.\+cpp@{qgvector.\+cpp}!U\+S\+E\+\_\+\+M\+A\+L\+L\+O\+C@{U\+S\+E\+\_\+\+M\+A\+L\+L\+O\+C}}
+\index{U\+S\+E\+\_\+\+M\+A\+L\+L\+O\+C@{U\+S\+E\+\_\+\+M\+A\+L\+L\+O\+C}!qgvector.\+cpp@{qgvector.\+cpp}}
+\subsubsection[{U\+S\+E\+\_\+\+M\+A\+L\+L\+O\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+E\+\_\+\+M\+A\+L\+L\+O\+C}\label{qgvector_8cpp_a67bcadbc2a674221c3f4544d1a07ee07}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{qgvector_8cpp_aa52fde25695d249eac5b1217ee5c1983}{}\index{qgvector.\+cpp@{qgvector.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!qgvector.\+cpp@{qgvector.\+cpp}}
+\subsubsection[{operator$<$$<$(\+Q\+Data\+Stream \&s, const Q\+G\+Vector \&vec)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream}\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Data\+Stream} \&}]{s, }
+\item[{const {\bf Q\+G\+Vector} \&}]{vec}
+\end{DoxyParamCaption}
+)}\label{qgvector_8cpp_aa52fde25695d249eac5b1217ee5c1983}
+\hypertarget{qgvector_8cpp_abab6836e70aa477bb62eb2ef6a23e109}{}\index{qgvector.\+cpp@{qgvector.\+cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!qgvector.\+cpp@{qgvector.\+cpp}}
+\subsubsection[{operator$>$$>$(\+Q\+Data\+Stream \&s, Q\+G\+Vector \&vec)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream}\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Data\+Stream} \&}]{s, }
+\item[{{\bf Q\+G\+Vector} \&}]{vec}
+\end{DoxyParamCaption}
+)}\label{qgvector_8cpp_abab6836e70aa477bb62eb2ef6a23e109}

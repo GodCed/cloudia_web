@@ -1,0 +1,103 @@
+\hypertarget{class_dot_manager}{}\section{Référence de la classe Dot\+Manager}
+\label{class_dot_manager}\index{Dot\+Manager@{Dot\+Manager}}
+
+
+{\ttfamily \#include $<$dot.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_dot_manager_a738dc3b3bdbcc60b802db0ccd43c6f84}{add\+Run} (\hyperlink{class_dot_runner}{Dot\+Runner} $\ast$\hyperlink{class_dot_manager_a3b34d4c3e0ab9e9debe6c7fa45a129bb}{run})
+\item 
+int \hyperlink{class_dot_manager_a00e00b1956a2b2b6477d9af428c300c2}{add\+Map} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&file, const \hyperlink{class_q_c_string}{Q\+C\+String} \&map\+File, const \hyperlink{class_q_c_string}{Q\+C\+String} \&rel\+Path, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} url\+Only, const \hyperlink{class_q_c_string}{Q\+C\+String} \&context, const \hyperlink{class_q_c_string}{Q\+C\+String} \&label)
+\item 
+int \hyperlink{class_dot_manager_af84ce8e355f7971a4a8869993d7d0181}{add\+Figure} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&file, const \hyperlink{class_q_c_string}{Q\+C\+String} \&base\+Name, const \hyperlink{class_q_c_string}{Q\+C\+String} \&figure\+Name, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} height\+Check)
+\item 
+int \hyperlink{class_dot_manager_adf754e666617a77c8aed10ccc90a3860}{add\+S\+V\+G\+Conversion} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&file, const \hyperlink{class_q_c_string}{Q\+C\+String} \&rel\+Path, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} url\+Only, const \hyperlink{class_q_c_string}{Q\+C\+String} \&context, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} zoomable, int graph\+Id)
+\item 
+int \hyperlink{class_dot_manager_a68003377d30caae4e674bd3b4b8f2899}{add\+S\+V\+G\+Object} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&file, const \hyperlink{class_q_c_string}{Q\+C\+String} \&base\+Name, const \hyperlink{class_q_c_string}{Q\+C\+String} \&figure\+N\+Ame, const \hyperlink{class_q_c_string}{Q\+C\+String} \&rel\+Path)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_dot_manager_a3b34d4c3e0ab9e9debe6c7fa45a129bb}{run} ()
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_dot_manager}{Dot\+Manager} $\ast$ \hyperlink{class_dot_manager_af6eb5ac505738992f7440e4a5948997f}{instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Singleton that manages dot relation actions 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_dot_manager_af84ce8e355f7971a4a8869993d7d0181}{}\index{Dot\+Manager@{Dot\+Manager}!add\+Figure@{add\+Figure}}
+\index{add\+Figure@{add\+Figure}!Dot\+Manager@{Dot\+Manager}}
+\subsubsection[{add\+Figure(const Q\+C\+String \&file, const Q\+C\+String \&base\+Name, const Q\+C\+String \&figure\+Name, bool height\+Check)}]{\setlength{\rightskip}{0pt plus 5cm}int Dot\+Manager\+::add\+Figure (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{file, }
+\item[{const {\bf Q\+C\+String} \&}]{base\+Name, }
+\item[{const {\bf Q\+C\+String} \&}]{figure\+Name, }
+\item[{{\bf bool}}]{height\+Check}
+\end{DoxyParamCaption}
+)}\label{class_dot_manager_af84ce8e355f7971a4a8869993d7d0181}
+\hypertarget{class_dot_manager_a00e00b1956a2b2b6477d9af428c300c2}{}\index{Dot\+Manager@{Dot\+Manager}!add\+Map@{add\+Map}}
+\index{add\+Map@{add\+Map}!Dot\+Manager@{Dot\+Manager}}
+\subsubsection[{add\+Map(const Q\+C\+String \&file, const Q\+C\+String \&map\+File, const Q\+C\+String \&rel\+Path, bool url\+Only, const Q\+C\+String \&context, const Q\+C\+String \&label)}]{\setlength{\rightskip}{0pt plus 5cm}int Dot\+Manager\+::add\+Map (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{file, }
+\item[{const {\bf Q\+C\+String} \&}]{map\+File, }
+\item[{const {\bf Q\+C\+String} \&}]{rel\+Path, }
+\item[{{\bf bool}}]{url\+Only, }
+\item[{const {\bf Q\+C\+String} \&}]{context, }
+\item[{const {\bf Q\+C\+String} \&}]{label}
+\end{DoxyParamCaption}
+)}\label{class_dot_manager_a00e00b1956a2b2b6477d9af428c300c2}
+\hypertarget{class_dot_manager_a738dc3b3bdbcc60b802db0ccd43c6f84}{}\index{Dot\+Manager@{Dot\+Manager}!add\+Run@{add\+Run}}
+\index{add\+Run@{add\+Run}!Dot\+Manager@{Dot\+Manager}}
+\subsubsection[{add\+Run(\+Dot\+Runner $\ast$run)}]{\setlength{\rightskip}{0pt plus 5cm}void Dot\+Manager\+::add\+Run (
+\begin{DoxyParamCaption}
+\item[{{\bf Dot\+Runner} $\ast$}]{run}
+\end{DoxyParamCaption}
+)}\label{class_dot_manager_a738dc3b3bdbcc60b802db0ccd43c6f84}
+\hypertarget{class_dot_manager_adf754e666617a77c8aed10ccc90a3860}{}\index{Dot\+Manager@{Dot\+Manager}!add\+S\+V\+G\+Conversion@{add\+S\+V\+G\+Conversion}}
+\index{add\+S\+V\+G\+Conversion@{add\+S\+V\+G\+Conversion}!Dot\+Manager@{Dot\+Manager}}
+\subsubsection[{add\+S\+V\+G\+Conversion(const Q\+C\+String \&file, const Q\+C\+String \&rel\+Path, bool url\+Only, const Q\+C\+String \&context, bool zoomable, int graph\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}int Dot\+Manager\+::add\+S\+V\+G\+Conversion (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{file, }
+\item[{const {\bf Q\+C\+String} \&}]{rel\+Path, }
+\item[{{\bf bool}}]{url\+Only, }
+\item[{const {\bf Q\+C\+String} \&}]{context, }
+\item[{{\bf bool}}]{zoomable, }
+\item[{int}]{graph\+Id}
+\end{DoxyParamCaption}
+)}\label{class_dot_manager_adf754e666617a77c8aed10ccc90a3860}
+\hypertarget{class_dot_manager_a68003377d30caae4e674bd3b4b8f2899}{}\index{Dot\+Manager@{Dot\+Manager}!add\+S\+V\+G\+Object@{add\+S\+V\+G\+Object}}
+\index{add\+S\+V\+G\+Object@{add\+S\+V\+G\+Object}!Dot\+Manager@{Dot\+Manager}}
+\subsubsection[{add\+S\+V\+G\+Object(const Q\+C\+String \&file, const Q\+C\+String \&base\+Name, const Q\+C\+String \&figure\+N\+Ame, const Q\+C\+String \&rel\+Path)}]{\setlength{\rightskip}{0pt plus 5cm}int Dot\+Manager\+::add\+S\+V\+G\+Object (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{file, }
+\item[{const {\bf Q\+C\+String} \&}]{base\+Name, }
+\item[{const {\bf Q\+C\+String} \&}]{figure\+N\+Ame, }
+\item[{const {\bf Q\+C\+String} \&}]{rel\+Path}
+\end{DoxyParamCaption}
+)}\label{class_dot_manager_a68003377d30caae4e674bd3b4b8f2899}
+\hypertarget{class_dot_manager_af6eb5ac505738992f7440e4a5948997f}{}\index{Dot\+Manager@{Dot\+Manager}!instance@{instance}}
+\index{instance@{instance}!Dot\+Manager@{Dot\+Manager}}
+\subsubsection[{instance()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dot\+Manager} $\ast$ Dot\+Manager\+::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_dot_manager_af6eb5ac505738992f7440e4a5948997f}
+\hypertarget{class_dot_manager_a3b34d4c3e0ab9e9debe6c7fa45a129bb}{}\index{Dot\+Manager@{Dot\+Manager}!run@{run}}
+\index{run@{run}!Dot\+Manager@{Dot\+Manager}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Dot\+Manager\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_dot_manager_a3b34d4c3e0ab9e9debe6c7fa45a129bb}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{dot_8h}{dot.\+h}\item 
+src/\hyperlink{dot_8cpp}{dot.\+cpp}\end{DoxyCompactItemize}

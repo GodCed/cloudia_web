@@ -1,0 +1,325 @@
+\hypertarget{class_dot_node}{}\section{Référence de la classe Dot\+Node}
+\label{class_dot_node}\index{Dot\+Node@{Dot\+Node}}
+
+
+{\ttfamily \#include $<$dot.\+h$>$}
+
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569c}{Graph\+Type} \{ \\*
+\hyperlink{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569cabb3be8d693e4274d207cdb45eac20ca2}{Dependency}, 
+\hyperlink{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569ca40518736a0d5d46809db086eee3a4a82}{Inheritance}, 
+\hyperlink{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569ca19b481e4bbe6c17e787b7f5f66e9f42c}{Collaboration}, 
+\hyperlink{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569ca2e066f7dbc9925d9bf1ff1f1ef480bd6}{Hierarchy}, 
+\\*
+\hyperlink{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569ca34689b602d16486a167dd72460d41eab}{Call\+Graph}
+ \}
+\item 
+enum \hyperlink{class_dot_node_ac40de94762a7659599b2056942373102}{Trunc\+State} \{ \hyperlink{class_dot_node_ac40de94762a7659599b2056942373102adba69679a9bcc9333c7165d4e7bdade0}{Unknown}, 
+\hyperlink{class_dot_node_ac40de94762a7659599b2056942373102a4bb6a5a03b3707d0819d9c4023b516cd}{Truncated}, 
+\hyperlink{class_dot_node_ac40de94762a7659599b2056942373102aa2b953f9ab3592ebf7903ff35643eb60}{Untruncated}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_dot_node_aa7e58f70787b510d19e060ef6197d262}{Dot\+Node} (int \hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n}, const char $\ast$lab, const char $\ast$tip, const char $\ast$url, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} root\+Node=\hyperlink{qglobal_8h_a10e004b6916e78ff4ea8379be80b80cc}{F\+A\+L\+S\+E}, \hyperlink{class_class_def}{Class\+Def} $\ast$cd=0)
+\item 
+\hyperlink{class_dot_node_a8255849e01faa55e877c8f0235a8de3e}{$\sim$\+Dot\+Node} ()
+\item 
+void \hyperlink{class_dot_node_a6ecb5ecd5496056f827fc28c2889f922}{add\+Child} (\hyperlink{class_dot_node}{Dot\+Node} $\ast$\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n}, int edge\+Color=\hyperlink{struct_edge_info_afd9f10f4693123d11e52bb1127f23228a4f78453f5006dccb5ecea6bd6ae41a98}{Edge\+Info\+::\+Purple}, int edge\+Style=\hyperlink{struct_edge_info_a4fe2d2921d0f51d84da1bf48b3b4f2c5a26f6a09cd44415e9be80ccabf5195989}{Edge\+Info\+::\+Solid}, const char $\ast$edge\+Lab=0, const char $\ast$edge\+U\+R\+L=0, int edge\+Lab\+Col=-\/1)
+\item 
+void \hyperlink{class_dot_node_a98f7fc0d1caa3e53622039e86903b04e}{add\+Parent} (\hyperlink{class_dot_node}{Dot\+Node} $\ast$\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+void \hyperlink{class_dot_node_af941a78a95b973318ccd12882760a3d4}{delete\+Node} (\hyperlink{class_dot_node_list}{Dot\+Node\+List} \&deleted\+List, \hyperlink{class_s_dict}{S\+Dict}$<$ \hyperlink{class_dot_node}{Dot\+Node} $>$ $\ast$skip\+Nodes=0)
+\item 
+void \hyperlink{class_dot_node_a62686e145c94129d85409214fb3e0571}{remove\+Child} (\hyperlink{class_dot_node}{Dot\+Node} $\ast$\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+void \hyperlink{class_dot_node_a2a36f34067293e7428ae7ea527678fee}{remove\+Parent} (\hyperlink{class_dot_node}{Dot\+Node} $\ast$\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+int \hyperlink{class_dot_node_a05f42851921caf9442ed2c4e4468b695}{find\+Parent} (\hyperlink{class_dot_node}{Dot\+Node} $\ast$\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+void \hyperlink{class_dot_node_abdfe5f258dbce6472e7c3d19d5790e13}{write} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, \hyperlink{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569c}{Graph\+Type} gt, \hyperlink{dot_8h_ac60ef98d62b78366a17c9f1bda96523f}{Graph\+Output\+Format} \hyperlink{060__command__switch_8tcl_af6830d2c644b45088ea8f1f74a46b778}{f}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} top\+Down, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} to\+Children, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} back\+Arrows, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} re\+Number)
+\item 
+void \hyperlink{class_dot_node_a27692f33c86a577ad85ab7176539d4de}{clear\+Write\+Flag} ()
+\item 
+void \hyperlink{class_dot_node_a464ac9eb20e6e99d33113aada31850b3}{write\+X\+M\+L} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} is\+Class\+Graph)
+\item 
+void \hyperlink{class_dot_node_a41493056afa14c885fbd66b090ce6f91}{write\+Docbook} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} is\+Class\+Graph)
+\item 
+void \hyperlink{class_dot_node_ac3caa4673ba1c6325c1763985ceb4481}{write\+D\+E\+F} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t})
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_dot_node_a505acc4dda739efc880b145c669777ae}{label} () const 
+\item 
+int \hyperlink{class_dot_node_aaf3ef93e96036236942d01080a236b8a}{number} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_dot_node_af4232acaf4c971329f2ab820887b9c65}{is\+Visible} () const 
+\item 
+\hyperlink{class_dot_node_ac40de94762a7659599b2056942373102}{Trunc\+State} \hyperlink{class_dot_node_a3e29ef79bc93c7ac0f2d540568e96411}{is\+Truncated} () const 
+\item 
+int \hyperlink{class_dot_node_a4ba999c8282983b5daf7b328d607676e}{distance} () const 
+\end{DoxyCompactItemize}
+\subsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_dot_node_afa257c0a638d14c60ba4714df5a9845b}{m\+\_\+subgraph\+Id}
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_dot_node_a17f4bf1cb76060fb23b5d2e4d49a578c}{Dot\+Gfx\+Hierarchy\+Table}
+\item 
+class \hyperlink{class_dot_node_aa0285f25f08e09a51d2d402e2f7f697f}{Dot\+Class\+Graph}
+\item 
+class \hyperlink{class_dot_node_af4dd0198d517a07b979a10cb13a77148}{Dot\+Incl\+Dep\+Graph}
+\item 
+class \hyperlink{class_dot_node_a8782e47c20d8314fd3b24f1dc3fe081a}{Dot\+Node\+List}
+\item 
+class \hyperlink{class_dot_node_a6dc1c2df4e772dc9740f210dc2a7e522}{Dot\+Call\+Graph}
+\item 
+class \hyperlink{class_dot_node_a32f81573a55b09d3b8f7d8b7ce6b2fbf}{Dot\+Group\+Collaboration}
+\item 
+class \hyperlink{class_dot_node_afe8663d3231ffb700d56ef6eedb99208}{Dot\+Inheritance\+Graph}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_dot_node_a884f8a9fb5f3d91efe1b967011f8f98c}{compute\+Md5\+Signature} (\hyperlink{class_dot_node}{Dot\+Node} $\ast$root, \hyperlink{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569c}{Graph\+Type} gt, \hyperlink{dot_8h_ac60ef98d62b78366a17c9f1bda96523f}{Graph\+Output\+Format} \hyperlink{060__command__switch_8tcl_af6830d2c644b45088ea8f1f74a46b778}{f}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} lr\+Rank, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} render\+Parents, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} back\+Arrows, const \hyperlink{class_q_c_string}{Q\+C\+String} \&title, \hyperlink{class_q_c_string}{Q\+C\+String} \&graph\+Str)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\hyperlink{class_a}{A} node in a dot graph 
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569c}{}\index{Dot\+Node@{Dot\+Node}!Graph\+Type@{Graph\+Type}}
+\index{Graph\+Type@{Graph\+Type}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{Graph\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Dot\+Node\+::\+Graph\+Type}}\label{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569c}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Dependency@{Dependency}!Dot\+Node@{Dot\+Node}}\index{Dot\+Node@{Dot\+Node}!Dependency@{Dependency}}\item[{\em 
+\hypertarget{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569cabb3be8d693e4274d207cdb45eac20ca2}{}Dependency\label{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569cabb3be8d693e4274d207cdb45eac20ca2}
+}]\index{Inheritance@{Inheritance}!Dot\+Node@{Dot\+Node}}\index{Dot\+Node@{Dot\+Node}!Inheritance@{Inheritance}}\item[{\em 
+\hypertarget{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569ca40518736a0d5d46809db086eee3a4a82}{}Inheritance\label{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569ca40518736a0d5d46809db086eee3a4a82}
+}]\index{Collaboration@{Collaboration}!Dot\+Node@{Dot\+Node}}\index{Dot\+Node@{Dot\+Node}!Collaboration@{Collaboration}}\item[{\em 
+\hypertarget{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569ca19b481e4bbe6c17e787b7f5f66e9f42c}{}Collaboration\label{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569ca19b481e4bbe6c17e787b7f5f66e9f42c}
+}]\index{Hierarchy@{Hierarchy}!Dot\+Node@{Dot\+Node}}\index{Dot\+Node@{Dot\+Node}!Hierarchy@{Hierarchy}}\item[{\em 
+\hypertarget{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569ca2e066f7dbc9925d9bf1ff1f1ef480bd6}{}Hierarchy\label{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569ca2e066f7dbc9925d9bf1ff1f1ef480bd6}
+}]\index{Call\+Graph@{Call\+Graph}!Dot\+Node@{Dot\+Node}}\index{Dot\+Node@{Dot\+Node}!Call\+Graph@{Call\+Graph}}\item[{\em 
+\hypertarget{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569ca34689b602d16486a167dd72460d41eab}{}Call\+Graph\label{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569ca34689b602d16486a167dd72460d41eab}
+}]\end{description}
+\end{Desc}
+\hypertarget{class_dot_node_ac40de94762a7659599b2056942373102}{}\index{Dot\+Node@{Dot\+Node}!Trunc\+State@{Trunc\+State}}
+\index{Trunc\+State@{Trunc\+State}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{Trunc\+State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Dot\+Node\+::\+Trunc\+State}}\label{class_dot_node_ac40de94762a7659599b2056942373102}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Unknown@{Unknown}!Dot\+Node@{Dot\+Node}}\index{Dot\+Node@{Dot\+Node}!Unknown@{Unknown}}\item[{\em 
+\hypertarget{class_dot_node_ac40de94762a7659599b2056942373102adba69679a9bcc9333c7165d4e7bdade0}{}Unknown\label{class_dot_node_ac40de94762a7659599b2056942373102adba69679a9bcc9333c7165d4e7bdade0}
+}]\index{Truncated@{Truncated}!Dot\+Node@{Dot\+Node}}\index{Dot\+Node@{Dot\+Node}!Truncated@{Truncated}}\item[{\em 
+\hypertarget{class_dot_node_ac40de94762a7659599b2056942373102a4bb6a5a03b3707d0819d9c4023b516cd}{}Truncated\label{class_dot_node_ac40de94762a7659599b2056942373102a4bb6a5a03b3707d0819d9c4023b516cd}
+}]\index{Untruncated@{Untruncated}!Dot\+Node@{Dot\+Node}}\index{Dot\+Node@{Dot\+Node}!Untruncated@{Untruncated}}\item[{\em 
+\hypertarget{class_dot_node_ac40de94762a7659599b2056942373102aa2b953f9ab3592ebf7903ff35643eb60}{}Untruncated\label{class_dot_node_ac40de94762a7659599b2056942373102aa2b953f9ab3592ebf7903ff35643eb60}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_dot_node_aa7e58f70787b510d19e060ef6197d262}{}\index{Dot\+Node@{Dot\+Node}!Dot\+Node@{Dot\+Node}}
+\index{Dot\+Node@{Dot\+Node}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{Dot\+Node(int n, const char $\ast$lab, const char $\ast$tip, const char $\ast$url, bool root\+Node=\+F\+A\+L\+S\+E, Class\+Def $\ast$cd=0)}]{\setlength{\rightskip}{0pt plus 5cm}Dot\+Node\+::\+Dot\+Node (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{const char $\ast$}]{lab, }
+\item[{const char $\ast$}]{tip, }
+\item[{const char $\ast$}]{url, }
+\item[{{\bf bool}}]{root\+Node = {\ttfamily {\bf F\+A\+L\+S\+E}}, }
+\item[{{\bf Class\+Def} $\ast$}]{cd = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_dot_node_aa7e58f70787b510d19e060ef6197d262}
+\hypertarget{class_dot_node_a8255849e01faa55e877c8f0235a8de3e}{}\index{Dot\+Node@{Dot\+Node}!````~Dot\+Node@{$\sim$\+Dot\+Node}}
+\index{````~Dot\+Node@{$\sim$\+Dot\+Node}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{$\sim$\+Dot\+Node()}]{\setlength{\rightskip}{0pt plus 5cm}Dot\+Node\+::$\sim$\+Dot\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_dot_node_a8255849e01faa55e877c8f0235a8de3e}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_dot_node_a6ecb5ecd5496056f827fc28c2889f922}{}\index{Dot\+Node@{Dot\+Node}!add\+Child@{add\+Child}}
+\index{add\+Child@{add\+Child}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{add\+Child(\+Dot\+Node $\ast$n, int edge\+Color=\+Edge\+Info\+::\+Purple, int edge\+Style=\+Edge\+Info\+::\+Solid, const char $\ast$edge\+Lab=0, const char $\ast$edge\+U\+R\+L=0, int edge\+Lab\+Col=-\/1)}]{\setlength{\rightskip}{0pt plus 5cm}void Dot\+Node\+::add\+Child (
+\begin{DoxyParamCaption}
+\item[{{\bf Dot\+Node} $\ast$}]{n, }
+\item[{int}]{edge\+Color = {\ttfamily {\bf Edge\+Info\+::\+Purple}}, }
+\item[{int}]{edge\+Style = {\ttfamily {\bf Edge\+Info\+::\+Solid}}, }
+\item[{const char $\ast$}]{edge\+Lab = {\ttfamily 0}, }
+\item[{const char $\ast$}]{edge\+U\+R\+L = {\ttfamily 0}, }
+\item[{int}]{edge\+Lab\+Col = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}\label{class_dot_node_a6ecb5ecd5496056f827fc28c2889f922}
+\hypertarget{class_dot_node_a98f7fc0d1caa3e53622039e86903b04e}{}\index{Dot\+Node@{Dot\+Node}!add\+Parent@{add\+Parent}}
+\index{add\+Parent@{add\+Parent}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{add\+Parent(\+Dot\+Node $\ast$n)}]{\setlength{\rightskip}{0pt plus 5cm}void Dot\+Node\+::add\+Parent (
+\begin{DoxyParamCaption}
+\item[{{\bf Dot\+Node} $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\label{class_dot_node_a98f7fc0d1caa3e53622039e86903b04e}
+\hypertarget{class_dot_node_a27692f33c86a577ad85ab7176539d4de}{}\index{Dot\+Node@{Dot\+Node}!clear\+Write\+Flag@{clear\+Write\+Flag}}
+\index{clear\+Write\+Flag@{clear\+Write\+Flag}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{clear\+Write\+Flag()}]{\setlength{\rightskip}{0pt plus 5cm}void Dot\+Node\+::clear\+Write\+Flag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_dot_node_a27692f33c86a577ad85ab7176539d4de}
+\hypertarget{class_dot_node_af941a78a95b973318ccd12882760a3d4}{}\index{Dot\+Node@{Dot\+Node}!delete\+Node@{delete\+Node}}
+\index{delete\+Node@{delete\+Node}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{delete\+Node(\+Dot\+Node\+List \&deleted\+List, S\+Dict$<$ Dot\+Node $>$ $\ast$skip\+Nodes=0)}]{\setlength{\rightskip}{0pt plus 5cm}void Dot\+Node\+::delete\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Dot\+Node\+List} \&}]{deleted\+List, }
+\item[{{\bf S\+Dict}$<$ {\bf Dot\+Node} $>$ $\ast$}]{skip\+Nodes = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_dot_node_af941a78a95b973318ccd12882760a3d4}
+\hypertarget{class_dot_node_a4ba999c8282983b5daf7b328d607676e}{}\index{Dot\+Node@{Dot\+Node}!distance@{distance}}
+\index{distance@{distance}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{distance() const }]{\setlength{\rightskip}{0pt plus 5cm}int Dot\+Node\+::distance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_dot_node_a4ba999c8282983b5daf7b328d607676e}
+\hypertarget{class_dot_node_a05f42851921caf9442ed2c4e4468b695}{}\index{Dot\+Node@{Dot\+Node}!find\+Parent@{find\+Parent}}
+\index{find\+Parent@{find\+Parent}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{find\+Parent(\+Dot\+Node $\ast$n)}]{\setlength{\rightskip}{0pt plus 5cm}int Dot\+Node\+::find\+Parent (
+\begin{DoxyParamCaption}
+\item[{{\bf Dot\+Node} $\ast$}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_dot_node_a05f42851921caf9442ed2c4e4468b695}
+\hypertarget{class_dot_node_a3e29ef79bc93c7ac0f2d540568e96411}{}\index{Dot\+Node@{Dot\+Node}!is\+Truncated@{is\+Truncated}}
+\index{is\+Truncated@{is\+Truncated}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{is\+Truncated() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Trunc\+State} Dot\+Node\+::is\+Truncated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_dot_node_a3e29ef79bc93c7ac0f2d540568e96411}
+\hypertarget{class_dot_node_af4232acaf4c971329f2ab820887b9c65}{}\index{Dot\+Node@{Dot\+Node}!is\+Visible@{is\+Visible}}
+\index{is\+Visible@{is\+Visible}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{is\+Visible() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Dot\+Node\+::is\+Visible (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_dot_node_af4232acaf4c971329f2ab820887b9c65}
+\hypertarget{class_dot_node_a505acc4dda739efc880b145c669777ae}{}\index{Dot\+Node@{Dot\+Node}!label@{label}}
+\index{label@{label}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{label() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Dot\+Node\+::label (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_dot_node_a505acc4dda739efc880b145c669777ae}
+\hypertarget{class_dot_node_aaf3ef93e96036236942d01080a236b8a}{}\index{Dot\+Node@{Dot\+Node}!number@{number}}
+\index{number@{number}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{number() const }]{\setlength{\rightskip}{0pt plus 5cm}int Dot\+Node\+::number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_dot_node_aaf3ef93e96036236942d01080a236b8a}
+\hypertarget{class_dot_node_a62686e145c94129d85409214fb3e0571}{}\index{Dot\+Node@{Dot\+Node}!remove\+Child@{remove\+Child}}
+\index{remove\+Child@{remove\+Child}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{remove\+Child(\+Dot\+Node $\ast$n)}]{\setlength{\rightskip}{0pt plus 5cm}void Dot\+Node\+::remove\+Child (
+\begin{DoxyParamCaption}
+\item[{{\bf Dot\+Node} $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\label{class_dot_node_a62686e145c94129d85409214fb3e0571}
+\hypertarget{class_dot_node_a2a36f34067293e7428ae7ea527678fee}{}\index{Dot\+Node@{Dot\+Node}!remove\+Parent@{remove\+Parent}}
+\index{remove\+Parent@{remove\+Parent}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{remove\+Parent(\+Dot\+Node $\ast$n)}]{\setlength{\rightskip}{0pt plus 5cm}void Dot\+Node\+::remove\+Parent (
+\begin{DoxyParamCaption}
+\item[{{\bf Dot\+Node} $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\label{class_dot_node_a2a36f34067293e7428ae7ea527678fee}
+\hypertarget{class_dot_node_abdfe5f258dbce6472e7c3d19d5790e13}{}\index{Dot\+Node@{Dot\+Node}!write@{write}}
+\index{write@{write}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{write(\+F\+Text\+Stream \&t, Graph\+Type gt, Graph\+Output\+Format f, bool top\+Down, bool to\+Children, bool back\+Arrows, bool re\+Number)}]{\setlength{\rightskip}{0pt plus 5cm}void Dot\+Node\+::write (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t, }
+\item[{{\bf Graph\+Type}}]{gt, }
+\item[{{\bf Graph\+Output\+Format}}]{f, }
+\item[{{\bf bool}}]{top\+Down, }
+\item[{{\bf bool}}]{to\+Children, }
+\item[{{\bf bool}}]{back\+Arrows, }
+\item[{{\bf bool}}]{re\+Number}
+\end{DoxyParamCaption}
+)}\label{class_dot_node_abdfe5f258dbce6472e7c3d19d5790e13}
+\hypertarget{class_dot_node_ac3caa4673ba1c6325c1763985ceb4481}{}\index{Dot\+Node@{Dot\+Node}!write\+D\+E\+F@{write\+D\+E\+F}}
+\index{write\+D\+E\+F@{write\+D\+E\+F}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{write\+D\+E\+F(\+F\+Text\+Stream \&t)}]{\setlength{\rightskip}{0pt plus 5cm}void Dot\+Node\+::write\+D\+E\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t}
+\end{DoxyParamCaption}
+)}\label{class_dot_node_ac3caa4673ba1c6325c1763985ceb4481}
+\hypertarget{class_dot_node_a41493056afa14c885fbd66b090ce6f91}{}\index{Dot\+Node@{Dot\+Node}!write\+Docbook@{write\+Docbook}}
+\index{write\+Docbook@{write\+Docbook}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{write\+Docbook(\+F\+Text\+Stream \&t, bool is\+Class\+Graph)}]{\setlength{\rightskip}{0pt plus 5cm}void Dot\+Node\+::write\+Docbook (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t, }
+\item[{{\bf bool}}]{is\+Class\+Graph}
+\end{DoxyParamCaption}
+)}\label{class_dot_node_a41493056afa14c885fbd66b090ce6f91}
+\hypertarget{class_dot_node_a464ac9eb20e6e99d33113aada31850b3}{}\index{Dot\+Node@{Dot\+Node}!write\+X\+M\+L@{write\+X\+M\+L}}
+\index{write\+X\+M\+L@{write\+X\+M\+L}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{write\+X\+M\+L(\+F\+Text\+Stream \&t, bool is\+Class\+Graph)}]{\setlength{\rightskip}{0pt plus 5cm}void Dot\+Node\+::write\+X\+M\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t, }
+\item[{{\bf bool}}]{is\+Class\+Graph}
+\end{DoxyParamCaption}
+)}\label{class_dot_node_a464ac9eb20e6e99d33113aada31850b3}
+
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_dot_node_a884f8a9fb5f3d91efe1b967011f8f98c}{}\index{Dot\+Node@{Dot\+Node}!compute\+Md5\+Signature@{compute\+Md5\+Signature}}
+\index{compute\+Md5\+Signature@{compute\+Md5\+Signature}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{compute\+Md5\+Signature}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} compute\+Md5\+Signature (
+\begin{DoxyParamCaption}
+\item[{{\bf Dot\+Node} $\ast$}]{root, }
+\item[{{\bf Dot\+Node\+::\+Graph\+Type}}]{gt, }
+\item[{{\bf Graph\+Output\+Format}}]{f, }
+\item[{{\bf bool}}]{lr\+Rank, }
+\item[{{\bf bool}}]{render\+Parents, }
+\item[{{\bf bool}}]{back\+Arrows, }
+\item[{const {\bf Q\+C\+String} \&}]{title, }
+\item[{{\bf Q\+C\+String} \&}]{graph\+Str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_dot_node_a884f8a9fb5f3d91efe1b967011f8f98c}
+Computes a 16 byte md5 checksum for a given dot graph. The md5 checksum is returned as a 32 character A\+S\+C\+I\+I string. \hypertarget{class_dot_node_a6dc1c2df4e772dc9740f210dc2a7e522}{}\index{Dot\+Node@{Dot\+Node}!Dot\+Call\+Graph@{Dot\+Call\+Graph}}
+\index{Dot\+Call\+Graph@{Dot\+Call\+Graph}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{Dot\+Call\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Dot\+Call\+Graph}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_dot_node_a6dc1c2df4e772dc9740f210dc2a7e522}
+\hypertarget{class_dot_node_aa0285f25f08e09a51d2d402e2f7f697f}{}\index{Dot\+Node@{Dot\+Node}!Dot\+Class\+Graph@{Dot\+Class\+Graph}}
+\index{Dot\+Class\+Graph@{Dot\+Class\+Graph}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{Dot\+Class\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Dot\+Class\+Graph}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_dot_node_aa0285f25f08e09a51d2d402e2f7f697f}
+\hypertarget{class_dot_node_a17f4bf1cb76060fb23b5d2e4d49a578c}{}\index{Dot\+Node@{Dot\+Node}!Dot\+Gfx\+Hierarchy\+Table@{Dot\+Gfx\+Hierarchy\+Table}}
+\index{Dot\+Gfx\+Hierarchy\+Table@{Dot\+Gfx\+Hierarchy\+Table}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{Dot\+Gfx\+Hierarchy\+Table}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Dot\+Gfx\+Hierarchy\+Table}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_dot_node_a17f4bf1cb76060fb23b5d2e4d49a578c}
+\hypertarget{class_dot_node_a32f81573a55b09d3b8f7d8b7ce6b2fbf}{}\index{Dot\+Node@{Dot\+Node}!Dot\+Group\+Collaboration@{Dot\+Group\+Collaboration}}
+\index{Dot\+Group\+Collaboration@{Dot\+Group\+Collaboration}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{Dot\+Group\+Collaboration}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Dot\+Group\+Collaboration}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_dot_node_a32f81573a55b09d3b8f7d8b7ce6b2fbf}
+\hypertarget{class_dot_node_af4dd0198d517a07b979a10cb13a77148}{}\index{Dot\+Node@{Dot\+Node}!Dot\+Incl\+Dep\+Graph@{Dot\+Incl\+Dep\+Graph}}
+\index{Dot\+Incl\+Dep\+Graph@{Dot\+Incl\+Dep\+Graph}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{Dot\+Incl\+Dep\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Dot\+Incl\+Dep\+Graph}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_dot_node_af4dd0198d517a07b979a10cb13a77148}
+\hypertarget{class_dot_node_afe8663d3231ffb700d56ef6eedb99208}{}\index{Dot\+Node@{Dot\+Node}!Dot\+Inheritance\+Graph@{Dot\+Inheritance\+Graph}}
+\index{Dot\+Inheritance\+Graph@{Dot\+Inheritance\+Graph}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{Dot\+Inheritance\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}friend class Dot\+Inheritance\+Graph\hspace{0.3cm}{\ttfamily [friend]}}\label{class_dot_node_afe8663d3231ffb700d56ef6eedb99208}
+\hypertarget{class_dot_node_a8782e47c20d8314fd3b24f1dc3fe081a}{}\index{Dot\+Node@{Dot\+Node}!Dot\+Node\+List@{Dot\+Node\+List}}
+\index{Dot\+Node\+List@{Dot\+Node\+List}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{Dot\+Node\+List}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Dot\+Node\+List}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_dot_node_a8782e47c20d8314fd3b24f1dc3fe081a}
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_dot_node_afa257c0a638d14c60ba4714df5a9845b}{}\index{Dot\+Node@{Dot\+Node}!m\+\_\+subgraph\+Id@{m\+\_\+subgraph\+Id}}
+\index{m\+\_\+subgraph\+Id@{m\+\_\+subgraph\+Id}!Dot\+Node@{Dot\+Node}}
+\subsubsection[{m\+\_\+subgraph\+Id}]{\setlength{\rightskip}{0pt plus 5cm}int Dot\+Node\+::m\+\_\+subgraph\+Id}\label{class_dot_node_afa257c0a638d14c60ba4714df5a9845b}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{dot_8h}{dot.\+h}\item 
+src/\hyperlink{dot_8cpp}{dot.\+cpp}\end{DoxyCompactItemize}

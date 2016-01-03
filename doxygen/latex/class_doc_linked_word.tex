@@ -1,0 +1,130 @@
+\hypertarget{class_doc_linked_word}{}\section{Référence de la classe Doc\+Linked\+Word}
+\label{class_doc_linked_word}\index{Doc\+Linked\+Word@{Doc\+Linked\+Word}}
+
+
+{\ttfamily \#include $<$docparser.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Doc\+Linked\+Word\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doc_linked_word}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_linked_word_a95fe3314f15756695072183c9d0f28c1}{Doc\+Linked\+Word} (\hyperlink{class_doc_node}{Doc\+Node} $\ast$\hyperlink{class_doc_node_a990d8b983962776a647e6231d38bd329}{parent}, const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{class_doc_linked_word_af8e430f55c199a9c4c5972fcf659f167}{word}, const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{class_doc_linked_word_a179128b508a37fe1fcd5e9bfb4b3ab5f}{ref}, const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{class_doc_linked_word_ac1ff55cc070d071a78d2acb2ab5103f9}{file}, const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{class_doc_linked_word_a259c5abca3d9cf0270af45e96c8cc42a}{anchor}, const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{class_doc_linked_word_a655f768ed3357c16d931fed57fa493f6}{tooltip})
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_linked_word_af8e430f55c199a9c4c5972fcf659f167}{word} () const 
+\item 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadb}{Kind} \hyperlink{class_doc_linked_word_a3e45d2549b26f57524fee9147c3d2641}{kind} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_linked_word_ac1ff55cc070d071a78d2acb2ab5103f9}{file} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_linked_word_a89e0ca8d57a432e8df1df812408d606f}{rel\+Path} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_linked_word_a179128b508a37fe1fcd5e9bfb4b3ab5f}{ref} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_linked_word_a259c5abca3d9cf0270af45e96c8cc42a}{anchor} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_linked_word_a655f768ed3357c16d931fed57fa493f6}{tooltip} () const 
+\item 
+void \hyperlink{class_doc_linked_word_a0b72d6562825d9af44811eff41dd0600}{accept} (\hyperlink{class_doc_visitor}{Doc\+Visitor} $\ast$v)
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Node representing a word that can be linked to something 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_doc_linked_word_a95fe3314f15756695072183c9d0f28c1}{}\index{Doc\+Linked\+Word@{Doc\+Linked\+Word}!Doc\+Linked\+Word@{Doc\+Linked\+Word}}
+\index{Doc\+Linked\+Word@{Doc\+Linked\+Word}!Doc\+Linked\+Word@{Doc\+Linked\+Word}}
+\subsubsection[{Doc\+Linked\+Word(\+Doc\+Node $\ast$parent, const Q\+C\+String \&word, const Q\+C\+String \&ref, const Q\+C\+String \&file, const Q\+C\+String \&anchor, const Q\+C\+String \&tooltip)}]{\setlength{\rightskip}{0pt plus 5cm}Doc\+Linked\+Word\+::\+Doc\+Linked\+Word (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Node} $\ast$}]{parent, }
+\item[{const {\bf Q\+C\+String} \&}]{word, }
+\item[{const {\bf Q\+C\+String} \&}]{ref, }
+\item[{const {\bf Q\+C\+String} \&}]{file, }
+\item[{const {\bf Q\+C\+String} \&}]{anchor, }
+\item[{const {\bf Q\+C\+String} \&}]{tooltip}
+\end{DoxyParamCaption}
+)}\label{class_doc_linked_word_a95fe3314f15756695072183c9d0f28c1}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_doc_linked_word_a0b72d6562825d9af44811eff41dd0600}{}\index{Doc\+Linked\+Word@{Doc\+Linked\+Word}!accept@{accept}}
+\index{accept@{accept}!Doc\+Linked\+Word@{Doc\+Linked\+Word}}
+\subsubsection[{accept(\+Doc\+Visitor $\ast$v)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Linked\+Word\+::accept (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Visitor} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_linked_word_a0b72d6562825d9af44811eff41dd0600}
+Acceptor function for node visitors. Part of the visitor pattern. 
+\begin{DoxyParams}{Paramètres}
+{\em v} & Abstract visitor. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_doc_node_a5303a550cbe6395663bf9b9dad28cbf1}{Doc\+Node}.
+
+\hypertarget{class_doc_linked_word_a259c5abca3d9cf0270af45e96c8cc42a}{}\index{Doc\+Linked\+Word@{Doc\+Linked\+Word}!anchor@{anchor}}
+\index{anchor@{anchor}!Doc\+Linked\+Word@{Doc\+Linked\+Word}}
+\subsubsection[{anchor() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Linked\+Word\+::anchor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_linked_word_a259c5abca3d9cf0270af45e96c8cc42a}
+\hypertarget{class_doc_linked_word_ac1ff55cc070d071a78d2acb2ab5103f9}{}\index{Doc\+Linked\+Word@{Doc\+Linked\+Word}!file@{file}}
+\index{file@{file}!Doc\+Linked\+Word@{Doc\+Linked\+Word}}
+\subsubsection[{file() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Linked\+Word\+::file (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_linked_word_ac1ff55cc070d071a78d2acb2ab5103f9}
+\hypertarget{class_doc_linked_word_a3e45d2549b26f57524fee9147c3d2641}{}\index{Doc\+Linked\+Word@{Doc\+Linked\+Word}!kind@{kind}}
+\index{kind@{kind}!Doc\+Linked\+Word@{Doc\+Linked\+Word}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kind} Doc\+Linked\+Word\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_linked_word_a3e45d2549b26f57524fee9147c3d2641}
+Returns the kind of node. Provides runtime type information 
+
+Implémente \hyperlink{class_doc_node_a92d4aaa169a813ded919aa858024c809}{Doc\+Node}.
+
+\hypertarget{class_doc_linked_word_a179128b508a37fe1fcd5e9bfb4b3ab5f}{}\index{Doc\+Linked\+Word@{Doc\+Linked\+Word}!ref@{ref}}
+\index{ref@{ref}!Doc\+Linked\+Word@{Doc\+Linked\+Word}}
+\subsubsection[{ref() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Linked\+Word\+::ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_linked_word_a179128b508a37fe1fcd5e9bfb4b3ab5f}
+\hypertarget{class_doc_linked_word_a89e0ca8d57a432e8df1df812408d606f}{}\index{Doc\+Linked\+Word@{Doc\+Linked\+Word}!rel\+Path@{rel\+Path}}
+\index{rel\+Path@{rel\+Path}!Doc\+Linked\+Word@{Doc\+Linked\+Word}}
+\subsubsection[{rel\+Path() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Linked\+Word\+::rel\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_linked_word_a89e0ca8d57a432e8df1df812408d606f}
+\hypertarget{class_doc_linked_word_a655f768ed3357c16d931fed57fa493f6}{}\index{Doc\+Linked\+Word@{Doc\+Linked\+Word}!tooltip@{tooltip}}
+\index{tooltip@{tooltip}!Doc\+Linked\+Word@{Doc\+Linked\+Word}}
+\subsubsection[{tooltip() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Linked\+Word\+::tooltip (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_linked_word_a655f768ed3357c16d931fed57fa493f6}
+\hypertarget{class_doc_linked_word_af8e430f55c199a9c4c5972fcf659f167}{}\index{Doc\+Linked\+Word@{Doc\+Linked\+Word}!word@{word}}
+\index{word@{word}!Doc\+Linked\+Word@{Doc\+Linked\+Word}}
+\subsubsection[{word() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Linked\+Word\+::word (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_linked_word_af8e430f55c199a9c4c5972fcf659f167}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{docparser_8h}{docparser.\+h}\item 
+src/\hyperlink{docparser_8cpp}{docparser.\+cpp}\end{DoxyCompactItemize}

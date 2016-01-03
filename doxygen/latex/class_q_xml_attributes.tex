@@ -1,0 +1,203 @@
+\hypertarget{class_q_xml_attributes}{}\section{Référence de la classe Q\+Xml\+Attributes}
+\label{class_q_xml_attributes}\index{Q\+Xml\+Attributes@{Q\+Xml\+Attributes}}
+
+
+The \hyperlink{class_q_xml_attributes}{Q\+Xml\+Attributes} class provides X\+M\+L attributes.  
+
+
+
+
+{\ttfamily \#include $<$qxml.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_xml_attributes_a074730261cfe3a0f4292cbda7854892b}{Q\+Xml\+Attributes} ()
+\item 
+virtual \hyperlink{class_q_xml_attributes_a2d482c168ff403041fc1dd2fc8044a7b}{$\sim$\+Q\+Xml\+Attributes} ()
+\item 
+int \hyperlink{class_q_xml_attributes_a542da36bc124fbee3cbc48f555c02c19}{index} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_xml_attributes_a1cb2a771348a023deb7d90c901aafe6c}{q\+Name}) const 
+\item 
+int \hyperlink{class_q_xml_attributes_a2269a55045b16c01f0c831146c09e2d1}{index} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_xml_attributes_a5653460e735986eeab8ae7992cc9158b}{uri}, const \hyperlink{class_q_string}{Q\+String} \&local\+Part) const 
+\item 
+int \hyperlink{class_q_xml_attributes_a35be039fcce25d5d1a7d5be6f3024383}{length} () const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_xml_attributes_ace9a01af51817fdfbd76cebe3b83f185}{local\+Name} (int \hyperlink{class_q_xml_attributes_a542da36bc124fbee3cbc48f555c02c19}{index}) const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_xml_attributes_a1cb2a771348a023deb7d90c901aafe6c}{q\+Name} (int \hyperlink{class_q_xml_attributes_a542da36bc124fbee3cbc48f555c02c19}{index}) const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_xml_attributes_a5653460e735986eeab8ae7992cc9158b}{uri} (int \hyperlink{class_q_xml_attributes_a542da36bc124fbee3cbc48f555c02c19}{index}) const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_xml_attributes_aafad06b6b481fe8c64c892d185988ec6}{type} (int \hyperlink{class_q_xml_attributes_a542da36bc124fbee3cbc48f555c02c19}{index}) const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_xml_attributes_ad8511105f792a84c612b07490e6a25b1}{type} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_xml_attributes_a1cb2a771348a023deb7d90c901aafe6c}{q\+Name}) const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_xml_attributes_a25ec58fc3c1fc56eee28edebf5e976a5}{type} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_xml_attributes_a5653460e735986eeab8ae7992cc9158b}{uri}, const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_xml_attributes_ace9a01af51817fdfbd76cebe3b83f185}{local\+Name}) const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_xml_attributes_a01f6a61b11593a4591a4508a426fe297}{value} (int \hyperlink{class_q_xml_attributes_a542da36bc124fbee3cbc48f555c02c19}{index}) const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_xml_attributes_aec9868f216ca3278b76c219fa05f49e1}{value} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_xml_attributes_a1cb2a771348a023deb7d90c901aafe6c}{q\+Name}) const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_xml_attributes_a1f096ed3aea3e961d90300b7a288d8d1}{value} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_xml_attributes_a5653460e735986eeab8ae7992cc9158b}{uri}, const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_xml_attributes_ace9a01af51817fdfbd76cebe3b83f185}{local\+Name}) const 
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_q_xml_attributes_aba6d8e1fe7917a5056b07bf8d4b4e53c}{Q\+Xml\+Simple\+Reader}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+The \hyperlink{class_q_xml_attributes}{Q\+Xml\+Attributes} class provides X\+M\+L attributes. 
+
+X\+M\+L
+
+If attributes are reported by \hyperlink{class_q_xml_content_handler_af6d4e631fad2b9b75622c95003b1da55}{Q\+Xml\+Content\+Handler\+::start\+Element()} this class is used to pass the attribute values. It provides you with different functions to access the attribute names and values. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_xml_attributes_a074730261cfe3a0f4292cbda7854892b}{}\index{Q\+Xml\+Attributes@{Q\+Xml\+Attributes}!Q\+Xml\+Attributes@{Q\+Xml\+Attributes}}
+\index{Q\+Xml\+Attributes@{Q\+Xml\+Attributes}!Q\+Xml\+Attributes@{Q\+Xml\+Attributes}}
+\subsubsection[{Q\+Xml\+Attributes()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Xml\+Attributes\+::\+Q\+Xml\+Attributes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_xml_attributes_a074730261cfe3a0f4292cbda7854892b}
+Constructs an empty attribute list. \hypertarget{class_q_xml_attributes_a2d482c168ff403041fc1dd2fc8044a7b}{}\index{Q\+Xml\+Attributes@{Q\+Xml\+Attributes}!````~Q\+Xml\+Attributes@{$\sim$\+Q\+Xml\+Attributes}}
+\index{````~Q\+Xml\+Attributes@{$\sim$\+Q\+Xml\+Attributes}!Q\+Xml\+Attributes@{Q\+Xml\+Attributes}}
+\subsubsection[{$\sim$\+Q\+Xml\+Attributes()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Xml\+Attributes\+::$\sim$\+Q\+Xml\+Attributes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_q_xml_attributes_a2d482c168ff403041fc1dd2fc8044a7b}
+Destructs attributes. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_xml_attributes_a542da36bc124fbee3cbc48f555c02c19}{}\index{Q\+Xml\+Attributes@{Q\+Xml\+Attributes}!index@{index}}
+\index{index@{index}!Q\+Xml\+Attributes@{Q\+Xml\+Attributes}}
+\subsubsection[{index(const Q\+String \&q\+Name) const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Xml\+Attributes\+::index (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{q\+Name}
+\end{DoxyParamCaption}
+) const}\label{class_q_xml_attributes_a542da36bc124fbee3cbc48f555c02c19}
+Look up the index of an attribute by an X\+M\+L 1.\+0 qualified name.
+
+Returns the index of the attribute (starting with 0) or -\/1 if it wasn\textquotesingle{}t found.
+
+See also the \href{xml-sax.html#namespaces}{\tt namespace description}. \hypertarget{class_q_xml_attributes_a2269a55045b16c01f0c831146c09e2d1}{}\index{Q\+Xml\+Attributes@{Q\+Xml\+Attributes}!index@{index}}
+\index{index@{index}!Q\+Xml\+Attributes@{Q\+Xml\+Attributes}}
+\subsubsection[{index(const Q\+String \&uri, const Q\+String \&local\+Part) const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Xml\+Attributes\+::index (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{uri, }
+\item[{const {\bf Q\+String} \&}]{local\+Part}
+\end{DoxyParamCaption}
+) const}\label{class_q_xml_attributes_a2269a55045b16c01f0c831146c09e2d1}
+Looks up the index of an attribute by a namespace name.
+
+{\itshape uri} specifies the namespace U\+R\+I, or the empty string if the name has no namespace U\+R\+I. {\itshape local\+Part} specifies the attribute\textquotesingle{}s local name.
+
+Returns the index of the attribute (starting with 0) or -\/1 if it wasn\textquotesingle{}t found.
+
+See also the \href{xml-sax.html#namespaces}{\tt namespace description}. \hypertarget{class_q_xml_attributes_a35be039fcce25d5d1a7d5be6f3024383}{}\index{Q\+Xml\+Attributes@{Q\+Xml\+Attributes}!length@{length}}
+\index{length@{length}!Q\+Xml\+Attributes@{Q\+Xml\+Attributes}}
+\subsubsection[{length() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Xml\+Attributes\+::length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_xml_attributes_a35be039fcce25d5d1a7d5be6f3024383}
+Returns the number of attributes in the list. \hypertarget{class_q_xml_attributes_ace9a01af51817fdfbd76cebe3b83f185}{}\index{Q\+Xml\+Attributes@{Q\+Xml\+Attributes}!local\+Name@{local\+Name}}
+\index{local\+Name@{local\+Name}!Q\+Xml\+Attributes@{Q\+Xml\+Attributes}}
+\subsubsection[{local\+Name(int index) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Xml\+Attributes\+::local\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}\label{class_q_xml_attributes_ace9a01af51817fdfbd76cebe3b83f185}
+Looks up an attribute\textquotesingle{}s local name by index (starting with 0).
+
+See also the \href{xml-sax.html#namespaces}{\tt namespace description}. \hypertarget{class_q_xml_attributes_a1cb2a771348a023deb7d90c901aafe6c}{}\index{Q\+Xml\+Attributes@{Q\+Xml\+Attributes}!q\+Name@{q\+Name}}
+\index{q\+Name@{q\+Name}!Q\+Xml\+Attributes@{Q\+Xml\+Attributes}}
+\subsubsection[{q\+Name(int index) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Xml\+Attributes\+::q\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}\label{class_q_xml_attributes_a1cb2a771348a023deb7d90c901aafe6c}
+Looks up an attribute\textquotesingle{}s X\+M\+L 1.\+0 qualified name by index (starting with 0).
+
+See also the \href{xml-sax.html#namespaces}{\tt namespace description}. \hypertarget{class_q_xml_attributes_aafad06b6b481fe8c64c892d185988ec6}{}\index{Q\+Xml\+Attributes@{Q\+Xml\+Attributes}!type@{type}}
+\index{type@{type}!Q\+Xml\+Attributes@{Q\+Xml\+Attributes}}
+\subsubsection[{type(int index) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Xml\+Attributes\+::type (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}\label{class_q_xml_attributes_aafad06b6b481fe8c64c892d185988ec6}
+Looks up an attribute\textquotesingle{}s type by index (starting with 0).
+
+At the moment only \textquotesingle{}C\+D\+A\+T\+A\textquotesingle{} is returned. \hypertarget{class_q_xml_attributes_ad8511105f792a84c612b07490e6a25b1}{}\index{Q\+Xml\+Attributes@{Q\+Xml\+Attributes}!type@{type}}
+\index{type@{type}!Q\+Xml\+Attributes@{Q\+Xml\+Attributes}}
+\subsubsection[{type(const Q\+String \&q\+Name) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Xml\+Attributes\+::type (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{q\+Name}
+\end{DoxyParamCaption}
+) const}\label{class_q_xml_attributes_ad8511105f792a84c612b07490e6a25b1}
+Looks up an attribute\textquotesingle{}s type by X\+M\+L 1.\+0 qualified name.
+
+At the moment only \textquotesingle{}C\+D\+A\+T\+A\textquotesingle{} is returned. \hypertarget{class_q_xml_attributes_a25ec58fc3c1fc56eee28edebf5e976a5}{}\index{Q\+Xml\+Attributes@{Q\+Xml\+Attributes}!type@{type}}
+\index{type@{type}!Q\+Xml\+Attributes@{Q\+Xml\+Attributes}}
+\subsubsection[{type(const Q\+String \&uri, const Q\+String \&local\+Name) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Xml\+Attributes\+::type (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{uri, }
+\item[{const {\bf Q\+String} \&}]{local\+Name}
+\end{DoxyParamCaption}
+) const}\label{class_q_xml_attributes_a25ec58fc3c1fc56eee28edebf5e976a5}
+Looks up an attribute\textquotesingle{}s type by namespace name.
+
+The first parameter specifies the namespace U\+R\+I, or the empty string if the name has no namespace U\+R\+I. The second parameter specifies the attribute\textquotesingle{}s local name.
+
+At the moment only \textquotesingle{}C\+D\+A\+T\+A\textquotesingle{} is returned. \hypertarget{class_q_xml_attributes_a5653460e735986eeab8ae7992cc9158b}{}\index{Q\+Xml\+Attributes@{Q\+Xml\+Attributes}!uri@{uri}}
+\index{uri@{uri}!Q\+Xml\+Attributes@{Q\+Xml\+Attributes}}
+\subsubsection[{uri(int index) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Xml\+Attributes\+::uri (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}\label{class_q_xml_attributes_a5653460e735986eeab8ae7992cc9158b}
+Looks up an attribute\textquotesingle{}s namespace U\+R\+I by index (starting with 0).
+
+See also the \href{xml-sax.html#namespaces}{\tt namespace description}. \hypertarget{class_q_xml_attributes_a01f6a61b11593a4591a4508a426fe297}{}\index{Q\+Xml\+Attributes@{Q\+Xml\+Attributes}!value@{value}}
+\index{value@{value}!Q\+Xml\+Attributes@{Q\+Xml\+Attributes}}
+\subsubsection[{value(int index) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Xml\+Attributes\+::value (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}\label{class_q_xml_attributes_a01f6a61b11593a4591a4508a426fe297}
+Looks up an attribute\textquotesingle{}s value by index (starting with 0). \hypertarget{class_q_xml_attributes_aec9868f216ca3278b76c219fa05f49e1}{}\index{Q\+Xml\+Attributes@{Q\+Xml\+Attributes}!value@{value}}
+\index{value@{value}!Q\+Xml\+Attributes@{Q\+Xml\+Attributes}}
+\subsubsection[{value(const Q\+String \&q\+Name) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Xml\+Attributes\+::value (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{q\+Name}
+\end{DoxyParamCaption}
+) const}\label{class_q_xml_attributes_aec9868f216ca3278b76c219fa05f49e1}
+Looks up an attribute\textquotesingle{}s value by X\+M\+L 1.\+0 qualified name.
+
+See also the \href{xml-sax.html#namespaces}{\tt namespace description}. \hypertarget{class_q_xml_attributes_a1f096ed3aea3e961d90300b7a288d8d1}{}\index{Q\+Xml\+Attributes@{Q\+Xml\+Attributes}!value@{value}}
+\index{value@{value}!Q\+Xml\+Attributes@{Q\+Xml\+Attributes}}
+\subsubsection[{value(const Q\+String \&uri, const Q\+String \&local\+Name) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Xml\+Attributes\+::value (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{uri, }
+\item[{const {\bf Q\+String} \&}]{local\+Name}
+\end{DoxyParamCaption}
+) const}\label{class_q_xml_attributes_a1f096ed3aea3e961d90300b7a288d8d1}
+Looks up an attribute\textquotesingle{}s value by namespace name.
+
+{\itshape uri} specifies the namespace U\+R\+I, or the empty string if the name has no namespace U\+R\+I. {\itshape local\+Name} specifies the attribute\textquotesingle{}s local name.
+
+See also the \href{xml-sax.html#namespaces}{\tt namespace description}. 
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_q_xml_attributes_aba6d8e1fe7917a5056b07bf8d4b4e53c}{}\index{Q\+Xml\+Attributes@{Q\+Xml\+Attributes}!Q\+Xml\+Simple\+Reader@{Q\+Xml\+Simple\+Reader}}
+\index{Q\+Xml\+Simple\+Reader@{Q\+Xml\+Simple\+Reader}!Q\+Xml\+Attributes@{Q\+Xml\+Attributes}}
+\subsubsection[{Q\+Xml\+Simple\+Reader}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Q\+Xml\+Simple\+Reader}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_q_xml_attributes_aba6d8e1fe7917a5056b07bf8d4b4e53c}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qxml_8h}{qxml.\+h}\item 
+qtools/\hyperlink{qxml_8cpp}{qxml.\+cpp}\end{DoxyCompactItemize}

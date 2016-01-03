@@ -1,0 +1,255 @@
+\hypertarget{class_input_str_list}{}\section{Référence de la classe Input\+Str\+List}
+\label{class_input_str_list}\index{Input\+Str\+List@{Input\+Str\+List}}
+
+
+{\ttfamily \#include $<$inputstrlist.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Input\+Str\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_input_str_list}
+\end{center}
+\end{figure}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_input_str_list_a8f78ed184bdeaa050c24608ad4a05833}{List\+Mode} \{ \hyperlink{class_input_str_list_a8f78ed184bdeaa050c24608ad4a05833ae092ee99b44bb7e83c1d52f42b741656}{List\+String} = 0, 
+\hyperlink{class_input_str_list_a8f78ed184bdeaa050c24608ad4a05833a02a7d272457d107d74b7d0cdea3c538e}{List\+File} = 1, 
+\hyperlink{class_input_str_list_a8f78ed184bdeaa050c24608ad4a05833ac8a28dbb90f0c43aea29f539a251f832}{List\+Dir} = 2, 
+\hyperlink{class_input_str_list_a8f78ed184bdeaa050c24608ad4a05833a5c25631877d902ec246089cfb794bfe1}{List\+File\+Dir} = List\+File $\vert$ List\+Dir
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Connecteurs publics}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_input_str_list_a9b8a78f1b4a3ae2d5c047b4fe89570b7}{reset} ()
+\end{DoxyCompactItemize}
+\subsection*{Signaux}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_input_str_list_abbfc0dffb1bb70988e08b373678768a3}{changed} ()
+\item 
+void \hyperlink{class_input_str_list_a34ce8ee59c4fc4a6717821e9557e1116}{show\+Help} (\hyperlink{class_input}{Input} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_input_str_list_a2ff2afcbcd50e8425f367f2888832564}{Input\+Str\+List} (Q\+Grid\+Layout $\ast$layout, int \&row, const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_input_str_list_ac77454b074e83a217d1689c15aaa3aaa}{id}, const \hyperlink{class_q_string_list}{Q\+String\+List} \&sl, \hyperlink{class_input_str_list_a8f78ed184bdeaa050c24608ad4a05833}{List\+Mode} v, const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_input_str_list_afc1f5afc3ad234b70a33143c092aee87}{docs})
+\item 
+void \hyperlink{class_input_str_list_a353a46afd90e0897ba6dce7a13d844d8}{set\+Value} (const \hyperlink{class_q_string_list}{Q\+String\+List} \&sl)
+\item 
+Q\+Variant \& \hyperlink{class_input_str_list_a60756f0f9f3fc4303a7c17550ae81a46}{value} ()
+\item 
+void \hyperlink{class_input_str_list_a29cf7f5d0f8aab6a573179f6ab9045da}{update} ()
+\item 
+\hyperlink{class_input_a4138334795f6330759839617744e20a9}{Kind} \hyperlink{class_input_str_list_a81c119323085a14b815ce58882bf34be}{kind} () const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_input_str_list_afc1f5afc3ad234b70a33143c092aee87}{docs} () const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_input_str_list_ac77454b074e83a217d1689c15aaa3aaa}{id} () const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_input_str_list_a257bd03a73d42e765969082d9b0174a5}{template\+Docs} () const 
+\item 
+void \hyperlink{class_input_str_list_a226fe44b40476b696f03492b77c6ee3f}{add\+Dependency} (\hyperlink{class_input}{Input} $\ast$)
+\item 
+void \hyperlink{class_input_str_list_a79ba8c5252c084ff39301b7f5f5a6871}{set\+Enabled} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})
+\item 
+void \hyperlink{class_input_str_list_aeca36d956357014a77036cddf1f48cb8}{update\+Dependencies} ()
+\item 
+void \hyperlink{class_input_str_list_a74b3b1b206990199513fa4d1c2c54143}{write\+Value} (\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, \hyperlink{class_q_text_codec}{Q\+Text\+Codec} $\ast$codec)
+\item 
+void \hyperlink{class_input_str_list_ab8098b108a58dd377d60eb904fdbf3c7}{set\+Template\+Docs} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_input_str_list_afc1f5afc3ad234b70a33143c092aee87}{docs})
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{class_input_str_list_a8f78ed184bdeaa050c24608ad4a05833}{}\index{Input\+Str\+List@{Input\+Str\+List}!List\+Mode@{List\+Mode}}
+\index{List\+Mode@{List\+Mode}!Input\+Str\+List@{Input\+Str\+List}}
+\subsubsection[{List\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Input\+Str\+List\+::\+List\+Mode}}\label{class_input_str_list_a8f78ed184bdeaa050c24608ad4a05833}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{List\+String@{List\+String}!Input\+Str\+List@{Input\+Str\+List}}\index{Input\+Str\+List@{Input\+Str\+List}!List\+String@{List\+String}}\item[{\em 
+\hypertarget{class_input_str_list_a8f78ed184bdeaa050c24608ad4a05833ae092ee99b44bb7e83c1d52f42b741656}{}List\+String\label{class_input_str_list_a8f78ed184bdeaa050c24608ad4a05833ae092ee99b44bb7e83c1d52f42b741656}
+}]\index{List\+File@{List\+File}!Input\+Str\+List@{Input\+Str\+List}}\index{Input\+Str\+List@{Input\+Str\+List}!List\+File@{List\+File}}\item[{\em 
+\hypertarget{class_input_str_list_a8f78ed184bdeaa050c24608ad4a05833a02a7d272457d107d74b7d0cdea3c538e}{}List\+File\label{class_input_str_list_a8f78ed184bdeaa050c24608ad4a05833a02a7d272457d107d74b7d0cdea3c538e}
+}]\index{List\+Dir@{List\+Dir}!Input\+Str\+List@{Input\+Str\+List}}\index{Input\+Str\+List@{Input\+Str\+List}!List\+Dir@{List\+Dir}}\item[{\em 
+\hypertarget{class_input_str_list_a8f78ed184bdeaa050c24608ad4a05833ac8a28dbb90f0c43aea29f539a251f832}{}List\+Dir\label{class_input_str_list_a8f78ed184bdeaa050c24608ad4a05833ac8a28dbb90f0c43aea29f539a251f832}
+}]\index{List\+File\+Dir@{List\+File\+Dir}!Input\+Str\+List@{Input\+Str\+List}}\index{Input\+Str\+List@{Input\+Str\+List}!List\+File\+Dir@{List\+File\+Dir}}\item[{\em 
+\hypertarget{class_input_str_list_a8f78ed184bdeaa050c24608ad4a05833a5c25631877d902ec246089cfb794bfe1}{}List\+File\+Dir\label{class_input_str_list_a8f78ed184bdeaa050c24608ad4a05833a5c25631877d902ec246089cfb794bfe1}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_input_str_list_a2ff2afcbcd50e8425f367f2888832564}{}\index{Input\+Str\+List@{Input\+Str\+List}!Input\+Str\+List@{Input\+Str\+List}}
+\index{Input\+Str\+List@{Input\+Str\+List}!Input\+Str\+List@{Input\+Str\+List}}
+\subsubsection[{Input\+Str\+List(\+Q\+Grid\+Layout $\ast$layout, int \&row, const Q\+String \&id, const Q\+String\+List \&sl, List\+Mode v, const Q\+String \&docs)}]{\setlength{\rightskip}{0pt plus 5cm}Input\+Str\+List\+::\+Input\+Str\+List (
+\begin{DoxyParamCaption}
+\item[{Q\+Grid\+Layout $\ast$}]{layout, }
+\item[{int \&}]{row, }
+\item[{const {\bf Q\+String} \&}]{id, }
+\item[{const {\bf Q\+String\+List} \&}]{sl, }
+\item[{{\bf List\+Mode}}]{v, }
+\item[{const {\bf Q\+String} \&}]{docs}
+\end{DoxyParamCaption}
+)}\label{class_input_str_list_a2ff2afcbcd50e8425f367f2888832564}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_input_str_list_a226fe44b40476b696f03492b77c6ee3f}{}\index{Input\+Str\+List@{Input\+Str\+List}!add\+Dependency@{add\+Dependency}}
+\index{add\+Dependency@{add\+Dependency}!Input\+Str\+List@{Input\+Str\+List}}
+\subsubsection[{add\+Dependency(\+Input $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Str\+List\+::add\+Dependency (
+\begin{DoxyParamCaption}
+\item[{{\bf Input} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_input_str_list_a226fe44b40476b696f03492b77c6ee3f}
+
+
+Implémente \hyperlink{class_input_ac7db8341f42bd6313fc5370f8dea0394}{Input}.
+
+\hypertarget{class_input_str_list_abbfc0dffb1bb70988e08b373678768a3}{}\index{Input\+Str\+List@{Input\+Str\+List}!changed@{changed}}
+\index{changed@{changed}!Input\+Str\+List@{Input\+Str\+List}}
+\subsubsection[{changed}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Str\+List\+::changed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\label{class_input_str_list_abbfc0dffb1bb70988e08b373678768a3}
+\hypertarget{class_input_str_list_afc1f5afc3ad234b70a33143c092aee87}{}\index{Input\+Str\+List@{Input\+Str\+List}!docs@{docs}}
+\index{docs@{docs}!Input\+Str\+List@{Input\+Str\+List}}
+\subsubsection[{docs() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Input\+Str\+List\+::docs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_input_str_list_afc1f5afc3ad234b70a33143c092aee87}
+
+
+Implémente \hyperlink{class_input_af0cf2f0042064e90ccabe2d8b55f2a45}{Input}.
+
+\hypertarget{class_input_str_list_ac77454b074e83a217d1689c15aaa3aaa}{}\index{Input\+Str\+List@{Input\+Str\+List}!id@{id}}
+\index{id@{id}!Input\+Str\+List@{Input\+Str\+List}}
+\subsubsection[{id() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Input\+Str\+List\+::id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_input_str_list_ac77454b074e83a217d1689c15aaa3aaa}
+
+
+Implémente \hyperlink{class_input_a5b54bd6c8aa55a0cdf892594766e6dbe}{Input}.
+
+\hypertarget{class_input_str_list_a81c119323085a14b815ce58882bf34be}{}\index{Input\+Str\+List@{Input\+Str\+List}!kind@{kind}}
+\index{kind@{kind}!Input\+Str\+List@{Input\+Str\+List}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kind} Input\+Str\+List\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_input_str_list_a81c119323085a14b815ce58882bf34be}
+
+
+Implémente \hyperlink{class_input_ae5753682055225699b21f97354a317f0}{Input}.
+
+\hypertarget{class_input_str_list_a9b8a78f1b4a3ae2d5c047b4fe89570b7}{}\index{Input\+Str\+List@{Input\+Str\+List}!reset@{reset}}
+\index{reset@{reset}!Input\+Str\+List@{Input\+Str\+List}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Str\+List\+::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\label{class_input_str_list_a9b8a78f1b4a3ae2d5c047b4fe89570b7}
+\hypertarget{class_input_str_list_a79ba8c5252c084ff39301b7f5f5a6871}{}\index{Input\+Str\+List@{Input\+Str\+List}!set\+Enabled@{set\+Enabled}}
+\index{set\+Enabled@{set\+Enabled}!Input\+Str\+List@{Input\+Str\+List}}
+\subsubsection[{set\+Enabled(bool)}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Str\+List\+::set\+Enabled (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_input_str_list_a79ba8c5252c084ff39301b7f5f5a6871}
+
+
+Implémente \hyperlink{class_input_a29e1927059a522781963fc8d0a872822}{Input}.
+
+\hypertarget{class_input_str_list_ab8098b108a58dd377d60eb904fdbf3c7}{}\index{Input\+Str\+List@{Input\+Str\+List}!set\+Template\+Docs@{set\+Template\+Docs}}
+\index{set\+Template\+Docs@{set\+Template\+Docs}!Input\+Str\+List@{Input\+Str\+List}}
+\subsubsection[{set\+Template\+Docs(const Q\+String \&docs)}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Str\+List\+::set\+Template\+Docs (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{docs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_input_str_list_ab8098b108a58dd377d60eb904fdbf3c7}
+
+
+Implémente \hyperlink{class_input_a88188054c6f323aa45226c91101850d9}{Input}.
+
+\hypertarget{class_input_str_list_a353a46afd90e0897ba6dce7a13d844d8}{}\index{Input\+Str\+List@{Input\+Str\+List}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!Input\+Str\+List@{Input\+Str\+List}}
+\subsubsection[{set\+Value(const Q\+String\+List \&sl)}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Str\+List\+::set\+Value (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String\+List} \&}]{sl}
+\end{DoxyParamCaption}
+)}\label{class_input_str_list_a353a46afd90e0897ba6dce7a13d844d8}
+\hypertarget{class_input_str_list_a34ce8ee59c4fc4a6717821e9557e1116}{}\index{Input\+Str\+List@{Input\+Str\+List}!show\+Help@{show\+Help}}
+\index{show\+Help@{show\+Help}!Input\+Str\+List@{Input\+Str\+List}}
+\subsubsection[{show\+Help}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Str\+List\+::show\+Help (
+\begin{DoxyParamCaption}
+\item[{{\bf Input} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\label{class_input_str_list_a34ce8ee59c4fc4a6717821e9557e1116}
+\hypertarget{class_input_str_list_a257bd03a73d42e765969082d9b0174a5}{}\index{Input\+Str\+List@{Input\+Str\+List}!template\+Docs@{template\+Docs}}
+\index{template\+Docs@{template\+Docs}!Input\+Str\+List@{Input\+Str\+List}}
+\subsubsection[{template\+Docs() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Input\+Str\+List\+::template\+Docs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_input_str_list_a257bd03a73d42e765969082d9b0174a5}
+
+
+Implémente \hyperlink{class_input_aa080eb91625dc520aa3fe873b5f576da}{Input}.
+
+\hypertarget{class_input_str_list_a29cf7f5d0f8aab6a573179f6ab9045da}{}\index{Input\+Str\+List@{Input\+Str\+List}!update@{update}}
+\index{update@{update}!Input\+Str\+List@{Input\+Str\+List}}
+\subsubsection[{update()}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Str\+List\+::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_input_str_list_a29cf7f5d0f8aab6a573179f6ab9045da}
+
+
+Implémente \hyperlink{class_input_a0436098ba644b5a7f643dd0c2d33d26a}{Input}.
+
+\hypertarget{class_input_str_list_aeca36d956357014a77036cddf1f48cb8}{}\index{Input\+Str\+List@{Input\+Str\+List}!update\+Dependencies@{update\+Dependencies}}
+\index{update\+Dependencies@{update\+Dependencies}!Input\+Str\+List@{Input\+Str\+List}}
+\subsubsection[{update\+Dependencies()}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Str\+List\+::update\+Dependencies (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_input_str_list_aeca36d956357014a77036cddf1f48cb8}
+
+
+Implémente \hyperlink{class_input_a8758a9e88aecbbd9be1d438ba5b8454c}{Input}.
+
+\hypertarget{class_input_str_list_a60756f0f9f3fc4303a7c17550ae81a46}{}\index{Input\+Str\+List@{Input\+Str\+List}!value@{value}}
+\index{value@{value}!Input\+Str\+List@{Input\+Str\+List}}
+\subsubsection[{value()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Variant \& Input\+Str\+List\+::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_input_str_list_a60756f0f9f3fc4303a7c17550ae81a46}
+
+
+Implémente \hyperlink{class_input_a72c6ccd2eff708b1f91b8503427ec312}{Input}.
+
+\hypertarget{class_input_str_list_a74b3b1b206990199513fa4d1c2c54143}{}\index{Input\+Str\+List@{Input\+Str\+List}!write\+Value@{write\+Value}}
+\index{write\+Value@{write\+Value}!Input\+Str\+List@{Input\+Str\+List}}
+\subsubsection[{write\+Value(\+Q\+Text\+Stream \&t, Q\+Text\+Codec $\ast$codec)}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Str\+List\+::write\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Text\+Stream} \&}]{t, }
+\item[{{\bf Q\+Text\+Codec} $\ast$}]{codec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_input_str_list_a74b3b1b206990199513fa4d1c2c54143}
+
+
+Implémente \hyperlink{class_input_a761f73fb00d6e0e3e391edafcfde1134}{Input}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+addon/doxywizard/\hyperlink{inputstrlist_8h}{inputstrlist.\+h}\item 
+addon/doxywizard/\hyperlink{inputstrlist_8cpp}{inputstrlist.\+cpp}\end{DoxyCompactItemize}

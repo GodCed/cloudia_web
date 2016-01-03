@@ -1,0 +1,123 @@
+\hypertarget{class_config_bool}{}\section{Référence de la classe Config\+Bool}
+\label{class_config_bool}\index{Config\+Bool@{Config\+Bool}}
+
+
+{\ttfamily \#include $<$config.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Config\+Bool\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_config_bool}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_config_bool_a0250b41f09141944729a556c4d5f8146}{Config\+Bool} (const char $\ast$\hyperlink{class_config_option_a2f226c32b0c447c1fa628660f42859c4}{name}, const char $\ast$\hyperlink{vhdljjparser_8cpp_a9910424bf5401d657c3b3fdff6fcc152}{doc}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} def\+Val)
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} $\ast$ \hyperlink{class_config_bool_a71f105a81fcc98a2c11a807a51c67171}{value\+String\+Ref} ()
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} $\ast$ \hyperlink{class_config_bool_ab42eaac6320038f3ddeb73900e98d898}{value\+Ref} ()
+\item 
+void \hyperlink{class_config_bool_a5ebdef58b033f43ea09b1e5b0b44e330}{convert\+Str\+To\+Val} ()
+\item 
+void \hyperlink{class_config_bool_af9c3c0887533842db8cf9201a5b63486}{subst\+Env\+Vars} ()
+\item 
+void \hyperlink{class_config_bool_acfabddfc8b65f1850cb7b1bdfcfb6ae1}{set\+Value\+String} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&v)
+\item 
+void \hyperlink{class_config_bool_aab61095cad30bfb2e184eb389d4d4472}{write\+Template} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} sl, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} upd)
+\item 
+void \hyperlink{class_config_bool_a087fdcc229617e80faf798e90fe17439}{init} ()
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Class representing a Boolean type option. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_config_bool_a0250b41f09141944729a556c4d5f8146}{}\index{Config\+Bool@{Config\+Bool}!Config\+Bool@{Config\+Bool}}
+\index{Config\+Bool@{Config\+Bool}!Config\+Bool@{Config\+Bool}}
+\subsubsection[{Config\+Bool(const char $\ast$name, const char $\ast$doc, bool def\+Val)}]{\setlength{\rightskip}{0pt plus 5cm}Config\+Bool\+::\+Config\+Bool (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{doc, }
+\item[{{\bf bool}}]{def\+Val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_config_bool_a0250b41f09141944729a556c4d5f8146}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_config_bool_a5ebdef58b033f43ea09b1e5b0b44e330}{}\index{Config\+Bool@{Config\+Bool}!convert\+Str\+To\+Val@{convert\+Str\+To\+Val}}
+\index{convert\+Str\+To\+Val@{convert\+Str\+To\+Val}!Config\+Bool@{Config\+Bool}}
+\subsubsection[{convert\+Str\+To\+Val()}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+Bool\+::convert\+Str\+To\+Val (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_config_bool_a5ebdef58b033f43ea09b1e5b0b44e330}
+
+
+Réimplémentée à partir de \hyperlink{class_config_option_af1d26523f37d742316ddc4c0f9add4fc}{Config\+Option}.
+
+\hypertarget{class_config_bool_a087fdcc229617e80faf798e90fe17439}{}\index{Config\+Bool@{Config\+Bool}!init@{init}}
+\index{init@{init}!Config\+Bool@{Config\+Bool}}
+\subsubsection[{init()}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+Bool\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_config_bool_a087fdcc229617e80faf798e90fe17439}
+
+
+Réimplémentée à partir de \hyperlink{class_config_option_a1dabfad39230674fc07f5f535392fd35}{Config\+Option}.
+
+\hypertarget{class_config_bool_acfabddfc8b65f1850cb7b1bdfcfb6ae1}{}\index{Config\+Bool@{Config\+Bool}!set\+Value\+String@{set\+Value\+String}}
+\index{set\+Value\+String@{set\+Value\+String}!Config\+Bool@{Config\+Bool}}
+\subsubsection[{set\+Value\+String(const Q\+C\+String \&v)}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+Bool\+::set\+Value\+String (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_config_bool_acfabddfc8b65f1850cb7b1bdfcfb6ae1}
+\hypertarget{class_config_bool_af9c3c0887533842db8cf9201a5b63486}{}\index{Config\+Bool@{Config\+Bool}!subst\+Env\+Vars@{subst\+Env\+Vars}}
+\index{subst\+Env\+Vars@{subst\+Env\+Vars}!Config\+Bool@{Config\+Bool}}
+\subsubsection[{subst\+Env\+Vars()}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+Bool\+::subst\+Env\+Vars (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_config_bool_af9c3c0887533842db8cf9201a5b63486}
+
+
+Implémente \hyperlink{class_config_option_aeb6ac539f2fe79e07f2baefd5c4d89c1}{Config\+Option}.
+
+\hypertarget{class_config_bool_ab42eaac6320038f3ddeb73900e98d898}{}\index{Config\+Bool@{Config\+Bool}!value\+Ref@{value\+Ref}}
+\index{value\+Ref@{value\+Ref}!Config\+Bool@{Config\+Bool}}
+\subsubsection[{value\+Ref()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool}$\ast$ Config\+Bool\+::value\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_config_bool_ab42eaac6320038f3ddeb73900e98d898}
+\hypertarget{class_config_bool_a71f105a81fcc98a2c11a807a51c67171}{}\index{Config\+Bool@{Config\+Bool}!value\+String\+Ref@{value\+String\+Ref}}
+\index{value\+String\+Ref@{value\+String\+Ref}!Config\+Bool@{Config\+Bool}}
+\subsubsection[{value\+String\+Ref()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String}$\ast$ Config\+Bool\+::value\+String\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_config_bool_a71f105a81fcc98a2c11a807a51c67171}
+\hypertarget{class_config_bool_aab61095cad30bfb2e184eb389d4d4472}{}\index{Config\+Bool@{Config\+Bool}!write\+Template@{write\+Template}}
+\index{write\+Template@{write\+Template}!Config\+Bool@{Config\+Bool}}
+\subsubsection[{write\+Template(\+F\+Text\+Stream \&t, bool sl, bool upd)}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+Bool\+::write\+Template (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t, }
+\item[{{\bf bool}}]{sl, }
+\item[{{\bf bool}}]{upd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_config_bool_aab61095cad30bfb2e184eb389d4d4472}
+
+
+Implémente \hyperlink{class_config_option_a4af9c041d81cc919e5aae2210087bc38}{Config\+Option}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{src_2config_8h}{config.\+h}\item 
+generated\+\_\+src/doxygen/\hyperlink{config_8cpp}{config.\+cpp}\end{DoxyCompactItemize}

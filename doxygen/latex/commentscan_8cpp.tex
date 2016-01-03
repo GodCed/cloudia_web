@@ -1,0 +1,1563 @@
+\hypertarget{commentscan_8cpp}{}\section{Référence du fichier generated\+\_\+src/doxygen/commentscan.cpp}
+\label{commentscan_8cpp}\index{generated\+\_\+src/doxygen/commentscan.\+cpp@{generated\+\_\+src/doxygen/commentscan.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$qarray.\+h$>$}\\*
+{\ttfamily \#include $<$qstack.\+h$>$}\\*
+{\ttfamily \#include $<$qregexp.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$qfile.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}scanner.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}entry.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doxygen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}index.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}defargs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}language.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}outputlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}membergroup.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}reflist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debug.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}parserintf.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cite.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}markdown.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}condparser.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}formula.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structyy__buffer__state}{yy\+\_\+buffer\+\_\+state}
+\item 
+struct \hyperlink{structyy__trans__info}{yy\+\_\+trans\+\_\+info}
+\item 
+struct \hyperlink{struct_doc_cmd_map}{Doc\+Cmd\+Map}
+\item 
+class \hyperlink{class_doc_cmd_mapper}{Doc\+Cmd\+Mapper}
+\begin{DoxyCompactList}\small\item\em Command mapper. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_doc_cmd_mapper_1_1_cmd}{Doc\+Cmd\+Mapper\+::\+Cmd}
+\item 
+class \hyperlink{class_guarded_section}{Guarded\+Section}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{commentscan_8cpp_a1ae16e642a197fa4948998525813c6f5}{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}~short int
+\item 
+\#define \hyperlink{commentscan_8cpp_ac86ea8173dfcfc5c989d3295a77e2f95}{yy\+\_\+create\+\_\+buffer}~\hyperlink{commentscan_8cpp_a1ab5d156676721095e3fd96c3c13b4d2}{commentscan\+Y\+Y\+\_\+create\+\_\+buffer}
+\item 
+\#define \hyperlink{commentscan_8cpp_ad1868c6b38b45af25a4a0f449912a808}{yy\+\_\+delete\+\_\+buffer}~\hyperlink{commentscan_8cpp_a9471915981cc3489f33083ac2bb385bd}{commentscan\+Y\+Y\+\_\+delete\+\_\+buffer}
+\item 
+\#define \hyperlink{commentscan_8cpp_a301f4439c9b191c80db45f5b1a8c7269}{yy\+\_\+flex\+\_\+debug}~\hyperlink{commentscan_8cpp_a464ee155e084f4a76f7b5ca3e964daa7}{commentscan\+Y\+Y\+\_\+flex\+\_\+debug}
+\item 
+\#define \hyperlink{commentscan_8cpp_aa14efad9f9c24106a3e3398a4f6621c2}{yy\+\_\+init\+\_\+buffer}~commentscan\+Y\+Y\+\_\+init\+\_\+buffer
+\item 
+\#define \hyperlink{commentscan_8cpp_ab01a4c7245136f22a63acac7c0ceb343}{yy\+\_\+flush\+\_\+buffer}~\hyperlink{commentscan_8cpp_ac40c531e83da98d96e4b8e3e240bd688}{commentscan\+Y\+Y\+\_\+flush\+\_\+buffer}
+\item 
+\#define \hyperlink{commentscan_8cpp_a039fc377fd4784139d8706ba0ae229fa}{yy\+\_\+load\+\_\+buffer\+\_\+state}~commentscan\+Y\+Y\+\_\+load\+\_\+buffer\+\_\+state
+\item 
+\#define \hyperlink{commentscan_8cpp_a968d5b9e7e06a38bfca977b343d47d5c}{yy\+\_\+switch\+\_\+to\+\_\+buffer}~\hyperlink{commentscan_8cpp_a5f79f48b14e6596b7673177a143d9a40}{commentscan\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}
+\item 
+\#define \hyperlink{commentscan_8cpp_aa789f4617e33fb99594cb04a3688a0c1}{yyin}~\hyperlink{commentscan_8cpp_af228a6aab6c862792397fd436005d281}{commentscan\+Y\+Yin}
+\item 
+\#define \hyperlink{commentscan_8cpp_afa07a629486cb790560bb95713ec7794}{yyleng}~\hyperlink{commentscan_8cpp_a4220394a5337f0b7a71acb9ee2c29c6f}{commentscan\+Y\+Yleng}
+\item 
+\#define \hyperlink{commentscan_8cpp_a5611300548b2030d86b6ab9168132b88}{yylex}~\hyperlink{commentscan_8cpp_a0eefe98636a2ca3a5d3441287e5c6e3e}{commentscan\+Y\+Ylex}
+\item 
+\#define \hyperlink{commentscan_8cpp_ad71cf0fddcfe4f61de0929105b33226c}{yylineno}~\hyperlink{commentscan_8cpp_a205545ab5303b1c6d00fc37a9e8663ad}{commentscan\+Y\+Ylineno}
+\item 
+\#define \hyperlink{commentscan_8cpp_a4fd44867d448dcb6fc32ea004a15de54}{yyout}~\hyperlink{commentscan_8cpp_a79a538323085a715c55478396c3bb03f}{commentscan\+Y\+Yout}
+\item 
+\#define \hyperlink{commentscan_8cpp_a2259355ac49295f72feab070a34a9b11}{yyrestart}~\hyperlink{commentscan_8cpp_a20dd382859f10ab5e5712f4d27b895f6}{commentscan\+Y\+Yrestart}
+\item 
+\#define \hyperlink{commentscan_8cpp_a0d71f919dbec1ffd74b2460fa7e5ac28}{yytext}~\hyperlink{commentscan_8cpp_ab4bacdbe09c8bbecf0176f5be24fabae}{commentscan\+Y\+Ytext}
+\item 
+\#define \hyperlink{commentscan_8cpp_a5be541efdb129f7cefb2437f52fe7359}{yywrap}~\hyperlink{commentscan_8cpp_a48b1becd8dec5757baa0224a2377fed4}{commentscan\+Y\+Ywrap}
+\item 
+\#define \hyperlink{commentscan_8cpp_a803397ab738ee8630166680646a2d913}{yyalloc}~\hyperlink{commentscan_8cpp_a535b87095f3c38c9fc9620f1259bdcad}{commentscan\+Y\+Yalloc}
+\item 
+\#define \hyperlink{commentscan_8cpp_ab1eba250555ca003eb39387bb1a41d39}{yyrealloc}~\hyperlink{commentscan_8cpp_a9e046e2a318e0059b596a5768f36aba2}{commentscan\+Y\+Yrealloc}
+\item 
+\#define \hyperlink{commentscan_8cpp_a4fa4368d47620ea80150b516e8884f6b}{yyfree}~\hyperlink{commentscan_8cpp_a91c2706cfd696d66b643e2ec0e1affb6}{commentscan\+Y\+Yfree}
+\item 
+\#define \hyperlink{commentscan_8cpp_a3c3d1ef92e93b0bc81d7760a73d5c3b6}{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}
+\item 
+\#define \hyperlink{commentscan_8cpp_a243ca1d30872935faf05ea5118ed6fdc}{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}~2
+\item 
+\#define \hyperlink{commentscan_8cpp_a90f9d458829400869e47efb68a865677}{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}~5
+\item 
+\#define \hyperlink{commentscan_8cpp_ac676bd06869180ea493e9b6d7c078dbb}{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}~35
+\item 
+\#define \hyperlink{commentscan_8cpp_a9465c9986fdda27730c9dff8d16a0887}{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}
+\item 
+\#define \hyperlink{commentscan_8cpp_aec980b5a71bbe6d67931df20f0ebaec4}{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}
+\item 
+\#define \hyperlink{commentscan_8cpp_aadcf2a81af243df333b31efa6461ab8e}{I\+N\+T8\+\_\+\+M\+I\+N}~(-\/128)
+\item 
+\#define \hyperlink{commentscan_8cpp_ad4e9955955b27624963643eac448118a}{I\+N\+T16\+\_\+\+M\+I\+N}~(-\/32767-\/1)
+\item 
+\#define \hyperlink{commentscan_8cpp_a688eb21a22db27c2b2bd5836943cdcbe}{I\+N\+T32\+\_\+\+M\+I\+N}~(-\/2147483647-\/1)
+\item 
+\#define \hyperlink{commentscan_8cpp_aaf7f29f45f1a513b4748a4e5014ddf6a}{I\+N\+T8\+\_\+\+M\+A\+X}~(127)
+\item 
+\#define \hyperlink{commentscan_8cpp_ac58f2c111cc9989c86db2a7dc4fd84ca}{I\+N\+T16\+\_\+\+M\+A\+X}~(32767)
+\item 
+\#define \hyperlink{commentscan_8cpp_a181807730d4a375f848ba139813ce04f}{I\+N\+T32\+\_\+\+M\+A\+X}~(2147483647)
+\item 
+\#define \hyperlink{commentscan_8cpp_aeb4e270a084ee26fe73e799861bd0252}{U\+I\+N\+T8\+\_\+\+M\+A\+X}~(255\+U)
+\item 
+\#define \hyperlink{commentscan_8cpp_a3ea490c9b3617d4479bd80ef93cd5602}{U\+I\+N\+T16\+\_\+\+M\+A\+X}~(65535\+U)
+\item 
+\#define \hyperlink{commentscan_8cpp_ab5eb23180f7cc12b7d6c04a8ec067fdd}{U\+I\+N\+T32\+\_\+\+M\+A\+X}~(4294967295\+U)
+\item 
+\#define \hyperlink{commentscan_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst}
+\item 
+\#define \hyperlink{commentscan_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}{Y\+Y\+\_\+\+N\+U\+L\+L}~0
+\item 
+\#define \hyperlink{commentscan_8cpp_af1185350b7a92cf8aa5324c68850c8a6}{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}(\hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})~((unsigned int) (unsigned char) \hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})
+\item 
+\#define \hyperlink{commentscan_8cpp_ab766bbbee08d04b67e3fe599d6900873}{B\+E\+G\+I\+N}~(yy\+\_\+start) = 1 + 2 $\ast$
+\item 
+\#define \hyperlink{commentscan_8cpp_a8e14785f9eab7a997d659b25af9584c5}{Y\+Y\+\_\+\+S\+T\+A\+R\+T}~(((yy\+\_\+start) -\/ 1) / 2)
+\item 
+\#define \hyperlink{commentscan_8cpp_a32b5b960944f946b192d54f672569cd9}{Y\+Y\+S\+T\+A\+T\+E}~\hyperlink{xmlcode_8cpp_a8e14785f9eab7a997d659b25af9584c5}{Y\+Y\+\_\+\+S\+T\+A\+R\+T}
+\item 
+\#define \hyperlink{commentscan_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}(state)~(\hyperlink{xmlcode_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R} + state + 1)
+\item 
+\#define \hyperlink{commentscan_8cpp_a0406739e64fb5750cf995d2ae68ce69d}{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}~\hyperlink{commentscan_8cpp_a20dd382859f10ab5e5712f4d27b895f6}{commentscan\+Y\+Yrestart}(\hyperlink{commentscan_8cpp_af228a6aab6c862792397fd436005d281}{commentscan\+Y\+Yin}  )
+\item 
+\#define \hyperlink{commentscan_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}~0
+\item 
+\#define \hyperlink{commentscan_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}~262144
+\item 
+\#define \hyperlink{commentscan_8cpp_ac2f8b6fccdc516d96b02ac09a4dc01bd}{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}~((\hyperlink{xmlcode_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E} + 2) $\ast$ sizeof(\hyperlink{code_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{yy\+\_\+state\+\_\+type}))
+\item 
+\#define \hyperlink{commentscan_8cpp_aa79d63ed3ff8d2249baf1732a73089f5}{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}
+\item 
+\#define \hyperlink{commentscan_8cpp_ae0f2b0b5f04b2338367826b5670774f9}{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}
+\item 
+\#define \hyperlink{commentscan_8cpp_adf4b0db227e07782e28ade353a7ba7a1}{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}~0
+\item 
+\#define \hyperlink{commentscan_8cpp_a7f71d7fa2c403eb4b2f38cb9536f3c63}{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}~1
+\item 
+\#define \hyperlink{commentscan_8cpp_ad1a0b5ebcabffe388e9e9ebb2619c1fb}{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}~2
+\item 
+\#define \hyperlink{commentscan_8cpp_a12e5f3a76911433480bca7f4edba6119}{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+\#define \hyperlink{commentscan_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{yyless}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+\#define \hyperlink{commentscan_8cpp_a448a4e9041a09588332733c6846c770c}{unput}(\hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})~yyunput( \hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c}, (\hyperlink{xmlcode_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\+\_\+ptr})  )
+\item 
+\#define \hyperlink{commentscan_8cpp_a8aaa9e1fa7f13d6954d045ef973a9c84}{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}
+\item 
+\#define \hyperlink{commentscan_8cpp_a53579db42834b88199458993912c646d}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}~0
+\item 
+\#define \hyperlink{commentscan_8cpp_a609d19f40900ecc2a5f812d9388c21fb}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}~1
+\item 
+\#define \hyperlink{commentscan_8cpp_ad689d97c15e807a6116ace7a420cea57}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}~2
+\item 
+\#define \hyperlink{commentscan_8cpp_aa093d500a6330d06d8e4760c494fac33}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}
+\item 
+\#define \hyperlink{commentscan_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}~(yy\+\_\+buffer\+\_\+stack)\mbox{[}(yy\+\_\+buffer\+\_\+stack\+\_\+top)\mbox{]}
+\item 
+\#define \hyperlink{commentscan_8cpp_ac5d478d90ea9a2ecd43d579067a2e89d}{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}~\hyperlink{commentscan_8cpp_ac40c531e83da98d96e4b8e3e240bd688}{commentscan\+Y\+Y\+\_\+flush\+\_\+buffer}(\hyperlink{xmlcode_8cpp_aa093d500a6330d06d8e4760c494fac33}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R} )
+\item 
+\#define \hyperlink{commentscan_8cpp_ab7eb911e18655f2f78e63afe5a8a4a12}{yy\+\_\+new\+\_\+buffer}~\hyperlink{commentscan_8cpp_a1ab5d156676721095e3fd96c3c13b4d2}{commentscan\+Y\+Y\+\_\+create\+\_\+buffer}
+\item 
+\#define \hyperlink{commentscan_8cpp_ac56eb96366c08862bf0efe5d83d1fc4c}{yy\+\_\+set\+\_\+interactive}(is\+\_\+interactive)
+\item 
+\#define \hyperlink{commentscan_8cpp_a12e30d13a76a94e78010db9996d39c50}{yy\+\_\+set\+\_\+bol}(at\+\_\+bol)
+\item 
+\#define \hyperlink{commentscan_8cpp_a71ca89b3656acd0552f14949a571560b}{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}()~(\hyperlink{xmlcode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}-\/$>$yy\+\_\+at\+\_\+bol)
+\item 
+\#define \hyperlink{commentscan_8cpp_a48b1becd8dec5757baa0224a2377fed4}{commentscan\+Y\+Ywrap}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})~1
+\item 
+\#define \hyperlink{commentscan_8cpp_ae1ef5933028cbc587d31328e53d11a99}{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}
+\item 
+\#define \hyperlink{commentscan_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\+\_\+ptr}~\hyperlink{commentscan_8cpp_ab4bacdbe09c8bbecf0176f5be24fabae}{commentscan\+Y\+Ytext}
+\item 
+\#define \hyperlink{commentscan_8cpp_acc3486d769af4e4b2820346a0093cc79}{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}
+\item 
+\#define \hyperlink{commentscan_8cpp_ae558785bb896e090901c2b905f6790c6}{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}~205
+\item 
+\#define \hyperlink{commentscan_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}~206
+\item 
+\#define \hyperlink{commentscan_8cpp_a76482842cdcaadf1dbdaf43df38765a2}{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}~0x2000
+\item 
+\#define \hyperlink{commentscan_8cpp_a7fce78ee876950ded902364014c917e6}{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}~0x4000
+\item 
+\#define \hyperlink{commentscan_8cpp_a835f10dd1ab4bf9a80c4cd80ee6e3058}{R\+E\+J\+E\+C\+T}
+\item 
+\#define \hyperlink{commentscan_8cpp_a745d37b5e002b2e5f93ad42ea7b554be}{yymore}()~yymore\+\_\+used\+\_\+but\+\_\+not\+\_\+detected
+\item 
+\#define \hyperlink{commentscan_8cpp_a68792d73820bc46a71d3d4e613f0b977}{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}~0
+\item 
+\#define \hyperlink{commentscan_8cpp_a56858d18c7eda4f53664496ef566f651}{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}
+\item 
+\#define \hyperlink{commentscan_8cpp_a85523a0c7d95c059d251b4e9829947aa}{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}~1
+\item 
+\#define \hyperlink{commentscan_8cpp_a15b85de192a189d5a31cdd518e001e6e}{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}~1
+\item 
+\#define \hyperlink{commentscan_8cpp_aacfdca45fa4beb8b06172525a53c424a}{Y\+Y\+\_\+\+I\+N\+P\+U\+T}(buf,  result,  max\+\_\+size)~result=yyread(buf,max\+\_\+size);
+\item 
+\#define \hyperlink{commentscan_8cpp_aa3d063564f6ab16f6d408b8369d0e9ff}{I\+N\+I\+T\+I\+A\+L}~0
+\item 
+\#define \hyperlink{commentscan_8cpp_a734aadda90260df254153f157981235e}{Comment}~1
+\item 
+\#define \hyperlink{commentscan_8cpp_a4b75d4fb40012575cc5801e6fdfd4c71}{Page\+Doc\+Arg1}~2
+\item 
+\#define \hyperlink{commentscan_8cpp_a556185f7e3b6e31ba51b904ceb35ce2c}{Page\+Doc\+Arg2}~3
+\item 
+\#define \hyperlink{commentscan_8cpp_a7d092b48520bd401a16f678f44960750}{Relates\+Param1}~4
+\item 
+\#define \hyperlink{commentscan_8cpp_ad26bc2999ae6d9ed59d33222666e0c4e}{Class\+Doc\+Arg1}~5
+\item 
+\#define \hyperlink{commentscan_8cpp_aaa6ab7aab5e9fe738059d55bf2745538}{Class\+Doc\+Arg2}~6
+\item 
+\#define \hyperlink{commentscan_8cpp_af82c803a176b58b8c7b2161e0d45f863}{Class\+Doc\+Arg3}~7
+\item 
+\#define \hyperlink{commentscan_8cpp_a2fd95ad7fe250b182b5e8c3b5be5e5a1}{Category\+Doc\+Arg1}~8
+\item 
+\#define \hyperlink{commentscan_8cpp_ad87649a7ca7839a94202f6abaffd34ff}{X\+Ref\+Item\+Param1}~9
+\item 
+\#define \hyperlink{commentscan_8cpp_a6047c6026dab95a568d7c935455d9d42}{X\+Ref\+Item\+Param2}~10
+\item 
+\#define \hyperlink{commentscan_8cpp_a6a5acbff22abc91b30344d3f8b818c79}{X\+Ref\+Item\+Param3}~11
+\item 
+\#define \hyperlink{commentscan_8cpp_a7b97c722dcf987b3b8449cc7b77dc4b7}{File\+Doc\+Arg1}~12
+\item 
+\#define \hyperlink{commentscan_8cpp_ae98f80d9e830027e10ddbb1555893f12}{Enum\+Doc\+Arg1}~13
+\item 
+\#define \hyperlink{commentscan_8cpp_ad3d05404cfe3ab80360dc0c99bf47992}{Name\+Space\+Doc\+Arg1}~14
+\item 
+\#define \hyperlink{commentscan_8cpp_a149c60e3b928736ea6135672c005f38d}{Package\+Doc\+Arg1}~15
+\item 
+\#define \hyperlink{commentscan_8cpp_a21aaef1423970e0a5b0e99b797c46c11}{Group\+Doc\+Arg1}~16
+\item 
+\#define \hyperlink{commentscan_8cpp_a4e99feaa0fa185f8395c457d77faba6e}{Group\+Doc\+Arg2}~17
+\item 
+\#define \hyperlink{commentscan_8cpp_a5e5bb13f9c930225a8a1e398f42d06ee}{Section\+Label}~18
+\item 
+\#define \hyperlink{commentscan_8cpp_adde762d13f1deade7d86d069d1e2154f}{Section\+Title}~19
+\item 
+\#define \hyperlink{commentscan_8cpp_ad4657774a9567d8d103a17ac26273e1a}{Subpage\+Label}~20
+\item 
+\#define \hyperlink{commentscan_8cpp_a28e46f03d9809e805697fafec472204c}{Subpage\+Title}~21
+\item 
+\#define \hyperlink{commentscan_8cpp_abdbc3aa040a56327a772b695248da6a6}{Format\+Block}~22
+\item 
+\#define \hyperlink{commentscan_8cpp_a4d3fbe185edb32fc00c05cc8834467a5}{Line\+Param}~23
+\item 
+\#define \hyperlink{commentscan_8cpp_abe826dd18015731385b3b315ffcab769}{Guard\+Param}~24
+\item 
+\#define \hyperlink{commentscan_8cpp_a50e40dad2f4d3b994a8046467600fdc6}{Guard\+Param\+End}~25
+\item 
+\#define \hyperlink{commentscan_8cpp_afe1cd769c8dfabc884e430ff380f21a5}{Skip\+Guarded\+Section}~26
+\item 
+\#define \hyperlink{commentscan_8cpp_a88833f04084cdb2655a94c13ceb9c428}{Skip\+Internal}~27
+\item 
+\#define \hyperlink{commentscan_8cpp_a3607247c443690320905dc672e724579}{Name\+Param}~28
+\item 
+\#define \hyperlink{commentscan_8cpp_adad60616f0ef86b37777fc90d2531409}{In\+Group\+Param}~29
+\item 
+\#define \hyperlink{commentscan_8cpp_aaf9cab5fe76d04223774349104640308}{Fn\+Param}~30
+\item 
+\#define \hyperlink{commentscan_8cpp_a55828b283815e56c30df40523ce23d0f}{Overload\+Param}~31
+\item 
+\#define \hyperlink{commentscan_8cpp_ae408464f40de29f19241772911187d59}{Inherit\+Param}~32
+\item 
+\#define \hyperlink{commentscan_8cpp_a10f1cda986886d145fcc4a5dc5d7a916}{Extends\+Param}~33
+\item 
+\#define \hyperlink{commentscan_8cpp_a943f10a904784ce2f1d5b45ac8e52284}{Read\+Formula\+Short}~34
+\item 
+\#define \hyperlink{commentscan_8cpp_a9df360e2561bd0b757d12a5804ba3afe}{Read\+Formula\+Long}~35
+\item 
+\#define \hyperlink{commentscan_8cpp_a56b056c7dc9a4ed0979becc879c02809}{Anchor\+Label}~36
+\item 
+\#define \hyperlink{commentscan_8cpp_a8eea6ff31efb007c2dfac0f91bc32e09}{Html\+Comment}~37
+\item 
+\#define \hyperlink{commentscan_8cpp_a973694076279c935fe23b9e25bd6600d}{Skip\+Lang}~38
+\item 
+\#define \hyperlink{commentscan_8cpp_aaa6108f805ab463c4a3aa106db3fbbec}{Cite\+Label}~39
+\item 
+\#define \hyperlink{commentscan_8cpp_a8c99a07bd7ad077f3fa92bb8bed9438e}{Copy\+Doc}~40
+\item 
+\#define \hyperlink{commentscan_8cpp_a3d285019fe87d60be1a4eb8524bb33b8}{Guard\+Expr}~41
+\item 
+\#define \hyperlink{commentscan_8cpp_a26938d921de835f6183c02e54cf08828}{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}~void $\ast$
+\item 
+\#define \hyperlink{commentscan_8cpp_aab1491ceccb1c95c14320b2903773a1c}{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}~262144
+\item 
+\#define \hyperlink{commentscan_8cpp_aad1dc60a04a1d8cfc8b3ded13601e361}{E\+C\+H\+O}~fwrite( \hyperlink{commentscan_8cpp_ab4bacdbe09c8bbecf0176f5be24fabae}{commentscan\+Y\+Ytext}, \hyperlink{commentscan_8cpp_a4220394a5337f0b7a71acb9ee2c29c6f}{commentscan\+Y\+Yleng}, 1, \hyperlink{commentscan_8cpp_a79a538323085a715c55478396c3bb03f}{commentscan\+Y\+Yout} )
+\item 
+\#define \hyperlink{commentscan_8cpp_ac3286b18a2e91b4571b97df96a118e84}{yyterminate}()~return \hyperlink{xmlcode_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}{Y\+Y\+\_\+\+N\+U\+L\+L}
+\item 
+\#define \hyperlink{commentscan_8cpp_a227e75c43b9e0cd41529974230be7e75}{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}~25
+\item 
+\#define \hyperlink{commentscan_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}(\hyperlink{message_8h_aba549a028419cd48a3f373037c2c57eb}{msg})~yy\+\_\+fatal\+\_\+error( \hyperlink{message_8h_aba549a028419cd48a3f373037c2c57eb}{msg} )
+\item 
+\#define \hyperlink{commentscan_8cpp_a7682c8d9cec0859408d2421fbe4a5570}{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}~1
+\item 
+\#define \hyperlink{commentscan_8cpp_ae5b01ac2fa5a6ad5fb97559638abe686}{Y\+Y\+\_\+\+D\+E\+C\+L}~int \hyperlink{commentscan_8cpp_a0eefe98636a2ca3a5d3441287e5c6e3e}{commentscan\+Y\+Ylex} (void)
+\item 
+\#define \hyperlink{commentscan_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}
+\item 
+\#define \hyperlink{commentscan_8cpp_a3cc40a460ad7df816678bcc05241e84c}{Y\+Y\+\_\+\+B\+R\+E\+A\+K}~break;
+\item 
+\#define \hyperlink{commentscan_8cpp_a690504b662e4281515bf12722df178ba}{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}
+\item 
+\#define \hyperlink{commentscan_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}~2
+\item 
+\#define \hyperlink{commentscan_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{yyless}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+\#define \hyperlink{commentscan_8cpp_a828cc83270f8f5bb1688e14dd4e28128}{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}~\char`\"{}yytables\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef signed char \hyperlink{commentscan_8cpp_a7b0840dff4a2ef1702118aa12264b2a7}{flex\+\_\+int8\+\_\+t}
+\item 
+typedef short int \hyperlink{commentscan_8cpp_a2e73b2c75126814585525fb2e9d51159}{flex\+\_\+int16\+\_\+t}
+\item 
+typedef int \hyperlink{commentscan_8cpp_a838ce943cf44ef7769480714fc6c3ba9}{flex\+\_\+int32\+\_\+t}
+\item 
+typedef unsigned char \hyperlink{commentscan_8cpp_a0fac5ea484f64e75dbe6eba4aa61750c}{flex\+\_\+uint8\+\_\+t}
+\item 
+typedef unsigned short int \hyperlink{commentscan_8cpp_ac50cdb9eefbef83a1cec89e3a7f6e1d2}{flex\+\_\+uint16\+\_\+t}
+\item 
+typedef unsigned int \hyperlink{commentscan_8cpp_a36869712de12820c73aae736762e8e88}{flex\+\_\+uint32\+\_\+t}
+\item 
+typedef struct \hyperlink{structyy__buffer__state}{yy\+\_\+buffer\+\_\+state} $\ast$ \hyperlink{commentscan_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}
+\item 
+typedef size\+\_\+t \hyperlink{commentscan_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t}
+\item 
+typedef unsigned char \hyperlink{commentscan_8cpp_a1f324b3cb0839eeb90145f0274e6946e}{Y\+Y\+\_\+\+C\+H\+A\+R}
+\item 
+typedef int \hyperlink{commentscan_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{yy\+\_\+state\+\_\+type}
+\item 
+typedef \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}($\ast$ \hyperlink{commentscan_8cpp_a6eda037087f774dcb0febdb34650d56d}{Doc\+Cmd\+Func}) (const \hyperlink{class_q_c_string}{Q\+C\+String} \&name)
+\end{DoxyCompactItemize}
+\subsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186}{X\+Ref\+Kind} \{ \\*
+\hyperlink{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186a42ee2c25e3f8d7da014fe8ef030d62dd}{X\+Ref\+\_\+\+Item}, 
+\hyperlink{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186a5cbe7af7984f6187caabf98d9f63d827}{X\+Ref\+\_\+\+Todo}, 
+\hyperlink{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186a6e296b7c7d8b1ef41da86ac5ce6a7fde}{X\+Ref\+\_\+\+Test}, 
+\hyperlink{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186a8496a070226e4b7041f46e5012f8deb7}{X\+Ref\+\_\+\+Bug}, 
+\\*
+\hyperlink{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186a5b64b43dd14f6ef0daa85168b4240917}{X\+Ref\+\_\+\+Deprecated}, 
+\hyperlink{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186ae309e5d84833a7111c361e657e75bc88}{X\+Ref\+\_\+\+None}
+ \}
+\item 
+enum \hyperlink{commentscan_8cpp_acc0f0d2f60038c5acff5f6480bc80e45}{Output\+Context} \{ \hyperlink{commentscan_8cpp_acc0f0d2f60038c5acff5f6480bc80e45a7798ee65e8ba26c91dcea378c28347a6}{Output\+Doc}, 
+\hyperlink{commentscan_8cpp_acc0f0d2f60038c5acff5f6480bc80e45ab0588c8b5fb2c84034afe1809365f040}{Output\+Brief}, 
+\hyperlink{commentscan_8cpp_acc0f0d2f60038c5acff5f6480bc80e45a160009fd71296a63860f66209dbcc705}{Output\+X\+Ref}, 
+\hyperlink{commentscan_8cpp_acc0f0d2f60038c5acff5f6480bc80e45ae2467e74f0b442984f8de771f0e8b5d0}{Output\+Inbody}
+ \}
+\item 
+enum \hyperlink{commentscan_8cpp_a83faa6554b2d8d0f095551b84f726c7f}{Guard\+Type} \{ \hyperlink{commentscan_8cpp_a83faa6554b2d8d0f095551b84f726c7fa516af97241cebc813e221d2cff34aee3}{Guard\+\_\+\+If}, 
+\hyperlink{commentscan_8cpp_a83faa6554b2d8d0f095551b84f726c7fa81117f2b12c03ae4546521b5bf7c8ac5}{Guard\+\_\+\+If\+Not}, 
+\hyperlink{commentscan_8cpp_a83faa6554b2d8d0f095551b84f726c7fa05f0ba790ed71e77b4064fb2b8350e9a}{Guard\+\_\+\+Skip}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{commentscan_8cpp_a20dd382859f10ab5e5712f4d27b895f6}{commentscan\+Y\+Yrestart} (F\+I\+L\+E $\ast$input\+\_\+file)
+\item 
+void \hyperlink{commentscan_8cpp_a5f79f48b14e6596b7673177a143d9a40}{commentscan\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} new\+\_\+buffer)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{commentscan_8cpp_a1ab5d156676721095e3fd96c3c13b4d2}{commentscan\+Y\+Y\+\_\+create\+\_\+buffer} (F\+I\+L\+E $\ast$file, int size)
+\item 
+void \hyperlink{commentscan_8cpp_a9471915981cc3489f33083ac2bb385bd}{commentscan\+Y\+Y\+\_\+delete\+\_\+buffer} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b})
+\item 
+void \hyperlink{commentscan_8cpp_ac40c531e83da98d96e4b8e3e240bd688}{commentscan\+Y\+Y\+\_\+flush\+\_\+buffer} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b})
+\item 
+void \hyperlink{commentscan_8cpp_a92bcbd9ea4c79cfd2a47495dfc004f11}{commentscan\+Y\+Ypush\+\_\+buffer\+\_\+state} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} new\+\_\+buffer)
+\item 
+void \hyperlink{commentscan_8cpp_a2d3827b16e03ca293cd584c51208b989}{commentscan\+Y\+Ypop\+\_\+buffer\+\_\+state} (void)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{commentscan_8cpp_a94b337e9f248736bf6eb73a108a19ed6}{commentscan\+Y\+Y\+\_\+scan\+\_\+buffer} (char $\ast$base, \hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} size)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{commentscan_8cpp_a8c41c165b14d040e6fdd879f1ec8a6af}{commentscan\+Y\+Y\+\_\+scan\+\_\+string} (\hyperlink{xmlcode_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst} char $\ast$yy\+\_\+str)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{commentscan_8cpp_aa55d004c37238d1db81b9c45af07856f}{commentscan\+Y\+Y\+\_\+scan\+\_\+bytes} (\hyperlink{xmlcode_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst} char $\ast$bytes, \hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} len)
+\item 
+void $\ast$ \hyperlink{commentscan_8cpp_a535b87095f3c38c9fc9620f1259bdcad}{commentscan\+Y\+Yalloc} (\hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t})
+\item 
+void $\ast$ \hyperlink{commentscan_8cpp_a9e046e2a318e0059b596a5768f36aba2}{commentscan\+Y\+Yrealloc} (void $\ast$, \hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t})
+\item 
+void \hyperlink{commentscan_8cpp_a91c2706cfd696d66b643e2ec0e1affb6}{commentscan\+Y\+Yfree} (void $\ast$)
+\item 
+void \hyperlink{commentscan_8cpp_a70e2168f3559ef190af82a87e6e4f79f}{open\+Group} (\hyperlink{class_entry}{Entry} $\ast$\hyperlink{060__command__switch_8tcl_aff65a51a703804e0ad1adbcfd76c86f8}{e}, const char $\ast$file, int line)
+\item 
+void \hyperlink{commentscan_8cpp_a30db10bfd396dd956bfd1f21606d009f}{close\+Group} (\hyperlink{class_entry}{Entry} $\ast$\hyperlink{060__command__switch_8tcl_aff65a51a703804e0ad1adbcfd76c86f8}{e}, const char $\ast$file, int line, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} found\+Inline=\hyperlink{qglobal_8h_a10e004b6916e78ff4ea8379be80b80cc}{F\+A\+L\+S\+E})
+\item 
+void \hyperlink{commentscan_8cpp_a99b413d09d13ba1181cf5850c25bf235}{init\+Group\+Info} (\hyperlink{class_entry}{Entry} $\ast$\hyperlink{060__command__switch_8tcl_aff65a51a703804e0ad1adbcfd76c86f8}{e})
+\item 
+int \hyperlink{commentscan_8cpp_a30bc910745e6f68658cd6d2d6dae3a0d}{commentscan\+Y\+Ylex\+\_\+destroy} (void)
+\item 
+int \hyperlink{commentscan_8cpp_a42d9df02beeab073a63cd31481a2c530}{commentscan\+Y\+Yget\+\_\+debug} (void)
+\item 
+void \hyperlink{commentscan_8cpp_a980748f4a190dc0300286ac77d2f9204}{commentscan\+Y\+Yset\+\_\+debug} (int debug\+\_\+flag)
+\item 
+\hyperlink{xmlcode_8cpp_a26938d921de835f6183c02e54cf08828}{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E} \hyperlink{commentscan_8cpp_a11e70d6a0b17efe30c4b11a57b9ab2a1}{commentscan\+Y\+Yget\+\_\+extra} (void)
+\item 
+void \hyperlink{commentscan_8cpp_a3acd797b35229a7905456d2ff7bad298}{commentscan\+Y\+Yset\+\_\+extra} (\hyperlink{xmlcode_8cpp_a26938d921de835f6183c02e54cf08828}{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E} user\+\_\+defined)
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{commentscan_8cpp_a10d80e1221b52e933f2eaaf00cc53e2b}{commentscan\+Y\+Yget\+\_\+in} (void)
+\item 
+void \hyperlink{commentscan_8cpp_aef913f255e98af60384da74e89ed6898}{commentscan\+Y\+Yset\+\_\+in} (F\+I\+L\+E $\ast$in\+\_\+str)
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{commentscan_8cpp_ac98283d7678b5eb0a4a1ea7e408363b5}{commentscan\+Y\+Yget\+\_\+out} (void)
+\item 
+void \hyperlink{commentscan_8cpp_a5f9d889f34ca3916f31edbe20c8155e5}{commentscan\+Y\+Yset\+\_\+out} (F\+I\+L\+E $\ast$out\+\_\+str)
+\item 
+\hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} \hyperlink{commentscan_8cpp_af19c8ebbe91fafeb662482d9f8f35ee0}{commentscan\+Y\+Yget\+\_\+leng} (void)
+\item 
+char $\ast$ \hyperlink{commentscan_8cpp_aff47fc0bde6c85a70ff899a066a4a8bf}{commentscan\+Y\+Yget\+\_\+text} (void)
+\item 
+int \hyperlink{commentscan_8cpp_a360b373a0f21c5b80b978b32cfbcfd91}{commentscan\+Y\+Yget\+\_\+lineno} (void)
+\item 
+void \hyperlink{commentscan_8cpp_af0f933cf3c69ed16c5289a99ec0d643c}{commentscan\+Y\+Yset\+\_\+lineno} (int line\+\_\+number)
+\item 
+int \hyperlink{commentscan_8cpp_a0eefe98636a2ca3a5d3441287e5c6e3e}{commentscan\+Y\+Ylex} (void)
+\item 
+\hyperlink{commentscan_8cpp_ad4a65b873df5c05570846b5413b41dfd}{if} (!(yy\+\_\+init))
+\item 
+\hyperlink{commentscan_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{while} (1)
+\item 
+int \hyperlink{commentscan_8cpp_ab4155ffea05dab2dafae68fd88a0517f}{isatty} (int)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{commentscan_8cpp_a78f8f1e253438d0c5257778c6d1f2198}{parse\+Comment\+Block} (\hyperlink{class_parser_interface}{Parser\+Interface} $\ast$parser, \hyperlink{class_entry}{Entry} $\ast$cur\+Entry, const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{vhdldocgen_8cpp_ae8c2c4e6dab650ca0dbc32956838ddd9}{comment}, const \hyperlink{class_q_c_string}{Q\+C\+String} \&file\+Name, int \&line\+Nr, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} is\+Brief, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} is\+Auto\+Brief\+On, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} is\+Inbody, \hyperlink{types_8h_a90e352184df58cd09455fe9996cd4ded}{Protection} \&prot, int \&position, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \&new\+Entry\+Needed)
+\item 
+void \hyperlink{commentscan_8cpp_ab996666576f31f55741b4153c835e887}{group\+Enter\+File} (const char $\ast$file\+Name, int)
+\item 
+void \hyperlink{commentscan_8cpp_a62f38c4c33adedb4f6bcb0ff5655331a}{group\+Leave\+File} (const char $\ast$file\+Name, int line)
+\item 
+void \hyperlink{commentscan_8cpp_a7dfe82e1c95b63fd9462a7dd9630d907}{group\+Enter\+Compound} (const char $\ast$file\+Name, int line, const char $\ast$name)
+\item 
+void \hyperlink{commentscan_8cpp_a086415b2f116c3f754d890f244f177da}{group\+Leave\+Compound} (const char $\ast$, int, const char $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} \hyperlink{commentscan_8cpp_a4220394a5337f0b7a71acb9ee2c29c6f}{commentscan\+Y\+Yleng}
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{commentscan_8cpp_af228a6aab6c862792397fd436005d281}{commentscan\+Y\+Yin} = (F\+I\+L\+E $\ast$) 0
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{commentscan_8cpp_a79a538323085a715c55478396c3bb03f}{commentscan\+Y\+Yout} = (F\+I\+L\+E $\ast$) 0
+\item 
+int \hyperlink{commentscan_8cpp_a205545ab5303b1c6d00fc37a9e8663ad}{commentscan\+Y\+Ylineno} = 1
+\item 
+char $\ast$ \hyperlink{commentscan_8cpp_ab4bacdbe09c8bbecf0176f5be24fabae}{commentscan\+Y\+Ytext}
+\item 
+int \hyperlink{commentscan_8cpp_a464ee155e084f4a76f7b5ca3e964daa7}{commentscan\+Y\+Y\+\_\+flex\+\_\+debug} = 0
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{commentscan_8cpp_ac51a198488bd60f03dd8a00d64831743}{in\+Internal\+Docs} = \hyperlink{qglobal_8h_a10e004b6916e78ff4ea8379be80b80cc}{F\+A\+L\+S\+E}
+\item 
+\hyperlink{commentscan_8cpp_abcefb20c54ce0f92452cfbb9cf657670}{Y\+Y\+\_\+\+D\+E\+C\+L}
+\item 
+register char $\ast$ \hyperlink{commentscan_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\+\_\+cp}
+\item 
+register char $\ast$ \hyperlink{commentscan_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\+\_\+bp}
+\item 
+register int \hyperlink{commentscan_8cpp_a7ffc8c947830757dd87ad202a6823edd}{yy\+\_\+act}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{commentscan_8cpp_a56b056c7dc9a4ed0979becc879c02809}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Anchor\+Label@{Anchor\+Label}}
+\index{Anchor\+Label@{Anchor\+Label}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Anchor\+Label}]{\setlength{\rightskip}{0pt plus 5cm}\#define Anchor\+Label~36}\label{commentscan_8cpp_a56b056c7dc9a4ed0979becc879c02809}
+\hypertarget{commentscan_8cpp_ab766bbbee08d04b67e3fe599d6900873}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!B\+E\+G\+I\+N@{B\+E\+G\+I\+N}}
+\index{B\+E\+G\+I\+N@{B\+E\+G\+I\+N}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{B\+E\+G\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+E\+G\+I\+N~(yy\+\_\+start) = 1 + 2 $\ast$}\label{commentscan_8cpp_ab766bbbee08d04b67e3fe599d6900873}
+\hypertarget{commentscan_8cpp_a2fd95ad7fe250b182b5e8c3b5be5e5a1}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Category\+Doc\+Arg1@{Category\+Doc\+Arg1}}
+\index{Category\+Doc\+Arg1@{Category\+Doc\+Arg1}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Category\+Doc\+Arg1}]{\setlength{\rightskip}{0pt plus 5cm}\#define Category\+Doc\+Arg1~8}\label{commentscan_8cpp_a2fd95ad7fe250b182b5e8c3b5be5e5a1}
+\hypertarget{commentscan_8cpp_aaa6108f805ab463c4a3aa106db3fbbec}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Cite\+Label@{Cite\+Label}}
+\index{Cite\+Label@{Cite\+Label}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Cite\+Label}]{\setlength{\rightskip}{0pt plus 5cm}\#define Cite\+Label~39}\label{commentscan_8cpp_aaa6108f805ab463c4a3aa106db3fbbec}
+\hypertarget{commentscan_8cpp_ad26bc2999ae6d9ed59d33222666e0c4e}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Class\+Doc\+Arg1@{Class\+Doc\+Arg1}}
+\index{Class\+Doc\+Arg1@{Class\+Doc\+Arg1}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Class\+Doc\+Arg1}]{\setlength{\rightskip}{0pt plus 5cm}\#define Class\+Doc\+Arg1~5}\label{commentscan_8cpp_ad26bc2999ae6d9ed59d33222666e0c4e}
+\hypertarget{commentscan_8cpp_aaa6ab7aab5e9fe738059d55bf2745538}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Class\+Doc\+Arg2@{Class\+Doc\+Arg2}}
+\index{Class\+Doc\+Arg2@{Class\+Doc\+Arg2}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Class\+Doc\+Arg2}]{\setlength{\rightskip}{0pt plus 5cm}\#define Class\+Doc\+Arg2~6}\label{commentscan_8cpp_aaa6ab7aab5e9fe738059d55bf2745538}
+\hypertarget{commentscan_8cpp_af82c803a176b58b8c7b2161e0d45f863}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Class\+Doc\+Arg3@{Class\+Doc\+Arg3}}
+\index{Class\+Doc\+Arg3@{Class\+Doc\+Arg3}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Class\+Doc\+Arg3}]{\setlength{\rightskip}{0pt plus 5cm}\#define Class\+Doc\+Arg3~7}\label{commentscan_8cpp_af82c803a176b58b8c7b2161e0d45f863}
+\hypertarget{commentscan_8cpp_a734aadda90260df254153f157981235e}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Comment@{Comment}}
+\index{Comment@{Comment}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Comment}]{\setlength{\rightskip}{0pt plus 5cm}\#define Comment~1}\label{commentscan_8cpp_a734aadda90260df254153f157981235e}
+\hypertarget{commentscan_8cpp_a48b1becd8dec5757baa0224a2377fed4}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Ywrap@{commentscan\+Y\+Ywrap}}
+\index{commentscan\+Y\+Ywrap@{commentscan\+Y\+Ywrap}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Ywrap}]{\setlength{\rightskip}{0pt plus 5cm}\#define commentscan\+Y\+Ywrap(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)~1}\label{commentscan_8cpp_a48b1becd8dec5757baa0224a2377fed4}
+\hypertarget{commentscan_8cpp_a8c99a07bd7ad077f3fa92bb8bed9438e}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Copy\+Doc@{Copy\+Doc}}
+\index{Copy\+Doc@{Copy\+Doc}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Copy\+Doc}]{\setlength{\rightskip}{0pt plus 5cm}\#define Copy\+Doc~40}\label{commentscan_8cpp_a8c99a07bd7ad077f3fa92bb8bed9438e}
+\hypertarget{commentscan_8cpp_aad1dc60a04a1d8cfc8b3ded13601e361}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!E\+C\+H\+O@{E\+C\+H\+O}}
+\index{E\+C\+H\+O@{E\+C\+H\+O}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{E\+C\+H\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+C\+H\+O~fwrite( {\bf commentscan\+Y\+Ytext}, {\bf commentscan\+Y\+Yleng}, 1, {\bf commentscan\+Y\+Yout} )}\label{commentscan_8cpp_aad1dc60a04a1d8cfc8b3ded13601e361}
+\hypertarget{commentscan_8cpp_ae98f80d9e830027e10ddbb1555893f12}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Enum\+Doc\+Arg1@{Enum\+Doc\+Arg1}}
+\index{Enum\+Doc\+Arg1@{Enum\+Doc\+Arg1}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Enum\+Doc\+Arg1}]{\setlength{\rightskip}{0pt plus 5cm}\#define Enum\+Doc\+Arg1~13}\label{commentscan_8cpp_ae98f80d9e830027e10ddbb1555893f12}
+\hypertarget{commentscan_8cpp_adf4b0db227e07782e28ade353a7ba7a1}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}}
+\index{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N~0}\label{commentscan_8cpp_adf4b0db227e07782e28ade353a7ba7a1}
+\hypertarget{commentscan_8cpp_a7f71d7fa2c403eb4b2f38cb9536f3c63}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}}
+\index{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E~1}\label{commentscan_8cpp_a7f71d7fa2c403eb4b2f38cb9536f3c63}
+\hypertarget{commentscan_8cpp_ad1a0b5ebcabffe388e9e9ebb2619c1fb}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}}
+\index{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H~2}\label{commentscan_8cpp_ad1a0b5ebcabffe388e9e9ebb2619c1fb}
+\hypertarget{commentscan_8cpp_a10f1cda986886d145fcc4a5dc5d7a916}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Extends\+Param@{Extends\+Param}}
+\index{Extends\+Param@{Extends\+Param}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Extends\+Param}]{\setlength{\rightskip}{0pt plus 5cm}\#define Extends\+Param~33}\label{commentscan_8cpp_a10f1cda986886d145fcc4a5dc5d7a916}
+\hypertarget{commentscan_8cpp_a7b97c722dcf987b3b8449cc7b77dc4b7}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!File\+Doc\+Arg1@{File\+Doc\+Arg1}}
+\index{File\+Doc\+Arg1@{File\+Doc\+Arg1}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{File\+Doc\+Arg1}]{\setlength{\rightskip}{0pt plus 5cm}\#define File\+Doc\+Arg1~12}\label{commentscan_8cpp_a7b97c722dcf987b3b8449cc7b77dc4b7}
+\hypertarget{commentscan_8cpp_a9465c9986fdda27730c9dff8d16a0887}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!F\+L\+E\+X\+\_\+\+B\+E\+T\+A@{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}}
+\index{F\+L\+E\+X\+\_\+\+B\+E\+T\+A@{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+E\+X\+\_\+\+B\+E\+T\+A}\label{commentscan_8cpp_a9465c9986fdda27730c9dff8d16a0887}
+\hypertarget{commentscan_8cpp_a3c3d1ef92e93b0bc81d7760a73d5c3b6}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R@{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}}
+\index{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R@{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}\label{commentscan_8cpp_a3c3d1ef92e93b0bc81d7760a73d5c3b6}
+\hypertarget{commentscan_8cpp_aec980b5a71bbe6d67931df20f0ebaec4}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!F\+L\+E\+X\+I\+N\+T\+\_\+\+H@{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}}
+\index{F\+L\+E\+X\+I\+N\+T\+\_\+\+H@{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+E\+X\+I\+N\+T\+\_\+\+H}\label{commentscan_8cpp_aec980b5a71bbe6d67931df20f0ebaec4}
+\hypertarget{commentscan_8cpp_aaf9cab5fe76d04223774349104640308}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Fn\+Param@{Fn\+Param}}
+\index{Fn\+Param@{Fn\+Param}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Fn\+Param}]{\setlength{\rightskip}{0pt plus 5cm}\#define Fn\+Param~30}\label{commentscan_8cpp_aaf9cab5fe76d04223774349104640308}
+\hypertarget{commentscan_8cpp_abdbc3aa040a56327a772b695248da6a6}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Format\+Block@{Format\+Block}}
+\index{Format\+Block@{Format\+Block}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Format\+Block}]{\setlength{\rightskip}{0pt plus 5cm}\#define Format\+Block~22}\label{commentscan_8cpp_abdbc3aa040a56327a772b695248da6a6}
+\hypertarget{commentscan_8cpp_a21aaef1423970e0a5b0e99b797c46c11}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Group\+Doc\+Arg1@{Group\+Doc\+Arg1}}
+\index{Group\+Doc\+Arg1@{Group\+Doc\+Arg1}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Group\+Doc\+Arg1}]{\setlength{\rightskip}{0pt plus 5cm}\#define Group\+Doc\+Arg1~16}\label{commentscan_8cpp_a21aaef1423970e0a5b0e99b797c46c11}
+\hypertarget{commentscan_8cpp_a4e99feaa0fa185f8395c457d77faba6e}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Group\+Doc\+Arg2@{Group\+Doc\+Arg2}}
+\index{Group\+Doc\+Arg2@{Group\+Doc\+Arg2}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Group\+Doc\+Arg2}]{\setlength{\rightskip}{0pt plus 5cm}\#define Group\+Doc\+Arg2~17}\label{commentscan_8cpp_a4e99feaa0fa185f8395c457d77faba6e}
+\hypertarget{commentscan_8cpp_a3d285019fe87d60be1a4eb8524bb33b8}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Guard\+Expr@{Guard\+Expr}}
+\index{Guard\+Expr@{Guard\+Expr}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Guard\+Expr}]{\setlength{\rightskip}{0pt plus 5cm}\#define Guard\+Expr~41}\label{commentscan_8cpp_a3d285019fe87d60be1a4eb8524bb33b8}
+\hypertarget{commentscan_8cpp_abe826dd18015731385b3b315ffcab769}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Guard\+Param@{Guard\+Param}}
+\index{Guard\+Param@{Guard\+Param}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Guard\+Param}]{\setlength{\rightskip}{0pt plus 5cm}\#define Guard\+Param~24}\label{commentscan_8cpp_abe826dd18015731385b3b315ffcab769}
+\hypertarget{commentscan_8cpp_a50e40dad2f4d3b994a8046467600fdc6}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Guard\+Param\+End@{Guard\+Param\+End}}
+\index{Guard\+Param\+End@{Guard\+Param\+End}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Guard\+Param\+End}]{\setlength{\rightskip}{0pt plus 5cm}\#define Guard\+Param\+End~25}\label{commentscan_8cpp_a50e40dad2f4d3b994a8046467600fdc6}
+\hypertarget{commentscan_8cpp_a8eea6ff31efb007c2dfac0f91bc32e09}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Html\+Comment@{Html\+Comment}}
+\index{Html\+Comment@{Html\+Comment}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Html\+Comment}]{\setlength{\rightskip}{0pt plus 5cm}\#define Html\+Comment~37}\label{commentscan_8cpp_a8eea6ff31efb007c2dfac0f91bc32e09}
+\hypertarget{commentscan_8cpp_adad60616f0ef86b37777fc90d2531409}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!In\+Group\+Param@{In\+Group\+Param}}
+\index{In\+Group\+Param@{In\+Group\+Param}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{In\+Group\+Param}]{\setlength{\rightskip}{0pt plus 5cm}\#define In\+Group\+Param~29}\label{commentscan_8cpp_adad60616f0ef86b37777fc90d2531409}
+\hypertarget{commentscan_8cpp_ae408464f40de29f19241772911187d59}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Inherit\+Param@{Inherit\+Param}}
+\index{Inherit\+Param@{Inherit\+Param}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Inherit\+Param}]{\setlength{\rightskip}{0pt plus 5cm}\#define Inherit\+Param~32}\label{commentscan_8cpp_ae408464f40de29f19241772911187d59}
+\hypertarget{commentscan_8cpp_aa3d063564f6ab16f6d408b8369d0e9ff}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!I\+N\+I\+T\+I\+A\+L@{I\+N\+I\+T\+I\+A\+L}}
+\index{I\+N\+I\+T\+I\+A\+L@{I\+N\+I\+T\+I\+A\+L}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{I\+N\+I\+T\+I\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+I\+T\+I\+A\+L~0}\label{commentscan_8cpp_aa3d063564f6ab16f6d408b8369d0e9ff}
+\hypertarget{commentscan_8cpp_ac58f2c111cc9989c86db2a7dc4fd84ca}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!I\+N\+T16\+\_\+\+M\+A\+X@{I\+N\+T16\+\_\+\+M\+A\+X}}
+\index{I\+N\+T16\+\_\+\+M\+A\+X@{I\+N\+T16\+\_\+\+M\+A\+X}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{I\+N\+T16\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T16\+\_\+\+M\+A\+X~(32767)}\label{commentscan_8cpp_ac58f2c111cc9989c86db2a7dc4fd84ca}
+\hypertarget{commentscan_8cpp_ad4e9955955b27624963643eac448118a}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!I\+N\+T16\+\_\+\+M\+I\+N@{I\+N\+T16\+\_\+\+M\+I\+N}}
+\index{I\+N\+T16\+\_\+\+M\+I\+N@{I\+N\+T16\+\_\+\+M\+I\+N}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{I\+N\+T16\+\_\+\+M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T16\+\_\+\+M\+I\+N~(-\/32767-\/1)}\label{commentscan_8cpp_ad4e9955955b27624963643eac448118a}
+\hypertarget{commentscan_8cpp_a181807730d4a375f848ba139813ce04f}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!I\+N\+T32\+\_\+\+M\+A\+X@{I\+N\+T32\+\_\+\+M\+A\+X}}
+\index{I\+N\+T32\+\_\+\+M\+A\+X@{I\+N\+T32\+\_\+\+M\+A\+X}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{I\+N\+T32\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T32\+\_\+\+M\+A\+X~(2147483647)}\label{commentscan_8cpp_a181807730d4a375f848ba139813ce04f}
+\hypertarget{commentscan_8cpp_a688eb21a22db27c2b2bd5836943cdcbe}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!I\+N\+T32\+\_\+\+M\+I\+N@{I\+N\+T32\+\_\+\+M\+I\+N}}
+\index{I\+N\+T32\+\_\+\+M\+I\+N@{I\+N\+T32\+\_\+\+M\+I\+N}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{I\+N\+T32\+\_\+\+M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T32\+\_\+\+M\+I\+N~(-\/2147483647-\/1)}\label{commentscan_8cpp_a688eb21a22db27c2b2bd5836943cdcbe}
+\hypertarget{commentscan_8cpp_aaf7f29f45f1a513b4748a4e5014ddf6a}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!I\+N\+T8\+\_\+\+M\+A\+X@{I\+N\+T8\+\_\+\+M\+A\+X}}
+\index{I\+N\+T8\+\_\+\+M\+A\+X@{I\+N\+T8\+\_\+\+M\+A\+X}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{I\+N\+T8\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T8\+\_\+\+M\+A\+X~(127)}\label{commentscan_8cpp_aaf7f29f45f1a513b4748a4e5014ddf6a}
+\hypertarget{commentscan_8cpp_aadcf2a81af243df333b31efa6461ab8e}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!I\+N\+T8\+\_\+\+M\+I\+N@{I\+N\+T8\+\_\+\+M\+I\+N}}
+\index{I\+N\+T8\+\_\+\+M\+I\+N@{I\+N\+T8\+\_\+\+M\+I\+N}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{I\+N\+T8\+\_\+\+M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T8\+\_\+\+M\+I\+N~(-\/128)}\label{commentscan_8cpp_aadcf2a81af243df333b31efa6461ab8e}
+\hypertarget{commentscan_8cpp_a4d3fbe185edb32fc00c05cc8834467a5}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Line\+Param@{Line\+Param}}
+\index{Line\+Param@{Line\+Param}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Line\+Param}]{\setlength{\rightskip}{0pt plus 5cm}\#define Line\+Param~23}\label{commentscan_8cpp_a4d3fbe185edb32fc00c05cc8834467a5}
+\hypertarget{commentscan_8cpp_a3607247c443690320905dc672e724579}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Name\+Param@{Name\+Param}}
+\index{Name\+Param@{Name\+Param}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Name\+Param}]{\setlength{\rightskip}{0pt plus 5cm}\#define Name\+Param~28}\label{commentscan_8cpp_a3607247c443690320905dc672e724579}
+\hypertarget{commentscan_8cpp_ad3d05404cfe3ab80360dc0c99bf47992}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Name\+Space\+Doc\+Arg1@{Name\+Space\+Doc\+Arg1}}
+\index{Name\+Space\+Doc\+Arg1@{Name\+Space\+Doc\+Arg1}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Name\+Space\+Doc\+Arg1}]{\setlength{\rightskip}{0pt plus 5cm}\#define Name\+Space\+Doc\+Arg1~14}\label{commentscan_8cpp_ad3d05404cfe3ab80360dc0c99bf47992}
+\hypertarget{commentscan_8cpp_a55828b283815e56c30df40523ce23d0f}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Overload\+Param@{Overload\+Param}}
+\index{Overload\+Param@{Overload\+Param}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Overload\+Param}]{\setlength{\rightskip}{0pt plus 5cm}\#define Overload\+Param~31}\label{commentscan_8cpp_a55828b283815e56c30df40523ce23d0f}
+\hypertarget{commentscan_8cpp_a149c60e3b928736ea6135672c005f38d}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Package\+Doc\+Arg1@{Package\+Doc\+Arg1}}
+\index{Package\+Doc\+Arg1@{Package\+Doc\+Arg1}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Package\+Doc\+Arg1}]{\setlength{\rightskip}{0pt plus 5cm}\#define Package\+Doc\+Arg1~15}\label{commentscan_8cpp_a149c60e3b928736ea6135672c005f38d}
+\hypertarget{commentscan_8cpp_a4b75d4fb40012575cc5801e6fdfd4c71}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Page\+Doc\+Arg1@{Page\+Doc\+Arg1}}
+\index{Page\+Doc\+Arg1@{Page\+Doc\+Arg1}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Page\+Doc\+Arg1}]{\setlength{\rightskip}{0pt plus 5cm}\#define Page\+Doc\+Arg1~2}\label{commentscan_8cpp_a4b75d4fb40012575cc5801e6fdfd4c71}
+\hypertarget{commentscan_8cpp_a556185f7e3b6e31ba51b904ceb35ce2c}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Page\+Doc\+Arg2@{Page\+Doc\+Arg2}}
+\index{Page\+Doc\+Arg2@{Page\+Doc\+Arg2}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Page\+Doc\+Arg2}]{\setlength{\rightskip}{0pt plus 5cm}\#define Page\+Doc\+Arg2~3}\label{commentscan_8cpp_a556185f7e3b6e31ba51b904ceb35ce2c}
+\hypertarget{commentscan_8cpp_a9df360e2561bd0b757d12a5804ba3afe}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Read\+Formula\+Long@{Read\+Formula\+Long}}
+\index{Read\+Formula\+Long@{Read\+Formula\+Long}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Read\+Formula\+Long}]{\setlength{\rightskip}{0pt plus 5cm}\#define Read\+Formula\+Long~35}\label{commentscan_8cpp_a9df360e2561bd0b757d12a5804ba3afe}
+\hypertarget{commentscan_8cpp_a943f10a904784ce2f1d5b45ac8e52284}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Read\+Formula\+Short@{Read\+Formula\+Short}}
+\index{Read\+Formula\+Short@{Read\+Formula\+Short}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Read\+Formula\+Short}]{\setlength{\rightskip}{0pt plus 5cm}\#define Read\+Formula\+Short~34}\label{commentscan_8cpp_a943f10a904784ce2f1d5b45ac8e52284}
+\hypertarget{commentscan_8cpp_a835f10dd1ab4bf9a80c4cd80ee6e3058}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!R\+E\+J\+E\+C\+T@{R\+E\+J\+E\+C\+T}}
+\index{R\+E\+J\+E\+C\+T@{R\+E\+J\+E\+C\+T}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{R\+E\+J\+E\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+J\+E\+C\+T}\label{commentscan_8cpp_a835f10dd1ab4bf9a80c4cd80ee6e3058}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\{ \(\backslash\)
+*\hyperlink{commentscan_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = (yy\_hold\_char); \textcolor{comment}{/* undo effects of setting up commentscanYYtext */} 
+      \hyperlink{commentscan_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{\(\backslash\)}
+\hyperlink{commentscan_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = (yy\_full\_match); \textcolor{comment}{/* restore poss. backed-over text */} \(\backslash\)
+(yy\_lp) = (yy\_full\_lp); \textcolor{comment}{/* restore orig. accepting pos. */} \(\backslash\)
+(yy\_state\_ptr) = (yy\_full\_state); \textcolor{comment}{/* restore orig. state */} \hyperlink{constexp_8cpp_a86a21c2101611f87781b40b111e65aac}{\(\backslash\)}
+\hyperlink{constexp_8cpp_a86a21c2101611f87781b40b111e65aac}{yy\_current\_state} = *(yy\_state\_ptr); \textcolor{comment}{/* restore curr. state */} \(\backslash\)
+++(yy\_lp); \(\backslash\)
+goto find\_rule; \(\backslash\)
+\}
+\end{DoxyCode}
+\hypertarget{commentscan_8cpp_a7d092b48520bd401a16f678f44960750}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Relates\+Param1@{Relates\+Param1}}
+\index{Relates\+Param1@{Relates\+Param1}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Relates\+Param1}]{\setlength{\rightskip}{0pt plus 5cm}\#define Relates\+Param1~4}\label{commentscan_8cpp_a7d092b48520bd401a16f678f44960750}
+\hypertarget{commentscan_8cpp_a5e5bb13f9c930225a8a1e398f42d06ee}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Section\+Label@{Section\+Label}}
+\index{Section\+Label@{Section\+Label}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Section\+Label}]{\setlength{\rightskip}{0pt plus 5cm}\#define Section\+Label~18}\label{commentscan_8cpp_a5e5bb13f9c930225a8a1e398f42d06ee}
+\hypertarget{commentscan_8cpp_adde762d13f1deade7d86d069d1e2154f}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Section\+Title@{Section\+Title}}
+\index{Section\+Title@{Section\+Title}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Section\+Title}]{\setlength{\rightskip}{0pt plus 5cm}\#define Section\+Title~19}\label{commentscan_8cpp_adde762d13f1deade7d86d069d1e2154f}
+\hypertarget{commentscan_8cpp_afe1cd769c8dfabc884e430ff380f21a5}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Skip\+Guarded\+Section@{Skip\+Guarded\+Section}}
+\index{Skip\+Guarded\+Section@{Skip\+Guarded\+Section}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Skip\+Guarded\+Section}]{\setlength{\rightskip}{0pt plus 5cm}\#define Skip\+Guarded\+Section~26}\label{commentscan_8cpp_afe1cd769c8dfabc884e430ff380f21a5}
+\hypertarget{commentscan_8cpp_a88833f04084cdb2655a94c13ceb9c428}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Skip\+Internal@{Skip\+Internal}}
+\index{Skip\+Internal@{Skip\+Internal}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Skip\+Internal}]{\setlength{\rightskip}{0pt plus 5cm}\#define Skip\+Internal~27}\label{commentscan_8cpp_a88833f04084cdb2655a94c13ceb9c428}
+\hypertarget{commentscan_8cpp_a973694076279c935fe23b9e25bd6600d}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Skip\+Lang@{Skip\+Lang}}
+\index{Skip\+Lang@{Skip\+Lang}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Skip\+Lang}]{\setlength{\rightskip}{0pt plus 5cm}\#define Skip\+Lang~38}\label{commentscan_8cpp_a973694076279c935fe23b9e25bd6600d}
+\hypertarget{commentscan_8cpp_ad4657774a9567d8d103a17ac26273e1a}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Subpage\+Label@{Subpage\+Label}}
+\index{Subpage\+Label@{Subpage\+Label}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Subpage\+Label}]{\setlength{\rightskip}{0pt plus 5cm}\#define Subpage\+Label~20}\label{commentscan_8cpp_ad4657774a9567d8d103a17ac26273e1a}
+\hypertarget{commentscan_8cpp_a28e46f03d9809e805697fafec472204c}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Subpage\+Title@{Subpage\+Title}}
+\index{Subpage\+Title@{Subpage\+Title}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Subpage\+Title}]{\setlength{\rightskip}{0pt plus 5cm}\#define Subpage\+Title~21}\label{commentscan_8cpp_a28e46f03d9809e805697fafec472204c}
+\hypertarget{commentscan_8cpp_a3ea490c9b3617d4479bd80ef93cd5602}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!U\+I\+N\+T16\+\_\+\+M\+A\+X@{U\+I\+N\+T16\+\_\+\+M\+A\+X}}
+\index{U\+I\+N\+T16\+\_\+\+M\+A\+X@{U\+I\+N\+T16\+\_\+\+M\+A\+X}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{U\+I\+N\+T16\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+I\+N\+T16\+\_\+\+M\+A\+X~(65535\+U)}\label{commentscan_8cpp_a3ea490c9b3617d4479bd80ef93cd5602}
+\hypertarget{commentscan_8cpp_ab5eb23180f7cc12b7d6c04a8ec067fdd}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!U\+I\+N\+T32\+\_\+\+M\+A\+X@{U\+I\+N\+T32\+\_\+\+M\+A\+X}}
+\index{U\+I\+N\+T32\+\_\+\+M\+A\+X@{U\+I\+N\+T32\+\_\+\+M\+A\+X}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{U\+I\+N\+T32\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+I\+N\+T32\+\_\+\+M\+A\+X~(4294967295\+U)}\label{commentscan_8cpp_ab5eb23180f7cc12b7d6c04a8ec067fdd}
+\hypertarget{commentscan_8cpp_aeb4e270a084ee26fe73e799861bd0252}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!U\+I\+N\+T8\+\_\+\+M\+A\+X@{U\+I\+N\+T8\+\_\+\+M\+A\+X}}
+\index{U\+I\+N\+T8\+\_\+\+M\+A\+X@{U\+I\+N\+T8\+\_\+\+M\+A\+X}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{U\+I\+N\+T8\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+I\+N\+T8\+\_\+\+M\+A\+X~(255\+U)}\label{commentscan_8cpp_aeb4e270a084ee26fe73e799861bd0252}
+\hypertarget{commentscan_8cpp_a448a4e9041a09588332733c6846c770c}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!unput@{unput}}
+\index{unput@{unput}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{unput}]{\setlength{\rightskip}{0pt plus 5cm}\#define unput(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf c}}
+\end{DoxyParamCaption}
+)~yyunput( {\bf c}, ({\bf yytext\+\_\+ptr})  )}\label{commentscan_8cpp_a448a4e9041a09588332733c6846c770c}
+\hypertarget{commentscan_8cpp_ad87649a7ca7839a94202f6abaffd34ff}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!X\+Ref\+Item\+Param1@{X\+Ref\+Item\+Param1}}
+\index{X\+Ref\+Item\+Param1@{X\+Ref\+Item\+Param1}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{X\+Ref\+Item\+Param1}]{\setlength{\rightskip}{0pt plus 5cm}\#define X\+Ref\+Item\+Param1~9}\label{commentscan_8cpp_ad87649a7ca7839a94202f6abaffd34ff}
+\hypertarget{commentscan_8cpp_a6047c6026dab95a568d7c935455d9d42}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!X\+Ref\+Item\+Param2@{X\+Ref\+Item\+Param2}}
+\index{X\+Ref\+Item\+Param2@{X\+Ref\+Item\+Param2}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{X\+Ref\+Item\+Param2}]{\setlength{\rightskip}{0pt plus 5cm}\#define X\+Ref\+Item\+Param2~10}\label{commentscan_8cpp_a6047c6026dab95a568d7c935455d9d42}
+\hypertarget{commentscan_8cpp_a6a5acbff22abc91b30344d3f8b818c79}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!X\+Ref\+Item\+Param3@{X\+Ref\+Item\+Param3}}
+\index{X\+Ref\+Item\+Param3@{X\+Ref\+Item\+Param3}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{X\+Ref\+Item\+Param3}]{\setlength{\rightskip}{0pt plus 5cm}\#define X\+Ref\+Item\+Param3~11}\label{commentscan_8cpp_a6a5acbff22abc91b30344d3f8b818c79}
+\hypertarget{commentscan_8cpp_a71ca89b3656acd0552f14949a571560b}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L@{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}}
+\index{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L@{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~({\bf Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}-\/$>$yy\+\_\+at\+\_\+bol)}\label{commentscan_8cpp_a71ca89b3656acd0552f14949a571560b}
+\hypertarget{commentscan_8cpp_a3cc40a460ad7df816678bcc05241e84c}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+B\+R\+E\+A\+K@{Y\+Y\+\_\+\+B\+R\+E\+A\+K}}
+\index{Y\+Y\+\_\+\+B\+R\+E\+A\+K@{Y\+Y\+\_\+\+B\+R\+E\+A\+K}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+R\+E\+A\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+R\+E\+A\+K~break;}\label{commentscan_8cpp_a3cc40a460ad7df816678bcc05241e84c}
+\hypertarget{commentscan_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E~262144}\label{commentscan_8cpp_ae7e51116e747d3390e7a6cfc6532834c}
+\hypertarget{commentscan_8cpp_ad689d97c15e807a6116ace7a420cea57}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G~2}\label{commentscan_8cpp_ad689d97c15e807a6116ace7a420cea57}
+\hypertarget{commentscan_8cpp_a53579db42834b88199458993912c646d}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W~0}\label{commentscan_8cpp_a53579db42834b88199458993912c646d}
+\hypertarget{commentscan_8cpp_a609d19f40900ecc2a5f812d9388c21fb}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L~1}\label{commentscan_8cpp_a609d19f40900ecc2a5f812d9388c21fb}
+\hypertarget{commentscan_8cpp_ac86ea8173dfcfc5c989d3295a77e2f95}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yy\+\_\+create\+\_\+buffer@{yy\+\_\+create\+\_\+buffer}}
+\index{yy\+\_\+create\+\_\+buffer@{yy\+\_\+create\+\_\+buffer}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yy\+\_\+create\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+create\+\_\+buffer~{\bf commentscan\+Y\+Y\+\_\+create\+\_\+buffer}}\label{commentscan_8cpp_ac86ea8173dfcfc5c989d3295a77e2f95}
+\hypertarget{commentscan_8cpp_aa093d500a6330d06d8e4760c494fac33}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}}
+\index{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}\label{commentscan_8cpp_aa093d500a6330d06d8e4760c494fac33}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+( (yy\_buffer\_stack) \(\backslash\)
+                          ? (yy\_buffer\_stack)[(yy\_buffer\_stack\_top)] \(\backslash\)
+                          : NULL)
+\end{DoxyCode}
+\hypertarget{commentscan_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}}
+\index{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E~(yy\+\_\+buffer\+\_\+stack)\mbox{[}(yy\+\_\+buffer\+\_\+stack\+\_\+top)\mbox{]}}\label{commentscan_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}
+\hypertarget{commentscan_8cpp_ae5b01ac2fa5a6ad5fb97559638abe686}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+D\+E\+C\+L@{Y\+Y\+\_\+\+D\+E\+C\+L}}
+\index{Y\+Y\+\_\+\+D\+E\+C\+L@{Y\+Y\+\_\+\+D\+E\+C\+L}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+D\+E\+C\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+D\+E\+C\+L~int {\bf commentscan\+Y\+Ylex} (void)}\label{commentscan_8cpp_ae5b01ac2fa5a6ad5fb97559638abe686}
+\hypertarget{commentscan_8cpp_a7682c8d9cec0859408d2421fbe4a5570}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S@{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}}
+\index{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S@{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S~1}\label{commentscan_8cpp_a7682c8d9cec0859408d2421fbe4a5570}
+\hypertarget{commentscan_8cpp_ad1868c6b38b45af25a4a0f449912a808}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yy\+\_\+delete\+\_\+buffer@{yy\+\_\+delete\+\_\+buffer}}
+\index{yy\+\_\+delete\+\_\+buffer@{yy\+\_\+delete\+\_\+buffer}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yy\+\_\+delete\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+delete\+\_\+buffer~{\bf commentscan\+Y\+Y\+\_\+delete\+\_\+buffer}}\label{commentscan_8cpp_ad1868c6b38b45af25a4a0f449912a808}
+\hypertarget{commentscan_8cpp_acc3486d769af4e4b2820346a0093cc79}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}\label{commentscan_8cpp_acc3486d769af4e4b2820346a0093cc79}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+(\hyperlink{commentscan_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\_ptr}) = \hyperlink{commentscan_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}; \hyperlink{commentscan_8cpp_a4220394a5337f0b7a71acb9ee2c29c6f}{\(\backslash\)}
+\hyperlink{commentscan_8cpp_a4220394a5337f0b7a71acb9ee2c29c6f}{    commentscanYYleng} = (\hyperlink{commentscan_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\_size\_t}) (\hyperlink{commentscan_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} - 
+      \hyperlink{commentscan_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}); \(\backslash\)
+    (yy\_hold\_char) = *\hyperlink{commentscan_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp}; \(\backslash\)
+    *\hyperlink{commentscan_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = \textcolor{charliteral}{'\(\backslash\)0'}; \(\backslash\)
+    (yy\_c\_buf\_p) = \hyperlink{commentscan_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp};
+\end{DoxyCode}
+\hypertarget{commentscan_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}}
+\index{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R~206}\label{commentscan_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}
+\hypertarget{commentscan_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}}
+\index{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R~0}\label{commentscan_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}
+\hypertarget{commentscan_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E@{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}}
+\index{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E@{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E~2}\label{commentscan_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}
+\hypertarget{commentscan_8cpp_a26938d921de835f6183c02e54cf08828}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E@{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}}
+\index{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E@{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E~void $\ast$}\label{commentscan_8cpp_a26938d921de835f6183c02e54cf08828}
+\hypertarget{commentscan_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R@{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}}
+\index{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R@{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf msg}}
+\end{DoxyParamCaption}
+)~yy\+\_\+fatal\+\_\+error( {\bf msg} )}\label{commentscan_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}
+\hypertarget{commentscan_8cpp_a301f4439c9b191c80db45f5b1a8c7269}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yy\+\_\+flex\+\_\+debug@{yy\+\_\+flex\+\_\+debug}}
+\index{yy\+\_\+flex\+\_\+debug@{yy\+\_\+flex\+\_\+debug}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yy\+\_\+flex\+\_\+debug}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+flex\+\_\+debug~{\bf commentscan\+Y\+Y\+\_\+flex\+\_\+debug}}\label{commentscan_8cpp_a301f4439c9b191c80db45f5b1a8c7269}
+\hypertarget{commentscan_8cpp_a243ca1d30872935faf05ea5118ed6fdc}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N~2}\label{commentscan_8cpp_a243ca1d30872935faf05ea5118ed6fdc}
+\hypertarget{commentscan_8cpp_a90f9d458829400869e47efb68a865677}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N~5}\label{commentscan_8cpp_a90f9d458829400869e47efb68a865677}
+\hypertarget{commentscan_8cpp_ac676bd06869180ea493e9b6d7c078dbb}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N~35}\label{commentscan_8cpp_ac676bd06869180ea493e9b6d7c078dbb}
+\hypertarget{commentscan_8cpp_ab01a4c7245136f22a63acac7c0ceb343}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yy\+\_\+flush\+\_\+buffer@{yy\+\_\+flush\+\_\+buffer}}
+\index{yy\+\_\+flush\+\_\+buffer@{yy\+\_\+flush\+\_\+buffer}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yy\+\_\+flush\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+flush\+\_\+buffer~{\bf commentscan\+Y\+Y\+\_\+flush\+\_\+buffer}}\label{commentscan_8cpp_ab01a4c7245136f22a63acac7c0ceb343}
+\hypertarget{commentscan_8cpp_ac5d478d90ea9a2ecd43d579067a2e89d}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}}
+\index{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R~{\bf commentscan\+Y\+Y\+\_\+flush\+\_\+buffer}({\bf Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R} )}\label{commentscan_8cpp_ac5d478d90ea9a2ecd43d579067a2e89d}
+\hypertarget{commentscan_8cpp_aa14efad9f9c24106a3e3398a4f6621c2}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yy\+\_\+init\+\_\+buffer@{yy\+\_\+init\+\_\+buffer}}
+\index{yy\+\_\+init\+\_\+buffer@{yy\+\_\+init\+\_\+buffer}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yy\+\_\+init\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+init\+\_\+buffer~commentscan\+Y\+Y\+\_\+init\+\_\+buffer}\label{commentscan_8cpp_aa14efad9f9c24106a3e3398a4f6621c2}
+\hypertarget{commentscan_8cpp_aacfdca45fa4beb8b06172525a53c424a}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+I\+N\+P\+U\+T}}
+\index{Y\+Y\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+I\+N\+P\+U\+T}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+I\+N\+P\+U\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+I\+N\+P\+U\+T(
+\begin{DoxyParamCaption}
+\item[{}]{buf, }
+\item[{}]{result, }
+\item[{}]{max\+\_\+size}
+\end{DoxyParamCaption}
+)~result=yyread(buf,max\+\_\+size);}\label{commentscan_8cpp_aacfdca45fa4beb8b06172525a53c424a}
+\hypertarget{commentscan_8cpp_a1ae16e642a197fa4948998525813c6f5}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D@{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}}
+\index{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D@{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D~short int}\label{commentscan_8cpp_a1ae16e642a197fa4948998525813c6f5}
+\hypertarget{commentscan_8cpp_a12e5f3a76911433480bca7f4edba6119}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O@{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}}
+\index{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O@{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a12e5f3a76911433480bca7f4edba6119}
+\hypertarget{commentscan_8cpp_a039fc377fd4784139d8706ba0ae229fa}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yy\+\_\+load\+\_\+buffer\+\_\+state@{yy\+\_\+load\+\_\+buffer\+\_\+state}}
+\index{yy\+\_\+load\+\_\+buffer\+\_\+state@{yy\+\_\+load\+\_\+buffer\+\_\+state}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yy\+\_\+load\+\_\+buffer\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+load\+\_\+buffer\+\_\+state~commentscan\+Y\+Y\+\_\+load\+\_\+buffer\+\_\+state}\label{commentscan_8cpp_a039fc377fd4784139d8706ba0ae229fa}
+\hypertarget{commentscan_8cpp_a68792d73820bc46a71d3d4e613f0b977}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J@{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}}
+\index{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J@{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J~0}\label{commentscan_8cpp_a68792d73820bc46a71d3d4e613f0b977}
+\hypertarget{commentscan_8cpp_a15b85de192a189d5a31cdd518e001e6e}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E@{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}}
+\index{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E@{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E~1}\label{commentscan_8cpp_a15b85de192a189d5a31cdd518e001e6e}
+\hypertarget{commentscan_8cpp_ab7eb911e18655f2f78e63afe5a8a4a12}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yy\+\_\+new\+\_\+buffer@{yy\+\_\+new\+\_\+buffer}}
+\index{yy\+\_\+new\+\_\+buffer@{yy\+\_\+new\+\_\+buffer}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yy\+\_\+new\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+new\+\_\+buffer~{\bf commentscan\+Y\+Y\+\_\+create\+\_\+buffer}}\label{commentscan_8cpp_ab7eb911e18655f2f78e63afe5a8a4a12}
+\hypertarget{commentscan_8cpp_a0406739e64fb5750cf995d2ae68ce69d}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E@{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}}
+\index{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E@{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E~{\bf commentscan\+Y\+Yrestart}({\bf commentscan\+Y\+Yin}  )}\label{commentscan_8cpp_a0406739e64fb5750cf995d2ae68ce69d}
+\hypertarget{commentscan_8cpp_a85523a0c7d95c059d251b4e9829947aa}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}}
+\index{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T~1}\label{commentscan_8cpp_a85523a0c7d95c059d251b4e9829947aa}
+\hypertarget{commentscan_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+N\+U\+L\+L@{Y\+Y\+\_\+\+N\+U\+L\+L}}
+\index{Y\+Y\+\_\+\+N\+U\+L\+L@{Y\+Y\+\_\+\+N\+U\+L\+L}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+U\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+U\+L\+L~0}\label{commentscan_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}
+\hypertarget{commentscan_8cpp_ae558785bb896e090901c2b905f6790c6}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S@{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}}
+\index{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S@{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S~205}\label{commentscan_8cpp_ae558785bb896e090901c2b905f6790c6}
+\hypertarget{commentscan_8cpp_aab1491ceccb1c95c14320b2903773a1c}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}}
+\index{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E~262144}\label{commentscan_8cpp_aab1491ceccb1c95c14320b2903773a1c}
+\hypertarget{commentscan_8cpp_a56858d18c7eda4f53664496ef566f651}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T@{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T@{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}\label{commentscan_8cpp_a56858d18c7eda4f53664496ef566f651}
+\hypertarget{commentscan_8cpp_a690504b662e4281515bf12722df178ba}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P@{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}}
+\index{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P@{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}\label{commentscan_8cpp_a690504b662e4281515bf12722df178ba}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} ( \hyperlink{commentscan_8cpp_a4220394a5337f0b7a71acb9ee2c29c6f}{commentscanYYleng} > 0 ) \hyperlink{commentscan_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{commentscan_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{        YY\_CURRENT\_BUFFER\_LVALUE}->yy\_at\_bol = \(\backslash\)
+                (\hyperlink{commentscan_8cpp_ab4bacdbe09c8bbecf0176f5be24fabae}{commentscanYYtext}[\hyperlink{commentscan_8cpp_a4220394a5337f0b7a71acb9ee2c29c6f}{commentscanYYleng} - 1] == \textcolor{charliteral}{'\(\backslash\)n'}); 
+      \hyperlink{commentscan_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{\(\backslash\)}
+\hyperlink{commentscan_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{    YY\_USER\_ACTION}
+\end{DoxyCode}
+\hypertarget{commentscan_8cpp_af1185350b7a92cf8aa5324c68850c8a6}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I@{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}}
+\index{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I@{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf c}}
+\end{DoxyParamCaption}
+)~((unsigned int) (unsigned char) {\bf c})}\label{commentscan_8cpp_af1185350b7a92cf8aa5324c68850c8a6}
+\hypertarget{commentscan_8cpp_a12e30d13a76a94e78010db9996d39c50}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yy\+\_\+set\+\_\+bol@{yy\+\_\+set\+\_\+bol}}
+\index{yy\+\_\+set\+\_\+bol@{yy\+\_\+set\+\_\+bol}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yy\+\_\+set\+\_\+bol}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+set\+\_\+bol(
+\begin{DoxyParamCaption}
+\item[{}]{at\+\_\+bol}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a12e30d13a76a94e78010db9996d39c50}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\{ \hyperlink{commentscan_8cpp_ad4a65b873df5c05570846b5413b41dfd}{\(\backslash\)}
+\hyperlink{commentscan_8cpp_ad4a65b873df5c05570846b5413b41dfd}{    if} ( ! \hyperlink{commentscan_8cpp_aa093d500a6330d06d8e4760c494fac33}{YY\_CURRENT\_BUFFER} )\{\(\backslash\)
+        commentscanYYensure\_buffer\_stack (); \hyperlink{commentscan_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{commentscan_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{        YY\_CURRENT\_BUFFER\_LVALUE} =    \(\backslash\)
+            commentscanYY\_create\_buffer(\hyperlink{commentscan_8cpp_af228a6aab6c862792397fd436005d281}{commentscanYYin},
+      \hyperlink{commentscan_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{YY\_BUF\_SIZE} ); \(\backslash\)
+    \} \hyperlink{commentscan_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{commentscan_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{    YY\_CURRENT\_BUFFER\_LVALUE}->yy\_at\_bol = at\_bol; \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{commentscan_8cpp_ac56eb96366c08862bf0efe5d83d1fc4c}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yy\+\_\+set\+\_\+interactive@{yy\+\_\+set\+\_\+interactive}}
+\index{yy\+\_\+set\+\_\+interactive@{yy\+\_\+set\+\_\+interactive}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yy\+\_\+set\+\_\+interactive}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+set\+\_\+interactive(
+\begin{DoxyParamCaption}
+\item[{}]{is\+\_\+interactive}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_ac56eb96366c08862bf0efe5d83d1fc4c}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\{ \hyperlink{commentscan_8cpp_ad4a65b873df5c05570846b5413b41dfd}{\(\backslash\)}
+\hyperlink{commentscan_8cpp_ad4a65b873df5c05570846b5413b41dfd}{    if} ( ! \hyperlink{commentscan_8cpp_aa093d500a6330d06d8e4760c494fac33}{YY\_CURRENT\_BUFFER} )\{ \(\backslash\)
+        commentscanYYensure\_buffer\_stack (); \hyperlink{commentscan_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{commentscan_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{        YY\_CURRENT\_BUFFER\_LVALUE} =    \(\backslash\)
+            commentscanYY\_create\_buffer(\hyperlink{commentscan_8cpp_af228a6aab6c862792397fd436005d281}{commentscanYYin},
+      \hyperlink{commentscan_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{YY\_BUF\_SIZE} ); \(\backslash\)
+    \} \hyperlink{commentscan_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{commentscan_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{    YY\_CURRENT\_BUFFER\_LVALUE}->yy\_is\_interactive = is\_interactive; \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{commentscan_8cpp_ae1ef5933028cbc587d31328e53d11a99}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P@{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}}
+\index{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P@{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}\label{commentscan_8cpp_ae1ef5933028cbc587d31328e53d11a99}
+\hypertarget{commentscan_8cpp_a8e14785f9eab7a997d659b25af9584c5}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+R\+T@{Y\+Y\+\_\+\+S\+T\+A\+R\+T}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+R\+T@{Y\+Y\+\_\+\+S\+T\+A\+R\+T}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+R\+T~(((yy\+\_\+start) -\/ 1) / 2)}\label{commentscan_8cpp_a8e14785f9eab7a997d659b25af9584c5}
+\hypertarget{commentscan_8cpp_a227e75c43b9e0cd41529974230be7e75}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R@{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R@{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R~25}\label{commentscan_8cpp_a227e75c43b9e0cd41529974230be7e75}
+\hypertarget{commentscan_8cpp_ac2f8b6fccdc516d96b02ac09a4dc01bd}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E~(({\bf Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E} + 2) $\ast$ sizeof({\bf yy\+\_\+state\+\_\+type}))}\label{commentscan_8cpp_ac2f8b6fccdc516d96b02ac09a4dc01bd}
+\hypertarget{commentscan_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F(
+\begin{DoxyParamCaption}
+\item[{}]{state}
+\end{DoxyParamCaption}
+)~({\bf Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R} + state + 1)}\label{commentscan_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}
+\hypertarget{commentscan_8cpp_a8aaa9e1fa7f13d6954d045ef973a9c84}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}\label{commentscan_8cpp_a8aaa9e1fa7f13d6954d045ef973a9c84}
+\hypertarget{commentscan_8cpp_a968d5b9e7e06a38bfca977b343d47d5c}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yy\+\_\+switch\+\_\+to\+\_\+buffer@{yy\+\_\+switch\+\_\+to\+\_\+buffer}}
+\index{yy\+\_\+switch\+\_\+to\+\_\+buffer@{yy\+\_\+switch\+\_\+to\+\_\+buffer}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yy\+\_\+switch\+\_\+to\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+switch\+\_\+to\+\_\+buffer~{\bf commentscan\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}}\label{commentscan_8cpp_a968d5b9e7e06a38bfca977b343d47d5c}
+\hypertarget{commentscan_8cpp_a7fce78ee876950ded902364014c917e6}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}}
+\index{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K~0x4000}\label{commentscan_8cpp_a7fce78ee876950ded902364014c917e6}
+\hypertarget{commentscan_8cpp_a76482842cdcaadf1dbdaf43df38765a2}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}}
+\index{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K~0x2000}\label{commentscan_8cpp_a76482842cdcaadf1dbdaf43df38765a2}
+\hypertarget{commentscan_8cpp_aa79d63ed3ff8d2249baf1732a73089f5}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}\label{commentscan_8cpp_aa79d63ed3ff8d2249baf1732a73089f5}
+\hypertarget{commentscan_8cpp_ae0f2b0b5f04b2338367826b5670774f9}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}}
+\index{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}\label{commentscan_8cpp_ae0f2b0b5f04b2338367826b5670774f9}
+\hypertarget{commentscan_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}\label{commentscan_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}
+\hypertarget{commentscan_8cpp_a803397ab738ee8630166680646a2d913}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yyalloc@{yyalloc}}
+\index{yyalloc@{yyalloc}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yyalloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf yyalloc}~{\bf commentscan\+Y\+Yalloc}}\label{commentscan_8cpp_a803397ab738ee8630166680646a2d913}
+\hypertarget{commentscan_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yyconst@{yyconst}}
+\index{yyconst@{yyconst}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yyconst}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyconst}\label{commentscan_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}
+\hypertarget{commentscan_8cpp_a4fa4368d47620ea80150b516e8884f6b}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yyfree@{yyfree}}
+\index{yyfree@{yyfree}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yyfree}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyfree~{\bf commentscan\+Y\+Yfree}}\label{commentscan_8cpp_a4fa4368d47620ea80150b516e8884f6b}
+\hypertarget{commentscan_8cpp_aa789f4617e33fb99594cb04a3688a0c1}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yyin@{yyin}}
+\index{yyin@{yyin}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yyin}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyin~{\bf commentscan\+Y\+Yin}}\label{commentscan_8cpp_aa789f4617e33fb99594cb04a3688a0c1}
+\hypertarget{commentscan_8cpp_afa07a629486cb790560bb95713ec7794}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yyleng@{yyleng}}
+\index{yyleng@{yyleng}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yyleng}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyleng~{\bf commentscan\+Y\+Yleng}}\label{commentscan_8cpp_afa07a629486cb790560bb95713ec7794}
+\hypertarget{commentscan_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yyless@{yyless}}
+\index{yyless@{yyless}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yyless}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyless(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \(\backslash\)
+        \{ \(\backslash\)
+        \textcolor{comment}{/* Undo effects of setting up commentscanYYtext. */} \(\backslash\)
+        int yyless\_macro\_arg = (\hyperlink{058__bracket__recursion_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n}); \(\backslash\)
+        YY\_LESS\_LINENO(yyless\_macro\_arg);\(\backslash\)
+        *\hyperlink{commentscan_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = (yy\_hold\_char); \hyperlink{commentscan_8cpp_a56858d18c7eda4f53664496ef566f651}{\(\backslash\)}
+\hyperlink{commentscan_8cpp_a56858d18c7eda4f53664496ef566f651}{        YY\_RESTORE\_YY\_MORE\_OFFSET} \(\backslash\)
+        (yy\_c\_buf\_p) = \hyperlink{commentscan_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = \hyperlink{commentscan_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp} + yyless\_macro\_arg - \hyperlink{commentscan_8cpp_a68792d73820bc46a71d3d4e613f0b977}{YY\_MORE\_ADJ}; 
+      \hyperlink{commentscan_8cpp_acc3486d769af4e4b2820346a0093cc79}{\(\backslash\)}
+\hyperlink{commentscan_8cpp_acc3486d769af4e4b2820346a0093cc79}{        YY\_DO\_BEFORE\_ACTION}; \textcolor{comment}{/* set up commentscanYYtext again */} \(\backslash\)
+        \} \hyperlink{commentscan_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{\(\backslash\)}
+\hyperlink{commentscan_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{    while} ( 0 )
+\end{DoxyCode}
+\hypertarget{commentscan_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yyless@{yyless}}
+\index{yyless@{yyless}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yyless}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyless(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \(\backslash\)
+        \{ \(\backslash\)
+        \textcolor{comment}{/* Undo effects of setting up commentscanYYtext. */} \(\backslash\)
+        int yyless\_macro\_arg = (\hyperlink{058__bracket__recursion_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n}); \(\backslash\)
+        YY\_LESS\_LINENO(yyless\_macro\_arg);\hyperlink{commentscan_8cpp_ab4bacdbe09c8bbecf0176f5be24fabae}{\(\backslash\)}
+\hyperlink{commentscan_8cpp_ab4bacdbe09c8bbecf0176f5be24fabae}{        commentscanYYtext}[\hyperlink{commentscan_8cpp_a4220394a5337f0b7a71acb9ee2c29c6f}{commentscanYYleng}] = (yy\_hold\_char); \(\backslash\)
+        (yy\_c\_buf\_p) = \hyperlink{commentscan_8cpp_ab4bacdbe09c8bbecf0176f5be24fabae}{commentscanYYtext} + yyless\_macro\_arg; \(\backslash\)
+        (yy\_hold\_char) = *(yy\_c\_buf\_p); \(\backslash\)
+        *(yy\_c\_buf\_p) = \textcolor{charliteral}{'\(\backslash\)0'}; \hyperlink{commentscan_8cpp_a4220394a5337f0b7a71acb9ee2c29c6f}{\(\backslash\)}
+\hyperlink{commentscan_8cpp_a4220394a5337f0b7a71acb9ee2c29c6f}{        commentscanYYleng} = yyless\_macro\_arg; \(\backslash\)
+        \} \hyperlink{commentscan_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{\(\backslash\)}
+\hyperlink{commentscan_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{    while} ( 0 )
+\end{DoxyCode}
+\hypertarget{commentscan_8cpp_a5611300548b2030d86b6ab9168132b88}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yylex@{yylex}}
+\index{yylex@{yylex}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yylex}]{\setlength{\rightskip}{0pt plus 5cm}\#define yylex~{\bf commentscan\+Y\+Ylex}}\label{commentscan_8cpp_a5611300548b2030d86b6ab9168132b88}
+\hypertarget{commentscan_8cpp_ad71cf0fddcfe4f61de0929105b33226c}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yylineno@{yylineno}}
+\index{yylineno@{yylineno}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yylineno}]{\setlength{\rightskip}{0pt plus 5cm}\#define yylineno~{\bf commentscan\+Y\+Ylineno}}\label{commentscan_8cpp_ad71cf0fddcfe4f61de0929105b33226c}
+\hypertarget{commentscan_8cpp_a745d37b5e002b2e5f93ad42ea7b554be}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yymore@{yymore}}
+\index{yymore@{yymore}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yymore}]{\setlength{\rightskip}{0pt plus 5cm}\#define yymore(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~yymore\+\_\+used\+\_\+but\+\_\+not\+\_\+detected}\label{commentscan_8cpp_a745d37b5e002b2e5f93ad42ea7b554be}
+\hypertarget{commentscan_8cpp_a4fd44867d448dcb6fc32ea004a15de54}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yyout@{yyout}}
+\index{yyout@{yyout}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yyout}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyout~{\bf commentscan\+Y\+Yout}}\label{commentscan_8cpp_a4fd44867d448dcb6fc32ea004a15de54}
+\hypertarget{commentscan_8cpp_ab1eba250555ca003eb39387bb1a41d39}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yyrealloc@{yyrealloc}}
+\index{yyrealloc@{yyrealloc}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yyrealloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyrealloc~{\bf commentscan\+Y\+Yrealloc}}\label{commentscan_8cpp_ab1eba250555ca003eb39387bb1a41d39}
+\hypertarget{commentscan_8cpp_a2259355ac49295f72feab070a34a9b11}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yyrestart@{yyrestart}}
+\index{yyrestart@{yyrestart}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yyrestart}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyrestart~{\bf commentscan\+Y\+Yrestart}}\label{commentscan_8cpp_a2259355ac49295f72feab070a34a9b11}
+\hypertarget{commentscan_8cpp_a32b5b960944f946b192d54f672569cd9}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+S\+T\+A\+T\+E@{Y\+Y\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+S\+T\+A\+T\+E@{Y\+Y\+S\+T\+A\+T\+E}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+S\+T\+A\+T\+E~{\bf Y\+Y\+\_\+\+S\+T\+A\+R\+T}}\label{commentscan_8cpp_a32b5b960944f946b192d54f672569cd9}
+\hypertarget{commentscan_8cpp_a828cc83270f8f5bb1688e14dd4e28128}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E@{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}}
+\index{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E@{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E~\char`\"{}yytables\char`\"{}}\label{commentscan_8cpp_a828cc83270f8f5bb1688e14dd4e28128}
+\hypertarget{commentscan_8cpp_ac3286b18a2e91b4571b97df96a118e84}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yyterminate@{yyterminate}}
+\index{yyterminate@{yyterminate}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yyterminate}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyterminate(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~return {\bf Y\+Y\+\_\+\+N\+U\+L\+L}}\label{commentscan_8cpp_ac3286b18a2e91b4571b97df96a118e84}
+\hypertarget{commentscan_8cpp_a0d71f919dbec1ffd74b2460fa7e5ac28}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yytext@{yytext}}
+\index{yytext@{yytext}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yytext}]{\setlength{\rightskip}{0pt plus 5cm}\#define yytext~{\bf commentscan\+Y\+Ytext}}\label{commentscan_8cpp_a0d71f919dbec1ffd74b2460fa7e5ac28}
+\hypertarget{commentscan_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yytext\+\_\+ptr@{yytext\+\_\+ptr}}
+\index{yytext\+\_\+ptr@{yytext\+\_\+ptr}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yytext\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}\#define yytext\+\_\+ptr~{\bf commentscan\+Y\+Ytext}}\label{commentscan_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}
+\hypertarget{commentscan_8cpp_a5be541efdb129f7cefb2437f52fe7359}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yywrap@{yywrap}}
+\index{yywrap@{yywrap}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yywrap}]{\setlength{\rightskip}{0pt plus 5cm}\#define yywrap~{\bf commentscan\+Y\+Ywrap}}\label{commentscan_8cpp_a5be541efdb129f7cefb2437f52fe7359}
+
+
+\subsection{Documentation des définitions de type}
+\hypertarget{commentscan_8cpp_a6eda037087f774dcb0febdb34650d56d}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Doc\+Cmd\+Func@{Doc\+Cmd\+Func}}
+\index{Doc\+Cmd\+Func@{Doc\+Cmd\+Func}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Doc\+Cmd\+Func}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf bool}($\ast$ Doc\+Cmd\+Func) (const {\bf Q\+C\+String} \&name)}\label{commentscan_8cpp_a6eda037087f774dcb0febdb34650d56d}
+\hypertarget{commentscan_8cpp_a2e73b2c75126814585525fb2e9d51159}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!flex\+\_\+int16\+\_\+t@{flex\+\_\+int16\+\_\+t}}
+\index{flex\+\_\+int16\+\_\+t@{flex\+\_\+int16\+\_\+t}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{flex\+\_\+int16\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef short int {\bf flex\+\_\+int16\+\_\+t}}\label{commentscan_8cpp_a2e73b2c75126814585525fb2e9d51159}
+\hypertarget{commentscan_8cpp_a838ce943cf44ef7769480714fc6c3ba9}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!flex\+\_\+int32\+\_\+t@{flex\+\_\+int32\+\_\+t}}
+\index{flex\+\_\+int32\+\_\+t@{flex\+\_\+int32\+\_\+t}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{flex\+\_\+int32\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf flex\+\_\+int32\+\_\+t}}\label{commentscan_8cpp_a838ce943cf44ef7769480714fc6c3ba9}
+\hypertarget{commentscan_8cpp_a7b0840dff4a2ef1702118aa12264b2a7}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!flex\+\_\+int8\+\_\+t@{flex\+\_\+int8\+\_\+t}}
+\index{flex\+\_\+int8\+\_\+t@{flex\+\_\+int8\+\_\+t}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{flex\+\_\+int8\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed char {\bf flex\+\_\+int8\+\_\+t}}\label{commentscan_8cpp_a7b0840dff4a2ef1702118aa12264b2a7}
+\hypertarget{commentscan_8cpp_ac50cdb9eefbef83a1cec89e3a7f6e1d2}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!flex\+\_\+uint16\+\_\+t@{flex\+\_\+uint16\+\_\+t}}
+\index{flex\+\_\+uint16\+\_\+t@{flex\+\_\+uint16\+\_\+t}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{flex\+\_\+uint16\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short int {\bf flex\+\_\+uint16\+\_\+t}}\label{commentscan_8cpp_ac50cdb9eefbef83a1cec89e3a7f6e1d2}
+\hypertarget{commentscan_8cpp_a36869712de12820c73aae736762e8e88}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!flex\+\_\+uint32\+\_\+t@{flex\+\_\+uint32\+\_\+t}}
+\index{flex\+\_\+uint32\+\_\+t@{flex\+\_\+uint32\+\_\+t}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{flex\+\_\+uint32\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf flex\+\_\+uint32\+\_\+t}}\label{commentscan_8cpp_a36869712de12820c73aae736762e8e88}
+\hypertarget{commentscan_8cpp_a0fac5ea484f64e75dbe6eba4aa61750c}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!flex\+\_\+uint8\+\_\+t@{flex\+\_\+uint8\+\_\+t}}
+\index{flex\+\_\+uint8\+\_\+t@{flex\+\_\+uint8\+\_\+t}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{flex\+\_\+uint8\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf flex\+\_\+uint8\+\_\+t}}\label{commentscan_8cpp_a0fac5ea484f64e75dbe6eba4aa61750c}
+\hypertarget{commentscan_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf yy\+\_\+buffer\+\_\+state}$\ast$ {\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}\label{commentscan_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}
+\hypertarget{commentscan_8cpp_a1f324b3cb0839eeb90145f0274e6946e}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+C\+H\+A\+R}}
+\index{Y\+Y\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+C\+H\+A\+R}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+C\+H\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf Y\+Y\+\_\+\+C\+H\+A\+R}}\label{commentscan_8cpp_a1f324b3cb0839eeb90145f0274e6946e}
+\hypertarget{commentscan_8cpp_ad557845057f187eec4be07e2717d2afa}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yy\+\_\+size\+\_\+t@{yy\+\_\+size\+\_\+t}}
+\index{yy\+\_\+size\+\_\+t@{yy\+\_\+size\+\_\+t}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yy\+\_\+size\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef size\+\_\+t {\bf yy\+\_\+size\+\_\+t}}\label{commentscan_8cpp_ad557845057f187eec4be07e2717d2afa}
+\hypertarget{commentscan_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yy\+\_\+state\+\_\+type@{yy\+\_\+state\+\_\+type}}
+\index{yy\+\_\+state\+\_\+type@{yy\+\_\+state\+\_\+type}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yy\+\_\+state\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf yy\+\_\+state\+\_\+type}}\label{commentscan_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}
+
+
+\subsection{Documentation du type de l\textquotesingle{}énumération}
+\hypertarget{commentscan_8cpp_a83faa6554b2d8d0f095551b84f726c7f}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Guard\+Type@{Guard\+Type}}
+\index{Guard\+Type@{Guard\+Type}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Guard\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Guard\+Type}}\label{commentscan_8cpp_a83faa6554b2d8d0f095551b84f726c7f}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Guard\+\_\+\+If@{Guard\+\_\+\+If}!commentscan.\+cpp@{commentscan.\+cpp}}\index{commentscan.\+cpp@{commentscan.\+cpp}!Guard\+\_\+\+If@{Guard\+\_\+\+If}}\item[{\em 
+\hypertarget{commentscan_8cpp_a83faa6554b2d8d0f095551b84f726c7fa516af97241cebc813e221d2cff34aee3}{}Guard\+\_\+\+If\label{commentscan_8cpp_a83faa6554b2d8d0f095551b84f726c7fa516af97241cebc813e221d2cff34aee3}
+}]\index{Guard\+\_\+\+If\+Not@{Guard\+\_\+\+If\+Not}!commentscan.\+cpp@{commentscan.\+cpp}}\index{commentscan.\+cpp@{commentscan.\+cpp}!Guard\+\_\+\+If\+Not@{Guard\+\_\+\+If\+Not}}\item[{\em 
+\hypertarget{commentscan_8cpp_a83faa6554b2d8d0f095551b84f726c7fa81117f2b12c03ae4546521b5bf7c8ac5}{}Guard\+\_\+\+If\+Not\label{commentscan_8cpp_a83faa6554b2d8d0f095551b84f726c7fa81117f2b12c03ae4546521b5bf7c8ac5}
+}]\index{Guard\+\_\+\+Skip@{Guard\+\_\+\+Skip}!commentscan.\+cpp@{commentscan.\+cpp}}\index{commentscan.\+cpp@{commentscan.\+cpp}!Guard\+\_\+\+Skip@{Guard\+\_\+\+Skip}}\item[{\em 
+\hypertarget{commentscan_8cpp_a83faa6554b2d8d0f095551b84f726c7fa05f0ba790ed71e77b4064fb2b8350e9a}{}Guard\+\_\+\+Skip\label{commentscan_8cpp_a83faa6554b2d8d0f095551b84f726c7fa05f0ba790ed71e77b4064fb2b8350e9a}
+}]\end{description}
+\end{Desc}
+\hypertarget{commentscan_8cpp_acc0f0d2f60038c5acff5f6480bc80e45}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Output\+Context@{Output\+Context}}
+\index{Output\+Context@{Output\+Context}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Output\+Context}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Output\+Context}}\label{commentscan_8cpp_acc0f0d2f60038c5acff5f6480bc80e45}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Output\+Doc@{Output\+Doc}!commentscan.\+cpp@{commentscan.\+cpp}}\index{commentscan.\+cpp@{commentscan.\+cpp}!Output\+Doc@{Output\+Doc}}\item[{\em 
+\hypertarget{commentscan_8cpp_acc0f0d2f60038c5acff5f6480bc80e45a7798ee65e8ba26c91dcea378c28347a6}{}Output\+Doc\label{commentscan_8cpp_acc0f0d2f60038c5acff5f6480bc80e45a7798ee65e8ba26c91dcea378c28347a6}
+}]\index{Output\+Brief@{Output\+Brief}!commentscan.\+cpp@{commentscan.\+cpp}}\index{commentscan.\+cpp@{commentscan.\+cpp}!Output\+Brief@{Output\+Brief}}\item[{\em 
+\hypertarget{commentscan_8cpp_acc0f0d2f60038c5acff5f6480bc80e45ab0588c8b5fb2c84034afe1809365f040}{}Output\+Brief\label{commentscan_8cpp_acc0f0d2f60038c5acff5f6480bc80e45ab0588c8b5fb2c84034afe1809365f040}
+}]\index{Output\+X\+Ref@{Output\+X\+Ref}!commentscan.\+cpp@{commentscan.\+cpp}}\index{commentscan.\+cpp@{commentscan.\+cpp}!Output\+X\+Ref@{Output\+X\+Ref}}\item[{\em 
+\hypertarget{commentscan_8cpp_acc0f0d2f60038c5acff5f6480bc80e45a160009fd71296a63860f66209dbcc705}{}Output\+X\+Ref\label{commentscan_8cpp_acc0f0d2f60038c5acff5f6480bc80e45a160009fd71296a63860f66209dbcc705}
+}]\index{Output\+Inbody@{Output\+Inbody}!commentscan.\+cpp@{commentscan.\+cpp}}\index{commentscan.\+cpp@{commentscan.\+cpp}!Output\+Inbody@{Output\+Inbody}}\item[{\em 
+\hypertarget{commentscan_8cpp_acc0f0d2f60038c5acff5f6480bc80e45ae2467e74f0b442984f8de771f0e8b5d0}{}Output\+Inbody\label{commentscan_8cpp_acc0f0d2f60038c5acff5f6480bc80e45ae2467e74f0b442984f8de771f0e8b5d0}
+}]\end{description}
+\end{Desc}
+\hypertarget{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!X\+Ref\+Kind@{X\+Ref\+Kind}}
+\index{X\+Ref\+Kind@{X\+Ref\+Kind}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{X\+Ref\+Kind}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf X\+Ref\+Kind}}\label{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{X\+Ref\+\_\+\+Item@{X\+Ref\+\_\+\+Item}!commentscan.\+cpp@{commentscan.\+cpp}}\index{commentscan.\+cpp@{commentscan.\+cpp}!X\+Ref\+\_\+\+Item@{X\+Ref\+\_\+\+Item}}\item[{\em 
+\hypertarget{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186a42ee2c25e3f8d7da014fe8ef030d62dd}{}X\+Ref\+\_\+\+Item\label{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186a42ee2c25e3f8d7da014fe8ef030d62dd}
+}]\index{X\+Ref\+\_\+\+Todo@{X\+Ref\+\_\+\+Todo}!commentscan.\+cpp@{commentscan.\+cpp}}\index{commentscan.\+cpp@{commentscan.\+cpp}!X\+Ref\+\_\+\+Todo@{X\+Ref\+\_\+\+Todo}}\item[{\em 
+\hypertarget{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186a5cbe7af7984f6187caabf98d9f63d827}{}X\+Ref\+\_\+\+Todo\label{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186a5cbe7af7984f6187caabf98d9f63d827}
+}]\index{X\+Ref\+\_\+\+Test@{X\+Ref\+\_\+\+Test}!commentscan.\+cpp@{commentscan.\+cpp}}\index{commentscan.\+cpp@{commentscan.\+cpp}!X\+Ref\+\_\+\+Test@{X\+Ref\+\_\+\+Test}}\item[{\em 
+\hypertarget{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186a6e296b7c7d8b1ef41da86ac5ce6a7fde}{}X\+Ref\+\_\+\+Test\label{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186a6e296b7c7d8b1ef41da86ac5ce6a7fde}
+}]\index{X\+Ref\+\_\+\+Bug@{X\+Ref\+\_\+\+Bug}!commentscan.\+cpp@{commentscan.\+cpp}}\index{commentscan.\+cpp@{commentscan.\+cpp}!X\+Ref\+\_\+\+Bug@{X\+Ref\+\_\+\+Bug}}\item[{\em 
+\hypertarget{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186a8496a070226e4b7041f46e5012f8deb7}{}X\+Ref\+\_\+\+Bug\label{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186a8496a070226e4b7041f46e5012f8deb7}
+}]\index{X\+Ref\+\_\+\+Deprecated@{X\+Ref\+\_\+\+Deprecated}!commentscan.\+cpp@{commentscan.\+cpp}}\index{commentscan.\+cpp@{commentscan.\+cpp}!X\+Ref\+\_\+\+Deprecated@{X\+Ref\+\_\+\+Deprecated}}\item[{\em 
+\hypertarget{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186a5b64b43dd14f6ef0daa85168b4240917}{}X\+Ref\+\_\+\+Deprecated\label{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186a5b64b43dd14f6ef0daa85168b4240917}
+}]\index{X\+Ref\+\_\+\+None@{X\+Ref\+\_\+\+None}!commentscan.\+cpp@{commentscan.\+cpp}}\index{commentscan.\+cpp@{commentscan.\+cpp}!X\+Ref\+\_\+\+None@{X\+Ref\+\_\+\+None}}\item[{\em 
+\hypertarget{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186ae309e5d84833a7111c361e657e75bc88}{}X\+Ref\+\_\+\+None\label{commentscan_8cpp_a30f370adb2525f6629a44ad8fb972186ae309e5d84833a7111c361e657e75bc88}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{commentscan_8cpp_a30db10bfd396dd956bfd1f21606d009f}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!close\+Group@{close\+Group}}
+\index{close\+Group@{close\+Group}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{close\+Group(\+Entry $\ast$e, const char $\ast$file, int line, bool found\+Inline=\+F\+A\+L\+S\+E)}]{\setlength{\rightskip}{0pt plus 5cm}void close\+Group (
+\begin{DoxyParamCaption}
+\item[{{\bf Entry} $\ast$}]{e, }
+\item[{const char $\ast$}]{file, }
+\item[{int}]{line, }
+\item[{{\bf bool}}]{found\+Inline = {\ttfamily {\bf F\+A\+L\+S\+E}}}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a30db10bfd396dd956bfd1f21606d009f}
+\hypertarget{commentscan_8cpp_a1ab5d156676721095e3fd96c3c13b4d2}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Y\+\_\+create\+\_\+buffer@{commentscan\+Y\+Y\+\_\+create\+\_\+buffer}}
+\index{commentscan\+Y\+Y\+\_\+create\+\_\+buffer@{commentscan\+Y\+Y\+\_\+create\+\_\+buffer}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Y\+\_\+create\+\_\+buffer(\+F\+I\+L\+E $\ast$file, int size)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} commentscan\+Y\+Y\+\_\+create\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{file, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a1ab5d156676721095e3fd96c3c13b4d2}
+Allocate and initialize an input buffer state. 
+\begin{DoxyParams}{Paramètres}
+{\em file} & \hyperlink{class_a}{A} readable stream. \\
+\hline
+{\em size} & The character buffer size in bytes. When in doubt, use {\ttfamily Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the allocated buffer state. 
+\end{DoxyReturn}
+\hypertarget{commentscan_8cpp_a9471915981cc3489f33083ac2bb385bd}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Y\+\_\+delete\+\_\+buffer@{commentscan\+Y\+Y\+\_\+delete\+\_\+buffer}}
+\index{commentscan\+Y\+Y\+\_\+delete\+\_\+buffer@{commentscan\+Y\+Y\+\_\+delete\+\_\+buffer}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Y\+\_\+delete\+\_\+buffer(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E b)}]{\setlength{\rightskip}{0pt plus 5cm}void commentscan\+Y\+Y\+\_\+delete\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{b}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a9471915981cc3489f33083ac2bb385bd}
+Destroy the buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em b} & a buffer created with \hyperlink{commentscan_8cpp_a1ab5d156676721095e3fd96c3c13b4d2}{commentscan\+Y\+Y\+\_\+create\+\_\+buffer()} \\
+\hline
+\end{DoxyParams}
+\hypertarget{commentscan_8cpp_ac40c531e83da98d96e4b8e3e240bd688}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Y\+\_\+flush\+\_\+buffer@{commentscan\+Y\+Y\+\_\+flush\+\_\+buffer}}
+\index{commentscan\+Y\+Y\+\_\+flush\+\_\+buffer@{commentscan\+Y\+Y\+\_\+flush\+\_\+buffer}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Y\+\_\+flush\+\_\+buffer(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E b)}]{\setlength{\rightskip}{0pt plus 5cm}void commentscan\+Y\+Y\+\_\+flush\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{b}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_ac40c531e83da98d96e4b8e3e240bd688}
+Discard all buffered characters. On the next scan, Y\+Y\+\_\+\+I\+N\+P\+U\+T will be called. 
+\begin{DoxyParams}{Paramètres}
+{\em b} & the buffer state to be flushed, usually {\ttfamily Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{commentscan_8cpp_a94b337e9f248736bf6eb73a108a19ed6}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Y\+\_\+scan\+\_\+buffer@{commentscan\+Y\+Y\+\_\+scan\+\_\+buffer}}
+\index{commentscan\+Y\+Y\+\_\+scan\+\_\+buffer@{commentscan\+Y\+Y\+\_\+scan\+\_\+buffer}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Y\+\_\+scan\+\_\+buffer(char $\ast$base, yy\+\_\+size\+\_\+t size)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} commentscan\+Y\+Y\+\_\+scan\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{base, }
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{size}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a94b337e9f248736bf6eb73a108a19ed6}
+Setup the input buffer state to scan directly from a user-\/specified character buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em base} & the character buffer \\
+\hline
+{\em size} & the size in bytes of the character buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the newly allocated buffer state object. 
+\end{DoxyReturn}
+\hypertarget{commentscan_8cpp_aa55d004c37238d1db81b9c45af07856f}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Y\+\_\+scan\+\_\+bytes@{commentscan\+Y\+Y\+\_\+scan\+\_\+bytes}}
+\index{commentscan\+Y\+Y\+\_\+scan\+\_\+bytes@{commentscan\+Y\+Y\+\_\+scan\+\_\+bytes}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Y\+\_\+scan\+\_\+bytes(yyconst char $\ast$bytes, yy\+\_\+size\+\_\+t len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} commentscan\+Y\+Y\+\_\+scan\+\_\+bytes (
+\begin{DoxyParamCaption}
+\item[{{\bf yyconst} char $\ast$}]{yybytes, }
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{\+\_\+yybytes\+\_\+len}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_aa55d004c37238d1db81b9c45af07856f}
+Setup the input buffer state to scan the given bytes. The next call to \hyperlink{commentscan_8cpp_a0eefe98636a2ca3a5d3441287e5c6e3e}{commentscan\+Y\+Ylex()} will scan from a {\itshape copy} of {\itshape bytes}. 
+\begin{DoxyParams}{Paramètres}
+{\em bytes} & the byte buffer to scan \\
+\hline
+{\em len} & the number of bytes in the buffer pointed to by {\itshape bytes}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the newly allocated buffer state object. 
+\end{DoxyReturn}
+\hypertarget{commentscan_8cpp_a8c41c165b14d040e6fdd879f1ec8a6af}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Y\+\_\+scan\+\_\+string@{commentscan\+Y\+Y\+\_\+scan\+\_\+string}}
+\index{commentscan\+Y\+Y\+\_\+scan\+\_\+string@{commentscan\+Y\+Y\+\_\+scan\+\_\+string}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Y\+\_\+scan\+\_\+string(yyconst char $\ast$yy\+\_\+str)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} commentscan\+Y\+Y\+\_\+scan\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{{\bf yyconst} char $\ast$}]{yystr}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a8c41c165b14d040e6fdd879f1ec8a6af}
+Setup the input buffer state to scan a string. The next call to \hyperlink{commentscan_8cpp_a0eefe98636a2ca3a5d3441287e5c6e3e}{commentscan\+Y\+Ylex()} will scan from a {\itshape copy} of {\itshape str}. 
+\begin{DoxyParams}{Paramètres}
+{\em yystr} & a N\+U\+L-\/terminated string to scan\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the newly allocated buffer state object. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If you want to scan bytes that may contain N\+U\+L values, then use \hyperlink{commentscan_8cpp_aa55d004c37238d1db81b9c45af07856f}{commentscan\+Y\+Y\+\_\+scan\+\_\+bytes()} instead. 
+\end{DoxyNote}
+\hypertarget{commentscan_8cpp_a5f79f48b14e6596b7673177a143d9a40}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer@{commentscan\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}}
+\index{commentscan\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer@{commentscan\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E new\+\_\+buffer)}]{\setlength{\rightskip}{0pt plus 5cm}void commentscan\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{new\+\_\+buffer}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a5f79f48b14e6596b7673177a143d9a40}
+Switch to a different input buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em new\+\_\+buffer} & The new input buffer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{commentscan_8cpp_a535b87095f3c38c9fc9620f1259bdcad}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Yalloc@{commentscan\+Y\+Yalloc}}
+\index{commentscan\+Y\+Yalloc@{commentscan\+Y\+Yalloc}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Yalloc(yy\+\_\+size\+\_\+t)}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ commentscan\+Y\+Yalloc (
+\begin{DoxyParamCaption}
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{size}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a535b87095f3c38c9fc9620f1259bdcad}
+\hypertarget{commentscan_8cpp_a91c2706cfd696d66b643e2ec0e1affb6}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Yfree@{commentscan\+Y\+Yfree}}
+\index{commentscan\+Y\+Yfree@{commentscan\+Y\+Yfree}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Yfree(void $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void commentscan\+Y\+Yfree (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a91c2706cfd696d66b643e2ec0e1affb6}
+\hypertarget{commentscan_8cpp_a42d9df02beeab073a63cd31481a2c530}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Yget\+\_\+debug@{commentscan\+Y\+Yget\+\_\+debug}}
+\index{commentscan\+Y\+Yget\+\_\+debug@{commentscan\+Y\+Yget\+\_\+debug}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Yget\+\_\+debug(void)}]{\setlength{\rightskip}{0pt plus 5cm}int commentscan\+Y\+Yget\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a42d9df02beeab073a63cd31481a2c530}
+\hypertarget{commentscan_8cpp_a11e70d6a0b17efe30c4b11a57b9ab2a1}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Yget\+\_\+extra@{commentscan\+Y\+Yget\+\_\+extra}}
+\index{commentscan\+Y\+Yget\+\_\+extra@{commentscan\+Y\+Yget\+\_\+extra}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Yget\+\_\+extra(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E} commentscan\+Y\+Yget\+\_\+extra (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a11e70d6a0b17efe30c4b11a57b9ab2a1}
+\hypertarget{commentscan_8cpp_a10d80e1221b52e933f2eaaf00cc53e2b}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Yget\+\_\+in@{commentscan\+Y\+Yget\+\_\+in}}
+\index{commentscan\+Y\+Yget\+\_\+in@{commentscan\+Y\+Yget\+\_\+in}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Yget\+\_\+in(void)}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ commentscan\+Y\+Yget\+\_\+in (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a10d80e1221b52e933f2eaaf00cc53e2b}
+Get the input stream. \hypertarget{commentscan_8cpp_af19c8ebbe91fafeb662482d9f8f35ee0}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Yget\+\_\+leng@{commentscan\+Y\+Yget\+\_\+leng}}
+\index{commentscan\+Y\+Yget\+\_\+leng@{commentscan\+Y\+Yget\+\_\+leng}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Yget\+\_\+leng(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf yy\+\_\+size\+\_\+t} commentscan\+Y\+Yget\+\_\+leng (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_af19c8ebbe91fafeb662482d9f8f35ee0}
+Get the length of the current token. \hypertarget{commentscan_8cpp_a360b373a0f21c5b80b978b32cfbcfd91}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Yget\+\_\+lineno@{commentscan\+Y\+Yget\+\_\+lineno}}
+\index{commentscan\+Y\+Yget\+\_\+lineno@{commentscan\+Y\+Yget\+\_\+lineno}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Yget\+\_\+lineno(void)}]{\setlength{\rightskip}{0pt plus 5cm}int commentscan\+Y\+Yget\+\_\+lineno (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a360b373a0f21c5b80b978b32cfbcfd91}
+Get the current line number. \hypertarget{commentscan_8cpp_ac98283d7678b5eb0a4a1ea7e408363b5}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Yget\+\_\+out@{commentscan\+Y\+Yget\+\_\+out}}
+\index{commentscan\+Y\+Yget\+\_\+out@{commentscan\+Y\+Yget\+\_\+out}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Yget\+\_\+out(void)}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ commentscan\+Y\+Yget\+\_\+out (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_ac98283d7678b5eb0a4a1ea7e408363b5}
+Get the output stream. \hypertarget{commentscan_8cpp_aff47fc0bde6c85a70ff899a066a4a8bf}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Yget\+\_\+text@{commentscan\+Y\+Yget\+\_\+text}}
+\index{commentscan\+Y\+Yget\+\_\+text@{commentscan\+Y\+Yget\+\_\+text}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Yget\+\_\+text(void)}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ commentscan\+Y\+Yget\+\_\+text (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_aff47fc0bde6c85a70ff899a066a4a8bf}
+Get the current token. \hypertarget{commentscan_8cpp_a0eefe98636a2ca3a5d3441287e5c6e3e}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Ylex@{commentscan\+Y\+Ylex}}
+\index{commentscan\+Y\+Ylex@{commentscan\+Y\+Ylex}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Ylex(void)}]{\setlength{\rightskip}{0pt plus 5cm}int commentscan\+Y\+Ylex (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a0eefe98636a2ca3a5d3441287e5c6e3e}
+\hypertarget{commentscan_8cpp_a30bc910745e6f68658cd6d2d6dae3a0d}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Ylex\+\_\+destroy@{commentscan\+Y\+Ylex\+\_\+destroy}}
+\index{commentscan\+Y\+Ylex\+\_\+destroy@{commentscan\+Y\+Ylex\+\_\+destroy}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Ylex\+\_\+destroy(void)}]{\setlength{\rightskip}{0pt plus 5cm}int commentscan\+Y\+Ylex\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a30bc910745e6f68658cd6d2d6dae3a0d}
+\hypertarget{commentscan_8cpp_a2d3827b16e03ca293cd584c51208b989}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Ypop\+\_\+buffer\+\_\+state@{commentscan\+Y\+Ypop\+\_\+buffer\+\_\+state}}
+\index{commentscan\+Y\+Ypop\+\_\+buffer\+\_\+state@{commentscan\+Y\+Ypop\+\_\+buffer\+\_\+state}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Ypop\+\_\+buffer\+\_\+state(void)}]{\setlength{\rightskip}{0pt plus 5cm}void commentscan\+Y\+Ypop\+\_\+buffer\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a2d3827b16e03ca293cd584c51208b989}
+Removes and deletes the top of the stack, if present. The next element becomes the new top. \hypertarget{commentscan_8cpp_a92bcbd9ea4c79cfd2a47495dfc004f11}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Ypush\+\_\+buffer\+\_\+state@{commentscan\+Y\+Ypush\+\_\+buffer\+\_\+state}}
+\index{commentscan\+Y\+Ypush\+\_\+buffer\+\_\+state@{commentscan\+Y\+Ypush\+\_\+buffer\+\_\+state}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Ypush\+\_\+buffer\+\_\+state(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E new\+\_\+buffer)}]{\setlength{\rightskip}{0pt plus 5cm}void commentscan\+Y\+Ypush\+\_\+buffer\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{new\+\_\+buffer}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a92bcbd9ea4c79cfd2a47495dfc004f11}
+Pushes the new state onto the stack. The new state becomes the current state. This function will allocate the stack if necessary. 
+\begin{DoxyParams}{Paramètres}
+{\em new\+\_\+buffer} & The new state. \\
+\hline
+\end{DoxyParams}
+\hypertarget{commentscan_8cpp_a9e046e2a318e0059b596a5768f36aba2}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Yrealloc@{commentscan\+Y\+Yrealloc}}
+\index{commentscan\+Y\+Yrealloc@{commentscan\+Y\+Yrealloc}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Yrealloc(void $\ast$, yy\+\_\+size\+\_\+t)}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ commentscan\+Y\+Yrealloc (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr, }
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{size}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a9e046e2a318e0059b596a5768f36aba2}
+\hypertarget{commentscan_8cpp_a20dd382859f10ab5e5712f4d27b895f6}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Yrestart@{commentscan\+Y\+Yrestart}}
+\index{commentscan\+Y\+Yrestart@{commentscan\+Y\+Yrestart}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Yrestart(\+F\+I\+L\+E $\ast$input\+\_\+file)}]{\setlength{\rightskip}{0pt plus 5cm}void commentscan\+Y\+Yrestart (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{input\+\_\+file}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a20dd382859f10ab5e5712f4d27b895f6}
+Immediately switch to a different input stream. 
+\begin{DoxyParams}{Paramètres}
+{\em input\+\_\+file} & \hyperlink{class_a}{A} readable stream.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function does not reset the start condition to {\ttfamily I\+N\+I\+T\+I\+A\+L} . 
+\end{DoxyNote}
+\hypertarget{commentscan_8cpp_a980748f4a190dc0300286ac77d2f9204}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Yset\+\_\+debug@{commentscan\+Y\+Yset\+\_\+debug}}
+\index{commentscan\+Y\+Yset\+\_\+debug@{commentscan\+Y\+Yset\+\_\+debug}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Yset\+\_\+debug(int debug\+\_\+flag)}]{\setlength{\rightskip}{0pt plus 5cm}void commentscan\+Y\+Yset\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{int}]{debug\+\_\+flag}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a980748f4a190dc0300286ac77d2f9204}
+\hypertarget{commentscan_8cpp_a3acd797b35229a7905456d2ff7bad298}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Yset\+\_\+extra@{commentscan\+Y\+Yset\+\_\+extra}}
+\index{commentscan\+Y\+Yset\+\_\+extra@{commentscan\+Y\+Yset\+\_\+extra}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Yset\+\_\+extra(\+Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E user\+\_\+defined)}]{\setlength{\rightskip}{0pt plus 5cm}void commentscan\+Y\+Yset\+\_\+extra (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}}]{user\+\_\+defined}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a3acd797b35229a7905456d2ff7bad298}
+\hypertarget{commentscan_8cpp_aef913f255e98af60384da74e89ed6898}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Yset\+\_\+in@{commentscan\+Y\+Yset\+\_\+in}}
+\index{commentscan\+Y\+Yset\+\_\+in@{commentscan\+Y\+Yset\+\_\+in}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Yset\+\_\+in(\+F\+I\+L\+E $\ast$in\+\_\+str)}]{\setlength{\rightskip}{0pt plus 5cm}void commentscan\+Y\+Yset\+\_\+in (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{in\+\_\+str}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_aef913f255e98af60384da74e89ed6898}
+Set the input stream. This does not discard the current input buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em in\+\_\+str} & \hyperlink{class_a}{A} readable stream.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{commentscan_8cpp_a5f79f48b14e6596b7673177a143d9a40}{commentscan\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer} 
+\end{DoxySeeAlso}
+\hypertarget{commentscan_8cpp_af0f933cf3c69ed16c5289a99ec0d643c}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Yset\+\_\+lineno@{commentscan\+Y\+Yset\+\_\+lineno}}
+\index{commentscan\+Y\+Yset\+\_\+lineno@{commentscan\+Y\+Yset\+\_\+lineno}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Yset\+\_\+lineno(int line\+\_\+number)}]{\setlength{\rightskip}{0pt plus 5cm}void commentscan\+Y\+Yset\+\_\+lineno (
+\begin{DoxyParamCaption}
+\item[{int}]{line\+\_\+number}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_af0f933cf3c69ed16c5289a99ec0d643c}
+Set the current line number. 
+\begin{DoxyParams}{Paramètres}
+{\em line\+\_\+number} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{commentscan_8cpp_a5f9d889f34ca3916f31edbe20c8155e5}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Yset\+\_\+out@{commentscan\+Y\+Yset\+\_\+out}}
+\index{commentscan\+Y\+Yset\+\_\+out@{commentscan\+Y\+Yset\+\_\+out}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Yset\+\_\+out(\+F\+I\+L\+E $\ast$out\+\_\+str)}]{\setlength{\rightskip}{0pt plus 5cm}void commentscan\+Y\+Yset\+\_\+out (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{out\+\_\+str}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a5f9d889f34ca3916f31edbe20c8155e5}
+\hypertarget{commentscan_8cpp_a7dfe82e1c95b63fd9462a7dd9630d907}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!group\+Enter\+Compound@{group\+Enter\+Compound}}
+\index{group\+Enter\+Compound@{group\+Enter\+Compound}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{group\+Enter\+Compound(const char $\ast$file\+Name, int line, const char $\ast$name)}]{\setlength{\rightskip}{0pt plus 5cm}void group\+Enter\+Compound (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name, }
+\item[{int}]{line, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a7dfe82e1c95b63fd9462a7dd9630d907}
+\hypertarget{commentscan_8cpp_ab996666576f31f55741b4153c835e887}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!group\+Enter\+File@{group\+Enter\+File}}
+\index{group\+Enter\+File@{group\+Enter\+File}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{group\+Enter\+File(const char $\ast$file\+Name, int)}]{\setlength{\rightskip}{0pt plus 5cm}void group\+Enter\+File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_ab996666576f31f55741b4153c835e887}
+\hypertarget{commentscan_8cpp_a086415b2f116c3f754d890f244f177da}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!group\+Leave\+Compound@{group\+Leave\+Compound}}
+\index{group\+Leave\+Compound@{group\+Leave\+Compound}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{group\+Leave\+Compound(const char $\ast$, int, const char $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void group\+Leave\+Compound (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{int}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a086415b2f116c3f754d890f244f177da}
+\hypertarget{commentscan_8cpp_a62f38c4c33adedb4f6bcb0ff5655331a}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!group\+Leave\+File@{group\+Leave\+File}}
+\index{group\+Leave\+File@{group\+Leave\+File}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{group\+Leave\+File(const char $\ast$file\+Name, int line)}]{\setlength{\rightskip}{0pt plus 5cm}void group\+Leave\+File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name, }
+\item[{int}]{line}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a62f38c4c33adedb4f6bcb0ff5655331a}
+\hypertarget{commentscan_8cpp_ad4a65b873df5c05570846b5413b41dfd}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!if@{if}}
+\index{if@{if}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{if("!(yy\+\_\+init))}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{!}]{yy\+\_\+init}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_ad4a65b873df5c05570846b5413b41dfd}
+\hypertarget{commentscan_8cpp_a99b413d09d13ba1181cf5850c25bf235}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!init\+Group\+Info@{init\+Group\+Info}}
+\index{init\+Group\+Info@{init\+Group\+Info}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{init\+Group\+Info(\+Entry $\ast$e)}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Group\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Entry} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a99b413d09d13ba1181cf5850c25bf235}
+\hypertarget{commentscan_8cpp_ab4155ffea05dab2dafae68fd88a0517f}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!isatty@{isatty}}
+\index{isatty@{isatty}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{isatty(int)}]{\setlength{\rightskip}{0pt plus 5cm}int isatty (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_ab4155ffea05dab2dafae68fd88a0517f}
+\hypertarget{commentscan_8cpp_a70e2168f3559ef190af82a87e6e4f79f}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!open\+Group@{open\+Group}}
+\index{open\+Group@{open\+Group}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{open\+Group(\+Entry $\ast$e, const char $\ast$file, int line)}]{\setlength{\rightskip}{0pt plus 5cm}void open\+Group (
+\begin{DoxyParamCaption}
+\item[{{\bf Entry} $\ast$}]{e, }
+\item[{const char $\ast$}]{file, }
+\item[{int}]{line}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a70e2168f3559ef190af82a87e6e4f79f}
+\hypertarget{commentscan_8cpp_a78f8f1e253438d0c5257778c6d1f2198}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!parse\+Comment\+Block@{parse\+Comment\+Block}}
+\index{parse\+Comment\+Block@{parse\+Comment\+Block}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{parse\+Comment\+Block(\+Parser\+Interface $\ast$parser, Entry $\ast$cur\+Entry, const Q\+C\+String \&comment, const Q\+C\+String \&file\+Name, int \&line\+Nr, bool is\+Brief, bool is\+Auto\+Brief\+On, bool is\+Inbody, Protection \&prot, int \&position, bool \&new\+Entry\+Needed)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} parse\+Comment\+Block (
+\begin{DoxyParamCaption}
+\item[{{\bf Parser\+Interface} $\ast$}]{parser, }
+\item[{{\bf Entry} $\ast$}]{cur\+Entry, }
+\item[{const {\bf Q\+C\+String} \&}]{comment, }
+\item[{const {\bf Q\+C\+String} \&}]{file\+Name, }
+\item[{int \&}]{line\+Nr, }
+\item[{{\bf bool}}]{is\+Brief, }
+\item[{{\bf bool}}]{is\+Java\+Doc\+Style, }
+\item[{{\bf bool}}]{is\+Inbody, }
+\item[{{\bf Protection} \&}]{prot, }
+\item[{int \&}]{position, }
+\item[{{\bf bool} \&}]{new\+Entry\+Needed}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a78f8f1e253438d0c5257778c6d1f2198}
+Invokes the comment block parser with the request to parse a single comment block. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em parser} & The language parse that invoked this function. The comment block parse may invoke \hyperlink{class_parser_interface_a5ebf0f524a296845befa22c85a4cc80b}{Parser\+Interface\+::parse\+Prototype()} in order to parse the argument of a @fn command. \\
+\hline
+\mbox{\tt in}  & {\em cur\+Entry} & The \hyperlink{class_entry}{Entry} to which the comment block belongs. Any information (like documentation) that is found in the comment block will be stored in this entry. \\
+\hline
+\mbox{\tt in}  & {\em comment} & \hyperlink{class_a}{A} string representing the actual comment block. Note that leading $\ast$\textquotesingle{}s are already stripped from the comment block. \\
+\hline
+\mbox{\tt in}  & {\em file\+Name} & The name of the file in which the comment is found. Mainly used for producing warnings. \\
+\hline
+\mbox{\tt in,out}  & {\em line\+Nr} & The line number at which the comment block was found. When the function returns it will be set to the last line parsed. \\
+\hline
+\mbox{\tt in}  & {\em is\+Brief} & T\+R\+U\+E iff this comment block represents a brief description. \\
+\hline
+\mbox{\tt in}  & {\em is\+Java\+Doc\+Style} & T\+R\+U\+E iff this comment block is in \char`\"{}\+Java\+Doc\char`\"{} style. This means that it starts as a brief description until the end of the sentences is found and then proceeds as a detailed description. \\
+\hline
+\mbox{\tt in}  & {\em is\+Inbody} & T\+R\+U\+E iff this comment block is located in the body of a function. \\
+\hline
+\mbox{\tt in,out}  & {\em prot} & The protection level in which this comment block was found. Commands in the comment block may override this. \\
+\hline
+\mbox{\tt in,out}  & {\em position} & The character position within {\itshape comment} where the comment block starts. Typically used in case the comment block contains multiple structural commands. \\
+\hline
+\mbox{\tt out}  & {\em new\+Entry\+Needed} & Boolean that is T\+R\+U\+E if the comment block parser finds that a the comment block finishes the entry and a new one needs to be started. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+T\+R\+U\+E if the comment requires further processing. The parameter {\itshape new\+Entry\+Needed} will typically be true in this case and {\itshape position} will indicate the offset inside the {\itshape comment} string where to proceed parsing. F\+A\+L\+S\+E indicates no further processing is needed. 
+\end{DoxyReturn}
+\hypertarget{commentscan_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!while@{while}}
+\index{while@{while}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{while(1)}]{\setlength{\rightskip}{0pt plus 5cm}while (
+\begin{DoxyParamCaption}
+\item[{1}]{}
+\end{DoxyParamCaption}
+)}\label{commentscan_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}
+
+
+\subsection{Documentation des variables}
+\hypertarget{commentscan_8cpp_a464ee155e084f4a76f7b5ca3e964daa7}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Y\+\_\+flex\+\_\+debug@{commentscan\+Y\+Y\+\_\+flex\+\_\+debug}}
+\index{commentscan\+Y\+Y\+\_\+flex\+\_\+debug@{commentscan\+Y\+Y\+\_\+flex\+\_\+debug}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Y\+\_\+flex\+\_\+debug}]{\setlength{\rightskip}{0pt plus 5cm}int commentscan\+Y\+Y\+\_\+flex\+\_\+debug = 0}\label{commentscan_8cpp_a464ee155e084f4a76f7b5ca3e964daa7}
+\hypertarget{commentscan_8cpp_af228a6aab6c862792397fd436005d281}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Yin@{commentscan\+Y\+Yin}}
+\index{commentscan\+Y\+Yin@{commentscan\+Y\+Yin}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Yin}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ commentscan\+Y\+Yin = (F\+I\+L\+E $\ast$) 0}\label{commentscan_8cpp_af228a6aab6c862792397fd436005d281}
+\hypertarget{commentscan_8cpp_a4220394a5337f0b7a71acb9ee2c29c6f}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Yleng@{commentscan\+Y\+Yleng}}
+\index{commentscan\+Y\+Yleng@{commentscan\+Y\+Yleng}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Yleng}]{\setlength{\rightskip}{0pt plus 5cm}{\bf yy\+\_\+size\+\_\+t} commentscan\+Y\+Yleng}\label{commentscan_8cpp_a4220394a5337f0b7a71acb9ee2c29c6f}
+\hypertarget{commentscan_8cpp_a205545ab5303b1c6d00fc37a9e8663ad}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Ylineno@{commentscan\+Y\+Ylineno}}
+\index{commentscan\+Y\+Ylineno@{commentscan\+Y\+Ylineno}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Ylineno}]{\setlength{\rightskip}{0pt plus 5cm}int commentscan\+Y\+Ylineno = 1}\label{commentscan_8cpp_a205545ab5303b1c6d00fc37a9e8663ad}
+\hypertarget{commentscan_8cpp_a79a538323085a715c55478396c3bb03f}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Yout@{commentscan\+Y\+Yout}}
+\index{commentscan\+Y\+Yout@{commentscan\+Y\+Yout}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Yout}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ commentscan\+Y\+Yout = (F\+I\+L\+E $\ast$) 0}\label{commentscan_8cpp_a79a538323085a715c55478396c3bb03f}
+\hypertarget{commentscan_8cpp_ab4bacdbe09c8bbecf0176f5be24fabae}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!commentscan\+Y\+Ytext@{commentscan\+Y\+Ytext}}
+\index{commentscan\+Y\+Ytext@{commentscan\+Y\+Ytext}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{commentscan\+Y\+Ytext}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ commentscan\+Y\+Ytext}\label{commentscan_8cpp_ab4bacdbe09c8bbecf0176f5be24fabae}
+\hypertarget{commentscan_8cpp_ac51a198488bd60f03dd8a00d64831743}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!in\+Internal\+Docs@{in\+Internal\+Docs}}
+\index{in\+Internal\+Docs@{in\+Internal\+Docs}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{in\+Internal\+Docs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} in\+Internal\+Docs = {\bf F\+A\+L\+S\+E}}\label{commentscan_8cpp_ac51a198488bd60f03dd8a00d64831743}
+\hypertarget{commentscan_8cpp_a7ffc8c947830757dd87ad202a6823edd}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yy\+\_\+act@{yy\+\_\+act}}
+\index{yy\+\_\+act@{yy\+\_\+act}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yy\+\_\+act}]{\setlength{\rightskip}{0pt plus 5cm}register int yy\+\_\+act}\label{commentscan_8cpp_a7ffc8c947830757dd87ad202a6823edd}
+\hypertarget{commentscan_8cpp_a71cf769ce518e8687bf8999b278c65f4}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yy\+\_\+bp@{yy\+\_\+bp}}
+\index{yy\+\_\+bp@{yy\+\_\+bp}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yy\+\_\+bp}]{\setlength{\rightskip}{0pt plus 5cm}register char $\ast$ yy\+\_\+bp}\label{commentscan_8cpp_a71cf769ce518e8687bf8999b278c65f4}
+\hypertarget{commentscan_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!yy\+\_\+cp@{yy\+\_\+cp}}
+\index{yy\+\_\+cp@{yy\+\_\+cp}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{yy\+\_\+cp}]{\setlength{\rightskip}{0pt plus 5cm}register char$\ast$ yy\+\_\+cp}\label{commentscan_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}
+\hypertarget{commentscan_8cpp_abcefb20c54ce0f92452cfbb9cf657670}{}\index{commentscan.\+cpp@{commentscan.\+cpp}!Y\+Y\+\_\+\+D\+E\+C\+L@{Y\+Y\+\_\+\+D\+E\+C\+L}}
+\index{Y\+Y\+\_\+\+D\+E\+C\+L@{Y\+Y\+\_\+\+D\+E\+C\+L}!commentscan.\+cpp@{commentscan.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+D\+E\+C\+L}]{\setlength{\rightskip}{0pt plus 5cm}Y\+Y\+\_\+\+D\+E\+C\+L}\label{commentscan_8cpp_abcefb20c54ce0f92452cfbb9cf657670}
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}
+\{
+    \textcolor{keyword}{register} \hyperlink{code_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{yy\_state\_type} \hyperlink{constexp_8cpp_a86a21c2101611f87781b40b111e65aac}{yy\_current\_state}
+\end{DoxyCode}
+The main scanner function which does all the work. 

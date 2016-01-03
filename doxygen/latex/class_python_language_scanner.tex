@@ -1,0 +1,204 @@
+\hypertarget{class_python_language_scanner}{}\section{Référence de la classe Python\+Language\+Scanner}
+\label{class_python_language_scanner}\index{Python\+Language\+Scanner@{Python\+Language\+Scanner}}
+
+
+Python Language parser using state-\/based lexical scanning.  
+
+
+
+
+{\ttfamily \#include $<$pyscanner.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Python\+Language\+Scanner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_python_language_scanner}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_python_language_scanner_ab98702799ad6f7d152e5de03581f5675}{$\sim$\+Python\+Language\+Scanner} ()
+\item 
+void \hyperlink{class_python_language_scanner_ae67929ac5a3d38fc925157f7a5f43497}{start\+Translation\+Unit} (const char $\ast$)
+\item 
+void \hyperlink{class_python_language_scanner_a97ca623055615c143e63ea98be819f86}{finish\+Translation\+Unit} ()
+\item 
+void \hyperlink{class_python_language_scanner_a6848c585fe2a19cd36ed34540dc3fdce}{parse\+Input} (const char $\ast$file\+Name, const char $\ast$file\+Buf, \hyperlink{class_entry}{Entry} $\ast$root, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} same\+Translation\+Unit, \hyperlink{class_q_str_list}{Q\+Str\+List} \&files\+In\+Same\+Translation\+Unit)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_python_language_scanner_a7c6ce0a95e477374182374a9f5bb2e2f}{needs\+Preprocessing} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&extension)
+\item 
+void \hyperlink{class_python_language_scanner_a0920a8f0a1fc295f0e9c240aee99012c}{parse\+Code} (\hyperlink{class_code_output_interface}{Code\+Output\+Interface} \&code\+Out\+Intf, const char $\ast$scope\+Name, const \hyperlink{class_q_c_string}{Q\+C\+String} \&input, \hyperlink{types_8h_a9974623ce72fc23df5d64426b9178bf2}{Src\+Lang\+Ext} lang, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} is\+Example\+Block, const char $\ast$example\+Name=0, \hyperlink{class_file_def}{File\+Def} $\ast$file\+Def=0, int start\+Line=-\/1, int end\+Line=-\/1, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} inline\+Fragment=\hyperlink{qglobal_8h_a10e004b6916e78ff4ea8379be80b80cc}{F\+A\+L\+S\+E}, \hyperlink{class_member_def}{Member\+Def} $\ast$member\+Def=0, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} show\+Line\+Numbers=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E}, \hyperlink{class_definition}{Definition} $\ast$search\+Ctx=0, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} collect\+Xrefs=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E})
+\item 
+void \hyperlink{class_python_language_scanner_a7d8f587a1753e7d04dee2b5ddbc6c1df}{reset\+Code\+Parser\+State} ()
+\item 
+void \hyperlink{class_python_language_scanner_a114cb3ee5e45f0eb07829faa2868e31e}{parse\+Prototype} (const char $\ast$text)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Python Language parser using state-\/based lexical scanning. 
+
+This is the Python language parser for doxygen. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_python_language_scanner_ab98702799ad6f7d152e5de03581f5675}{}\index{Python\+Language\+Scanner@{Python\+Language\+Scanner}!````~Python\+Language\+Scanner@{$\sim$\+Python\+Language\+Scanner}}
+\index{````~Python\+Language\+Scanner@{$\sim$\+Python\+Language\+Scanner}!Python\+Language\+Scanner@{Python\+Language\+Scanner}}
+\subsubsection[{$\sim$\+Python\+Language\+Scanner()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Python\+Language\+Scanner\+::$\sim$\+Python\+Language\+Scanner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_python_language_scanner_ab98702799ad6f7d152e5de03581f5675}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_python_language_scanner_a97ca623055615c143e63ea98be819f86}{}\index{Python\+Language\+Scanner@{Python\+Language\+Scanner}!finish\+Translation\+Unit@{finish\+Translation\+Unit}}
+\index{finish\+Translation\+Unit@{finish\+Translation\+Unit}!Python\+Language\+Scanner@{Python\+Language\+Scanner}}
+\subsubsection[{finish\+Translation\+Unit()}]{\setlength{\rightskip}{0pt plus 5cm}void Python\+Language\+Scanner\+::finish\+Translation\+Unit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_python_language_scanner_a97ca623055615c143e63ea98be819f86}
+Called after all files in a translation unit have been processed. 
+
+Implémente \hyperlink{class_parser_interface_af3acd64c6a33852e2e46e7288eb9c9cf}{Parser\+Interface}.
+
+\hypertarget{class_python_language_scanner_a7c6ce0a95e477374182374a9f5bb2e2f}{}\index{Python\+Language\+Scanner@{Python\+Language\+Scanner}!needs\+Preprocessing@{needs\+Preprocessing}}
+\index{needs\+Preprocessing@{needs\+Preprocessing}!Python\+Language\+Scanner@{Python\+Language\+Scanner}}
+\subsubsection[{needs\+Preprocessing(const Q\+C\+String \&extension)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Python\+Language\+Scanner\+::needs\+Preprocessing (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{extension}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_python_language_scanner_a7c6ce0a95e477374182374a9f5bb2e2f}
+Returns T\+R\+U\+E if the language identified by {\itshape extension} needs the \hyperlink{class_c}{C} preprocessor to be run before feed the result to the input parser. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_python_language_scanner_a6848c585fe2a19cd36ed34540dc3fdce}{parse\+Input()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_parser_interface_a36c669b17b64a6e3847f27d70a5398d2}{Parser\+Interface}.
+
+\hypertarget{class_python_language_scanner_a0920a8f0a1fc295f0e9c240aee99012c}{}\index{Python\+Language\+Scanner@{Python\+Language\+Scanner}!parse\+Code@{parse\+Code}}
+\index{parse\+Code@{parse\+Code}!Python\+Language\+Scanner@{Python\+Language\+Scanner}}
+\subsubsection[{parse\+Code(\+Code\+Output\+Interface \&code\+Out\+Intf, const char $\ast$scope\+Name, const Q\+C\+String \&input, Src\+Lang\+Ext lang, bool is\+Example\+Block, const char $\ast$example\+Name=0, File\+Def $\ast$file\+Def=0, int start\+Line=-\/1, int end\+Line=-\/1, bool inline\+Fragment=\+F\+A\+L\+S\+E, Member\+Def $\ast$member\+Def=0, bool show\+Line\+Numbers=\+T\+R\+U\+E, Definition $\ast$search\+Ctx=0, bool collect\+Xrefs=\+T\+R\+U\+E)}]{\setlength{\rightskip}{0pt plus 5cm}void Python\+Language\+Scanner\+::parse\+Code (
+\begin{DoxyParamCaption}
+\item[{{\bf Code\+Output\+Interface} \&}]{code\+Out\+Intf, }
+\item[{const char $\ast$}]{scope\+Name, }
+\item[{const {\bf Q\+C\+String} \&}]{input, }
+\item[{{\bf Src\+Lang\+Ext}}]{lang, }
+\item[{{\bf bool}}]{is\+Example\+Block, }
+\item[{const char $\ast$}]{example\+Name = {\ttfamily 0}, }
+\item[{{\bf File\+Def} $\ast$}]{file\+Def = {\ttfamily 0}, }
+\item[{int}]{start\+Line = {\ttfamily -\/1}, }
+\item[{int}]{end\+Line = {\ttfamily -\/1}, }
+\item[{{\bf bool}}]{inline\+Fragment = {\ttfamily {\bf F\+A\+L\+S\+E}}, }
+\item[{{\bf Member\+Def} $\ast$}]{member\+Def = {\ttfamily 0}, }
+\item[{{\bf bool}}]{show\+Line\+Numbers = {\ttfamily {\bf T\+R\+U\+E}}, }
+\item[{{\bf Definition} $\ast$}]{search\+Ctx = {\ttfamily 0}, }
+\item[{{\bf bool}}]{collect\+X\+Refs = {\ttfamily {\bf T\+R\+U\+E}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_python_language_scanner_a0920a8f0a1fc295f0e9c240aee99012c}
+Parses a source file or fragment with the goal to produce highlighted and cross-\/referenced output. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em code\+Out\+Intf} & Abstract interface for writing the result. \\
+\hline
+\mbox{\tt in}  & {\em lang} & The programming language of the code fragment. \\
+\hline
+\mbox{\tt in}  & {\em scope\+Name} & Name of scope to which the code belongs. \\
+\hline
+\mbox{\tt in}  & {\em input} & Actual code in the form of a string \\
+\hline
+\mbox{\tt in}  & {\em is\+Example\+Block} & T\+R\+U\+E iff the code is part of an example. \\
+\hline
+\mbox{\tt in}  & {\em example\+Name} & Name of the example. \\
+\hline
+\mbox{\tt in}  & {\em file\+Def} & File definition to which the code is associated. \\
+\hline
+\mbox{\tt in}  & {\em start\+Line} & Starting line in case of a code fragment. \\
+\hline
+\mbox{\tt in}  & {\em end\+Line} & Ending line of the code fragment. \\
+\hline
+\mbox{\tt in}  & {\em inline\+Fragment} & Code fragment that is to be shown inline as part of the documentation. \\
+\hline
+\mbox{\tt in}  & {\em member\+Def} & Member definition to which the code is associated (non null in case of an inline fragment for a member). \\
+\hline
+\mbox{\tt in}  & {\em show\+Line\+Numbers} & if set to T\+R\+U\+E and also file\+Def is not 0, line numbers will be added to the source fragement \\
+\hline
+\mbox{\tt in}  & {\em search\+Ctx} & context under which search data has to be stored. \\
+\hline
+\mbox{\tt in}  & {\em collect\+X\+Refs} & collect cross-\/reference relations. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_parser_interface_a2ffc28f9dd7c47e2581376a573426395}{Parser\+Interface}.
+
+\hypertarget{class_python_language_scanner_a6848c585fe2a19cd36ed34540dc3fdce}{}\index{Python\+Language\+Scanner@{Python\+Language\+Scanner}!parse\+Input@{parse\+Input}}
+\index{parse\+Input@{parse\+Input}!Python\+Language\+Scanner@{Python\+Language\+Scanner}}
+\subsubsection[{parse\+Input(const char $\ast$file\+Name, const char $\ast$file\+Buf, Entry $\ast$root, bool same\+Translation\+Unit, Q\+Str\+List \&files\+In\+Same\+Translation\+Unit)}]{\setlength{\rightskip}{0pt plus 5cm}void Python\+Language\+Scanner\+::parse\+Input (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name, }
+\item[{const char $\ast$}]{file\+Buf, }
+\item[{{\bf Entry} $\ast$}]{root, }
+\item[{{\bf bool}}]{same\+Translation\+Unit, }
+\item[{{\bf Q\+Str\+List} \&}]{files\+In\+Same\+Translation\+Unit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_python_language_scanner_a6848c585fe2a19cd36ed34540dc3fdce}
+Parses a single input file with the goal to build an \hyperlink{class_entry}{Entry} tree. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em file\+Name} & The full name of the file. \\
+\hline
+\mbox{\tt in}  & {\em file\+Buf} & The contents of the file (zero terminated). \\
+\hline
+\mbox{\tt in,out}  & {\em root} & The root of the tree of \hyperlink{class_entry}{Entry} $\ast$nodes representing the information extracted from the file. \\
+\hline
+\mbox{\tt in}  & {\em same\+Translation\+Unit} & T\+R\+U\+E if this file was found in the same translation unit (in the files\+In\+Same\+Translation\+Unit list returned for another file). \\
+\hline
+\mbox{\tt in,out}  & {\em files\+In\+Same\+Translation\+Unit} & other files expected to be found in the same translation unit (used for libclang) \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_parser_interface_a09ced377e619d40b7339187bad88341e}{Parser\+Interface}.
+
+\hypertarget{class_python_language_scanner_a114cb3ee5e45f0eb07829faa2868e31e}{}\index{Python\+Language\+Scanner@{Python\+Language\+Scanner}!parse\+Prototype@{parse\+Prototype}}
+\index{parse\+Prototype@{parse\+Prototype}!Python\+Language\+Scanner@{Python\+Language\+Scanner}}
+\subsubsection[{parse\+Prototype(const char $\ast$text)}]{\setlength{\rightskip}{0pt plus 5cm}void Python\+Language\+Scanner\+::parse\+Prototype (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{text}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_python_language_scanner_a114cb3ee5e45f0eb07829faa2868e31e}
+Callback function called by the comment block scanner. It provides a string {\itshape text} containing the prototype of a function or variable. The parser should parse this and store the information in the \hyperlink{class_entry}{Entry} node that corresponds with the node for which the comment block parser was invoked. 
+
+Implémente \hyperlink{class_parser_interface_a5ebf0f524a296845befa22c85a4cc80b}{Parser\+Interface}.
+
+\hypertarget{class_python_language_scanner_a7d8f587a1753e7d04dee2b5ddbc6c1df}{}\index{Python\+Language\+Scanner@{Python\+Language\+Scanner}!reset\+Code\+Parser\+State@{reset\+Code\+Parser\+State}}
+\index{reset\+Code\+Parser\+State@{reset\+Code\+Parser\+State}!Python\+Language\+Scanner@{Python\+Language\+Scanner}}
+\subsubsection[{reset\+Code\+Parser\+State()}]{\setlength{\rightskip}{0pt plus 5cm}void Python\+Language\+Scanner\+::reset\+Code\+Parser\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_python_language_scanner_a7d8f587a1753e7d04dee2b5ddbc6c1df}
+Resets the state of the code parser. Since multiple code fragments can together form a single example, an explicit function is used to reset the code parser state. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_python_language_scanner_a0920a8f0a1fc295f0e9c240aee99012c}{parse\+Code()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_parser_interface_aee4fccd1865a4e8a6b9f2896811104ca}{Parser\+Interface}.
+
+\hypertarget{class_python_language_scanner_ae67929ac5a3d38fc925157f7a5f43497}{}\index{Python\+Language\+Scanner@{Python\+Language\+Scanner}!start\+Translation\+Unit@{start\+Translation\+Unit}}
+\index{start\+Translation\+Unit@{start\+Translation\+Unit}!Python\+Language\+Scanner@{Python\+Language\+Scanner}}
+\subsubsection[{start\+Translation\+Unit(const char $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Python\+Language\+Scanner\+::start\+Translation\+Unit (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_python_language_scanner_ae67929ac5a3d38fc925157f7a5f43497}
+Starts processing a translation unit (source files + headers). After this call \hyperlink{class_python_language_scanner_a6848c585fe2a19cd36ed34540dc3fdce}{parse\+Input()} is called with same\+Translation\+Unit set to F\+A\+L\+S\+E. If \hyperlink{class_python_language_scanner_a6848c585fe2a19cd36ed34540dc3fdce}{parse\+Input()} returns additional include files, these are also processed using \hyperlink{class_python_language_scanner_a6848c585fe2a19cd36ed34540dc3fdce}{parse\+Input()} with same\+Translation\+Unit set to T\+R\+U\+E. After that \hyperlink{class_python_language_scanner_a97ca623055615c143e63ea98be819f86}{finish\+Translation\+Unit()} is called. 
+
+Implémente \hyperlink{class_parser_interface_a72478f87ead5fde10d7d6bbe32a73024}{Parser\+Interface}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{pyscanner_8h}{pyscanner.\+h}\item 
+generated\+\_\+src/doxygen/\hyperlink{pyscanner_8cpp}{pyscanner.\+cpp}\end{DoxyCompactItemize}

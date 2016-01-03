@@ -1,0 +1,194 @@
+\hypertarget{doxygen_8h}{}\section{Référence du fichier src/doxygen.h}
+\label{doxygen_8h}\index{src/doxygen.\+h@{src/doxygen.\+h}}
+{\ttfamily \#include $<$qdatetime.\+h$>$}\\*
+{\ttfamily \#include $<$qcache.\+h$>$}\\*
+{\ttfamily \#include $<$qstrlist.\+h$>$}\\*
+{\ttfamily \#include $<$qdict.\+h$>$}\\*
+{\ttfamily \#include $<$qintdict.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}ftextstream.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sortdict.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}membergroup.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dirdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}memberlist.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_string_dict}{String\+Dict}
+\item 
+struct \hyperlink{struct_lookup_info}{Lookup\+Info}
+\item 
+class \hyperlink{class_doxygen}{Doxygen}
+\begin{DoxyCompactList}\small\item\em This class serves as a namespace for global variables used by doxygen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{class_q_c_string}{Q\+C\+String} $>$ \hyperlink{doxygen_8h_a483a8f54773ab93a734f03fa74c60f46}{String\+List}
+\item 
+typedef \hyperlink{class_q_list_iterator}{Q\+List\+Iterator}$<$ \hyperlink{class_q_c_string}{Q\+C\+String} $>$ \hyperlink{doxygen_8h_a3d9fe66542742a70383b18c42e66fde4}{String\+List\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{doxygen_8h_a122070be7aebc9e3ab560b58fdd922c9}{init\+Doxygen} ()
+\item 
+void \hyperlink{doxygen_8h_ab0fa1b0c948e78e0d0d749ff1f5740b5}{read\+Configuration} (int argc, char $\ast$$\ast$argv)
+\item 
+void \hyperlink{doxygen_8h_a2426bb829c785229969c3052f3e37fb1}{check\+Configuration} ()
+\item 
+void \hyperlink{doxygen_8h_a10458b8a16238a4eae5fb5019df747e8}{adjust\+Configuration} ()
+\item 
+void \hyperlink{doxygen_8h_a22cd1b2e9b0b2e90cc8d7d646726072c}{search\+Input\+Files} (\hyperlink{doxygen_8h_a483a8f54773ab93a734f03fa74c60f46}{String\+List} \&input\+Files)
+\item 
+void \hyperlink{doxygen_8h_a59d66805ece9da6ffd55fa4cc8252ef1}{parse\+Input} ()
+\item 
+void \hyperlink{doxygen_8h_a3efb8cd50f4362e3d58e72febfb872fa}{generate\+Output} ()
+\item 
+void \hyperlink{doxygen_8h_af229513c065c90147eff5559f0844c00}{read\+Aliases} ()
+\item 
+void \hyperlink{doxygen_8h_ae8b10293f5f041318bd4109dd2f996ea}{read\+Formula\+Repository} ()
+\item 
+void \hyperlink{doxygen_8h_ae12e94f5218f3afc8df4086a2121cd4d}{clean\+Up\+Doxygen} ()
+\item 
+int \hyperlink{doxygen_8h_a73bbcba5534fcd775e38e399665d5e65}{read\+File\+Or\+Directory} (const char $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{class_file_name_list}{File\+Name\+List} $\ast$fn\+List, \hyperlink{class_file_name_dict}{File\+Name\+Dict} $\ast$fn\+Dict, \hyperlink{class_string_dict}{String\+Dict} $\ast$excl\+Dict, \hyperlink{class_q_str_list}{Q\+Str\+List} $\ast$pat\+List, \hyperlink{class_q_str_list}{Q\+Str\+List} $\ast$excl\+Pat\+List, \hyperlink{doxygen_8h_a483a8f54773ab93a734f03fa74c60f46}{String\+List} $\ast$result\+List, \hyperlink{class_string_dict}{String\+Dict} $\ast$result\+Dict, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} recursive, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} error\+If\+Not\+Exist=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E}, Q\+Dict$<$ void $>$ $\ast$kill\+Dict=0, Q\+Dict$<$ void $>$ $\ast$paths=0)
+\item 
+int \hyperlink{doxygen_8h_a165c7051547159730a004e1eef73cbd5}{read\+Dir} (\hyperlink{class_q_file_info}{Q\+File\+Info} $\ast$fi, \hyperlink{class_file_name_list}{File\+Name\+List} $\ast$fn\+List, \hyperlink{class_file_name_dict}{File\+Name\+Dict} $\ast$fn\+Dict, \hyperlink{class_string_dict}{String\+Dict} $\ast$excl\+Dict, \hyperlink{class_q_str_list}{Q\+Str\+List} $\ast$pat\+List, \hyperlink{class_q_str_list}{Q\+Str\+List} $\ast$excl\+Pat\+List, \hyperlink{doxygen_8h_a483a8f54773ab93a734f03fa74c60f46}{String\+List} $\ast$result\+List, \hyperlink{class_string_dict}{String\+Dict} $\ast$result\+Dict, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} error\+If\+Not\+Exist, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} recursive, Q\+Dict$<$ void $>$ $\ast$kill\+Dict)
+\item 
+void \hyperlink{doxygen_8h_ac255dacdd078434c7a54f5fa6494d97e}{copy\+And\+Filter\+File} (const char $\ast$file\+Name, \hyperlink{class_buf_str}{Buf\+Str} \&dest)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{doxygen_8h_a0962db3352c8533ca3a04244bf946d9c}{g\+\_\+spaces}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des définitions de type}
+\hypertarget{doxygen_8h_a483a8f54773ab93a734f03fa74c60f46}{}\index{doxygen.\+h@{doxygen.\+h}!String\+List@{String\+List}}
+\index{String\+List@{String\+List}!doxygen.\+h@{doxygen.\+h}}
+\subsubsection[{String\+List}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Q\+List}$<${\bf Q\+C\+String}$>$ {\bf String\+List}}\label{doxygen_8h_a483a8f54773ab93a734f03fa74c60f46}
+\hypertarget{doxygen_8h_a3d9fe66542742a70383b18c42e66fde4}{}\index{doxygen.\+h@{doxygen.\+h}!String\+List\+Iterator@{String\+List\+Iterator}}
+\index{String\+List\+Iterator@{String\+List\+Iterator}!doxygen.\+h@{doxygen.\+h}}
+\subsubsection[{String\+List\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Q\+List\+Iterator}$<${\bf Q\+C\+String}$>$ {\bf String\+List\+Iterator}}\label{doxygen_8h_a3d9fe66542742a70383b18c42e66fde4}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{doxygen_8h_a10458b8a16238a4eae5fb5019df747e8}{}\index{doxygen.\+h@{doxygen.\+h}!adjust\+Configuration@{adjust\+Configuration}}
+\index{adjust\+Configuration@{adjust\+Configuration}!doxygen.\+h@{doxygen.\+h}}
+\subsubsection[{adjust\+Configuration()}]{\setlength{\rightskip}{0pt plus 5cm}void adjust\+Configuration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8h_a10458b8a16238a4eae5fb5019df747e8}
+adjust globals that depend on configuration settings. \hypertarget{doxygen_8h_a2426bb829c785229969c3052f3e37fb1}{}\index{doxygen.\+h@{doxygen.\+h}!check\+Configuration@{check\+Configuration}}
+\index{check\+Configuration@{check\+Configuration}!doxygen.\+h@{doxygen.\+h}}
+\subsubsection[{check\+Configuration()}]{\setlength{\rightskip}{0pt plus 5cm}void check\+Configuration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8h_a2426bb829c785229969c3052f3e37fb1}
+check and resolve config options \hypertarget{doxygen_8h_ae12e94f5218f3afc8df4086a2121cd4d}{}\index{doxygen.\+h@{doxygen.\+h}!clean\+Up\+Doxygen@{clean\+Up\+Doxygen}}
+\index{clean\+Up\+Doxygen@{clean\+Up\+Doxygen}!doxygen.\+h@{doxygen.\+h}}
+\subsubsection[{clean\+Up\+Doxygen()}]{\setlength{\rightskip}{0pt plus 5cm}void clean\+Up\+Doxygen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8h_ae12e94f5218f3afc8df4086a2121cd4d}
+\hypertarget{doxygen_8h_ac255dacdd078434c7a54f5fa6494d97e}{}\index{doxygen.\+h@{doxygen.\+h}!copy\+And\+Filter\+File@{copy\+And\+Filter\+File}}
+\index{copy\+And\+Filter\+File@{copy\+And\+Filter\+File}!doxygen.\+h@{doxygen.\+h}}
+\subsubsection[{copy\+And\+Filter\+File(const char $\ast$file\+Name, Buf\+Str \&dest)}]{\setlength{\rightskip}{0pt plus 5cm}void copy\+And\+Filter\+File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name, }
+\item[{{\bf Buf\+Str} \&}]{dest}
+\end{DoxyParamCaption}
+)}\label{doxygen_8h_ac255dacdd078434c7a54f5fa6494d97e}
+\hypertarget{doxygen_8h_a3efb8cd50f4362e3d58e72febfb872fa}{}\index{doxygen.\+h@{doxygen.\+h}!generate\+Output@{generate\+Output}}
+\index{generate\+Output@{generate\+Output}!doxygen.\+h@{doxygen.\+h}}
+\subsubsection[{generate\+Output()}]{\setlength{\rightskip}{0pt plus 5cm}void generate\+Output (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8h_a3efb8cd50f4362e3d58e72febfb872fa}
+add extra languages for which we can only produce syntax highlighted code \hypertarget{doxygen_8h_a122070be7aebc9e3ab560b58fdd922c9}{}\index{doxygen.\+h@{doxygen.\+h}!init\+Doxygen@{init\+Doxygen}}
+\index{init\+Doxygen@{init\+Doxygen}!doxygen.\+h@{doxygen.\+h}}
+\subsubsection[{init\+Doxygen()}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Doxygen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8h_a122070be7aebc9e3ab560b58fdd922c9}
+\hypertarget{doxygen_8h_a59d66805ece9da6ffd55fa4cc8252ef1}{}\index{doxygen.\+h@{doxygen.\+h}!parse\+Input@{parse\+Input}}
+\index{parse\+Input@{parse\+Input}!doxygen.\+h@{doxygen.\+h}}
+\subsubsection[{parse\+Input()}]{\setlength{\rightskip}{0pt plus 5cm}void parse\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8h_a59d66805ece9da6ffd55fa4cc8252ef1}
+\hypertarget{doxygen_8h_af229513c065c90147eff5559f0844c00}{}\index{doxygen.\+h@{doxygen.\+h}!read\+Aliases@{read\+Aliases}}
+\index{read\+Aliases@{read\+Aliases}!doxygen.\+h@{doxygen.\+h}}
+\subsubsection[{read\+Aliases()}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Aliases (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8h_af229513c065c90147eff5559f0844c00}
+\hypertarget{doxygen_8h_ab0fa1b0c948e78e0d0d749ff1f5740b5}{}\index{doxygen.\+h@{doxygen.\+h}!read\+Configuration@{read\+Configuration}}
+\index{read\+Configuration@{read\+Configuration}!doxygen.\+h@{doxygen.\+h}}
+\subsubsection[{read\+Configuration(int argc, char $\ast$$\ast$argv)}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Configuration (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{doxygen_8h_ab0fa1b0c948e78e0d0d749ff1f5740b5}
+\hypertarget{doxygen_8h_a165c7051547159730a004e1eef73cbd5}{}\index{doxygen.\+h@{doxygen.\+h}!read\+Dir@{read\+Dir}}
+\index{read\+Dir@{read\+Dir}!doxygen.\+h@{doxygen.\+h}}
+\subsubsection[{read\+Dir(\+Q\+File\+Info $\ast$fi, File\+Name\+List $\ast$fn\+List, File\+Name\+Dict $\ast$fn\+Dict, String\+Dict $\ast$excl\+Dict, Q\+Str\+List $\ast$pat\+List, Q\+Str\+List $\ast$excl\+Pat\+List, String\+List $\ast$result\+List, String\+Dict $\ast$result\+Dict, bool error\+If\+Not\+Exist, bool recursive, Q\+Dict$<$ void $>$ $\ast$kill\+Dict)}]{\setlength{\rightskip}{0pt plus 5cm}int read\+Dir (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+File\+Info} $\ast$}]{fi, }
+\item[{{\bf File\+Name\+List} $\ast$}]{fn\+List, }
+\item[{{\bf File\+Name\+Dict} $\ast$}]{fn\+Dict, }
+\item[{{\bf String\+Dict} $\ast$}]{excl\+Dict, }
+\item[{{\bf Q\+Str\+List} $\ast$}]{pat\+List, }
+\item[{{\bf Q\+Str\+List} $\ast$}]{excl\+Pat\+List, }
+\item[{{\bf String\+List} $\ast$}]{result\+List, }
+\item[{{\bf String\+Dict} $\ast$}]{result\+Dict, }
+\item[{{\bf bool}}]{error\+If\+Not\+Exist, }
+\item[{{\bf bool}}]{recursive, }
+\item[{Q\+Dict$<$ void $>$ $\ast$}]{kill\+Dict}
+\end{DoxyParamCaption}
+)}\label{doxygen_8h_a165c7051547159730a004e1eef73cbd5}
+\hypertarget{doxygen_8h_a73bbcba5534fcd775e38e399665d5e65}{}\index{doxygen.\+h@{doxygen.\+h}!read\+File\+Or\+Directory@{read\+File\+Or\+Directory}}
+\index{read\+File\+Or\+Directory@{read\+File\+Or\+Directory}!doxygen.\+h@{doxygen.\+h}}
+\subsubsection[{read\+File\+Or\+Directory(const char $\ast$s, File\+Name\+List $\ast$fn\+List, File\+Name\+Dict $\ast$fn\+Dict, String\+Dict $\ast$excl\+Dict, Q\+Str\+List $\ast$pat\+List, Q\+Str\+List $\ast$excl\+Pat\+List, String\+List $\ast$result\+List, String\+Dict $\ast$result\+Dict, bool recursive, bool error\+If\+Not\+Exist=\+T\+R\+U\+E, Q\+Dict$<$ void $>$ $\ast$kill\+Dict=0, Q\+Dict$<$ void $>$ $\ast$paths=0)}]{\setlength{\rightskip}{0pt plus 5cm}int read\+File\+Or\+Directory (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s, }
+\item[{{\bf File\+Name\+List} $\ast$}]{fn\+List, }
+\item[{{\bf File\+Name\+Dict} $\ast$}]{fn\+Dict, }
+\item[{{\bf String\+Dict} $\ast$}]{excl\+Dict, }
+\item[{{\bf Q\+Str\+List} $\ast$}]{pat\+List, }
+\item[{{\bf Q\+Str\+List} $\ast$}]{excl\+Pat\+List, }
+\item[{{\bf String\+List} $\ast$}]{result\+List, }
+\item[{{\bf String\+Dict} $\ast$}]{result\+Dict, }
+\item[{{\bf bool}}]{recursive, }
+\item[{{\bf bool}}]{error\+If\+Not\+Exist = {\ttfamily {\bf T\+R\+U\+E}}, }
+\item[{Q\+Dict$<$ void $>$ $\ast$}]{kill\+Dict = {\ttfamily 0}, }
+\item[{Q\+Dict$<$ void $>$ $\ast$}]{paths = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{doxygen_8h_a73bbcba5534fcd775e38e399665d5e65}
+\hypertarget{doxygen_8h_ae8b10293f5f041318bd4109dd2f996ea}{}\index{doxygen.\+h@{doxygen.\+h}!read\+Formula\+Repository@{read\+Formula\+Repository}}
+\index{read\+Formula\+Repository@{read\+Formula\+Repository}!doxygen.\+h@{doxygen.\+h}}
+\subsubsection[{read\+Formula\+Repository()}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Formula\+Repository (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{doxygen_8h_ae8b10293f5f041318bd4109dd2f996ea}
+\hypertarget{doxygen_8h_a22cd1b2e9b0b2e90cc8d7d646726072c}{}\index{doxygen.\+h@{doxygen.\+h}!search\+Input\+Files@{search\+Input\+Files}}
+\index{search\+Input\+Files@{search\+Input\+Files}!doxygen.\+h@{doxygen.\+h}}
+\subsubsection[{search\+Input\+Files(\+String\+List \&input\+Files)}]{\setlength{\rightskip}{0pt plus 5cm}void search\+Input\+Files (
+\begin{DoxyParamCaption}
+\item[{{\bf String\+List} \&}]{input\+Files}
+\end{DoxyParamCaption}
+)}\label{doxygen_8h_a22cd1b2e9b0b2e90cc8d7d646726072c}
+
+
+\subsection{Documentation des variables}
+\hypertarget{doxygen_8h_a0962db3352c8533ca3a04244bf946d9c}{}\index{doxygen.\+h@{doxygen.\+h}!g\+\_\+spaces@{g\+\_\+spaces}}
+\index{g\+\_\+spaces@{g\+\_\+spaces}!doxygen.\+h@{doxygen.\+h}}
+\subsubsection[{g\+\_\+spaces}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} g\+\_\+spaces}\label{doxygen_8h_a0962db3352c8533ca3a04244bf946d9c}

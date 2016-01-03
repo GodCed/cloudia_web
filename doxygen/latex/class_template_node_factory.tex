@@ -1,0 +1,72 @@
+\hypertarget{class_template_node_factory}{}\section{Référence de la classe Template\+Node\+Factory}
+\label{class_template_node_factory}\index{Template\+Node\+Factory@{Template\+Node\+Factory}}
+
+
+Factory class for creating tag A\+S\+T nodes found in a template.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_template_node_factory_1_1_auto_register}{Auto\+Register}
+\begin{DoxyCompactList}\small\item\em Helper class for registering a template A\+S\+T node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_template_node}{Template\+Node} $\ast$($\ast$ \hyperlink{class_template_node_factory_a59ae33c1e37ddecd982358a5417fab31}{Create\+Func}) (\hyperlink{class_template_parser}{Template\+Parser} $\ast$parser, \hyperlink{class_template_node}{Template\+Node} $\ast$parent, int line, const \hyperlink{class_q_c_string}{Q\+C\+String} \&data)
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_template_node}{Template\+Node} $\ast$ \hyperlink{class_template_node_factory_acad608d0e42a69f2e4ad3caa05388d32}{create} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&name, \hyperlink{class_template_parser}{Template\+Parser} $\ast$parser, \hyperlink{class_template_node}{Template\+Node} $\ast$parent, int line, const \hyperlink{class_q_c_string}{Q\+C\+String} \&data)
+\item 
+void \hyperlink{class_template_node_factory_a1a032751feb62597c052da0548b56e95}{register\+Template\+Node} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&name, \hyperlink{class_template_node_factory_a59ae33c1e37ddecd982358a5417fab31}{Create\+Func} \hyperlink{036__link_8c_affb6da6cff1b57cdf8efc0123dceac9b}{func})
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_template_node_factory}{Template\+Node\+Factory} $\ast$ \hyperlink{class_template_node_factory_ab70bb43cedfb3ac75cec15d97391b6f9}{instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Factory class for creating tag A\+S\+T nodes found in a template. 
+
+\subsection{Documentation des définitions de type membres}
+\hypertarget{class_template_node_factory_a59ae33c1e37ddecd982358a5417fab31}{}\index{Template\+Node\+Factory@{Template\+Node\+Factory}!Create\+Func@{Create\+Func}}
+\index{Create\+Func@{Create\+Func}!Template\+Node\+Factory@{Template\+Node\+Factory}}
+\subsubsection[{Create\+Func}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Template\+Node}$\ast$($\ast$ Template\+Node\+Factory\+::\+Create\+Func) ({\bf Template\+Parser} $\ast$parser, {\bf Template\+Node} $\ast$parent, int line, const {\bf Q\+C\+String} \&data)}\label{class_template_node_factory_a59ae33c1e37ddecd982358a5417fab31}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_template_node_factory_acad608d0e42a69f2e4ad3caa05388d32}{}\index{Template\+Node\+Factory@{Template\+Node\+Factory}!create@{create}}
+\index{create@{create}!Template\+Node\+Factory@{Template\+Node\+Factory}}
+\subsubsection[{create(const Q\+C\+String \&name, Template\+Parser $\ast$parser, Template\+Node $\ast$parent, int line, const Q\+C\+String \&data)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Node}$\ast$ Template\+Node\+Factory\+::create (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{name, }
+\item[{{\bf Template\+Parser} $\ast$}]{parser, }
+\item[{{\bf Template\+Node} $\ast$}]{parent, }
+\item[{int}]{line, }
+\item[{const {\bf Q\+C\+String} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_node_factory_acad608d0e42a69f2e4ad3caa05388d32}
+\hypertarget{class_template_node_factory_ab70bb43cedfb3ac75cec15d97391b6f9}{}\index{Template\+Node\+Factory@{Template\+Node\+Factory}!instance@{instance}}
+\index{instance@{instance}!Template\+Node\+Factory@{Template\+Node\+Factory}}
+\subsubsection[{instance()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Template\+Node\+Factory}$\ast$ Template\+Node\+Factory\+::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_template_node_factory_ab70bb43cedfb3ac75cec15d97391b6f9}
+\hypertarget{class_template_node_factory_a1a032751feb62597c052da0548b56e95}{}\index{Template\+Node\+Factory@{Template\+Node\+Factory}!register\+Template\+Node@{register\+Template\+Node}}
+\index{register\+Template\+Node@{register\+Template\+Node}!Template\+Node\+Factory@{Template\+Node\+Factory}}
+\subsubsection[{register\+Template\+Node(const Q\+C\+String \&name, Create\+Func func)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Node\+Factory\+::register\+Template\+Node (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{name, }
+\item[{{\bf Create\+Func}}]{func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_node_factory_a1a032751feb62597c052da0548b56e95}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{template_8cpp}{template.\+cpp}\end{DoxyCompactItemize}

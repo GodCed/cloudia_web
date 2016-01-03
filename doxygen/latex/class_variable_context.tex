@@ -1,0 +1,117 @@
+\hypertarget{class_variable_context}{}\section{Référence de la classe Variable\+Context}
+\label{class_variable_context}\index{Variable\+Context@{Variable\+Context}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_variable_context_1_1_scope}{Scope}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_variable_context_a7828c91508ad684cd467e6733283466d}{Variable\+Context} ()
+\item 
+virtual \hyperlink{class_variable_context_af00c9313effa735675ffadfb6194abb3}{$\sim$\+Variable\+Context} ()
+\item 
+void \hyperlink{class_variable_context_ae1d858d3ad4778e79ac69a021474edab}{push\+Scope} ()
+\item 
+void \hyperlink{class_variable_context_a648ebfb9146a61b70dffe684aec77940}{pop\+Scope} ()
+\item 
+void \hyperlink{class_variable_context_a37579e37d7d730884861f71a1b9f0439}{clear} ()
+\item 
+void \hyperlink{class_variable_context_af762830da74924aa08900310e554e253}{clear\+Except\+Global} ()
+\item 
+void \hyperlink{class_variable_context_a290a97ba9049c9c00c2a9fcef5f12083}{add\+Variable} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&type, const \hyperlink{class_q_c_string}{Q\+C\+String} \&name)
+\item 
+\hyperlink{class_class_def}{Class\+Def} $\ast$ \hyperlink{class_variable_context_ac6643c9a7fbfa30d341efe5c62c862fb}{find\+Variable} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&name)
+\item 
+int \hyperlink{class_variable_context_a93e482aacaff7e8e202cb98edc2cc9bb}{count} () const 
+\end{DoxyCompactItemize}
+\subsection*{Attributs publics statiques}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{class_class_def}{Class\+Def} $\ast$ \hyperlink{class_variable_context_aeca8de524f06142f5a49a0a8f87467b0}{dummy\+Context} = (\hyperlink{class_class_def}{Class\+Def}$\ast$)0x8
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Represents a stack of variable to class mappings as found in the code. Each scope is enclosed in \hyperlink{class_variable_context_ae1d858d3ad4778e79ac69a021474edab}{push\+Scope()} and \hyperlink{class_variable_context_a648ebfb9146a61b70dffe684aec77940}{pop\+Scope()} calls. Variables are added by calling add\+Variables() and one can search for variable using \hyperlink{class_variable_context_ac6643c9a7fbfa30d341efe5c62c862fb}{find\+Variable()}. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_variable_context_a7828c91508ad684cd467e6733283466d}{}\index{Variable\+Context@{Variable\+Context}!Variable\+Context@{Variable\+Context}}
+\index{Variable\+Context@{Variable\+Context}!Variable\+Context@{Variable\+Context}}
+\subsubsection[{Variable\+Context()}]{\setlength{\rightskip}{0pt plus 5cm}Variable\+Context\+::\+Variable\+Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_variable_context_a7828c91508ad684cd467e6733283466d}
+\hypertarget{class_variable_context_af00c9313effa735675ffadfb6194abb3}{}\index{Variable\+Context@{Variable\+Context}!````~Variable\+Context@{$\sim$\+Variable\+Context}}
+\index{````~Variable\+Context@{$\sim$\+Variable\+Context}!Variable\+Context@{Variable\+Context}}
+\subsubsection[{$\sim$\+Variable\+Context()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Variable\+Context\+::$\sim$\+Variable\+Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_variable_context_af00c9313effa735675ffadfb6194abb3}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_variable_context_a290a97ba9049c9c00c2a9fcef5f12083}{}\index{Variable\+Context@{Variable\+Context}!add\+Variable@{add\+Variable}}
+\index{add\+Variable@{add\+Variable}!Variable\+Context@{Variable\+Context}}
+\subsubsection[{add\+Variable(const Q\+C\+String \&type, const Q\+C\+String \&name)}]{\setlength{\rightskip}{0pt plus 5cm}void Variable\+Context\+::add\+Variable (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{type, }
+\item[{const {\bf Q\+C\+String} \&}]{name}
+\end{DoxyParamCaption}
+)}\label{class_variable_context_a290a97ba9049c9c00c2a9fcef5f12083}
+\hypertarget{class_variable_context_a37579e37d7d730884861f71a1b9f0439}{}\index{Variable\+Context@{Variable\+Context}!clear@{clear}}
+\index{clear@{clear}!Variable\+Context@{Variable\+Context}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Variable\+Context\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_variable_context_a37579e37d7d730884861f71a1b9f0439}
+\hypertarget{class_variable_context_af762830da74924aa08900310e554e253}{}\index{Variable\+Context@{Variable\+Context}!clear\+Except\+Global@{clear\+Except\+Global}}
+\index{clear\+Except\+Global@{clear\+Except\+Global}!Variable\+Context@{Variable\+Context}}
+\subsubsection[{clear\+Except\+Global()}]{\setlength{\rightskip}{0pt plus 5cm}void Variable\+Context\+::clear\+Except\+Global (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_variable_context_af762830da74924aa08900310e554e253}
+\hypertarget{class_variable_context_a93e482aacaff7e8e202cb98edc2cc9bb}{}\index{Variable\+Context@{Variable\+Context}!count@{count}}
+\index{count@{count}!Variable\+Context@{Variable\+Context}}
+\subsubsection[{count() const }]{\setlength{\rightskip}{0pt plus 5cm}int Variable\+Context\+::count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_variable_context_a93e482aacaff7e8e202cb98edc2cc9bb}
+\hypertarget{class_variable_context_ac6643c9a7fbfa30d341efe5c62c862fb}{}\index{Variable\+Context@{Variable\+Context}!find\+Variable@{find\+Variable}}
+\index{find\+Variable@{find\+Variable}!Variable\+Context@{Variable\+Context}}
+\subsubsection[{find\+Variable(const Q\+C\+String \&name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Class\+Def} $\ast$ Variable\+Context\+::find\+Variable (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{name}
+\end{DoxyParamCaption}
+)}\label{class_variable_context_ac6643c9a7fbfa30d341efe5c62c862fb}
+\hypertarget{class_variable_context_a648ebfb9146a61b70dffe684aec77940}{}\index{Variable\+Context@{Variable\+Context}!pop\+Scope@{pop\+Scope}}
+\index{pop\+Scope@{pop\+Scope}!Variable\+Context@{Variable\+Context}}
+\subsubsection[{pop\+Scope()}]{\setlength{\rightskip}{0pt plus 5cm}void Variable\+Context\+::pop\+Scope (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_variable_context_a648ebfb9146a61b70dffe684aec77940}
+\hypertarget{class_variable_context_ae1d858d3ad4778e79ac69a021474edab}{}\index{Variable\+Context@{Variable\+Context}!push\+Scope@{push\+Scope}}
+\index{push\+Scope@{push\+Scope}!Variable\+Context@{Variable\+Context}}
+\subsubsection[{push\+Scope()}]{\setlength{\rightskip}{0pt plus 5cm}void Variable\+Context\+::push\+Scope (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_variable_context_ae1d858d3ad4778e79ac69a021474edab}
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_variable_context_aeca8de524f06142f5a49a0a8f87467b0}{}\index{Variable\+Context@{Variable\+Context}!dummy\+Context@{dummy\+Context}}
+\index{dummy\+Context@{dummy\+Context}!Variable\+Context@{Variable\+Context}}
+\subsubsection[{dummy\+Context}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Class\+Def} $\ast$ Variable\+Context\+::dummy\+Context = ({\bf Class\+Def}$\ast$)0x8\hspace{0.3cm}{\ttfamily [static]}}\label{class_variable_context_aeca8de524f06142f5a49a0a8f87467b0}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+generated\+\_\+src/doxygen/\hyperlink{code_8cpp}{code.\+cpp}\end{DoxyCompactItemize}

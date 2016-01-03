@@ -1,0 +1,228 @@
+\hypertarget{class_main_handler}{}\section{Référence de la classe Main\+Handler}
+\label{class_main_handler}\index{Main\+Handler@{Main\+Handler}}
+
+
+{\ttfamily \#include $<$mainhandler.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Main\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.560976cm]{class_main_handler}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_main_handler_a812f82b37136d4c2aa5a96cbd29f8c50}{start\+Compound} (const \hyperlink{class_q_xml_attributes}{Q\+Xml\+Attributes} \&attrib)
+\item 
+virtual void \hyperlink{class_main_handler_a5f3b574860236e5e5d157f6790ff794e}{start\+Member} (const \hyperlink{class_q_xml_attributes}{Q\+Xml\+Attributes} \&attrib)
+\item 
+virtual void \hyperlink{class_main_handler_ad2cc00ab16466ec886ef5f54defd2194}{end\+Member} ()
+\item 
+virtual void \hyperlink{class_main_handler_ab21db32d56079b731441c961cf182613}{start\+Name} (const \hyperlink{class_q_xml_attributes}{Q\+Xml\+Attributes} \&attrib)
+\item 
+virtual void \hyperlink{class_main_handler_a6ba079fd62d9a24ec7b3ddf3be2f2d9b}{end\+Name} ()
+\item 
+\hyperlink{class_main_handler_a3f31bdc48d25c685ed6f9737f87a7549}{Main\+Handler} ()
+\item 
+virtual \hyperlink{class_main_handler_a7469252d22f259429c17800367588397}{$\sim$\+Main\+Handler} ()
+\item 
+\hyperlink{class_i_compound_iterator}{I\+Compound\+Iterator} $\ast$ \hyperlink{class_main_handler_a38f1d4046c78ae3253bd613f2bc3edc4}{compounds} () const 
+\item 
+\hyperlink{class_i_compound}{I\+Compound} $\ast$ \hyperlink{class_main_handler_acbde80540526c236ae20d56521b29539}{compound\+By\+Id} (const char $\ast$id) const 
+\item 
+virtual \hyperlink{class_i_compound}{I\+Compound} $\ast$ \hyperlink{class_main_handler_a290767a8ef3301ec6a9353fa16539c1c}{compound\+By\+Name} (const char $\ast$name) const 
+\item 
+virtual \hyperlink{class_i_compound}{I\+Compound} $\ast$ \hyperlink{class_main_handler_a7924b35d39533fd0136ecc585eeac120}{member\+By\+Id} (const char $\ast$id) const 
+\item 
+virtual \hyperlink{class_i_compound_iterator}{I\+Compound\+Iterator} $\ast$ \hyperlink{class_main_handler_a2f22677c80c656599044358c1dee1c29}{member\+By\+Name} (const char $\ast$name) const 
+\item 
+virtual void \hyperlink{class_main_handler_a1f9507df93308fe3002cc2d97bd8c8be}{release} ()
+\item 
+void \hyperlink{class_main_handler_a4856c87039eb9235d0fa7e10d8912e55}{set\+Debug\+Level} (int level)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_main_handler_a09e7e0c5e69be2b2aa5dc91cb77721d8}{read\+X\+M\+L\+Dir} (const char $\ast$dir\+Name)
+\item 
+void \hyperlink{class_main_handler_a0994106c1d348299b85539d6a135a1ec}{dump} ()
+\item 
+void \hyperlink{class_main_handler_ad937ec7a5c9da61ca1c96af46402abb9}{unload\+Compound} (\hyperlink{class_compound_handler}{Compound\+Handler} $\ast$ch)
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_main_handler_a3f31bdc48d25c685ed6f9737f87a7549}{}\index{Main\+Handler@{Main\+Handler}!Main\+Handler@{Main\+Handler}}
+\index{Main\+Handler@{Main\+Handler}!Main\+Handler@{Main\+Handler}}
+\subsubsection[{Main\+Handler()}]{\setlength{\rightskip}{0pt plus 5cm}Main\+Handler\+::\+Main\+Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_main_handler_a3f31bdc48d25c685ed6f9737f87a7549}
+\hypertarget{class_main_handler_a7469252d22f259429c17800367588397}{}\index{Main\+Handler@{Main\+Handler}!````~Main\+Handler@{$\sim$\+Main\+Handler}}
+\index{````~Main\+Handler@{$\sim$\+Main\+Handler}!Main\+Handler@{Main\+Handler}}
+\subsubsection[{$\sim$\+Main\+Handler()}]{\setlength{\rightskip}{0pt plus 5cm}Main\+Handler\+::$\sim$\+Main\+Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_main_handler_a7469252d22f259429c17800367588397}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_main_handler_acbde80540526c236ae20d56521b29539}{}\index{Main\+Handler@{Main\+Handler}!compound\+By\+Id@{compound\+By\+Id}}
+\index{compound\+By\+Id@{compound\+By\+Id}!Main\+Handler@{Main\+Handler}}
+\subsubsection[{compound\+By\+Id(const char $\ast$id) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Compound} $\ast$ Main\+Handler\+::compound\+By\+Id (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_main_handler_acbde80540526c236ae20d56521b29539}
+Returns a compound given its unique {\itshape id}. If you have a compound id this function is much more efficient than iterating over the compound list. Returns 0 if the id is not valid. 
+
+Implémente \hyperlink{class_i_doxygen_a797d66e139fe7638e27d917d97c9087c}{I\+Doxygen}.
+
+\hypertarget{class_main_handler_a290767a8ef3301ec6a9353fa16539c1c}{}\index{Main\+Handler@{Main\+Handler}!compound\+By\+Name@{compound\+By\+Name}}
+\index{compound\+By\+Name@{compound\+By\+Name}!Main\+Handler@{Main\+Handler}}
+\subsubsection[{compound\+By\+Name(const char $\ast$name) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Compound} $\ast$ Main\+Handler\+::compound\+By\+Name (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_main_handler_a290767a8ef3301ec6a9353fa16539c1c}
+Returns a compound given its name (including the scope). Returns 0 if the name is not found in the project. 
+
+Implémente \hyperlink{class_i_doxygen_a0dbd98de15bb5cbb7c5952f245a13f9b}{I\+Doxygen}.
+
+\hypertarget{class_main_handler_a38f1d4046c78ae3253bd613f2bc3edc4}{}\index{Main\+Handler@{Main\+Handler}!compounds@{compounds}}
+\index{compounds@{compounds}!Main\+Handler@{Main\+Handler}}
+\subsubsection[{compounds() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Compound\+Iterator} $\ast$ Main\+Handler\+::compounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_main_handler_a38f1d4046c78ae3253bd613f2bc3edc4}
+Returns an iterator that can be used to iterate over the list of compounds found in the project. 
+
+Implémente \hyperlink{class_i_doxygen_ad6bef278ea486b463323b2be87990a67}{I\+Doxygen}.
+
+\hypertarget{class_main_handler_a0994106c1d348299b85539d6a135a1ec}{}\index{Main\+Handler@{Main\+Handler}!dump@{dump}}
+\index{dump@{dump}!Main\+Handler@{Main\+Handler}}
+\subsubsection[{dump()}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Handler\+::dump (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_main_handler_a0994106c1d348299b85539d6a135a1ec}
+\hypertarget{class_main_handler_ad2cc00ab16466ec886ef5f54defd2194}{}\index{Main\+Handler@{Main\+Handler}!end\+Member@{end\+Member}}
+\index{end\+Member@{end\+Member}!Main\+Handler@{Main\+Handler}}
+\subsubsection[{end\+Member()}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Handler\+::end\+Member (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_main_handler_ad2cc00ab16466ec886ef5f54defd2194}
+\hypertarget{class_main_handler_a6ba079fd62d9a24ec7b3ddf3be2f2d9b}{}\index{Main\+Handler@{Main\+Handler}!end\+Name@{end\+Name}}
+\index{end\+Name@{end\+Name}!Main\+Handler@{Main\+Handler}}
+\subsubsection[{end\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Handler\+::end\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_main_handler_a6ba079fd62d9a24ec7b3ddf3be2f2d9b}
+\hypertarget{class_main_handler_a7924b35d39533fd0136ecc585eeac120}{}\index{Main\+Handler@{Main\+Handler}!member\+By\+Id@{member\+By\+Id}}
+\index{member\+By\+Id@{member\+By\+Id}!Main\+Handler@{Main\+Handler}}
+\subsubsection[{member\+By\+Id(const char $\ast$id) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Compound} $\ast$ Main\+Handler\+::member\+By\+Id (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_main_handler_a7924b35d39533fd0136ecc585eeac120}
+Returns an interface to a compound containing a member given it the member\textquotesingle{}s id. Given the \hyperlink{class_i_compound}{I\+Compound} interface one can use the same id to obtain the \hyperlink{class_i_member}{I\+Member} interface. 
+\begin{DoxyParams}{Paramètres}
+{\em id} & The member id. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_i_doxygen_acdc5189b5001911bc9f36cdc7a247617}{I\+Doxygen}.
+
+\hypertarget{class_main_handler_a2f22677c80c656599044358c1dee1c29}{}\index{Main\+Handler@{Main\+Handler}!member\+By\+Name@{member\+By\+Name}}
+\index{member\+By\+Name@{member\+By\+Name}!Main\+Handler@{Main\+Handler}}
+\subsubsection[{member\+By\+Name(const char $\ast$name) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Compound\+Iterator} $\ast$ Main\+Handler\+::member\+By\+Name (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_main_handler_a2f22677c80c656599044358c1dee1c29}
+Returns a list of all compounds containing at least one members with a certain name. Each compound can be asked to return the list of members with that name. 
+\begin{DoxyParams}{Paramètres}
+{\em name} & The name of the member. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_i_doxygen_af80f63c939655a2b1fa715f0ff6b1f39}{I\+Doxygen}.
+
+\hypertarget{class_main_handler_a09e7e0c5e69be2b2aa5dc91cb77721d8}{}\index{Main\+Handler@{Main\+Handler}!read\+X\+M\+L\+Dir@{read\+X\+M\+L\+Dir}}
+\index{read\+X\+M\+L\+Dir@{read\+X\+M\+L\+Dir}!Main\+Handler@{Main\+Handler}}
+\subsubsection[{read\+X\+M\+L\+Dir(const char $\ast$dir\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Main\+Handler\+::read\+X\+M\+L\+Dir (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{xml\+Dir\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_main_handler_a09e7e0c5e69be2b2aa5dc91cb77721d8}
+Reads an X\+M\+L directory produced by doxygen and builds up a data structure representing the contents of the X\+M\+L files in the directory. 
+
+Implémente \hyperlink{class_i_doxygen_a7959d93fba77caddee37b6d8370c10f0}{I\+Doxygen}.
+
+\hypertarget{class_main_handler_a1f9507df93308fe3002cc2d97bd8c8be}{}\index{Main\+Handler@{Main\+Handler}!release@{release}}
+\index{release@{release}!Main\+Handler@{Main\+Handler}}
+\subsubsection[{release()}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Handler\+::release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_main_handler_a1f9507df93308fe3002cc2d97bd8c8be}
+Releases the memory for the object hierarchy obtained by created\+Objec\+Model\+From\+X\+M\+L(). First release all iterators before calling this function. 
+
+Implémente \hyperlink{class_i_doxygen_a6865961012ad8e6c19b7575488046045}{I\+Doxygen}.
+
+\hypertarget{class_main_handler_a4856c87039eb9235d0fa7e10d8912e55}{}\index{Main\+Handler@{Main\+Handler}!set\+Debug\+Level@{set\+Debug\+Level}}
+\index{set\+Debug\+Level@{set\+Debug\+Level}!Main\+Handler@{Main\+Handler}}
+\subsubsection[{set\+Debug\+Level(int level)}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Handler\+::set\+Debug\+Level (
+\begin{DoxyParamCaption}
+\item[{int}]{level}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_main_handler_a4856c87039eb9235d0fa7e10d8912e55}
+Sets the debug level.
+\begin{DoxyItemize}
+\item 0 all debugging messages are disabled (the default).
+\item 1 display important messages only
+\item 2 display any messages. 
+\end{DoxyItemize}
+
+Implémente \hyperlink{class_i_doxygen_ae8e3759ffc6d64684dc500855f6fead6}{I\+Doxygen}.
+
+\hypertarget{class_main_handler_a812f82b37136d4c2aa5a96cbd29f8c50}{}\index{Main\+Handler@{Main\+Handler}!start\+Compound@{start\+Compound}}
+\index{start\+Compound@{start\+Compound}!Main\+Handler@{Main\+Handler}}
+\subsubsection[{start\+Compound(const Q\+Xml\+Attributes \&attrib)}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Handler\+::start\+Compound (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Xml\+Attributes} \&}]{attrib}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_main_handler_a812f82b37136d4c2aa5a96cbd29f8c50}
+\hypertarget{class_main_handler_a5f3b574860236e5e5d157f6790ff794e}{}\index{Main\+Handler@{Main\+Handler}!start\+Member@{start\+Member}}
+\index{start\+Member@{start\+Member}!Main\+Handler@{Main\+Handler}}
+\subsubsection[{start\+Member(const Q\+Xml\+Attributes \&attrib)}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Handler\+::start\+Member (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Xml\+Attributes} \&}]{attrib}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_main_handler_a5f3b574860236e5e5d157f6790ff794e}
+\hypertarget{class_main_handler_ab21db32d56079b731441c961cf182613}{}\index{Main\+Handler@{Main\+Handler}!start\+Name@{start\+Name}}
+\index{start\+Name@{start\+Name}!Main\+Handler@{Main\+Handler}}
+\subsubsection[{start\+Name(const Q\+Xml\+Attributes \&attrib)}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Handler\+::start\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Xml\+Attributes} \&}]{attrib}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_main_handler_ab21db32d56079b731441c961cf182613}
+\hypertarget{class_main_handler_ad937ec7a5c9da61ca1c96af46402abb9}{}\index{Main\+Handler@{Main\+Handler}!unload\+Compound@{unload\+Compound}}
+\index{unload\+Compound@{unload\+Compound}!Main\+Handler@{Main\+Handler}}
+\subsubsection[{unload\+Compound(\+Compound\+Handler $\ast$ch)}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Handler\+::unload\+Compound (
+\begin{DoxyParamCaption}
+\item[{{\bf Compound\+Handler} $\ast$}]{ch}
+\end{DoxyParamCaption}
+)}\label{class_main_handler_ad937ec7a5c9da61ca1c96af46402abb9}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+addon/doxmlparser/src/\hyperlink{mainhandler_8h}{mainhandler.\+h}\item 
+addon/doxmlparser/src/\hyperlink{mainhandler_8cpp}{mainhandler.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,461 @@
+\hypertarget{qcstring_8h}{}\section{Référence du fichier qtools/qcstring.h}
+\label{qcstring_8h}\index{qtools/qcstring.\+h@{qtools/qcstring.\+h}}
+{\ttfamily \#include \char`\"{}qarray.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_q_c_string}{Q\+C\+String}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{qcstring_8h_a307ffe8cbc4a4aa695900441d1df49f3}{qsnprintf}~snprintf
+\item 
+\#define \hyperlink{qcstring_8h_a97298722eedb753e63ca6742d6d07dea}{S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y}~((int)sizeof(Long\+String\+Rep)-\/2)
+\item 
+\#define \hyperlink{qcstring_8h_a69447209d7f2cddba2a793b76f204241}{S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N}~(\hyperlink{qcstring_8h_a97298722eedb753e63ca6742d6d07dea}{S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y}-\/1)
+\end{DoxyCompactItemize}
+\subsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_q_array}{Q\+Array}$<$ char $>$ \hyperlink{qcstring_8h_ad6a390648110655c217fe072d45fbcf5}{Q\+Byte\+Array}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} void $\ast$ \hyperlink{qcstring_8h_a944600487043e0f8c74259f1fa0ef232}{qmemmove} (void $\ast$dst, const void $\ast$src, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} char $\ast$ \hyperlink{qcstring_8h_acaa15bb9a4e2e699f478a9b60265484d}{qstrdup} (const char $\ast$)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{qcstring_8h_a0ac7321cd7738581d3cfb49117fd98e4}{cstrlen} (const char $\ast$str)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{qcstring_8h_a3b643fd7b6ac80bd23e29c3d3d907a82}{qstrlen} (const char $\ast$str)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} char $\ast$ \hyperlink{qcstring_8h_a8a70e4291ce9774baf9609b6642a508b}{cstrcpy} (char $\ast$dst, const char $\ast$src)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} char $\ast$ \hyperlink{qcstring_8h_aaba87b5dd98d6f0206ceb045a06a7fa9}{qstrcpy} (char $\ast$dst, const char $\ast$src)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} char $\ast$ \hyperlink{qcstring_8h_ae99f3bebc16781f6691744c46f21d2eb}{qstrncpy} (char $\ast$src, const char $\ast$dst, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} int \hyperlink{qcstring_8h_a0df5fcc9d1ad4b5e11fdce5baacb3797}{cstrcmp} (const char $\ast$str1, const char $\ast$str2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} int \hyperlink{qcstring_8h_ac5db3f4187b090cd79a836d7a37f7f95}{qstrcmp} (const char $\ast$str1, const char $\ast$str2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} int \hyperlink{qcstring_8h_aaec8a544d60ff56b9066261b36485708}{cstrncmp} (const char $\ast$str1, const char $\ast$str2, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} int \hyperlink{qcstring_8h_ad8f2d3f8270302405ca8e92c771d176a}{qstrncmp} (const char $\ast$str1, const char $\ast$str2, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} int \hyperlink{qcstring_8h_a82d828f739142f9944344e27feb0c89e}{qstricmp} (const char $\ast$str1, const char $\ast$str2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} int \hyperlink{qcstring_8h_a6840c21df8a48c68b226ea249eb65948}{qstrnicmp} (const char $\ast$str1, const char $\ast$str2, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{qcstring_8h_a4488793154b7a3262d60bd9861a36cb4}{operator$<$$<$} (\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \&, const \hyperlink{qcstring_8h_ad6a390648110655c217fe072d45fbcf5}{Q\+Byte\+Array} \&)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{qcstring_8h_a91b589b39e13c54105e64f7d023c13d3}{operator$>$$>$} (\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \&, \hyperlink{qcstring_8h_ad6a390648110655c217fe072d45fbcf5}{Q\+Byte\+Array} \&)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{qcstring_8h_a562b07967d379d879bff171a6c3f545f}{operator$<$$<$} (\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \&, const \hyperlink{class_q_c_string}{Q\+C\+String} \&)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{qcstring_8h_abf59bce41f7440e1b484ced403991b61}{operator$>$$>$} (\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \&, \hyperlink{class_q_c_string}{Q\+C\+String} \&)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{qcstring_8h_a038e034207f8ecac4e83f3dfddbffaf5}{operator==} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&s1, const \hyperlink{class_q_c_string}{Q\+C\+String} \&s2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{qcstring_8h_a6d9b15d48dcad2c685771b44f6b8f706}{operator==} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&s1, const char $\ast$s2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{qcstring_8h_adcf5722d28cb5b53bf2252cd4adeac5f}{operator==} (const char $\ast$s1, const \hyperlink{class_q_c_string}{Q\+C\+String} \&s2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{qcstring_8h_a43c637deb5ce5731dc590281cf9fa879}{operator!=} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&s1, const \hyperlink{class_q_c_string}{Q\+C\+String} \&s2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{qcstring_8h_ab5502f1648fcfbc53156e6da9a6d1d80}{operator!=} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&s1, const char $\ast$s2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{qcstring_8h_a7805c8ce440a308c5edf1577f32d6574}{operator!=} (const char $\ast$s1, const \hyperlink{class_q_c_string}{Q\+C\+String} \&s2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{qcstring_8h_a3e0a83a12604cf2b7a2973a102ec41cf}{operator$<$} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&s1, const \hyperlink{class_q_c_string}{Q\+C\+String} \&s2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{qcstring_8h_a7b9759aa29a7ea3c3f9480c48b41d7d3}{operator$<$} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&s1, const char $\ast$s2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{qcstring_8h_af40e07fc3703c6c8e8f64d11483bb10d}{operator$<$} (const char $\ast$s1, const \hyperlink{class_q_c_string}{Q\+C\+String} \&s2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{qcstring_8h_a4b3a9757382b214d71921f035305875e}{operator$<$=} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&s1, const char $\ast$s2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{qcstring_8h_a031d407422e3b77ae9d9121f8ad66b21}{operator$<$=} (const char $\ast$s1, const \hyperlink{class_q_c_string}{Q\+C\+String} \&s2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{qcstring_8h_a40f19275f668e0665d7cb32d31a1ab5d}{operator$>$} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&s1, const char $\ast$s2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{qcstring_8h_a3319af18625c044a4d8c78c96130cf44}{operator$>$} (const char $\ast$s1, const \hyperlink{class_q_c_string}{Q\+C\+String} \&s2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{qcstring_8h_ad18b515d9d63b03d71f8b7a50cdaad2a}{operator$>$=} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&s1, const char $\ast$s2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{qcstring_8h_a82b63d511c07959b723ea557aec4c937}{operator$>$=} (const char $\ast$s1, const \hyperlink{class_q_c_string}{Q\+C\+String} \&s2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{qcstring_8h_a754417ec687814d7d2d5ac264302c7a3}{operator+} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&s1, const \hyperlink{class_q_c_string}{Q\+C\+String} \&s2)
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{qcstring_8h_a5fb5736e56e0c7707364330ddb9e1f1a}{operator+} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&s1, const \hyperlink{class_q_g_string}{Q\+G\+String} \&s2)
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{qcstring_8h_a566aa96c288112fd66cf8f42d06e2842}{operator+} (const \hyperlink{class_q_g_string}{Q\+G\+String} \&s1, const \hyperlink{class_q_c_string}{Q\+C\+String} \&s2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{qcstring_8h_a124ae9e8c5fcb4b6ea465803f6df4209}{operator+} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&s1, const char $\ast$s2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{qcstring_8h_ac1fd8e60c123853a6b6b0d5fb429aa40}{operator+} (const char $\ast$s1, const \hyperlink{class_q_c_string}{Q\+C\+String} \&s2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{qcstring_8h_ad8841cde8d24c71fb6857d16fd4eea22}{operator+} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&s1, char c2)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{qcstring_8h_a0629af750bb13b7f95014cfa2dca44bb}{operator+} (char c1, const \hyperlink{class_q_c_string}{Q\+C\+String} \&s2)
+\item 
+const char $\ast$ \hyperlink{qcstring_8h_a890ee170378f24ba7c44f92c35ec95ce}{q\+Print} (const char $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+const char $\ast$ \hyperlink{qcstring_8h_a8067ba5e6bcf39e4a7f87bef2b9d8d87}{q\+Print} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{qcstring_8h_a307ffe8cbc4a4aa695900441d1df49f3}{}\index{qcstring.\+h@{qcstring.\+h}!qsnprintf@{qsnprintf}}
+\index{qsnprintf@{qsnprintf}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{qsnprintf}]{\setlength{\rightskip}{0pt plus 5cm}\#define qsnprintf~snprintf}\label{qcstring_8h_a307ffe8cbc4a4aa695900441d1df49f3}
+\hypertarget{qcstring_8h_a97298722eedb753e63ca6742d6d07dea}{}\index{qcstring.\+h@{qcstring.\+h}!S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y@{S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y}}
+\index{S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y@{S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y~((int)sizeof(Long\+String\+Rep)-\/2)}\label{qcstring_8h_a97298722eedb753e63ca6742d6d07dea}
+\hypertarget{qcstring_8h_a69447209d7f2cddba2a793b76f204241}{}\index{qcstring.\+h@{qcstring.\+h}!S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N@{S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N}}
+\index{S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N@{S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N~({\bf S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y}-\/1)}\label{qcstring_8h_a69447209d7f2cddba2a793b76f204241}
+
+
+\subsection{Documentation des définitions de type}
+\hypertarget{qcstring_8h_ad6a390648110655c217fe072d45fbcf5}{}\index{qcstring.\+h@{qcstring.\+h}!Q\+Byte\+Array@{Q\+Byte\+Array}}
+\index{Q\+Byte\+Array@{Q\+Byte\+Array}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{Q\+Byte\+Array}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Q\+Array}$<$char$>$ {\bf Q\+Byte\+Array}}\label{qcstring_8h_ad6a390648110655c217fe072d45fbcf5}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{qcstring_8h_a0df5fcc9d1ad4b5e11fdce5baacb3797}{}\index{qcstring.\+h@{qcstring.\+h}!cstrcmp@{cstrcmp}}
+\index{cstrcmp@{cstrcmp}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{cstrcmp(const char $\ast$str1, const char $\ast$str2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} int cstrcmp (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str1, }
+\item[{const char $\ast$}]{str2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a0df5fcc9d1ad4b5e11fdce5baacb3797}
+\hypertarget{qcstring_8h_a8a70e4291ce9774baf9609b6642a508b}{}\index{qcstring.\+h@{qcstring.\+h}!cstrcpy@{cstrcpy}}
+\index{cstrcpy@{cstrcpy}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{cstrcpy(char $\ast$dst, const char $\ast$src)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} char$\ast$ cstrcpy (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dst, }
+\item[{const char $\ast$}]{src}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a8a70e4291ce9774baf9609b6642a508b}
+\hypertarget{qcstring_8h_a0ac7321cd7738581d3cfb49117fd98e4}{}\index{qcstring.\+h@{qcstring.\+h}!cstrlen@{cstrlen}}
+\index{cstrlen@{cstrlen}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{cstrlen(const char $\ast$str)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf uint} cstrlen (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a0ac7321cd7738581d3cfb49117fd98e4}
+\hypertarget{qcstring_8h_aaec8a544d60ff56b9066261b36485708}{}\index{qcstring.\+h@{qcstring.\+h}!cstrncmp@{cstrncmp}}
+\index{cstrncmp@{cstrncmp}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{cstrncmp(const char $\ast$str1, const char $\ast$str2, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} int cstrncmp (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str1, }
+\item[{const char $\ast$}]{str2, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_aaec8a544d60ff56b9066261b36485708}
+\hypertarget{qcstring_8h_a43c637deb5ce5731dc590281cf9fa879}{}\index{qcstring.\+h@{qcstring.\+h}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator"!=(const Q\+C\+String \&s1, const Q\+C\+String \&s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf bool} operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s1, }
+\item[{const {\bf Q\+C\+String} \&}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a43c637deb5ce5731dc590281cf9fa879}
+\hypertarget{qcstring_8h_ab5502f1648fcfbc53156e6da9a6d1d80}{}\index{qcstring.\+h@{qcstring.\+h}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator"!=(const Q\+C\+String \&s1, const char $\ast$s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf bool} operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s1, }
+\item[{const char $\ast$}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_ab5502f1648fcfbc53156e6da9a6d1d80}
+\hypertarget{qcstring_8h_a7805c8ce440a308c5edf1577f32d6574}{}\index{qcstring.\+h@{qcstring.\+h}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator"!=(const char $\ast$s1, const Q\+C\+String \&s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf bool} operator!= (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s1, }
+\item[{const {\bf Q\+C\+String} \&}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a7805c8ce440a308c5edf1577f32d6574}
+\hypertarget{qcstring_8h_a754417ec687814d7d2d5ac264302c7a3}{}\index{qcstring.\+h@{qcstring.\+h}!operator+@{operator+}}
+\index{operator+@{operator+}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator+(const Q\+C\+String \&s1, const Q\+C\+String \&s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf Q\+C\+String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s1, }
+\item[{const {\bf Q\+C\+String} \&}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a754417ec687814d7d2d5ac264302c7a3}
+\hypertarget{qcstring_8h_a5fb5736e56e0c7707364330ddb9e1f1a}{}\index{qcstring.\+h@{qcstring.\+h}!operator+@{operator+}}
+\index{operator+@{operator+}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator+(const Q\+C\+String \&s1, const Q\+G\+String \&s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s1, }
+\item[{const {\bf Q\+G\+String} \&}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a5fb5736e56e0c7707364330ddb9e1f1a}
+\hypertarget{qcstring_8h_a566aa96c288112fd66cf8f42d06e2842}{}\index{qcstring.\+h@{qcstring.\+h}!operator+@{operator+}}
+\index{operator+@{operator+}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator+(const Q\+G\+String \&s1, const Q\+C\+String \&s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+G\+String} \&}]{s1, }
+\item[{const {\bf Q\+C\+String} \&}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a566aa96c288112fd66cf8f42d06e2842}
+\hypertarget{qcstring_8h_a124ae9e8c5fcb4b6ea465803f6df4209}{}\index{qcstring.\+h@{qcstring.\+h}!operator+@{operator+}}
+\index{operator+@{operator+}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator+(const Q\+C\+String \&s1, const char $\ast$s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf Q\+C\+String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s1, }
+\item[{const char $\ast$}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a124ae9e8c5fcb4b6ea465803f6df4209}
+\hypertarget{qcstring_8h_ac1fd8e60c123853a6b6b0d5fb429aa40}{}\index{qcstring.\+h@{qcstring.\+h}!operator+@{operator+}}
+\index{operator+@{operator+}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator+(const char $\ast$s1, const Q\+C\+String \&s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf Q\+C\+String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s1, }
+\item[{const {\bf Q\+C\+String} \&}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_ac1fd8e60c123853a6b6b0d5fb429aa40}
+\hypertarget{qcstring_8h_ad8841cde8d24c71fb6857d16fd4eea22}{}\index{qcstring.\+h@{qcstring.\+h}!operator+@{operator+}}
+\index{operator+@{operator+}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator+(const Q\+C\+String \&s1, char c2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf Q\+C\+String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s1, }
+\item[{char}]{c2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_ad8841cde8d24c71fb6857d16fd4eea22}
+\hypertarget{qcstring_8h_a0629af750bb13b7f95014cfa2dca44bb}{}\index{qcstring.\+h@{qcstring.\+h}!operator+@{operator+}}
+\index{operator+@{operator+}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator+(char c1, const Q\+C\+String \&s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf Q\+C\+String} operator+ (
+\begin{DoxyParamCaption}
+\item[{char}]{c1, }
+\item[{const {\bf Q\+C\+String} \&}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a0629af750bb13b7f95014cfa2dca44bb}
+\hypertarget{qcstring_8h_a3e0a83a12604cf2b7a2973a102ec41cf}{}\index{qcstring.\+h@{qcstring.\+h}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator$<$(const Q\+C\+String \&s1, const Q\+C\+String \&s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf bool} operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s1, }
+\item[{const {\bf Q\+C\+String} \&}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a3e0a83a12604cf2b7a2973a102ec41cf}
+\hypertarget{qcstring_8h_a7b9759aa29a7ea3c3f9480c48b41d7d3}{}\index{qcstring.\+h@{qcstring.\+h}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator$<$(const Q\+C\+String \&s1, const char $\ast$s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf bool} operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s1, }
+\item[{const char $\ast$}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a7b9759aa29a7ea3c3f9480c48b41d7d3}
+\hypertarget{qcstring_8h_af40e07fc3703c6c8e8f64d11483bb10d}{}\index{qcstring.\+h@{qcstring.\+h}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator$<$(const char $\ast$s1, const Q\+C\+String \&s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf bool} operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s1, }
+\item[{const {\bf Q\+C\+String} \&}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_af40e07fc3703c6c8e8f64d11483bb10d}
+\hypertarget{qcstring_8h_a4488793154b7a3262d60bd9861a36cb4}{}\index{qcstring.\+h@{qcstring.\+h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator$<$$<$(\+Q\+Data\+Stream \&, const Q\+Byte\+Array \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf Q\+Data\+Stream}\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Data\+Stream} \&}]{, }
+\item[{const {\bf Q\+Byte\+Array} \&}]{}
+\end{DoxyParamCaption}
+)}\label{qcstring_8h_a4488793154b7a3262d60bd9861a36cb4}
+\hypertarget{qcstring_8h_a562b07967d379d879bff171a6c3f545f}{}\index{qcstring.\+h@{qcstring.\+h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator$<$$<$(\+Q\+Data\+Stream \&, const Q\+C\+String \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf Q\+Data\+Stream}\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Data\+Stream} \&}]{, }
+\item[{const {\bf Q\+C\+String} \&}]{}
+\end{DoxyParamCaption}
+)}\label{qcstring_8h_a562b07967d379d879bff171a6c3f545f}
+\hypertarget{qcstring_8h_a4b3a9757382b214d71921f035305875e}{}\index{qcstring.\+h@{qcstring.\+h}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator$<$=(const Q\+C\+String \&s1, const char $\ast$s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf bool} operator$<$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s1, }
+\item[{const char $\ast$}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a4b3a9757382b214d71921f035305875e}
+\hypertarget{qcstring_8h_a031d407422e3b77ae9d9121f8ad66b21}{}\index{qcstring.\+h@{qcstring.\+h}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator$<$=(const char $\ast$s1, const Q\+C\+String \&s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf bool} operator$<$= (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s1, }
+\item[{const {\bf Q\+C\+String} \&}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a031d407422e3b77ae9d9121f8ad66b21}
+\hypertarget{qcstring_8h_a038e034207f8ecac4e83f3dfddbffaf5}{}\index{qcstring.\+h@{qcstring.\+h}!operator==@{operator==}}
+\index{operator==@{operator==}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator==(const Q\+C\+String \&s1, const Q\+C\+String \&s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf bool} operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s1, }
+\item[{const {\bf Q\+C\+String} \&}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a038e034207f8ecac4e83f3dfddbffaf5}
+\hypertarget{qcstring_8h_a6d9b15d48dcad2c685771b44f6b8f706}{}\index{qcstring.\+h@{qcstring.\+h}!operator==@{operator==}}
+\index{operator==@{operator==}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator==(const Q\+C\+String \&s1, const char $\ast$s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf bool} operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s1, }
+\item[{const char $\ast$}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a6d9b15d48dcad2c685771b44f6b8f706}
+\hypertarget{qcstring_8h_adcf5722d28cb5b53bf2252cd4adeac5f}{}\index{qcstring.\+h@{qcstring.\+h}!operator==@{operator==}}
+\index{operator==@{operator==}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator==(const char $\ast$s1, const Q\+C\+String \&s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf bool} operator== (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s1, }
+\item[{const {\bf Q\+C\+String} \&}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_adcf5722d28cb5b53bf2252cd4adeac5f}
+\hypertarget{qcstring_8h_a40f19275f668e0665d7cb32d31a1ab5d}{}\index{qcstring.\+h@{qcstring.\+h}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator$>$(const Q\+C\+String \&s1, const char $\ast$s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf bool} operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s1, }
+\item[{const char $\ast$}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a40f19275f668e0665d7cb32d31a1ab5d}
+\hypertarget{qcstring_8h_a3319af18625c044a4d8c78c96130cf44}{}\index{qcstring.\+h@{qcstring.\+h}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator$>$(const char $\ast$s1, const Q\+C\+String \&s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf bool} operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s1, }
+\item[{const {\bf Q\+C\+String} \&}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a3319af18625c044a4d8c78c96130cf44}
+\hypertarget{qcstring_8h_ad18b515d9d63b03d71f8b7a50cdaad2a}{}\index{qcstring.\+h@{qcstring.\+h}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator$>$=(const Q\+C\+String \&s1, const char $\ast$s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf bool} operator$>$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s1, }
+\item[{const char $\ast$}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_ad18b515d9d63b03d71f8b7a50cdaad2a}
+\hypertarget{qcstring_8h_a82b63d511c07959b723ea557aec4c937}{}\index{qcstring.\+h@{qcstring.\+h}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator$>$=(const char $\ast$s1, const Q\+C\+String \&s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf bool} operator$>$= (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s1, }
+\item[{const {\bf Q\+C\+String} \&}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a82b63d511c07959b723ea557aec4c937}
+\hypertarget{qcstring_8h_a91b589b39e13c54105e64f7d023c13d3}{}\index{qcstring.\+h@{qcstring.\+h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator$>$$>$(\+Q\+Data\+Stream \&, Q\+Byte\+Array \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf Q\+Data\+Stream}\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Data\+Stream} \&}]{, }
+\item[{{\bf Q\+Byte\+Array} \&}]{}
+\end{DoxyParamCaption}
+)}\label{qcstring_8h_a91b589b39e13c54105e64f7d023c13d3}
+\hypertarget{qcstring_8h_abf59bce41f7440e1b484ced403991b61}{}\index{qcstring.\+h@{qcstring.\+h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{operator$>$$>$(\+Q\+Data\+Stream \&, Q\+C\+String \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf Q\+Data\+Stream}\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Data\+Stream} \&}]{, }
+\item[{{\bf Q\+C\+String} \&}]{}
+\end{DoxyParamCaption}
+)}\label{qcstring_8h_abf59bce41f7440e1b484ced403991b61}
+\hypertarget{qcstring_8h_a944600487043e0f8c74259f1fa0ef232}{}\index{qcstring.\+h@{qcstring.\+h}!qmemmove@{qmemmove}}
+\index{qmemmove@{qmemmove}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{qmemmove(void $\ast$dst, const void $\ast$src, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} void$\ast$ qmemmove (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{dst, }
+\item[{const void $\ast$}]{src, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)}\label{qcstring_8h_a944600487043e0f8c74259f1fa0ef232}
+\hypertarget{qcstring_8h_a890ee170378f24ba7c44f92c35ec95ce}{}\index{qcstring.\+h@{qcstring.\+h}!q\+Print@{q\+Print}}
+\index{q\+Print@{q\+Print}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{q\+Print(const char $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ q\+Print (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a890ee170378f24ba7c44f92c35ec95ce}
+\hypertarget{qcstring_8h_a8067ba5e6bcf39e4a7f87bef2b9d8d87}{}\index{qcstring.\+h@{qcstring.\+h}!q\+Print@{q\+Print}}
+\index{q\+Print@{q\+Print}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{q\+Print(const Q\+C\+String \&s)}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ q\+Print (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a8067ba5e6bcf39e4a7f87bef2b9d8d87}
+\hypertarget{qcstring_8h_ac5db3f4187b090cd79a836d7a37f7f95}{}\index{qcstring.\+h@{qcstring.\+h}!qstrcmp@{qstrcmp}}
+\index{qstrcmp@{qstrcmp}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{qstrcmp(const char $\ast$str1, const char $\ast$str2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} int qstrcmp (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str1, }
+\item[{const char $\ast$}]{str2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_ac5db3f4187b090cd79a836d7a37f7f95}
+\hypertarget{qcstring_8h_aaba87b5dd98d6f0206ceb045a06a7fa9}{}\index{qcstring.\+h@{qcstring.\+h}!qstrcpy@{qstrcpy}}
+\index{qstrcpy@{qstrcpy}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{qstrcpy(char $\ast$dst, const char $\ast$src)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} char$\ast$ qstrcpy (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dst, }
+\item[{const char $\ast$}]{src}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_aaba87b5dd98d6f0206ceb045a06a7fa9}
+\hypertarget{qcstring_8h_acaa15bb9a4e2e699f478a9b60265484d}{}\index{qcstring.\+h@{qcstring.\+h}!qstrdup@{qstrdup}}
+\index{qstrdup@{qstrdup}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{qstrdup(const char $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} char$\ast$ qstrdup (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{qcstring_8h_acaa15bb9a4e2e699f478a9b60265484d}
+\hypertarget{qcstring_8h_a82d828f739142f9944344e27feb0c89e}{}\index{qcstring.\+h@{qcstring.\+h}!qstricmp@{qstricmp}}
+\index{qstricmp@{qstricmp}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{qstricmp(const char $\ast$str1, const char $\ast$str2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} int qstricmp (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str1, }
+\item[{const char $\ast$}]{str2}
+\end{DoxyParamCaption}
+)}\label{qcstring_8h_a82d828f739142f9944344e27feb0c89e}
+\hypertarget{qcstring_8h_a3b643fd7b6ac80bd23e29c3d3d907a82}{}\index{qcstring.\+h@{qcstring.\+h}!qstrlen@{qstrlen}}
+\index{qstrlen@{qstrlen}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{qstrlen(const char $\ast$str)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} {\bf uint} qstrlen (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_a3b643fd7b6ac80bd23e29c3d3d907a82}
+\hypertarget{qcstring_8h_ad8f2d3f8270302405ca8e92c771d176a}{}\index{qcstring.\+h@{qcstring.\+h}!qstrncmp@{qstrncmp}}
+\index{qstrncmp@{qstrncmp}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{qstrncmp(const char $\ast$str1, const char $\ast$str2, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} int qstrncmp (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str1, }
+\item[{const char $\ast$}]{str2, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8h_ad8f2d3f8270302405ca8e92c771d176a}
+\hypertarget{qcstring_8h_ae99f3bebc16781f6691744c46f21d2eb}{}\index{qcstring.\+h@{qcstring.\+h}!qstrncpy@{qstrncpy}}
+\index{qstrncpy@{qstrncpy}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{qstrncpy(char $\ast$src, const char $\ast$dst, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} char$\ast$ qstrncpy (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{src, }
+\item[{const char $\ast$}]{dst, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)}\label{qcstring_8h_ae99f3bebc16781f6691744c46f21d2eb}
+\hypertarget{qcstring_8h_a6840c21df8a48c68b226ea249eb65948}{}\index{qcstring.\+h@{qcstring.\+h}!qstrnicmp@{qstrnicmp}}
+\index{qstrnicmp@{qstrnicmp}!qcstring.\+h@{qcstring.\+h}}
+\subsubsection[{qstrnicmp(const char $\ast$str1, const char $\ast$str2, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+E\+X\+P\+O\+R\+T} int qstrnicmp (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str1, }
+\item[{const char $\ast$}]{str2, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)}\label{qcstring_8h_a6840c21df8a48c68b226ea249eb65948}

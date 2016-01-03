@@ -1,0 +1,75 @@
+\hypertarget{class_q_text_i_stream}{}\section{Référence de la classe Q\+Text\+I\+Stream}
+\label{class_q_text_i_stream}\index{Q\+Text\+I\+Stream@{Q\+Text\+I\+Stream}}
+
+
+\hyperlink{class_a}{A} convenience class for input streams.  
+
+
+
+
+{\ttfamily \#include $<$qtextstream.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Q\+Text\+I\+Stream\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_text_i_stream}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_text_i_stream_ab28dbfb8b102119b18d71bb9676863e4}{Q\+Text\+I\+Stream} (\hyperlink{class_q_string}{Q\+String} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_q_text_i_stream_a4b612259aaacfd1d63d30f7a1f8f92dc}{Q\+Text\+I\+Stream} (\hyperlink{qcstring_8h_ad6a390648110655c217fe072d45fbcf5}{Q\+Byte\+Array} ba)
+\item 
+\hyperlink{class_q_text_i_stream_a1b287a75019206027b1d7fd7f175600e}{Q\+Text\+I\+Stream} (F\+I\+L\+E $\ast$\hyperlink{060__command__switch_8tcl_af6830d2c644b45088ea8f1f74a46b778}{f})
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+\hyperlink{class_a}{A} convenience class for input streams. 
+
+For simple tasks, code should be simple. Hence this class is a shorthand to avoid passing the {\itshape mode} argument to the normal \hyperlink{class_q_text_stream}{Q\+Text\+Stream} constructors.
+
+This makes it easy for example, to write things like this\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_string}{QString} data = \textcolor{stringliteral}{"123 456"};
+\textcolor{keywordtype}{int} \hyperlink{058__bracket__recursion_8tcl_ab08ae027fc5777bc4f0629f1b60b35db}{a}, b;
+\hyperlink{class_q_text_i_stream_ab28dbfb8b102119b18d71bb9676863e4}{QTextIStream}(&data) >> a >> b;
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_text_o_stream}{Q\+Text\+O\+Stream} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_text_i_stream_ab28dbfb8b102119b18d71bb9676863e4}{}\index{Q\+Text\+I\+Stream@{Q\+Text\+I\+Stream}!Q\+Text\+I\+Stream@{Q\+Text\+I\+Stream}}
+\index{Q\+Text\+I\+Stream@{Q\+Text\+I\+Stream}!Q\+Text\+I\+Stream@{Q\+Text\+I\+Stream}}
+\subsubsection[{Q\+Text\+I\+Stream(\+Q\+String $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Text\+I\+Stream\+::\+Q\+Text\+I\+Stream (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+String} $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_i_stream_ab28dbfb8b102119b18d71bb9676863e4}
+Constructs a stream to read from string {\itshape s}. \hypertarget{class_q_text_i_stream_a4b612259aaacfd1d63d30f7a1f8f92dc}{}\index{Q\+Text\+I\+Stream@{Q\+Text\+I\+Stream}!Q\+Text\+I\+Stream@{Q\+Text\+I\+Stream}}
+\index{Q\+Text\+I\+Stream@{Q\+Text\+I\+Stream}!Q\+Text\+I\+Stream@{Q\+Text\+I\+Stream}}
+\subsubsection[{Q\+Text\+I\+Stream(\+Q\+Byte\+Array ba)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Text\+I\+Stream\+::\+Q\+Text\+I\+Stream (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Byte\+Array}}]{ba}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_i_stream_a4b612259aaacfd1d63d30f7a1f8f92dc}
+Constructs a stream to read from the array {\itshape ba}. \hypertarget{class_q_text_i_stream_a1b287a75019206027b1d7fd7f175600e}{}\index{Q\+Text\+I\+Stream@{Q\+Text\+I\+Stream}!Q\+Text\+I\+Stream@{Q\+Text\+I\+Stream}}
+\index{Q\+Text\+I\+Stream@{Q\+Text\+I\+Stream}!Q\+Text\+I\+Stream@{Q\+Text\+I\+Stream}}
+\subsubsection[{Q\+Text\+I\+Stream(\+F\+I\+L\+E $\ast$f)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Text\+I\+Stream\+::\+Q\+Text\+I\+Stream (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_i_stream_a1b287a75019206027b1d7fd7f175600e}
+Constructs a stream to read from the file {\itshape f}. 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qtextstream_8h}{qtextstream.\+h}\item 
+qtools/\hyperlink{qtextstream_8cpp}{qtextstream.\+cpp}\end{DoxyCompactItemize}

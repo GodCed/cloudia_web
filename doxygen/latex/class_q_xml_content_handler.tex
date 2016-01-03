@@ -1,0 +1,298 @@
+\hypertarget{class_q_xml_content_handler}{}\section{Référence de la classe Q\+Xml\+Content\+Handler}
+\label{class_q_xml_content_handler}\index{Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}}
+
+
+The \hyperlink{class_q_xml_content_handler}{Q\+Xml\+Content\+Handler} class provides an interface to report logical content of X\+M\+L data.  
+
+
+
+
+{\ttfamily \#include $<$qxml.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Q\+Xml\+Content\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_q_xml_content_handler}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_q_xml_content_handler_a217939b7d7636fb8d52b415a890939a3}{$\sim$\+Q\+Xml\+Content\+Handler} ()
+\item 
+virtual void \hyperlink{class_q_xml_content_handler_a89863bd9a6372d3d73086aa99107bca7}{set\+Document\+Locator} (\hyperlink{class_q_xml_locator}{Q\+Xml\+Locator} $\ast$locator)=0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_xml_content_handler_aaca36268e66c9a56257e38bce18ae4d2}{start\+Document} ()=0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_xml_content_handler_a534bd1e4627e65340eb17d90d1ab1c12}{end\+Document} ()=0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_xml_content_handler_acdf18588f1980d19d12efd025a5f5cc9}{start\+Prefix\+Mapping} (const \hyperlink{class_q_string}{Q\+String} \&prefix, const \hyperlink{class_q_string}{Q\+String} \&uri)=0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_xml_content_handler_a1c7f3e794c2e763e043eef3229ccf034}{end\+Prefix\+Mapping} (const \hyperlink{class_q_string}{Q\+String} \&prefix)=0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_xml_content_handler_af6d4e631fad2b9b75622c95003b1da55}{start\+Element} (const \hyperlink{class_q_string}{Q\+String} \&namespace\+U\+R\+I, const \hyperlink{class_q_string}{Q\+String} \&local\+Name, const \hyperlink{class_q_string}{Q\+String} \&q\+Name, const \hyperlink{class_q_xml_attributes}{Q\+Xml\+Attributes} \&atts)=0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_xml_content_handler_af0abc06326798a6e522f91e6174b7b9e}{end\+Element} (const \hyperlink{class_q_string}{Q\+String} \&namespace\+U\+R\+I, const \hyperlink{class_q_string}{Q\+String} \&local\+Name, const \hyperlink{class_q_string}{Q\+String} \&q\+Name)=0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_xml_content_handler_a3be0d440b48836560c8805e15d596eb1}{characters} (const \hyperlink{class_q_string}{Q\+String} \&ch)=0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_xml_content_handler_a58470bd94366833c79a3c60fb350d157}{ignorable\+Whitespace} (const \hyperlink{class_q_string}{Q\+String} \&ch)=0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_xml_content_handler_a520c875b64f2f06ec35001a5e50887c3}{processing\+Instruction} (const \hyperlink{class_q_string}{Q\+String} \&target, const \hyperlink{class_q_string}{Q\+String} \&data)=0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_xml_content_handler_ac3b27d569634c5d7a7fac001a6cc4845}{skipped\+Entity} (const \hyperlink{class_q_string}{Q\+String} \&name)=0
+\item 
+virtual \hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_xml_content_handler_adba96547bad1cf1b009dbfb7b7c571be}{error\+String} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+The \hyperlink{class_q_xml_content_handler}{Q\+Xml\+Content\+Handler} class provides an interface to report logical content of X\+M\+L data. 
+
+X\+M\+L
+
+If the application needs to be informed of basic parsing events, it implements this interface and sets it with \hyperlink{class_q_xml_reader_a767bc5a20ea120ffc2d60f5c42fb28cd}{Q\+Xml\+Reader\+::set\+Content\+Handler()}. The reader reports basic document-\/related events like the start and end of elements and character data through this interface.
+
+The order of events in this interface is very important, and mirrors the order of information in the document itself. For example, all of an element\textquotesingle{}s content (character data, processing instructions, and/or subelements) will appear, in order, between the \hyperlink{class_q_xml_content_handler_af6d4e631fad2b9b75622c95003b1da55}{start\+Element()} event and the corresponding \hyperlink{class_q_xml_content_handler_af0abc06326798a6e522f91e6174b7b9e}{end\+Element()} event.
+
+The class \hyperlink{class_q_xml_default_handler}{Q\+Xml\+Default\+Handler} gives a default implementation for this interface; subclassing from this class is very convenient if you want only be informed of some parsing events.
+
+See also the \href{xml.html#introSAX2}{\tt Introduction to S\+A\+X2}.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_xml_d_t_d_handler}{Q\+Xml\+D\+T\+D\+Handler} \hyperlink{class_q_xml_decl_handler}{Q\+Xml\+Decl\+Handler} \hyperlink{class_q_xml_entity_resolver}{Q\+Xml\+Entity\+Resolver} \hyperlink{class_q_xml_error_handler}{Q\+Xml\+Error\+Handler} \hyperlink{class_q_xml_lexical_handler}{Q\+Xml\+Lexical\+Handler} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_xml_content_handler_a217939b7d7636fb8d52b415a890939a3}{}\index{Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}!````~Q\+Xml\+Content\+Handler@{$\sim$\+Q\+Xml\+Content\+Handler}}
+\index{````~Q\+Xml\+Content\+Handler@{$\sim$\+Q\+Xml\+Content\+Handler}!Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}}
+\subsubsection[{$\sim$\+Q\+Xml\+Content\+Handler()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+Xml\+Content\+Handler\+::$\sim$\+Q\+Xml\+Content\+Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_q_xml_content_handler_a217939b7d7636fb8d52b415a890939a3}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_xml_content_handler_a3be0d440b48836560c8805e15d596eb1}{}\index{Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}!characters@{characters}}
+\index{characters@{characters}!Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}}
+\subsubsection[{characters(const Q\+String \&ch)=0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Xml\+Content\+Handler\+::characters (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_q_xml_content_handler_a3be0d440b48836560c8805e15d596eb1}
+The reader calls this function when he has parsed a chunk of character data (either normal character data or character data inside a C\+D\+A\+T\+A section; if you have to distinguish between those two types you have to use \hyperlink{class_q_xml_lexical_handler_a64c691b5eeae5af0230d5fad46be2df2}{Q\+Xml\+Lexical\+Handler\+::start\+C\+D\+A\+T\+A()} and \hyperlink{class_q_xml_lexical_handler_af318cf25fa252c8bf7a4e8d2c4b26350}{Q\+Xml\+Lexical\+Handler\+::end\+C\+D\+A\+T\+A()} in addition).
+
+Some readers will report whitespace in element content using the \hyperlink{class_q_xml_content_handler_a58470bd94366833c79a3c60fb350d157}{ignorable\+Whitespace()} function rather than this one (\hyperlink{class_q_xml_simple_reader}{Q\+Xml\+Simple\+Reader} will do it not though).
+
+\hyperlink{class_a}{A} reader is allowed to report the character data of an element in more than one chunk; e.\+g. a reader might want to report \char`\"{}a \&lt; b\char`\"{} in three \hyperlink{class_q_xml_content_handler_a3be0d440b48836560c8805e15d596eb1}{characters()} events (\char`\"{}a \char`\"{}, \char`\"{}$<$\char`\"{} and \char`\"{} b\char`\"{}).
+
+If this function returns F\+A\+L\+S\+E the reader will stop parsing and will report an error. The reader will use the function \hyperlink{class_q_xml_content_handler_adba96547bad1cf1b009dbfb7b7c571be}{error\+String()} to get the error message that will be used for reporting the error. 
+
+Implémenté dans \hyperlink{class_tag_file_parser_a3d80deca329fd56350927d24c84a21b1}{Tag\+File\+Parser}, \hyperlink{class_q_xml_default_handler_a40c64e4f7fc445abeb753ef11c75f84a}{Q\+Xml\+Default\+Handler}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ T $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Program\+Listing\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Doc\+Internal\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ List\+Item\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Toc\+List\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Highlight\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Toc\+Item\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Section\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Link\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Verbatim\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Graph\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Formula\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ E\+Mail\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ U\+Link\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Variable\+List\+Entry\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Node\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Parameter\+Item\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Compound\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Linked\+Text\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Entry\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Child\+Node\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Table\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Param\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ H\+Ruler\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Doc\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Simple\+Sect\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Template\+Param\+List\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Paragraph\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Row\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Symbol\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ List\+Of\+All\+Members\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Title\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Ordered\+List\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Include\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Index\+Entry\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Main\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Variable\+List\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Image\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Edge\+Label\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Code\+Line\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Anchor\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Parameter\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Itemized\+List\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Doc\+Section\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Parameter\+List\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Member\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Ref\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Copy\+Handler $>$}, \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Dot\+File\+Handler $>$}, et \hyperlink{class_base_handler_a9b7b29fcc7a0976d8e3be6f8ca1e67fd}{Base\+Handler$<$ Line\+Break\+Handler $>$}.
+
+\hypertarget{class_q_xml_content_handler_a534bd1e4627e65340eb17d90d1ab1c12}{}\index{Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}!end\+Document@{end\+Document}}
+\index{end\+Document@{end\+Document}!Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}}
+\subsubsection[{end\+Document()=0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Xml\+Content\+Handler\+::end\+Document (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_q_xml_content_handler_a534bd1e4627e65340eb17d90d1ab1c12}
+The reader calls this function after he has finished the parsing. It is only called once. It is the last function of all handler functions that is called. It is called after the reader has read all input or has abandoned parsing because of a fatal error.
+
+If this function returns F\+A\+L\+S\+E the reader will stop parsing and will report an error. The reader will use the function \hyperlink{class_q_xml_content_handler_adba96547bad1cf1b009dbfb7b7c571be}{error\+String()} to get the error message that will be used for reporting the error.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_xml_content_handler_aaca36268e66c9a56257e38bce18ae4d2}{start\+Document()} 
+\end{DoxySeeAlso}
+
+
+Implémenté dans \hyperlink{class_q_xml_default_handler_a57ed6d87a89653619ff0d56078c52061}{Q\+Xml\+Default\+Handler}.
+
+\hypertarget{class_q_xml_content_handler_af0abc06326798a6e522f91e6174b7b9e}{}\index{Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}!end\+Element@{end\+Element}}
+\index{end\+Element@{end\+Element}!Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}}
+\subsubsection[{end\+Element(const Q\+String \&namespace\+U\+R\+I, const Q\+String \&local\+Name, const Q\+String \&q\+Name)=0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Xml\+Content\+Handler\+::end\+Element (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{namespace\+U\+R\+I, }
+\item[{const {\bf Q\+String} \&}]{local\+Name, }
+\item[{const {\bf Q\+String} \&}]{q\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_q_xml_content_handler_af0abc06326798a6e522f91e6174b7b9e}
+The reader calls this function when he has parsed an end element tag.
+
+If this function returns F\+A\+L\+S\+E the reader will stop parsing and will report an error. The reader will use the function \hyperlink{class_q_xml_content_handler_adba96547bad1cf1b009dbfb7b7c571be}{error\+String()} to get the error message that will be used for reporting the error.
+
+See also the \href{xml-sax.html#namespaces}{\tt namespace description}.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_xml_content_handler_af6d4e631fad2b9b75622c95003b1da55}{start\+Element()} 
+\end{DoxySeeAlso}
+
+
+Implémenté dans \hyperlink{class_layout_parser_aded617e52b2a221ed57c29ac79da360b}{Layout\+Parser}, \hyperlink{class_tag_file_parser_aeb0fd2877b6d5fc40a15f7c7bec19ee0}{Tag\+File\+Parser}, \hyperlink{class_q_xml_default_handler_ae5d92a2fbae15a793aedf725b62b16c2}{Q\+Xml\+Default\+Handler}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ T $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Program\+Listing\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Doc\+Internal\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ List\+Item\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Toc\+List\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Highlight\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Toc\+Item\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Section\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Link\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Verbatim\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Graph\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Formula\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ E\+Mail\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ U\+Link\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Variable\+List\+Entry\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Node\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Parameter\+Item\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Compound\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Linked\+Text\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Entry\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Child\+Node\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Table\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Param\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ H\+Ruler\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Doc\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Simple\+Sect\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Template\+Param\+List\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Paragraph\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Row\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Symbol\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ List\+Of\+All\+Members\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Title\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Ordered\+List\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Include\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Index\+Entry\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Main\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Variable\+List\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Image\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Edge\+Label\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Code\+Line\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Anchor\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Parameter\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Itemized\+List\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Doc\+Section\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Parameter\+List\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Member\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Ref\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Copy\+Handler $>$}, \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Dot\+File\+Handler $>$}, et \hyperlink{class_base_handler_aa1b987506d2f962ba478b8bab388bff9}{Base\+Handler$<$ Line\+Break\+Handler $>$}.
+
+\hypertarget{class_q_xml_content_handler_a1c7f3e794c2e763e043eef3229ccf034}{}\index{Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}!end\+Prefix\+Mapping@{end\+Prefix\+Mapping}}
+\index{end\+Prefix\+Mapping@{end\+Prefix\+Mapping}!Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}}
+\subsubsection[{end\+Prefix\+Mapping(const Q\+String \&prefix)=0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Xml\+Content\+Handler\+::end\+Prefix\+Mapping (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{prefix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_q_xml_content_handler_a1c7f3e794c2e763e043eef3229ccf034}
+The reader calls this function to signal the end of a prefix mapping.
+
+If this function returns F\+A\+L\+S\+E the reader will stop parsing and will report an error. The reader will use the function \hyperlink{class_q_xml_content_handler_adba96547bad1cf1b009dbfb7b7c571be}{error\+String()} to get the error message that will be used for reporting the error.
+
+See also the \href{xml-sax.html#namespaces}{\tt namespace description}.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_xml_content_handler_acdf18588f1980d19d12efd025a5f5cc9}{start\+Prefix\+Mapping()} 
+\end{DoxySeeAlso}
+
+
+Implémenté dans \hyperlink{class_q_xml_default_handler_a8e0cf92238c12e8776711bb4fb0ca4cf}{Q\+Xml\+Default\+Handler}.
+
+\hypertarget{class_q_xml_content_handler_adba96547bad1cf1b009dbfb7b7c571be}{}\index{Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}!error\+String@{error\+String}}
+\index{error\+String@{error\+String}!Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}}
+\subsubsection[{error\+String()=0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Xml\+Content\+Handler\+::error\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_q_xml_content_handler_adba96547bad1cf1b009dbfb7b7c571be}
+The reader calls this function to get an error string if any of the handler functions returns F\+A\+L\+S\+E to him. 
+
+Implémenté dans \hyperlink{class_q_xml_default_handler_afcbe5fdce86cea4b7863e752c2413c45}{Q\+Xml\+Default\+Handler}.
+
+\hypertarget{class_q_xml_content_handler_a58470bd94366833c79a3c60fb350d157}{}\index{Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}!ignorable\+Whitespace@{ignorable\+Whitespace}}
+\index{ignorable\+Whitespace@{ignorable\+Whitespace}!Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}}
+\subsubsection[{ignorable\+Whitespace(const Q\+String \&ch)=0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Xml\+Content\+Handler\+::ignorable\+Whitespace (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_q_xml_content_handler_a58470bd94366833c79a3c60fb350d157}
+Some readers may use this function to report each chunk of whitespace in element content (\hyperlink{class_q_xml_simple_reader}{Q\+Xml\+Simple\+Reader} does not though).
+
+If this function returns F\+A\+L\+S\+E the reader will stop parsing and will report an error. The reader will use the function \hyperlink{class_q_xml_content_handler_adba96547bad1cf1b009dbfb7b7c571be}{error\+String()} to get the error message that will be used for reporting the error. 
+
+Implémenté dans \hyperlink{class_q_xml_default_handler_aaba270fb05abfab3f80c31312f6537af}{Q\+Xml\+Default\+Handler}.
+
+\hypertarget{class_q_xml_content_handler_a520c875b64f2f06ec35001a5e50887c3}{}\index{Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}!processing\+Instruction@{processing\+Instruction}}
+\index{processing\+Instruction@{processing\+Instruction}!Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}}
+\subsubsection[{processing\+Instruction(const Q\+String \&target, const Q\+String \&data)=0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Xml\+Content\+Handler\+::processing\+Instruction (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{target, }
+\item[{const {\bf Q\+String} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_q_xml_content_handler_a520c875b64f2f06ec35001a5e50887c3}
+The reader calls this function when he has parsed a processing instruction.
+
+{\itshape target} is the target name of the processing instruction and {\itshape data} is the data of the processing instruction.
+
+If this function returns F\+A\+L\+S\+E the reader will stop parsing and will report an error. The reader will use the function \hyperlink{class_q_xml_content_handler_adba96547bad1cf1b009dbfb7b7c571be}{error\+String()} to get the error message that will be used for reporting the error. 
+
+Implémenté dans \hyperlink{class_q_xml_default_handler_afd9bbe78b71f7787e22a3a7555ddba59}{Q\+Xml\+Default\+Handler}.
+
+\hypertarget{class_q_xml_content_handler_a89863bd9a6372d3d73086aa99107bca7}{}\index{Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}!set\+Document\+Locator@{set\+Document\+Locator}}
+\index{set\+Document\+Locator@{set\+Document\+Locator}!Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}}
+\subsubsection[{set\+Document\+Locator(\+Q\+Xml\+Locator $\ast$locator)=0}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Xml\+Content\+Handler\+::set\+Document\+Locator (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Xml\+Locator} $\ast$}]{locator}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_q_xml_content_handler_a89863bd9a6372d3d73086aa99107bca7}
+The reader calls this function before he starts parsing the document. The argument {\itshape locator} is a pointer to a \hyperlink{class_q_xml_locator}{Q\+Xml\+Locator} which allows the application to get the actual position of the parsing in the document.
+
+Do not destroy the {\itshape locator}; it is destroyed when the reader is destroyed (do not use the {\itshape locator} after the reader got destroyed). 
+
+Implémenté dans \hyperlink{class_q_xml_default_handler_add9860b32800232e14f6d4150ed23937}{Q\+Xml\+Default\+Handler}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ T $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Program\+Listing\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Doc\+Internal\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ List\+Item\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Toc\+List\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Highlight\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Toc\+Item\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Section\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Link\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Verbatim\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Graph\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Formula\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ E\+Mail\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ U\+Link\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Variable\+List\+Entry\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Node\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Parameter\+Item\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Compound\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Linked\+Text\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Entry\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Child\+Node\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Table\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Param\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ H\+Ruler\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Doc\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Simple\+Sect\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Template\+Param\+List\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Paragraph\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Row\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Symbol\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ List\+Of\+All\+Members\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Title\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Ordered\+List\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Include\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Index\+Entry\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Main\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Variable\+List\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Image\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Edge\+Label\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Code\+Line\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Anchor\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Parameter\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Itemized\+List\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Doc\+Section\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Parameter\+List\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Member\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Ref\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Copy\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Dot\+File\+Handler $>$}, \hyperlink{class_base_handler_abedc453093f90a5436a0bcb0c78b4aca}{Base\+Handler$<$ Line\+Break\+Handler $>$}, et \hyperlink{class_tag_file_parser_a947ca98759d61b5cf3d920a7d98fa828}{Tag\+File\+Parser}.
+
+\hypertarget{class_q_xml_content_handler_ac3b27d569634c5d7a7fac001a6cc4845}{}\index{Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}!skipped\+Entity@{skipped\+Entity}}
+\index{skipped\+Entity@{skipped\+Entity}!Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}}
+\subsubsection[{skipped\+Entity(const Q\+String \&name)=0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Xml\+Content\+Handler\+::skipped\+Entity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_q_xml_content_handler_ac3b27d569634c5d7a7fac001a6cc4845}
+Some readers may skip entities if they have not seen the declarations (e.\+g. because they are in an external D\+T\+D). If they do so they will report it by calling this function.
+
+If this function returns F\+A\+L\+S\+E the reader will stop parsing and will report an error. The reader will use the function \hyperlink{class_q_xml_content_handler_adba96547bad1cf1b009dbfb7b7c571be}{error\+String()} to get the error message that will be used for reporting the error. 
+
+Implémenté dans \hyperlink{class_q_xml_default_handler_a8c02fbe04d75e0ac50202f21e101e5c9}{Q\+Xml\+Default\+Handler}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ T $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Program\+Listing\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Doc\+Internal\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ List\+Item\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Toc\+List\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Highlight\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Toc\+Item\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Section\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Link\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Verbatim\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Graph\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Formula\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ E\+Mail\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ U\+Link\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Variable\+List\+Entry\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Node\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Parameter\+Item\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Compound\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Linked\+Text\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Entry\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Child\+Node\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Table\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Param\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ H\+Ruler\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Doc\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Simple\+Sect\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Template\+Param\+List\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Paragraph\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Row\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Symbol\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ List\+Of\+All\+Members\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Title\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Ordered\+List\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Include\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Index\+Entry\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Main\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Variable\+List\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Image\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Edge\+Label\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Code\+Line\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Anchor\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Parameter\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Itemized\+List\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Doc\+Section\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Parameter\+List\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Member\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Ref\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Copy\+Handler $>$}, \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Dot\+File\+Handler $>$}, et \hyperlink{class_base_handler_a2191a9b5ac9ebddc8c91dd56fff8e684}{Base\+Handler$<$ Line\+Break\+Handler $>$}.
+
+\hypertarget{class_q_xml_content_handler_aaca36268e66c9a56257e38bce18ae4d2}{}\index{Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}!start\+Document@{start\+Document}}
+\index{start\+Document@{start\+Document}!Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}}
+\subsubsection[{start\+Document()=0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Xml\+Content\+Handler\+::start\+Document (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_q_xml_content_handler_aaca36268e66c9a56257e38bce18ae4d2}
+The reader calls this function when he starts parsing the document. The reader will call this function only once before any other functions in this class or in the \hyperlink{class_q_xml_d_t_d_handler}{Q\+Xml\+D\+T\+D\+Handler} class are called (except \hyperlink{class_q_xml_content_handler_a89863bd9a6372d3d73086aa99107bca7}{Q\+Xml\+Content\+Handler\+::set\+Document\+Locator()}).
+
+If this function returns F\+A\+L\+S\+E the reader will stop parsing and will report an error. The reader will use the function \hyperlink{class_q_xml_content_handler_adba96547bad1cf1b009dbfb7b7c571be}{error\+String()} to get the error message that will be used for reporting the error.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_xml_content_handler_a534bd1e4627e65340eb17d90d1ab1c12}{end\+Document()} 
+\end{DoxySeeAlso}
+
+
+Implémenté dans \hyperlink{class_layout_parser_a69ed2ff63a31f160e166ff79c93f5865}{Layout\+Parser}, \hyperlink{class_tag_file_parser_a56d1a932efadb2ddd7e459884ebab4e4}{Tag\+File\+Parser}, \hyperlink{class_q_xml_default_handler_a5a1135641cb81d4053ecd4783c7c252b}{Q\+Xml\+Default\+Handler}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ T $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Program\+Listing\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Doc\+Internal\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ List\+Item\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Toc\+List\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Highlight\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Toc\+Item\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Section\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Link\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Verbatim\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Graph\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Formula\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ E\+Mail\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ U\+Link\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Variable\+List\+Entry\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Node\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Parameter\+Item\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Compound\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Linked\+Text\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Entry\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Child\+Node\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Table\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Param\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ H\+Ruler\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Doc\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Simple\+Sect\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Template\+Param\+List\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Paragraph\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Row\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Symbol\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ List\+Of\+All\+Members\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Title\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Ordered\+List\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Include\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Index\+Entry\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Main\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Variable\+List\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Image\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Edge\+Label\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Code\+Line\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Anchor\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Parameter\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Itemized\+List\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Doc\+Section\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Parameter\+List\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Member\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Ref\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Copy\+Handler $>$}, \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Dot\+File\+Handler $>$}, et \hyperlink{class_base_handler_ad982903d941c15f7a89ff7a269a391df}{Base\+Handler$<$ Line\+Break\+Handler $>$}.
+
+\hypertarget{class_q_xml_content_handler_af6d4e631fad2b9b75622c95003b1da55}{}\index{Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}!start\+Element@{start\+Element}}
+\index{start\+Element@{start\+Element}!Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}}
+\subsubsection[{start\+Element(const Q\+String \&namespace\+U\+R\+I, const Q\+String \&local\+Name, const Q\+String \&q\+Name, const Q\+Xml\+Attributes \&atts)=0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Xml\+Content\+Handler\+::start\+Element (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{namespace\+U\+R\+I, }
+\item[{const {\bf Q\+String} \&}]{local\+Name, }
+\item[{const {\bf Q\+String} \&}]{q\+Name, }
+\item[{const {\bf Q\+Xml\+Attributes} \&}]{atts}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_q_xml_content_handler_af6d4e631fad2b9b75622c95003b1da55}
+The reader calls this function when he has parsed a start element tag.
+
+There will be a corresponding \hyperlink{class_q_xml_content_handler_af0abc06326798a6e522f91e6174b7b9e}{end\+Element()} call when the corresponding end element tag was read. The \hyperlink{class_q_xml_content_handler_af6d4e631fad2b9b75622c95003b1da55}{start\+Element()} and \hyperlink{class_q_xml_content_handler_af0abc06326798a6e522f91e6174b7b9e}{end\+Element()} calls are always nested correctly. Empty element tags (e.\+g. $<$a/$>$) are reported by \hyperlink{class_q_xml_content_handler_af6d4e631fad2b9b75622c95003b1da55}{start\+Element()} directly followed by a call to \hyperlink{class_q_xml_content_handler_af0abc06326798a6e522f91e6174b7b9e}{end\+Element()}.
+
+The attribute list provided will contain only attributes with explicit values. The attribute list will contain attributes used for namespace declaration (i.\+e. attributes starting with xmlns) only if the namespace-\/prefix property of the reader is T\+R\+U\+E.
+
+The argument {\itshape uri} is the namespace U\+R\+I, or the empty string if the element has no namespace U\+R\+I or if namespace processing is not being performed, {\itshape local\+Name} is the local name (without prefix), or the empty string if namespace processing is not being performed, {\itshape q\+Name} is the qualified name (with prefix), or the empty string if qualified names are not available and {\itshape atts} are the attributes attached to the element. If there are no attributes, {\itshape atts} is an empty attributes object
+
+If this function returns F\+A\+L\+S\+E the reader will stop parsing and will report an error. The reader will use the function \hyperlink{class_q_xml_content_handler_adba96547bad1cf1b009dbfb7b7c571be}{error\+String()} to get the error message that will be used for reporting the error.
+
+See also the \href{xml-sax.html#namespaces}{\tt namespace description}.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_xml_content_handler_af0abc06326798a6e522f91e6174b7b9e}{end\+Element()} 
+\end{DoxySeeAlso}
+
+
+Implémenté dans \hyperlink{class_layout_parser_aa870786ef488ce9d300214dab2c497ae}{Layout\+Parser}, \hyperlink{class_tag_file_parser_ad9f6b4e83d37df58b95a2018d4e2e606}{Tag\+File\+Parser}, \hyperlink{class_q_xml_default_handler_a0381a337b32a16d2ef2a8df9a29cb215}{Q\+Xml\+Default\+Handler}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ T $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Program\+Listing\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Doc\+Internal\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ List\+Item\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Toc\+List\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Highlight\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Toc\+Item\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Section\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Link\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Verbatim\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Graph\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Formula\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ E\+Mail\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ U\+Link\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Variable\+List\+Entry\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Node\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Parameter\+Item\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Compound\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Linked\+Text\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Entry\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Child\+Node\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Table\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Param\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ H\+Ruler\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Doc\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Simple\+Sect\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Template\+Param\+List\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Paragraph\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Row\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Symbol\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ List\+Of\+All\+Members\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Title\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Ordered\+List\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Include\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Index\+Entry\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Main\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Variable\+List\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Image\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Edge\+Label\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Code\+Line\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Anchor\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Parameter\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Itemized\+List\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Doc\+Section\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Parameter\+List\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Member\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Ref\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Copy\+Handler $>$}, \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Dot\+File\+Handler $>$}, et \hyperlink{class_base_handler_a15c20baf7065b3eb92ae7a336ccdf20b}{Base\+Handler$<$ Line\+Break\+Handler $>$}.
+
+\hypertarget{class_q_xml_content_handler_acdf18588f1980d19d12efd025a5f5cc9}{}\index{Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}!start\+Prefix\+Mapping@{start\+Prefix\+Mapping}}
+\index{start\+Prefix\+Mapping@{start\+Prefix\+Mapping}!Q\+Xml\+Content\+Handler@{Q\+Xml\+Content\+Handler}}
+\subsubsection[{start\+Prefix\+Mapping(const Q\+String \&prefix, const Q\+String \&uri)=0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Xml\+Content\+Handler\+::start\+Prefix\+Mapping (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{prefix, }
+\item[{const {\bf Q\+String} \&}]{uri}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_q_xml_content_handler_acdf18588f1980d19d12efd025a5f5cc9}
+The reader calls this function to signal the begin of a prefix-\/\+U\+R\+I namespace mapping scope. This information is not necessary for normal namespace processing since the reader automatically replaces prefixes for element and attribute names.
+
+Note that start\+Prefix\+Mapping and end\+Prefix\+Mapping calls are not guaranteed to be properly nested relative to each-\/other\+: all start\+Prefix\+Mapping events will occur before the corresponding start\+Element event, and all end\+Prefix\+Mapping events will occur after the corresponding end\+Element event, but their order is not otherwise guaranteed.
+
+The argument {\itshape prefix} is the namespace prefix being declared and the argument {\itshape uri} is the namespace U\+R\+I the prefix is mapped to.
+
+If this function returns F\+A\+L\+S\+E the reader will stop parsing and will report an error. The reader will use the function \hyperlink{class_q_xml_content_handler_adba96547bad1cf1b009dbfb7b7c571be}{error\+String()} to get the error message that will be used for reporting the error.
+
+See also the \href{xml-sax.html#namespaces}{\tt namespace description}.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_xml_content_handler_a1c7f3e794c2e763e043eef3229ccf034}{end\+Prefix\+Mapping()} 
+\end{DoxySeeAlso}
+
+
+Implémenté dans \hyperlink{class_q_xml_default_handler_a5f8b32143da1251f62c64df4742df77c}{Q\+Xml\+Default\+Handler}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qxml_8h}{qxml.\+h}\item 
+qtools/\hyperlink{qxml_8cpp}{qxml.\+cpp}\end{DoxyCompactItemize}

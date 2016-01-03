@@ -1,0 +1,152 @@
+\hypertarget{dot_8cpp}{}\section{Référence du fichier src/dot.cpp}
+\label{dot_8cpp}\index{src/dot.\+cpp@{src/dot.\+cpp}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$qdir.\+h$>$}\\*
+{\ttfamily \#include $<$qfile.\+h$>$}\\*
+{\ttfamily \#include $<$qqueue.\+h$>$}\\*
+{\ttfamily \#include $<$qthread.\+h$>$}\\*
+{\ttfamily \#include $<$qmutex.\+h$>$}\\*
+{\ttfamily \#include $<$qwaitcondition.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}dot.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doxygen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}language.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}defargs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}docparser.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debug.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pagedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}portable.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dirdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}vhdldocgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ftextstream.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}md5.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}memberlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}groupdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}classlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}filename.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}namespacedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}memberdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}membergroup.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_edge_properties}{Edge\+Properties}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{dot_8cpp_a8e61450eb94b16e866568ad3aed2d9f1}{M\+A\+P\+\_\+\+C\+M\+D}~\char`\"{}cmapx\char`\"{}
+\item 
+\#define \hyperlink{dot_8cpp_aea95f64ec5ae6753fcc6e9972cfa6f18}{F\+O\+N\+T\+N\+A\+M\+E}~get\+Dot\+Font\+Name()
+\item 
+\#define \hyperlink{dot_8cpp_a5d52eeb41a03aeda6974d60772531f96}{F\+O\+N\+T\+S\+I\+Z\+E}~get\+Dot\+Font\+Size()
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{dot_8cpp_a9172db2eb69808bb3eb7da5d173d6343}{re\+Number\+Node} (int number, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} do\+Re\+Numbering)
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{dot_8cpp_aa9806efa6171a132d5c8cebf162bfe54}{compute\+Md5\+Signature} (\hyperlink{class_dot_node}{Dot\+Node} $\ast$root, \hyperlink{class_dot_node_ac4e8b27d54919cd0afa73f4c8c7d569c}{Dot\+Node\+::\+Graph\+Type} gt, \hyperlink{dot_8h_ac60ef98d62b78366a17c9f1bda96523f}{Graph\+Output\+Format} format, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} lr\+Rank, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} render\+Parents, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} back\+Arrows, const \hyperlink{class_q_c_string}{Q\+C\+String} \&title, \hyperlink{class_q_c_string}{Q\+C\+String} \&graph\+Str)
+\item 
+void \hyperlink{dot_8cpp_adc14790df5362aef0a93a7c854b14279}{generate\+Graph\+Legend} (const char $\ast$path)
+\item 
+void \hyperlink{dot_8cpp_a1b2f4344b046af1f671141d2645c8cef}{write\+Dot\+Graph\+From\+File} (const char $\ast$in\+File, const char $\ast$out\+Dir, const char $\ast$out\+File, \hyperlink{dot_8h_ac60ef98d62b78366a17c9f1bda96523f}{Graph\+Output\+Format} format)
+\item 
+void \hyperlink{dot_8cpp_aa5f11757833facabdc54569f87940167}{write\+Dot\+Image\+Map\+From\+File} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, const \hyperlink{class_q_c_string}{Q\+C\+String} \&in\+File, const \hyperlink{class_q_c_string}{Q\+C\+String} \&out\+Dir, const \hyperlink{class_q_c_string}{Q\+C\+String} \&rel\+Path, const \hyperlink{class_q_c_string}{Q\+C\+String} \&base\+Name, const \hyperlink{class_q_c_string}{Q\+C\+String} \&context, int graph\+Id)
+\item 
+void \hyperlink{dot_8cpp_a4f8ad0ca31675286d1e1771467b15b50}{write\+Dot\+Dir\+Dep\+Graph} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, \hyperlink{class_dir_def}{Dir\+Def} $\ast$dd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{dot_8cpp_aea95f64ec5ae6753fcc6e9972cfa6f18}{}\index{dot.\+cpp@{dot.\+cpp}!F\+O\+N\+T\+N\+A\+M\+E@{F\+O\+N\+T\+N\+A\+M\+E}}
+\index{F\+O\+N\+T\+N\+A\+M\+E@{F\+O\+N\+T\+N\+A\+M\+E}!dot.\+cpp@{dot.\+cpp}}
+\subsubsection[{F\+O\+N\+T\+N\+A\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+O\+N\+T\+N\+A\+M\+E~get\+Dot\+Font\+Name()}\label{dot_8cpp_aea95f64ec5ae6753fcc6e9972cfa6f18}
+\hypertarget{dot_8cpp_a5d52eeb41a03aeda6974d60772531f96}{}\index{dot.\+cpp@{dot.\+cpp}!F\+O\+N\+T\+S\+I\+Z\+E@{F\+O\+N\+T\+S\+I\+Z\+E}}
+\index{F\+O\+N\+T\+S\+I\+Z\+E@{F\+O\+N\+T\+S\+I\+Z\+E}!dot.\+cpp@{dot.\+cpp}}
+\subsubsection[{F\+O\+N\+T\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+O\+N\+T\+S\+I\+Z\+E~get\+Dot\+Font\+Size()}\label{dot_8cpp_a5d52eeb41a03aeda6974d60772531f96}
+\hypertarget{dot_8cpp_a8e61450eb94b16e866568ad3aed2d9f1}{}\index{dot.\+cpp@{dot.\+cpp}!M\+A\+P\+\_\+\+C\+M\+D@{M\+A\+P\+\_\+\+C\+M\+D}}
+\index{M\+A\+P\+\_\+\+C\+M\+D@{M\+A\+P\+\_\+\+C\+M\+D}!dot.\+cpp@{dot.\+cpp}}
+\subsubsection[{M\+A\+P\+\_\+\+C\+M\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+P\+\_\+\+C\+M\+D~\char`\"{}cmapx\char`\"{}}\label{dot_8cpp_a8e61450eb94b16e866568ad3aed2d9f1}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{dot_8cpp_aa9806efa6171a132d5c8cebf162bfe54}{}\index{dot.\+cpp@{dot.\+cpp}!compute\+Md5\+Signature@{compute\+Md5\+Signature}}
+\index{compute\+Md5\+Signature@{compute\+Md5\+Signature}!dot.\+cpp@{dot.\+cpp}}
+\subsubsection[{compute\+Md5\+Signature(\+Dot\+Node $\ast$root, Dot\+Node\+::\+Graph\+Type gt, Graph\+Output\+Format format, bool lr\+Rank, bool render\+Parents, bool back\+Arrows, const Q\+C\+String \&title, Q\+C\+String \&graph\+Str)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} compute\+Md5\+Signature (
+\begin{DoxyParamCaption}
+\item[{{\bf Dot\+Node} $\ast$}]{root, }
+\item[{{\bf Dot\+Node\+::\+Graph\+Type}}]{gt, }
+\item[{{\bf Graph\+Output\+Format}}]{format, }
+\item[{{\bf bool}}]{lr\+Rank, }
+\item[{{\bf bool}}]{render\+Parents, }
+\item[{{\bf bool}}]{back\+Arrows, }
+\item[{const {\bf Q\+C\+String} \&}]{title, }
+\item[{{\bf Q\+C\+String} \&}]{graph\+Str}
+\end{DoxyParamCaption}
+)}\label{dot_8cpp_aa9806efa6171a132d5c8cebf162bfe54}
+Computes a 16 byte md5 checksum for a given dot graph. The md5 checksum is returned as a 32 character A\+S\+C\+I\+I string. \hypertarget{dot_8cpp_adc14790df5362aef0a93a7c854b14279}{}\index{dot.\+cpp@{dot.\+cpp}!generate\+Graph\+Legend@{generate\+Graph\+Legend}}
+\index{generate\+Graph\+Legend@{generate\+Graph\+Legend}!dot.\+cpp@{dot.\+cpp}}
+\subsubsection[{generate\+Graph\+Legend(const char $\ast$path)}]{\setlength{\rightskip}{0pt plus 5cm}void generate\+Graph\+Legend (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path}
+\end{DoxyParamCaption}
+)}\label{dot_8cpp_adc14790df5362aef0a93a7c854b14279}
+Generated a graphs legend page \hypertarget{dot_8cpp_a9172db2eb69808bb3eb7da5d173d6343}{}\index{dot.\+cpp@{dot.\+cpp}!re\+Number\+Node@{re\+Number\+Node}}
+\index{re\+Number\+Node@{re\+Number\+Node}!dot.\+cpp@{dot.\+cpp}}
+\subsubsection[{re\+Number\+Node(int number, bool do\+Re\+Numbering)}]{\setlength{\rightskip}{0pt plus 5cm}int re\+Number\+Node (
+\begin{DoxyParamCaption}
+\item[{int}]{number, }
+\item[{{\bf bool}}]{do\+Re\+Numbering}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{dot_8cpp_a9172db2eb69808bb3eb7da5d173d6343}
+\hypertarget{dot_8cpp_a4f8ad0ca31675286d1e1771467b15b50}{}\index{dot.\+cpp@{dot.\+cpp}!write\+Dot\+Dir\+Dep\+Graph@{write\+Dot\+Dir\+Dep\+Graph}}
+\index{write\+Dot\+Dir\+Dep\+Graph@{write\+Dot\+Dir\+Dep\+Graph}!dot.\+cpp@{dot.\+cpp}}
+\subsubsection[{write\+Dot\+Dir\+Dep\+Graph(\+F\+Text\+Stream \&t, Dir\+Def $\ast$dd)}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Dot\+Dir\+Dep\+Graph (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t, }
+\item[{{\bf Dir\+Def} $\ast$}]{dd}
+\end{DoxyParamCaption}
+)}\label{dot_8cpp_a4f8ad0ca31675286d1e1771467b15b50}
+\hypertarget{dot_8cpp_a1b2f4344b046af1f671141d2645c8cef}{}\index{dot.\+cpp@{dot.\+cpp}!write\+Dot\+Graph\+From\+File@{write\+Dot\+Graph\+From\+File}}
+\index{write\+Dot\+Graph\+From\+File@{write\+Dot\+Graph\+From\+File}!dot.\+cpp@{dot.\+cpp}}
+\subsubsection[{write\+Dot\+Graph\+From\+File(const char $\ast$in\+File, const char $\ast$out\+Dir, const char $\ast$out\+File, Graph\+Output\+Format format)}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Dot\+Graph\+From\+File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{in\+File, }
+\item[{const char $\ast$}]{out\+Dir, }
+\item[{const char $\ast$}]{out\+File, }
+\item[{{\bf Graph\+Output\+Format}}]{format}
+\end{DoxyParamCaption}
+)}\label{dot_8cpp_a1b2f4344b046af1f671141d2645c8cef}
+\hypertarget{dot_8cpp_aa5f11757833facabdc54569f87940167}{}\index{dot.\+cpp@{dot.\+cpp}!write\+Dot\+Image\+Map\+From\+File@{write\+Dot\+Image\+Map\+From\+File}}
+\index{write\+Dot\+Image\+Map\+From\+File@{write\+Dot\+Image\+Map\+From\+File}!dot.\+cpp@{dot.\+cpp}}
+\subsubsection[{write\+Dot\+Image\+Map\+From\+File(\+F\+Text\+Stream \&t, const Q\+C\+String \&in\+File, const Q\+C\+String \&out\+Dir, const Q\+C\+String \&rel\+Path, const Q\+C\+String \&base\+Name, const Q\+C\+String \&context, int graph\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Dot\+Image\+Map\+From\+File (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t, }
+\item[{const {\bf Q\+C\+String} \&}]{in\+File, }
+\item[{const {\bf Q\+C\+String} \&}]{out\+Dir, }
+\item[{const {\bf Q\+C\+String} \&}]{rel\+Path, }
+\item[{const {\bf Q\+C\+String} \&}]{base\+Name, }
+\item[{const {\bf Q\+C\+String} \&}]{context, }
+\item[{int}]{graph\+Id}
+\end{DoxyParamCaption}
+)}\label{dot_8cpp_aa5f11757833facabdc54569f87940167}
+Writes user defined image map to the output. 
+\begin{DoxyParams}{Paramètres}
+{\em t} & text stream to write to \\
+\hline
+{\em in\+File} & just the basename part of the filename \\
+\hline
+{\em out\+Dir} & output directory \\
+\hline
+{\em rel\+Path} & relative path the to root of the output dir \\
+\hline
+{\em base\+Name} & the base name of the output files \\
+\hline
+{\em context} & the scope in which this graph is found (for resolving links) \\
+\hline
+{\em graph\+Id} & a unique id for this graph, use for dynamic sections \\
+\hline
+\end{DoxyParams}

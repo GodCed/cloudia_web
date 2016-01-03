@@ -1,0 +1,92 @@
+\hypertarget{qdir__win32_8cpp}{}\section{Référence du fichier qtools/qdir\+\_\+win32.cpp}
+\label{qdir__win32_8cpp}\index{qtools/qdir\+\_\+win32.\+cpp@{qtools/qdir\+\_\+win32.\+cpp}}
+{\ttfamily \#include \char`\"{}qglobal.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qdir.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qfileinfo.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qfiledefs\+\_\+p.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qregexp.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qstringlist.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{qdir__win32_8cpp_a69a029617a1a813f6a6328de21311a8f}{I\+S\+\_\+\+S\+U\+B\+D\+I\+R}~\+\_\+\+A\+\_\+\+S\+U\+B\+D\+I\+R
+\item 
+\#define \hyperlink{qdir__win32_8cpp_ae56e1114ee42647ea234cf29b69e1279}{I\+S\+\_\+\+R\+D\+O\+N\+L\+Y}~\+\_\+\+A\+\_\+\+R\+D\+O\+N\+L\+Y
+\item 
+\#define \hyperlink{qdir__win32_8cpp_a1cad405fd392c00da1f3ffe7b5e559f9}{I\+S\+\_\+\+A\+R\+C\+H}~\+\_\+\+A\+\_\+\+A\+R\+C\+H
+\item 
+\#define \hyperlink{qdir__win32_8cpp_a029bcb1da96e7fb951a67ec73716b25a}{I\+S\+\_\+\+H\+I\+D\+D\+E\+N}~\+\_\+\+A\+\_\+\+H\+I\+D\+D\+E\+N
+\item 
+\#define \hyperlink{qdir__win32_8cpp_a4587f8edbdebf04df1665e0b8163e7ef}{I\+S\+\_\+\+S\+Y\+S\+T\+E\+M}~\+\_\+\+A\+\_\+\+S\+Y\+S\+T\+E\+M
+\item 
+\#define \hyperlink{qdir__win32_8cpp_a5d4c730758f65a79a16a063840884aed}{F\+F\+\_\+\+G\+E\+T\+F\+I\+R\+S\+T}~\+\_\+findfirst
+\item 
+\#define \hyperlink{qdir__win32_8cpp_ad205fb342203a14b1baadf97c045d842}{F\+F\+\_\+\+G\+E\+T\+N\+E\+X\+T}~\+\_\+findnext
+\item 
+\#define \hyperlink{qdir__win32_8cpp_a8f70b0a0a08649a342f310df09cc288c}{F\+F\+\_\+\+E\+R\+R\+O\+R}~-\/1
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_string_list}{Q\+String\+List} \hyperlink{qdir__win32_8cpp_a639a5308a2b6bf01a7e99cb40ab6df37}{qt\+\_\+make\+Filter\+List} (const \hyperlink{class_q_string}{Q\+String} \&filter)
+\item 
+int \hyperlink{qdir__win32_8cpp_a2d498ac63470247e637f546ffe8a1e46}{qt\+\_\+cmp\+\_\+si} (const void $\ast$, const void $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{qdir__win32_8cpp_ac65beefca78fc7731ed5cf32e7f5a5c7}{qt\+\_\+cmp\+\_\+si\+\_\+sort\+Spec}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{qdir__win32_8cpp_a8f70b0a0a08649a342f310df09cc288c}{}\index{qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}!F\+F\+\_\+\+E\+R\+R\+O\+R@{F\+F\+\_\+\+E\+R\+R\+O\+R}}
+\index{F\+F\+\_\+\+E\+R\+R\+O\+R@{F\+F\+\_\+\+E\+R\+R\+O\+R}!qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}}
+\subsubsection[{F\+F\+\_\+\+E\+R\+R\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+F\+\_\+\+E\+R\+R\+O\+R~-\/1}\label{qdir__win32_8cpp_a8f70b0a0a08649a342f310df09cc288c}
+\hypertarget{qdir__win32_8cpp_a5d4c730758f65a79a16a063840884aed}{}\index{qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}!F\+F\+\_\+\+G\+E\+T\+F\+I\+R\+S\+T@{F\+F\+\_\+\+G\+E\+T\+F\+I\+R\+S\+T}}
+\index{F\+F\+\_\+\+G\+E\+T\+F\+I\+R\+S\+T@{F\+F\+\_\+\+G\+E\+T\+F\+I\+R\+S\+T}!qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}}
+\subsubsection[{F\+F\+\_\+\+G\+E\+T\+F\+I\+R\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+F\+\_\+\+G\+E\+T\+F\+I\+R\+S\+T~\+\_\+findfirst}\label{qdir__win32_8cpp_a5d4c730758f65a79a16a063840884aed}
+\hypertarget{qdir__win32_8cpp_ad205fb342203a14b1baadf97c045d842}{}\index{qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}!F\+F\+\_\+\+G\+E\+T\+N\+E\+X\+T@{F\+F\+\_\+\+G\+E\+T\+N\+E\+X\+T}}
+\index{F\+F\+\_\+\+G\+E\+T\+N\+E\+X\+T@{F\+F\+\_\+\+G\+E\+T\+N\+E\+X\+T}!qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}}
+\subsubsection[{F\+F\+\_\+\+G\+E\+T\+N\+E\+X\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+F\+\_\+\+G\+E\+T\+N\+E\+X\+T~\+\_\+findnext}\label{qdir__win32_8cpp_ad205fb342203a14b1baadf97c045d842}
+\hypertarget{qdir__win32_8cpp_a1cad405fd392c00da1f3ffe7b5e559f9}{}\index{qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}!I\+S\+\_\+\+A\+R\+C\+H@{I\+S\+\_\+\+A\+R\+C\+H}}
+\index{I\+S\+\_\+\+A\+R\+C\+H@{I\+S\+\_\+\+A\+R\+C\+H}!qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}}
+\subsubsection[{I\+S\+\_\+\+A\+R\+C\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+S\+\_\+\+A\+R\+C\+H~\+\_\+\+A\+\_\+\+A\+R\+C\+H}\label{qdir__win32_8cpp_a1cad405fd392c00da1f3ffe7b5e559f9}
+\hypertarget{qdir__win32_8cpp_a029bcb1da96e7fb951a67ec73716b25a}{}\index{qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}!I\+S\+\_\+\+H\+I\+D\+D\+E\+N@{I\+S\+\_\+\+H\+I\+D\+D\+E\+N}}
+\index{I\+S\+\_\+\+H\+I\+D\+D\+E\+N@{I\+S\+\_\+\+H\+I\+D\+D\+E\+N}!qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}}
+\subsubsection[{I\+S\+\_\+\+H\+I\+D\+D\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+S\+\_\+\+H\+I\+D\+D\+E\+N~\+\_\+\+A\+\_\+\+H\+I\+D\+D\+E\+N}\label{qdir__win32_8cpp_a029bcb1da96e7fb951a67ec73716b25a}
+\hypertarget{qdir__win32_8cpp_ae56e1114ee42647ea234cf29b69e1279}{}\index{qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}!I\+S\+\_\+\+R\+D\+O\+N\+L\+Y@{I\+S\+\_\+\+R\+D\+O\+N\+L\+Y}}
+\index{I\+S\+\_\+\+R\+D\+O\+N\+L\+Y@{I\+S\+\_\+\+R\+D\+O\+N\+L\+Y}!qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}}
+\subsubsection[{I\+S\+\_\+\+R\+D\+O\+N\+L\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+S\+\_\+\+R\+D\+O\+N\+L\+Y~\+\_\+\+A\+\_\+\+R\+D\+O\+N\+L\+Y}\label{qdir__win32_8cpp_ae56e1114ee42647ea234cf29b69e1279}
+\hypertarget{qdir__win32_8cpp_a69a029617a1a813f6a6328de21311a8f}{}\index{qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}!I\+S\+\_\+\+S\+U\+B\+D\+I\+R@{I\+S\+\_\+\+S\+U\+B\+D\+I\+R}}
+\index{I\+S\+\_\+\+S\+U\+B\+D\+I\+R@{I\+S\+\_\+\+S\+U\+B\+D\+I\+R}!qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}}
+\subsubsection[{I\+S\+\_\+\+S\+U\+B\+D\+I\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+S\+\_\+\+S\+U\+B\+D\+I\+R~\+\_\+\+A\+\_\+\+S\+U\+B\+D\+I\+R}\label{qdir__win32_8cpp_a69a029617a1a813f6a6328de21311a8f}
+\hypertarget{qdir__win32_8cpp_a4587f8edbdebf04df1665e0b8163e7ef}{}\index{qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}!I\+S\+\_\+\+S\+Y\+S\+T\+E\+M@{I\+S\+\_\+\+S\+Y\+S\+T\+E\+M}}
+\index{I\+S\+\_\+\+S\+Y\+S\+T\+E\+M@{I\+S\+\_\+\+S\+Y\+S\+T\+E\+M}!qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}}
+\subsubsection[{I\+S\+\_\+\+S\+Y\+S\+T\+E\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+S\+\_\+\+S\+Y\+S\+T\+E\+M~\+\_\+\+A\+\_\+\+S\+Y\+S\+T\+E\+M}\label{qdir__win32_8cpp_a4587f8edbdebf04df1665e0b8163e7ef}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{qdir__win32_8cpp_a2d498ac63470247e637f546ffe8a1e46}{}\index{qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}!qt\+\_\+cmp\+\_\+si@{qt\+\_\+cmp\+\_\+si}}
+\index{qt\+\_\+cmp\+\_\+si@{qt\+\_\+cmp\+\_\+si}!qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}}
+\subsubsection[{qt\+\_\+cmp\+\_\+si(const void $\ast$, const void $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}int qt\+\_\+cmp\+\_\+si (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{, }
+\item[{const void $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{qdir__win32_8cpp_a2d498ac63470247e637f546ffe8a1e46}
+\hypertarget{qdir__win32_8cpp_a639a5308a2b6bf01a7e99cb40ab6df37}{}\index{qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}!qt\+\_\+make\+Filter\+List@{qt\+\_\+make\+Filter\+List}}
+\index{qt\+\_\+make\+Filter\+List@{qt\+\_\+make\+Filter\+List}!qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}}
+\subsubsection[{qt\+\_\+make\+Filter\+List(const Q\+String \&filter)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String\+List} qt\+\_\+make\+Filter\+List (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{filter}
+\end{DoxyParamCaption}
+)}\label{qdir__win32_8cpp_a639a5308a2b6bf01a7e99cb40ab6df37}
+
+
+\subsection{Documentation des variables}
+\hypertarget{qdir__win32_8cpp_ac65beefca78fc7731ed5cf32e7f5a5c7}{}\index{qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}!qt\+\_\+cmp\+\_\+si\+\_\+sort\+Spec@{qt\+\_\+cmp\+\_\+si\+\_\+sort\+Spec}}
+\index{qt\+\_\+cmp\+\_\+si\+\_\+sort\+Spec@{qt\+\_\+cmp\+\_\+si\+\_\+sort\+Spec}!qdir\+\_\+win32.\+cpp@{qdir\+\_\+win32.\+cpp}}
+\subsubsection[{qt\+\_\+cmp\+\_\+si\+\_\+sort\+Spec}]{\setlength{\rightskip}{0pt plus 5cm}int qt\+\_\+cmp\+\_\+si\+\_\+sort\+Spec}\label{qdir__win32_8cpp_ac65beefca78fc7731ed5cf32e7f5a5c7}

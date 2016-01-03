@@ -1,0 +1,1239 @@
+\hypertarget{pycode_8cpp}{}\section{Référence du fichier generated\+\_\+src/doxygen/pycode.cpp}
+\label{pycode_8cpp}\index{generated\+\_\+src/doxygen/pycode.\+cpp@{generated\+\_\+src/doxygen/pycode.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$qvaluestack.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}pycode.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scanner.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}entry.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doxygen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}outputlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}membername.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}searchindex.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}groupdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}classlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}filedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}namespacedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tooltip.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structyy__buffer__state}{yy\+\_\+buffer\+\_\+state}
+\item 
+struct \hyperlink{structyy__trans__info}{yy\+\_\+trans\+\_\+info}
+\item 
+class \hyperlink{class_py_variable_context}{Py\+Variable\+Context}
+\item 
+class \hyperlink{class_py_variable_context_1_1_scope}{Py\+Variable\+Context\+::\+Scope}
+\item 
+class \hyperlink{class_py_call_context}{Py\+Call\+Context}
+\item 
+struct \hyperlink{struct_py_call_context_1_1_ctx}{Py\+Call\+Context\+::\+Ctx}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pycode_8cpp_a1ae16e642a197fa4948998525813c6f5}{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}~short int
+\item 
+\#define \hyperlink{pycode_8cpp_ac86ea8173dfcfc5c989d3295a77e2f95}{yy\+\_\+create\+\_\+buffer}~\hyperlink{pycode_8cpp_af75be38182049ce65487cf9766029a8a}{pycode\+Y\+Y\+\_\+create\+\_\+buffer}
+\item 
+\#define \hyperlink{pycode_8cpp_ad1868c6b38b45af25a4a0f449912a808}{yy\+\_\+delete\+\_\+buffer}~\hyperlink{pycode_8cpp_aecf0f2cb853282b4d357946b50eb3948}{pycode\+Y\+Y\+\_\+delete\+\_\+buffer}
+\item 
+\#define \hyperlink{pycode_8cpp_a301f4439c9b191c80db45f5b1a8c7269}{yy\+\_\+flex\+\_\+debug}~\hyperlink{pycode_8cpp_aaf21e1e06d0712bca169e685011aab29}{pycode\+Y\+Y\+\_\+flex\+\_\+debug}
+\item 
+\#define \hyperlink{pycode_8cpp_aa14efad9f9c24106a3e3398a4f6621c2}{yy\+\_\+init\+\_\+buffer}~pycode\+Y\+Y\+\_\+init\+\_\+buffer
+\item 
+\#define \hyperlink{pycode_8cpp_ab01a4c7245136f22a63acac7c0ceb343}{yy\+\_\+flush\+\_\+buffer}~\hyperlink{pycode_8cpp_abadb9b48f9a7d1f6a393f5ebf307d6cb}{pycode\+Y\+Y\+\_\+flush\+\_\+buffer}
+\item 
+\#define \hyperlink{pycode_8cpp_a039fc377fd4784139d8706ba0ae229fa}{yy\+\_\+load\+\_\+buffer\+\_\+state}~pycode\+Y\+Y\+\_\+load\+\_\+buffer\+\_\+state
+\item 
+\#define \hyperlink{pycode_8cpp_a968d5b9e7e06a38bfca977b343d47d5c}{yy\+\_\+switch\+\_\+to\+\_\+buffer}~\hyperlink{pycode_8cpp_add43f4fd2c445ab3d748aeb9a58c6296}{pycode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}
+\item 
+\#define \hyperlink{pycode_8cpp_aa789f4617e33fb99594cb04a3688a0c1}{yyin}~\hyperlink{pycode_8cpp_ab84ea158c626a0dd9f4aae38a658f28e}{pycode\+Y\+Yin}
+\item 
+\#define \hyperlink{pycode_8cpp_afa07a629486cb790560bb95713ec7794}{yyleng}~\hyperlink{pycode_8cpp_a8a2df0a830fc336f70394a57bb6f459c}{pycode\+Y\+Yleng}
+\item 
+\#define \hyperlink{pycode_8cpp_a5611300548b2030d86b6ab9168132b88}{yylex}~\hyperlink{pycode_8cpp_a8883bae4da5ea1b53994aa1ff9450066}{pycode\+Y\+Ylex}
+\item 
+\#define \hyperlink{pycode_8cpp_ad71cf0fddcfe4f61de0929105b33226c}{yylineno}~\hyperlink{pycode_8cpp_a9f51eb6daec0ceaf44f97e9f64ed1b2f}{pycode\+Y\+Ylineno}
+\item 
+\#define \hyperlink{pycode_8cpp_a4fd44867d448dcb6fc32ea004a15de54}{yyout}~\hyperlink{pycode_8cpp_a87e611db0d2276c82378c65d53f5ceac}{pycode\+Y\+Yout}
+\item 
+\#define \hyperlink{pycode_8cpp_a2259355ac49295f72feab070a34a9b11}{yyrestart}~\hyperlink{pycode_8cpp_ab619897b1b5f903bf3aa97fbf45d1eaf}{pycode\+Y\+Yrestart}
+\item 
+\#define \hyperlink{pycode_8cpp_a0d71f919dbec1ffd74b2460fa7e5ac28}{yytext}~\hyperlink{pycode_8cpp_a4b99648141da25f4b63c0a995d0e08d3}{pycode\+Y\+Ytext}
+\item 
+\#define \hyperlink{pycode_8cpp_a5be541efdb129f7cefb2437f52fe7359}{yywrap}~\hyperlink{pycode_8cpp_a99c987ddb5e5d336c9e977d50cd2760f}{pycode\+Y\+Ywrap}
+\item 
+\#define \hyperlink{pycode_8cpp_a803397ab738ee8630166680646a2d913}{yyalloc}~\hyperlink{pycode_8cpp_a69e97f903f340ddf3e74b7acd1d59fa4}{pycode\+Y\+Yalloc}
+\item 
+\#define \hyperlink{pycode_8cpp_ab1eba250555ca003eb39387bb1a41d39}{yyrealloc}~\hyperlink{pycode_8cpp_aa6a7864beb3c87e277a97ed1ab9dec14}{pycode\+Y\+Yrealloc}
+\item 
+\#define \hyperlink{pycode_8cpp_a4fa4368d47620ea80150b516e8884f6b}{yyfree}~\hyperlink{pycode_8cpp_a97a5ec981b076e8fd7c19b6232f0fc9c}{pycode\+Y\+Yfree}
+\item 
+\#define \hyperlink{pycode_8cpp_a3c3d1ef92e93b0bc81d7760a73d5c3b6}{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}
+\item 
+\#define \hyperlink{pycode_8cpp_a243ca1d30872935faf05ea5118ed6fdc}{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}~2
+\item 
+\#define \hyperlink{pycode_8cpp_a90f9d458829400869e47efb68a865677}{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}~5
+\item 
+\#define \hyperlink{pycode_8cpp_ac676bd06869180ea493e9b6d7c078dbb}{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}~35
+\item 
+\#define \hyperlink{pycode_8cpp_a9465c9986fdda27730c9dff8d16a0887}{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}
+\item 
+\#define \hyperlink{pycode_8cpp_aec980b5a71bbe6d67931df20f0ebaec4}{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}
+\item 
+\#define \hyperlink{pycode_8cpp_aadcf2a81af243df333b31efa6461ab8e}{I\+N\+T8\+\_\+\+M\+I\+N}~(-\/128)
+\item 
+\#define \hyperlink{pycode_8cpp_ad4e9955955b27624963643eac448118a}{I\+N\+T16\+\_\+\+M\+I\+N}~(-\/32767-\/1)
+\item 
+\#define \hyperlink{pycode_8cpp_a688eb21a22db27c2b2bd5836943cdcbe}{I\+N\+T32\+\_\+\+M\+I\+N}~(-\/2147483647-\/1)
+\item 
+\#define \hyperlink{pycode_8cpp_aaf7f29f45f1a513b4748a4e5014ddf6a}{I\+N\+T8\+\_\+\+M\+A\+X}~(127)
+\item 
+\#define \hyperlink{pycode_8cpp_ac58f2c111cc9989c86db2a7dc4fd84ca}{I\+N\+T16\+\_\+\+M\+A\+X}~(32767)
+\item 
+\#define \hyperlink{pycode_8cpp_a181807730d4a375f848ba139813ce04f}{I\+N\+T32\+\_\+\+M\+A\+X}~(2147483647)
+\item 
+\#define \hyperlink{pycode_8cpp_aeb4e270a084ee26fe73e799861bd0252}{U\+I\+N\+T8\+\_\+\+M\+A\+X}~(255\+U)
+\item 
+\#define \hyperlink{pycode_8cpp_a3ea490c9b3617d4479bd80ef93cd5602}{U\+I\+N\+T16\+\_\+\+M\+A\+X}~(65535\+U)
+\item 
+\#define \hyperlink{pycode_8cpp_ab5eb23180f7cc12b7d6c04a8ec067fdd}{U\+I\+N\+T32\+\_\+\+M\+A\+X}~(4294967295\+U)
+\item 
+\#define \hyperlink{pycode_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst}
+\item 
+\#define \hyperlink{pycode_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}{Y\+Y\+\_\+\+N\+U\+L\+L}~0
+\item 
+\#define \hyperlink{pycode_8cpp_af1185350b7a92cf8aa5324c68850c8a6}{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}(\hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})~((unsigned int) (unsigned char) \hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})
+\item 
+\#define \hyperlink{pycode_8cpp_ab766bbbee08d04b67e3fe599d6900873}{B\+E\+G\+I\+N}~(yy\+\_\+start) = 1 + 2 $\ast$
+\item 
+\#define \hyperlink{pycode_8cpp_a8e14785f9eab7a997d659b25af9584c5}{Y\+Y\+\_\+\+S\+T\+A\+R\+T}~(((yy\+\_\+start) -\/ 1) / 2)
+\item 
+\#define \hyperlink{pycode_8cpp_a32b5b960944f946b192d54f672569cd9}{Y\+Y\+S\+T\+A\+T\+E}~\hyperlink{xmlcode_8cpp_a8e14785f9eab7a997d659b25af9584c5}{Y\+Y\+\_\+\+S\+T\+A\+R\+T}
+\item 
+\#define \hyperlink{pycode_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}(state)~(\hyperlink{xmlcode_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R} + state + 1)
+\item 
+\#define \hyperlink{pycode_8cpp_a0406739e64fb5750cf995d2ae68ce69d}{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}~\hyperlink{pycode_8cpp_ab619897b1b5f903bf3aa97fbf45d1eaf}{pycode\+Y\+Yrestart}(\hyperlink{pycode_8cpp_ab84ea158c626a0dd9f4aae38a658f28e}{pycode\+Y\+Yin}  )
+\item 
+\#define \hyperlink{pycode_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}~0
+\item 
+\#define \hyperlink{pycode_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}~262144
+\item 
+\#define \hyperlink{pycode_8cpp_ac2f8b6fccdc516d96b02ac09a4dc01bd}{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}~((\hyperlink{xmlcode_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E} + 2) $\ast$ sizeof(\hyperlink{code_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{yy\+\_\+state\+\_\+type}))
+\item 
+\#define \hyperlink{pycode_8cpp_aa79d63ed3ff8d2249baf1732a73089f5}{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}
+\item 
+\#define \hyperlink{pycode_8cpp_ae0f2b0b5f04b2338367826b5670774f9}{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}
+\item 
+\#define \hyperlink{pycode_8cpp_adf4b0db227e07782e28ade353a7ba7a1}{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}~0
+\item 
+\#define \hyperlink{pycode_8cpp_a7f71d7fa2c403eb4b2f38cb9536f3c63}{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}~1
+\item 
+\#define \hyperlink{pycode_8cpp_ad1a0b5ebcabffe388e9e9ebb2619c1fb}{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}~2
+\item 
+\#define \hyperlink{pycode_8cpp_a12e5f3a76911433480bca7f4edba6119}{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+\#define \hyperlink{pycode_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{yyless}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+\#define \hyperlink{pycode_8cpp_a448a4e9041a09588332733c6846c770c}{unput}(\hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})~yyunput( \hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c}, (\hyperlink{xmlcode_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\+\_\+ptr})  )
+\item 
+\#define \hyperlink{pycode_8cpp_a8aaa9e1fa7f13d6954d045ef973a9c84}{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}
+\item 
+\#define \hyperlink{pycode_8cpp_a53579db42834b88199458993912c646d}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}~0
+\item 
+\#define \hyperlink{pycode_8cpp_a609d19f40900ecc2a5f812d9388c21fb}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}~1
+\item 
+\#define \hyperlink{pycode_8cpp_ad689d97c15e807a6116ace7a420cea57}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}~2
+\item 
+\#define \hyperlink{pycode_8cpp_aa093d500a6330d06d8e4760c494fac33}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}
+\item 
+\#define \hyperlink{pycode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}~(yy\+\_\+buffer\+\_\+stack)\mbox{[}(yy\+\_\+buffer\+\_\+stack\+\_\+top)\mbox{]}
+\item 
+\#define \hyperlink{pycode_8cpp_ac5d478d90ea9a2ecd43d579067a2e89d}{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}~\hyperlink{pycode_8cpp_abadb9b48f9a7d1f6a393f5ebf307d6cb}{pycode\+Y\+Y\+\_\+flush\+\_\+buffer}(\hyperlink{xmlcode_8cpp_aa093d500a6330d06d8e4760c494fac33}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R} )
+\item 
+\#define \hyperlink{pycode_8cpp_ab7eb911e18655f2f78e63afe5a8a4a12}{yy\+\_\+new\+\_\+buffer}~\hyperlink{pycode_8cpp_af75be38182049ce65487cf9766029a8a}{pycode\+Y\+Y\+\_\+create\+\_\+buffer}
+\item 
+\#define \hyperlink{pycode_8cpp_ac56eb96366c08862bf0efe5d83d1fc4c}{yy\+\_\+set\+\_\+interactive}(is\+\_\+interactive)
+\item 
+\#define \hyperlink{pycode_8cpp_a12e30d13a76a94e78010db9996d39c50}{yy\+\_\+set\+\_\+bol}(at\+\_\+bol)
+\item 
+\#define \hyperlink{pycode_8cpp_a71ca89b3656acd0552f14949a571560b}{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}()~(\hyperlink{xmlcode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}-\/$>$yy\+\_\+at\+\_\+bol)
+\item 
+\#define \hyperlink{pycode_8cpp_a99c987ddb5e5d336c9e977d50cd2760f}{pycode\+Y\+Ywrap}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})~1
+\item 
+\#define \hyperlink{pycode_8cpp_ae1ef5933028cbc587d31328e53d11a99}{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}
+\item 
+\#define \hyperlink{pycode_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\+\_\+ptr}~\hyperlink{pycode_8cpp_a4b99648141da25f4b63c0a995d0e08d3}{pycode\+Y\+Ytext}
+\item 
+\#define \hyperlink{pycode_8cpp_acc3486d769af4e4b2820346a0093cc79}{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}
+\item 
+\#define \hyperlink{pycode_8cpp_ae558785bb896e090901c2b905f6790c6}{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}~61
+\item 
+\#define \hyperlink{pycode_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}~62
+\item 
+\#define \hyperlink{pycode_8cpp_a76482842cdcaadf1dbdaf43df38765a2}{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}~0x2000
+\item 
+\#define \hyperlink{pycode_8cpp_a7fce78ee876950ded902364014c917e6}{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}~0x4000
+\item 
+\#define \hyperlink{pycode_8cpp_a835f10dd1ab4bf9a80c4cd80ee6e3058}{R\+E\+J\+E\+C\+T}
+\item 
+\#define \hyperlink{pycode_8cpp_a745d37b5e002b2e5f93ad42ea7b554be}{yymore}()~yymore\+\_\+used\+\_\+but\+\_\+not\+\_\+detected
+\item 
+\#define \hyperlink{pycode_8cpp_a68792d73820bc46a71d3d4e613f0b977}{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}~0
+\item 
+\#define \hyperlink{pycode_8cpp_a56858d18c7eda4f53664496ef566f651}{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}
+\item 
+\#define \hyperlink{pycode_8cpp_a234e2efe67eececd88b140b46ea37463}{D\+B\+G\+\_\+\+C\+T\+X}(x)~do \{ \} \hyperlink{xmlcode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{while}(0)
+\item 
+\#define \hyperlink{pycode_8cpp_a15b85de192a189d5a31cdd518e001e6e}{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}~1
+\item 
+\#define \hyperlink{pycode_8cpp_a85523a0c7d95c059d251b4e9829947aa}{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}~1
+\item 
+\#define \hyperlink{pycode_8cpp_aacfdca45fa4beb8b06172525a53c424a}{Y\+Y\+\_\+\+I\+N\+P\+U\+T}(buf,  result,  max\+\_\+size)~result=yyread(buf,max\+\_\+size);
+\item 
+\#define \hyperlink{pycode_8cpp_aa3d063564f6ab16f6d408b8369d0e9ff}{I\+N\+I\+T\+I\+A\+L}~0
+\item 
+\#define \hyperlink{pycode_8cpp_a9ea71399d05caef1af1c5027e053b64c}{Body}~1
+\item 
+\#define \hyperlink{pycode_8cpp_a41807c8cee85701be57195502f7906b7}{Function\+Dec}~2
+\item 
+\#define \hyperlink{pycode_8cpp_a99542ea7eaa7fdd56107a29ebcb482a9}{Function\+Params}~3
+\item 
+\#define \hyperlink{pycode_8cpp_a3f68c85eb70ebda4721d697cc379f05e}{Class\+Dec}~4
+\item 
+\#define \hyperlink{pycode_8cpp_a8d6085575ef9c8fd5ff5a79db3c304b4}{Class\+Inheritance}~5
+\item 
+\#define \hyperlink{pycode_8cpp_afed1e97188dea85f283bf53d405a39c5}{Suite}~6
+\item 
+\#define \hyperlink{pycode_8cpp_a3ace5566a671185eb017952b25351306}{Suite\+Capture\+Indent}~7
+\item 
+\#define \hyperlink{pycode_8cpp_ac4a251db23c3bf0ab34e3d797a388944}{Suite\+Start}~8
+\item 
+\#define \hyperlink{pycode_8cpp_a538fe4c2466f3819340d65706cff5784}{Suite\+Maintain}~9
+\item 
+\#define \hyperlink{pycode_8cpp_a90e9b030bd0f04ee992a31b5e7ab05b9}{Suite\+Continuing}~10
+\item 
+\#define \hyperlink{pycode_8cpp_ae50a78729a18309e15165b421a417965}{Long\+String}~11
+\item 
+\#define \hyperlink{pycode_8cpp_a65ae844ca16af981ff44722aa33bf107}{Single\+Quote\+String}~12
+\item 
+\#define \hyperlink{pycode_8cpp_afdf8e4213eb7f4f6cda462a593c60d79}{Double\+Quote\+String}~13
+\item 
+\#define \hyperlink{pycode_8cpp_a16afbcb79b77f93951d61d2e93c1ff7d}{Triple\+String}~14
+\item 
+\#define \hyperlink{pycode_8cpp_a26938d921de835f6183c02e54cf08828}{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}~void $\ast$
+\item 
+\#define \hyperlink{pycode_8cpp_aab1491ceccb1c95c14320b2903773a1c}{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}~262144
+\item 
+\#define \hyperlink{pycode_8cpp_aad1dc60a04a1d8cfc8b3ded13601e361}{E\+C\+H\+O}~fwrite( \hyperlink{pycode_8cpp_a4b99648141da25f4b63c0a995d0e08d3}{pycode\+Y\+Ytext}, \hyperlink{pycode_8cpp_a8a2df0a830fc336f70394a57bb6f459c}{pycode\+Y\+Yleng}, 1, \hyperlink{pycode_8cpp_a87e611db0d2276c82378c65d53f5ceac}{pycode\+Y\+Yout} )
+\item 
+\#define \hyperlink{pycode_8cpp_ac3286b18a2e91b4571b97df96a118e84}{yyterminate}()~return \hyperlink{xmlcode_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}{Y\+Y\+\_\+\+N\+U\+L\+L}
+\item 
+\#define \hyperlink{pycode_8cpp_a227e75c43b9e0cd41529974230be7e75}{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}~25
+\item 
+\#define \hyperlink{pycode_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}(\hyperlink{message_8h_aba549a028419cd48a3f373037c2c57eb}{msg})~yy\+\_\+fatal\+\_\+error( \hyperlink{message_8h_aba549a028419cd48a3f373037c2c57eb}{msg} )
+\item 
+\#define \hyperlink{pycode_8cpp_a7682c8d9cec0859408d2421fbe4a5570}{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}~1
+\item 
+\#define \hyperlink{pycode_8cpp_ae5b01ac2fa5a6ad5fb97559638abe686}{Y\+Y\+\_\+\+D\+E\+C\+L}~int \hyperlink{pycode_8cpp_a8883bae4da5ea1b53994aa1ff9450066}{pycode\+Y\+Ylex} (void)
+\item 
+\#define \hyperlink{pycode_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}
+\item 
+\#define \hyperlink{pycode_8cpp_a3cc40a460ad7df816678bcc05241e84c}{Y\+Y\+\_\+\+B\+R\+E\+A\+K}~break;
+\item 
+\#define \hyperlink{pycode_8cpp_a690504b662e4281515bf12722df178ba}{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}~\hyperlink{xmlcode_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}
+\item 
+\#define \hyperlink{pycode_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}~2
+\item 
+\#define \hyperlink{pycode_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{yyless}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+\#define \hyperlink{pycode_8cpp_a828cc83270f8f5bb1688e14dd4e28128}{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}~\char`\"{}yytables\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef signed char \hyperlink{pycode_8cpp_a7b0840dff4a2ef1702118aa12264b2a7}{flex\+\_\+int8\+\_\+t}
+\item 
+typedef short int \hyperlink{pycode_8cpp_a2e73b2c75126814585525fb2e9d51159}{flex\+\_\+int16\+\_\+t}
+\item 
+typedef int \hyperlink{pycode_8cpp_a838ce943cf44ef7769480714fc6c3ba9}{flex\+\_\+int32\+\_\+t}
+\item 
+typedef unsigned char \hyperlink{pycode_8cpp_a0fac5ea484f64e75dbe6eba4aa61750c}{flex\+\_\+uint8\+\_\+t}
+\item 
+typedef unsigned short int \hyperlink{pycode_8cpp_ac50cdb9eefbef83a1cec89e3a7f6e1d2}{flex\+\_\+uint16\+\_\+t}
+\item 
+typedef unsigned int \hyperlink{pycode_8cpp_a36869712de12820c73aae736762e8e88}{flex\+\_\+uint32\+\_\+t}
+\item 
+typedef struct \hyperlink{structyy__buffer__state}{yy\+\_\+buffer\+\_\+state} $\ast$ \hyperlink{pycode_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}
+\item 
+typedef size\+\_\+t \hyperlink{pycode_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t}
+\item 
+typedef unsigned char \hyperlink{pycode_8cpp_a1f324b3cb0839eeb90145f0274e6946e}{Y\+Y\+\_\+\+C\+H\+A\+R}
+\item 
+typedef int \hyperlink{pycode_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{yy\+\_\+state\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{pycode_8cpp_ab619897b1b5f903bf3aa97fbf45d1eaf}{pycode\+Y\+Yrestart} (F\+I\+L\+E $\ast$input\+\_\+file)
+\item 
+void \hyperlink{pycode_8cpp_add43f4fd2c445ab3d748aeb9a58c6296}{pycode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} new\+\_\+buffer)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{pycode_8cpp_af75be38182049ce65487cf9766029a8a}{pycode\+Y\+Y\+\_\+create\+\_\+buffer} (F\+I\+L\+E $\ast$file, int size)
+\item 
+void \hyperlink{pycode_8cpp_aecf0f2cb853282b4d357946b50eb3948}{pycode\+Y\+Y\+\_\+delete\+\_\+buffer} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b})
+\item 
+void \hyperlink{pycode_8cpp_abadb9b48f9a7d1f6a393f5ebf307d6cb}{pycode\+Y\+Y\+\_\+flush\+\_\+buffer} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b})
+\item 
+void \hyperlink{pycode_8cpp_afe888d0a6315dddf27f1a16ae5cebec7}{pycode\+Y\+Ypush\+\_\+buffer\+\_\+state} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} new\+\_\+buffer)
+\item 
+void \hyperlink{pycode_8cpp_ae99e9a88817c006d3f2415b80da36c89}{pycode\+Y\+Ypop\+\_\+buffer\+\_\+state} (void)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{pycode_8cpp_a5a3fc3bff68d29bc1ab0f2927ea8c1ef}{pycode\+Y\+Y\+\_\+scan\+\_\+buffer} (char $\ast$base, \hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} size)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{pycode_8cpp_a83aa90e51cd845ceb82ea61663c4127f}{pycode\+Y\+Y\+\_\+scan\+\_\+string} (\hyperlink{xmlcode_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst} char $\ast$yy\+\_\+str)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{pycode_8cpp_a32491fc44c1453cc26fcaeed5bf13e8f}{pycode\+Y\+Y\+\_\+scan\+\_\+bytes} (\hyperlink{xmlcode_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst} char $\ast$bytes, \hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} len)
+\item 
+void $\ast$ \hyperlink{pycode_8cpp_a69e97f903f340ddf3e74b7acd1d59fa4}{pycode\+Y\+Yalloc} (\hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t})
+\item 
+void $\ast$ \hyperlink{pycode_8cpp_aa6a7864beb3c87e277a97ed1ab9dec14}{pycode\+Y\+Yrealloc} (void $\ast$, \hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t})
+\item 
+void \hyperlink{pycode_8cpp_a97a5ec981b076e8fd7c19b6232f0fc9c}{pycode\+Y\+Yfree} (void $\ast$)
+\item 
+int \hyperlink{pycode_8cpp_a6c745cf5b62d53969e67935aaf99086a}{pycode\+Y\+Ylex\+\_\+destroy} (void)
+\item 
+int \hyperlink{pycode_8cpp_ae22be19e811625de797661cc095c3ac0}{pycode\+Y\+Yget\+\_\+debug} (void)
+\item 
+void \hyperlink{pycode_8cpp_a30f1eb656b4470a8625ca4544b64a7c5}{pycode\+Y\+Yset\+\_\+debug} (int debug\+\_\+flag)
+\item 
+\hyperlink{xmlcode_8cpp_a26938d921de835f6183c02e54cf08828}{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E} \hyperlink{pycode_8cpp_a5ebe0a3c35fed6e7c9566c04e644f64a}{pycode\+Y\+Yget\+\_\+extra} (void)
+\item 
+void \hyperlink{pycode_8cpp_a2a6628f8f07aa67bf3fe4ef3489f0d0b}{pycode\+Y\+Yset\+\_\+extra} (\hyperlink{xmlcode_8cpp_a26938d921de835f6183c02e54cf08828}{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E} user\+\_\+defined)
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{pycode_8cpp_ac9a983893bc6dabe25097183398e5306}{pycode\+Y\+Yget\+\_\+in} (void)
+\item 
+void \hyperlink{pycode_8cpp_ae9796f791b6c1f5b6e9acfb22fa8291d}{pycode\+Y\+Yset\+\_\+in} (F\+I\+L\+E $\ast$in\+\_\+str)
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{pycode_8cpp_a5e04e0cb595e7638f264fc17d28defbb}{pycode\+Y\+Yget\+\_\+out} (void)
+\item 
+void \hyperlink{pycode_8cpp_a9adbb91bdfa7c4b72a58c1f5ff1daeea}{pycode\+Y\+Yset\+\_\+out} (F\+I\+L\+E $\ast$out\+\_\+str)
+\item 
+\hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} \hyperlink{pycode_8cpp_a02f01e4f2fb1e1576c16d57fdf6e8587}{pycode\+Y\+Yget\+\_\+leng} (void)
+\item 
+char $\ast$ \hyperlink{pycode_8cpp_a9fbea2b6976f20844af947ebd3a9bd22}{pycode\+Y\+Yget\+\_\+text} (void)
+\item 
+int \hyperlink{pycode_8cpp_a8f296ac9e3d41289a01e36408ed0d258}{pycode\+Y\+Yget\+\_\+lineno} (void)
+\item 
+void \hyperlink{pycode_8cpp_ad2e1babc0ed96aca0a29ac31e32aa612}{pycode\+Y\+Yset\+\_\+lineno} (int line\+\_\+number)
+\item 
+int \hyperlink{pycode_8cpp_a8883bae4da5ea1b53994aa1ff9450066}{pycode\+Y\+Ylex} (void)
+\item 
+\hyperlink{pycode_8cpp_ad4a65b873df5c05570846b5413b41dfd}{if} (!(yy\+\_\+init))
+\item 
+\hyperlink{pycode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{while} (1)
+\item 
+int \hyperlink{pycode_8cpp_ab4155ffea05dab2dafae68fd88a0517f}{isatty} (int)
+\item 
+void \hyperlink{pycode_8cpp_a9ee8cc9c825a96efb6bd4193244b019f}{reset\+Python\+Code\+Parser\+State} ()
+\item 
+void \hyperlink{pycode_8cpp_a6153a71a31026d743f971abac3b73ee7}{parse\+Python\+Code} (\hyperlink{class_code_output_interface}{Code\+Output\+Interface} \&od, const char $\ast$, const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} ex\+Block, const char $\ast$ex\+Name, \hyperlink{class_file_def}{File\+Def} $\ast$fd, int start\+Line, int end\+Line, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}, \hyperlink{class_member_def}{Member\+Def} $\ast$, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}, \hyperlink{class_definition}{Definition} $\ast$search\+Ctx, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{tclscanner_8cpp_ac23b94d6976d5bb0c9f1885c5a2e7a53}{collect\+X\+Refs})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} \hyperlink{pycode_8cpp_a8a2df0a830fc336f70394a57bb6f459c}{pycode\+Y\+Yleng}
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{pycode_8cpp_ab84ea158c626a0dd9f4aae38a658f28e}{pycode\+Y\+Yin} = (F\+I\+L\+E $\ast$) 0
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{pycode_8cpp_a87e611db0d2276c82378c65d53f5ceac}{pycode\+Y\+Yout} = (F\+I\+L\+E $\ast$) 0
+\item 
+int \hyperlink{pycode_8cpp_a9f51eb6daec0ceaf44f97e9f64ed1b2f}{pycode\+Y\+Ylineno} = 1
+\item 
+char $\ast$ \hyperlink{pycode_8cpp_a4b99648141da25f4b63c0a995d0e08d3}{pycode\+Y\+Ytext}
+\item 
+int \hyperlink{pycode_8cpp_aaf21e1e06d0712bca169e685011aab29}{pycode\+Y\+Y\+\_\+flex\+\_\+debug} = 0
+\item 
+\hyperlink{pycode_8cpp_abcefb20c54ce0f92452cfbb9cf657670}{Y\+Y\+\_\+\+D\+E\+C\+L}
+\item 
+register char $\ast$ \hyperlink{pycode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\+\_\+cp}
+\item 
+register char $\ast$ \hyperlink{pycode_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\+\_\+bp}
+\item 
+register int \hyperlink{pycode_8cpp_a7ffc8c947830757dd87ad202a6823edd}{yy\+\_\+act}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{pycode_8cpp_ab766bbbee08d04b67e3fe599d6900873}{}\index{pycode.\+cpp@{pycode.\+cpp}!B\+E\+G\+I\+N@{B\+E\+G\+I\+N}}
+\index{B\+E\+G\+I\+N@{B\+E\+G\+I\+N}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{B\+E\+G\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+E\+G\+I\+N~(yy\+\_\+start) = 1 + 2 $\ast$}\label{pycode_8cpp_ab766bbbee08d04b67e3fe599d6900873}
+\hypertarget{pycode_8cpp_a9ea71399d05caef1af1c5027e053b64c}{}\index{pycode.\+cpp@{pycode.\+cpp}!Body@{Body}}
+\index{Body@{Body}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Body}]{\setlength{\rightskip}{0pt plus 5cm}\#define Body~1}\label{pycode_8cpp_a9ea71399d05caef1af1c5027e053b64c}
+\hypertarget{pycode_8cpp_a3f68c85eb70ebda4721d697cc379f05e}{}\index{pycode.\+cpp@{pycode.\+cpp}!Class\+Dec@{Class\+Dec}}
+\index{Class\+Dec@{Class\+Dec}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Class\+Dec}]{\setlength{\rightskip}{0pt plus 5cm}\#define Class\+Dec~4}\label{pycode_8cpp_a3f68c85eb70ebda4721d697cc379f05e}
+\hypertarget{pycode_8cpp_a8d6085575ef9c8fd5ff5a79db3c304b4}{}\index{pycode.\+cpp@{pycode.\+cpp}!Class\+Inheritance@{Class\+Inheritance}}
+\index{Class\+Inheritance@{Class\+Inheritance}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Class\+Inheritance}]{\setlength{\rightskip}{0pt plus 5cm}\#define Class\+Inheritance~5}\label{pycode_8cpp_a8d6085575ef9c8fd5ff5a79db3c304b4}
+\hypertarget{pycode_8cpp_a234e2efe67eececd88b140b46ea37463}{}\index{pycode.\+cpp@{pycode.\+cpp}!D\+B\+G\+\_\+\+C\+T\+X@{D\+B\+G\+\_\+\+C\+T\+X}}
+\index{D\+B\+G\+\_\+\+C\+T\+X@{D\+B\+G\+\_\+\+C\+T\+X}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{D\+B\+G\+\_\+\+C\+T\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+B\+G\+\_\+\+C\+T\+X(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~do \{ \} {\bf while}(0)}\label{pycode_8cpp_a234e2efe67eececd88b140b46ea37463}
+\hypertarget{pycode_8cpp_afdf8e4213eb7f4f6cda462a593c60d79}{}\index{pycode.\+cpp@{pycode.\+cpp}!Double\+Quote\+String@{Double\+Quote\+String}}
+\index{Double\+Quote\+String@{Double\+Quote\+String}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Double\+Quote\+String}]{\setlength{\rightskip}{0pt plus 5cm}\#define Double\+Quote\+String~13}\label{pycode_8cpp_afdf8e4213eb7f4f6cda462a593c60d79}
+\hypertarget{pycode_8cpp_aad1dc60a04a1d8cfc8b3ded13601e361}{}\index{pycode.\+cpp@{pycode.\+cpp}!E\+C\+H\+O@{E\+C\+H\+O}}
+\index{E\+C\+H\+O@{E\+C\+H\+O}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{E\+C\+H\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+C\+H\+O~fwrite( {\bf pycode\+Y\+Ytext}, {\bf pycode\+Y\+Yleng}, 1, {\bf pycode\+Y\+Yout} )}\label{pycode_8cpp_aad1dc60a04a1d8cfc8b3ded13601e361}
+\hypertarget{pycode_8cpp_adf4b0db227e07782e28ade353a7ba7a1}{}\index{pycode.\+cpp@{pycode.\+cpp}!E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}}
+\index{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N~0}\label{pycode_8cpp_adf4b0db227e07782e28ade353a7ba7a1}
+\hypertarget{pycode_8cpp_a7f71d7fa2c403eb4b2f38cb9536f3c63}{}\index{pycode.\+cpp@{pycode.\+cpp}!E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}}
+\index{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E~1}\label{pycode_8cpp_a7f71d7fa2c403eb4b2f38cb9536f3c63}
+\hypertarget{pycode_8cpp_ad1a0b5ebcabffe388e9e9ebb2619c1fb}{}\index{pycode.\+cpp@{pycode.\+cpp}!E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}}
+\index{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H~2}\label{pycode_8cpp_ad1a0b5ebcabffe388e9e9ebb2619c1fb}
+\hypertarget{pycode_8cpp_a9465c9986fdda27730c9dff8d16a0887}{}\index{pycode.\+cpp@{pycode.\+cpp}!F\+L\+E\+X\+\_\+\+B\+E\+T\+A@{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}}
+\index{F\+L\+E\+X\+\_\+\+B\+E\+T\+A@{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+E\+X\+\_\+\+B\+E\+T\+A}\label{pycode_8cpp_a9465c9986fdda27730c9dff8d16a0887}
+\hypertarget{pycode_8cpp_a3c3d1ef92e93b0bc81d7760a73d5c3b6}{}\index{pycode.\+cpp@{pycode.\+cpp}!F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R@{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}}
+\index{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R@{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}\label{pycode_8cpp_a3c3d1ef92e93b0bc81d7760a73d5c3b6}
+\hypertarget{pycode_8cpp_aec980b5a71bbe6d67931df20f0ebaec4}{}\index{pycode.\+cpp@{pycode.\+cpp}!F\+L\+E\+X\+I\+N\+T\+\_\+\+H@{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}}
+\index{F\+L\+E\+X\+I\+N\+T\+\_\+\+H@{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+E\+X\+I\+N\+T\+\_\+\+H}\label{pycode_8cpp_aec980b5a71bbe6d67931df20f0ebaec4}
+\hypertarget{pycode_8cpp_a41807c8cee85701be57195502f7906b7}{}\index{pycode.\+cpp@{pycode.\+cpp}!Function\+Dec@{Function\+Dec}}
+\index{Function\+Dec@{Function\+Dec}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Function\+Dec}]{\setlength{\rightskip}{0pt plus 5cm}\#define Function\+Dec~2}\label{pycode_8cpp_a41807c8cee85701be57195502f7906b7}
+\hypertarget{pycode_8cpp_a99542ea7eaa7fdd56107a29ebcb482a9}{}\index{pycode.\+cpp@{pycode.\+cpp}!Function\+Params@{Function\+Params}}
+\index{Function\+Params@{Function\+Params}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Function\+Params}]{\setlength{\rightskip}{0pt plus 5cm}\#define Function\+Params~3}\label{pycode_8cpp_a99542ea7eaa7fdd56107a29ebcb482a9}
+\hypertarget{pycode_8cpp_aa3d063564f6ab16f6d408b8369d0e9ff}{}\index{pycode.\+cpp@{pycode.\+cpp}!I\+N\+I\+T\+I\+A\+L@{I\+N\+I\+T\+I\+A\+L}}
+\index{I\+N\+I\+T\+I\+A\+L@{I\+N\+I\+T\+I\+A\+L}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{I\+N\+I\+T\+I\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+I\+T\+I\+A\+L~0}\label{pycode_8cpp_aa3d063564f6ab16f6d408b8369d0e9ff}
+\hypertarget{pycode_8cpp_ac58f2c111cc9989c86db2a7dc4fd84ca}{}\index{pycode.\+cpp@{pycode.\+cpp}!I\+N\+T16\+\_\+\+M\+A\+X@{I\+N\+T16\+\_\+\+M\+A\+X}}
+\index{I\+N\+T16\+\_\+\+M\+A\+X@{I\+N\+T16\+\_\+\+M\+A\+X}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{I\+N\+T16\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T16\+\_\+\+M\+A\+X~(32767)}\label{pycode_8cpp_ac58f2c111cc9989c86db2a7dc4fd84ca}
+\hypertarget{pycode_8cpp_ad4e9955955b27624963643eac448118a}{}\index{pycode.\+cpp@{pycode.\+cpp}!I\+N\+T16\+\_\+\+M\+I\+N@{I\+N\+T16\+\_\+\+M\+I\+N}}
+\index{I\+N\+T16\+\_\+\+M\+I\+N@{I\+N\+T16\+\_\+\+M\+I\+N}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{I\+N\+T16\+\_\+\+M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T16\+\_\+\+M\+I\+N~(-\/32767-\/1)}\label{pycode_8cpp_ad4e9955955b27624963643eac448118a}
+\hypertarget{pycode_8cpp_a181807730d4a375f848ba139813ce04f}{}\index{pycode.\+cpp@{pycode.\+cpp}!I\+N\+T32\+\_\+\+M\+A\+X@{I\+N\+T32\+\_\+\+M\+A\+X}}
+\index{I\+N\+T32\+\_\+\+M\+A\+X@{I\+N\+T32\+\_\+\+M\+A\+X}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{I\+N\+T32\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T32\+\_\+\+M\+A\+X~(2147483647)}\label{pycode_8cpp_a181807730d4a375f848ba139813ce04f}
+\hypertarget{pycode_8cpp_a688eb21a22db27c2b2bd5836943cdcbe}{}\index{pycode.\+cpp@{pycode.\+cpp}!I\+N\+T32\+\_\+\+M\+I\+N@{I\+N\+T32\+\_\+\+M\+I\+N}}
+\index{I\+N\+T32\+\_\+\+M\+I\+N@{I\+N\+T32\+\_\+\+M\+I\+N}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{I\+N\+T32\+\_\+\+M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T32\+\_\+\+M\+I\+N~(-\/2147483647-\/1)}\label{pycode_8cpp_a688eb21a22db27c2b2bd5836943cdcbe}
+\hypertarget{pycode_8cpp_aaf7f29f45f1a513b4748a4e5014ddf6a}{}\index{pycode.\+cpp@{pycode.\+cpp}!I\+N\+T8\+\_\+\+M\+A\+X@{I\+N\+T8\+\_\+\+M\+A\+X}}
+\index{I\+N\+T8\+\_\+\+M\+A\+X@{I\+N\+T8\+\_\+\+M\+A\+X}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{I\+N\+T8\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T8\+\_\+\+M\+A\+X~(127)}\label{pycode_8cpp_aaf7f29f45f1a513b4748a4e5014ddf6a}
+\hypertarget{pycode_8cpp_aadcf2a81af243df333b31efa6461ab8e}{}\index{pycode.\+cpp@{pycode.\+cpp}!I\+N\+T8\+\_\+\+M\+I\+N@{I\+N\+T8\+\_\+\+M\+I\+N}}
+\index{I\+N\+T8\+\_\+\+M\+I\+N@{I\+N\+T8\+\_\+\+M\+I\+N}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{I\+N\+T8\+\_\+\+M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T8\+\_\+\+M\+I\+N~(-\/128)}\label{pycode_8cpp_aadcf2a81af243df333b31efa6461ab8e}
+\hypertarget{pycode_8cpp_ae50a78729a18309e15165b421a417965}{}\index{pycode.\+cpp@{pycode.\+cpp}!Long\+String@{Long\+String}}
+\index{Long\+String@{Long\+String}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Long\+String}]{\setlength{\rightskip}{0pt plus 5cm}\#define Long\+String~11}\label{pycode_8cpp_ae50a78729a18309e15165b421a417965}
+\hypertarget{pycode_8cpp_a99c987ddb5e5d336c9e977d50cd2760f}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Ywrap@{pycode\+Y\+Ywrap}}
+\index{pycode\+Y\+Ywrap@{pycode\+Y\+Ywrap}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Ywrap}]{\setlength{\rightskip}{0pt plus 5cm}\#define pycode\+Y\+Ywrap(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)~1}\label{pycode_8cpp_a99c987ddb5e5d336c9e977d50cd2760f}
+\hypertarget{pycode_8cpp_a835f10dd1ab4bf9a80c4cd80ee6e3058}{}\index{pycode.\+cpp@{pycode.\+cpp}!R\+E\+J\+E\+C\+T@{R\+E\+J\+E\+C\+T}}
+\index{R\+E\+J\+E\+C\+T@{R\+E\+J\+E\+C\+T}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{R\+E\+J\+E\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+J\+E\+C\+T}\label{pycode_8cpp_a835f10dd1ab4bf9a80c4cd80ee6e3058}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\{ \(\backslash\)
+*\hyperlink{pycode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = (yy\_hold\_char); \textcolor{comment}{/* undo effects of setting up pycodeYYtext */} \hyperlink{pycode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{\(\backslash\)}
+\hyperlink{pycode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = (yy\_full\_match); \textcolor{comment}{/* restore poss. backed-over text */} \(\backslash\)
+(yy\_lp) = (yy\_full\_lp); \textcolor{comment}{/* restore orig. accepting pos. */} \(\backslash\)
+(yy\_state\_ptr) = (yy\_full\_state); \textcolor{comment}{/* restore orig. state */} \hyperlink{constexp_8cpp_a86a21c2101611f87781b40b111e65aac}{\(\backslash\)}
+\hyperlink{constexp_8cpp_a86a21c2101611f87781b40b111e65aac}{yy\_current\_state} = *(yy\_state\_ptr); \textcolor{comment}{/* restore curr. state */} \(\backslash\)
+++(yy\_lp); \(\backslash\)
+goto find\_rule; \(\backslash\)
+\}
+\end{DoxyCode}
+\hypertarget{pycode_8cpp_a65ae844ca16af981ff44722aa33bf107}{}\index{pycode.\+cpp@{pycode.\+cpp}!Single\+Quote\+String@{Single\+Quote\+String}}
+\index{Single\+Quote\+String@{Single\+Quote\+String}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Single\+Quote\+String}]{\setlength{\rightskip}{0pt plus 5cm}\#define Single\+Quote\+String~12}\label{pycode_8cpp_a65ae844ca16af981ff44722aa33bf107}
+\hypertarget{pycode_8cpp_afed1e97188dea85f283bf53d405a39c5}{}\index{pycode.\+cpp@{pycode.\+cpp}!Suite@{Suite}}
+\index{Suite@{Suite}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Suite}]{\setlength{\rightskip}{0pt plus 5cm}\#define Suite~6}\label{pycode_8cpp_afed1e97188dea85f283bf53d405a39c5}
+\hypertarget{pycode_8cpp_a3ace5566a671185eb017952b25351306}{}\index{pycode.\+cpp@{pycode.\+cpp}!Suite\+Capture\+Indent@{Suite\+Capture\+Indent}}
+\index{Suite\+Capture\+Indent@{Suite\+Capture\+Indent}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Suite\+Capture\+Indent}]{\setlength{\rightskip}{0pt plus 5cm}\#define Suite\+Capture\+Indent~7}\label{pycode_8cpp_a3ace5566a671185eb017952b25351306}
+\hypertarget{pycode_8cpp_a90e9b030bd0f04ee992a31b5e7ab05b9}{}\index{pycode.\+cpp@{pycode.\+cpp}!Suite\+Continuing@{Suite\+Continuing}}
+\index{Suite\+Continuing@{Suite\+Continuing}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Suite\+Continuing}]{\setlength{\rightskip}{0pt plus 5cm}\#define Suite\+Continuing~10}\label{pycode_8cpp_a90e9b030bd0f04ee992a31b5e7ab05b9}
+\hypertarget{pycode_8cpp_a538fe4c2466f3819340d65706cff5784}{}\index{pycode.\+cpp@{pycode.\+cpp}!Suite\+Maintain@{Suite\+Maintain}}
+\index{Suite\+Maintain@{Suite\+Maintain}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Suite\+Maintain}]{\setlength{\rightskip}{0pt plus 5cm}\#define Suite\+Maintain~9}\label{pycode_8cpp_a538fe4c2466f3819340d65706cff5784}
+\hypertarget{pycode_8cpp_ac4a251db23c3bf0ab34e3d797a388944}{}\index{pycode.\+cpp@{pycode.\+cpp}!Suite\+Start@{Suite\+Start}}
+\index{Suite\+Start@{Suite\+Start}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Suite\+Start}]{\setlength{\rightskip}{0pt plus 5cm}\#define Suite\+Start~8}\label{pycode_8cpp_ac4a251db23c3bf0ab34e3d797a388944}
+\hypertarget{pycode_8cpp_a16afbcb79b77f93951d61d2e93c1ff7d}{}\index{pycode.\+cpp@{pycode.\+cpp}!Triple\+String@{Triple\+String}}
+\index{Triple\+String@{Triple\+String}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Triple\+String}]{\setlength{\rightskip}{0pt plus 5cm}\#define Triple\+String~14}\label{pycode_8cpp_a16afbcb79b77f93951d61d2e93c1ff7d}
+\hypertarget{pycode_8cpp_a3ea490c9b3617d4479bd80ef93cd5602}{}\index{pycode.\+cpp@{pycode.\+cpp}!U\+I\+N\+T16\+\_\+\+M\+A\+X@{U\+I\+N\+T16\+\_\+\+M\+A\+X}}
+\index{U\+I\+N\+T16\+\_\+\+M\+A\+X@{U\+I\+N\+T16\+\_\+\+M\+A\+X}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{U\+I\+N\+T16\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+I\+N\+T16\+\_\+\+M\+A\+X~(65535\+U)}\label{pycode_8cpp_a3ea490c9b3617d4479bd80ef93cd5602}
+\hypertarget{pycode_8cpp_ab5eb23180f7cc12b7d6c04a8ec067fdd}{}\index{pycode.\+cpp@{pycode.\+cpp}!U\+I\+N\+T32\+\_\+\+M\+A\+X@{U\+I\+N\+T32\+\_\+\+M\+A\+X}}
+\index{U\+I\+N\+T32\+\_\+\+M\+A\+X@{U\+I\+N\+T32\+\_\+\+M\+A\+X}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{U\+I\+N\+T32\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+I\+N\+T32\+\_\+\+M\+A\+X~(4294967295\+U)}\label{pycode_8cpp_ab5eb23180f7cc12b7d6c04a8ec067fdd}
+\hypertarget{pycode_8cpp_aeb4e270a084ee26fe73e799861bd0252}{}\index{pycode.\+cpp@{pycode.\+cpp}!U\+I\+N\+T8\+\_\+\+M\+A\+X@{U\+I\+N\+T8\+\_\+\+M\+A\+X}}
+\index{U\+I\+N\+T8\+\_\+\+M\+A\+X@{U\+I\+N\+T8\+\_\+\+M\+A\+X}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{U\+I\+N\+T8\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+I\+N\+T8\+\_\+\+M\+A\+X~(255\+U)}\label{pycode_8cpp_aeb4e270a084ee26fe73e799861bd0252}
+\hypertarget{pycode_8cpp_a448a4e9041a09588332733c6846c770c}{}\index{pycode.\+cpp@{pycode.\+cpp}!unput@{unput}}
+\index{unput@{unput}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{unput}]{\setlength{\rightskip}{0pt plus 5cm}\#define unput(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf c}}
+\end{DoxyParamCaption}
+)~yyunput( {\bf c}, ({\bf yytext\+\_\+ptr})  )}\label{pycode_8cpp_a448a4e9041a09588332733c6846c770c}
+\hypertarget{pycode_8cpp_a71ca89b3656acd0552f14949a571560b}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L@{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}}
+\index{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L@{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~({\bf Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}-\/$>$yy\+\_\+at\+\_\+bol)}\label{pycode_8cpp_a71ca89b3656acd0552f14949a571560b}
+\hypertarget{pycode_8cpp_a3cc40a460ad7df816678bcc05241e84c}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+B\+R\+E\+A\+K@{Y\+Y\+\_\+\+B\+R\+E\+A\+K}}
+\index{Y\+Y\+\_\+\+B\+R\+E\+A\+K@{Y\+Y\+\_\+\+B\+R\+E\+A\+K}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+R\+E\+A\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+R\+E\+A\+K~break;}\label{pycode_8cpp_a3cc40a460ad7df816678bcc05241e84c}
+\hypertarget{pycode_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E~262144}\label{pycode_8cpp_ae7e51116e747d3390e7a6cfc6532834c}
+\hypertarget{pycode_8cpp_ad689d97c15e807a6116ace7a420cea57}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G~2}\label{pycode_8cpp_ad689d97c15e807a6116ace7a420cea57}
+\hypertarget{pycode_8cpp_a53579db42834b88199458993912c646d}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W~0}\label{pycode_8cpp_a53579db42834b88199458993912c646d}
+\hypertarget{pycode_8cpp_a609d19f40900ecc2a5f812d9388c21fb}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L~1}\label{pycode_8cpp_a609d19f40900ecc2a5f812d9388c21fb}
+\hypertarget{pycode_8cpp_ac86ea8173dfcfc5c989d3295a77e2f95}{}\index{pycode.\+cpp@{pycode.\+cpp}!yy\+\_\+create\+\_\+buffer@{yy\+\_\+create\+\_\+buffer}}
+\index{yy\+\_\+create\+\_\+buffer@{yy\+\_\+create\+\_\+buffer}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yy\+\_\+create\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+create\+\_\+buffer~{\bf pycode\+Y\+Y\+\_\+create\+\_\+buffer}}\label{pycode_8cpp_ac86ea8173dfcfc5c989d3295a77e2f95}
+\hypertarget{pycode_8cpp_aa093d500a6330d06d8e4760c494fac33}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}}
+\index{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}\label{pycode_8cpp_aa093d500a6330d06d8e4760c494fac33}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+( (yy\_buffer\_stack) \(\backslash\)
+                          ? (yy\_buffer\_stack)[(yy\_buffer\_stack\_top)] \(\backslash\)
+                          : NULL)
+\end{DoxyCode}
+\hypertarget{pycode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}}
+\index{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E~(yy\+\_\+buffer\+\_\+stack)\mbox{[}(yy\+\_\+buffer\+\_\+stack\+\_\+top)\mbox{]}}\label{pycode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}
+\hypertarget{pycode_8cpp_ae5b01ac2fa5a6ad5fb97559638abe686}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+D\+E\+C\+L@{Y\+Y\+\_\+\+D\+E\+C\+L}}
+\index{Y\+Y\+\_\+\+D\+E\+C\+L@{Y\+Y\+\_\+\+D\+E\+C\+L}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+D\+E\+C\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+D\+E\+C\+L~int {\bf pycode\+Y\+Ylex} (void)}\label{pycode_8cpp_ae5b01ac2fa5a6ad5fb97559638abe686}
+\hypertarget{pycode_8cpp_a7682c8d9cec0859408d2421fbe4a5570}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S@{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}}
+\index{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S@{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S~1}\label{pycode_8cpp_a7682c8d9cec0859408d2421fbe4a5570}
+\hypertarget{pycode_8cpp_ad1868c6b38b45af25a4a0f449912a808}{}\index{pycode.\+cpp@{pycode.\+cpp}!yy\+\_\+delete\+\_\+buffer@{yy\+\_\+delete\+\_\+buffer}}
+\index{yy\+\_\+delete\+\_\+buffer@{yy\+\_\+delete\+\_\+buffer}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yy\+\_\+delete\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+delete\+\_\+buffer~{\bf pycode\+Y\+Y\+\_\+delete\+\_\+buffer}}\label{pycode_8cpp_ad1868c6b38b45af25a4a0f449912a808}
+\hypertarget{pycode_8cpp_acc3486d769af4e4b2820346a0093cc79}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}\label{pycode_8cpp_acc3486d769af4e4b2820346a0093cc79}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+(\hyperlink{pycode_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\_ptr}) = \hyperlink{pycode_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}; \hyperlink{pycode_8cpp_a8a2df0a830fc336f70394a57bb6f459c}{\(\backslash\)}
+\hyperlink{pycode_8cpp_a8a2df0a830fc336f70394a57bb6f459c}{    pycodeYYleng} = (\hyperlink{pycode_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\_size\_t}) (\hyperlink{pycode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} - \hyperlink{pycode_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}); \(\backslash\)
+    (yy\_hold\_char) = *\hyperlink{pycode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp}; \(\backslash\)
+    *\hyperlink{pycode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = \textcolor{charliteral}{'\(\backslash\)0'}; \(\backslash\)
+    (yy\_c\_buf\_p) = \hyperlink{pycode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp};
+\end{DoxyCode}
+\hypertarget{pycode_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}}
+\index{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R~62}\label{pycode_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}
+\hypertarget{pycode_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}}
+\index{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R~0}\label{pycode_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}
+\hypertarget{pycode_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E@{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}}
+\index{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E@{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E~2}\label{pycode_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}
+\hypertarget{pycode_8cpp_a26938d921de835f6183c02e54cf08828}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E@{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}}
+\index{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E@{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E~void $\ast$}\label{pycode_8cpp_a26938d921de835f6183c02e54cf08828}
+\hypertarget{pycode_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R@{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}}
+\index{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R@{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf msg}}
+\end{DoxyParamCaption}
+)~yy\+\_\+fatal\+\_\+error( {\bf msg} )}\label{pycode_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}
+\hypertarget{pycode_8cpp_a301f4439c9b191c80db45f5b1a8c7269}{}\index{pycode.\+cpp@{pycode.\+cpp}!yy\+\_\+flex\+\_\+debug@{yy\+\_\+flex\+\_\+debug}}
+\index{yy\+\_\+flex\+\_\+debug@{yy\+\_\+flex\+\_\+debug}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yy\+\_\+flex\+\_\+debug}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+flex\+\_\+debug~{\bf pycode\+Y\+Y\+\_\+flex\+\_\+debug}}\label{pycode_8cpp_a301f4439c9b191c80db45f5b1a8c7269}
+\hypertarget{pycode_8cpp_a243ca1d30872935faf05ea5118ed6fdc}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N~2}\label{pycode_8cpp_a243ca1d30872935faf05ea5118ed6fdc}
+\hypertarget{pycode_8cpp_a90f9d458829400869e47efb68a865677}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N~5}\label{pycode_8cpp_a90f9d458829400869e47efb68a865677}
+\hypertarget{pycode_8cpp_ac676bd06869180ea493e9b6d7c078dbb}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N~35}\label{pycode_8cpp_ac676bd06869180ea493e9b6d7c078dbb}
+\hypertarget{pycode_8cpp_ab01a4c7245136f22a63acac7c0ceb343}{}\index{pycode.\+cpp@{pycode.\+cpp}!yy\+\_\+flush\+\_\+buffer@{yy\+\_\+flush\+\_\+buffer}}
+\index{yy\+\_\+flush\+\_\+buffer@{yy\+\_\+flush\+\_\+buffer}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yy\+\_\+flush\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+flush\+\_\+buffer~{\bf pycode\+Y\+Y\+\_\+flush\+\_\+buffer}}\label{pycode_8cpp_ab01a4c7245136f22a63acac7c0ceb343}
+\hypertarget{pycode_8cpp_ac5d478d90ea9a2ecd43d579067a2e89d}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}}
+\index{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R~{\bf pycode\+Y\+Y\+\_\+flush\+\_\+buffer}({\bf Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R} )}\label{pycode_8cpp_ac5d478d90ea9a2ecd43d579067a2e89d}
+\hypertarget{pycode_8cpp_aa14efad9f9c24106a3e3398a4f6621c2}{}\index{pycode.\+cpp@{pycode.\+cpp}!yy\+\_\+init\+\_\+buffer@{yy\+\_\+init\+\_\+buffer}}
+\index{yy\+\_\+init\+\_\+buffer@{yy\+\_\+init\+\_\+buffer}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yy\+\_\+init\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+init\+\_\+buffer~pycode\+Y\+Y\+\_\+init\+\_\+buffer}\label{pycode_8cpp_aa14efad9f9c24106a3e3398a4f6621c2}
+\hypertarget{pycode_8cpp_aacfdca45fa4beb8b06172525a53c424a}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+I\+N\+P\+U\+T}}
+\index{Y\+Y\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+I\+N\+P\+U\+T}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+I\+N\+P\+U\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+I\+N\+P\+U\+T(
+\begin{DoxyParamCaption}
+\item[{}]{buf, }
+\item[{}]{result, }
+\item[{}]{max\+\_\+size}
+\end{DoxyParamCaption}
+)~result=yyread(buf,max\+\_\+size);}\label{pycode_8cpp_aacfdca45fa4beb8b06172525a53c424a}
+\hypertarget{pycode_8cpp_a1ae16e642a197fa4948998525813c6f5}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D@{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}}
+\index{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D@{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D~short int}\label{pycode_8cpp_a1ae16e642a197fa4948998525813c6f5}
+\hypertarget{pycode_8cpp_a12e5f3a76911433480bca7f4edba6119}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O@{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}}
+\index{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O@{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a12e5f3a76911433480bca7f4edba6119}
+\hypertarget{pycode_8cpp_a039fc377fd4784139d8706ba0ae229fa}{}\index{pycode.\+cpp@{pycode.\+cpp}!yy\+\_\+load\+\_\+buffer\+\_\+state@{yy\+\_\+load\+\_\+buffer\+\_\+state}}
+\index{yy\+\_\+load\+\_\+buffer\+\_\+state@{yy\+\_\+load\+\_\+buffer\+\_\+state}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yy\+\_\+load\+\_\+buffer\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+load\+\_\+buffer\+\_\+state~pycode\+Y\+Y\+\_\+load\+\_\+buffer\+\_\+state}\label{pycode_8cpp_a039fc377fd4784139d8706ba0ae229fa}
+\hypertarget{pycode_8cpp_a68792d73820bc46a71d3d4e613f0b977}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J@{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}}
+\index{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J@{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J~0}\label{pycode_8cpp_a68792d73820bc46a71d3d4e613f0b977}
+\hypertarget{pycode_8cpp_a15b85de192a189d5a31cdd518e001e6e}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E@{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}}
+\index{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E@{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E~1}\label{pycode_8cpp_a15b85de192a189d5a31cdd518e001e6e}
+\hypertarget{pycode_8cpp_ab7eb911e18655f2f78e63afe5a8a4a12}{}\index{pycode.\+cpp@{pycode.\+cpp}!yy\+\_\+new\+\_\+buffer@{yy\+\_\+new\+\_\+buffer}}
+\index{yy\+\_\+new\+\_\+buffer@{yy\+\_\+new\+\_\+buffer}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yy\+\_\+new\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+new\+\_\+buffer~{\bf pycode\+Y\+Y\+\_\+create\+\_\+buffer}}\label{pycode_8cpp_ab7eb911e18655f2f78e63afe5a8a4a12}
+\hypertarget{pycode_8cpp_a0406739e64fb5750cf995d2ae68ce69d}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E@{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}}
+\index{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E@{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E~{\bf pycode\+Y\+Yrestart}({\bf pycode\+Y\+Yin}  )}\label{pycode_8cpp_a0406739e64fb5750cf995d2ae68ce69d}
+\hypertarget{pycode_8cpp_a85523a0c7d95c059d251b4e9829947aa}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}}
+\index{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T~1}\label{pycode_8cpp_a85523a0c7d95c059d251b4e9829947aa}
+\hypertarget{pycode_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+N\+U\+L\+L@{Y\+Y\+\_\+\+N\+U\+L\+L}}
+\index{Y\+Y\+\_\+\+N\+U\+L\+L@{Y\+Y\+\_\+\+N\+U\+L\+L}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+U\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+U\+L\+L~0}\label{pycode_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}
+\hypertarget{pycode_8cpp_ae558785bb896e090901c2b905f6790c6}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S@{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}}
+\index{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S@{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S~61}\label{pycode_8cpp_ae558785bb896e090901c2b905f6790c6}
+\hypertarget{pycode_8cpp_aab1491ceccb1c95c14320b2903773a1c}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}}
+\index{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E~262144}\label{pycode_8cpp_aab1491ceccb1c95c14320b2903773a1c}
+\hypertarget{pycode_8cpp_a56858d18c7eda4f53664496ef566f651}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T@{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T@{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}\label{pycode_8cpp_a56858d18c7eda4f53664496ef566f651}
+\hypertarget{pycode_8cpp_a690504b662e4281515bf12722df178ba}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P@{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}}
+\index{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P@{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P~{\bf Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}}\label{pycode_8cpp_a690504b662e4281515bf12722df178ba}
+\hypertarget{pycode_8cpp_af1185350b7a92cf8aa5324c68850c8a6}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I@{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}}
+\index{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I@{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf c}}
+\end{DoxyParamCaption}
+)~((unsigned int) (unsigned char) {\bf c})}\label{pycode_8cpp_af1185350b7a92cf8aa5324c68850c8a6}
+\hypertarget{pycode_8cpp_a12e30d13a76a94e78010db9996d39c50}{}\index{pycode.\+cpp@{pycode.\+cpp}!yy\+\_\+set\+\_\+bol@{yy\+\_\+set\+\_\+bol}}
+\index{yy\+\_\+set\+\_\+bol@{yy\+\_\+set\+\_\+bol}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yy\+\_\+set\+\_\+bol}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+set\+\_\+bol(
+\begin{DoxyParamCaption}
+\item[{}]{at\+\_\+bol}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a12e30d13a76a94e78010db9996d39c50}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\{ \hyperlink{pycode_8cpp_ad4a65b873df5c05570846b5413b41dfd}{\(\backslash\)}
+\hyperlink{pycode_8cpp_ad4a65b873df5c05570846b5413b41dfd}{    if} ( ! \hyperlink{pycode_8cpp_aa093d500a6330d06d8e4760c494fac33}{YY\_CURRENT\_BUFFER} )\{\(\backslash\)
+        pycodeYYensure\_buffer\_stack (); \hyperlink{pycode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{pycode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{        YY\_CURRENT\_BUFFER\_LVALUE} =    \(\backslash\)
+            pycodeYY\_create\_buffer(\hyperlink{pycode_8cpp_ab84ea158c626a0dd9f4aae38a658f28e}{pycodeYYin},\hyperlink{pycode_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{YY\_BUF\_SIZE} ); \(\backslash\)
+    \} \hyperlink{pycode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{pycode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{    YY\_CURRENT\_BUFFER\_LVALUE}->yy\_at\_bol = at\_bol; \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{pycode_8cpp_ac56eb96366c08862bf0efe5d83d1fc4c}{}\index{pycode.\+cpp@{pycode.\+cpp}!yy\+\_\+set\+\_\+interactive@{yy\+\_\+set\+\_\+interactive}}
+\index{yy\+\_\+set\+\_\+interactive@{yy\+\_\+set\+\_\+interactive}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yy\+\_\+set\+\_\+interactive}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+set\+\_\+interactive(
+\begin{DoxyParamCaption}
+\item[{}]{is\+\_\+interactive}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_ac56eb96366c08862bf0efe5d83d1fc4c}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\{ \hyperlink{pycode_8cpp_ad4a65b873df5c05570846b5413b41dfd}{\(\backslash\)}
+\hyperlink{pycode_8cpp_ad4a65b873df5c05570846b5413b41dfd}{    if} ( ! \hyperlink{pycode_8cpp_aa093d500a6330d06d8e4760c494fac33}{YY\_CURRENT\_BUFFER} )\{ \(\backslash\)
+        pycodeYYensure\_buffer\_stack (); \hyperlink{pycode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{pycode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{        YY\_CURRENT\_BUFFER\_LVALUE} =    \(\backslash\)
+            pycodeYY\_create\_buffer(\hyperlink{pycode_8cpp_ab84ea158c626a0dd9f4aae38a658f28e}{pycodeYYin},\hyperlink{pycode_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{YY\_BUF\_SIZE} ); \(\backslash\)
+    \} \hyperlink{pycode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{pycode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{    YY\_CURRENT\_BUFFER\_LVALUE}->yy\_is\_interactive = is\_interactive; \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{pycode_8cpp_ae1ef5933028cbc587d31328e53d11a99}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P@{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}}
+\index{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P@{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}\label{pycode_8cpp_ae1ef5933028cbc587d31328e53d11a99}
+\hypertarget{pycode_8cpp_a8e14785f9eab7a997d659b25af9584c5}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+R\+T@{Y\+Y\+\_\+\+S\+T\+A\+R\+T}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+R\+T@{Y\+Y\+\_\+\+S\+T\+A\+R\+T}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+R\+T~(((yy\+\_\+start) -\/ 1) / 2)}\label{pycode_8cpp_a8e14785f9eab7a997d659b25af9584c5}
+\hypertarget{pycode_8cpp_a227e75c43b9e0cd41529974230be7e75}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R@{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R@{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R~25}\label{pycode_8cpp_a227e75c43b9e0cd41529974230be7e75}
+\hypertarget{pycode_8cpp_ac2f8b6fccdc516d96b02ac09a4dc01bd}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E~(({\bf Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E} + 2) $\ast$ sizeof({\bf yy\+\_\+state\+\_\+type}))}\label{pycode_8cpp_ac2f8b6fccdc516d96b02ac09a4dc01bd}
+\hypertarget{pycode_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F(
+\begin{DoxyParamCaption}
+\item[{}]{state}
+\end{DoxyParamCaption}
+)~({\bf Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R} + state + 1)}\label{pycode_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}
+\hypertarget{pycode_8cpp_a8aaa9e1fa7f13d6954d045ef973a9c84}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}\label{pycode_8cpp_a8aaa9e1fa7f13d6954d045ef973a9c84}
+\hypertarget{pycode_8cpp_a968d5b9e7e06a38bfca977b343d47d5c}{}\index{pycode.\+cpp@{pycode.\+cpp}!yy\+\_\+switch\+\_\+to\+\_\+buffer@{yy\+\_\+switch\+\_\+to\+\_\+buffer}}
+\index{yy\+\_\+switch\+\_\+to\+\_\+buffer@{yy\+\_\+switch\+\_\+to\+\_\+buffer}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yy\+\_\+switch\+\_\+to\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+switch\+\_\+to\+\_\+buffer~{\bf pycode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}}\label{pycode_8cpp_a968d5b9e7e06a38bfca977b343d47d5c}
+\hypertarget{pycode_8cpp_a7fce78ee876950ded902364014c917e6}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}}
+\index{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K~0x4000}\label{pycode_8cpp_a7fce78ee876950ded902364014c917e6}
+\hypertarget{pycode_8cpp_a76482842cdcaadf1dbdaf43df38765a2}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}}
+\index{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K~0x2000}\label{pycode_8cpp_a76482842cdcaadf1dbdaf43df38765a2}
+\hypertarget{pycode_8cpp_aa79d63ed3ff8d2249baf1732a73089f5}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}\label{pycode_8cpp_aa79d63ed3ff8d2249baf1732a73089f5}
+\hypertarget{pycode_8cpp_ae0f2b0b5f04b2338367826b5670774f9}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}}
+\index{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}\label{pycode_8cpp_ae0f2b0b5f04b2338367826b5670774f9}
+\hypertarget{pycode_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}\label{pycode_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}
+\hypertarget{pycode_8cpp_a803397ab738ee8630166680646a2d913}{}\index{pycode.\+cpp@{pycode.\+cpp}!yyalloc@{yyalloc}}
+\index{yyalloc@{yyalloc}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yyalloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf yyalloc}~{\bf pycode\+Y\+Yalloc}}\label{pycode_8cpp_a803397ab738ee8630166680646a2d913}
+\hypertarget{pycode_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{}\index{pycode.\+cpp@{pycode.\+cpp}!yyconst@{yyconst}}
+\index{yyconst@{yyconst}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yyconst}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyconst}\label{pycode_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}
+\hypertarget{pycode_8cpp_a4fa4368d47620ea80150b516e8884f6b}{}\index{pycode.\+cpp@{pycode.\+cpp}!yyfree@{yyfree}}
+\index{yyfree@{yyfree}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yyfree}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyfree~{\bf pycode\+Y\+Yfree}}\label{pycode_8cpp_a4fa4368d47620ea80150b516e8884f6b}
+\hypertarget{pycode_8cpp_aa789f4617e33fb99594cb04a3688a0c1}{}\index{pycode.\+cpp@{pycode.\+cpp}!yyin@{yyin}}
+\index{yyin@{yyin}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yyin}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyin~{\bf pycode\+Y\+Yin}}\label{pycode_8cpp_aa789f4617e33fb99594cb04a3688a0c1}
+\hypertarget{pycode_8cpp_afa07a629486cb790560bb95713ec7794}{}\index{pycode.\+cpp@{pycode.\+cpp}!yyleng@{yyleng}}
+\index{yyleng@{yyleng}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yyleng}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyleng~{\bf pycode\+Y\+Yleng}}\label{pycode_8cpp_afa07a629486cb790560bb95713ec7794}
+\hypertarget{pycode_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{}\index{pycode.\+cpp@{pycode.\+cpp}!yyless@{yyless}}
+\index{yyless@{yyless}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yyless}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyless(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \(\backslash\)
+        \{ \(\backslash\)
+        \textcolor{comment}{/* Undo effects of setting up pycodeYYtext. */} \(\backslash\)
+        int yyless\_macro\_arg = (\hyperlink{058__bracket__recursion_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n}); \(\backslash\)
+        YY\_LESS\_LINENO(yyless\_macro\_arg);\(\backslash\)
+        *\hyperlink{pycode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = (yy\_hold\_char); \hyperlink{pycode_8cpp_a56858d18c7eda4f53664496ef566f651}{\(\backslash\)}
+\hyperlink{pycode_8cpp_a56858d18c7eda4f53664496ef566f651}{        YY\_RESTORE\_YY\_MORE\_OFFSET} \(\backslash\)
+        (yy\_c\_buf\_p) = \hyperlink{pycode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = \hyperlink{pycode_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp} + yyless\_macro\_arg - \hyperlink{pycode_8cpp_a68792d73820bc46a71d3d4e613f0b977}{YY\_MORE\_ADJ}; 
+      \hyperlink{pycode_8cpp_acc3486d769af4e4b2820346a0093cc79}{\(\backslash\)}
+\hyperlink{pycode_8cpp_acc3486d769af4e4b2820346a0093cc79}{        YY\_DO\_BEFORE\_ACTION}; \textcolor{comment}{/* set up pycodeYYtext again */} \(\backslash\)
+        \} \hyperlink{pycode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{\(\backslash\)}
+\hyperlink{pycode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{    while} ( 0 )
+\end{DoxyCode}
+\hypertarget{pycode_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{}\index{pycode.\+cpp@{pycode.\+cpp}!yyless@{yyless}}
+\index{yyless@{yyless}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yyless}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyless(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \(\backslash\)
+        \{ \(\backslash\)
+        \textcolor{comment}{/* Undo effects of setting up pycodeYYtext. */} \(\backslash\)
+        int yyless\_macro\_arg = (\hyperlink{058__bracket__recursion_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n}); \(\backslash\)
+        YY\_LESS\_LINENO(yyless\_macro\_arg);\hyperlink{pycode_8cpp_a4b99648141da25f4b63c0a995d0e08d3}{\(\backslash\)}
+\hyperlink{pycode_8cpp_a4b99648141da25f4b63c0a995d0e08d3}{        pycodeYYtext}[\hyperlink{pycode_8cpp_a8a2df0a830fc336f70394a57bb6f459c}{pycodeYYleng}] = (yy\_hold\_char); \(\backslash\)
+        (yy\_c\_buf\_p) = \hyperlink{pycode_8cpp_a4b99648141da25f4b63c0a995d0e08d3}{pycodeYYtext} + yyless\_macro\_arg; \(\backslash\)
+        (yy\_hold\_char) = *(yy\_c\_buf\_p); \(\backslash\)
+        *(yy\_c\_buf\_p) = \textcolor{charliteral}{'\(\backslash\)0'}; \hyperlink{pycode_8cpp_a8a2df0a830fc336f70394a57bb6f459c}{\(\backslash\)}
+\hyperlink{pycode_8cpp_a8a2df0a830fc336f70394a57bb6f459c}{        pycodeYYleng} = yyless\_macro\_arg; \(\backslash\)
+        \} \hyperlink{pycode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{\(\backslash\)}
+\hyperlink{pycode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{    while} ( 0 )
+\end{DoxyCode}
+\hypertarget{pycode_8cpp_a5611300548b2030d86b6ab9168132b88}{}\index{pycode.\+cpp@{pycode.\+cpp}!yylex@{yylex}}
+\index{yylex@{yylex}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yylex}]{\setlength{\rightskip}{0pt plus 5cm}\#define yylex~{\bf pycode\+Y\+Ylex}}\label{pycode_8cpp_a5611300548b2030d86b6ab9168132b88}
+\hypertarget{pycode_8cpp_ad71cf0fddcfe4f61de0929105b33226c}{}\index{pycode.\+cpp@{pycode.\+cpp}!yylineno@{yylineno}}
+\index{yylineno@{yylineno}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yylineno}]{\setlength{\rightskip}{0pt plus 5cm}\#define yylineno~{\bf pycode\+Y\+Ylineno}}\label{pycode_8cpp_ad71cf0fddcfe4f61de0929105b33226c}
+\hypertarget{pycode_8cpp_a745d37b5e002b2e5f93ad42ea7b554be}{}\index{pycode.\+cpp@{pycode.\+cpp}!yymore@{yymore}}
+\index{yymore@{yymore}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yymore}]{\setlength{\rightskip}{0pt plus 5cm}\#define yymore(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~yymore\+\_\+used\+\_\+but\+\_\+not\+\_\+detected}\label{pycode_8cpp_a745d37b5e002b2e5f93ad42ea7b554be}
+\hypertarget{pycode_8cpp_a4fd44867d448dcb6fc32ea004a15de54}{}\index{pycode.\+cpp@{pycode.\+cpp}!yyout@{yyout}}
+\index{yyout@{yyout}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yyout}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyout~{\bf pycode\+Y\+Yout}}\label{pycode_8cpp_a4fd44867d448dcb6fc32ea004a15de54}
+\hypertarget{pycode_8cpp_ab1eba250555ca003eb39387bb1a41d39}{}\index{pycode.\+cpp@{pycode.\+cpp}!yyrealloc@{yyrealloc}}
+\index{yyrealloc@{yyrealloc}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yyrealloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyrealloc~{\bf pycode\+Y\+Yrealloc}}\label{pycode_8cpp_ab1eba250555ca003eb39387bb1a41d39}
+\hypertarget{pycode_8cpp_a2259355ac49295f72feab070a34a9b11}{}\index{pycode.\+cpp@{pycode.\+cpp}!yyrestart@{yyrestart}}
+\index{yyrestart@{yyrestart}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yyrestart}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyrestart~{\bf pycode\+Y\+Yrestart}}\label{pycode_8cpp_a2259355ac49295f72feab070a34a9b11}
+\hypertarget{pycode_8cpp_a32b5b960944f946b192d54f672569cd9}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+S\+T\+A\+T\+E@{Y\+Y\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+S\+T\+A\+T\+E@{Y\+Y\+S\+T\+A\+T\+E}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+S\+T\+A\+T\+E~{\bf Y\+Y\+\_\+\+S\+T\+A\+R\+T}}\label{pycode_8cpp_a32b5b960944f946b192d54f672569cd9}
+\hypertarget{pycode_8cpp_a828cc83270f8f5bb1688e14dd4e28128}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E@{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}}
+\index{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E@{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E~\char`\"{}yytables\char`\"{}}\label{pycode_8cpp_a828cc83270f8f5bb1688e14dd4e28128}
+\hypertarget{pycode_8cpp_ac3286b18a2e91b4571b97df96a118e84}{}\index{pycode.\+cpp@{pycode.\+cpp}!yyterminate@{yyterminate}}
+\index{yyterminate@{yyterminate}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yyterminate}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyterminate(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~return {\bf Y\+Y\+\_\+\+N\+U\+L\+L}}\label{pycode_8cpp_ac3286b18a2e91b4571b97df96a118e84}
+\hypertarget{pycode_8cpp_a0d71f919dbec1ffd74b2460fa7e5ac28}{}\index{pycode.\+cpp@{pycode.\+cpp}!yytext@{yytext}}
+\index{yytext@{yytext}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yytext}]{\setlength{\rightskip}{0pt plus 5cm}\#define yytext~{\bf pycode\+Y\+Ytext}}\label{pycode_8cpp_a0d71f919dbec1ffd74b2460fa7e5ac28}
+\hypertarget{pycode_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{}\index{pycode.\+cpp@{pycode.\+cpp}!yytext\+\_\+ptr@{yytext\+\_\+ptr}}
+\index{yytext\+\_\+ptr@{yytext\+\_\+ptr}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yytext\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}\#define yytext\+\_\+ptr~{\bf pycode\+Y\+Ytext}}\label{pycode_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}
+\hypertarget{pycode_8cpp_a5be541efdb129f7cefb2437f52fe7359}{}\index{pycode.\+cpp@{pycode.\+cpp}!yywrap@{yywrap}}
+\index{yywrap@{yywrap}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yywrap}]{\setlength{\rightskip}{0pt plus 5cm}\#define yywrap~{\bf pycode\+Y\+Ywrap}}\label{pycode_8cpp_a5be541efdb129f7cefb2437f52fe7359}
+
+
+\subsection{Documentation des définitions de type}
+\hypertarget{pycode_8cpp_a2e73b2c75126814585525fb2e9d51159}{}\index{pycode.\+cpp@{pycode.\+cpp}!flex\+\_\+int16\+\_\+t@{flex\+\_\+int16\+\_\+t}}
+\index{flex\+\_\+int16\+\_\+t@{flex\+\_\+int16\+\_\+t}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{flex\+\_\+int16\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef short int {\bf flex\+\_\+int16\+\_\+t}}\label{pycode_8cpp_a2e73b2c75126814585525fb2e9d51159}
+\hypertarget{pycode_8cpp_a838ce943cf44ef7769480714fc6c3ba9}{}\index{pycode.\+cpp@{pycode.\+cpp}!flex\+\_\+int32\+\_\+t@{flex\+\_\+int32\+\_\+t}}
+\index{flex\+\_\+int32\+\_\+t@{flex\+\_\+int32\+\_\+t}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{flex\+\_\+int32\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf flex\+\_\+int32\+\_\+t}}\label{pycode_8cpp_a838ce943cf44ef7769480714fc6c3ba9}
+\hypertarget{pycode_8cpp_a7b0840dff4a2ef1702118aa12264b2a7}{}\index{pycode.\+cpp@{pycode.\+cpp}!flex\+\_\+int8\+\_\+t@{flex\+\_\+int8\+\_\+t}}
+\index{flex\+\_\+int8\+\_\+t@{flex\+\_\+int8\+\_\+t}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{flex\+\_\+int8\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed char {\bf flex\+\_\+int8\+\_\+t}}\label{pycode_8cpp_a7b0840dff4a2ef1702118aa12264b2a7}
+\hypertarget{pycode_8cpp_ac50cdb9eefbef83a1cec89e3a7f6e1d2}{}\index{pycode.\+cpp@{pycode.\+cpp}!flex\+\_\+uint16\+\_\+t@{flex\+\_\+uint16\+\_\+t}}
+\index{flex\+\_\+uint16\+\_\+t@{flex\+\_\+uint16\+\_\+t}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{flex\+\_\+uint16\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short int {\bf flex\+\_\+uint16\+\_\+t}}\label{pycode_8cpp_ac50cdb9eefbef83a1cec89e3a7f6e1d2}
+\hypertarget{pycode_8cpp_a36869712de12820c73aae736762e8e88}{}\index{pycode.\+cpp@{pycode.\+cpp}!flex\+\_\+uint32\+\_\+t@{flex\+\_\+uint32\+\_\+t}}
+\index{flex\+\_\+uint32\+\_\+t@{flex\+\_\+uint32\+\_\+t}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{flex\+\_\+uint32\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf flex\+\_\+uint32\+\_\+t}}\label{pycode_8cpp_a36869712de12820c73aae736762e8e88}
+\hypertarget{pycode_8cpp_a0fac5ea484f64e75dbe6eba4aa61750c}{}\index{pycode.\+cpp@{pycode.\+cpp}!flex\+\_\+uint8\+\_\+t@{flex\+\_\+uint8\+\_\+t}}
+\index{flex\+\_\+uint8\+\_\+t@{flex\+\_\+uint8\+\_\+t}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{flex\+\_\+uint8\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf flex\+\_\+uint8\+\_\+t}}\label{pycode_8cpp_a0fac5ea484f64e75dbe6eba4aa61750c}
+\hypertarget{pycode_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf yy\+\_\+buffer\+\_\+state}$\ast$ {\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}\label{pycode_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}
+\hypertarget{pycode_8cpp_a1f324b3cb0839eeb90145f0274e6946e}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+C\+H\+A\+R}}
+\index{Y\+Y\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+C\+H\+A\+R}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+C\+H\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf Y\+Y\+\_\+\+C\+H\+A\+R}}\label{pycode_8cpp_a1f324b3cb0839eeb90145f0274e6946e}
+\hypertarget{pycode_8cpp_ad557845057f187eec4be07e2717d2afa}{}\index{pycode.\+cpp@{pycode.\+cpp}!yy\+\_\+size\+\_\+t@{yy\+\_\+size\+\_\+t}}
+\index{yy\+\_\+size\+\_\+t@{yy\+\_\+size\+\_\+t}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yy\+\_\+size\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef size\+\_\+t {\bf yy\+\_\+size\+\_\+t}}\label{pycode_8cpp_ad557845057f187eec4be07e2717d2afa}
+\hypertarget{pycode_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{}\index{pycode.\+cpp@{pycode.\+cpp}!yy\+\_\+state\+\_\+type@{yy\+\_\+state\+\_\+type}}
+\index{yy\+\_\+state\+\_\+type@{yy\+\_\+state\+\_\+type}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yy\+\_\+state\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf yy\+\_\+state\+\_\+type}}\label{pycode_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{pycode_8cpp_ad4a65b873df5c05570846b5413b41dfd}{}\index{pycode.\+cpp@{pycode.\+cpp}!if@{if}}
+\index{if@{if}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{if("!(yy\+\_\+init))}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{!}]{yy\+\_\+init}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_ad4a65b873df5c05570846b5413b41dfd}
+\hypertarget{pycode_8cpp_ab4155ffea05dab2dafae68fd88a0517f}{}\index{pycode.\+cpp@{pycode.\+cpp}!isatty@{isatty}}
+\index{isatty@{isatty}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{isatty(int)}]{\setlength{\rightskip}{0pt plus 5cm}int isatty (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_ab4155ffea05dab2dafae68fd88a0517f}
+\hypertarget{pycode_8cpp_a6153a71a31026d743f971abac3b73ee7}{}\index{pycode.\+cpp@{pycode.\+cpp}!parse\+Python\+Code@{parse\+Python\+Code}}
+\index{parse\+Python\+Code@{parse\+Python\+Code}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{parse\+Python\+Code(\+Code\+Output\+Interface \&od, const char $\ast$, const Q\+C\+String \&s, bool ex\+Block, const char $\ast$ex\+Name, File\+Def $\ast$fd, int start\+Line, int end\+Line, bool, Member\+Def $\ast$, bool, Definition $\ast$search\+Ctx, bool collect\+X\+Refs)}]{\setlength{\rightskip}{0pt plus 5cm}void parse\+Python\+Code (
+\begin{DoxyParamCaption}
+\item[{{\bf Code\+Output\+Interface} \&}]{od, }
+\item[{const char $\ast$}]{, }
+\item[{const {\bf Q\+C\+String} \&}]{s, }
+\item[{{\bf bool}}]{ex\+Block, }
+\item[{const char $\ast$}]{ex\+Name, }
+\item[{{\bf File\+Def} $\ast$}]{fd, }
+\item[{int}]{start\+Line, }
+\item[{int}]{end\+Line, }
+\item[{{\bf bool}}]{, }
+\item[{{\bf Member\+Def} $\ast$}]{, }
+\item[{{\bf bool}}]{, }
+\item[{{\bf Definition} $\ast$}]{search\+Ctx, }
+\item[{{\bf bool}}]{collect\+X\+Refs}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a6153a71a31026d743f971abac3b73ee7}
+\hypertarget{pycode_8cpp_af75be38182049ce65487cf9766029a8a}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Y\+\_\+create\+\_\+buffer@{pycode\+Y\+Y\+\_\+create\+\_\+buffer}}
+\index{pycode\+Y\+Y\+\_\+create\+\_\+buffer@{pycode\+Y\+Y\+\_\+create\+\_\+buffer}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Y\+\_\+create\+\_\+buffer(\+F\+I\+L\+E $\ast$file, int size)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} pycode\+Y\+Y\+\_\+create\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{file, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_af75be38182049ce65487cf9766029a8a}
+Allocate and initialize an input buffer state. 
+\begin{DoxyParams}{Paramètres}
+{\em file} & \hyperlink{class_a}{A} readable stream. \\
+\hline
+{\em size} & The character buffer size in bytes. When in doubt, use {\ttfamily Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the allocated buffer state. 
+\end{DoxyReturn}
+\hypertarget{pycode_8cpp_aecf0f2cb853282b4d357946b50eb3948}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Y\+\_\+delete\+\_\+buffer@{pycode\+Y\+Y\+\_\+delete\+\_\+buffer}}
+\index{pycode\+Y\+Y\+\_\+delete\+\_\+buffer@{pycode\+Y\+Y\+\_\+delete\+\_\+buffer}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Y\+\_\+delete\+\_\+buffer(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E b)}]{\setlength{\rightskip}{0pt plus 5cm}void pycode\+Y\+Y\+\_\+delete\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{b}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_aecf0f2cb853282b4d357946b50eb3948}
+Destroy the buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em b} & a buffer created with \hyperlink{pycode_8cpp_af75be38182049ce65487cf9766029a8a}{pycode\+Y\+Y\+\_\+create\+\_\+buffer()} \\
+\hline
+\end{DoxyParams}
+\hypertarget{pycode_8cpp_abadb9b48f9a7d1f6a393f5ebf307d6cb}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Y\+\_\+flush\+\_\+buffer@{pycode\+Y\+Y\+\_\+flush\+\_\+buffer}}
+\index{pycode\+Y\+Y\+\_\+flush\+\_\+buffer@{pycode\+Y\+Y\+\_\+flush\+\_\+buffer}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Y\+\_\+flush\+\_\+buffer(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E b)}]{\setlength{\rightskip}{0pt plus 5cm}void pycode\+Y\+Y\+\_\+flush\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{b}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_abadb9b48f9a7d1f6a393f5ebf307d6cb}
+Discard all buffered characters. On the next scan, Y\+Y\+\_\+\+I\+N\+P\+U\+T will be called. 
+\begin{DoxyParams}{Paramètres}
+{\em b} & the buffer state to be flushed, usually {\ttfamily Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{pycode_8cpp_a5a3fc3bff68d29bc1ab0f2927ea8c1ef}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Y\+\_\+scan\+\_\+buffer@{pycode\+Y\+Y\+\_\+scan\+\_\+buffer}}
+\index{pycode\+Y\+Y\+\_\+scan\+\_\+buffer@{pycode\+Y\+Y\+\_\+scan\+\_\+buffer}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Y\+\_\+scan\+\_\+buffer(char $\ast$base, yy\+\_\+size\+\_\+t size)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} pycode\+Y\+Y\+\_\+scan\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{base, }
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{size}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a5a3fc3bff68d29bc1ab0f2927ea8c1ef}
+Setup the input buffer state to scan directly from a user-\/specified character buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em base} & the character buffer \\
+\hline
+{\em size} & the size in bytes of the character buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the newly allocated buffer state object. 
+\end{DoxyReturn}
+\hypertarget{pycode_8cpp_a32491fc44c1453cc26fcaeed5bf13e8f}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Y\+\_\+scan\+\_\+bytes@{pycode\+Y\+Y\+\_\+scan\+\_\+bytes}}
+\index{pycode\+Y\+Y\+\_\+scan\+\_\+bytes@{pycode\+Y\+Y\+\_\+scan\+\_\+bytes}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Y\+\_\+scan\+\_\+bytes(yyconst char $\ast$bytes, yy\+\_\+size\+\_\+t len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} pycode\+Y\+Y\+\_\+scan\+\_\+bytes (
+\begin{DoxyParamCaption}
+\item[{{\bf yyconst} char $\ast$}]{yybytes, }
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{\+\_\+yybytes\+\_\+len}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a32491fc44c1453cc26fcaeed5bf13e8f}
+Setup the input buffer state to scan the given bytes. The next call to \hyperlink{pycode_8cpp_a8883bae4da5ea1b53994aa1ff9450066}{pycode\+Y\+Ylex()} will scan from a {\itshape copy} of {\itshape bytes}. 
+\begin{DoxyParams}{Paramètres}
+{\em bytes} & the byte buffer to scan \\
+\hline
+{\em len} & the number of bytes in the buffer pointed to by {\itshape bytes}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the newly allocated buffer state object. 
+\end{DoxyReturn}
+\hypertarget{pycode_8cpp_a83aa90e51cd845ceb82ea61663c4127f}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Y\+\_\+scan\+\_\+string@{pycode\+Y\+Y\+\_\+scan\+\_\+string}}
+\index{pycode\+Y\+Y\+\_\+scan\+\_\+string@{pycode\+Y\+Y\+\_\+scan\+\_\+string}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Y\+\_\+scan\+\_\+string(yyconst char $\ast$yy\+\_\+str)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} pycode\+Y\+Y\+\_\+scan\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{{\bf yyconst} char $\ast$}]{yystr}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a83aa90e51cd845ceb82ea61663c4127f}
+Setup the input buffer state to scan a string. The next call to \hyperlink{pycode_8cpp_a8883bae4da5ea1b53994aa1ff9450066}{pycode\+Y\+Ylex()} will scan from a {\itshape copy} of {\itshape str}. 
+\begin{DoxyParams}{Paramètres}
+{\em yystr} & a N\+U\+L-\/terminated string to scan\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the newly allocated buffer state object. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If you want to scan bytes that may contain N\+U\+L values, then use \hyperlink{pycode_8cpp_a32491fc44c1453cc26fcaeed5bf13e8f}{pycode\+Y\+Y\+\_\+scan\+\_\+bytes()} instead. 
+\end{DoxyNote}
+\hypertarget{pycode_8cpp_add43f4fd2c445ab3d748aeb9a58c6296}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer@{pycode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}}
+\index{pycode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer@{pycode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E new\+\_\+buffer)}]{\setlength{\rightskip}{0pt plus 5cm}void pycode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{new\+\_\+buffer}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_add43f4fd2c445ab3d748aeb9a58c6296}
+Switch to a different input buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em new\+\_\+buffer} & The new input buffer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{pycode_8cpp_a69e97f903f340ddf3e74b7acd1d59fa4}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Yalloc@{pycode\+Y\+Yalloc}}
+\index{pycode\+Y\+Yalloc@{pycode\+Y\+Yalloc}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Yalloc(yy\+\_\+size\+\_\+t)}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ pycode\+Y\+Yalloc (
+\begin{DoxyParamCaption}
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{size}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a69e97f903f340ddf3e74b7acd1d59fa4}
+\hypertarget{pycode_8cpp_a97a5ec981b076e8fd7c19b6232f0fc9c}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Yfree@{pycode\+Y\+Yfree}}
+\index{pycode\+Y\+Yfree@{pycode\+Y\+Yfree}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Yfree(void $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void pycode\+Y\+Yfree (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a97a5ec981b076e8fd7c19b6232f0fc9c}
+\hypertarget{pycode_8cpp_ae22be19e811625de797661cc095c3ac0}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Yget\+\_\+debug@{pycode\+Y\+Yget\+\_\+debug}}
+\index{pycode\+Y\+Yget\+\_\+debug@{pycode\+Y\+Yget\+\_\+debug}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Yget\+\_\+debug(void)}]{\setlength{\rightskip}{0pt plus 5cm}int pycode\+Y\+Yget\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_ae22be19e811625de797661cc095c3ac0}
+\hypertarget{pycode_8cpp_a5ebe0a3c35fed6e7c9566c04e644f64a}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Yget\+\_\+extra@{pycode\+Y\+Yget\+\_\+extra}}
+\index{pycode\+Y\+Yget\+\_\+extra@{pycode\+Y\+Yget\+\_\+extra}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Yget\+\_\+extra(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E} pycode\+Y\+Yget\+\_\+extra (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a5ebe0a3c35fed6e7c9566c04e644f64a}
+\hypertarget{pycode_8cpp_ac9a983893bc6dabe25097183398e5306}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Yget\+\_\+in@{pycode\+Y\+Yget\+\_\+in}}
+\index{pycode\+Y\+Yget\+\_\+in@{pycode\+Y\+Yget\+\_\+in}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Yget\+\_\+in(void)}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ pycode\+Y\+Yget\+\_\+in (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_ac9a983893bc6dabe25097183398e5306}
+Get the input stream. \hypertarget{pycode_8cpp_a02f01e4f2fb1e1576c16d57fdf6e8587}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Yget\+\_\+leng@{pycode\+Y\+Yget\+\_\+leng}}
+\index{pycode\+Y\+Yget\+\_\+leng@{pycode\+Y\+Yget\+\_\+leng}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Yget\+\_\+leng(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf yy\+\_\+size\+\_\+t} pycode\+Y\+Yget\+\_\+leng (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a02f01e4f2fb1e1576c16d57fdf6e8587}
+Get the length of the current token. \hypertarget{pycode_8cpp_a8f296ac9e3d41289a01e36408ed0d258}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Yget\+\_\+lineno@{pycode\+Y\+Yget\+\_\+lineno}}
+\index{pycode\+Y\+Yget\+\_\+lineno@{pycode\+Y\+Yget\+\_\+lineno}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Yget\+\_\+lineno(void)}]{\setlength{\rightskip}{0pt plus 5cm}int pycode\+Y\+Yget\+\_\+lineno (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a8f296ac9e3d41289a01e36408ed0d258}
+Get the current line number. \hypertarget{pycode_8cpp_a5e04e0cb595e7638f264fc17d28defbb}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Yget\+\_\+out@{pycode\+Y\+Yget\+\_\+out}}
+\index{pycode\+Y\+Yget\+\_\+out@{pycode\+Y\+Yget\+\_\+out}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Yget\+\_\+out(void)}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ pycode\+Y\+Yget\+\_\+out (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a5e04e0cb595e7638f264fc17d28defbb}
+Get the output stream. \hypertarget{pycode_8cpp_a9fbea2b6976f20844af947ebd3a9bd22}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Yget\+\_\+text@{pycode\+Y\+Yget\+\_\+text}}
+\index{pycode\+Y\+Yget\+\_\+text@{pycode\+Y\+Yget\+\_\+text}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Yget\+\_\+text(void)}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ pycode\+Y\+Yget\+\_\+text (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a9fbea2b6976f20844af947ebd3a9bd22}
+Get the current token. \hypertarget{pycode_8cpp_a8883bae4da5ea1b53994aa1ff9450066}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Ylex@{pycode\+Y\+Ylex}}
+\index{pycode\+Y\+Ylex@{pycode\+Y\+Ylex}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Ylex(void)}]{\setlength{\rightskip}{0pt plus 5cm}int pycode\+Y\+Ylex (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a8883bae4da5ea1b53994aa1ff9450066}
+\hypertarget{pycode_8cpp_a6c745cf5b62d53969e67935aaf99086a}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Ylex\+\_\+destroy@{pycode\+Y\+Ylex\+\_\+destroy}}
+\index{pycode\+Y\+Ylex\+\_\+destroy@{pycode\+Y\+Ylex\+\_\+destroy}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Ylex\+\_\+destroy(void)}]{\setlength{\rightskip}{0pt plus 5cm}int pycode\+Y\+Ylex\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a6c745cf5b62d53969e67935aaf99086a}
+\hypertarget{pycode_8cpp_ae99e9a88817c006d3f2415b80da36c89}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Ypop\+\_\+buffer\+\_\+state@{pycode\+Y\+Ypop\+\_\+buffer\+\_\+state}}
+\index{pycode\+Y\+Ypop\+\_\+buffer\+\_\+state@{pycode\+Y\+Ypop\+\_\+buffer\+\_\+state}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Ypop\+\_\+buffer\+\_\+state(void)}]{\setlength{\rightskip}{0pt plus 5cm}void pycode\+Y\+Ypop\+\_\+buffer\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_ae99e9a88817c006d3f2415b80da36c89}
+Removes and deletes the top of the stack, if present. The next element becomes the new top. \hypertarget{pycode_8cpp_afe888d0a6315dddf27f1a16ae5cebec7}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Ypush\+\_\+buffer\+\_\+state@{pycode\+Y\+Ypush\+\_\+buffer\+\_\+state}}
+\index{pycode\+Y\+Ypush\+\_\+buffer\+\_\+state@{pycode\+Y\+Ypush\+\_\+buffer\+\_\+state}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Ypush\+\_\+buffer\+\_\+state(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E new\+\_\+buffer)}]{\setlength{\rightskip}{0pt plus 5cm}void pycode\+Y\+Ypush\+\_\+buffer\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{new\+\_\+buffer}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_afe888d0a6315dddf27f1a16ae5cebec7}
+Pushes the new state onto the stack. The new state becomes the current state. This function will allocate the stack if necessary. 
+\begin{DoxyParams}{Paramètres}
+{\em new\+\_\+buffer} & The new state. \\
+\hline
+\end{DoxyParams}
+\hypertarget{pycode_8cpp_aa6a7864beb3c87e277a97ed1ab9dec14}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Yrealloc@{pycode\+Y\+Yrealloc}}
+\index{pycode\+Y\+Yrealloc@{pycode\+Y\+Yrealloc}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Yrealloc(void $\ast$, yy\+\_\+size\+\_\+t)}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ pycode\+Y\+Yrealloc (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr, }
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{size}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_aa6a7864beb3c87e277a97ed1ab9dec14}
+\hypertarget{pycode_8cpp_ab619897b1b5f903bf3aa97fbf45d1eaf}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Yrestart@{pycode\+Y\+Yrestart}}
+\index{pycode\+Y\+Yrestart@{pycode\+Y\+Yrestart}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Yrestart(\+F\+I\+L\+E $\ast$input\+\_\+file)}]{\setlength{\rightskip}{0pt plus 5cm}void pycode\+Y\+Yrestart (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{input\+\_\+file}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_ab619897b1b5f903bf3aa97fbf45d1eaf}
+Immediately switch to a different input stream. 
+\begin{DoxyParams}{Paramètres}
+{\em input\+\_\+file} & \hyperlink{class_a}{A} readable stream.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function does not reset the start condition to {\ttfamily I\+N\+I\+T\+I\+A\+L} . 
+\end{DoxyNote}
+\hypertarget{pycode_8cpp_a30f1eb656b4470a8625ca4544b64a7c5}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Yset\+\_\+debug@{pycode\+Y\+Yset\+\_\+debug}}
+\index{pycode\+Y\+Yset\+\_\+debug@{pycode\+Y\+Yset\+\_\+debug}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Yset\+\_\+debug(int debug\+\_\+flag)}]{\setlength{\rightskip}{0pt plus 5cm}void pycode\+Y\+Yset\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{int}]{debug\+\_\+flag}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a30f1eb656b4470a8625ca4544b64a7c5}
+\hypertarget{pycode_8cpp_a2a6628f8f07aa67bf3fe4ef3489f0d0b}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Yset\+\_\+extra@{pycode\+Y\+Yset\+\_\+extra}}
+\index{pycode\+Y\+Yset\+\_\+extra@{pycode\+Y\+Yset\+\_\+extra}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Yset\+\_\+extra(\+Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E user\+\_\+defined)}]{\setlength{\rightskip}{0pt plus 5cm}void pycode\+Y\+Yset\+\_\+extra (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}}]{user\+\_\+defined}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a2a6628f8f07aa67bf3fe4ef3489f0d0b}
+\hypertarget{pycode_8cpp_ae9796f791b6c1f5b6e9acfb22fa8291d}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Yset\+\_\+in@{pycode\+Y\+Yset\+\_\+in}}
+\index{pycode\+Y\+Yset\+\_\+in@{pycode\+Y\+Yset\+\_\+in}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Yset\+\_\+in(\+F\+I\+L\+E $\ast$in\+\_\+str)}]{\setlength{\rightskip}{0pt plus 5cm}void pycode\+Y\+Yset\+\_\+in (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{in\+\_\+str}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_ae9796f791b6c1f5b6e9acfb22fa8291d}
+Set the input stream. This does not discard the current input buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em in\+\_\+str} & \hyperlink{class_a}{A} readable stream.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{pycode_8cpp_add43f4fd2c445ab3d748aeb9a58c6296}{pycode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer} 
+\end{DoxySeeAlso}
+\hypertarget{pycode_8cpp_ad2e1babc0ed96aca0a29ac31e32aa612}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Yset\+\_\+lineno@{pycode\+Y\+Yset\+\_\+lineno}}
+\index{pycode\+Y\+Yset\+\_\+lineno@{pycode\+Y\+Yset\+\_\+lineno}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Yset\+\_\+lineno(int line\+\_\+number)}]{\setlength{\rightskip}{0pt plus 5cm}void pycode\+Y\+Yset\+\_\+lineno (
+\begin{DoxyParamCaption}
+\item[{int}]{line\+\_\+number}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_ad2e1babc0ed96aca0a29ac31e32aa612}
+Set the current line number. 
+\begin{DoxyParams}{Paramètres}
+{\em line\+\_\+number} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{pycode_8cpp_a9adbb91bdfa7c4b72a58c1f5ff1daeea}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Yset\+\_\+out@{pycode\+Y\+Yset\+\_\+out}}
+\index{pycode\+Y\+Yset\+\_\+out@{pycode\+Y\+Yset\+\_\+out}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Yset\+\_\+out(\+F\+I\+L\+E $\ast$out\+\_\+str)}]{\setlength{\rightskip}{0pt plus 5cm}void pycode\+Y\+Yset\+\_\+out (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{out\+\_\+str}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a9adbb91bdfa7c4b72a58c1f5ff1daeea}
+\hypertarget{pycode_8cpp_a9ee8cc9c825a96efb6bd4193244b019f}{}\index{pycode.\+cpp@{pycode.\+cpp}!reset\+Python\+Code\+Parser\+State@{reset\+Python\+Code\+Parser\+State}}
+\index{reset\+Python\+Code\+Parser\+State@{reset\+Python\+Code\+Parser\+State}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{reset\+Python\+Code\+Parser\+State()}]{\setlength{\rightskip}{0pt plus 5cm}void reset\+Python\+Code\+Parser\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a9ee8cc9c825a96efb6bd4193244b019f}
+\hypertarget{pycode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{}\index{pycode.\+cpp@{pycode.\+cpp}!while@{while}}
+\index{while@{while}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{while(1)}]{\setlength{\rightskip}{0pt plus 5cm}while (
+\begin{DoxyParamCaption}
+\item[{1}]{}
+\end{DoxyParamCaption}
+)}\label{pycode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}
+
+
+\subsection{Documentation des variables}
+\hypertarget{pycode_8cpp_aaf21e1e06d0712bca169e685011aab29}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Y\+\_\+flex\+\_\+debug@{pycode\+Y\+Y\+\_\+flex\+\_\+debug}}
+\index{pycode\+Y\+Y\+\_\+flex\+\_\+debug@{pycode\+Y\+Y\+\_\+flex\+\_\+debug}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Y\+\_\+flex\+\_\+debug}]{\setlength{\rightskip}{0pt plus 5cm}int pycode\+Y\+Y\+\_\+flex\+\_\+debug = 0}\label{pycode_8cpp_aaf21e1e06d0712bca169e685011aab29}
+\hypertarget{pycode_8cpp_ab84ea158c626a0dd9f4aae38a658f28e}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Yin@{pycode\+Y\+Yin}}
+\index{pycode\+Y\+Yin@{pycode\+Y\+Yin}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Yin}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ pycode\+Y\+Yin = (F\+I\+L\+E $\ast$) 0}\label{pycode_8cpp_ab84ea158c626a0dd9f4aae38a658f28e}
+\hypertarget{pycode_8cpp_a8a2df0a830fc336f70394a57bb6f459c}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Yleng@{pycode\+Y\+Yleng}}
+\index{pycode\+Y\+Yleng@{pycode\+Y\+Yleng}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Yleng}]{\setlength{\rightskip}{0pt plus 5cm}{\bf yy\+\_\+size\+\_\+t} pycode\+Y\+Yleng}\label{pycode_8cpp_a8a2df0a830fc336f70394a57bb6f459c}
+\hypertarget{pycode_8cpp_a9f51eb6daec0ceaf44f97e9f64ed1b2f}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Ylineno@{pycode\+Y\+Ylineno}}
+\index{pycode\+Y\+Ylineno@{pycode\+Y\+Ylineno}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Ylineno}]{\setlength{\rightskip}{0pt plus 5cm}int pycode\+Y\+Ylineno = 1}\label{pycode_8cpp_a9f51eb6daec0ceaf44f97e9f64ed1b2f}
+\hypertarget{pycode_8cpp_a87e611db0d2276c82378c65d53f5ceac}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Yout@{pycode\+Y\+Yout}}
+\index{pycode\+Y\+Yout@{pycode\+Y\+Yout}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Yout}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ pycode\+Y\+Yout = (F\+I\+L\+E $\ast$) 0}\label{pycode_8cpp_a87e611db0d2276c82378c65d53f5ceac}
+\hypertarget{pycode_8cpp_a4b99648141da25f4b63c0a995d0e08d3}{}\index{pycode.\+cpp@{pycode.\+cpp}!pycode\+Y\+Ytext@{pycode\+Y\+Ytext}}
+\index{pycode\+Y\+Ytext@{pycode\+Y\+Ytext}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{pycode\+Y\+Ytext}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ pycode\+Y\+Ytext}\label{pycode_8cpp_a4b99648141da25f4b63c0a995d0e08d3}
+\hypertarget{pycode_8cpp_a7ffc8c947830757dd87ad202a6823edd}{}\index{pycode.\+cpp@{pycode.\+cpp}!yy\+\_\+act@{yy\+\_\+act}}
+\index{yy\+\_\+act@{yy\+\_\+act}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yy\+\_\+act}]{\setlength{\rightskip}{0pt plus 5cm}register int yy\+\_\+act}\label{pycode_8cpp_a7ffc8c947830757dd87ad202a6823edd}
+\hypertarget{pycode_8cpp_a71cf769ce518e8687bf8999b278c65f4}{}\index{pycode.\+cpp@{pycode.\+cpp}!yy\+\_\+bp@{yy\+\_\+bp}}
+\index{yy\+\_\+bp@{yy\+\_\+bp}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yy\+\_\+bp}]{\setlength{\rightskip}{0pt plus 5cm}register char $\ast$ yy\+\_\+bp}\label{pycode_8cpp_a71cf769ce518e8687bf8999b278c65f4}
+\hypertarget{pycode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{}\index{pycode.\+cpp@{pycode.\+cpp}!yy\+\_\+cp@{yy\+\_\+cp}}
+\index{yy\+\_\+cp@{yy\+\_\+cp}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{yy\+\_\+cp}]{\setlength{\rightskip}{0pt plus 5cm}register char$\ast$ yy\+\_\+cp}\label{pycode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}
+\hypertarget{pycode_8cpp_abcefb20c54ce0f92452cfbb9cf657670}{}\index{pycode.\+cpp@{pycode.\+cpp}!Y\+Y\+\_\+\+D\+E\+C\+L@{Y\+Y\+\_\+\+D\+E\+C\+L}}
+\index{Y\+Y\+\_\+\+D\+E\+C\+L@{Y\+Y\+\_\+\+D\+E\+C\+L}!pycode.\+cpp@{pycode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+D\+E\+C\+L}]{\setlength{\rightskip}{0pt plus 5cm}Y\+Y\+\_\+\+D\+E\+C\+L}\label{pycode_8cpp_abcefb20c54ce0f92452cfbb9cf657670}
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}
+\{
+    \textcolor{keyword}{register} \hyperlink{code_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{yy\_state\_type} \hyperlink{constexp_8cpp_a86a21c2101611f87781b40b111e65aac}{yy\_current\_state}
+\end{DoxyCode}
+The main scanner function which does all the work. 

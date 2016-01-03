@@ -1,0 +1,30 @@
+SELECT 
+sensor.id,
+sensor.sensor_type_id,
+sensor_measure.sensor_id,
+MAX(sensor_measure.date_time),
+sensor_measure.measure_value,
+sensor_type.id,
+sensor_type.name,
+sensor_type.description
+
+FROM `sensor_unit`
+INNER JOIN sensor ON (sensor_unit.station_id LIKE 'bra001' AND  sensor.sensor_type_id IN ('18'))
+INNER JOIN sensor_measure ON sensor_measure.sensor_id LIKE sensor.id
+INNER JOIN sensor_type ON sensor_type.id LIKE sensor.sensor_type_id
+UNION 
+
+SELECT 
+sensor.id,
+sensor.sensor_type_id,
+sensor_measure.sensor_id,
+MAX(sensor_measure.date_time),
+sensor_measure.measure_value,
+sensor_type.id,
+sensor_type.name,
+sensor_type.description
+
+FROM `sensor_unit`
+INNER JOIN sensor ON (sensor_unit.station_id LIKE 'bra001' AND  sensor.sensor_type_id IN ('17'))
+INNER JOIN sensor_measure ON sensor_measure.sensor_id LIKE sensor.id
+INNER JOIN sensor_type ON sensor_type.id LIKE sensor.sensor_type_id 

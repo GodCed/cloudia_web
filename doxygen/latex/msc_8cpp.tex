@@ -1,0 +1,56 @@
+\hypertarget{msc_8cpp}{}\section{Référence du fichier src/msc.cpp}
+\label{msc_8cpp}\index{src/msc.\+cpp@{src/msc.\+cpp}}
+{\ttfamily \#include \char`\"{}msc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}portable.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}docparser.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doxygen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ftextstream.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$qdir.\+h$>$}\\*
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{msc_8cpp_a2dc985bf21fc53f7970295c09a181acf}{write\+Msc\+Graph\+From\+File} (const char $\ast$in\+File, const char $\ast$out\+Dir, const char $\ast$out\+File, \hyperlink{msc_8h_a6cf71dda84c5602c6239cca31028f656}{Msc\+Output\+Format} format)
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{msc_8cpp_aa6f84611cd60b3980cdeec63b2e1ffbc}{get\+Msc\+Image\+Map\+From\+File} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&in\+File, const \hyperlink{class_q_c_string}{Q\+C\+String} \&out\+Dir, const \hyperlink{class_q_c_string}{Q\+C\+String} \&rel\+Path, const \hyperlink{class_q_c_string}{Q\+C\+String} \&context)
+\item 
+void \hyperlink{msc_8cpp_a01a42e6ebd34f414ffc77ddf70f61f3d}{write\+Msc\+Image\+Map\+From\+File} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, const \hyperlink{class_q_c_string}{Q\+C\+String} \&in\+File, const \hyperlink{class_q_c_string}{Q\+C\+String} \&out\+Dir, const \hyperlink{class_q_c_string}{Q\+C\+String} \&rel\+Path, const \hyperlink{class_q_c_string}{Q\+C\+String} \&base\+Name, const \hyperlink{class_q_c_string}{Q\+C\+String} \&context, \hyperlink{msc_8h_a6cf71dda84c5602c6239cca31028f656}{Msc\+Output\+Format} format)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{msc_8cpp_aa6f84611cd60b3980cdeec63b2e1ffbc}{}\index{msc.\+cpp@{msc.\+cpp}!get\+Msc\+Image\+Map\+From\+File@{get\+Msc\+Image\+Map\+From\+File}}
+\index{get\+Msc\+Image\+Map\+From\+File@{get\+Msc\+Image\+Map\+From\+File}!msc.\+cpp@{msc.\+cpp}}
+\subsubsection[{get\+Msc\+Image\+Map\+From\+File(const Q\+C\+String \&in\+File, const Q\+C\+String \&out\+Dir, const Q\+C\+String \&rel\+Path, const Q\+C\+String \&context)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} get\+Msc\+Image\+Map\+From\+File (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{in\+File, }
+\item[{const {\bf Q\+C\+String} \&}]{out\+Dir, }
+\item[{const {\bf Q\+C\+String} \&}]{rel\+Path, }
+\item[{const {\bf Q\+C\+String} \&}]{context}
+\end{DoxyParamCaption}
+)}\label{msc_8cpp_aa6f84611cd60b3980cdeec63b2e1ffbc}
+\hypertarget{msc_8cpp_a2dc985bf21fc53f7970295c09a181acf}{}\index{msc.\+cpp@{msc.\+cpp}!write\+Msc\+Graph\+From\+File@{write\+Msc\+Graph\+From\+File}}
+\index{write\+Msc\+Graph\+From\+File@{write\+Msc\+Graph\+From\+File}!msc.\+cpp@{msc.\+cpp}}
+\subsubsection[{write\+Msc\+Graph\+From\+File(const char $\ast$in\+File, const char $\ast$out\+Dir, const char $\ast$out\+File, Msc\+Output\+Format format)}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Msc\+Graph\+From\+File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{in\+File, }
+\item[{const char $\ast$}]{out\+Dir, }
+\item[{const char $\ast$}]{out\+File, }
+\item[{{\bf Msc\+Output\+Format}}]{format}
+\end{DoxyParamCaption}
+)}\label{msc_8cpp_a2dc985bf21fc53f7970295c09a181acf}
+\hypertarget{msc_8cpp_a01a42e6ebd34f414ffc77ddf70f61f3d}{}\index{msc.\+cpp@{msc.\+cpp}!write\+Msc\+Image\+Map\+From\+File@{write\+Msc\+Image\+Map\+From\+File}}
+\index{write\+Msc\+Image\+Map\+From\+File@{write\+Msc\+Image\+Map\+From\+File}!msc.\+cpp@{msc.\+cpp}}
+\subsubsection[{write\+Msc\+Image\+Map\+From\+File(\+F\+Text\+Stream \&t, const Q\+C\+String \&in\+File, const Q\+C\+String \&out\+Dir, const Q\+C\+String \&rel\+Path, const Q\+C\+String \&base\+Name, const Q\+C\+String \&context, Msc\+Output\+Format format)}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Msc\+Image\+Map\+From\+File (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t, }
+\item[{const {\bf Q\+C\+String} \&}]{in\+File, }
+\item[{const {\bf Q\+C\+String} \&}]{out\+Dir, }
+\item[{const {\bf Q\+C\+String} \&}]{rel\+Path, }
+\item[{const {\bf Q\+C\+String} \&}]{base\+Name, }
+\item[{const {\bf Q\+C\+String} \&}]{context, }
+\item[{{\bf Msc\+Output\+Format}}]{format}
+\end{DoxyParamCaption}
+)}\label{msc_8cpp_a01a42e6ebd34f414ffc77ddf70f61f3d}

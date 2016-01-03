@@ -1,0 +1,96 @@
+\hypertarget{class_template_node_creator}{}\section{Référence du modèle de la classe Template\+Node\+Creator$<$ T $>$}
+\label{class_template_node_creator}\index{Template\+Node\+Creator$<$ T $>$@{Template\+Node\+Creator$<$ T $>$}}
+
+
+Helper class for creating template A\+S\+T tag nodes and returning the template for a given node.  
+
+
+Graphe d\textquotesingle{}héritage de Template\+Node\+Creator$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_template_node_creator}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_template_node_creator_a7b699e3738800d14e5c7f506fa2684df}{Template\+Node\+Creator} (\hyperlink{class_template_parser}{Template\+Parser} $\ast$parser, \hyperlink{class_template_node}{Template\+Node} $\ast$\hyperlink{class_template_node_a69a306ef84e62af9fe57bf9aacc94536}{parent}, int line)
+\item 
+\hyperlink{class_template_impl}{Template\+Impl} $\ast$ \hyperlink{class_template_node_creator_a4052c0be982c3a090192053ae608ec2e}{get\+Template} ()
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_template_node}{Template\+Node} $\ast$ \hyperlink{class_template_node_creator_a8914a8c5da5c6bbba87942cf7135dea5}{create\+Instance} (\hyperlink{class_template_parser}{Template\+Parser} $\ast$parser, \hyperlink{class_template_node}{Template\+Node} $\ast$\hyperlink{class_template_node_a69a306ef84e62af9fe57bf9aacc94536}{parent}, int line, const \hyperlink{class_q_c_string}{Q\+C\+String} \&data)
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_template_node_creator_a63ad903edb4ece57c3e582d5e2aaa79e}{mkpath} (\hyperlink{class_template_context_impl}{Template\+Context\+Impl} $\ast$ci, const \hyperlink{class_q_c_string}{Q\+C\+String} \&file\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_template_node_creator_af6dac1a50abd17cf5529eab951020521}{m\+\_\+template\+Name}
+\item 
+int \hyperlink{class_template_node_creator_a9a0ab03084f963594f0f2a058c4d7879}{m\+\_\+line}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\subsubsection*{template$<$class T$>$class Template\+Node\+Creator$<$ T $>$}
+
+Helper class for creating template A\+S\+T tag nodes and returning the template for a given node. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_template_node_creator_a7b699e3738800d14e5c7f506fa2684df}{}\index{Template\+Node\+Creator@{Template\+Node\+Creator}!Template\+Node\+Creator@{Template\+Node\+Creator}}
+\index{Template\+Node\+Creator@{Template\+Node\+Creator}!Template\+Node\+Creator@{Template\+Node\+Creator}}
+\subsubsection[{Template\+Node\+Creator(\+Template\+Parser $\ast$parser, Template\+Node $\ast$parent, int line)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Template\+Node\+Creator}$<$ T $>$\+::{\bf Template\+Node\+Creator} (
+\begin{DoxyParamCaption}
+\item[{{\bf Template\+Parser} $\ast$}]{parser, }
+\item[{{\bf Template\+Node} $\ast$}]{parent, }
+\item[{int}]{line}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_node_creator_a7b699e3738800d14e5c7f506fa2684df}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_template_node_creator_a8914a8c5da5c6bbba87942cf7135dea5}{}\index{Template\+Node\+Creator@{Template\+Node\+Creator}!create\+Instance@{create\+Instance}}
+\index{create\+Instance@{create\+Instance}!Template\+Node\+Creator@{Template\+Node\+Creator}}
+\subsubsection[{create\+Instance(\+Template\+Parser $\ast$parser, Template\+Node $\ast$parent, int line, const Q\+C\+String \&data)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ static {\bf Template\+Node}$\ast$ {\bf Template\+Node\+Creator}$<$ T $>$\+::create\+Instance (
+\begin{DoxyParamCaption}
+\item[{{\bf Template\+Parser} $\ast$}]{parser, }
+\item[{{\bf Template\+Node} $\ast$}]{parent, }
+\item[{int}]{line, }
+\item[{const {\bf Q\+C\+String} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_template_node_creator_a8914a8c5da5c6bbba87942cf7135dea5}
+\hypertarget{class_template_node_creator_a4052c0be982c3a090192053ae608ec2e}{}\index{Template\+Node\+Creator@{Template\+Node\+Creator}!get\+Template@{get\+Template}}
+\index{get\+Template@{get\+Template}!Template\+Node\+Creator@{Template\+Node\+Creator}}
+\subsubsection[{get\+Template()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Template\+Impl}$\ast$ {\bf Template\+Node\+Creator}$<$ T $>$\+::get\+Template (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_node_creator_a4052c0be982c3a090192053ae608ec2e}
+\hypertarget{class_template_node_creator_a63ad903edb4ece57c3e582d5e2aaa79e}{}\index{Template\+Node\+Creator@{Template\+Node\+Creator}!mkpath@{mkpath}}
+\index{mkpath@{mkpath}!Template\+Node\+Creator@{Template\+Node\+Creator}}
+\subsubsection[{mkpath(\+Template\+Context\+Impl $\ast$ci, const Q\+C\+String \&file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf Template\+Node\+Creator}$<$ T $>$\+::mkpath (
+\begin{DoxyParamCaption}
+\item[{{\bf Template\+Context\+Impl} $\ast$}]{ci, }
+\item[{const {\bf Q\+C\+String} \&}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_template_node_creator_a63ad903edb4ece57c3e582d5e2aaa79e}
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_template_node_creator_a9a0ab03084f963594f0f2a058c4d7879}{}\index{Template\+Node\+Creator@{Template\+Node\+Creator}!m\+\_\+line@{m\+\_\+line}}
+\index{m\+\_\+line@{m\+\_\+line}!Template\+Node\+Creator@{Template\+Node\+Creator}}
+\subsubsection[{m\+\_\+line}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ int {\bf Template\+Node\+Creator}$<$ T $>$\+::m\+\_\+line\hspace{0.3cm}{\ttfamily [protected]}}\label{class_template_node_creator_a9a0ab03084f963594f0f2a058c4d7879}
+\hypertarget{class_template_node_creator_af6dac1a50abd17cf5529eab951020521}{}\index{Template\+Node\+Creator@{Template\+Node\+Creator}!m\+\_\+template\+Name@{m\+\_\+template\+Name}}
+\index{m\+\_\+template\+Name@{m\+\_\+template\+Name}!Template\+Node\+Creator@{Template\+Node\+Creator}}
+\subsubsection[{m\+\_\+template\+Name}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Q\+C\+String} {\bf Template\+Node\+Creator}$<$ T $>$\+::m\+\_\+template\+Name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_template_node_creator_af6dac1a50abd17cf5529eab951020521}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{template_8cpp}{template.\+cpp}\end{DoxyCompactItemize}

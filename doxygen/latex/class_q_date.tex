@@ -1,0 +1,491 @@
+\hypertarget{class_q_date}{}\section{Référence de la classe Q\+Date}
+\label{class_q_date}\index{Q\+Date@{Q\+Date}}
+
+
+The \hyperlink{class_q_date}{Q\+Date} class provides date functions.  
+
+
+
+
+{\ttfamily \#include $<$qdatetime.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_date_ac553172d4c172c75bb78e9b246eaa0a1}{Q\+Date} ()
+\item 
+\hyperlink{class_q_date_abaf62f540ece3f5da8a7fa61298c34f3}{Q\+Date} (int \hyperlink{058__bracket__recursion_8tcl_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{y}, int \hyperlink{060__command__switch_8tcl_a78d127e8bda64d4471ac811ad512fbd9}{m}, int \hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d})
+\item 
+virtual \hyperlink{class_q_date_afc0a2ef784bb8a42492fa35c82f0a548}{$\sim$\+Q\+Date} ()
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_date_a610f089043b944cddab8b547f2a0a218}{is\+Null} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_date_adc39b5ef83613cc352832fe233e8baef}{is\+Valid} () const 
+\item 
+int \hyperlink{class_q_date_a88d2a135c6094f3e67cd1d125931dda5}{year} () const 
+\item 
+int \hyperlink{class_q_date_a1b00f4cc57ae72ea2669650833873ea2}{month} () const 
+\item 
+int \hyperlink{class_q_date_aa66120bb558e981ac505d0fa4113a844}{day} () const 
+\item 
+int \hyperlink{class_q_date_adea77eac7776e9441c9107f4b15528ce}{day\+Of\+Week} () const 
+\item 
+int \hyperlink{class_q_date_a62e2463ded1a429298b00d2c6ca225b0}{day\+Of\+Year} () const 
+\item 
+int \hyperlink{class_q_date_acd3874ea22ceb913d3af9a57c855ef83}{days\+In\+Month} () const 
+\item 
+int \hyperlink{class_q_date_a552674d79df8bd393b13255fb6ba1b82}{days\+In\+Year} () const 
+\item 
+virtual \hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_date_a751b3290d394578b2ebd3b5fa3a65d1c}{month\+Name} (int \hyperlink{class_q_date_a1b00f4cc57ae72ea2669650833873ea2}{month}) const 
+\item 
+virtual \hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_date_a5a14c1d69f0c4a51bba1d4756f110ad0}{day\+Name} (int weekday) const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_date_a206d47235315d1c0b861d901a4ab37e8}{to\+String} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_date_ae25b0507f1694495d64ff068b0baa50e}{set\+Y\+M\+D} (int \hyperlink{058__bracket__recursion_8tcl_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{y}, int \hyperlink{060__command__switch_8tcl_a78d127e8bda64d4471ac811ad512fbd9}{m}, int \hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d})
+\item 
+\hyperlink{class_q_date}{Q\+Date} \hyperlink{class_q_date_abfa5593fd492a13b01bd4a1013065ce2}{add\+Days} (int days) const 
+\item 
+int \hyperlink{class_q_date_a3997dfda84b5ace12583651fe052f4e8}{days\+To} (const \hyperlink{class_q_date}{Q\+Date} \&) const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_date_a6955b0542bfab28e080877a4e92fce6d}{operator==} (const \hyperlink{class_q_date}{Q\+Date} \&\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}) const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_date_ab6b7f6a46585a401d06cfc8a160c4e12}{operator!=} (const \hyperlink{class_q_date}{Q\+Date} \&\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}) const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_date_a80dec8c71ce1294b4700032ea58d8ca4}{operator$<$} (const \hyperlink{class_q_date}{Q\+Date} \&\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}) const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_date_ad6702ea498b9731c7d2416988118770b}{operator$<$=} (const \hyperlink{class_q_date}{Q\+Date} \&\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}) const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_date_aca8d0f50fe0ba2286639156cd7271ecd}{operator$>$} (const \hyperlink{class_q_date}{Q\+Date} \&\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}) const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_date_a56bc6514fca2e5ef5cc6e692e086047a}{operator$>$=} (const \hyperlink{class_q_date}{Q\+Date} \&\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}) const 
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_q_date}{Q\+Date} \hyperlink{class_q_date_a7112e1452f46e40cf349f2e769887e1c}{current\+Date} ()
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_date_a837d8f55470c8d8fe41efe980b68ee86}{is\+Valid} (int \hyperlink{058__bracket__recursion_8tcl_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{y}, int \hyperlink{060__command__switch_8tcl_a78d127e8bda64d4471ac811ad512fbd9}{m}, int \hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d})
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_date_a77612a09d0fd5eb1ba99952cef5e9eaa}{leap\+Year} (int \hyperlink{class_q_date_a88d2a135c6094f3e67cd1d125931dda5}{year})
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{class_q_date_a04d5e854090cbd10ab4d8771877e5364}{greg2jul} (int \hyperlink{058__bracket__recursion_8tcl_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{y}, int \hyperlink{060__command__switch_8tcl_a78d127e8bda64d4471ac811ad512fbd9}{m}, int \hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d})
+\item 
+static void \hyperlink{class_q_date_a0e0d4e48f69f7da1bd5e6e8278acb14c}{jul2greg} (\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} jd, int \&\hyperlink{058__bracket__recursion_8tcl_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{y}, int \&\hyperlink{060__command__switch_8tcl_a78d127e8bda64d4471ac811ad512fbd9}{m}, int \&\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d})
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_q_date_a9d2632bde958bcaf78a589a11578452e}{Q\+Date\+Time}
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_date_aebb24cfcc74a8440d7aff4d211276ab8}{operator$<$$<$} (\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \&, const \hyperlink{class_q_date}{Q\+Date} \&)
+\item 
+\hyperlink{qglobal_8h_a7323ea4c33b4021dee51e9b1f773538d}{Q\+\_\+\+E\+X\+P\+O\+R\+T} \hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_date_ace58c33ac3870ee3b24fb6ce8db6f269}{operator$>$$>$} (\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \&, \hyperlink{class_q_date}{Q\+Date} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+The \hyperlink{class_q_date}{Q\+Date} class provides date functions. 
+
+\hyperlink{class_a}{A} \hyperlink{class_q_date}{Q\+Date} object contains a calendar date, i.\+e. year, month, and day numbers in the modern western (Gregorian) calendar. It can read the current date from the system clock. It provides functions for comparing dates and for manipulating a date by adding a number of days.
+
+\hyperlink{class_a}{A} \hyperlink{class_q_date}{Q\+Date} object is typically created either by giving the year, month and day numbers explicitly, or by using the static function \hyperlink{class_q_date_a7112e1452f46e40cf349f2e769887e1c}{current\+Date()}, which makes a \hyperlink{class_q_date}{Q\+Date} object which contains the system\textquotesingle{}s clock date. An explicit date can also be set using \hyperlink{class_q_date_ae25b0507f1694495d64ff068b0baa50e}{set\+Y\+M\+D()}.
+
+The \hyperlink{class_q_date_a88d2a135c6094f3e67cd1d125931dda5}{year()}, \hyperlink{class_q_date_a1b00f4cc57ae72ea2669650833873ea2}{month()}, and \hyperlink{class_q_date_aa66120bb558e981ac505d0fa4113a844}{day()} functions provide access to the year, month, and day numbers. Also, \hyperlink{class_q_date_adea77eac7776e9441c9107f4b15528ce}{day\+Of\+Week()} and \hyperlink{class_q_date_a62e2463ded1a429298b00d2c6ca225b0}{day\+Of\+Year()} functions are provided. The same information is provided in textual format by the \hyperlink{class_q_date_a206d47235315d1c0b861d901a4ab37e8}{to\+String()}, \hyperlink{class_q_date_a5a14c1d69f0c4a51bba1d4756f110ad0}{day\+Name()}, and \hyperlink{class_q_date_a751b3290d394578b2ebd3b5fa3a65d1c}{month\+Name()} functions.
+
+\hyperlink{class_q_date}{Q\+Date} provides a full set of operators to compare two \hyperlink{class_q_date}{Q\+Date} objects. \hyperlink{class_a}{A} date is considered smaller than another if it is earlier than the other.
+
+The date a given number of days later than a given date can be found using the \hyperlink{class_q_date_abfa5593fd492a13b01bd4a1013065ce2}{add\+Days()} function. Correspondingly, the number of days between two dates can be found using the \hyperlink{class_q_date_a3997dfda84b5ace12583651fe052f4e8}{days\+To()} function.
+
+The \hyperlink{class_q_date_acd3874ea22ceb913d3af9a57c855ef83}{days\+In\+Month()} and \hyperlink{class_q_date_a552674d79df8bd393b13255fb6ba1b82}{days\+In\+Year()} functions tell how many days there are in this date\textquotesingle{}s month and year, respectively. The is\+Leap\+Year() function tells whether this date is in a leap year.
+
+Note that \hyperlink{class_q_date}{Q\+Date} may not be used for date calculations for dates in the remote past, i.\+e. prior to the introduction of the Gregorian calendar. This calendar was adopted by England Sep. 14. 1752 (hence this is the earliest valid \hyperlink{class_q_date}{Q\+Date}), and subsequently by most other western countries, until 1923.
+
+The end of time is reached around 8000\+A\+D, by which time we expect Qt to be obsolete.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_time}{Q\+Time}, \hyperlink{class_q_date_time}{Q\+Date\+Time} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_date_ac553172d4c172c75bb78e9b246eaa0a1}{}\index{Q\+Date@{Q\+Date}!Q\+Date@{Q\+Date}}
+\index{Q\+Date@{Q\+Date}!Q\+Date@{Q\+Date}}
+\subsubsection[{Q\+Date()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date\+::\+Q\+Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_date_ac553172d4c172c75bb78e9b246eaa0a1}
+Constructs a null date. Null dates are invalid.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_date_a610f089043b944cddab8b547f2a0a218}{is\+Null()}, \hyperlink{class_q_date_adc39b5ef83613cc352832fe233e8baef}{is\+Valid()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_date_abaf62f540ece3f5da8a7fa61298c34f3}{}\index{Q\+Date@{Q\+Date}!Q\+Date@{Q\+Date}}
+\index{Q\+Date@{Q\+Date}!Q\+Date@{Q\+Date}}
+\subsubsection[{Q\+Date(int y, int m, int d)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date\+::\+Q\+Date (
+\begin{DoxyParamCaption}
+\item[{int}]{y, }
+\item[{int}]{m, }
+\item[{int}]{d}
+\end{DoxyParamCaption}
+)}\label{class_q_date_abaf62f540ece3f5da8a7fa61298c34f3}
+Constructs a date with the year {\itshape y}, month {\itshape m} and day {\itshape d}.
+
+{\itshape y} must be in the range 1752-\/ca. 8000, {\itshape m} must be in the range 1-\/12, and {\itshape d} must be in the range 1-\/31. Exception\+: if {\itshape y} is in the range 0-\/99, it is interpreted as 1900-\/1999.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_date_adc39b5ef83613cc352832fe233e8baef}{is\+Valid()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_date_afc0a2ef784bb8a42492fa35c82f0a548}{}\index{Q\+Date@{Q\+Date}!````~Q\+Date@{$\sim$\+Q\+Date}}
+\index{````~Q\+Date@{$\sim$\+Q\+Date}!Q\+Date@{Q\+Date}}
+\subsubsection[{$\sim$\+Q\+Date()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+Date\+::$\sim$\+Q\+Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_q_date_afc0a2ef784bb8a42492fa35c82f0a548}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_date_abfa5593fd492a13b01bd4a1013065ce2}{}\index{Q\+Date@{Q\+Date}!add\+Days@{add\+Days}}
+\index{add\+Days@{add\+Days}!Q\+Date@{Q\+Date}}
+\subsubsection[{add\+Days(int days) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Date} Q\+Date\+::add\+Days (
+\begin{DoxyParamCaption}
+\item[{int}]{ndays}
+\end{DoxyParamCaption}
+) const}\label{class_q_date_abfa5593fd492a13b01bd4a1013065ce2}
+Returns a \hyperlink{class_q_date}{Q\+Date} object containing a date {\itshape ndays} later than the date of this object (or earlier if {\itshape ndays} is negative).
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_date_a3997dfda84b5ace12583651fe052f4e8}{days\+To()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_date_a7112e1452f46e40cf349f2e769887e1c}{}\index{Q\+Date@{Q\+Date}!current\+Date@{current\+Date}}
+\index{current\+Date@{current\+Date}!Q\+Date@{Q\+Date}}
+\subsubsection[{current\+Date()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Date} Q\+Date\+::current\+Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_date_a7112e1452f46e40cf349f2e769887e1c}
+Returns the current date, as reported by the system clock.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_time_a39b156ef7067e581f9fd70de6ef9ea4d}{Q\+Time\+::current\+Time()}, \hyperlink{class_q_date_time_a1e8e27c71617d5c97abe80ee2426a1b4}{Q\+Date\+Time\+::current\+Date\+Time()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_date_aa66120bb558e981ac505d0fa4113a844}{}\index{Q\+Date@{Q\+Date}!day@{day}}
+\index{day@{day}!Q\+Date@{Q\+Date}}
+\subsubsection[{day() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Date\+::day (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_date_aa66120bb558e981ac505d0fa4113a844}
+Returns the day of the month (1..31) of this date.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_date_a88d2a135c6094f3e67cd1d125931dda5}{year()}, \hyperlink{class_q_date_a1b00f4cc57ae72ea2669650833873ea2}{month()}, \hyperlink{class_q_date_adea77eac7776e9441c9107f4b15528ce}{day\+Of\+Week()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_date_a5a14c1d69f0c4a51bba1d4756f110ad0}{}\index{Q\+Date@{Q\+Date}!day\+Name@{day\+Name}}
+\index{day\+Name@{day\+Name}!Q\+Date@{Q\+Date}}
+\subsubsection[{day\+Name(int weekday) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Date\+::day\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{weekday}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_date_a5a14c1d69f0c4a51bba1d4756f110ad0}
+Returns the name of the {\itshape weekday}.
+
+Weekday 1 == \char`\"{}\+Mon\char`\"{}, day 2 == \char`\"{}\+Tue\char`\"{} etc.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_date_a206d47235315d1c0b861d901a4ab37e8}{to\+String()}, \hyperlink{class_q_date_a751b3290d394578b2ebd3b5fa3a65d1c}{month\+Name()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_date_adea77eac7776e9441c9107f4b15528ce}{}\index{Q\+Date@{Q\+Date}!day\+Of\+Week@{day\+Of\+Week}}
+\index{day\+Of\+Week@{day\+Of\+Week}!Q\+Date@{Q\+Date}}
+\subsubsection[{day\+Of\+Week() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Date\+::day\+Of\+Week (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_date_adea77eac7776e9441c9107f4b15528ce}
+Returns the weekday (Monday=1 .. Sunday=7) for this date.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_date_aa66120bb558e981ac505d0fa4113a844}{day()}, \hyperlink{class_q_date_a62e2463ded1a429298b00d2c6ca225b0}{day\+Of\+Year()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_date_a62e2463ded1a429298b00d2c6ca225b0}{}\index{Q\+Date@{Q\+Date}!day\+Of\+Year@{day\+Of\+Year}}
+\index{day\+Of\+Year@{day\+Of\+Year}!Q\+Date@{Q\+Date}}
+\subsubsection[{day\+Of\+Year() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Date\+::day\+Of\+Year (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_date_a62e2463ded1a429298b00d2c6ca225b0}
+Returns the day of the year (1..365) for this date.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_date_aa66120bb558e981ac505d0fa4113a844}{day()}, \hyperlink{class_q_date_adea77eac7776e9441c9107f4b15528ce}{day\+Of\+Week()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_date_acd3874ea22ceb913d3af9a57c855ef83}{}\index{Q\+Date@{Q\+Date}!days\+In\+Month@{days\+In\+Month}}
+\index{days\+In\+Month@{days\+In\+Month}!Q\+Date@{Q\+Date}}
+\subsubsection[{days\+In\+Month() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Date\+::days\+In\+Month (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_date_acd3874ea22ceb913d3af9a57c855ef83}
+Returns the number of days in the month (28..31) for this date.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_date_aa66120bb558e981ac505d0fa4113a844}{day()}, \hyperlink{class_q_date_a552674d79df8bd393b13255fb6ba1b82}{days\+In\+Year()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_date_a552674d79df8bd393b13255fb6ba1b82}{}\index{Q\+Date@{Q\+Date}!days\+In\+Year@{days\+In\+Year}}
+\index{days\+In\+Year@{days\+In\+Year}!Q\+Date@{Q\+Date}}
+\subsubsection[{days\+In\+Year() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Date\+::days\+In\+Year (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_date_a552674d79df8bd393b13255fb6ba1b82}
+Returns the number of days in the year (365 or 366) for this date.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_date_aa66120bb558e981ac505d0fa4113a844}{day()}, \hyperlink{class_q_date_acd3874ea22ceb913d3af9a57c855ef83}{days\+In\+Month()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_date_a3997dfda84b5ace12583651fe052f4e8}{}\index{Q\+Date@{Q\+Date}!days\+To@{days\+To}}
+\index{days\+To@{days\+To}!Q\+Date@{Q\+Date}}
+\subsubsection[{days\+To(const Q\+Date \&) const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Date\+::days\+To (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Date} \&}]{d}
+\end{DoxyParamCaption}
+) const}\label{class_q_date_a3997dfda84b5ace12583651fe052f4e8}
+Returns the number of days from this date to {\itshape d} (which is negative if {\itshape d} is earlier than this date).
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_date}{QDate} d1( 1995, 5, 17 );      \textcolor{comment}{// May 17th 1995}
+\hyperlink{class_q_date}{QDate} d2( 1995, 5, 20 );      \textcolor{comment}{// May 20th 1995}
+d1.daysTo( d2 );          \textcolor{comment}{// returns 3}
+d2.daysTo( d1 );          \textcolor{comment}{// returns -3}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_date_abfa5593fd492a13b01bd4a1013065ce2}{add\+Days()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_date_a04d5e854090cbd10ab4d8771877e5364}{}\index{Q\+Date@{Q\+Date}!greg2jul@{greg2jul}}
+\index{greg2jul@{greg2jul}!Q\+Date@{Q\+Date}}
+\subsubsection[{greg2jul(int y, int m, int d)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint} Q\+Date\+::greg2jul (
+\begin{DoxyParamCaption}
+\item[{int}]{y, }
+\item[{int}]{m, }
+\item[{int}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{class_q_date_a04d5e854090cbd10ab4d8771877e5364}
+\hypertarget{class_q_date_a610f089043b944cddab8b547f2a0a218}{}\index{Q\+Date@{Q\+Date}!is\+Null@{is\+Null}}
+\index{is\+Null@{is\+Null}!Q\+Date@{Q\+Date}}
+\subsubsection[{is\+Null() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Date\+::is\+Null (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_date_a610f089043b944cddab8b547f2a0a218}
+Returns T\+R\+U\+E if the date is null. \hyperlink{class_a}{A} null date is invalid.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_date_adc39b5ef83613cc352832fe233e8baef}{is\+Valid()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_date_adc39b5ef83613cc352832fe233e8baef}{}\index{Q\+Date@{Q\+Date}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!Q\+Date@{Q\+Date}}
+\subsubsection[{is\+Valid() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Date\+::is\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_date_adc39b5ef83613cc352832fe233e8baef}
+Returns T\+R\+U\+E if this date is valid.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_date_a610f089043b944cddab8b547f2a0a218}{is\+Null()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_date_a837d8f55470c8d8fe41efe980b68ee86}{}\index{Q\+Date@{Q\+Date}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!Q\+Date@{Q\+Date}}
+\subsubsection[{is\+Valid(int y, int m, int d)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Date\+::is\+Valid (
+\begin{DoxyParamCaption}
+\item[{int}]{y, }
+\item[{int}]{m, }
+\item[{int}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_date_a837d8f55470c8d8fe41efe980b68ee86}
+Returns T\+R\+U\+E if the specified date (year {\itshape y}, month {\itshape m} and day {\itshape d}) is valid.
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_date_adc39b5ef83613cc352832fe233e8baef}{QDate::isValid}( 2002, 5, 17 );    \textcolor{comment}{// TRUE;  May 17th 2002 is OK.}
+\hyperlink{class_q_date_adc39b5ef83613cc352832fe233e8baef}{QDate::isValid}( 2002, 2, 30 );    \textcolor{comment}{// FALSE; Feb 30th does not exist}
+\hyperlink{class_q_date_adc39b5ef83613cc352832fe233e8baef}{QDate::isValid}( 2004, 2, 29 );    \textcolor{comment}{// TRUE; 2004 is a leap year}
+\hyperlink{class_q_date_adc39b5ef83613cc352832fe233e8baef}{QDate::isValid}( 1202, 6, 6 ); \textcolor{comment}{// FALSE; 1202 is pre-Gregorian}
+\end{DoxyCode}
+
+
+Note that a {\itshape y} value in the range 00-\/99 is interpreted as 1900-\/1999.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_date_a610f089043b944cddab8b547f2a0a218}{is\+Null()}, \hyperlink{class_q_date_ae25b0507f1694495d64ff068b0baa50e}{set\+Y\+M\+D()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_date_a0e0d4e48f69f7da1bd5e6e8278acb14c}{}\index{Q\+Date@{Q\+Date}!jul2greg@{jul2greg}}
+\index{jul2greg@{jul2greg}!Q\+Date@{Q\+Date}}
+\subsubsection[{jul2greg(uint jd, int \&y, int \&m, int \&d)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Date\+::jul2greg (
+\begin{DoxyParamCaption}
+\item[{{\bf uint}}]{jd, }
+\item[{int \&}]{y, }
+\item[{int \&}]{m, }
+\item[{int \&}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{class_q_date_a0e0d4e48f69f7da1bd5e6e8278acb14c}
+\hypertarget{class_q_date_a77612a09d0fd5eb1ba99952cef5e9eaa}{}\index{Q\+Date@{Q\+Date}!leap\+Year@{leap\+Year}}
+\index{leap\+Year@{leap\+Year}!Q\+Date@{Q\+Date}}
+\subsubsection[{leap\+Year(int year)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Date\+::leap\+Year (
+\begin{DoxyParamCaption}
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_date_a77612a09d0fd5eb1ba99952cef5e9eaa}
+Returns T\+R\+U\+E if the specified year {\itshape y} is a leap year. \hypertarget{class_q_date_a1b00f4cc57ae72ea2669650833873ea2}{}\index{Q\+Date@{Q\+Date}!month@{month}}
+\index{month@{month}!Q\+Date@{Q\+Date}}
+\subsubsection[{month() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Date\+::month (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_date_a1b00f4cc57ae72ea2669650833873ea2}
+Returns the month (January=1 .. December=12) of this date.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_date_a88d2a135c6094f3e67cd1d125931dda5}{year()}, \hyperlink{class_q_date_aa66120bb558e981ac505d0fa4113a844}{day()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_date_a751b3290d394578b2ebd3b5fa3a65d1c}{}\index{Q\+Date@{Q\+Date}!month\+Name@{month\+Name}}
+\index{month\+Name@{month\+Name}!Q\+Date@{Q\+Date}}
+\subsubsection[{month\+Name(int month) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Date\+::month\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{month}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_date_a751b3290d394578b2ebd3b5fa3a65d1c}
+Returns the name of the {\itshape month}.
+
+Month 1 == \char`\"{}\+Jan\char`\"{}, month 2 == \char`\"{}\+Feb\char`\"{} etc.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_date_a206d47235315d1c0b861d901a4ab37e8}{to\+String()}, \hyperlink{class_q_date_a5a14c1d69f0c4a51bba1d4756f110ad0}{day\+Name()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_date_ab6b7f6a46585a401d06cfc8a160c4e12}{}\index{Q\+Date@{Q\+Date}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Q\+Date@{Q\+Date}}
+\subsubsection[{operator"!=(const Q\+Date \&d) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Date\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Date} \&}]{d}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_date_ab6b7f6a46585a401d06cfc8a160c4e12}
+Returns T\+R\+U\+E if this date is different from {\itshape d}, or F\+A\+L\+S\+E if they are equal. \hypertarget{class_q_date_a80dec8c71ce1294b4700032ea58d8ca4}{}\index{Q\+Date@{Q\+Date}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Q\+Date@{Q\+Date}}
+\subsubsection[{operator$<$(const Q\+Date \&d) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Date\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Date} \&}]{d}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_date_a80dec8c71ce1294b4700032ea58d8ca4}
+Returns T\+R\+U\+E if this date is earlier than {\itshape d}, otherwise F\+A\+L\+S\+E. \hypertarget{class_q_date_ad6702ea498b9731c7d2416988118770b}{}\index{Q\+Date@{Q\+Date}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Q\+Date@{Q\+Date}}
+\subsubsection[{operator$<$=(const Q\+Date \&d) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Date\+::operator$<$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Date} \&}]{d}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_date_ad6702ea498b9731c7d2416988118770b}
+Returns T\+R\+U\+E if this date is earlier than or equal to {\itshape d}, otherwise F\+A\+L\+S\+E. \hypertarget{class_q_date_a6955b0542bfab28e080877a4e92fce6d}{}\index{Q\+Date@{Q\+Date}!operator==@{operator==}}
+\index{operator==@{operator==}!Q\+Date@{Q\+Date}}
+\subsubsection[{operator==(const Q\+Date \&d) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Date\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Date} \&}]{d}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_date_a6955b0542bfab28e080877a4e92fce6d}
+Returns T\+R\+U\+E if this date is equal to {\itshape d}, or F\+A\+L\+S\+E if they are different. \hypertarget{class_q_date_aca8d0f50fe0ba2286639156cd7271ecd}{}\index{Q\+Date@{Q\+Date}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Q\+Date@{Q\+Date}}
+\subsubsection[{operator$>$(const Q\+Date \&d) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Date\+::operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Date} \&}]{d}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_date_aca8d0f50fe0ba2286639156cd7271ecd}
+Returns T\+R\+U\+E if this date is later than {\itshape d}, otherwise F\+A\+L\+S\+E. \hypertarget{class_q_date_a56bc6514fca2e5ef5cc6e692e086047a}{}\index{Q\+Date@{Q\+Date}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!Q\+Date@{Q\+Date}}
+\subsubsection[{operator$>$=(const Q\+Date \&d) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Date\+::operator$>$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Date} \&}]{d}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_date_a56bc6514fca2e5ef5cc6e692e086047a}
+Returns T\+R\+U\+E if this date is later than or equal to {\itshape d}, otherwise F\+A\+L\+S\+E. \hypertarget{class_q_date_ae25b0507f1694495d64ff068b0baa50e}{}\index{Q\+Date@{Q\+Date}!set\+Y\+M\+D@{set\+Y\+M\+D}}
+\index{set\+Y\+M\+D@{set\+Y\+M\+D}!Q\+Date@{Q\+Date}}
+\subsubsection[{set\+Y\+M\+D(int y, int m, int d)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Date\+::set\+Y\+M\+D (
+\begin{DoxyParamCaption}
+\item[{int}]{y, }
+\item[{int}]{m, }
+\item[{int}]{d}
+\end{DoxyParamCaption}
+)}\label{class_q_date_ae25b0507f1694495d64ff068b0baa50e}
+Sets the year {\itshape y}, month {\itshape m} and day {\itshape d}.
+
+{\itshape y} must be in the range 1752-\/ca. 8000, {\itshape m} must be in the range 1-\/12, and {\itshape d} must be in the range 1-\/31. Exception\+: if {\itshape y} is in the range 0-\/99, it is interpreted as 1900-\/1999.
+
+Returns T\+R\+U\+E if the date is valid, otherwise F\+A\+L\+S\+E. \hypertarget{class_q_date_a206d47235315d1c0b861d901a4ab37e8}{}\index{Q\+Date@{Q\+Date}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Q\+Date@{Q\+Date}}
+\subsubsection[{to\+String() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Date\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_date_a206d47235315d1c0b861d901a4ab37e8}
+Returns the date as a string.
+
+The string format is \char`\"{}\+Sat May 20 1995\char`\"{}. This function uses the \hyperlink{class_q_date_a5a14c1d69f0c4a51bba1d4756f110ad0}{day\+Name()} and \hyperlink{class_q_date_a751b3290d394578b2ebd3b5fa3a65d1c}{month\+Name()} functions to generate the string.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_date_a5a14c1d69f0c4a51bba1d4756f110ad0}{day\+Name()}, \hyperlink{class_q_date_a751b3290d394578b2ebd3b5fa3a65d1c}{month\+Name()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_date_a88d2a135c6094f3e67cd1d125931dda5}{}\index{Q\+Date@{Q\+Date}!year@{year}}
+\index{year@{year}!Q\+Date@{Q\+Date}}
+\subsubsection[{year() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Date\+::year (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_date_a88d2a135c6094f3e67cd1d125931dda5}
+Returns the year ($>$= 1752) of this date.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_date_a1b00f4cc57ae72ea2669650833873ea2}{month()}, \hyperlink{class_q_date_aa66120bb558e981ac505d0fa4113a844}{day()} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_q_date_aebb24cfcc74a8440d7aff4d211276ab8}{}\index{Q\+Date@{Q\+Date}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Date@{Q\+Date}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Data\+Stream} \&}]{s, }
+\item[{const {\bf Q\+Date} \&}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_q_date_aebb24cfcc74a8440d7aff4d211276ab8}
+Writes the date to the stream.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{}{Format of the Q\+Data\+Stream operators } 
+\end{DoxySeeAlso}
+\hypertarget{class_q_date_ace58c33ac3870ee3b24fb6ce8db6f269}{}\index{Q\+Date@{Q\+Date}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Date@{Q\+Date}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Data\+Stream} \&}]{s, }
+\item[{{\bf Q\+Date} \&}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_q_date_ace58c33ac3870ee3b24fb6ce8db6f269}
+Reads a date from the stream.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{}{Format of the Q\+Data\+Stream operators } 
+\end{DoxySeeAlso}
+\hypertarget{class_q_date_a9d2632bde958bcaf78a589a11578452e}{}\index{Q\+Date@{Q\+Date}!Q\+Date\+Time@{Q\+Date\+Time}}
+\index{Q\+Date\+Time@{Q\+Date\+Time}!Q\+Date@{Q\+Date}}
+\subsubsection[{Q\+Date\+Time}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Q\+Date\+Time}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_q_date_a9d2632bde958bcaf78a589a11578452e}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qdatetime_8h}{qdatetime.\+h}\item 
+qtools/\hyperlink{qdatetime_8cpp}{qdatetime.\+cpp}\end{DoxyCompactItemize}

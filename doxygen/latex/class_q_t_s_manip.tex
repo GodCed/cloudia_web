@@ -1,0 +1,52 @@
+\hypertarget{class_q_t_s_manip}{}\section{Référence de la classe Q\+T\+S\+Manip}
+\label{class_q_t_s_manip}\index{Q\+T\+S\+Manip@{Q\+T\+S\+Manip}}
+
+
+{\ttfamily \#include $<$qtextstream.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_t_s_manip_a35cc537423248be4cbc121985fc13e43}{Q\+T\+S\+Manip} (\hyperlink{qtextstream_8h_a6a6df6302ab0a074f44782ab7a57d70d}{Q\+T\+S\+M\+F\+I} \hyperlink{060__command__switch_8tcl_a78d127e8bda64d4471ac811ad512fbd9}{m}, int \hyperlink{060__command__switch_8tcl_ab08ae027fc5777bc4f0629f1b60b35db}{a})
+\item 
+void \hyperlink{class_q_t_s_manip_ab314976728bf3e96ea881ba137d3ff37}{exec} (\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_t_s_manip_a35cc537423248be4cbc121985fc13e43}{}\index{Q\+T\+S\+Manip@{Q\+T\+S\+Manip}!Q\+T\+S\+Manip@{Q\+T\+S\+Manip}}
+\index{Q\+T\+S\+Manip@{Q\+T\+S\+Manip}!Q\+T\+S\+Manip@{Q\+T\+S\+Manip}}
+\subsubsection[{Q\+T\+S\+Manip(\+Q\+T\+S\+M\+F\+I m, int a)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+T\+S\+Manip\+::\+Q\+T\+S\+Manip (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+T\+S\+M\+F\+I}}]{m, }
+\item[{int}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_t_s_manip_a35cc537423248be4cbc121985fc13e43}
+Constructs a \hyperlink{class_q_t_s_manip}{Q\+T\+S\+Manip} object which will call {\itshape m} (a member function in \hyperlink{class_q_text_stream}{Q\+Text\+Stream} which accepts a single int) with argument {\itshape a} when \hyperlink{class_q_t_s_manip_ab314976728bf3e96ea881ba137d3ff37}{Q\+T\+S\+Manip\+::exec()} is called. Used internally in e.\+g. endl\+:
+
+
+\begin{DoxyCode}
+\hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s} << \textcolor{stringliteral}{"some text"} << endl << \textcolor{stringliteral}{"more text"};
+\end{DoxyCode}
+ 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_t_s_manip_ab314976728bf3e96ea881ba137d3ff37}{}\index{Q\+T\+S\+Manip@{Q\+T\+S\+Manip}!exec@{exec}}
+\index{exec@{exec}!Q\+T\+S\+Manip@{Q\+T\+S\+Manip}}
+\subsubsection[{exec(\+Q\+Text\+Stream \&s)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+T\+S\+Manip\+::exec (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Text\+Stream} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_t_s_manip_ab314976728bf3e96ea881ba137d3ff37}
+Calls the member function specified in the constructor, for object {\itshape s}. Used internally in e.\+g. endl\+:
+
+
+\begin{DoxyCode}
+\hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s} << \textcolor{stringliteral}{"some text"} << endl << \textcolor{stringliteral}{"more text"};
+\end{DoxyCode}
+ 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qtextstream_8h}{qtextstream.\+h}\item 
+qtools/\hyperlink{qtextstream_8cpp}{qtextstream.\+cpp}\end{DoxyCompactItemize}

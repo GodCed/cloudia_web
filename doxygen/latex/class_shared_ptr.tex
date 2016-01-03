@@ -1,0 +1,100 @@
+\hypertarget{class_shared_ptr}{}\section{Référence du modèle de la classe Shared\+Ptr$<$ T $>$}
+\label{class_shared_ptr}\index{Shared\+Ptr$<$ T $>$@{Shared\+Ptr$<$ T $>$}}
+
+
+Reference counting smart pointer.  
+
+
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+typedef T \hyperlink{class_shared_ptr_a6f8522e4cfee9ec484fa9fec9a37d0f1}{Type}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_shared_ptr_a7f00a1fb22e4d2a1b3cb55ec89d8dd99}{Shared\+Ptr} (T $\ast$\hyperlink{060__command__switch_8tcl_a15229b450f26d8fa1c10bea4f3279f4d}{p}=0)
+\item 
+\hyperlink{class_shared_ptr_ae587e1b0f76a90dfa14e0fa14a2f91ef}{$\sim$\+Shared\+Ptr} ()
+\item 
+T \& \hyperlink{class_shared_ptr_ab18d00fe94dfa00e2c5500f150231371}{operator$\ast$} () const 
+\item 
+T $\ast$ \hyperlink{class_shared_ptr_a0f2117389b16d211879312b8c13e840e}{operator-\/$>$} () const 
+\item 
+T $\ast$ \hyperlink{class_shared_ptr_ac747048e189c896c11f0b436d02fc5e1}{get} () const 
+\item 
+\hyperlink{class_shared_ptr_a8c6baf781f5067cd53c5f6326c533c6b}{operator bool} () const 
+\item 
+void \hyperlink{class_shared_ptr_a0b0f0066a893260cffd468be2e57aaea}{reset} (T $\ast$\hyperlink{060__command__switch_8tcl_a15229b450f26d8fa1c10bea4f3279f4d}{p}=0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\subsubsection*{template$<$class T$>$class Shared\+Ptr$<$ T $>$}
+
+Reference counting smart pointer. 
+
+\subsection{Documentation des définitions de type membres}
+\hypertarget{class_shared_ptr_a6f8522e4cfee9ec484fa9fec9a37d0f1}{}\index{Shared\+Ptr@{Shared\+Ptr}!Type@{Type}}
+\index{Type@{Type}!Shared\+Ptr@{Shared\+Ptr}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ typedef T {\bf Shared\+Ptr}$<$ T $>$\+::{\bf Type}}\label{class_shared_ptr_a6f8522e4cfee9ec484fa9fec9a37d0f1}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_shared_ptr_a7f00a1fb22e4d2a1b3cb55ec89d8dd99}{}\index{Shared\+Ptr@{Shared\+Ptr}!Shared\+Ptr@{Shared\+Ptr}}
+\index{Shared\+Ptr@{Shared\+Ptr}!Shared\+Ptr@{Shared\+Ptr}}
+\subsubsection[{Shared\+Ptr(\+T $\ast$p=0)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Shared\+Ptr}$<$ T $>$\+::{\bf Shared\+Ptr} (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{p = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{class_shared_ptr_a7f00a1fb22e4d2a1b3cb55ec89d8dd99}
+\hypertarget{class_shared_ptr_ae587e1b0f76a90dfa14e0fa14a2f91ef}{}\index{Shared\+Ptr@{Shared\+Ptr}!````~Shared\+Ptr@{$\sim$\+Shared\+Ptr}}
+\index{````~Shared\+Ptr@{$\sim$\+Shared\+Ptr}!Shared\+Ptr@{Shared\+Ptr}}
+\subsubsection[{$\sim$\+Shared\+Ptr()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Shared\+Ptr}$<$ T $>$\+::$\sim${\bf Shared\+Ptr} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_shared_ptr_ae587e1b0f76a90dfa14e0fa14a2f91ef}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_shared_ptr_ac747048e189c896c11f0b436d02fc5e1}{}\index{Shared\+Ptr@{Shared\+Ptr}!get@{get}}
+\index{get@{get}!Shared\+Ptr@{Shared\+Ptr}}
+\subsubsection[{get() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf Shared\+Ptr}$<$ T $>$\+::get (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_shared_ptr_ac747048e189c896c11f0b436d02fc5e1}
+\hypertarget{class_shared_ptr_a8c6baf781f5067cd53c5f6326c533c6b}{}\index{Shared\+Ptr@{Shared\+Ptr}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!Shared\+Ptr@{Shared\+Ptr}}
+\subsubsection[{operator bool() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Shared\+Ptr}$<$ T $>$\+::operator {\bf bool} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_shared_ptr_a8c6baf781f5067cd53c5f6326c533c6b}
+\hypertarget{class_shared_ptr_ab18d00fe94dfa00e2c5500f150231371}{}\index{Shared\+Ptr@{Shared\+Ptr}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Shared\+Ptr@{Shared\+Ptr}}
+\subsubsection[{operator$\ast$() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T\& {\bf Shared\+Ptr}$<$ T $>$\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_shared_ptr_ab18d00fe94dfa00e2c5500f150231371}
+\hypertarget{class_shared_ptr_a0f2117389b16d211879312b8c13e840e}{}\index{Shared\+Ptr@{Shared\+Ptr}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!Shared\+Ptr@{Shared\+Ptr}}
+\subsubsection[{operator-\/$>$() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf Shared\+Ptr}$<$ T $>$\+::operator-\/$>$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_shared_ptr_a0f2117389b16d211879312b8c13e840e}
+\hypertarget{class_shared_ptr_a0b0f0066a893260cffd468be2e57aaea}{}\index{Shared\+Ptr@{Shared\+Ptr}!reset@{reset}}
+\index{reset@{reset}!Shared\+Ptr@{Shared\+Ptr}}
+\subsubsection[{reset(\+T $\ast$p=0)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf Shared\+Ptr}$<$ T $>$\+::reset (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{p = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_shared_ptr_a0b0f0066a893260cffd468be2e57aaea}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{context_8cpp}{context.\+cpp}\end{DoxyCompactItemize}

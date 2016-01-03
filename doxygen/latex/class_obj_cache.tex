@@ -1,0 +1,134 @@
+\hypertarget{class_obj_cache}{}\section{Référence de la classe Obj\+Cache}
+\label{class_obj_cache}\index{Obj\+Cache@{Obj\+Cache}}
+
+
+Cache for objects.  
+
+
+
+
+{\ttfamily \#include $<$objcache.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_obj_cache_a1818fcc2b39a5c54a6e2bd9b456b7ccb}{Obj\+Cache} (unsigned int log\+Size)
+\item 
+\hyperlink{class_obj_cache_ae2ea95b2c63b154dd0a068613ba06aff}{$\sim$\+Obj\+Cache} ()
+\item 
+int \hyperlink{class_obj_cache_affd025326493c40ac4e7f5b4c0c3ad9b}{add} (void $\ast$obj, void $\ast$$\ast$victim)
+\item 
+void \hyperlink{class_obj_cache_ac4d9eb810e8f6ca2fbd4cf058ff3fe0e}{use} (int handle)
+\item 
+void \hyperlink{class_obj_cache_a3ac1ae674ea8ff27e436c788f851d303}{del} (int handle)
+\item 
+void \hyperlink{class_obj_cache_aeea7452ce80751d3f8e76038dc44decc}{print\+L\+R\+U} ()
+\item 
+void \hyperlink{class_obj_cache_a3e4ded7d3342fb02d64bd8d39466a30a}{print\+Stats} ()
+\item 
+int \hyperlink{class_obj_cache_afe1e73a159e54fdc55076fc0670c13ab}{size} () const 
+\item 
+int \hyperlink{class_obj_cache_a583b92b08b3d1d55e12fd0b331100910}{count} () const 
+\item 
+int \hyperlink{class_obj_cache_a6169460988e7f843f4e7ee769d251652}{hits} () const 
+\item 
+int \hyperlink{class_obj_cache_a5a0a344135b23e0ad7044573e0a2d369}{misses} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Cache for objects. 
+
+This cache is used to decide which objects should remain in memory. It uses a least recently used policy (L\+R\+U) to decide which object should make room for a new object when the cache is full. An object should be added using \hyperlink{class_obj_cache_affd025326493c40ac4e7f5b4c0c3ad9b}{add()}, and then \hyperlink{class_obj_cache_ac4d9eb810e8f6ca2fbd4cf058ff3fe0e}{use()} should be called when the object is used. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_obj_cache_a1818fcc2b39a5c54a6e2bd9b456b7ccb}{}\index{Obj\+Cache@{Obj\+Cache}!Obj\+Cache@{Obj\+Cache}}
+\index{Obj\+Cache@{Obj\+Cache}!Obj\+Cache@{Obj\+Cache}}
+\subsubsection[{Obj\+Cache(unsigned int log\+Size)}]{\setlength{\rightskip}{0pt plus 5cm}Obj\+Cache\+::\+Obj\+Cache (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{log\+Size}
+\end{DoxyParamCaption}
+)}\label{class_obj_cache_a1818fcc2b39a5c54a6e2bd9b456b7ccb}
+Creates the cache. The number of elements in the cache is 2 to the power of {\itshape log\+Size}. \hypertarget{class_obj_cache_ae2ea95b2c63b154dd0a068613ba06aff}{}\index{Obj\+Cache@{Obj\+Cache}!````~Obj\+Cache@{$\sim$\+Obj\+Cache}}
+\index{````~Obj\+Cache@{$\sim$\+Obj\+Cache}!Obj\+Cache@{Obj\+Cache}}
+\subsubsection[{$\sim$\+Obj\+Cache()}]{\setlength{\rightskip}{0pt plus 5cm}Obj\+Cache\+::$\sim$\+Obj\+Cache (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_obj_cache_ae2ea95b2c63b154dd0a068613ba06aff}
+Deletes the cache and free all internal data-\/structures used. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_obj_cache_affd025326493c40ac4e7f5b4c0c3ad9b}{}\index{Obj\+Cache@{Obj\+Cache}!add@{add}}
+\index{add@{add}!Obj\+Cache@{Obj\+Cache}}
+\subsubsection[{add(void $\ast$obj, void $\ast$$\ast$victim)}]{\setlength{\rightskip}{0pt plus 5cm}int Obj\+Cache\+::add (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{obj, }
+\item[{void $\ast$$\ast$}]{victim}
+\end{DoxyParamCaption}
+)}\label{class_obj_cache_affd025326493c40ac4e7f5b4c0c3ad9b}
+Adds {\itshape obj} to the cache. When victim is not null, this object is removed from the cache to make room for {\itshape obj}. Returns a handle to the object, which can be used by the \hyperlink{class_obj_cache_ac4d9eb810e8f6ca2fbd4cf058ff3fe0e}{use()} function, each time the object is used. \hypertarget{class_obj_cache_a583b92b08b3d1d55e12fd0b331100910}{}\index{Obj\+Cache@{Obj\+Cache}!count@{count}}
+\index{count@{count}!Obj\+Cache@{Obj\+Cache}}
+\subsubsection[{count() const }]{\setlength{\rightskip}{0pt plus 5cm}int Obj\+Cache\+::count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_obj_cache_a583b92b08b3d1d55e12fd0b331100910}
+number of elements in the cache \hypertarget{class_obj_cache_a3ac1ae674ea8ff27e436c788f851d303}{}\index{Obj\+Cache@{Obj\+Cache}!del@{del}}
+\index{del@{del}!Obj\+Cache@{Obj\+Cache}}
+\subsubsection[{del(int handle)}]{\setlength{\rightskip}{0pt plus 5cm}void Obj\+Cache\+::del (
+\begin{DoxyParamCaption}
+\item[{int}]{handle}
+\end{DoxyParamCaption}
+)}\label{class_obj_cache_a3ac1ae674ea8ff27e436c788f851d303}
+Removes the item identified by {\itshape handle} from the cache. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_obj_cache_affd025326493c40ac4e7f5b4c0c3ad9b}{add()} 
+\end{DoxySeeAlso}
+\hypertarget{class_obj_cache_a6169460988e7f843f4e7ee769d251652}{}\index{Obj\+Cache@{Obj\+Cache}!hits@{hits}}
+\index{hits@{hits}!Obj\+Cache@{Obj\+Cache}}
+\subsubsection[{hits() const }]{\setlength{\rightskip}{0pt plus 5cm}int Obj\+Cache\+::hits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_obj_cache_a6169460988e7f843f4e7ee769d251652}
+\hypertarget{class_obj_cache_a5a0a344135b23e0ad7044573e0a2d369}{}\index{Obj\+Cache@{Obj\+Cache}!misses@{misses}}
+\index{misses@{misses}!Obj\+Cache@{Obj\+Cache}}
+\subsubsection[{misses() const }]{\setlength{\rightskip}{0pt plus 5cm}int Obj\+Cache\+::misses (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_obj_cache_a5a0a344135b23e0ad7044573e0a2d369}
+\hypertarget{class_obj_cache_aeea7452ce80751d3f8e76038dc44decc}{}\index{Obj\+Cache@{Obj\+Cache}!print\+L\+R\+U@{print\+L\+R\+U}}
+\index{print\+L\+R\+U@{print\+L\+R\+U}!Obj\+Cache@{Obj\+Cache}}
+\subsubsection[{print\+L\+R\+U()}]{\setlength{\rightskip}{0pt plus 5cm}void Obj\+Cache\+::print\+L\+R\+U (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_obj_cache_aeea7452ce80751d3f8e76038dc44decc}
+\hyperlink{class_debug}{Debug} function. Prints the L\+R\+U list \hypertarget{class_obj_cache_a3e4ded7d3342fb02d64bd8d39466a30a}{}\index{Obj\+Cache@{Obj\+Cache}!print\+Stats@{print\+Stats}}
+\index{print\+Stats@{print\+Stats}!Obj\+Cache@{Obj\+Cache}}
+\subsubsection[{print\+Stats()}]{\setlength{\rightskip}{0pt plus 5cm}void Obj\+Cache\+::print\+Stats (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_obj_cache_a3e4ded7d3342fb02d64bd8d39466a30a}
+Print miss/hits statistics \hypertarget{class_obj_cache_afe1e73a159e54fdc55076fc0670c13ab}{}\index{Obj\+Cache@{Obj\+Cache}!size@{size}}
+\index{size@{size}!Obj\+Cache@{Obj\+Cache}}
+\subsubsection[{size() const }]{\setlength{\rightskip}{0pt plus 5cm}int Obj\+Cache\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_obj_cache_afe1e73a159e54fdc55076fc0670c13ab}
+total size of the cache \hypertarget{class_obj_cache_ac4d9eb810e8f6ca2fbd4cf058ff3fe0e}{}\index{Obj\+Cache@{Obj\+Cache}!use@{use}}
+\index{use@{use}!Obj\+Cache@{Obj\+Cache}}
+\subsubsection[{use(int handle)}]{\setlength{\rightskip}{0pt plus 5cm}void Obj\+Cache\+::use (
+\begin{DoxyParamCaption}
+\item[{int}]{handle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_obj_cache_ac4d9eb810e8f6ca2fbd4cf058ff3fe0e}
+Indicates that this object is used. This will move the object to the front of the internal L\+R\+U list to make sure it is removed last. The parameter {\itshape handle} is returned when called \hyperlink{class_obj_cache_affd025326493c40ac4e7f5b4c0c3ad9b}{add()}. 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{objcache_8h}{objcache.\+h}\item 
+src/\hyperlink{objcache_8cpp}{objcache.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,98 @@
+\hypertarget{diagram_8cpp}{}\section{Référence du fichier src/diagram.cpp}
+\label{diagram_8cpp}\index{src/diagram.\+cpp@{src/diagram.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$qlist.\+h$>$}\\*
+{\ttfamily \#include $<$qarray.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}ftextstream.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$qfile.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}diagram.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}image.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}classdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doxygen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}portable.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}index.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}classlist.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_diagram_item}{Diagram\+Item}
+\item 
+class \hyperlink{class_diagram_item_list}{Diagram\+Item\+List}
+\item 
+class \hyperlink{class_diagram_row}{Diagram\+Row}
+\item 
+class \hyperlink{class_diagram_row_iterator}{Diagram\+Row\+Iterator}
+\item 
+class \hyperlink{class_tree_diagram}{Tree\+Diagram}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{diagram_8cpp_addf4ae1173df3a2d96b5862df8960117}{I\+M\+A\+G\+E\+\_\+\+E\+X\+T}~\char`\"{}.png\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{diagram_8cpp_a74577aa0173415ca04955ce082eadde3}{clear\+Visit\+Flags} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{diagram_8cpp_a3aecc8bdec6de29591f6a1cf3577ec52}{max\+Tree\+Width} = 8
+\item 
+const int \hyperlink{diagram_8cpp_aec7478b516427277da6e5ff809be940b}{grid\+Width} = 100
+\item 
+const int \hyperlink{diagram_8cpp_a4108183068e35ea0ff409e4fc3086956}{grid\+Height} = 100
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{diagram_8cpp_a9a383dc0400438268b6bc495ddd1ac0a}{label\+Hor\+Spacing} = 10
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{diagram_8cpp_a798b8cc660cdf609063e37c80cea00f5}{label\+Vert\+Spacing} = 32
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{diagram_8cpp_a4472ee050b00dbb631b9f80fd578af27}{label\+Hor\+Margin} = 6
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{diagram_8cpp_a2028b5b9a983ed4a8e4fed382c97a3fe}{font\+Height} = 12
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{diagram_8cpp_addf4ae1173df3a2d96b5862df8960117}{}\index{diagram.\+cpp@{diagram.\+cpp}!I\+M\+A\+G\+E\+\_\+\+E\+X\+T@{I\+M\+A\+G\+E\+\_\+\+E\+X\+T}}
+\index{I\+M\+A\+G\+E\+\_\+\+E\+X\+T@{I\+M\+A\+G\+E\+\_\+\+E\+X\+T}!diagram.\+cpp@{diagram.\+cpp}}
+\subsubsection[{I\+M\+A\+G\+E\+\_\+\+E\+X\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+M\+A\+G\+E\+\_\+\+E\+X\+T~\char`\"{}.png\char`\"{}}\label{diagram_8cpp_addf4ae1173df3a2d96b5862df8960117}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{diagram_8cpp_a74577aa0173415ca04955ce082eadde3}{}\index{diagram.\+cpp@{diagram.\+cpp}!clear\+Visit\+Flags@{clear\+Visit\+Flags}}
+\index{clear\+Visit\+Flags@{clear\+Visit\+Flags}!diagram.\+cpp@{diagram.\+cpp}}
+\subsubsection[{clear\+Visit\+Flags()}]{\setlength{\rightskip}{0pt plus 5cm}void clear\+Visit\+Flags (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{diagram_8cpp_a74577aa0173415ca04955ce082eadde3}
+
+
+\subsection{Documentation des variables}
+\hypertarget{diagram_8cpp_a2028b5b9a983ed4a8e4fed382c97a3fe}{}\index{diagram.\+cpp@{diagram.\+cpp}!font\+Height@{font\+Height}}
+\index{font\+Height@{font\+Height}!diagram.\+cpp@{diagram.\+cpp}}
+\subsubsection[{font\+Height}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} font\+Height = 12}\label{diagram_8cpp_a2028b5b9a983ed4a8e4fed382c97a3fe}
+\hypertarget{diagram_8cpp_a4108183068e35ea0ff409e4fc3086956}{}\index{diagram.\+cpp@{diagram.\+cpp}!grid\+Height@{grid\+Height}}
+\index{grid\+Height@{grid\+Height}!diagram.\+cpp@{diagram.\+cpp}}
+\subsubsection[{grid\+Height}]{\setlength{\rightskip}{0pt plus 5cm}const int grid\+Height = 100}\label{diagram_8cpp_a4108183068e35ea0ff409e4fc3086956}
+\hypertarget{diagram_8cpp_aec7478b516427277da6e5ff809be940b}{}\index{diagram.\+cpp@{diagram.\+cpp}!grid\+Width@{grid\+Width}}
+\index{grid\+Width@{grid\+Width}!diagram.\+cpp@{diagram.\+cpp}}
+\subsubsection[{grid\+Width}]{\setlength{\rightskip}{0pt plus 5cm}const int grid\+Width = 100}\label{diagram_8cpp_aec7478b516427277da6e5ff809be940b}
+\hypertarget{diagram_8cpp_a4472ee050b00dbb631b9f80fd578af27}{}\index{diagram.\+cpp@{diagram.\+cpp}!label\+Hor\+Margin@{label\+Hor\+Margin}}
+\index{label\+Hor\+Margin@{label\+Hor\+Margin}!diagram.\+cpp@{diagram.\+cpp}}
+\subsubsection[{label\+Hor\+Margin}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} label\+Hor\+Margin = 6}\label{diagram_8cpp_a4472ee050b00dbb631b9f80fd578af27}
+\hypertarget{diagram_8cpp_a9a383dc0400438268b6bc495ddd1ac0a}{}\index{diagram.\+cpp@{diagram.\+cpp}!label\+Hor\+Spacing@{label\+Hor\+Spacing}}
+\index{label\+Hor\+Spacing@{label\+Hor\+Spacing}!diagram.\+cpp@{diagram.\+cpp}}
+\subsubsection[{label\+Hor\+Spacing}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} label\+Hor\+Spacing = 10}\label{diagram_8cpp_a9a383dc0400438268b6bc495ddd1ac0a}
+\hypertarget{diagram_8cpp_a798b8cc660cdf609063e37c80cea00f5}{}\index{diagram.\+cpp@{diagram.\+cpp}!label\+Vert\+Spacing@{label\+Vert\+Spacing}}
+\index{label\+Vert\+Spacing@{label\+Vert\+Spacing}!diagram.\+cpp@{diagram.\+cpp}}
+\subsubsection[{label\+Vert\+Spacing}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} label\+Vert\+Spacing = 32}\label{diagram_8cpp_a798b8cc660cdf609063e37c80cea00f5}
+\hypertarget{diagram_8cpp_a3aecc8bdec6de29591f6a1cf3577ec52}{}\index{diagram.\+cpp@{diagram.\+cpp}!max\+Tree\+Width@{max\+Tree\+Width}}
+\index{max\+Tree\+Width@{max\+Tree\+Width}!diagram.\+cpp@{diagram.\+cpp}}
+\subsubsection[{max\+Tree\+Width}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} max\+Tree\+Width = 8}\label{diagram_8cpp_a3aecc8bdec6de29591f6a1cf3577ec52}

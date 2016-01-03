@@ -1,0 +1,172 @@
+\hypertarget{class_node_handler}{}\section{Référence de la classe Node\+Handler}
+\label{class_node_handler}\index{Node\+Handler@{Node\+Handler}}
+
+
+{\ttfamily \#include $<$graphhandler.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Node\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.545894cm]{class_node_handler}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_node_handler_a015c75555f24fdb6c766f03d9428395f}{Node\+Handler} (\hyperlink{class_graph_handler}{Graph\+Handler} $\ast$gh)
+\item 
+virtual \hyperlink{class_node_handler_a45c9285e2e70af9d2b59d00da93b9d97}{$\sim$\+Node\+Handler} ()
+\item 
+void \hyperlink{class_node_handler_a5f8dacefb2af9007ee3d52152cffb5f2}{start\+Node} (const \hyperlink{class_q_xml_attributes}{Q\+Xml\+Attributes} \&attrib)
+\item 
+void \hyperlink{class_node_handler_a78e510777877af3febaa3dad5b3db60d}{end\+Node} ()
+\item 
+void \hyperlink{class_node_handler_a3da4f2059dd96056ceebff579e165b6f}{start\+Label} (const \hyperlink{class_q_xml_attributes}{Q\+Xml\+Attributes} \&attrib)
+\item 
+void \hyperlink{class_node_handler_a3bfcccc6a52585bec1c96d2c7e6d7568}{end\+Label} ()
+\item 
+void \hyperlink{class_node_handler_a38ec6e9b5acafcf54334e1707d88b1c4}{start\+Link} (const \hyperlink{class_q_xml_attributes}{Q\+Xml\+Attributes} \&attrib)
+\item 
+void \hyperlink{class_node_handler_a8fd52ad97d34cedee8425f0a2e000e3d}{end\+Link} ()
+\item 
+void \hyperlink{class_node_handler_a90f5dc2ed13c6041f9a833df9a0b1c38}{start\+Child\+Node} (const \hyperlink{class_q_xml_attributes}{Q\+Xml\+Attributes} \&attrib)
+\item 
+virtual const \hyperlink{class_i_string}{I\+String} $\ast$ \hyperlink{class_node_handler_a9b0dafafe216d1c51cbe32136719d886}{id} () const 
+\item 
+virtual const \hyperlink{class_i_string}{I\+String} $\ast$ \hyperlink{class_node_handler_a0272e4bd7ff425dcdedecf4394fd1716}{label} () const 
+\item 
+virtual const \hyperlink{class_i_string}{I\+String} $\ast$ \hyperlink{class_node_handler_afdd753d4f110352b435ea1e45df002a4}{link\+Id} () const 
+\item 
+virtual \hyperlink{class_i_child_node_iterator}{I\+Child\+Node\+Iterator} $\ast$ \hyperlink{class_node_handler_aba2137417a68e02a80d91e7d85932f28}{children} () const 
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_node_handler_a667d8ca5ea4d4cddbf115f89fb093c21}{Child\+Node\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_node_handler_a015c75555f24fdb6c766f03d9428395f}{}\index{Node\+Handler@{Node\+Handler}!Node\+Handler@{Node\+Handler}}
+\index{Node\+Handler@{Node\+Handler}!Node\+Handler@{Node\+Handler}}
+\subsubsection[{Node\+Handler(\+Graph\+Handler $\ast$gh)}]{\setlength{\rightskip}{0pt plus 5cm}Node\+Handler\+::\+Node\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf Graph\+Handler} $\ast$}]{gh}
+\end{DoxyParamCaption}
+)}\label{class_node_handler_a015c75555f24fdb6c766f03d9428395f}
+\hypertarget{class_node_handler_a45c9285e2e70af9d2b59d00da93b9d97}{}\index{Node\+Handler@{Node\+Handler}!````~Node\+Handler@{$\sim$\+Node\+Handler}}
+\index{````~Node\+Handler@{$\sim$\+Node\+Handler}!Node\+Handler@{Node\+Handler}}
+\subsubsection[{$\sim$\+Node\+Handler()}]{\setlength{\rightskip}{0pt plus 5cm}Node\+Handler\+::$\sim$\+Node\+Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_node_handler_a45c9285e2e70af9d2b59d00da93b9d97}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_node_handler_aba2137417a68e02a80d91e7d85932f28}{}\index{Node\+Handler@{Node\+Handler}!children@{children}}
+\index{children@{children}!Node\+Handler@{Node\+Handler}}
+\subsubsection[{children() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Child\+Node\+Iterator} $\ast$ Node\+Handler\+::children (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_node_handler_aba2137417a68e02a80d91e7d85932f28}
+
+
+Implémente \hyperlink{class_i_node_aa3cc46114d0256932cf9ae4dbd017e8d}{I\+Node}.
+
+\hypertarget{class_node_handler_a3bfcccc6a52585bec1c96d2c7e6d7568}{}\index{Node\+Handler@{Node\+Handler}!end\+Label@{end\+Label}}
+\index{end\+Label@{end\+Label}!Node\+Handler@{Node\+Handler}}
+\subsubsection[{end\+Label()}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+Handler\+::end\+Label (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_node_handler_a3bfcccc6a52585bec1c96d2c7e6d7568}
+\hypertarget{class_node_handler_a8fd52ad97d34cedee8425f0a2e000e3d}{}\index{Node\+Handler@{Node\+Handler}!end\+Link@{end\+Link}}
+\index{end\+Link@{end\+Link}!Node\+Handler@{Node\+Handler}}
+\subsubsection[{end\+Link()}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+Handler\+::end\+Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_node_handler_a8fd52ad97d34cedee8425f0a2e000e3d}
+\hypertarget{class_node_handler_a78e510777877af3febaa3dad5b3db60d}{}\index{Node\+Handler@{Node\+Handler}!end\+Node@{end\+Node}}
+\index{end\+Node@{end\+Node}!Node\+Handler@{Node\+Handler}}
+\subsubsection[{end\+Node()}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+Handler\+::end\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_node_handler_a78e510777877af3febaa3dad5b3db60d}
+\hypertarget{class_node_handler_a9b0dafafe216d1c51cbe32136719d886}{}\index{Node\+Handler@{Node\+Handler}!id@{id}}
+\index{id@{id}!Node\+Handler@{Node\+Handler}}
+\subsubsection[{id() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf I\+String}$\ast$ Node\+Handler\+::id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_node_handler_a9b0dafafe216d1c51cbe32136719d886}
+
+
+Implémente \hyperlink{class_i_node_a46ed6071ae736ba58f3df2ec7ddf9de4}{I\+Node}.
+
+\hypertarget{class_node_handler_a0272e4bd7ff425dcdedecf4394fd1716}{}\index{Node\+Handler@{Node\+Handler}!label@{label}}
+\index{label@{label}!Node\+Handler@{Node\+Handler}}
+\subsubsection[{label() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf I\+String}$\ast$ Node\+Handler\+::label (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_node_handler_a0272e4bd7ff425dcdedecf4394fd1716}
+
+
+Implémente \hyperlink{class_i_node_a8f9e1cecb987e033cca10a57a93961a9}{I\+Node}.
+
+\hypertarget{class_node_handler_afdd753d4f110352b435ea1e45df002a4}{}\index{Node\+Handler@{Node\+Handler}!link\+Id@{link\+Id}}
+\index{link\+Id@{link\+Id}!Node\+Handler@{Node\+Handler}}
+\subsubsection[{link\+Id() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf I\+String}$\ast$ Node\+Handler\+::link\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_node_handler_afdd753d4f110352b435ea1e45df002a4}
+
+
+Implémente \hyperlink{class_i_node_aebe55897841a9fe2959c0ea97e048809}{I\+Node}.
+
+\hypertarget{class_node_handler_a90f5dc2ed13c6041f9a833df9a0b1c38}{}\index{Node\+Handler@{Node\+Handler}!start\+Child\+Node@{start\+Child\+Node}}
+\index{start\+Child\+Node@{start\+Child\+Node}!Node\+Handler@{Node\+Handler}}
+\subsubsection[{start\+Child\+Node(const Q\+Xml\+Attributes \&attrib)}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+Handler\+::start\+Child\+Node (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Xml\+Attributes} \&}]{attrib}
+\end{DoxyParamCaption}
+)}\label{class_node_handler_a90f5dc2ed13c6041f9a833df9a0b1c38}
+\hypertarget{class_node_handler_a3da4f2059dd96056ceebff579e165b6f}{}\index{Node\+Handler@{Node\+Handler}!start\+Label@{start\+Label}}
+\index{start\+Label@{start\+Label}!Node\+Handler@{Node\+Handler}}
+\subsubsection[{start\+Label(const Q\+Xml\+Attributes \&attrib)}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+Handler\+::start\+Label (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Xml\+Attributes} \&}]{attrib}
+\end{DoxyParamCaption}
+)}\label{class_node_handler_a3da4f2059dd96056ceebff579e165b6f}
+\hypertarget{class_node_handler_a38ec6e9b5acafcf54334e1707d88b1c4}{}\index{Node\+Handler@{Node\+Handler}!start\+Link@{start\+Link}}
+\index{start\+Link@{start\+Link}!Node\+Handler@{Node\+Handler}}
+\subsubsection[{start\+Link(const Q\+Xml\+Attributes \&attrib)}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+Handler\+::start\+Link (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Xml\+Attributes} \&}]{attrib}
+\end{DoxyParamCaption}
+)}\label{class_node_handler_a38ec6e9b5acafcf54334e1707d88b1c4}
+\hypertarget{class_node_handler_a5f8dacefb2af9007ee3d52152cffb5f2}{}\index{Node\+Handler@{Node\+Handler}!start\+Node@{start\+Node}}
+\index{start\+Node@{start\+Node}!Node\+Handler@{Node\+Handler}}
+\subsubsection[{start\+Node(const Q\+Xml\+Attributes \&attrib)}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+Handler\+::start\+Node (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Xml\+Attributes} \&}]{attrib}
+\end{DoxyParamCaption}
+)}\label{class_node_handler_a5f8dacefb2af9007ee3d52152cffb5f2}
+
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_node_handler_a667d8ca5ea4d4cddbf115f89fb093c21}{}\index{Node\+Handler@{Node\+Handler}!Child\+Node\+Iterator@{Child\+Node\+Iterator}}
+\index{Child\+Node\+Iterator@{Child\+Node\+Iterator}!Node\+Handler@{Node\+Handler}}
+\subsubsection[{Child\+Node\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Child\+Node\+Iterator}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_node_handler_a667d8ca5ea4d4cddbf115f89fb093c21}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+addon/doxmlparser/src/\hyperlink{graphhandler_8h}{graphhandler.\+h}\item 
+addon/doxmlparser/src/\hyperlink{graphhandler_8cpp}{graphhandler.\+cpp}\end{DoxyCompactItemize}

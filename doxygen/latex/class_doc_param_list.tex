@@ -1,0 +1,172 @@
+\hypertarget{class_doc_param_list}{}\section{Référence de la classe Doc\+Param\+List}
+\label{class_doc_param_list}\index{Doc\+Param\+List@{Doc\+Param\+List}}
+
+
+{\ttfamily \#include $<$docparser.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Doc\+Param\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doc_param_list}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_param_list_a24cfde49c6be5a456c6ed4de83bd8beb}{Doc\+Param\+List} (\hyperlink{class_doc_node}{Doc\+Node} $\ast$\hyperlink{class_doc_node_a990d8b983962776a647e6231d38bd329}{parent}, \hyperlink{class_doc_param_sect_a402e8723e8b9f22c5ffa84046224d51a}{Doc\+Param\+Sect\+::\+Type} \hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, \hyperlink{class_doc_param_sect_ad5e3f053f03f8c333a69208521075c66}{Doc\+Param\+Sect\+::\+Direction} \hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d})
+\item 
+virtual \hyperlink{class_doc_param_list_ae12f98f634a0df31cb44735414654751}{$\sim$\+Doc\+Param\+List} ()
+\item 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadb}{Kind} \hyperlink{class_doc_param_list_a52e0a7a0ff48215cd1254cf975613082}{kind} () const 
+\item 
+const \hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{class_doc_node}{Doc\+Node} $>$ \& \hyperlink{class_doc_param_list_a607d79c8a9676bcb301813e5bd098752}{parameters} ()
+\item 
+const \hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{class_doc_node}{Doc\+Node} $>$ \& \hyperlink{class_doc_param_list_a1de2caf710c83eeaaf431e2f9b7f22e5}{param\+Types} ()
+\item 
+\hyperlink{class_doc_param_sect_a402e8723e8b9f22c5ffa84046224d51a}{Doc\+Param\+Sect\+::\+Type} \hyperlink{class_doc_param_list_a2718c4de761f478aeb9df9d8470a7081}{type} () const 
+\item 
+\hyperlink{class_doc_param_sect_ad5e3f053f03f8c333a69208521075c66}{Doc\+Param\+Sect\+::\+Direction} \hyperlink{class_doc_param_list_a5859a942a9519097f903c4553055f067}{direction} () const 
+\item 
+void \hyperlink{class_doc_param_list_a6b3e3e25859cc2d76b312b988c018d08}{mark\+First} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b}=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E})
+\item 
+void \hyperlink{class_doc_param_list_a89fc37af294659364193e14680065668}{mark\+Last} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b}=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E})
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_doc_param_list_a1f6dd30e8dfbd5078a888c529a229080}{is\+First} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_doc_param_list_ae5f0f48e689fc0ef6934e8198f76af8f}{is\+Last} () const 
+\item 
+void \hyperlink{class_doc_param_list_a4d62b1b89bf07c2debb1d71523379b8c}{accept} (\hyperlink{class_doc_visitor}{Doc\+Visitor} $\ast$v)
+\item 
+int \hyperlink{class_doc_param_list_a6463538f06117c2e28860e7ff18ce7f7}{parse} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&cmd\+Name)
+\item 
+int \hyperlink{class_doc_param_list_a78df8f1bf6623c25c86cec9f6b1388d4}{parse\+Xml} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&param\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Node representing a parameter list. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_doc_param_list_a24cfde49c6be5a456c6ed4de83bd8beb}{}\index{Doc\+Param\+List@{Doc\+Param\+List}!Doc\+Param\+List@{Doc\+Param\+List}}
+\index{Doc\+Param\+List@{Doc\+Param\+List}!Doc\+Param\+List@{Doc\+Param\+List}}
+\subsubsection[{Doc\+Param\+List(\+Doc\+Node $\ast$parent, Doc\+Param\+Sect\+::\+Type t, Doc\+Param\+Sect\+::\+Direction d)}]{\setlength{\rightskip}{0pt plus 5cm}Doc\+Param\+List\+::\+Doc\+Param\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Node} $\ast$}]{parent, }
+\item[{{\bf Doc\+Param\+Sect\+::\+Type}}]{t, }
+\item[{{\bf Doc\+Param\+Sect\+::\+Direction}}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_param_list_a24cfde49c6be5a456c6ed4de83bd8beb}
+\hypertarget{class_doc_param_list_ae12f98f634a0df31cb44735414654751}{}\index{Doc\+Param\+List@{Doc\+Param\+List}!````~Doc\+Param\+List@{$\sim$\+Doc\+Param\+List}}
+\index{````~Doc\+Param\+List@{$\sim$\+Doc\+Param\+List}!Doc\+Param\+List@{Doc\+Param\+List}}
+\subsubsection[{$\sim$\+Doc\+Param\+List()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Doc\+Param\+List\+::$\sim$\+Doc\+Param\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_param_list_ae12f98f634a0df31cb44735414654751}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_doc_param_list_a4d62b1b89bf07c2debb1d71523379b8c}{}\index{Doc\+Param\+List@{Doc\+Param\+List}!accept@{accept}}
+\index{accept@{accept}!Doc\+Param\+List@{Doc\+Param\+List}}
+\subsubsection[{accept(\+Doc\+Visitor $\ast$v)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Param\+List\+::accept (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Visitor} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_param_list_a4d62b1b89bf07c2debb1d71523379b8c}
+Acceptor function for node visitors. Part of the visitor pattern. 
+\begin{DoxyParams}{Paramètres}
+{\em v} & Abstract visitor. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_doc_node_a5303a550cbe6395663bf9b9dad28cbf1}{Doc\+Node}.
+
+\hypertarget{class_doc_param_list_a5859a942a9519097f903c4553055f067}{}\index{Doc\+Param\+List@{Doc\+Param\+List}!direction@{direction}}
+\index{direction@{direction}!Doc\+Param\+List@{Doc\+Param\+List}}
+\subsubsection[{direction() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Doc\+Param\+Sect\+::\+Direction} Doc\+Param\+List\+::direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_param_list_a5859a942a9519097f903c4553055f067}
+\hypertarget{class_doc_param_list_a1f6dd30e8dfbd5078a888c529a229080}{}\index{Doc\+Param\+List@{Doc\+Param\+List}!is\+First@{is\+First}}
+\index{is\+First@{is\+First}!Doc\+Param\+List@{Doc\+Param\+List}}
+\subsubsection[{is\+First() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Doc\+Param\+List\+::is\+First (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_param_list_a1f6dd30e8dfbd5078a888c529a229080}
+\hypertarget{class_doc_param_list_ae5f0f48e689fc0ef6934e8198f76af8f}{}\index{Doc\+Param\+List@{Doc\+Param\+List}!is\+Last@{is\+Last}}
+\index{is\+Last@{is\+Last}!Doc\+Param\+List@{Doc\+Param\+List}}
+\subsubsection[{is\+Last() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Doc\+Param\+List\+::is\+Last (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_param_list_ae5f0f48e689fc0ef6934e8198f76af8f}
+\hypertarget{class_doc_param_list_a52e0a7a0ff48215cd1254cf975613082}{}\index{Doc\+Param\+List@{Doc\+Param\+List}!kind@{kind}}
+\index{kind@{kind}!Doc\+Param\+List@{Doc\+Param\+List}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kind} Doc\+Param\+List\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_param_list_a52e0a7a0ff48215cd1254cf975613082}
+Returns the kind of node. Provides runtime type information 
+
+Implémente \hyperlink{class_doc_node_a92d4aaa169a813ded919aa858024c809}{Doc\+Node}.
+
+\hypertarget{class_doc_param_list_a6b3e3e25859cc2d76b312b988c018d08}{}\index{Doc\+Param\+List@{Doc\+Param\+List}!mark\+First@{mark\+First}}
+\index{mark\+First@{mark\+First}!Doc\+Param\+List@{Doc\+Param\+List}}
+\subsubsection[{mark\+First(bool b=\+T\+R\+U\+E)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Param\+List\+::mark\+First (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{b = {\ttfamily {\bf T\+R\+U\+E}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_param_list_a6b3e3e25859cc2d76b312b988c018d08}
+\hypertarget{class_doc_param_list_a89fc37af294659364193e14680065668}{}\index{Doc\+Param\+List@{Doc\+Param\+List}!mark\+Last@{mark\+Last}}
+\index{mark\+Last@{mark\+Last}!Doc\+Param\+List@{Doc\+Param\+List}}
+\subsubsection[{mark\+Last(bool b=\+T\+R\+U\+E)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Param\+List\+::mark\+Last (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{b = {\ttfamily {\bf T\+R\+U\+E}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_param_list_a89fc37af294659364193e14680065668}
+\hypertarget{class_doc_param_list_a607d79c8a9676bcb301813e5bd098752}{}\index{Doc\+Param\+List@{Doc\+Param\+List}!parameters@{parameters}}
+\index{parameters@{parameters}!Doc\+Param\+List@{Doc\+Param\+List}}
+\subsubsection[{parameters()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Q\+List}$<${\bf Doc\+Node}$>$\& Doc\+Param\+List\+::parameters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_param_list_a607d79c8a9676bcb301813e5bd098752}
+\hypertarget{class_doc_param_list_a1de2caf710c83eeaaf431e2f9b7f22e5}{}\index{Doc\+Param\+List@{Doc\+Param\+List}!param\+Types@{param\+Types}}
+\index{param\+Types@{param\+Types}!Doc\+Param\+List@{Doc\+Param\+List}}
+\subsubsection[{param\+Types()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Q\+List}$<${\bf Doc\+Node}$>$\& Doc\+Param\+List\+::param\+Types (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_param_list_a1de2caf710c83eeaaf431e2f9b7f22e5}
+\hypertarget{class_doc_param_list_a6463538f06117c2e28860e7ff18ce7f7}{}\index{Doc\+Param\+List@{Doc\+Param\+List}!parse@{parse}}
+\index{parse@{parse}!Doc\+Param\+List@{Doc\+Param\+List}}
+\subsubsection[{parse(const Q\+C\+String \&cmd\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Param\+List\+::parse (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{cmd\+Name}
+\end{DoxyParamCaption}
+)}\label{class_doc_param_list_a6463538f06117c2e28860e7ff18ce7f7}
+\hypertarget{class_doc_param_list_a78df8f1bf6623c25c86cec9f6b1388d4}{}\index{Doc\+Param\+List@{Doc\+Param\+List}!parse\+Xml@{parse\+Xml}}
+\index{parse\+Xml@{parse\+Xml}!Doc\+Param\+List@{Doc\+Param\+List}}
+\subsubsection[{parse\+Xml(const Q\+C\+String \&param\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Param\+List\+::parse\+Xml (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{param\+Name}
+\end{DoxyParamCaption}
+)}\label{class_doc_param_list_a78df8f1bf6623c25c86cec9f6b1388d4}
+\hypertarget{class_doc_param_list_a2718c4de761f478aeb9df9d8470a7081}{}\index{Doc\+Param\+List@{Doc\+Param\+List}!type@{type}}
+\index{type@{type}!Doc\+Param\+List@{Doc\+Param\+List}}
+\subsubsection[{type() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Doc\+Param\+Sect\+::\+Type} Doc\+Param\+List\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_param_list_a2718c4de761f478aeb9df9d8470a7081}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{docparser_8h}{docparser.\+h}\item 
+src/\hyperlink{docparser_8cpp}{docparser.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\hypertarget{class_storage_intf}{}\section{Référence de la classe Storage\+Intf}
+\label{class_storage_intf}\index{Storage\+Intf@{Storage\+Intf}}
+
+
+Abstract interface for file based memory storage operations.  
+
+
+
+
+{\ttfamily \#include $<$store.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Storage\+Intf\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_storage_intf}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_storage_intf_a20aa41248a1ea20f9829cce656171bd0}{$\sim$\+Storage\+Intf} ()
+\item 
+virtual int \hyperlink{class_storage_intf_a125b99d1511364f4fe49709feec46bb4}{read} (char $\ast$buf, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} size)=0
+\item 
+virtual int \hyperlink{class_storage_intf_a97b26023c6cf0590423e428947d6febb}{write} (const char $\ast$buf, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} size)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Abstract interface for file based memory storage operations. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_storage_intf_a20aa41248a1ea20f9829cce656171bd0}{}\index{Storage\+Intf@{Storage\+Intf}!````~Storage\+Intf@{$\sim$\+Storage\+Intf}}
+\index{````~Storage\+Intf@{$\sim$\+Storage\+Intf}!Storage\+Intf@{Storage\+Intf}}
+\subsubsection[{$\sim$\+Storage\+Intf()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Storage\+Intf\+::$\sim$\+Storage\+Intf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_storage_intf_a20aa41248a1ea20f9829cce656171bd0}
+Required by gcc 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_storage_intf_a125b99d1511364f4fe49709feec46bb4}{}\index{Storage\+Intf@{Storage\+Intf}!read@{read}}
+\index{read@{read}!Storage\+Intf@{Storage\+Intf}}
+\subsubsection[{read(char $\ast$buf, uint size)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Storage\+Intf\+::read (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buf, }
+\item[{{\bf uint}}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_storage_intf_a125b99d1511364f4fe49709feec46bb4}
+Read {\itshape size} bytes from the store into {\itshape buf}. 
+
+Implémenté dans \hyperlink{class_store_a02df7a98367838e436f8f8b3367016d1}{Store}, et \hyperlink{class_file_storage_ae28163449c4c40730b5e27b75362e22d}{File\+Storage}.
+
+\hypertarget{class_storage_intf_a97b26023c6cf0590423e428947d6febb}{}\index{Storage\+Intf@{Storage\+Intf}!write@{write}}
+\index{write@{write}!Storage\+Intf@{Storage\+Intf}}
+\subsubsection[{write(const char $\ast$buf, uint size)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Storage\+Intf\+::write (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{buf, }
+\item[{{\bf uint}}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_storage_intf_a97b26023c6cf0590423e428947d6febb}
+Write {\itshape size} bytes from {\itshape buf} into the store. 
+
+Implémenté dans \hyperlink{class_store_aec754c74cf190cb55281a923db21194a}{Store}, et \hyperlink{class_file_storage_a9f680051229bda7bca2639e5464bca77}{File\+Storage}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{store_8h}{store.\+h}\end{DoxyCompactItemize}

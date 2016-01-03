@@ -1,0 +1,346 @@
+\hypertarget{class_q_g_array}{}\section{Référence de la classe Q\+G\+Array}
+\label{class_q_g_array}\index{Q\+G\+Array@{Q\+G\+Array}}
+
+
+The \hyperlink{class_q_g_array}{Q\+G\+Array} class is an internal class for implementing the \hyperlink{class_q_array}{Q\+Array} class.  
+
+
+
+
+{\ttfamily \#include $<$qgarray.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Q\+G\+Array\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_g_array}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_q_g_array_1_1array__data}{array\+\_\+data}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_g_array_a340abca11ce20f6c827f453216c4ad4f}{Q\+G\+Array} ()
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_g_array_a2e7994baf52fce803843a886dc76e683}{Q\+G\+Array} (int, int)
+\item 
+\hyperlink{class_q_g_array_add5ddba43d2c6e80bd5465d2e14cfcee}{Q\+G\+Array} (int \hyperlink{class_q_g_array_a669525335ceeda8877e037e9438761ec}{size})
+\item 
+\hyperlink{class_q_g_array_acd319490fff3083fee3764d9b549717b}{Q\+G\+Array} (const \hyperlink{class_q_g_array}{Q\+G\+Array} \&\hyperlink{060__command__switch_8tcl_ab08ae027fc5777bc4f0629f1b60b35db}{a})
+\item 
+virtual \hyperlink{class_q_g_array_a0bf4daf83a5de6243718979f544a7707}{$\sim$\+Q\+G\+Array} ()
+\item 
+\hyperlink{class_q_g_array}{Q\+G\+Array} \& \hyperlink{class_q_g_array_a3714d63f6b4156772f0a0175337c66f7}{operator=} (const \hyperlink{class_q_g_array}{Q\+G\+Array} \&\hyperlink{060__command__switch_8tcl_ab08ae027fc5777bc4f0629f1b60b35db}{a})
+\item 
+virtual void \hyperlink{class_q_g_array_a538bae363739848c456c765a85caea6b}{detach} ()
+\item 
+char $\ast$ \hyperlink{class_q_g_array_a867d588cd6e0deb62206d9df58bbba5e}{data} () const 
+\item 
+\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{class_q_g_array_a4d514437352428878340a96ce0d3aa72}{nrefs} () const 
+\item 
+\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{class_q_g_array_a669525335ceeda8877e037e9438761ec}{size} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_g_array_a034b774a5887e28e9f86a4307900f6a5}{is\+Equal} (const \hyperlink{class_q_g_array}{Q\+G\+Array} \&\hyperlink{060__command__switch_8tcl_ab08ae027fc5777bc4f0629f1b60b35db}{a}) const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_g_array_ace6d58b8d81e8c9d0f99f9229263d6f5}{resize} (\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} newsize)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_g_array_a87c26192ed622a3f58a29f2c5dad455a}{fill} (const char $\ast$\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}, int len, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} sz)
+\item 
+\hyperlink{class_q_g_array}{Q\+G\+Array} \& \hyperlink{class_q_g_array_a03dfa6bc642894060949ca5d2b47fbc6}{assign} (const \hyperlink{class_q_g_array}{Q\+G\+Array} \&\hyperlink{060__command__switch_8tcl_ab08ae027fc5777bc4f0629f1b60b35db}{a})
+\item 
+\hyperlink{class_q_g_array}{Q\+G\+Array} \& \hyperlink{class_q_g_array_a7d8da7677dd8fd32dfe93161837623e8}{assign} (const char $\ast$\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+\hyperlink{class_q_g_array}{Q\+G\+Array} \& \hyperlink{class_q_g_array_a5672ebb3dea896ffb03d23884f2fc5bd}{duplicate} (const \hyperlink{class_q_g_array}{Q\+G\+Array} \&\hyperlink{060__command__switch_8tcl_ab08ae027fc5777bc4f0629f1b60b35db}{a})
+\item 
+\hyperlink{class_q_g_array}{Q\+G\+Array} \& \hyperlink{class_q_g_array_a78ffa6f567157837cdee7c22823781d4}{duplicate} (const char $\ast$\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+void \hyperlink{class_q_g_array_a04a7649e12ce04e3e2e129940663f21a}{store} (const char $\ast$\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+\hyperlink{struct_q_g_array_1_1array__data}{array\+\_\+data} $\ast$ \hyperlink{class_q_g_array_a37b3aada306ae2f3c3d1bcea7b8f11ea}{shared\+Block} () const 
+\item 
+void \hyperlink{class_q_g_array_ad8c072b2bcb9781e54bfbb13a7e813ab}{set\+Shared\+Block} (\hyperlink{struct_q_g_array_1_1array__data}{array\+\_\+data} $\ast$\hyperlink{060__command__switch_8tcl_a15229b450f26d8fa1c10bea4f3279f4d}{p})
+\item 
+\hyperlink{class_q_g_array}{Q\+G\+Array} \& \hyperlink{class_q_g_array_a7920d2528cba207637a47913b33197c3}{set\+Raw\+Data} (const char $\ast$\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+void \hyperlink{class_q_g_array_acd730cd4b1591d65e9398486a6d87faa}{reset\+Raw\+Data} (const char $\ast$\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+int \hyperlink{class_q_g_array_ad563afc839e4c042460ccb0bac70816e}{find} (const char $\ast$\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} index, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} sz) const 
+\item 
+int \hyperlink{class_q_g_array_a684c29897af9b7bd32b7e71b3c5ad2ce}{contains} (const char $\ast$\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} sz) const 
+\item 
+void \hyperlink{class_q_g_array_a92d1332f73e37ca66c34725ae1a7024d}{sort} (\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} sz)
+\item 
+int \hyperlink{class_q_g_array_ae3fc6b36e54a583d185ccf69149d02d6}{bsearch} (const char $\ast$\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} sz) const 
+\item 
+char $\ast$ \hyperlink{class_q_g_array_a4e9cc74c5db66a2d7ae71fb15c024019}{at} (\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} index) const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_g_array_aa2b294d969877807c1ade888bc88fdfd}{set\+Expand} (\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} index, const char $\ast$\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} sz)
+\item 
+virtual \hyperlink{struct_q_g_array_1_1array__data}{array\+\_\+data} $\ast$ \hyperlink{class_q_g_array_a184ba21c4bc4bc3e1370000b8098c227}{new\+Data} ()
+\item 
+virtual void \hyperlink{class_q_g_array_abacce3ed4db7d075d75314cb856e91db}{delete\+Data} (\hyperlink{struct_q_g_array_1_1array__data}{array\+\_\+data} $\ast$\hyperlink{060__command__switch_8tcl_a15229b450f26d8fa1c10bea4f3279f4d}{p})
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_q_g_array_a6e20d98ed3f0cea33e4221e417f1a021}{Q\+Buffer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+The \hyperlink{class_q_g_array}{Q\+G\+Array} class is an internal class for implementing the \hyperlink{class_q_array}{Q\+Array} class. 
+
+\hyperlink{class_q_g_array}{Q\+G\+Array} is a strictly internal class that acts as base class for the \hyperlink{class_q_array}{Q\+Array} template array.
+
+It contains an array of bytes and has no notion of an array element. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_g_array_a340abca11ce20f6c827f453216c4ad4f}{}\index{Q\+G\+Array@{Q\+G\+Array}!Q\+G\+Array@{Q\+G\+Array}}
+\index{Q\+G\+Array@{Q\+G\+Array}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{Q\+G\+Array()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+G\+Array\+::\+Q\+G\+Array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_g_array_a340abca11ce20f6c827f453216c4ad4f}
+\hypertarget{class_q_g_array_a2e7994baf52fce803843a886dc76e683}{}\index{Q\+G\+Array@{Q\+G\+Array}!Q\+G\+Array@{Q\+G\+Array}}
+\index{Q\+G\+Array@{Q\+G\+Array}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{Q\+G\+Array(int, int)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+G\+Array\+::\+Q\+G\+Array (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_array_a2e7994baf52fce803843a886dc76e683}
+\hypertarget{class_q_g_array_add5ddba43d2c6e80bd5465d2e14cfcee}{}\index{Q\+G\+Array@{Q\+G\+Array}!Q\+G\+Array@{Q\+G\+Array}}
+\index{Q\+G\+Array@{Q\+G\+Array}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{Q\+G\+Array(int size)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+G\+Array\+::\+Q\+G\+Array (
+\begin{DoxyParamCaption}
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_array_add5ddba43d2c6e80bd5465d2e14cfcee}
+\hypertarget{class_q_g_array_acd319490fff3083fee3764d9b549717b}{}\index{Q\+G\+Array@{Q\+G\+Array}!Q\+G\+Array@{Q\+G\+Array}}
+\index{Q\+G\+Array@{Q\+G\+Array}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{Q\+G\+Array(const Q\+G\+Array \&a)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+G\+Array\+::\+Q\+G\+Array (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+G\+Array} \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_array_acd319490fff3083fee3764d9b549717b}
+\hypertarget{class_q_g_array_a0bf4daf83a5de6243718979f544a7707}{}\index{Q\+G\+Array@{Q\+G\+Array}!````~Q\+G\+Array@{$\sim$\+Q\+G\+Array}}
+\index{````~Q\+G\+Array@{$\sim$\+Q\+G\+Array}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{$\sim$\+Q\+G\+Array()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+G\+Array\+::$\sim$\+Q\+G\+Array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_q_g_array_a0bf4daf83a5de6243718979f544a7707}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_g_array_a03dfa6bc642894060949ca5d2b47fbc6}{}\index{Q\+G\+Array@{Q\+G\+Array}!assign@{assign}}
+\index{assign@{assign}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{assign(const Q\+G\+Array \&a)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+G\+Array} \& Q\+G\+Array\+::assign (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+G\+Array} \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_array_a03dfa6bc642894060949ca5d2b47fbc6}
+\hypertarget{class_q_g_array_a7d8da7677dd8fd32dfe93161837623e8}{}\index{Q\+G\+Array@{Q\+G\+Array}!assign@{assign}}
+\index{assign@{assign}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{assign(const char $\ast$d, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+G\+Array} \& Q\+G\+Array\+::assign (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{d, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_array_a7d8da7677dd8fd32dfe93161837623e8}
+\hypertarget{class_q_g_array_a4e9cc74c5db66a2d7ae71fb15c024019}{}\index{Q\+G\+Array@{Q\+G\+Array}!at@{at}}
+\index{at@{at}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{at(uint index) const }]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ Q\+G\+Array\+::at (
+\begin{DoxyParamCaption}
+\item[{{\bf uint}}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_q_g_array_a4e9cc74c5db66a2d7ae71fb15c024019}
+\hypertarget{class_q_g_array_ae3fc6b36e54a583d185ccf69149d02d6}{}\index{Q\+G\+Array@{Q\+G\+Array}!bsearch@{bsearch}}
+\index{bsearch@{bsearch}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{bsearch(const char $\ast$d, uint sz) const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+G\+Array\+::bsearch (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{d, }
+\item[{{\bf uint}}]{sz}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_array_ae3fc6b36e54a583d185ccf69149d02d6}
+\hypertarget{class_q_g_array_a684c29897af9b7bd32b7e71b3c5ad2ce}{}\index{Q\+G\+Array@{Q\+G\+Array}!contains@{contains}}
+\index{contains@{contains}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{contains(const char $\ast$d, uint sz) const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+G\+Array\+::contains (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{d, }
+\item[{{\bf uint}}]{sz}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_array_a684c29897af9b7bd32b7e71b3c5ad2ce}
+\hypertarget{class_q_g_array_a867d588cd6e0deb62206d9df58bbba5e}{}\index{Q\+G\+Array@{Q\+G\+Array}!data@{data}}
+\index{data@{data}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{data() const }]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ Q\+G\+Array\+::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_q_g_array_a867d588cd6e0deb62206d9df58bbba5e}
+\hypertarget{class_q_g_array_abacce3ed4db7d075d75314cb856e91db}{}\index{Q\+G\+Array@{Q\+G\+Array}!delete\+Data@{delete\+Data}}
+\index{delete\+Data@{delete\+Data}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{delete\+Data(array\+\_\+data $\ast$p)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+G\+Array\+::delete\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf array\+\_\+data} $\ast$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_q_g_array_abacce3ed4db7d075d75314cb856e91db}
+\hypertarget{class_q_g_array_a538bae363739848c456c765a85caea6b}{}\index{Q\+G\+Array@{Q\+G\+Array}!detach@{detach}}
+\index{detach@{detach}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{detach()}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+G\+Array\+::detach (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_q_g_array_a538bae363739848c456c765a85caea6b}
+
+
+Réimplémentée dans \hyperlink{class_q_array_aed81a36728344a4d944ca2639d21a162}{Q\+Array$<$ type $>$}, \hyperlink{class_q_array_aed81a36728344a4d944ca2639d21a162}{Q\+Array$<$ char $>$}, et \hyperlink{class_q_array_aed81a36728344a4d944ca2639d21a162}{Q\+Array$<$ bool $>$}.
+
+\hypertarget{class_q_g_array_a5672ebb3dea896ffb03d23884f2fc5bd}{}\index{Q\+G\+Array@{Q\+G\+Array}!duplicate@{duplicate}}
+\index{duplicate@{duplicate}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{duplicate(const Q\+G\+Array \&a)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+G\+Array} \& Q\+G\+Array\+::duplicate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+G\+Array} \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_array_a5672ebb3dea896ffb03d23884f2fc5bd}
+\hypertarget{class_q_g_array_a78ffa6f567157837cdee7c22823781d4}{}\index{Q\+G\+Array@{Q\+G\+Array}!duplicate@{duplicate}}
+\index{duplicate@{duplicate}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{duplicate(const char $\ast$d, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+G\+Array} \& Q\+G\+Array\+::duplicate (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{d, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_array_a78ffa6f567157837cdee7c22823781d4}
+\hypertarget{class_q_g_array_a87c26192ed622a3f58a29f2c5dad455a}{}\index{Q\+G\+Array@{Q\+G\+Array}!fill@{fill}}
+\index{fill@{fill}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{fill(const char $\ast$d, int len, uint sz)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+G\+Array\+::fill (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{d, }
+\item[{int}]{len, }
+\item[{{\bf uint}}]{sz}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_array_a87c26192ed622a3f58a29f2c5dad455a}
+\hypertarget{class_q_g_array_ad563afc839e4c042460ccb0bac70816e}{}\index{Q\+G\+Array@{Q\+G\+Array}!find@{find}}
+\index{find@{find}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{find(const char $\ast$d, uint index, uint sz) const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+G\+Array\+::find (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{d, }
+\item[{{\bf uint}}]{index, }
+\item[{{\bf uint}}]{sz}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_array_ad563afc839e4c042460ccb0bac70816e}
+\hypertarget{class_q_g_array_a034b774a5887e28e9f86a4307900f6a5}{}\index{Q\+G\+Array@{Q\+G\+Array}!is\+Equal@{is\+Equal}}
+\index{is\+Equal@{is\+Equal}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{is\+Equal(const Q\+G\+Array \&a) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+G\+Array\+::is\+Equal (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+G\+Array} \&}]{a}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_array_a034b774a5887e28e9f86a4307900f6a5}
+\hypertarget{class_q_g_array_a184ba21c4bc4bc3e1370000b8098c227}{}\index{Q\+G\+Array@{Q\+G\+Array}!new\+Data@{new\+Data}}
+\index{new\+Data@{new\+Data}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{new\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+G\+Array\+::array\+\_\+data} $\ast$ Q\+G\+Array\+::new\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_q_g_array_a184ba21c4bc4bc3e1370000b8098c227}
+\hypertarget{class_q_g_array_a4d514437352428878340a96ce0d3aa72}{}\index{Q\+G\+Array@{Q\+G\+Array}!nrefs@{nrefs}}
+\index{nrefs@{nrefs}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{nrefs() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint} Q\+G\+Array\+::nrefs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_q_g_array_a4d514437352428878340a96ce0d3aa72}
+\hypertarget{class_q_g_array_a3714d63f6b4156772f0a0175337c66f7}{}\index{Q\+G\+Array@{Q\+G\+Array}!operator=@{operator=}}
+\index{operator=@{operator=}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{operator=(const Q\+G\+Array \&a)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+G\+Array} \& Q\+G\+Array\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+G\+Array} \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_q_g_array_a3714d63f6b4156772f0a0175337c66f7}
+\hypertarget{class_q_g_array_acd730cd4b1591d65e9398486a6d87faa}{}\index{Q\+G\+Array@{Q\+G\+Array}!reset\+Raw\+Data@{reset\+Raw\+Data}}
+\index{reset\+Raw\+Data@{reset\+Raw\+Data}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{reset\+Raw\+Data(const char $\ast$d, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+G\+Array\+::reset\+Raw\+Data (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{d, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_array_acd730cd4b1591d65e9398486a6d87faa}
+\hypertarget{class_q_g_array_ace6d58b8d81e8c9d0f99f9229263d6f5}{}\index{Q\+G\+Array@{Q\+G\+Array}!resize@{resize}}
+\index{resize@{resize}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{resize(uint newsize)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+G\+Array\+::resize (
+\begin{DoxyParamCaption}
+\item[{{\bf uint}}]{newsize}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_array_ace6d58b8d81e8c9d0f99f9229263d6f5}
+\hypertarget{class_q_g_array_aa2b294d969877807c1ade888bc88fdfd}{}\index{Q\+G\+Array@{Q\+G\+Array}!set\+Expand@{set\+Expand}}
+\index{set\+Expand@{set\+Expand}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{set\+Expand(uint index, const char $\ast$d, uint sz)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+G\+Array\+::set\+Expand (
+\begin{DoxyParamCaption}
+\item[{{\bf uint}}]{index, }
+\item[{const char $\ast$}]{d, }
+\item[{{\bf uint}}]{sz}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_array_aa2b294d969877807c1ade888bc88fdfd}
+\hypertarget{class_q_g_array_a7920d2528cba207637a47913b33197c3}{}\index{Q\+G\+Array@{Q\+G\+Array}!set\+Raw\+Data@{set\+Raw\+Data}}
+\index{set\+Raw\+Data@{set\+Raw\+Data}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{set\+Raw\+Data(const char $\ast$d, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+G\+Array} \& Q\+G\+Array\+::set\+Raw\+Data (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{d, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_array_a7920d2528cba207637a47913b33197c3}
+\hypertarget{class_q_g_array_ad8c072b2bcb9781e54bfbb13a7e813ab}{}\index{Q\+G\+Array@{Q\+G\+Array}!set\+Shared\+Block@{set\+Shared\+Block}}
+\index{set\+Shared\+Block@{set\+Shared\+Block}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{set\+Shared\+Block(array\+\_\+data $\ast$p)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+G\+Array\+::set\+Shared\+Block (
+\begin{DoxyParamCaption}
+\item[{{\bf array\+\_\+data} $\ast$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_q_g_array_ad8c072b2bcb9781e54bfbb13a7e813ab}
+\hypertarget{class_q_g_array_a37b3aada306ae2f3c3d1bcea7b8f11ea}{}\index{Q\+G\+Array@{Q\+G\+Array}!shared\+Block@{shared\+Block}}
+\index{shared\+Block@{shared\+Block}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{shared\+Block() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf array\+\_\+data} $\ast$ Q\+G\+Array\+::shared\+Block (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_q_g_array_a37b3aada306ae2f3c3d1bcea7b8f11ea}
+\hypertarget{class_q_g_array_a669525335ceeda8877e037e9438761ec}{}\index{Q\+G\+Array@{Q\+G\+Array}!size@{size}}
+\index{size@{size}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{size() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint} Q\+G\+Array\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_q_g_array_a669525335ceeda8877e037e9438761ec}
+\hypertarget{class_q_g_array_a92d1332f73e37ca66c34725ae1a7024d}{}\index{Q\+G\+Array@{Q\+G\+Array}!sort@{sort}}
+\index{sort@{sort}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{sort(uint sz)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+G\+Array\+::sort (
+\begin{DoxyParamCaption}
+\item[{{\bf uint}}]{sz}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_array_a92d1332f73e37ca66c34725ae1a7024d}
+\hypertarget{class_q_g_array_a04a7649e12ce04e3e2e129940663f21a}{}\index{Q\+G\+Array@{Q\+G\+Array}!store@{store}}
+\index{store@{store}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{store(const char $\ast$d, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+G\+Array\+::store (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{d, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_array_a04a7649e12ce04e3e2e129940663f21a}
+
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_q_g_array_a6e20d98ed3f0cea33e4221e417f1a021}{}\index{Q\+G\+Array@{Q\+G\+Array}!Q\+Buffer@{Q\+Buffer}}
+\index{Q\+Buffer@{Q\+Buffer}!Q\+G\+Array@{Q\+G\+Array}}
+\subsubsection[{Q\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Q\+Buffer}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_q_g_array_a6e20d98ed3f0cea33e4221e417f1a021}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qgarray_8h}{qgarray.\+h}\item 
+qtools/\hyperlink{qgarray_8cpp}{qgarray.\+cpp}\end{DoxyCompactItemize}

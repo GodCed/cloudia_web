@@ -1,0 +1,917 @@
+\hypertarget{class_q_text_stream}{}\section{Référence de la classe Q\+Text\+Stream}
+\label{class_q_text_stream}\index{Q\+Text\+Stream@{Q\+Text\+Stream}}
+
+
+The \hyperlink{class_q_text_stream}{Q\+Text\+Stream} class provides basic functions for reading and writing text using a \hyperlink{class_q_i_o_device}{Q\+I\+O\+Device}.  
+
+
+
+
+{\ttfamily \#include $<$qtextstream.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Q\+Text\+Stream\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_text_stream}
+\end{center}
+\end{figure}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817}{Encoding} \{ \\*
+\hyperlink{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817af864ff2c54f3b5a5d387c317dbed45f7}{Locale}, 
+\hyperlink{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817acacd3ffc287679db58a4ccce2803aa73}{Latin1}, 
+\hyperlink{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817aa1a5f612fdb8595465fae1e42f5ff562}{Unicode}, 
+\hyperlink{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817a1a3e42dda2a43474f2f9d197f65b334b}{Unicode\+Network\+Order}, 
+\\*
+\hyperlink{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817a46043f54b1541f42a39fc1f8564061da}{Unicode\+Reverse}, 
+\hyperlink{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817a618e5ec1e486c6e8c499f76489b14bdc}{Raw\+Unicode}, 
+\hyperlink{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817a11235ad08ccd939829114f135367cda5}{Unicode\+U\+T\+F8}
+ \}
+\item 
+enum \{ \\*
+\hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdaa2e40617a3aedd72408230f0c1d7827f}{skipws} = 0x0001, 
+\hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdabba365c2a6c58ad9df5e9443a5e18af7}{left} = 0x0002, 
+\hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda766ae97bc47754f839cccd1040b288af}{right} = 0x0004, 
+\hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda1da33e776defe513ebbaef475383591b}{internal} = 0x0008, 
+\\*
+\hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda522c0aff51070556ffcde9b7664743d4}{bin} = 0x0010, 
+\hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdaaae446d943e330aa999c7e6b80240c19}{oct} = 0x0020, 
+\hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdadb3124814a4d120725541629e69f605d}{dec} = 0x0040, 
+\hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda26b652c69f47687937232329578b450b}{hex} = 0x0080, 
+\\*
+\hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda778a511682bbba57a858137953fdf274}{showbase} = 0x0100, 
+\hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda45dc3c6a984859222264e73950ee524f}{showpoint} = 0x0200, 
+\hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda29deeab2080f8dd1eb72ad6ffe05aa46}{uppercase} = 0x0400, 
+\hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda2417ab987b342c51e18193989765182c}{showpos} = 0x0800, 
+\\*
+\hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda3a93eea48718621e8f43d48968394584}{scientific} = 0x1000, 
+\hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdadaaa76770e0065770aaaebb974f22f23}{fixed} = 0x2000
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_q_text_stream_ad06dc1f99476aed01fa8a822e871dc44}{set\+Encoding} (\hyperlink{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817}{Encoding})
+\item 
+void \hyperlink{class_q_text_stream_a18bdd4ae41cd9b37ec06827658fbf447}{set\+Codec} (\hyperlink{class_q_text_codec}{Q\+Text\+Codec} $\ast$)
+\item 
+\hyperlink{class_q_text_stream_aa7bbd71ba288daceba843f54f0c306a4}{Q\+Text\+Stream} ()
+\item 
+\hyperlink{class_q_text_stream_a431c964c498560a2459d55808ccaff89}{Q\+Text\+Stream} (\hyperlink{class_q_i_o_device}{Q\+I\+O\+Device} $\ast$)
+\item 
+\hyperlink{class_q_text_stream_a7abe6ca8fe34120632550a88c6f67cc5}{Q\+Text\+Stream} (\hyperlink{class_q_string}{Q\+String} $\ast$, int mode)
+\item 
+\hyperlink{class_q_text_stream_a917a19a834861178ce1a7c57ee37ec41}{Q\+Text\+Stream} (\hyperlink{class_q_string}{Q\+String} \&, int mode)
+\item 
+\hyperlink{class_q_text_stream_a00d490a0530b4bcd9554b9316815d35a}{Q\+Text\+Stream} (\hyperlink{qcstring_8h_ad6a390648110655c217fe072d45fbcf5}{Q\+Byte\+Array}, int mode)
+\item 
+\hyperlink{class_q_text_stream_a53439eda88c78b200b675b7909343b10}{Q\+Text\+Stream} (F\+I\+L\+E $\ast$, int mode)
+\item 
+virtual \hyperlink{class_q_text_stream_a5c3a2ab73dceff949ec36db41df64944}{$\sim$\+Q\+Text\+Stream} ()
+\item 
+\hyperlink{class_q_i_o_device}{Q\+I\+O\+Device} $\ast$ \hyperlink{class_q_text_stream_ada5cbf6e2417038be62066f4f530569d}{device} () const 
+\item 
+void \hyperlink{class_q_text_stream_a20bb0f4064d19330d4ed6bb56299fba7}{set\+Device} (\hyperlink{class_q_i_o_device}{Q\+I\+O\+Device} $\ast$)
+\item 
+void \hyperlink{class_q_text_stream_a6d8aeebd7f4b1cc9f2dce27f6a0d9bd9}{unset\+Device} ()
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_text_stream_acf0077e95c95ce7a91bf106cef99e0fb}{at\+End} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_text_stream_a9cfc696427e99904d1c384d977118a2e}{eof} () const 
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a4d06cd74325e6420974f01156bdfc52a}{operator$>$$>$} (\hyperlink{class_q_char}{Q\+Char} \&)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a71c417d8225d836e27b1854751f5ff5a}{operator$>$$>$} (char \&)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a075cf521ee2f67e28c246cba2aa50102}{operator$>$$>$} (signed short \&)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a5066c61f0e08736f3b99fffd02041a1f}{operator$>$$>$} (unsigned short \&)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a220a232b218047c458f9e0a445b76831}{operator$>$$>$} (signed int \&)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_ae591ec4f654abd8450583b3a60a5015a}{operator$>$$>$} (unsigned int \&)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_aecfdad0a90cd7b4093b08a9d032d8563}{operator$>$$>$} (signed long \&)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a68deb1875213bffc9334eb83c73210c2}{operator$>$$>$} (unsigned long \&)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_abd9ed695feef50e0dc72f0f366b5a4d8}{operator$>$$>$} (float \&)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a7c671bbb530d2187da84d51141b540cd}{operator$>$$>$} (double \&)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a52cffa4947a97d83d13aae06575820f4}{operator$>$$>$} (char $\ast$)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a5f007c3a4d7d63a260048cf73ba19acc}{operator$>$$>$} (\hyperlink{class_q_string}{Q\+String} \&)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_aea7cbf9e70a47fa15f3091fb26d7263d}{operator$>$$>$} (\hyperlink{class_q_c_string}{Q\+C\+String} \&)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a8382325a2a4bd29dc51bf49d8756fc66}{operator$<$$<$} (\hyperlink{class_q_char}{Q\+Char})
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_aa4ca816ce1b8a1cb25e3d9dfc1d7c4df}{operator$<$$<$} (char)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a09fa4090716c81548496f5f344c61a61}{operator$<$$<$} (signed short)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a678a728c8ea87eacb59c32f58bf33d9a}{operator$<$$<$} (unsigned short)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_af4d8f73d592e7dbf1009381c3795bc0b}{operator$<$$<$} (signed int)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_aff4f8bd3513a371838b5ec20be5a5889}{operator$<$$<$} (unsigned int)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a35f51b32c584d1e703e1127c8273510d}{operator$<$$<$} (signed long)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a867f2838d846bc4472ddb5a48f254885}{operator$<$$<$} (unsigned long)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a96b4cb3f67559c1e464f3b03c83a1d67}{operator$<$$<$} (float)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a1e5488fd0334c9fe8200fb1727e3a72e}{operator$<$$<$} (double)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a7c02cd21c226d98bfb1dc18851f500a9}{operator$<$$<$} (const char $\ast$)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a71fe2107025a308c699e666522a83b8f}{operator$<$$<$} (const \hyperlink{class_q_string}{Q\+String} \&)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a8fca116d77fdc9359d44e1d3c4aade70}{operator$<$$<$} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a2ec702def0e5ee2c6167cc7accfb8119}{operator$<$$<$} (void $\ast$)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_a5320c9f2058d72a264aa2152cc69852e}{read\+Raw\+Bytes} (char $\ast$, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \& \hyperlink{class_q_text_stream_ac92bd94165a60152f12905deed163189}{write\+Raw\+Bytes} (const char $\ast$, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_text_stream_a0bed0242d7c3f17289df88fdecad6afa}{read\+Line} ()
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_text_stream_a1c74ba05c6e63e88303852e07dbbcaa3}{read} ()
+\item 
+void \hyperlink{class_q_text_stream_a0c8656a473fe2b6e26c459e5840e7d07}{skip\+White\+Space} ()
+\item 
+int \hyperlink{class_q_text_stream_afb14e17ed4b7e85454c8f504aad14bc7}{flags} () const 
+\item 
+int \hyperlink{class_q_text_stream_a280a244baaf87d825ec50bd83c14488c}{flags} (int \hyperlink{060__command__switch_8tcl_af6830d2c644b45088ea8f1f74a46b778}{f})
+\item 
+int \hyperlink{class_q_text_stream_adb71ee168e670b470bcbc547b994c5df}{setf} (int bits)
+\item 
+int \hyperlink{class_q_text_stream_a9d039c1d26bfd52f47b4595dc30a628a}{setf} (int bits, int mask)
+\item 
+int \hyperlink{class_q_text_stream_a7f7cb71e79749c7d13217dec5599e627}{unsetf} (int bits)
+\item 
+void \hyperlink{class_q_text_stream_ac92d855fc3fa8b5d1c7421e2a0654a83}{reset} ()
+\item 
+int \hyperlink{class_q_text_stream_aab450b6d533e723a75a8c9adfc2e7863}{width} () const 
+\item 
+int \hyperlink{class_q_text_stream_a359d4bd2600d1169fb5c667e23c03f76}{width} (int)
+\item 
+int \hyperlink{class_q_text_stream_a0d8566b54172c57afcf4baf557cb522d}{fill} () const 
+\item 
+int \hyperlink{class_q_text_stream_a36c4e45d5090252b3a0e335fd98f66d1}{fill} (int)
+\item 
+int \hyperlink{class_q_text_stream_a8cb6b4bf5470850884d68b44b188d74d}{precision} () const 
+\item 
+int \hyperlink{class_q_text_stream_afed018ad42135061a188a45d265516ad}{precision} (int)
+\end{DoxyCompactItemize}
+\subsection*{Attributs publics statiques}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_q_text_stream_af3f86710e9a559feb59d4b5e08017bed}{basefield} = \hyperlink{qtextstream_8cpp_a813392cc8b6b68aa3fbaf4862efe4d0c}{I\+\_\+\+B\+A\+S\+E\+\_\+\+M\+A\+S\+K}
+\item 
+static const int \hyperlink{class_q_text_stream_a22f60cd97e89709d1f32e9d2555d85a9}{adjustfield}
+\item 
+static const int \hyperlink{class_q_text_stream_a01b7c551fcbc8389b7dffa2348a57066}{floatfield}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+The \hyperlink{class_q_text_stream}{Q\+Text\+Stream} class provides basic functions for reading and writing text using a \hyperlink{class_q_i_o_device}{Q\+I\+O\+Device}. 
+
+endl  bin  oct  dec  hex  flush  ws
+
+The text stream class has a functional interface that is very similar to that of the standard C++ iostream class. The difference between iostream and \hyperlink{class_q_text_stream}{Q\+Text\+Stream} is that our stream operates on a \hyperlink{class_q_i_o_device}{Q\+I\+O\+Device}, which is easily subclassed, while iostream operates on F\+I\+L\+E $\ast$ pointers, which can not be subclassed.
+
+Qt provides several global functions similar to the ones in iostream\+: 
+\begin{DoxyItemize}
+\item {\ttfamily bin} sets the \hyperlink{class_q_text_stream}{Q\+Text\+Stream} to read/write binary numbers 
+\item {\ttfamily oct} sets the \hyperlink{class_q_text_stream}{Q\+Text\+Stream} to read/write octal numbers 
+\item {\ttfamily dec} sets the \hyperlink{class_q_text_stream}{Q\+Text\+Stream} to read/write decimal numbers 
+\item {\ttfamily hex} sets the \hyperlink{class_q_text_stream}{Q\+Text\+Stream} to read/write hexadecimal numbers 
+\item {\ttfamily endl} forces a line break 
+\item {\ttfamily flush} forces the \hyperlink{class_q_i_o_device}{Q\+I\+O\+Device} to flush any buffered data 
+\item {\ttfamily ws} eats any available white space (on input) 
+\item {\ttfamily reset} resets the \hyperlink{class_q_text_stream}{Q\+Text\+Stream} to its default mode (see \hyperlink{class_q_text_stream_ac92d855fc3fa8b5d1c7421e2a0654a83}{reset()}). 
+\end{DoxyItemize}
+
+\begin{DoxyWarning}{Avertissement}
+By default, \hyperlink{class_q_text_stream}{Q\+Text\+Stream} will automatically detect whether integers in the stream are in decimal, octal, hexadecimal or binary format when reading from the stream. In particular, a leading \textquotesingle{}0\textquotesingle{} signifies octal, ie. the sequence \char`\"{}0100\char`\"{} will be interpreted as 64.
+\end{DoxyWarning}
+The \hyperlink{class_q_text_stream}{Q\+Text\+Stream} class reads and writes text and it is not appropriate for dealing with binary data (but \hyperlink{class_q_data_stream}{Q\+Data\+Stream} is).
+
+By default output of Unicode text (ie. \hyperlink{class_q_string}{Q\+String}) is done using the local 8-\/bit encoding. This can be changed using the \hyperlink{class_q_text_stream_ad06dc1f99476aed01fa8a822e871dc44}{set\+Encoding()} method. For input, the \hyperlink{class_q_text_stream}{Q\+Text\+Stream} will auto-\/detect standard Unicode \char`\"{}byte order marked\char`\"{} text files, but otherwise the local 8-\/bit encoding is used.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fd}{}\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fd}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{skipws@{skipws}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!skipws@{skipws}}\item[{\em 
+\hypertarget{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdaa2e40617a3aedd72408230f0c1d7827f}{}skipws\label{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdaa2e40617a3aedd72408230f0c1d7827f}
+}]\index{left@{left}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!left@{left}}\item[{\em 
+\hypertarget{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdabba365c2a6c58ad9df5e9443a5e18af7}{}left\label{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdabba365c2a6c58ad9df5e9443a5e18af7}
+}]\index{right@{right}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!right@{right}}\item[{\em 
+\hypertarget{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda766ae97bc47754f839cccd1040b288af}{}right\label{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda766ae97bc47754f839cccd1040b288af}
+}]\index{internal@{internal}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!internal@{internal}}\item[{\em 
+\hypertarget{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda1da33e776defe513ebbaef475383591b}{}internal\label{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda1da33e776defe513ebbaef475383591b}
+}]\index{bin@{bin}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!bin@{bin}}\item[{\em 
+\hypertarget{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda522c0aff51070556ffcde9b7664743d4}{}bin\label{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda522c0aff51070556ffcde9b7664743d4}
+}]\index{oct@{oct}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!oct@{oct}}\item[{\em 
+\hypertarget{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdaaae446d943e330aa999c7e6b80240c19}{}oct\label{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdaaae446d943e330aa999c7e6b80240c19}
+}]\index{dec@{dec}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!dec@{dec}}\item[{\em 
+\hypertarget{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdadb3124814a4d120725541629e69f605d}{}dec\label{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdadb3124814a4d120725541629e69f605d}
+}]\index{hex@{hex}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!hex@{hex}}\item[{\em 
+\hypertarget{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda26b652c69f47687937232329578b450b}{}hex\label{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda26b652c69f47687937232329578b450b}
+}]\index{showbase@{showbase}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!showbase@{showbase}}\item[{\em 
+\hypertarget{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda778a511682bbba57a858137953fdf274}{}showbase\label{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda778a511682bbba57a858137953fdf274}
+}]\index{showpoint@{showpoint}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!showpoint@{showpoint}}\item[{\em 
+\hypertarget{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda45dc3c6a984859222264e73950ee524f}{}showpoint\label{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda45dc3c6a984859222264e73950ee524f}
+}]\index{uppercase@{uppercase}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!uppercase@{uppercase}}\item[{\em 
+\hypertarget{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda29deeab2080f8dd1eb72ad6ffe05aa46}{}uppercase\label{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda29deeab2080f8dd1eb72ad6ffe05aa46}
+}]\index{showpos@{showpos}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!showpos@{showpos}}\item[{\em 
+\hypertarget{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda2417ab987b342c51e18193989765182c}{}showpos\label{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda2417ab987b342c51e18193989765182c}
+}]\index{scientific@{scientific}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!scientific@{scientific}}\item[{\em 
+\hypertarget{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda3a93eea48718621e8f43d48968394584}{}scientific\label{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda3a93eea48718621e8f43d48968394584}
+}]\index{fixed@{fixed}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!fixed@{fixed}}\item[{\em 
+\hypertarget{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdadaaa76770e0065770aaaebb974f22f23}{}fixed\label{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdadaaa76770e0065770aaaebb974f22f23}
+}]\end{description}
+\end{Desc}
+\hypertarget{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Encoding@{Encoding}}
+\index{Encoding@{Encoding}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{Encoding}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Q\+Text\+Stream\+::\+Encoding}}\label{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Locale@{Locale}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Locale@{Locale}}\item[{\em 
+\hypertarget{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817af864ff2c54f3b5a5d387c317dbed45f7}{}Locale\label{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817af864ff2c54f3b5a5d387c317dbed45f7}
+}]\index{Latin1@{Latin1}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Latin1@{Latin1}}\item[{\em 
+\hypertarget{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817acacd3ffc287679db58a4ccce2803aa73}{}Latin1\label{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817acacd3ffc287679db58a4ccce2803aa73}
+}]\index{Unicode@{Unicode}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Unicode@{Unicode}}\item[{\em 
+\hypertarget{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817aa1a5f612fdb8595465fae1e42f5ff562}{}Unicode\label{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817aa1a5f612fdb8595465fae1e42f5ff562}
+}]\index{Unicode\+Network\+Order@{Unicode\+Network\+Order}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Unicode\+Network\+Order@{Unicode\+Network\+Order}}\item[{\em 
+\hypertarget{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817a1a3e42dda2a43474f2f9d197f65b334b}{}Unicode\+Network\+Order\label{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817a1a3e42dda2a43474f2f9d197f65b334b}
+}]\index{Unicode\+Reverse@{Unicode\+Reverse}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Unicode\+Reverse@{Unicode\+Reverse}}\item[{\em 
+\hypertarget{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817a46043f54b1541f42a39fc1f8564061da}{}Unicode\+Reverse\label{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817a46043f54b1541f42a39fc1f8564061da}
+}]\index{Raw\+Unicode@{Raw\+Unicode}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Raw\+Unicode@{Raw\+Unicode}}\item[{\em 
+\hypertarget{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817a618e5ec1e486c6e8c499f76489b14bdc}{}Raw\+Unicode\label{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817a618e5ec1e486c6e8c499f76489b14bdc}
+}]\index{Unicode\+U\+T\+F8@{Unicode\+U\+T\+F8}!Q\+Text\+Stream@{Q\+Text\+Stream}}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Unicode\+U\+T\+F8@{Unicode\+U\+T\+F8}}\item[{\em 
+\hypertarget{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817a11235ad08ccd939829114f135367cda5}{}Unicode\+U\+T\+F8\label{class_q_text_stream_aeaa17ac9a577eb636e8fd337115da817a11235ad08ccd939829114f135367cda5}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_text_stream_aa7bbd71ba288daceba843f54f0c306a4}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{Q\+Text\+Stream()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Text\+Stream\+::\+Q\+Text\+Stream (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_aa7bbd71ba288daceba843f54f0c306a4}
+Constructs a data stream that has no I\+O device. \hypertarget{class_q_text_stream_a431c964c498560a2459d55808ccaff89}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{Q\+Text\+Stream(\+Q\+I\+O\+Device $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Text\+Stream\+::\+Q\+Text\+Stream (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+I\+O\+Device} $\ast$}]{iod}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a431c964c498560a2459d55808ccaff89}
+Constructs a text stream that uses the I\+O device {\itshape iod}. \hypertarget{class_q_text_stream_a7abe6ca8fe34120632550a88c6f67cc5}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{Q\+Text\+Stream(\+Q\+String $\ast$, int mode)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Text\+Stream\+::\+Q\+Text\+Stream (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+String} $\ast$}]{str, }
+\item[{int}]{filemode}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a7abe6ca8fe34120632550a88c6f67cc5}
+Constructs a text stream that operates on a Unicode \hyperlink{class_q_string}{Q\+String} through an internal device.
+
+If you set an encoding or codec with \hyperlink{class_q_text_stream_ad06dc1f99476aed01fa8a822e871dc44}{set\+Encoding()} or \hyperlink{class_q_text_stream_a18bdd4ae41cd9b37ec06827658fbf447}{set\+Codec()}, this setting is ignored for text streams that operate on \hyperlink{class_q_string}{Q\+String}.
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_string}{QString} str;
+\hyperlink{class_q_text_stream}{QTextStream} ts( &str, \hyperlink{qiodevice_8h_aee87f60968e118b038a637b83ccc4017}{IO\_WriteOnly} );
+ts << \textcolor{stringliteral}{"pi = "} << 3.14;            \textcolor{comment}{// str == "pi = 3.14"}
+\end{DoxyCode}
+
+
+Writing data to the text stream will modify the contents of the string. The string will be expanded when data is written beyond the end of the string. Note that the string will not be truncated\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_string}{QString} str = \textcolor{stringliteral}{"pi = 3.14"};
+\hyperlink{class_q_text_stream}{QTextStream} ts( &str, \hyperlink{qiodevice_8h_aee87f60968e118b038a637b83ccc4017}{IO\_WriteOnly} );
+ts <<  \textcolor{stringliteral}{"2+2 = "} << 2+2;       \textcolor{comment}{// str == "2+2 = 414"}
+\end{DoxyCode}
+
+
+Note that since \hyperlink{class_q_string}{Q\+String} is Unicode, you should not use \hyperlink{class_q_text_stream_a5320c9f2058d72a264aa2152cc69852e}{read\+Raw\+Bytes()} or \hyperlink{class_q_text_stream_ac92bd94165a60152f12905deed163189}{write\+Raw\+Bytes()} on such a stream. \hypertarget{class_q_text_stream_a917a19a834861178ce1a7c57ee37ec41}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{Q\+Text\+Stream(\+Q\+String \&, int mode)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Text\+Stream\+::\+Q\+Text\+Stream (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+String} \&}]{str, }
+\item[{int}]{filemode}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a917a19a834861178ce1a7c57ee37ec41}
+This constructor is equivalent to the constructor taking a Q\+String$\ast$ parameter. \hypertarget{class_q_text_stream_a00d490a0530b4bcd9554b9316815d35a}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{Q\+Text\+Stream(\+Q\+Byte\+Array, int mode)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Text\+Stream\+::\+Q\+Text\+Stream (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Byte\+Array}}]{a, }
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a00d490a0530b4bcd9554b9316815d35a}
+Constructs a text stream that operates on a byte array through an internal \hyperlink{class_q_buffer}{Q\+Buffer} device.
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_array}{QByteArray} array;
+\hyperlink{class_q_text_stream}{QTextStream} ts( array, \hyperlink{qiodevice_8h_aee87f60968e118b038a637b83ccc4017}{IO\_WriteOnly} );
+ts << \textcolor{stringliteral}{"pi = "} << 3.14 << \textcolor{charliteral}{'\(\backslash\)0'};        \textcolor{comment}{// array == "pi = 3.14"}
+\end{DoxyCode}
+
+
+Writing data to the text stream will modify the contents of the array. The array will be expanded when data is written beyond the end of the string.
+
+Same example, using a \hyperlink{class_q_buffer}{Q\+Buffer}\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_array}{QByteArray} array;
+\hyperlink{class_q_buffer}{QBuffer} buf( array );
+buf.open( \hyperlink{qiodevice_8h_aee87f60968e118b038a637b83ccc4017}{IO\_WriteOnly} );
+\hyperlink{class_q_text_stream}{QTextStream} ts( &buf );
+ts << \textcolor{stringliteral}{"pi = "} << 3.14 << \textcolor{charliteral}{'\(\backslash\)0'};        \textcolor{comment}{// array == "pi = 3.14"}
+buf.close();
+\end{DoxyCode}
+ \hypertarget{class_q_text_stream_a53439eda88c78b200b675b7909343b10}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\index{Q\+Text\+Stream@{Q\+Text\+Stream}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{Q\+Text\+Stream(\+F\+I\+L\+E $\ast$, int mode)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Text\+Stream\+::\+Q\+Text\+Stream (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{fh, }
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a53439eda88c78b200b675b7909343b10}
+Constructs a text stream that operates on an existing file handle {\itshape fh} through an internal \hyperlink{class_q_file}{Q\+File} device.
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_text_stream}{QTextStream} cout( stdout, \hyperlink{qiodevice_8h_aee87f60968e118b038a637b83ccc4017}{IO\_WriteOnly} );
+\hyperlink{class_q_text_stream}{QTextStream} cin ( stdin,  \hyperlink{qiodevice_8h_ab5766c5e147f3dfced5890741f22063a}{IO\_ReadOnly} );
+\hyperlink{class_q_text_stream}{QTextStream} cerr( stderr, \hyperlink{qiodevice_8h_aee87f60968e118b038a637b83ccc4017}{IO\_WriteOnly} );
+\end{DoxyCode}
+ \hypertarget{class_q_text_stream_a5c3a2ab73dceff949ec36db41df64944}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!````~Q\+Text\+Stream@{$\sim$\+Q\+Text\+Stream}}
+\index{````~Q\+Text\+Stream@{$\sim$\+Q\+Text\+Stream}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{$\sim$\+Q\+Text\+Stream()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Text\+Stream\+::$\sim$\+Q\+Text\+Stream (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_text_stream_a5c3a2ab73dceff949ec36db41df64944}
+Destructs the text stream.
+
+The destructor does not affect the current I\+O device. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_text_stream_acf0077e95c95ce7a91bf106cef99e0fb}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!at\+End@{at\+End}}
+\index{at\+End@{at\+End}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{at\+End() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Text\+Stream\+::at\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_stream_acf0077e95c95ce7a91bf106cef99e0fb}
+Returns T\+R\+U\+E if the I\+O device has reached the end position (end of stream or file) or if there is no I\+O device set.
+
+Returns F\+A\+L\+S\+E if the current position of the read/write head of the I\+O device is somewhere before the end position.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_i_o_device_a857ac5294bd88a1308e4c998af81f490}{Q\+I\+O\+Device\+::at\+End()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_text_stream_ada5cbf6e2417038be62066f4f530569d}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!device@{device}}
+\index{device@{device}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{device() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+I\+O\+Device} $\ast$ Q\+Text\+Stream\+::device (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_stream_ada5cbf6e2417038be62066f4f530569d}
+Returns the I\+O device currently set. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_text_stream_a20bb0f4064d19330d4ed6bb56299fba7}{set\+Device()}, \hyperlink{class_q_text_stream_a6d8aeebd7f4b1cc9f2dce27f6a0d9bd9}{unset\+Device()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_text_stream_a9cfc696427e99904d1c384d977118a2e}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!eof@{eof}}
+\index{eof@{eof}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{eof() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Text\+Stream\+::eof (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_stream_a9cfc696427e99904d1c384d977118a2e}
+This function has been renamed to \hyperlink{class_q_text_stream_acf0077e95c95ce7a91bf106cef99e0fb}{at\+End()}.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_i_o_device_a857ac5294bd88a1308e4c998af81f490}{Q\+I\+O\+Device\+::at\+End()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_text_stream_a0d8566b54172c57afcf4baf557cb522d}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!fill@{fill}}
+\index{fill@{fill}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{fill() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Text\+Stream\+::fill (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_stream_a0d8566b54172c57afcf4baf557cb522d}
+Returns the fill character. The default value is \textquotesingle{} \textquotesingle{} (space). \hypertarget{class_q_text_stream_a36c4e45d5090252b3a0e335fd98f66d1}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!fill@{fill}}
+\index{fill@{fill}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{fill(int)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Text\+Stream\+::fill (
+\begin{DoxyParamCaption}
+\item[{int}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_stream_a36c4e45d5090252b3a0e335fd98f66d1}
+Sets the fill character to {\itshape f}. Returns the previous fill character. \hypertarget{class_q_text_stream_afb14e17ed4b7e85454c8f504aad14bc7}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!flags@{flags}}
+\index{flags@{flags}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{flags() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Text\+Stream\+::flags (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_stream_afb14e17ed4b7e85454c8f504aad14bc7}
+Returns the current stream flags. The default value is 0.
+
+The meaning of the flags are\+: 
+\begin{DoxyItemize}
+\item {\itshape skipws} -\/ Not currently used -\/ whitespace always skipped 
+\item {\itshape left} -\/ Numeric fields are left-\/aligned 
+\item {\itshape right} -\/ Not currently used (by default numerics are right aligned) 
+\item {\itshape internal} -\/ Put any padding spaces between +/-\/ and value 
+\item {\itshape bin} -\/ Output {\itshape and} input only in binary 
+\item {\itshape oct} -\/ Output {\itshape and} input only in octal 
+\item {\itshape dec} -\/ Output {\itshape and} input only in decimal 
+\item {\itshape hex} -\/ Output {\itshape and} input only in hexadecimal 
+\item {\itshape showbase} -\/ Annotate numeric outputs with 0b, 0, or 0x if in {\itshape bin}, {\itshape oct}, or {\itshape hex} format 
+\item {\itshape showpoint} -\/ Not currently used 
+\item {\itshape uppercase} -\/ Use 0\+B and 0\+X rather than 0b and 0x 
+\item {\itshape showpos} -\/ Show + for positive numeric values 
+\item {\itshape scientific} -\/ Use scientific notation for floating point values 
+\item {\itshape fixed} -\/ Use fixed-\/point notation for floating point values 
+\end{DoxyItemize}
+
+Note that unless {\itshape bin}, {\itshape oct}, {\itshape dec}, or {\itshape hex} is set, the input base is octal if the value starts with 0, hexadecimal if it starts with 0x, binary if the value starts with 0b, and decimal otherwise.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_text_stream_adb71ee168e670b470bcbc547b994c5df}{setf()}, \hyperlink{class_q_text_stream_a7f7cb71e79749c7d13217dec5599e627}{unsetf()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_text_stream_a280a244baaf87d825ec50bd83c14488c}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!flags@{flags}}
+\index{flags@{flags}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{flags(int f)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Text\+Stream\+::flags (
+\begin{DoxyParamCaption}
+\item[{int}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_stream_a280a244baaf87d825ec50bd83c14488c}
+Sets the stream flags to {\itshape f}. Returns the previous stream flags.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_text_stream_adb71ee168e670b470bcbc547b994c5df}{setf()}, \hyperlink{class_q_text_stream_a7f7cb71e79749c7d13217dec5599e627}{unsetf()}, \hyperlink{class_q_text_stream_afb14e17ed4b7e85454c8f504aad14bc7}{flags()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_text_stream_a8382325a2a4bd29dc51bf49d8756fc66}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$<$$<$(\+Q\+Char)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Char}}]{c}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a8382325a2a4bd29dc51bf49d8756fc66}
+Writes a {\ttfamily char} to the stream and returns a reference to the stream.
+
+The character {\itshape c} is assumed to be Latin1 encoded independent of the Encoding set for the \hyperlink{class_q_text_stream}{Q\+Text\+Stream}. \hypertarget{class_q_text_stream_aa4ca816ce1b8a1cb25e3d9dfc1d7c4df}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$<$$<$(char)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_aa4ca816ce1b8a1cb25e3d9dfc1d7c4df}
+Writes a {\ttfamily char} to the stream and returns a reference to the stream. \hypertarget{class_q_text_stream_a09fa4090716c81548496f5f344c61a61}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$<$$<$(signed short)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{signed short}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a09fa4090716c81548496f5f344c61a61}
+Writes a {\ttfamily short} integer to the stream and returns a reference to the stream. \hypertarget{class_q_text_stream_a678a728c8ea87eacb59c32f58bf33d9a}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$<$$<$(unsigned short)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a678a728c8ea87eacb59c32f58bf33d9a}
+Writes an {\ttfamily unsigned} {\ttfamily short} integer to the stream and returns a reference to the stream. \hypertarget{class_q_text_stream_af4d8f73d592e7dbf1009381c3795bc0b}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$<$$<$(signed int)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{signed int}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_af4d8f73d592e7dbf1009381c3795bc0b}
+Writes an {\ttfamily int} to the stream and returns a reference to the stream. \hypertarget{class_q_text_stream_aff4f8bd3513a371838b5ec20be5a5889}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$<$$<$(unsigned int)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_aff4f8bd3513a371838b5ec20be5a5889}
+Writes an {\ttfamily unsigned} {\ttfamily int} to the stream and returns a reference to the stream. \hypertarget{class_q_text_stream_a35f51b32c584d1e703e1127c8273510d}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$<$$<$(signed long)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{signed long}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a35f51b32c584d1e703e1127c8273510d}
+Writes a {\ttfamily long} {\ttfamily int} to the stream and returns a reference to the stream. \hypertarget{class_q_text_stream_a867f2838d846bc4472ddb5a48f254885}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$<$$<$(unsigned long)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a867f2838d846bc4472ddb5a48f254885}
+Writes an {\ttfamily unsigned} {\ttfamily long} {\ttfamily int} to the stream and returns a reference to the stream. \hypertarget{class_q_text_stream_a96b4cb3f67559c1e464f3b03c83a1d67}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$<$$<$(float)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{float}]{f}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a96b4cb3f67559c1e464f3b03c83a1d67}
+Writes a {\ttfamily float} to the stream and returns a reference to the stream. \hypertarget{class_q_text_stream_a1e5488fd0334c9fe8200fb1727e3a72e}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$<$$<$(double)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{double}]{f}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a1e5488fd0334c9fe8200fb1727e3a72e}
+Writes a {\ttfamily double} to the stream and returns a reference to the stream. \hypertarget{class_q_text_stream_a7c02cd21c226d98bfb1dc18851f500a9}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$<$$<$(const char $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a7c02cd21c226d98bfb1dc18851f500a9}
+Writes a string to the stream and returns a reference to the stream.
+
+The string {\itshape s} is assumed to be Latin1 encoded independent of the Encoding set for the \hyperlink{class_q_text_stream}{Q\+Text\+Stream}. \hypertarget{class_q_text_stream_a71fe2107025a308c699e666522a83b8f}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$<$$<$(const Q\+String \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{s}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a71fe2107025a308c699e666522a83b8f}
+Writes {\itshape s} to the stream and returns a reference to the stream. \hypertarget{class_q_text_stream_a8fca116d77fdc9359d44e1d3c4aade70}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$<$$<$(const Q\+C\+String \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a8fca116d77fdc9359d44e1d3c4aade70}
+Writes {\itshape s} to the stream and returns a reference to the stream.
+
+The string {\itshape s} is assumed to be Latin1 encoded independent of the Encoding set for the \hyperlink{class_q_text_stream}{Q\+Text\+Stream}. \hypertarget{class_q_text_stream_a2ec702def0e5ee2c6167cc7accfb8119}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$<$$<$(void $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a2ec702def0e5ee2c6167cc7accfb8119}
+Writes a pointer to the stream and returns a reference to the stream.
+
+The {\itshape ptr} is output as an unsigned long hexadecimal integer. \hypertarget{class_q_text_stream_a4d06cd74325e6420974f01156bdfc52a}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$>$$>$(\+Q\+Char \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Char} \&}]{c}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a4d06cd74325e6420974f01156bdfc52a}
+Reads a {\ttfamily char} from the stream and returns a reference to the stream. Note that whitespace is {\itshape not} skipped. \hypertarget{class_q_text_stream_a71c417d8225d836e27b1854751f5ff5a}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$>$$>$(char \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{char \&}]{c}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a71c417d8225d836e27b1854751f5ff5a}
+Reads a {\ttfamily char} from the stream and returns a reference to the stream. Note that whitespace is skipped. \hypertarget{class_q_text_stream_a075cf521ee2f67e28c246cba2aa50102}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$>$$>$(signed short \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{signed short \&}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a075cf521ee2f67e28c246cba2aa50102}
+Reads a signed {\ttfamily short} integer from the stream and returns a reference to the stream. See \hyperlink{class_q_text_stream_afb14e17ed4b7e85454c8f504aad14bc7}{flags()} for an explanation of expected input format. \hypertarget{class_q_text_stream_a5066c61f0e08736f3b99fffd02041a1f}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$>$$>$(unsigned short \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{unsigned short \&}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a5066c61f0e08736f3b99fffd02041a1f}
+Reads an unsigned {\ttfamily short} integer from the stream and returns a reference to the stream. See \hyperlink{class_q_text_stream_afb14e17ed4b7e85454c8f504aad14bc7}{flags()} for an explanation of expected input format. \hypertarget{class_q_text_stream_a220a232b218047c458f9e0a445b76831}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$>$$>$(signed int \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{signed int \&}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a220a232b218047c458f9e0a445b76831}
+Reads a signed {\ttfamily int} from the stream and returns a reference to the stream. See \hyperlink{class_q_text_stream_afb14e17ed4b7e85454c8f504aad14bc7}{flags()} for an explanation of expected input format. \hypertarget{class_q_text_stream_ae591ec4f654abd8450583b3a60a5015a}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$>$$>$(unsigned int \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{unsigned int \&}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_ae591ec4f654abd8450583b3a60a5015a}
+Reads an unsigned {\ttfamily int} from the stream and returns a reference to the stream. See \hyperlink{class_q_text_stream_afb14e17ed4b7e85454c8f504aad14bc7}{flags()} for an explanation of expected input format. \hypertarget{class_q_text_stream_aecfdad0a90cd7b4093b08a9d032d8563}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$>$$>$(signed long \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{signed long \&}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_aecfdad0a90cd7b4093b08a9d032d8563}
+Reads a signed {\ttfamily long} int from the stream and returns a reference to the stream. See \hyperlink{class_q_text_stream_afb14e17ed4b7e85454c8f504aad14bc7}{flags()} for an explanation of expected input format. \hypertarget{class_q_text_stream_a68deb1875213bffc9334eb83c73210c2}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$>$$>$(unsigned long \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{unsigned long \&}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a68deb1875213bffc9334eb83c73210c2}
+Reads an unsigned {\ttfamily long} int from the stream and returns a reference to the stream. See \hyperlink{class_q_text_stream_afb14e17ed4b7e85454c8f504aad14bc7}{flags()} for an explanation of expected input format. \hypertarget{class_q_text_stream_abd9ed695feef50e0dc72f0f366b5a4d8}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$>$$>$(float \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{float \&}]{f}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_abd9ed695feef50e0dc72f0f366b5a4d8}
+Reads a {\ttfamily float} from the stream and returns a reference to the stream. See \hyperlink{class_q_text_stream_afb14e17ed4b7e85454c8f504aad14bc7}{flags()} for an explanation of expected input format. \hypertarget{class_q_text_stream_a7c671bbb530d2187da84d51141b540cd}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$>$$>$(double \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{double \&}]{f}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a7c671bbb530d2187da84d51141b540cd}
+Reads a {\ttfamily double} from the stream and returns a reference to the stream. See \hyperlink{class_q_text_stream_afb14e17ed4b7e85454c8f504aad14bc7}{flags()} for an explanation of expected input format. \hypertarget{class_q_text_stream_a52cffa4947a97d83d13aae06575820f4}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$>$$>$(char $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a52cffa4947a97d83d13aae06575820f4}
+Reads a word from the stream and returns a reference to the stream. \hypertarget{class_q_text_stream_a5f007c3a4d7d63a260048cf73ba19acc}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$>$$>$(\+Q\+String \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+String} \&}]{str}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a5f007c3a4d7d63a260048cf73ba19acc}
+Reads a word from the stream and returns a reference to the stream. \hypertarget{class_q_text_stream_aea7cbf9e70a47fa15f3091fb26d7263d}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{operator$>$$>$(\+Q\+C\+String \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+C\+String} \&}]{str}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_aea7cbf9e70a47fa15f3091fb26d7263d}
+Reads a word from the stream and returns a reference to the stream. \hypertarget{class_q_text_stream_a8cb6b4bf5470850884d68b44b188d74d}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!precision@{precision}}
+\index{precision@{precision}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{precision() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Text\+Stream\+::precision (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_stream_a8cb6b4bf5470850884d68b44b188d74d}
+Returns the precision. The default value is 6. \hypertarget{class_q_text_stream_afed018ad42135061a188a45d265516ad}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!precision@{precision}}
+\index{precision@{precision}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{precision(int)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Text\+Stream\+::precision (
+\begin{DoxyParamCaption}
+\item[{int}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_stream_afed018ad42135061a188a45d265516ad}
+Sets the precision to {\itshape p}. Returns the previous precision setting. \hypertarget{class_q_text_stream_a1c74ba05c6e63e88303852e07dbbcaa3}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!read@{read}}
+\index{read@{read}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{read()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Text\+Stream\+::read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a1c74ba05c6e63e88303852e07dbbcaa3}
+Reads the entire stream and returns a string containing the text.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_i_o_device_a4dc865ffcb5b7896ff8f9a1d828e4c0e}{Q\+I\+O\+Device\+::read\+Line()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_text_stream_a0bed0242d7c3f17289df88fdecad6afa}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!read\+Line@{read\+Line}}
+\index{read\+Line@{read\+Line}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{read\+Line()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Text\+Stream\+::read\+Line (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a0bed0242d7c3f17289df88fdecad6afa}
+Reads a line from the stream and returns a string containing the text.
+
+The returned string does not contain any trailing newline or carriage return. Note that this is different from \hyperlink{class_q_i_o_device_a4dc865ffcb5b7896ff8f9a1d828e4c0e}{Q\+I\+O\+Device\+::read\+Line()}, which does not strip the newline at the end of the line.
+
+On E\+O\+F you will get a \hyperlink{class_q_string}{Q\+String} that is null. On reading an empty line the returned \hyperlink{class_q_string}{Q\+String} is empty but not null.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_i_o_device_a4dc865ffcb5b7896ff8f9a1d828e4c0e}{Q\+I\+O\+Device\+::read\+Line()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_text_stream_a5320c9f2058d72a264aa2152cc69852e}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!read\+Raw\+Bytes@{read\+Raw\+Bytes}}
+\index{read\+Raw\+Bytes@{read\+Raw\+Bytes}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{read\+Raw\+Bytes(char $\ast$, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::read\+Raw\+Bytes (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a5320c9f2058d72a264aa2152cc69852e}
+Reads {\itshape len} bytes from the stream into {\itshape e} s and returns a reference to the stream.
+
+The buffer {\itshape s} must be preallocated.
+
+Note that no encoding is done by this function.
+
+\begin{DoxyWarning}{Avertissement}
+The behaviour of this function is undefined unless the stream\textquotesingle{}s encoding is set to Unicode or Latin1.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_i_o_device_a71f10647e4bd98141f45362b9a06983a}{Q\+I\+O\+Device\+::read\+Block()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_text_stream_ac92d855fc3fa8b5d1c7421e2a0654a83}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!reset@{reset}}
+\index{reset@{reset}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{reset()}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Text\+Stream\+::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_ac92d855fc3fa8b5d1c7421e2a0654a83}
+Resets the text stream.
+
+
+\begin{DoxyItemize}
+\item All flags are set to 0. 
+\item The field width is set to 0. 
+\item The fill character is set to \textquotesingle{} \textquotesingle{} (space). 
+\item The precision is set to 6. 
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_text_stream_adb71ee168e670b470bcbc547b994c5df}{setf()}, \hyperlink{class_q_text_stream_aab450b6d533e723a75a8c9adfc2e7863}{width()}, \hyperlink{class_q_text_stream_a0d8566b54172c57afcf4baf557cb522d}{fill()}, \hyperlink{class_q_text_stream_a8cb6b4bf5470850884d68b44b188d74d}{precision()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_text_stream_a18bdd4ae41cd9b37ec06827658fbf447}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!set\+Codec@{set\+Codec}}
+\index{set\+Codec@{set\+Codec}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{set\+Codec(\+Q\+Text\+Codec $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Text\+Stream\+::set\+Codec (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Text\+Codec} $\ast$}]{codec}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a18bdd4ae41cd9b37ec06827658fbf447}
+Sets the codec for this stream to {\itshape codec}. Will not try to autodetect Unicode.
+
+Note that this function should be called before any data is read to/written from the stream.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_text_stream_ad06dc1f99476aed01fa8a822e871dc44}{set\+Encoding()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_text_stream_a20bb0f4064d19330d4ed6bb56299fba7}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!set\+Device@{set\+Device}}
+\index{set\+Device@{set\+Device}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{set\+Device(\+Q\+I\+O\+Device $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Text\+Stream\+::set\+Device (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+I\+O\+Device} $\ast$}]{iod}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a20bb0f4064d19330d4ed6bb56299fba7}
+Sets the I\+O device to {\itshape iod}. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_text_stream_ada5cbf6e2417038be62066f4f530569d}{device()}, \hyperlink{class_q_text_stream_a6d8aeebd7f4b1cc9f2dce27f6a0d9bd9}{unset\+Device()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_text_stream_ad06dc1f99476aed01fa8a822e871dc44}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!set\+Encoding@{set\+Encoding}}
+\index{set\+Encoding@{set\+Encoding}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{set\+Encoding(\+Encoding)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Text\+Stream\+::set\+Encoding (
+\begin{DoxyParamCaption}
+\item[{{\bf Encoding}}]{e}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_ad06dc1f99476aed01fa8a822e871dc44}
+Sets the encoding of this stream to {\itshape e}, where {\itshape e} is one of\+: 
+\begin{DoxyItemize}
+\item {\ttfamily Locale} Using local file format (Latin1 if locale is not set), but autodetecting Unicode(utf16) on input. 
+\item {\ttfamily Unicode} Using Unicode(utf16) for input and output. Output will be written in the order most efficient for the current platform (i.\+e. the order used internally in \hyperlink{class_q_string}{Q\+String}). 
+\item {\ttfamily Unicode\+U\+T\+F8} Using Unicode(utf8) for input and output. If you use it for input it will autodetect utf16 and use it instead of utf8. 
+\item {\ttfamily Latin1} I\+S\+O-\/8859-\/1. Will not autodetect utf16. 
+\item {\ttfamily Unicode\+Network\+Order} Using network order Unicode(utf16) for input and output. Useful when reading Unicode data that does not start with the byte order marker. 
+\item {\ttfamily Unicode\+Reverse} Using reverse network order Unicode(utf16) for input and output. Useful when reading Unicode data that does not start with the byte order marker, or writing data that should be read by buggy Windows applications. 
+\item {\ttfamily Raw\+Unicode} Like Unicode, but does not write the byte order marker, nor does it autodetect the byte order. Only useful when writing to non-\/persistent storage used by a single process. 
+\end{DoxyItemize}
+
+{\ttfamily Locale} and all Unicode encodings, except {\ttfamily Raw\+Unicode}, will look at the first two bytes in a input stream to determine the byte order. The initial byte order marker will be stripped off before data is read.
+
+Note that this function should be called before any data is read to/written from the stream. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_text_stream_a18bdd4ae41cd9b37ec06827658fbf447}{set\+Codec()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_text_stream_adb71ee168e670b470bcbc547b994c5df}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!setf@{setf}}
+\index{setf@{setf}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{setf(int bits)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Text\+Stream\+::setf (
+\begin{DoxyParamCaption}
+\item[{int}]{bits}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_stream_adb71ee168e670b470bcbc547b994c5df}
+Sets the stream flag bits {\itshape bits}. Returns the previous stream flags.
+
+Equivalent to {\ttfamily flags( \hyperlink{class_q_text_stream_afb14e17ed4b7e85454c8f504aad14bc7}{flags()} $\vert$ bits )}.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_text_stream_adb71ee168e670b470bcbc547b994c5df}{setf()}, \hyperlink{class_q_text_stream_a7f7cb71e79749c7d13217dec5599e627}{unsetf()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_text_stream_a9d039c1d26bfd52f47b4595dc30a628a}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!setf@{setf}}
+\index{setf@{setf}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{setf(int bits, int mask)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Text\+Stream\+::setf (
+\begin{DoxyParamCaption}
+\item[{int}]{bits, }
+\item[{int}]{mask}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_stream_a9d039c1d26bfd52f47b4595dc30a628a}
+Sets the stream flag bits {\itshape bits} with a bit mask {\itshape mask}. Returns the previous stream flags.
+
+Equivalent to {\ttfamily flags( (\hyperlink{class_q_text_stream_afb14e17ed4b7e85454c8f504aad14bc7}{flags()} \& $\sim$mask) $\vert$ (bits \& mask) )}.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_text_stream_adb71ee168e670b470bcbc547b994c5df}{setf()}, \hyperlink{class_q_text_stream_a7f7cb71e79749c7d13217dec5599e627}{unsetf()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_text_stream_a0c8656a473fe2b6e26c459e5840e7d07}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!skip\+White\+Space@{skip\+White\+Space}}
+\index{skip\+White\+Space@{skip\+White\+Space}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{skip\+White\+Space()}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Text\+Stream\+::skip\+White\+Space (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a0c8656a473fe2b6e26c459e5840e7d07}
+Positions the read pointer at the first non-\/whitespace character. \hypertarget{class_q_text_stream_a6d8aeebd7f4b1cc9f2dce27f6a0d9bd9}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!unset\+Device@{unset\+Device}}
+\index{unset\+Device@{unset\+Device}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{unset\+Device()}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Text\+Stream\+::unset\+Device (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_a6d8aeebd7f4b1cc9f2dce27f6a0d9bd9}
+Unsets the I\+O device. Equivalent to set\+Device( 0 ). \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_text_stream_ada5cbf6e2417038be62066f4f530569d}{device()}, \hyperlink{class_q_text_stream_a20bb0f4064d19330d4ed6bb56299fba7}{set\+Device()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_text_stream_a7f7cb71e79749c7d13217dec5599e627}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!unsetf@{unsetf}}
+\index{unsetf@{unsetf}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{unsetf(int bits)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Text\+Stream\+::unsetf (
+\begin{DoxyParamCaption}
+\item[{int}]{bits}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_stream_a7f7cb71e79749c7d13217dec5599e627}
+Clears the stream flag bits {\itshape bits}. Returns the previous stream flags.
+
+Equivalent to {\ttfamily flags( \hyperlink{class_q_text_stream_afb14e17ed4b7e85454c8f504aad14bc7}{flags()} \& $\sim$mask )}.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_text_stream_adb71ee168e670b470bcbc547b994c5df}{setf()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_text_stream_aab450b6d533e723a75a8c9adfc2e7863}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!width@{width}}
+\index{width@{width}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{width() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Text\+Stream\+::width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_stream_aab450b6d533e723a75a8c9adfc2e7863}
+Returns the field width. The default value is 0. \hypertarget{class_q_text_stream_a359d4bd2600d1169fb5c667e23c03f76}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!width@{width}}
+\index{width@{width}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{width(int)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Text\+Stream\+::width (
+\begin{DoxyParamCaption}
+\item[{int}]{w}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_stream_a359d4bd2600d1169fb5c667e23c03f76}
+Sets the field width to {\itshape w}. Returns the previous field width. \hypertarget{class_q_text_stream_ac92bd94165a60152f12905deed163189}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!write\+Raw\+Bytes@{write\+Raw\+Bytes}}
+\index{write\+Raw\+Bytes@{write\+Raw\+Bytes}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{write\+Raw\+Bytes(const char $\ast$, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Text\+Stream} \& Q\+Text\+Stream\+::write\+Raw\+Bytes (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stream_ac92bd94165a60152f12905deed163189}
+Writes the {\itshape len} bytes from {\itshape s} to the stream and returns a reference to the stream.
+
+Note that no encoding is done by this function.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_i_o_device_a5d937df1bde2f956872dd54e077807d1}{Q\+I\+O\+Device\+::write\+Block()} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_q_text_stream_a22f60cd97e89709d1f32e9d2555d85a9}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!adjustfield@{adjustfield}}
+\index{adjustfield@{adjustfield}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{adjustfield}]{\setlength{\rightskip}{0pt plus 5cm}const int Q\+Text\+Stream\+::adjustfield\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_text_stream_a22f60cd97e89709d1f32e9d2555d85a9}
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}
+= ( \hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdabba365c2a6c58ad9df5e9443a5e18af7}{QTextStream::left} |
+                       \hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda766ae97bc47754f839cccd1040b288af}{QTextStream::right} |
+                       \hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda1da33e776defe513ebbaef475383591b}{QTextStream::internal} )
+\end{DoxyCode}
+\hypertarget{class_q_text_stream_af3f86710e9a559feb59d4b5e08017bed}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!basefield@{basefield}}
+\index{basefield@{basefield}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{basefield}]{\setlength{\rightskip}{0pt plus 5cm}const int Q\+Text\+Stream\+::basefield = {\bf I\+\_\+\+B\+A\+S\+E\+\_\+\+M\+A\+S\+K}\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_text_stream_af3f86710e9a559feb59d4b5e08017bed}
+\hypertarget{class_q_text_stream_a01b7c551fcbc8389b7dffa2348a57066}{}\index{Q\+Text\+Stream@{Q\+Text\+Stream}!floatfield@{floatfield}}
+\index{floatfield@{floatfield}!Q\+Text\+Stream@{Q\+Text\+Stream}}
+\subsubsection[{floatfield}]{\setlength{\rightskip}{0pt plus 5cm}const int Q\+Text\+Stream\+::floatfield\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_text_stream_a01b7c551fcbc8389b7dffa2348a57066}
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}
+= ( \hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fda3a93eea48718621e8f43d48968394584}{QTextStream::scientific} |
+                       \hyperlink{class_q_text_stream_acec251f58a9b0a3a44e51f11459489fdadaaa76770e0065770aaaebb974f22f23}{QTextStream::fixed} )
+\end{DoxyCode}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qtextstream_8h}{qtextstream.\+h}\item 
+qtools/\hyperlink{qtextstream_8cpp}{qtextstream.\+cpp}\end{DoxyCompactItemize}

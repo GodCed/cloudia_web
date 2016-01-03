@@ -1,0 +1,137 @@
+\hypertarget{class_child_node_handler}{}\section{Référence de la classe Child\+Node\+Handler}
+\label{class_child_node_handler}\index{Child\+Node\+Handler@{Child\+Node\+Handler}}
+
+
+{\ttfamily \#include $<$graphhandler.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Child\+Node\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.355932cm]{class_child_node_handler}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_child_node_handler_ab09cef5eb1b68692b52e79c80026596f}{Child\+Node\+Handler} (\hyperlink{class_i_base_handler}{I\+Base\+Handler} $\ast$parent, \hyperlink{class_graph_handler}{Graph\+Handler} $\ast$gh)
+\item 
+virtual \hyperlink{class_child_node_handler_a06a51dcc7763caf3730a0e0a16de9ff3}{$\sim$\+Child\+Node\+Handler} ()
+\item 
+void \hyperlink{class_child_node_handler_a37c31310f83099c2e499571dedd84bc8}{start\+Child\+Node} (const \hyperlink{class_q_xml_attributes}{Q\+Xml\+Attributes} \&attrib)
+\item 
+void \hyperlink{class_child_node_handler_a4ff67af9ddcfe64aeceb34ded13f7752}{end\+Child\+Node} ()
+\item 
+void \hyperlink{class_child_node_handler_ae6f1e090610d905f6ddd751fdb4f3605}{start\+Edge\+Label} (const \hyperlink{class_q_xml_attributes}{Q\+Xml\+Attributes} \&attrib)
+\item 
+virtual \hyperlink{class_i_node}{I\+Node} $\ast$ \hyperlink{class_child_node_handler_a8fb178201a00642734b1e00b503ce357}{node} () const 
+\item 
+virtual \hyperlink{class_i_child_node_a8f1206e7dd6aba7e62a7e50e2edf8ee2}{Node\+Relation} \hyperlink{class_child_node_handler_a6fa350fcbc6294a988535e8a9eebb22a}{relation} () const 
+\item 
+virtual const \hyperlink{class_i_string}{I\+String} $\ast$ \hyperlink{class_child_node_handler_a506ac9c2f30e4749c73243da5c1d68be}{relation\+String} () const 
+\item 
+virtual \hyperlink{class_i_edge_label_iterator}{I\+Edge\+Label\+Iterator} $\ast$ \hyperlink{class_child_node_handler_a1d70693a347b95219ab076810a837c7e}{edge\+Labels} () const 
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_child_node_handler_af04914e6743dfa65bd97548d5db241fc}{Edge\+Label\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_child_node_handler_ab09cef5eb1b68692b52e79c80026596f}{}\index{Child\+Node\+Handler@{Child\+Node\+Handler}!Child\+Node\+Handler@{Child\+Node\+Handler}}
+\index{Child\+Node\+Handler@{Child\+Node\+Handler}!Child\+Node\+Handler@{Child\+Node\+Handler}}
+\subsubsection[{Child\+Node\+Handler(\+I\+Base\+Handler $\ast$parent, Graph\+Handler $\ast$gh)}]{\setlength{\rightskip}{0pt plus 5cm}Child\+Node\+Handler\+::\+Child\+Node\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Base\+Handler} $\ast$}]{parent, }
+\item[{{\bf Graph\+Handler} $\ast$}]{gh}
+\end{DoxyParamCaption}
+)}\label{class_child_node_handler_ab09cef5eb1b68692b52e79c80026596f}
+\hypertarget{class_child_node_handler_a06a51dcc7763caf3730a0e0a16de9ff3}{}\index{Child\+Node\+Handler@{Child\+Node\+Handler}!````~Child\+Node\+Handler@{$\sim$\+Child\+Node\+Handler}}
+\index{````~Child\+Node\+Handler@{$\sim$\+Child\+Node\+Handler}!Child\+Node\+Handler@{Child\+Node\+Handler}}
+\subsubsection[{$\sim$\+Child\+Node\+Handler()}]{\setlength{\rightskip}{0pt plus 5cm}Child\+Node\+Handler\+::$\sim$\+Child\+Node\+Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_child_node_handler_a06a51dcc7763caf3730a0e0a16de9ff3}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_child_node_handler_a1d70693a347b95219ab076810a837c7e}{}\index{Child\+Node\+Handler@{Child\+Node\+Handler}!edge\+Labels@{edge\+Labels}}
+\index{edge\+Labels@{edge\+Labels}!Child\+Node\+Handler@{Child\+Node\+Handler}}
+\subsubsection[{edge\+Labels() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Edge\+Label\+Iterator} $\ast$ Child\+Node\+Handler\+::edge\+Labels (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_child_node_handler_a1d70693a347b95219ab076810a837c7e}
+
+
+Implémente \hyperlink{class_i_child_node_acbb0bf7a5c914b47274f08e67b41df4b}{I\+Child\+Node}.
+
+\hypertarget{class_child_node_handler_a4ff67af9ddcfe64aeceb34ded13f7752}{}\index{Child\+Node\+Handler@{Child\+Node\+Handler}!end\+Child\+Node@{end\+Child\+Node}}
+\index{end\+Child\+Node@{end\+Child\+Node}!Child\+Node\+Handler@{Child\+Node\+Handler}}
+\subsubsection[{end\+Child\+Node()}]{\setlength{\rightskip}{0pt plus 5cm}void Child\+Node\+Handler\+::end\+Child\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_child_node_handler_a4ff67af9ddcfe64aeceb34ded13f7752}
+\hypertarget{class_child_node_handler_a8fb178201a00642734b1e00b503ce357}{}\index{Child\+Node\+Handler@{Child\+Node\+Handler}!node@{node}}
+\index{node@{node}!Child\+Node\+Handler@{Child\+Node\+Handler}}
+\subsubsection[{node() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Node} $\ast$ Child\+Node\+Handler\+::node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_child_node_handler_a8fb178201a00642734b1e00b503ce357}
+
+
+Implémente \hyperlink{class_i_child_node_a99671a1a6f939eb3c6da1b91e37e8d21}{I\+Child\+Node}.
+
+\hypertarget{class_child_node_handler_a6fa350fcbc6294a988535e8a9eebb22a}{}\index{Child\+Node\+Handler@{Child\+Node\+Handler}!relation@{relation}}
+\index{relation@{relation}!Child\+Node\+Handler@{Child\+Node\+Handler}}
+\subsubsection[{relation() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Node\+Relation} Child\+Node\+Handler\+::relation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_child_node_handler_a6fa350fcbc6294a988535e8a9eebb22a}
+
+
+Implémente \hyperlink{class_i_child_node_a46683ceccc19788ad9b04e5f5a2d08bd}{I\+Child\+Node}.
+
+\hypertarget{class_child_node_handler_a506ac9c2f30e4749c73243da5c1d68be}{}\index{Child\+Node\+Handler@{Child\+Node\+Handler}!relation\+String@{relation\+String}}
+\index{relation\+String@{relation\+String}!Child\+Node\+Handler@{Child\+Node\+Handler}}
+\subsubsection[{relation\+String() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf I\+String}$\ast$ Child\+Node\+Handler\+::relation\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_child_node_handler_a506ac9c2f30e4749c73243da5c1d68be}
+
+
+Implémente \hyperlink{class_i_child_node_a8504bdd5fc100371c3b00bb560779122}{I\+Child\+Node}.
+
+\hypertarget{class_child_node_handler_a37c31310f83099c2e499571dedd84bc8}{}\index{Child\+Node\+Handler@{Child\+Node\+Handler}!start\+Child\+Node@{start\+Child\+Node}}
+\index{start\+Child\+Node@{start\+Child\+Node}!Child\+Node\+Handler@{Child\+Node\+Handler}}
+\subsubsection[{start\+Child\+Node(const Q\+Xml\+Attributes \&attrib)}]{\setlength{\rightskip}{0pt plus 5cm}void Child\+Node\+Handler\+::start\+Child\+Node (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Xml\+Attributes} \&}]{attrib}
+\end{DoxyParamCaption}
+)}\label{class_child_node_handler_a37c31310f83099c2e499571dedd84bc8}
+\hypertarget{class_child_node_handler_ae6f1e090610d905f6ddd751fdb4f3605}{}\index{Child\+Node\+Handler@{Child\+Node\+Handler}!start\+Edge\+Label@{start\+Edge\+Label}}
+\index{start\+Edge\+Label@{start\+Edge\+Label}!Child\+Node\+Handler@{Child\+Node\+Handler}}
+\subsubsection[{start\+Edge\+Label(const Q\+Xml\+Attributes \&attrib)}]{\setlength{\rightskip}{0pt plus 5cm}void Child\+Node\+Handler\+::start\+Edge\+Label (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Xml\+Attributes} \&}]{attrib}
+\end{DoxyParamCaption}
+)}\label{class_child_node_handler_ae6f1e090610d905f6ddd751fdb4f3605}
+
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_child_node_handler_af04914e6743dfa65bd97548d5db241fc}{}\index{Child\+Node\+Handler@{Child\+Node\+Handler}!Edge\+Label\+Iterator@{Edge\+Label\+Iterator}}
+\index{Edge\+Label\+Iterator@{Edge\+Label\+Iterator}!Child\+Node\+Handler@{Child\+Node\+Handler}}
+\subsubsection[{Edge\+Label\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Edge\+Label\+Iterator}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_child_node_handler_af04914e6743dfa65bd97548d5db241fc}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+addon/doxmlparser/src/\hyperlink{graphhandler_8h}{graphhandler.\+h}\item 
+addon/doxmlparser/src/\hyperlink{graphhandler_8cpp}{graphhandler.\+cpp}\end{DoxyCompactItemize}

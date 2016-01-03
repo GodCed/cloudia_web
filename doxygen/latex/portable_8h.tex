@@ -1,0 +1,251 @@
+\hypertarget{portable_8h}{}\section{Référence du fichier src/portable.h}
+\label{portable_8h}\index{src/portable.\+h@{src/portable.\+h}}
+
+
+Portable versions of functions that are platform dependent.  
+
+
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$qglobal.\+h$>$}\\*
+\subsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef off\+\_\+t \hyperlink{portable_8h_a25423a5b429a3ee0610315d93938bd0b}{portable\+\_\+off\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{portable_8h_ab1446c4224056df1eaff8f4123f55fff}{portable\+\_\+system} (const char $\ast$\hyperlink{tclscanner_8cpp_ad732c0c7a8bcc3ecf8c7c360b382740d}{command}, const char $\ast$args, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} command\+Has\+Console=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E})
+\item 
+\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{portable_8h_a59f752704c51b3369512e011cb37e821}{portable\+\_\+pid} ()
+\item 
+const char $\ast$ \hyperlink{portable_8h_a52392b2bf51d0780fc3a7f0e62ab66fa}{portable\+\_\+getenv} (const char $\ast$variable)
+\item 
+void \hyperlink{portable_8h_ae4248edc1676c7fee1b27b35b1a02167}{portable\+\_\+setenv} (const char $\ast$variable, const char $\ast$value)
+\item 
+void \hyperlink{portable_8h_a21d2e3a5826400ea3fb385de160a4273}{portable\+\_\+unsetenv} (const char $\ast$variable)
+\item 
+\hyperlink{portable_8h_a25423a5b429a3ee0610315d93938bd0b}{portable\+\_\+off\+\_\+t} \hyperlink{portable_8h_aacd3bfcb8cf704f1a88ef85378f2e3ba}{portable\+\_\+fseek} (F\+I\+L\+E $\ast$\hyperlink{060__command__switch_8tcl_af6830d2c644b45088ea8f1f74a46b778}{f}, \hyperlink{portable_8h_a25423a5b429a3ee0610315d93938bd0b}{portable\+\_\+off\+\_\+t} offset, int whence)
+\item 
+\hyperlink{portable_8h_a25423a5b429a3ee0610315d93938bd0b}{portable\+\_\+off\+\_\+t} \hyperlink{portable_8h_af7bd350e4ac4a9083df7752b95b3d7b4}{portable\+\_\+ftell} (F\+I\+L\+E $\ast$\hyperlink{060__command__switch_8tcl_af6830d2c644b45088ea8f1f74a46b778}{f})
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{portable_8h_a818dff4c8adef7d6c838c5bff8230a75}{portable\+\_\+fopen} (const char $\ast$file\+Name, const char $\ast$mode)
+\item 
+char \hyperlink{portable_8h_a7611f2d585509aaf8b434b416f7f5cba}{portable\+\_\+path\+Separator} ()
+\item 
+char \hyperlink{portable_8h_a5eb53a3f72467aaf6dd8814e3650a2b2}{portable\+\_\+path\+List\+Separator} ()
+\item 
+const char $\ast$ \hyperlink{portable_8h_adb209fd072a146757a74de224438750f}{portable\+\_\+ghost\+Script\+Command} ()
+\item 
+const char $\ast$ \hyperlink{portable_8h_a311fb005a4ff8025f7b2fbf121cbdee3}{portable\+\_\+command\+Extension} ()
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{portable_8h_a4f160f0e710170d2550709aae5caf49b}{portable\+\_\+file\+System\+Is\+Case\+Sensitive} ()
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{portable_8h_ad7e56e618c52b0ab659c1b16b81cf4b4}{portable\+\_\+popen} (const char $\ast$name, const char $\ast$type)
+\item 
+int \hyperlink{portable_8h_a5c0b9bfa064283bf7495f0530cebeeba}{portable\+\_\+pclose} (F\+I\+L\+E $\ast$stream)
+\item 
+void \hyperlink{portable_8h_a654a634351c19360132a57b4e7745ef9}{portable\+\_\+sys\+Timer\+Start} ()
+\item 
+void \hyperlink{portable_8h_a29ee4e275e02c776c5d89ee0c9855b16}{portable\+\_\+sys\+Timer\+Stop} ()
+\item 
+double \hyperlink{portable_8h_a4756803d96f0305e9c6c9e49543bd590}{portable\+\_\+get\+Sys\+Elapsed\+Time} ()
+\item 
+void \hyperlink{portable_8h_a64953440ea1cc6f46222c8f854dbe5f0}{portable\+\_\+sleep} (int ms)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{portable_8h_a77da33ed6eafa47f239efc6ba65dec33}{portable\+\_\+is\+Absolute\+Path} (const char $\ast$file\+Name)
+\item 
+void $\ast$ \hyperlink{portable_8h_a265cc0f73ee132a66ce0669949359399}{portable\+\_\+iconv\+\_\+open} (const char $\ast$tocode, const char $\ast$fromcode)
+\item 
+size\+\_\+t \hyperlink{portable_8h_a8ca77f1a4e1ca459169752103338ab0c}{portable\+\_\+iconv} (void $\ast$cd, char $\ast$$\ast$inbuf, size\+\_\+t $\ast$inbytesleft, char $\ast$$\ast$outbuf, size\+\_\+t $\ast$outbytesleft)
+\item 
+int \hyperlink{portable_8h_a3f98144680118aada1a93d2d4ba6173b}{portable\+\_\+iconv\+\_\+close} (void $\ast$cd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Portable versions of functions that are platform dependent. 
+
+
+
+\subsection{Documentation des définitions de type}
+\hypertarget{portable_8h_a25423a5b429a3ee0610315d93938bd0b}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+off\+\_\+t@{portable\+\_\+off\+\_\+t}}
+\index{portable\+\_\+off\+\_\+t@{portable\+\_\+off\+\_\+t}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+off\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef off\+\_\+t {\bf portable\+\_\+off\+\_\+t}}\label{portable_8h_a25423a5b429a3ee0610315d93938bd0b}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{portable_8h_a311fb005a4ff8025f7b2fbf121cbdee3}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+command\+Extension@{portable\+\_\+command\+Extension}}
+\index{portable\+\_\+command\+Extension@{portable\+\_\+command\+Extension}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+command\+Extension()}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ portable\+\_\+command\+Extension (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{portable_8h_a311fb005a4ff8025f7b2fbf121cbdee3}
+\hypertarget{portable_8h_a4f160f0e710170d2550709aae5caf49b}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+file\+System\+Is\+Case\+Sensitive@{portable\+\_\+file\+System\+Is\+Case\+Sensitive}}
+\index{portable\+\_\+file\+System\+Is\+Case\+Sensitive@{portable\+\_\+file\+System\+Is\+Case\+Sensitive}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+file\+System\+Is\+Case\+Sensitive()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} portable\+\_\+file\+System\+Is\+Case\+Sensitive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{portable_8h_a4f160f0e710170d2550709aae5caf49b}
+\hypertarget{portable_8h_a818dff4c8adef7d6c838c5bff8230a75}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+fopen@{portable\+\_\+fopen}}
+\index{portable\+\_\+fopen@{portable\+\_\+fopen}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+fopen(const char $\ast$file\+Name, const char $\ast$mode)}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E$\ast$ portable\+\_\+fopen (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name, }
+\item[{const char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}\label{portable_8h_a818dff4c8adef7d6c838c5bff8230a75}
+\hypertarget{portable_8h_aacd3bfcb8cf704f1a88ef85378f2e3ba}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+fseek@{portable\+\_\+fseek}}
+\index{portable\+\_\+fseek@{portable\+\_\+fseek}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+fseek(\+F\+I\+L\+E $\ast$f, portable\+\_\+off\+\_\+t offset, int whence)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf portable\+\_\+off\+\_\+t} portable\+\_\+fseek (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{f, }
+\item[{{\bf portable\+\_\+off\+\_\+t}}]{offset, }
+\item[{int}]{whence}
+\end{DoxyParamCaption}
+)}\label{portable_8h_aacd3bfcb8cf704f1a88ef85378f2e3ba}
+\hypertarget{portable_8h_af7bd350e4ac4a9083df7752b95b3d7b4}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+ftell@{portable\+\_\+ftell}}
+\index{portable\+\_\+ftell@{portable\+\_\+ftell}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+ftell(\+F\+I\+L\+E $\ast$f)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf portable\+\_\+off\+\_\+t} portable\+\_\+ftell (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{f}
+\end{DoxyParamCaption}
+)}\label{portable_8h_af7bd350e4ac4a9083df7752b95b3d7b4}
+\hypertarget{portable_8h_a52392b2bf51d0780fc3a7f0e62ab66fa}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+getenv@{portable\+\_\+getenv}}
+\index{portable\+\_\+getenv@{portable\+\_\+getenv}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+getenv(const char $\ast$variable)}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ portable\+\_\+getenv (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{variable}
+\end{DoxyParamCaption}
+)}\label{portable_8h_a52392b2bf51d0780fc3a7f0e62ab66fa}
+\hypertarget{portable_8h_a4756803d96f0305e9c6c9e49543bd590}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+get\+Sys\+Elapsed\+Time@{portable\+\_\+get\+Sys\+Elapsed\+Time}}
+\index{portable\+\_\+get\+Sys\+Elapsed\+Time@{portable\+\_\+get\+Sys\+Elapsed\+Time}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+get\+Sys\+Elapsed\+Time()}]{\setlength{\rightskip}{0pt plus 5cm}double portable\+\_\+get\+Sys\+Elapsed\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{portable_8h_a4756803d96f0305e9c6c9e49543bd590}
+\hypertarget{portable_8h_adb209fd072a146757a74de224438750f}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+ghost\+Script\+Command@{portable\+\_\+ghost\+Script\+Command}}
+\index{portable\+\_\+ghost\+Script\+Command@{portable\+\_\+ghost\+Script\+Command}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+ghost\+Script\+Command()}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ portable\+\_\+ghost\+Script\+Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{portable_8h_adb209fd072a146757a74de224438750f}
+\hypertarget{portable_8h_a8ca77f1a4e1ca459169752103338ab0c}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+iconv@{portable\+\_\+iconv}}
+\index{portable\+\_\+iconv@{portable\+\_\+iconv}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+iconv(void $\ast$cd, char $\ast$$\ast$inbuf, size\+\_\+t $\ast$inbytesleft, char $\ast$$\ast$outbuf, size\+\_\+t $\ast$outbytesleft)}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t portable\+\_\+iconv (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{cd, }
+\item[{char $\ast$$\ast$}]{inbuf, }
+\item[{size\+\_\+t $\ast$}]{inbytesleft, }
+\item[{char $\ast$$\ast$}]{outbuf, }
+\item[{size\+\_\+t $\ast$}]{outbytesleft}
+\end{DoxyParamCaption}
+)}\label{portable_8h_a8ca77f1a4e1ca459169752103338ab0c}
+\hypertarget{portable_8h_a3f98144680118aada1a93d2d4ba6173b}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+iconv\+\_\+close@{portable\+\_\+iconv\+\_\+close}}
+\index{portable\+\_\+iconv\+\_\+close@{portable\+\_\+iconv\+\_\+close}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+iconv\+\_\+close(void $\ast$cd)}]{\setlength{\rightskip}{0pt plus 5cm}int portable\+\_\+iconv\+\_\+close (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{cd}
+\end{DoxyParamCaption}
+)}\label{portable_8h_a3f98144680118aada1a93d2d4ba6173b}
+\hypertarget{portable_8h_a265cc0f73ee132a66ce0669949359399}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+iconv\+\_\+open@{portable\+\_\+iconv\+\_\+open}}
+\index{portable\+\_\+iconv\+\_\+open@{portable\+\_\+iconv\+\_\+open}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+iconv\+\_\+open(const char $\ast$tocode, const char $\ast$fromcode)}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ portable\+\_\+iconv\+\_\+open (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{tocode, }
+\item[{const char $\ast$}]{fromcode}
+\end{DoxyParamCaption}
+)}\label{portable_8h_a265cc0f73ee132a66ce0669949359399}
+\hypertarget{portable_8h_a77da33ed6eafa47f239efc6ba65dec33}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+is\+Absolute\+Path@{portable\+\_\+is\+Absolute\+Path}}
+\index{portable\+\_\+is\+Absolute\+Path@{portable\+\_\+is\+Absolute\+Path}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+is\+Absolute\+Path(const char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} portable\+\_\+is\+Absolute\+Path (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{portable_8h_a77da33ed6eafa47f239efc6ba65dec33}
+\hypertarget{portable_8h_a5eb53a3f72467aaf6dd8814e3650a2b2}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+path\+List\+Separator@{portable\+\_\+path\+List\+Separator}}
+\index{portable\+\_\+path\+List\+Separator@{portable\+\_\+path\+List\+Separator}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+path\+List\+Separator()}]{\setlength{\rightskip}{0pt plus 5cm}char portable\+\_\+path\+List\+Separator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{portable_8h_a5eb53a3f72467aaf6dd8814e3650a2b2}
+\hypertarget{portable_8h_a7611f2d585509aaf8b434b416f7f5cba}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+path\+Separator@{portable\+\_\+path\+Separator}}
+\index{portable\+\_\+path\+Separator@{portable\+\_\+path\+Separator}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+path\+Separator()}]{\setlength{\rightskip}{0pt plus 5cm}char portable\+\_\+path\+Separator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{portable_8h_a7611f2d585509aaf8b434b416f7f5cba}
+\hypertarget{portable_8h_a5c0b9bfa064283bf7495f0530cebeeba}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+pclose@{portable\+\_\+pclose}}
+\index{portable\+\_\+pclose@{portable\+\_\+pclose}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+pclose(\+F\+I\+L\+E $\ast$stream)}]{\setlength{\rightskip}{0pt plus 5cm}int portable\+\_\+pclose (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{stream}
+\end{DoxyParamCaption}
+)}\label{portable_8h_a5c0b9bfa064283bf7495f0530cebeeba}
+\hypertarget{portable_8h_a59f752704c51b3369512e011cb37e821}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+pid@{portable\+\_\+pid}}
+\index{portable\+\_\+pid@{portable\+\_\+pid}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+pid()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint} portable\+\_\+pid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{portable_8h_a59f752704c51b3369512e011cb37e821}
+\hypertarget{portable_8h_ad7e56e618c52b0ab659c1b16b81cf4b4}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+popen@{portable\+\_\+popen}}
+\index{portable\+\_\+popen@{portable\+\_\+popen}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+popen(const char $\ast$name, const char $\ast$type)}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E$\ast$ portable\+\_\+popen (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{type}
+\end{DoxyParamCaption}
+)}\label{portable_8h_ad7e56e618c52b0ab659c1b16b81cf4b4}
+\hypertarget{portable_8h_ae4248edc1676c7fee1b27b35b1a02167}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+setenv@{portable\+\_\+setenv}}
+\index{portable\+\_\+setenv@{portable\+\_\+setenv}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+setenv(const char $\ast$variable, const char $\ast$value)}]{\setlength{\rightskip}{0pt plus 5cm}void portable\+\_\+setenv (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{variable, }
+\item[{const char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}\label{portable_8h_ae4248edc1676c7fee1b27b35b1a02167}
+\hypertarget{portable_8h_a64953440ea1cc6f46222c8f854dbe5f0}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+sleep@{portable\+\_\+sleep}}
+\index{portable\+\_\+sleep@{portable\+\_\+sleep}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+sleep(int ms)}]{\setlength{\rightskip}{0pt plus 5cm}void portable\+\_\+sleep (
+\begin{DoxyParamCaption}
+\item[{int}]{ms}
+\end{DoxyParamCaption}
+)}\label{portable_8h_a64953440ea1cc6f46222c8f854dbe5f0}
+\hypertarget{portable_8h_ab1446c4224056df1eaff8f4123f55fff}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+system@{portable\+\_\+system}}
+\index{portable\+\_\+system@{portable\+\_\+system}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+system(const char $\ast$command, const char $\ast$args, bool command\+Has\+Console=\+T\+R\+U\+E)}]{\setlength{\rightskip}{0pt plus 5cm}int portable\+\_\+system (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{command, }
+\item[{const char $\ast$}]{args, }
+\item[{{\bf bool}}]{command\+Has\+Console = {\ttfamily {\bf T\+R\+U\+E}}}
+\end{DoxyParamCaption}
+)}\label{portable_8h_ab1446c4224056df1eaff8f4123f55fff}
+taken from the system() manpage on my Linux box \hypertarget{portable_8h_a654a634351c19360132a57b4e7745ef9}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+sys\+Timer\+Start@{portable\+\_\+sys\+Timer\+Start}}
+\index{portable\+\_\+sys\+Timer\+Start@{portable\+\_\+sys\+Timer\+Start}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+sys\+Timer\+Start()}]{\setlength{\rightskip}{0pt plus 5cm}void portable\+\_\+sys\+Timer\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{portable_8h_a654a634351c19360132a57b4e7745ef9}
+\hypertarget{portable_8h_a29ee4e275e02c776c5d89ee0c9855b16}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+sys\+Timer\+Stop@{portable\+\_\+sys\+Timer\+Stop}}
+\index{portable\+\_\+sys\+Timer\+Stop@{portable\+\_\+sys\+Timer\+Stop}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+sys\+Timer\+Stop()}]{\setlength{\rightskip}{0pt plus 5cm}void portable\+\_\+sys\+Timer\+Stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{portable_8h_a29ee4e275e02c776c5d89ee0c9855b16}
+\hypertarget{portable_8h_a21d2e3a5826400ea3fb385de160a4273}{}\index{portable.\+h@{portable.\+h}!portable\+\_\+unsetenv@{portable\+\_\+unsetenv}}
+\index{portable\+\_\+unsetenv@{portable\+\_\+unsetenv}!portable.\+h@{portable.\+h}}
+\subsubsection[{portable\+\_\+unsetenv(const char $\ast$variable)}]{\setlength{\rightskip}{0pt plus 5cm}void portable\+\_\+unsetenv (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{variable}
+\end{DoxyParamCaption}
+)}\label{portable_8h_a21d2e3a5826400ea3fb385de160a4273}

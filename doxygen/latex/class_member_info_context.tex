@@ -1,0 +1,85 @@
+\hypertarget{class_member_info_context}{}\section{Référence de la classe Member\+Info\+Context}
+\label{class_member_info_context}\index{Member\+Info\+Context@{Member\+Info\+Context}}
+
+
+{\ttfamily \#include $<$context.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Member\+Info\+Context\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_member_info_context}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_member_info_context_1_1_private}{Private}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_template_variant}{Template\+Variant} \hyperlink{class_member_info_context_a7d3e0aecfd4b57442063abef4a0fb081}{get} (const char $\ast$name) const 
+\item 
+virtual int \hyperlink{class_member_info_context_a9f19c4a3fb7164d1daf4772d4de3703f}{add\+Ref} ()
+\item 
+virtual int \hyperlink{class_member_info_context_a079b37ec712b039f5cb3eaf93e2a8f24}{release} ()
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_member_info_context}{Member\+Info\+Context} $\ast$ \hyperlink{class_member_info_context_a2027031bf7cc979f691785eb27fa2246}{alloc} (const \hyperlink{struct_member_info}{Member\+Info} $\ast$mi)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_member_info_context_a9f19c4a3fb7164d1daf4772d4de3703f}{}\index{Member\+Info\+Context@{Member\+Info\+Context}!add\+Ref@{add\+Ref}}
+\index{add\+Ref@{add\+Ref}!Member\+Info\+Context@{Member\+Info\+Context}}
+\subsubsection[{add\+Ref()}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Member\+Info\+Context\+::add\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_member_info_context_a9f19c4a3fb7164d1daf4772d4de3703f}
+Increase object\textquotesingle{}s reference count 
+
+Implémente \hyperlink{class_template_struct_intf_a05fe97ad47633beb326f69686faed581}{Template\+Struct\+Intf}.
+
+\hypertarget{class_member_info_context_a2027031bf7cc979f691785eb27fa2246}{}\index{Member\+Info\+Context@{Member\+Info\+Context}!alloc@{alloc}}
+\index{alloc@{alloc}!Member\+Info\+Context@{Member\+Info\+Context}}
+\subsubsection[{alloc(const Member\+Info $\ast$mi)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Member\+Info\+Context}$\ast$ Member\+Info\+Context\+::alloc (
+\begin{DoxyParamCaption}
+\item[{const {\bf Member\+Info} $\ast$}]{mi}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_member_info_context_a2027031bf7cc979f691785eb27fa2246}
+\hypertarget{class_member_info_context_a7d3e0aecfd4b57442063abef4a0fb081}{}\index{Member\+Info\+Context@{Member\+Info\+Context}!get@{get}}
+\index{get@{get}!Member\+Info\+Context@{Member\+Info\+Context}}
+\subsubsection[{get(const char $\ast$name) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Variant} Member\+Info\+Context\+::get (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_member_info_context_a7d3e0aecfd4b57442063abef4a0fb081}
+Gets the value for a field name. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em name} & The name of the field. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_template_struct_intf_afd77683d121b5b6aebc8b6648c46ee20}{Template\+Struct\+Intf}.
+
+\hypertarget{class_member_info_context_a079b37ec712b039f5cb3eaf93e2a8f24}{}\index{Member\+Info\+Context@{Member\+Info\+Context}!release@{release}}
+\index{release@{release}!Member\+Info\+Context@{Member\+Info\+Context}}
+\subsubsection[{release()}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Member\+Info\+Context\+::release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_member_info_context_a079b37ec712b039f5cb3eaf93e2a8f24}
+Decreases object\textquotesingle{}s referenc count, destroy object if 0 
+
+Implémente \hyperlink{class_template_struct_intf_a3dce7dd29d3f66a8080b40578e8a5045}{Template\+Struct\+Intf}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{context_8h}{context.\+h}\item 
+src/\hyperlink{context_8cpp}{context.\+cpp}\end{DoxyCompactItemize}

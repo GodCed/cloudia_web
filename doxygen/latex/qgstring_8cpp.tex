@@ -1,0 +1,34 @@
+\hypertarget{qgstring_8cpp}{}\section{Référence du fichier qtools/qgstring.cpp}
+\label{qgstring_8cpp}\index{qtools/qgstring.\+cpp@{qtools/qgstring.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}qgstring.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{qgstring_8cpp_ad51ded0bbd705f02f73fc60c0b721ced}{B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E}~64
+\item 
+\#define \hyperlink{qgstring_8cpp_a65fe4a1569c48dea1763ef21e8bf248f}{R\+O\+U\+N\+D\+\_\+\+S\+I\+Z\+E}(x)~((x)+\hyperlink{store_8cpp_ad51ded0bbd705f02f73fc60c0b721ced}{B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E}-\/1)\&$\sim$(\hyperlink{store_8cpp_ad51ded0bbd705f02f73fc60c0b721ced}{B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E}-\/1)
+\item 
+\#define \hyperlink{qgstring_8cpp_a20e0f28fabf6db969ee09650cbbdf706}{D\+B\+G\+\_\+\+S\+T\+R}(x)~do \{ \} \hyperlink{xmlcode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{while}(0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{qgstring_8cpp_ad51ded0bbd705f02f73fc60c0b721ced}{}\index{qgstring.\+cpp@{qgstring.\+cpp}!B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E@{B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E}}
+\index{B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E@{B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E}!qgstring.\+cpp@{qgstring.\+cpp}}
+\subsubsection[{B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E~64}\label{qgstring_8cpp_ad51ded0bbd705f02f73fc60c0b721ced}
+\hypertarget{qgstring_8cpp_a20e0f28fabf6db969ee09650cbbdf706}{}\index{qgstring.\+cpp@{qgstring.\+cpp}!D\+B\+G\+\_\+\+S\+T\+R@{D\+B\+G\+\_\+\+S\+T\+R}}
+\index{D\+B\+G\+\_\+\+S\+T\+R@{D\+B\+G\+\_\+\+S\+T\+R}!qgstring.\+cpp@{qgstring.\+cpp}}
+\subsubsection[{D\+B\+G\+\_\+\+S\+T\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+B\+G\+\_\+\+S\+T\+R(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~do \{ \} {\bf while}(0)}\label{qgstring_8cpp_a20e0f28fabf6db969ee09650cbbdf706}
+\hypertarget{qgstring_8cpp_a65fe4a1569c48dea1763ef21e8bf248f}{}\index{qgstring.\+cpp@{qgstring.\+cpp}!R\+O\+U\+N\+D\+\_\+\+S\+I\+Z\+E@{R\+O\+U\+N\+D\+\_\+\+S\+I\+Z\+E}}
+\index{R\+O\+U\+N\+D\+\_\+\+S\+I\+Z\+E@{R\+O\+U\+N\+D\+\_\+\+S\+I\+Z\+E}!qgstring.\+cpp@{qgstring.\+cpp}}
+\subsubsection[{R\+O\+U\+N\+D\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+O\+U\+N\+D\+\_\+\+S\+I\+Z\+E(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~((x)+{\bf B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E}-\/1)\&$\sim$({\bf B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E}-\/1)}\label{qgstring_8cpp_a65fe4a1569c48dea1763ef21e8bf248f}

@@ -1,0 +1,124 @@
+\hypertarget{rtfstyle_8h}{}\section{Référence du fichier src/rtfstyle.h}
+\label{rtfstyle_8h}\index{src/rtfstyle.\+h@{src/rtfstyle.\+h}}
+{\ttfamily \#include $<$qregexp.\+h$>$}\\*
+{\ttfamily \#include $<$qdict.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_r_t_f_list_item_info}{R\+T\+F\+List\+Item\+Info}
+\item 
+struct \hyperlink{struct_rtf___style___default}{Rtf\+\_\+\+Style\+\_\+\+Default}
+\item 
+struct \hyperlink{struct_style_data}{Style\+Data}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{rtfstyle_8h_a7c5826d54c739524e38fa002a948c074}{load\+Extensions} (const char $\ast$name)
+\item 
+void \hyperlink{rtfstyle_8h_ac46505c12ef133d9ea55c9a4d2af21f9}{load\+Stylesheet} (const char $\ast$name, Q\+Dict$<$ \hyperlink{struct_style_data}{Style\+Data} $>$ \&dict)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{rtfstyle_8h_a6329c1ef4afd935bc3ef8065583fed30}{rtf\+\_\+page\+Width} = 8748
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{rtfstyle_8h_a86de556a1278f74936d85c3ad6737305}{rtf\+\_\+title}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{rtfstyle_8h_ababa40e3b47889c9d6a12b2c27b1dcea}{rtf\+\_\+subject}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{rtfstyle_8h_ab52a06ee957fd74f7e3cc2d7237ea8b9}{rtf\+\_\+comments}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{rtfstyle_8h_a0324698363e2cd57eab1023a6dfd3eaf}{rtf\+\_\+company}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{rtfstyle_8h_a6dadec111c906be2f9b08e2b20a203d0}{rtf\+\_\+logo\+Filename}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{rtfstyle_8h_aa3f13730015be2d7e9ab56c1282b4b9a}{rtf\+\_\+author}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{rtfstyle_8h_ab3df69814841b23f1daaf5cdf52f11ce}{rtf\+\_\+manager}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{rtfstyle_8h_a171eccae8452542c0917db77076e6769}{rtf\+\_\+document\+Type}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{rtfstyle_8h_ae5cb613ade78225b9d6487115d840fd7}{rtf\+\_\+document\+Id}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{rtfstyle_8h_aa26f5b63acab74269d212f1559aafb5b}{rtf\+\_\+keywords}
+\item 
+const int \hyperlink{rtfstyle_8h_aed82d9c5fc2c89588c7b031d46a7e026}{rtf\+\_\+max\+Indent\+Levels} = 10
+\item 
+\hyperlink{struct_r_t_f_list_item_info}{R\+T\+F\+List\+Item\+Info} \hyperlink{rtfstyle_8h_a8ae4006c68703493df0030f4b444fc6e}{rtf\+\_\+list\+Item\+Info} \mbox{[}\hyperlink{rtfstyle_8h_aed82d9c5fc2c89588c7b031d46a7e026}{rtf\+\_\+max\+Indent\+Levels}\mbox{]}
+\item 
+char \hyperlink{rtfstyle_8h_a3588987fef5687c675e6fb979b9850c1}{rtf\+\_\+\+Style\+\_\+\+Reset} \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{struct_rtf___style___default}{Rtf\+\_\+\+Style\+\_\+\+Default} \hyperlink{rtfstyle_8h_a1c7e59c4175c745476a2f8a1cb78644e}{rtf\+\_\+\+Style\+\_\+\+Default} \mbox{[}$\,$\mbox{]}
+\item 
+Q\+Dict$<$ \hyperlink{struct_style_data}{Style\+Data} $>$ \hyperlink{rtfstyle_8h_aeaac3cbb2d90a448b3b764ea9fe9c783}{rtf\+\_\+\+Style}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{rtfstyle_8h_a7c5826d54c739524e38fa002a948c074}{}\index{rtfstyle.\+h@{rtfstyle.\+h}!load\+Extensions@{load\+Extensions}}
+\index{load\+Extensions@{load\+Extensions}!rtfstyle.\+h@{rtfstyle.\+h}}
+\subsubsection[{load\+Extensions(const char $\ast$name)}]{\setlength{\rightskip}{0pt plus 5cm}void load\+Extensions (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\label{rtfstyle_8h_a7c5826d54c739524e38fa002a948c074}
+\hypertarget{rtfstyle_8h_ac46505c12ef133d9ea55c9a4d2af21f9}{}\index{rtfstyle.\+h@{rtfstyle.\+h}!load\+Stylesheet@{load\+Stylesheet}}
+\index{load\+Stylesheet@{load\+Stylesheet}!rtfstyle.\+h@{rtfstyle.\+h}}
+\subsubsection[{load\+Stylesheet(const char $\ast$name, Q\+Dict$<$ Style\+Data $>$ \&dict)}]{\setlength{\rightskip}{0pt plus 5cm}void load\+Stylesheet (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{Q\+Dict$<$ {\bf Style\+Data} $>$ \&}]{dict}
+\end{DoxyParamCaption}
+)}\label{rtfstyle_8h_ac46505c12ef133d9ea55c9a4d2af21f9}
+
+
+\subsection{Documentation des variables}
+\hypertarget{rtfstyle_8h_aa3f13730015be2d7e9ab56c1282b4b9a}{}\index{rtfstyle.\+h@{rtfstyle.\+h}!rtf\+\_\+author@{rtf\+\_\+author}}
+\index{rtf\+\_\+author@{rtf\+\_\+author}!rtfstyle.\+h@{rtfstyle.\+h}}
+\subsubsection[{rtf\+\_\+author}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} rtf\+\_\+author}\label{rtfstyle_8h_aa3f13730015be2d7e9ab56c1282b4b9a}
+\hypertarget{rtfstyle_8h_ab52a06ee957fd74f7e3cc2d7237ea8b9}{}\index{rtfstyle.\+h@{rtfstyle.\+h}!rtf\+\_\+comments@{rtf\+\_\+comments}}
+\index{rtf\+\_\+comments@{rtf\+\_\+comments}!rtfstyle.\+h@{rtfstyle.\+h}}
+\subsubsection[{rtf\+\_\+comments}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} rtf\+\_\+comments}\label{rtfstyle_8h_ab52a06ee957fd74f7e3cc2d7237ea8b9}
+\hypertarget{rtfstyle_8h_a0324698363e2cd57eab1023a6dfd3eaf}{}\index{rtfstyle.\+h@{rtfstyle.\+h}!rtf\+\_\+company@{rtf\+\_\+company}}
+\index{rtf\+\_\+company@{rtf\+\_\+company}!rtfstyle.\+h@{rtfstyle.\+h}}
+\subsubsection[{rtf\+\_\+company}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} rtf\+\_\+company}\label{rtfstyle_8h_a0324698363e2cd57eab1023a6dfd3eaf}
+\hypertarget{rtfstyle_8h_ae5cb613ade78225b9d6487115d840fd7}{}\index{rtfstyle.\+h@{rtfstyle.\+h}!rtf\+\_\+document\+Id@{rtf\+\_\+document\+Id}}
+\index{rtf\+\_\+document\+Id@{rtf\+\_\+document\+Id}!rtfstyle.\+h@{rtfstyle.\+h}}
+\subsubsection[{rtf\+\_\+document\+Id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} rtf\+\_\+document\+Id}\label{rtfstyle_8h_ae5cb613ade78225b9d6487115d840fd7}
+\hypertarget{rtfstyle_8h_a171eccae8452542c0917db77076e6769}{}\index{rtfstyle.\+h@{rtfstyle.\+h}!rtf\+\_\+document\+Type@{rtf\+\_\+document\+Type}}
+\index{rtf\+\_\+document\+Type@{rtf\+\_\+document\+Type}!rtfstyle.\+h@{rtfstyle.\+h}}
+\subsubsection[{rtf\+\_\+document\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} rtf\+\_\+document\+Type}\label{rtfstyle_8h_a171eccae8452542c0917db77076e6769}
+\hypertarget{rtfstyle_8h_aa26f5b63acab74269d212f1559aafb5b}{}\index{rtfstyle.\+h@{rtfstyle.\+h}!rtf\+\_\+keywords@{rtf\+\_\+keywords}}
+\index{rtf\+\_\+keywords@{rtf\+\_\+keywords}!rtfstyle.\+h@{rtfstyle.\+h}}
+\subsubsection[{rtf\+\_\+keywords}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} rtf\+\_\+keywords}\label{rtfstyle_8h_aa26f5b63acab74269d212f1559aafb5b}
+\hypertarget{rtfstyle_8h_a8ae4006c68703493df0030f4b444fc6e}{}\index{rtfstyle.\+h@{rtfstyle.\+h}!rtf\+\_\+list\+Item\+Info@{rtf\+\_\+list\+Item\+Info}}
+\index{rtf\+\_\+list\+Item\+Info@{rtf\+\_\+list\+Item\+Info}!rtfstyle.\+h@{rtfstyle.\+h}}
+\subsubsection[{rtf\+\_\+list\+Item\+Info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+T\+F\+List\+Item\+Info} rtf\+\_\+list\+Item\+Info\mbox{[}{\bf rtf\+\_\+max\+Indent\+Levels}\mbox{]}}\label{rtfstyle_8h_a8ae4006c68703493df0030f4b444fc6e}
+\hypertarget{rtfstyle_8h_a6dadec111c906be2f9b08e2b20a203d0}{}\index{rtfstyle.\+h@{rtfstyle.\+h}!rtf\+\_\+logo\+Filename@{rtf\+\_\+logo\+Filename}}
+\index{rtf\+\_\+logo\+Filename@{rtf\+\_\+logo\+Filename}!rtfstyle.\+h@{rtfstyle.\+h}}
+\subsubsection[{rtf\+\_\+logo\+Filename}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} rtf\+\_\+logo\+Filename}\label{rtfstyle_8h_a6dadec111c906be2f9b08e2b20a203d0}
+\hypertarget{rtfstyle_8h_ab3df69814841b23f1daaf5cdf52f11ce}{}\index{rtfstyle.\+h@{rtfstyle.\+h}!rtf\+\_\+manager@{rtf\+\_\+manager}}
+\index{rtf\+\_\+manager@{rtf\+\_\+manager}!rtfstyle.\+h@{rtfstyle.\+h}}
+\subsubsection[{rtf\+\_\+manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} rtf\+\_\+manager}\label{rtfstyle_8h_ab3df69814841b23f1daaf5cdf52f11ce}
+\hypertarget{rtfstyle_8h_aed82d9c5fc2c89588c7b031d46a7e026}{}\index{rtfstyle.\+h@{rtfstyle.\+h}!rtf\+\_\+max\+Indent\+Levels@{rtf\+\_\+max\+Indent\+Levels}}
+\index{rtf\+\_\+max\+Indent\+Levels@{rtf\+\_\+max\+Indent\+Levels}!rtfstyle.\+h@{rtfstyle.\+h}}
+\subsubsection[{rtf\+\_\+max\+Indent\+Levels}]{\setlength{\rightskip}{0pt plus 5cm}const int rtf\+\_\+max\+Indent\+Levels = 10}\label{rtfstyle_8h_aed82d9c5fc2c89588c7b031d46a7e026}
+\hypertarget{rtfstyle_8h_a6329c1ef4afd935bc3ef8065583fed30}{}\index{rtfstyle.\+h@{rtfstyle.\+h}!rtf\+\_\+page\+Width@{rtf\+\_\+page\+Width}}
+\index{rtf\+\_\+page\+Width@{rtf\+\_\+page\+Width}!rtfstyle.\+h@{rtfstyle.\+h}}
+\subsubsection[{rtf\+\_\+page\+Width}]{\setlength{\rightskip}{0pt plus 5cm}const int rtf\+\_\+page\+Width = 8748}\label{rtfstyle_8h_a6329c1ef4afd935bc3ef8065583fed30}
+\hypertarget{rtfstyle_8h_aeaac3cbb2d90a448b3b764ea9fe9c783}{}\index{rtfstyle.\+h@{rtfstyle.\+h}!rtf\+\_\+\+Style@{rtf\+\_\+\+Style}}
+\index{rtf\+\_\+\+Style@{rtf\+\_\+\+Style}!rtfstyle.\+h@{rtfstyle.\+h}}
+\subsubsection[{rtf\+\_\+\+Style}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Dict$<${\bf Style\+Data}$>$ rtf\+\_\+\+Style}\label{rtfstyle_8h_aeaac3cbb2d90a448b3b764ea9fe9c783}
+\hypertarget{rtfstyle_8h_a1c7e59c4175c745476a2f8a1cb78644e}{}\index{rtfstyle.\+h@{rtfstyle.\+h}!rtf\+\_\+\+Style\+\_\+\+Default@{rtf\+\_\+\+Style\+\_\+\+Default}}
+\index{rtf\+\_\+\+Style\+\_\+\+Default@{rtf\+\_\+\+Style\+\_\+\+Default}!rtfstyle.\+h@{rtfstyle.\+h}}
+\subsubsection[{rtf\+\_\+\+Style\+\_\+\+Default}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rtf\+\_\+\+Style\+\_\+\+Default} rtf\+\_\+\+Style\+\_\+\+Default\mbox{[}$\,$\mbox{]}}\label{rtfstyle_8h_a1c7e59c4175c745476a2f8a1cb78644e}
+\hypertarget{rtfstyle_8h_a3588987fef5687c675e6fb979b9850c1}{}\index{rtfstyle.\+h@{rtfstyle.\+h}!rtf\+\_\+\+Style\+\_\+\+Reset@{rtf\+\_\+\+Style\+\_\+\+Reset}}
+\index{rtf\+\_\+\+Style\+\_\+\+Reset@{rtf\+\_\+\+Style\+\_\+\+Reset}!rtfstyle.\+h@{rtfstyle.\+h}}
+\subsubsection[{rtf\+\_\+\+Style\+\_\+\+Reset}]{\setlength{\rightskip}{0pt plus 5cm}char rtf\+\_\+\+Style\+\_\+\+Reset\mbox{[}$\,$\mbox{]}}\label{rtfstyle_8h_a3588987fef5687c675e6fb979b9850c1}
+\hypertarget{rtfstyle_8h_ababa40e3b47889c9d6a12b2c27b1dcea}{}\index{rtfstyle.\+h@{rtfstyle.\+h}!rtf\+\_\+subject@{rtf\+\_\+subject}}
+\index{rtf\+\_\+subject@{rtf\+\_\+subject}!rtfstyle.\+h@{rtfstyle.\+h}}
+\subsubsection[{rtf\+\_\+subject}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} rtf\+\_\+subject}\label{rtfstyle_8h_ababa40e3b47889c9d6a12b2c27b1dcea}
+\hypertarget{rtfstyle_8h_a86de556a1278f74936d85c3ad6737305}{}\index{rtfstyle.\+h@{rtfstyle.\+h}!rtf\+\_\+title@{rtf\+\_\+title}}
+\index{rtf\+\_\+title@{rtf\+\_\+title}!rtfstyle.\+h@{rtfstyle.\+h}}
+\subsubsection[{rtf\+\_\+title}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} rtf\+\_\+title}\label{rtfstyle_8h_a86de556a1278f74936d85c3ad6737305}

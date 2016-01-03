@@ -1,0 +1,113 @@
+\hypertarget{class_template_parser}{}\section{Référence de la classe Template\+Parser}
+\label{class_template_parser}\index{Template\+Parser@{Template\+Parser}}
+
+
+Parser for templates.  
+
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_template_parser_a074067c80442cfb4e103bc5183679073}{Template\+Parser} (const \hyperlink{class_template_engine}{Template\+Engine} $\ast$engine, const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{class_template_parser_af8f8fa984a41d765f235db509f6d9a17}{template\+Name}, \hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{class_template_token}{Template\+Token} $>$ \&tokens)
+\item 
+void \hyperlink{class_template_parser_a09037d32371845f07d8996b0d7b1d24d}{parse} (\hyperlink{class_template_node}{Template\+Node} $\ast$parent, int line, const \hyperlink{class_q_str_list}{Q\+Str\+List} \&stop\+At, \hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{class_template_node}{Template\+Node} $>$ \&nodes)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_template_parser_a14daa11a9a3b70c5d0fb7b2c13ebce71}{has\+Next\+Token} () const 
+\item 
+\hyperlink{class_template_token}{Template\+Token} $\ast$ \hyperlink{class_template_parser_acbe18fdf2b8306342e283e906826a3ae}{take\+Next\+Token} ()
+\item 
+void \hyperlink{class_template_parser_ac3e5fb3ee5dfcccbcf85440bd3b59d53}{remove\+Next\+Token} ()
+\item 
+void \hyperlink{class_template_parser_a2f48f4d2f14f5cafc4f662613c2046c5}{prepend\+Token} (const \hyperlink{class_template_token}{Template\+Token} $\ast$token)
+\item 
+const \hyperlink{class_template_token}{Template\+Token} $\ast$ \hyperlink{class_template_parser_a1cf0b832eb5cf48b86648e62e95c4e0c}{current\+Token} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_template_parser_af8f8fa984a41d765f235db509f6d9a17}{template\+Name} () const 
+\item 
+void \hyperlink{class_template_parser_add2bc69a335d60c305660c42dbb52cf2}{warn} (const char $\ast$file\+Name, int line, const char $\ast$fmt,...) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Parser for templates. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_template_parser_a074067c80442cfb4e103bc5183679073}{}\index{Template\+Parser@{Template\+Parser}!Template\+Parser@{Template\+Parser}}
+\index{Template\+Parser@{Template\+Parser}!Template\+Parser@{Template\+Parser}}
+\subsubsection[{Template\+Parser(const Template\+Engine $\ast$engine, const Q\+C\+String \&template\+Name, Q\+List$<$ Template\+Token $>$ \&tokens)}]{\setlength{\rightskip}{0pt plus 5cm}Template\+Parser\+::\+Template\+Parser (
+\begin{DoxyParamCaption}
+\item[{const {\bf Template\+Engine} $\ast$}]{engine, }
+\item[{const {\bf Q\+C\+String} \&}]{template\+Name, }
+\item[{{\bf Q\+List}$<$ {\bf Template\+Token} $>$ \&}]{tokens}
+\end{DoxyParamCaption}
+)}\label{class_template_parser_a074067c80442cfb4e103bc5183679073}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_template_parser_a1cf0b832eb5cf48b86648e62e95c4e0c}{}\index{Template\+Parser@{Template\+Parser}!current\+Token@{current\+Token}}
+\index{current\+Token@{current\+Token}!Template\+Parser@{Template\+Parser}}
+\subsubsection[{current\+Token() const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Template\+Token} $\ast$ Template\+Parser\+::current\+Token (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_template_parser_a1cf0b832eb5cf48b86648e62e95c4e0c}
+\hypertarget{class_template_parser_a14daa11a9a3b70c5d0fb7b2c13ebce71}{}\index{Template\+Parser@{Template\+Parser}!has\+Next\+Token@{has\+Next\+Token}}
+\index{has\+Next\+Token@{has\+Next\+Token}!Template\+Parser@{Template\+Parser}}
+\subsubsection[{has\+Next\+Token() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Template\+Parser\+::has\+Next\+Token (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_template_parser_a14daa11a9a3b70c5d0fb7b2c13ebce71}
+\hypertarget{class_template_parser_a09037d32371845f07d8996b0d7b1d24d}{}\index{Template\+Parser@{Template\+Parser}!parse@{parse}}
+\index{parse@{parse}!Template\+Parser@{Template\+Parser}}
+\subsubsection[{parse(\+Template\+Node $\ast$parent, int line, const Q\+Str\+List \&stop\+At, Q\+List$<$ Template\+Node $>$ \&nodes)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Parser\+::parse (
+\begin{DoxyParamCaption}
+\item[{{\bf Template\+Node} $\ast$}]{parent, }
+\item[{int}]{line, }
+\item[{const {\bf Q\+Str\+List} \&}]{stop\+At, }
+\item[{{\bf Q\+List}$<$ {\bf Template\+Node} $>$ \&}]{nodes}
+\end{DoxyParamCaption}
+)}\label{class_template_parser_a09037d32371845f07d8996b0d7b1d24d}
+\hypertarget{class_template_parser_a2f48f4d2f14f5cafc4f662613c2046c5}{}\index{Template\+Parser@{Template\+Parser}!prepend\+Token@{prepend\+Token}}
+\index{prepend\+Token@{prepend\+Token}!Template\+Parser@{Template\+Parser}}
+\subsubsection[{prepend\+Token(const Template\+Token $\ast$token)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Parser\+::prepend\+Token (
+\begin{DoxyParamCaption}
+\item[{const {\bf Template\+Token} $\ast$}]{token}
+\end{DoxyParamCaption}
+)}\label{class_template_parser_a2f48f4d2f14f5cafc4f662613c2046c5}
+\hypertarget{class_template_parser_ac3e5fb3ee5dfcccbcf85440bd3b59d53}{}\index{Template\+Parser@{Template\+Parser}!remove\+Next\+Token@{remove\+Next\+Token}}
+\index{remove\+Next\+Token@{remove\+Next\+Token}!Template\+Parser@{Template\+Parser}}
+\subsubsection[{remove\+Next\+Token()}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Parser\+::remove\+Next\+Token (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_template_parser_ac3e5fb3ee5dfcccbcf85440bd3b59d53}
+\hypertarget{class_template_parser_acbe18fdf2b8306342e283e906826a3ae}{}\index{Template\+Parser@{Template\+Parser}!take\+Next\+Token@{take\+Next\+Token}}
+\index{take\+Next\+Token@{take\+Next\+Token}!Template\+Parser@{Template\+Parser}}
+\subsubsection[{take\+Next\+Token()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Token} $\ast$ Template\+Parser\+::take\+Next\+Token (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_template_parser_acbe18fdf2b8306342e283e906826a3ae}
+\hypertarget{class_template_parser_af8f8fa984a41d765f235db509f6d9a17}{}\index{Template\+Parser@{Template\+Parser}!template\+Name@{template\+Name}}
+\index{template\+Name@{template\+Name}!Template\+Parser@{Template\+Parser}}
+\subsubsection[{template\+Name() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Template\+Parser\+::template\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_parser_af8f8fa984a41d765f235db509f6d9a17}
+\hypertarget{class_template_parser_add2bc69a335d60c305660c42dbb52cf2}{}\index{Template\+Parser@{Template\+Parser}!warn@{warn}}
+\index{warn@{warn}!Template\+Parser@{Template\+Parser}}
+\subsubsection[{warn(const char $\ast$file\+Name, int line, const char $\ast$fmt,...) const }]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Parser\+::warn (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name, }
+\item[{int}]{line, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+) const}\label{class_template_parser_add2bc69a335d60c305660c42dbb52cf2}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{template_8cpp}{template.\+cpp}\end{DoxyCompactItemize}

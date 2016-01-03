@@ -1,0 +1,75 @@
+#
+# This file was generated from Makefile.in on Mer 13 mai 2015 21:14:31 EDT
+#
+
+DOXYGEN   = /Users/DonavanMartin/Desktop/ClouDIA_WEB/doxygen
+TMAKEPATH = /Users/DonavanMartin/Desktop/ClouDIA_WEB/doxygen/tmake/lib/macosx-c++
+ENV       = env TMAKEPATH="$(TMAKEPATH)"
+TMAKE     = /Users/DonavanMartin/Desktop/ClouDIA_WEB/doxygen/tmake/bin/tmake
+MAKE      = /usr/bin/make
+PYTHON    = /usr/bin/python
+PERL      = /usr/bin/perl
+LEX       = /usr/bin/flex
+RM        = rm -f
+CP        = cp
+VERSION   = 1.8.9.1
+INSTALL   = /usr/local
+INSTTOOL  = /usr/bin/install
+DOXYDOCS  = ..
+DOCDIR    = $(INSTALL)/share/doc/packages/doxygen
+QTDIR     = 
+QMAKEEXE  = 
+MKSPECS   = -spec macx-g++
+
+#
+#
+#
+# Copyright (C) 1997-2015 by Dimitri van Heesch.
+#
+# Permission to use, copy, modify, and distribute this software and its
+# documentation under the terms of the GNU General Public License is hereby
+# granted. No representations are made about the suitability of this software
+# for any purpose. It is provided "as is" without express or implied warranty.
+# See the GNU General Public License for more details.
+#
+# Documents produced by Doxygen are derivative works derived from the
+# input used in their production; they are not affected by this license.
+#
+
+GENERATED_SRC = ../generated_src/doxygen
+
+all: Makefile.libdoxygen Makefile.libdoxycfg Makefile.doxygen Makefile
+	$(MAKE) -f Makefile.libdoxycfg $@
+	$(MAKE) -f Makefile.libdoxygen $@
+	$(MAKE) -f Makefile.doxygen    $@
+
+Makefile.libdoxygen: libdoxygen.pro libdoxygen.t
+	$(ENV) $(PERL) "$(TMAKE)" libdoxygen.pro >Makefile.libdoxygen
+	echo 'HEADERS += ' `ls -1 translator_??.h`  >>Makefile.libdoxygen
+
+Makefile.libdoxycfg: libdoxycfg.pro libdoxycfg.t
+	$(ENV) $(PERL) "$(TMAKE)" libdoxycfg.pro >Makefile.libdoxycfg
+
+Makefile.doxygen: doxygen.pro
+	$(ENV) $(PERL) "$(TMAKE)" doxygen.pro >Makefile.doxygen
+
+tmake:
+	$(ENV) $(PERL) "$(TMAKE)" libdoxygen.pro >Makefile.libdoxygen
+	$(ENV) $(PERL) "$(TMAKE)" libdoxycfg.pro >Makefile.libdoxycfg
+	$(ENV) $(PERL) "$(TMAKE)" doxygen.pro >Makefile.doxygen
+
+# clean objects
+clean: Makefile.libdoxygen Makefile.libdoxycfg Makefile.doxygen
+	$(MAKE) -f Makefile.libdoxygen clean
+	$(MAKE) -f Makefile.libdoxycfg clean
+	$(MAKE) -f Makefile.doxygen    clean
+
+# also clean flex/bison generated files
+distclean: clean
+	-cd $(GENERATED_SRC) && $(RM) scanner.cpp code.cpp config.cpp pre.cpp constexp.cpp \
+	       ce_parse.cpp ce_parse.h tag.cpp commentscan.cpp \
+	       declinfo.cpp defargs.cpp commentcnv.cpp doctokenizer.cpp \
+	       pycode.cpp pyscanner.cpp fortrancode.cpp fortranscanner.cpp \
+	       xmlcode.cpp vhdlscanner.cpp vhdlcode.cpp tclscanner.cpp
+
+FORCE:

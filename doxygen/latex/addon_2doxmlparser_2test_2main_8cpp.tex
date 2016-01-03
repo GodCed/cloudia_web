@@ -1,0 +1,85 @@
+\hypertarget{addon_2doxmlparser_2test_2main_8cpp}{}\section{Référence du fichier addon/doxmlparser/test/main.cpp}
+\label{addon_2doxmlparser_2test_2main_8cpp}\index{addon/doxmlparser/test/main.\+cpp@{addon/doxmlparser/test/main.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$doxmlintf.\+h$>$}\\*
+{\ttfamily \#include $<$qstring.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{addon_2doxmlparser_2test_2main_8cpp_a252965ac24708c5eef2c225274bf49ce}{In\+Print}(x)~printf(\char`\"{}\%s\char`\"{},indent.\+latin1()), printf x;
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{addon_2doxmlparser_2test_2main_8cpp_ac384491ee77574b5a2288469946142f0}{linked\+Text\+To\+String} (\hyperlink{class_i_linked_text_iterator}{I\+Linked\+Text\+Iterator} $\ast$ti)
+\item 
+void \hyperlink{addon_2doxmlparser_2test_2main_8cpp_af899cd0966014cf52791e1d4bfe6561e}{Dump\+Doc} (\hyperlink{class_i_doc}{I\+Doc} $\ast$\hyperlink{vhdljjparser_8cpp_a9910424bf5401d657c3b3fdff6fcc152}{doc}, int level)
+\item 
+void \hyperlink{addon_2doxmlparser_2test_2main_8cpp_acfe779d8a6a9fa772da7fd1501d8e033}{Dump\+Graph} (\hyperlink{class_i_graph}{I\+Graph} $\ast$graph)
+\item 
+void \hyperlink{addon_2doxmlparser_2test_2main_8cpp_af36512b95b678416a38924340d78ff96}{Dump\+Param\+List} (\hyperlink{class_i_param_iterator}{I\+Param\+Iterator} $\ast$pli, int indent)
+\item 
+int \hyperlink{addon_2doxmlparser_2test_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{addon_2doxmlparser_2test_2main_8cpp_a252965ac24708c5eef2c225274bf49ce}{}\index{addon/doxmlparser/test/main.\+cpp@{addon/doxmlparser/test/main.\+cpp}!In\+Print@{In\+Print}}
+\index{In\+Print@{In\+Print}!addon/doxmlparser/test/main.\+cpp@{addon/doxmlparser/test/main.\+cpp}}
+\subsubsection[{In\+Print}]{\setlength{\rightskip}{0pt plus 5cm}\#define In\+Print(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~printf(\char`\"{}\%s\char`\"{},indent.\+latin1()), printf x;}\label{addon_2doxmlparser_2test_2main_8cpp_a252965ac24708c5eef2c225274bf49ce}
+Macro for printing an indented message. 
+
+\subsection{Documentation des fonctions}
+\hypertarget{addon_2doxmlparser_2test_2main_8cpp_af899cd0966014cf52791e1d4bfe6561e}{}\index{addon/doxmlparser/test/main.\+cpp@{addon/doxmlparser/test/main.\+cpp}!Dump\+Doc@{Dump\+Doc}}
+\index{Dump\+Doc@{Dump\+Doc}!addon/doxmlparser/test/main.\+cpp@{addon/doxmlparser/test/main.\+cpp}}
+\subsubsection[{Dump\+Doc(\+I\+Doc $\ast$doc, int level)}]{\setlength{\rightskip}{0pt plus 5cm}void Dump\+Doc (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Doc} $\ast$}]{doc, }
+\item[{int}]{level}
+\end{DoxyParamCaption}
+)}\label{addon_2doxmlparser_2test_2main_8cpp_af899cd0966014cf52791e1d4bfe6561e}
+Dumps the contents of a documentation block to stdout. \begin{DoxyNote}{Note}
+This function will call itself recursively. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Paramètres}
+{\em doc} & The root of the documentation tree. \\
+\hline
+{\em level} & The indent level. \\
+\hline
+\end{DoxyParams}
+\hypertarget{addon_2doxmlparser_2test_2main_8cpp_acfe779d8a6a9fa772da7fd1501d8e033}{}\index{addon/doxmlparser/test/main.\+cpp@{addon/doxmlparser/test/main.\+cpp}!Dump\+Graph@{Dump\+Graph}}
+\index{Dump\+Graph@{Dump\+Graph}!addon/doxmlparser/test/main.\+cpp@{addon/doxmlparser/test/main.\+cpp}}
+\subsubsection[{Dump\+Graph(\+I\+Graph $\ast$graph)}]{\setlength{\rightskip}{0pt plus 5cm}void Dump\+Graph (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Graph} $\ast$}]{graph}
+\end{DoxyParamCaption}
+)}\label{addon_2doxmlparser_2test_2main_8cpp_acfe779d8a6a9fa772da7fd1501d8e033}
+\hypertarget{addon_2doxmlparser_2test_2main_8cpp_af36512b95b678416a38924340d78ff96}{}\index{addon/doxmlparser/test/main.\+cpp@{addon/doxmlparser/test/main.\+cpp}!Dump\+Param\+List@{Dump\+Param\+List}}
+\index{Dump\+Param\+List@{Dump\+Param\+List}!addon/doxmlparser/test/main.\+cpp@{addon/doxmlparser/test/main.\+cpp}}
+\subsubsection[{Dump\+Param\+List(\+I\+Param\+Iterator $\ast$pli, int indent)}]{\setlength{\rightskip}{0pt plus 5cm}void Dump\+Param\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Param\+Iterator} $\ast$}]{pli, }
+\item[{int}]{indent}
+\end{DoxyParamCaption}
+)}\label{addon_2doxmlparser_2test_2main_8cpp_af36512b95b678416a38924340d78ff96}
+\hypertarget{addon_2doxmlparser_2test_2main_8cpp_ac384491ee77574b5a2288469946142f0}{}\index{addon/doxmlparser/test/main.\+cpp@{addon/doxmlparser/test/main.\+cpp}!linked\+Text\+To\+String@{linked\+Text\+To\+String}}
+\index{linked\+Text\+To\+String@{linked\+Text\+To\+String}!addon/doxmlparser/test/main.\+cpp@{addon/doxmlparser/test/main.\+cpp}}
+\subsubsection[{linked\+Text\+To\+String(\+I\+Linked\+Text\+Iterator $\ast$ti)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} linked\+Text\+To\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Linked\+Text\+Iterator} $\ast$}]{ti}
+\end{DoxyParamCaption}
+)}\label{addon_2doxmlparser_2test_2main_8cpp_ac384491ee77574b5a2288469946142f0}
+Dumps the contents of a hyperlinked text fragment as plain text to the output. \hypertarget{addon_2doxmlparser_2test_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\index{addon/doxmlparser/test/main.\+cpp@{addon/doxmlparser/test/main.\+cpp}!main@{main}}
+\index{main@{main}!addon/doxmlparser/test/main.\+cpp@{addon/doxmlparser/test/main.\+cpp}}
+\subsubsection[{main(int argc, char $\ast$$\ast$argv)}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{addon_2doxmlparser_2test_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}

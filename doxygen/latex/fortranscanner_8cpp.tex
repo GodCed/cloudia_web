@@ -1,0 +1,1371 @@
+\hypertarget{fortranscanner_8cpp}{}\section{Référence du fichier generated\+\_\+src/doxygen/fortranscanner.cpp}
+\label{fortranscanner_8cpp}\index{generated\+\_\+src/doxygen/fortranscanner.\+cpp@{generated\+\_\+src/doxygen/fortranscanner.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$qarray.\+h$>$}\\*
+{\ttfamily \#include $<$qstack.\+h$>$}\\*
+{\ttfamily \#include $<$qregexp.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$qfile.\+h$>$}\\*
+{\ttfamily \#include $<$qmap.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}fortranscanner.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}entry.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doxygen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}defargs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}language.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}commentscan.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fortrancode.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pre.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}arguments.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structyy__buffer__state}{yy\+\_\+buffer\+\_\+state}
+\item 
+struct \hyperlink{structyy__trans__info}{yy\+\_\+trans\+\_\+info}
+\item 
+struct \hyperlink{struct_symbol_modifiers}{Symbol\+Modifiers}
+\begin{DoxyCompactList}\small\item\em Holds modifiers (ie attributes) for one symbol (variable, function, etc) \end{DoxyCompactList}\item 
+struct \hyperlink{struct_comment_in_prepass}{Comment\+In\+Prepass}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a1ae16e642a197fa4948998525813c6f5}{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}~short int
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ac86ea8173dfcfc5c989d3295a77e2f95}{yy\+\_\+create\+\_\+buffer}~\hyperlink{fortranscanner_8cpp_a2bb10448b2db57b0e211270dfd168448}{fortranscanner\+Y\+Y\+\_\+create\+\_\+buffer}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ad1868c6b38b45af25a4a0f449912a808}{yy\+\_\+delete\+\_\+buffer}~\hyperlink{fortranscanner_8cpp_a377b9345a27a7e2dd6ca0c8c2cced473}{fortranscanner\+Y\+Y\+\_\+delete\+\_\+buffer}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a301f4439c9b191c80db45f5b1a8c7269}{yy\+\_\+flex\+\_\+debug}~\hyperlink{fortranscanner_8cpp_a1f859777da1a9c733c4d73584987a6ce}{fortranscanner\+Y\+Y\+\_\+flex\+\_\+debug}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_aa14efad9f9c24106a3e3398a4f6621c2}{yy\+\_\+init\+\_\+buffer}~fortranscanner\+Y\+Y\+\_\+init\+\_\+buffer
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ab01a4c7245136f22a63acac7c0ceb343}{yy\+\_\+flush\+\_\+buffer}~\hyperlink{fortranscanner_8cpp_acb5be82ac7beae36c23d2e449eef1a5b}{fortranscanner\+Y\+Y\+\_\+flush\+\_\+buffer}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a039fc377fd4784139d8706ba0ae229fa}{yy\+\_\+load\+\_\+buffer\+\_\+state}~fortranscanner\+Y\+Y\+\_\+load\+\_\+buffer\+\_\+state
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a968d5b9e7e06a38bfca977b343d47d5c}{yy\+\_\+switch\+\_\+to\+\_\+buffer}~\hyperlink{fortranscanner_8cpp_ae584e419aa3a2fb276370555018262d5}{fortranscanner\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_aa789f4617e33fb99594cb04a3688a0c1}{yyin}~\hyperlink{fortranscanner_8cpp_ab773083d2802185678cbf9e8c3136aef}{fortranscanner\+Y\+Yin}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_afa07a629486cb790560bb95713ec7794}{yyleng}~\hyperlink{fortranscanner_8cpp_a7a38734a2b4f1ea3fea054a3a5d0578f}{fortranscanner\+Y\+Yleng}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a5611300548b2030d86b6ab9168132b88}{yylex}~\hyperlink{fortranscanner_8cpp_a3ff959ac5908cd16b1f3e6c7dc1ad0e2}{fortranscanner\+Y\+Ylex}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ad71cf0fddcfe4f61de0929105b33226c}{yylineno}~\hyperlink{fortranscanner_8cpp_a3e3e7201ee8885e2bb12cbea7b77e971}{fortranscanner\+Y\+Ylineno}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a4fd44867d448dcb6fc32ea004a15de54}{yyout}~\hyperlink{fortranscanner_8cpp_a57511e5cb4459d2e6cc22bb07f1c078f}{fortranscanner\+Y\+Yout}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a2259355ac49295f72feab070a34a9b11}{yyrestart}~\hyperlink{fortranscanner_8cpp_a3639ca5ab412e6658c0b9817cebe677a}{fortranscanner\+Y\+Yrestart}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a0d71f919dbec1ffd74b2460fa7e5ac28}{yytext}~\hyperlink{fortranscanner_8cpp_a5d5a6b0a5a91f583413caba7675a51a4}{fortranscanner\+Y\+Ytext}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a5be541efdb129f7cefb2437f52fe7359}{yywrap}~\hyperlink{fortranscanner_8cpp_a0902458ff45ec107b326d15aa2a6ac74}{fortranscanner\+Y\+Ywrap}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a803397ab738ee8630166680646a2d913}{yyalloc}~\hyperlink{fortranscanner_8cpp_a7e1d068a6ca98a69dc433cef7c49f111}{fortranscanner\+Y\+Yalloc}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ab1eba250555ca003eb39387bb1a41d39}{yyrealloc}~\hyperlink{fortranscanner_8cpp_a1ee83f5f1406cab6d0c1893d336dd831}{fortranscanner\+Y\+Yrealloc}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a4fa4368d47620ea80150b516e8884f6b}{yyfree}~\hyperlink{fortranscanner_8cpp_aac9459fec13f44d06d69328bd31f97f4}{fortranscanner\+Y\+Yfree}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a3c3d1ef92e93b0bc81d7760a73d5c3b6}{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a243ca1d30872935faf05ea5118ed6fdc}{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}~2
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a90f9d458829400869e47efb68a865677}{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}~5
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ac676bd06869180ea493e9b6d7c078dbb}{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}~35
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a9465c9986fdda27730c9dff8d16a0887}{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_aec980b5a71bbe6d67931df20f0ebaec4}{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_aadcf2a81af243df333b31efa6461ab8e}{I\+N\+T8\+\_\+\+M\+I\+N}~(-\/128)
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ad4e9955955b27624963643eac448118a}{I\+N\+T16\+\_\+\+M\+I\+N}~(-\/32767-\/1)
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a688eb21a22db27c2b2bd5836943cdcbe}{I\+N\+T32\+\_\+\+M\+I\+N}~(-\/2147483647-\/1)
+\item 
+\#define \hyperlink{fortranscanner_8cpp_aaf7f29f45f1a513b4748a4e5014ddf6a}{I\+N\+T8\+\_\+\+M\+A\+X}~(127)
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ac58f2c111cc9989c86db2a7dc4fd84ca}{I\+N\+T16\+\_\+\+M\+A\+X}~(32767)
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a181807730d4a375f848ba139813ce04f}{I\+N\+T32\+\_\+\+M\+A\+X}~(2147483647)
+\item 
+\#define \hyperlink{fortranscanner_8cpp_aeb4e270a084ee26fe73e799861bd0252}{U\+I\+N\+T8\+\_\+\+M\+A\+X}~(255\+U)
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a3ea490c9b3617d4479bd80ef93cd5602}{U\+I\+N\+T16\+\_\+\+M\+A\+X}~(65535\+U)
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ab5eb23180f7cc12b7d6c04a8ec067fdd}{U\+I\+N\+T32\+\_\+\+M\+A\+X}~(4294967295\+U)
+\item 
+\#define \hyperlink{fortranscanner_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}{Y\+Y\+\_\+\+N\+U\+L\+L}~0
+\item 
+\#define \hyperlink{fortranscanner_8cpp_af1185350b7a92cf8aa5324c68850c8a6}{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}(\hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})~((unsigned int) (unsigned char) \hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ab766bbbee08d04b67e3fe599d6900873}{B\+E\+G\+I\+N}~(yy\+\_\+start) = 1 + 2 $\ast$
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a8e14785f9eab7a997d659b25af9584c5}{Y\+Y\+\_\+\+S\+T\+A\+R\+T}~(((yy\+\_\+start) -\/ 1) / 2)
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a32b5b960944f946b192d54f672569cd9}{Y\+Y\+S\+T\+A\+T\+E}~\hyperlink{xmlcode_8cpp_a8e14785f9eab7a997d659b25af9584c5}{Y\+Y\+\_\+\+S\+T\+A\+R\+T}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}(state)~(\hyperlink{xmlcode_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R} + state + 1)
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a0406739e64fb5750cf995d2ae68ce69d}{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}~\hyperlink{fortranscanner_8cpp_a3639ca5ab412e6658c0b9817cebe677a}{fortranscanner\+Y\+Yrestart}(\hyperlink{fortranscanner_8cpp_ab773083d2802185678cbf9e8c3136aef}{fortranscanner\+Y\+Yin}  )
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}~0
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}~262144
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ac2f8b6fccdc516d96b02ac09a4dc01bd}{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}~((\hyperlink{xmlcode_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E} + 2) $\ast$ sizeof(\hyperlink{code_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{yy\+\_\+state\+\_\+type}))
+\item 
+\#define \hyperlink{fortranscanner_8cpp_aa79d63ed3ff8d2249baf1732a73089f5}{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ae0f2b0b5f04b2338367826b5670774f9}{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_adf4b0db227e07782e28ade353a7ba7a1}{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}~0
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a7f71d7fa2c403eb4b2f38cb9536f3c63}{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}~1
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ad1a0b5ebcabffe388e9e9ebb2619c1fb}{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}~2
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a12e5f3a76911433480bca7f4edba6119}{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{yyless}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a448a4e9041a09588332733c6846c770c}{unput}(\hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})~yyunput( \hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c}, (\hyperlink{xmlcode_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\+\_\+ptr})  )
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a8aaa9e1fa7f13d6954d045ef973a9c84}{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a53579db42834b88199458993912c646d}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}~0
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a609d19f40900ecc2a5f812d9388c21fb}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}~1
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ad689d97c15e807a6116ace7a420cea57}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}~2
+\item 
+\#define \hyperlink{fortranscanner_8cpp_aa093d500a6330d06d8e4760c494fac33}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}~(yy\+\_\+buffer\+\_\+stack)\mbox{[}(yy\+\_\+buffer\+\_\+stack\+\_\+top)\mbox{]}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ac5d478d90ea9a2ecd43d579067a2e89d}{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}~\hyperlink{fortranscanner_8cpp_acb5be82ac7beae36c23d2e449eef1a5b}{fortranscanner\+Y\+Y\+\_\+flush\+\_\+buffer}(\hyperlink{xmlcode_8cpp_aa093d500a6330d06d8e4760c494fac33}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R} )
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ab7eb911e18655f2f78e63afe5a8a4a12}{yy\+\_\+new\+\_\+buffer}~\hyperlink{fortranscanner_8cpp_a2bb10448b2db57b0e211270dfd168448}{fortranscanner\+Y\+Y\+\_\+create\+\_\+buffer}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ac56eb96366c08862bf0efe5d83d1fc4c}{yy\+\_\+set\+\_\+interactive}(is\+\_\+interactive)
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a12e30d13a76a94e78010db9996d39c50}{yy\+\_\+set\+\_\+bol}(at\+\_\+bol)
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a71ca89b3656acd0552f14949a571560b}{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}()~(\hyperlink{xmlcode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}-\/$>$yy\+\_\+at\+\_\+bol)
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a0902458ff45ec107b326d15aa2a6ac74}{fortranscanner\+Y\+Ywrap}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})~1
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ae1ef5933028cbc587d31328e53d11a99}{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\+\_\+ptr}~\hyperlink{fortranscanner_8cpp_a5d5a6b0a5a91f583413caba7675a51a4}{fortranscanner\+Y\+Ytext}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_acc3486d769af4e4b2820346a0093cc79}{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ae558785bb896e090901c2b905f6790c6}{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}~115
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}~116
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a76482842cdcaadf1dbdaf43df38765a2}{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}~0x2000
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a7fce78ee876950ded902364014c917e6}{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}~0x4000
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a835f10dd1ab4bf9a80c4cd80ee6e3058}{R\+E\+J\+E\+C\+T}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a745d37b5e002b2e5f93ad42ea7b554be}{yymore}()~yymore\+\_\+used\+\_\+but\+\_\+not\+\_\+detected
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a68792d73820bc46a71d3d4e613f0b977}{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}~0
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a56858d18c7eda4f53664496ef566f651}{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a234e2efe67eececd88b140b46ea37463}{D\+B\+G\+\_\+\+C\+T\+X}(x)~do \{ \} \hyperlink{xmlcode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{while}(0)
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a15b85de192a189d5a31cdd518e001e6e}{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}~1
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a85523a0c7d95c059d251b4e9829947aa}{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}~1
+\item 
+\#define \hyperlink{fortranscanner_8cpp_aacfdca45fa4beb8b06172525a53c424a}{Y\+Y\+\_\+\+I\+N\+P\+U\+T}(buf,  result,  max\+\_\+size)~result=yyread(buf,max\+\_\+size);
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}~yy\+Col\+Nr+=(int)\hyperlink{fortranscanner_8cpp_a7a38734a2b4f1ea3fea054a3a5d0578f}{fortranscanner\+Y\+Yleng};
+\item 
+\#define \hyperlink{fortranscanner_8cpp_aa3d063564f6ab16f6d408b8369d0e9ff}{I\+N\+I\+T\+I\+A\+L}~0
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a12a6640aea50c03a59ed0a1ea09848cd}{Subprog}~1
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a9bcb9b086389a98204c6defbcd2c6898}{Subprog\+Prefix}~2
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a09e8313d350d50a798ca891a28872f51}{Parameterlist}~3
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a6027b94715ffb1922e744b8722e2fc82}{Subprog\+Body}~4
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ade5ba27fb249101026c86a34c4f360b5}{Subprog\+Body\+Contains}~5
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a991581d134a6f84d55be043b6e34afd7}{Start}~6
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a734aadda90260df254153f157981235e}{Comment}~7
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a6252a35ef7bd8b22f2201a21380919b7}{Module}~8
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a05be407ac4a1bdb2b1afa0bee3093deb}{Program}~9
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a2aa05804eb2b2c060206a02ae53e3269}{Module\+Body}~10
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a870b993c1ed3c9499e912668060e662a}{Module\+Body\+Contains}~11
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a2e77db5c6510952c641a3f298448082a}{Attribute\+List}~12
+\item 
+\#define \hyperlink{fortranscanner_8cpp_abd5eb2a4df92a38985d28db786722d87}{Variable}~13
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ae97274283a85d6ec796638132f0480f4}{Initialization}~14
+\item 
+\#define \hyperlink{fortranscanner_8cpp_afb9e56fc52f584e1e88a664ccaef225f}{Array\+Initializer}~15
+\item 
+\#define \hyperlink{fortranscanner_8cpp_acb079124b9b9fc59444e89854809210b}{Typedef}~16
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a9fc364ac181bb6f7e2686a09347cef1f}{Typedef\+Body}~17
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a36b2c44072d265bc4d9b9e16668776c4}{Typedef\+Body\+Contains}~18
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ab27798d224c47de3e3eec5ac8ea56e8c}{Interface\+Body}~19
+\item 
+\#define \hyperlink{fortranscanner_8cpp_af8f8adc3e9acabd36d1790697854dac5}{Str\+Ignore}~20
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ad3834cab10a0d63f8168683208864a90}{String}~21
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a06d02452157eee38f25368bb6fc0011f}{Use}~22
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ad9ef1480444a9dfcf6563a28cef07981}{Use\+Only}~23
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a36500e9fe5ea65a66658accbf4d7744c}{Module\+Procedure}~24
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ab5bfc2e98d9a972e878ac6e476856228}{Prepass}~25
+\item 
+\#define \hyperlink{fortranscanner_8cpp_afa531c2189ebc4218f86a05f08694d27}{Doc\+Block}~26
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a2b48c42f32bcf74ff456fe6484d1f589}{Doc\+Back\+Line}~27
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a5bb21e46de9ab1e4cae0b149aceed5d1}{End\+Doc}~28
+\item 
+\#define \hyperlink{fortranscanner_8cpp_aeb0b4e058c90a4f7734aef53278b7aa2}{Block\+Data}~29
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a2422adf721f4a12deef533081e53c971}{Prototype}~30
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a053b3a453f9a91b90b42b760e07cfc66}{Prototype\+Subprog}~31
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a7ea31303ed90a933aa90a73ad9839e13}{Prototype\+Args}~32
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a26938d921de835f6183c02e54cf08828}{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}~void $\ast$
+\item 
+\#define \hyperlink{fortranscanner_8cpp_aab1491ceccb1c95c14320b2903773a1c}{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}~262144
+\item 
+\#define \hyperlink{fortranscanner_8cpp_aad1dc60a04a1d8cfc8b3ded13601e361}{E\+C\+H\+O}~fwrite( \hyperlink{fortranscanner_8cpp_a5d5a6b0a5a91f583413caba7675a51a4}{fortranscanner\+Y\+Ytext}, \hyperlink{fortranscanner_8cpp_a7a38734a2b4f1ea3fea054a3a5d0578f}{fortranscanner\+Y\+Yleng}, 1, \hyperlink{fortranscanner_8cpp_a57511e5cb4459d2e6cc22bb07f1c078f}{fortranscanner\+Y\+Yout} )
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ac3286b18a2e91b4571b97df96a118e84}{yyterminate}()~return \hyperlink{xmlcode_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}{Y\+Y\+\_\+\+N\+U\+L\+L}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a227e75c43b9e0cd41529974230be7e75}{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}~25
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}(\hyperlink{message_8h_aba549a028419cd48a3f373037c2c57eb}{msg})~yy\+\_\+fatal\+\_\+error( \hyperlink{message_8h_aba549a028419cd48a3f373037c2c57eb}{msg} )
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a7682c8d9cec0859408d2421fbe4a5570}{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}~1
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ae5b01ac2fa5a6ad5fb97559638abe686}{Y\+Y\+\_\+\+D\+E\+C\+L}~int \hyperlink{fortranscanner_8cpp_a3ff959ac5908cd16b1f3e6c7dc1ad0e2}{fortranscanner\+Y\+Ylex} (void)
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a3cc40a460ad7df816678bcc05241e84c}{Y\+Y\+\_\+\+B\+R\+E\+A\+K}~break;
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a690504b662e4281515bf12722df178ba}{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}~2
+\item 
+\#define \hyperlink{fortranscanner_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{yyless}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+\#define \hyperlink{fortranscanner_8cpp_a828cc83270f8f5bb1688e14dd4e28128}{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}~\char`\"{}yytables\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef signed char \hyperlink{fortranscanner_8cpp_a7b0840dff4a2ef1702118aa12264b2a7}{flex\+\_\+int8\+\_\+t}
+\item 
+typedef short int \hyperlink{fortranscanner_8cpp_a2e73b2c75126814585525fb2e9d51159}{flex\+\_\+int16\+\_\+t}
+\item 
+typedef int \hyperlink{fortranscanner_8cpp_a838ce943cf44ef7769480714fc6c3ba9}{flex\+\_\+int32\+\_\+t}
+\item 
+typedef unsigned char \hyperlink{fortranscanner_8cpp_a0fac5ea484f64e75dbe6eba4aa61750c}{flex\+\_\+uint8\+\_\+t}
+\item 
+typedef unsigned short int \hyperlink{fortranscanner_8cpp_ac50cdb9eefbef83a1cec89e3a7f6e1d2}{flex\+\_\+uint16\+\_\+t}
+\item 
+typedef unsigned int \hyperlink{fortranscanner_8cpp_a36869712de12820c73aae736762e8e88}{flex\+\_\+uint32\+\_\+t}
+\item 
+typedef struct \hyperlink{structyy__buffer__state}{yy\+\_\+buffer\+\_\+state} $\ast$ \hyperlink{fortranscanner_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}
+\item 
+typedef size\+\_\+t \hyperlink{fortranscanner_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t}
+\item 
+typedef unsigned char \hyperlink{fortranscanner_8cpp_a1f324b3cb0839eeb90145f0274e6946e}{Y\+Y\+\_\+\+C\+H\+A\+R}
+\item 
+typedef int \hyperlink{fortranscanner_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{yy\+\_\+state\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{fortranscanner_8cpp_a238692c76adb8cefb158cf28754f52d6}{Scan\+Var} \{ \hyperlink{fortranscanner_8cpp_a238692c76adb8cefb158cf28754f52d6a2e626c4ec60ad2b9514c8984aa1eb3ec}{V\+\_\+\+I\+G\+N\+O\+R\+E}, 
+\hyperlink{fortranscanner_8cpp_a238692c76adb8cefb158cf28754f52d6ab238d5b991ac184d0de8dca5478f5e5c}{V\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E}, 
+\hyperlink{fortranscanner_8cpp_a238692c76adb8cefb158cf28754f52d6abc50e5df37302e97005583c6ae1257a3}{V\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R}, 
+\hyperlink{fortranscanner_8cpp_a238692c76adb8cefb158cf28754f52d6a7dd6f98b4ec3c69395dc0873ae146e40}{V\+\_\+\+R\+E\+S\+U\+L\+T}
+ \}
+\item 
+enum \hyperlink{fortranscanner_8cpp_af1ef2c97e255bd7f21d3b7614b283d9d}{Interface\+Type} \{ \hyperlink{fortranscanner_8cpp_af1ef2c97e255bd7f21d3b7614b283d9da46dbf2e0f925aa7b0f3f9edd25acf5e6}{I\+F\+\_\+\+N\+O\+N\+E}, 
+\hyperlink{fortranscanner_8cpp_af1ef2c97e255bd7f21d3b7614b283d9da89f0d2424cf9ae9c82a868376ceb29b9}{I\+F\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C}, 
+\hyperlink{fortranscanner_8cpp_af1ef2c97e255bd7f21d3b7614b283d9da5d1432a4cae2b52cafb669c901908aa5}{I\+F\+\_\+\+G\+E\+N\+E\+R\+I\+C}, 
+\hyperlink{fortranscanner_8cpp_af1ef2c97e255bd7f21d3b7614b283d9daa33f8bd097d7a6cd1210bed71c5cb937}{I\+F\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fortranscanner_8cpp_a3639ca5ab412e6658c0b9817cebe677a}{fortranscanner\+Y\+Yrestart} (F\+I\+L\+E $\ast$input\+\_\+file)
+\item 
+void \hyperlink{fortranscanner_8cpp_ae584e419aa3a2fb276370555018262d5}{fortranscanner\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} new\+\_\+buffer)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{fortranscanner_8cpp_a2bb10448b2db57b0e211270dfd168448}{fortranscanner\+Y\+Y\+\_\+create\+\_\+buffer} (F\+I\+L\+E $\ast$file, int size)
+\item 
+void \hyperlink{fortranscanner_8cpp_a377b9345a27a7e2dd6ca0c8c2cced473}{fortranscanner\+Y\+Y\+\_\+delete\+\_\+buffer} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b})
+\item 
+void \hyperlink{fortranscanner_8cpp_acb5be82ac7beae36c23d2e449eef1a5b}{fortranscanner\+Y\+Y\+\_\+flush\+\_\+buffer} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b})
+\item 
+void \hyperlink{fortranscanner_8cpp_aaac7b42a358bf975a976e2027713805d}{fortranscanner\+Y\+Ypush\+\_\+buffer\+\_\+state} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} new\+\_\+buffer)
+\item 
+void \hyperlink{fortranscanner_8cpp_a4080b4914f3f8abfab0347b275d7e7c0}{fortranscanner\+Y\+Ypop\+\_\+buffer\+\_\+state} (void)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{fortranscanner_8cpp_a8820ec024164c6b79fb5ea6feb071428}{fortranscanner\+Y\+Y\+\_\+scan\+\_\+buffer} (char $\ast$base, \hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} size)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{fortranscanner_8cpp_ac0b0d92030aabe68f7931a73b2aa2c78}{fortranscanner\+Y\+Y\+\_\+scan\+\_\+string} (\hyperlink{xmlcode_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst} char $\ast$yy\+\_\+str)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{fortranscanner_8cpp_ac136c47612d8af0bc7b0215c580424d0}{fortranscanner\+Y\+Y\+\_\+scan\+\_\+bytes} (\hyperlink{xmlcode_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst} char $\ast$bytes, \hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} len)
+\item 
+void $\ast$ \hyperlink{fortranscanner_8cpp_a7e1d068a6ca98a69dc433cef7c49f111}{fortranscanner\+Y\+Yalloc} (\hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t})
+\item 
+void $\ast$ \hyperlink{fortranscanner_8cpp_a1ee83f5f1406cab6d0c1893d336dd831}{fortranscanner\+Y\+Yrealloc} (void $\ast$, \hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t})
+\item 
+void \hyperlink{fortranscanner_8cpp_aac9459fec13f44d06d69328bd31f97f4}{fortranscanner\+Y\+Yfree} (void $\ast$)
+\item 
+int \hyperlink{fortranscanner_8cpp_afd1bcd31ba40eb883743d30c6c6eaf34}{fortranscanner\+Y\+Ylex\+\_\+destroy} (void)
+\item 
+int \hyperlink{fortranscanner_8cpp_a7aa1c3e0222a3dc6772f039bbd18cc74}{fortranscanner\+Y\+Yget\+\_\+debug} (void)
+\item 
+void \hyperlink{fortranscanner_8cpp_a4b14510f08f71e5bc3ed782b20fa62dd}{fortranscanner\+Y\+Yset\+\_\+debug} (int debug\+\_\+flag)
+\item 
+\hyperlink{xmlcode_8cpp_a26938d921de835f6183c02e54cf08828}{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E} \hyperlink{fortranscanner_8cpp_a5c9a9f9eb69faac1ccca15eaa3e0dd23}{fortranscanner\+Y\+Yget\+\_\+extra} (void)
+\item 
+void \hyperlink{fortranscanner_8cpp_a1af42a29bfb4dcd13e0006bf54acd84f}{fortranscanner\+Y\+Yset\+\_\+extra} (\hyperlink{xmlcode_8cpp_a26938d921de835f6183c02e54cf08828}{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E} user\+\_\+defined)
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{fortranscanner_8cpp_ae7eb52ac7da44869816708e3680b3657}{fortranscanner\+Y\+Yget\+\_\+in} (void)
+\item 
+void \hyperlink{fortranscanner_8cpp_ade7bb2925497a58d4efd424a5675752b}{fortranscanner\+Y\+Yset\+\_\+in} (F\+I\+L\+E $\ast$in\+\_\+str)
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{fortranscanner_8cpp_a35662ecebd65c89efe8720ef713ba337}{fortranscanner\+Y\+Yget\+\_\+out} (void)
+\item 
+void \hyperlink{fortranscanner_8cpp_a8740bf196a6401d8b4817a90e4e9c62d}{fortranscanner\+Y\+Yset\+\_\+out} (F\+I\+L\+E $\ast$out\+\_\+str)
+\item 
+\hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} \hyperlink{fortranscanner_8cpp_ad86c9de066a76358f0be1781ee4dfbb0}{fortranscanner\+Y\+Yget\+\_\+leng} (void)
+\item 
+char $\ast$ \hyperlink{fortranscanner_8cpp_a187c537c8a90b7941e3da5cf4e789ea4}{fortranscanner\+Y\+Yget\+\_\+text} (void)
+\item 
+int \hyperlink{fortranscanner_8cpp_a2f67975b05eb8a2d33c5e065c5f56e7b}{fortranscanner\+Y\+Yget\+\_\+lineno} (void)
+\item 
+void \hyperlink{fortranscanner_8cpp_a403c24d9093072820afcb51a4d5a7620}{fortranscanner\+Y\+Yset\+\_\+lineno} (int line\+\_\+number)
+\item 
+int \hyperlink{fortranscanner_8cpp_a3ff959ac5908cd16b1f3e6c7dc1ad0e2}{fortranscanner\+Y\+Ylex} (void)
+\item 
+\hyperlink{fortranscanner_8cpp_ad4a65b873df5c05570846b5413b41dfd}{if} (!(yy\+\_\+init))
+\item 
+\hyperlink{fortranscanner_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{while} (1)
+\item 
+int \hyperlink{fortranscanner_8cpp_ab4155ffea05dab2dafae68fd88a0517f}{isatty} (int)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} \hyperlink{fortranscanner_8cpp_a7a38734a2b4f1ea3fea054a3a5d0578f}{fortranscanner\+Y\+Yleng}
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{fortranscanner_8cpp_ab773083d2802185678cbf9e8c3136aef}{fortranscanner\+Y\+Yin} = (F\+I\+L\+E $\ast$) 0
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{fortranscanner_8cpp_a57511e5cb4459d2e6cc22bb07f1c078f}{fortranscanner\+Y\+Yout} = (F\+I\+L\+E $\ast$) 0
+\item 
+int \hyperlink{fortranscanner_8cpp_a3e3e7201ee8885e2bb12cbea7b77e971}{fortranscanner\+Y\+Ylineno} = 1
+\item 
+char $\ast$ \hyperlink{fortranscanner_8cpp_a5d5a6b0a5a91f583413caba7675a51a4}{fortranscanner\+Y\+Ytext}
+\item 
+int \hyperlink{fortranscanner_8cpp_a1f859777da1a9c733c4d73584987a6ce}{fortranscanner\+Y\+Y\+\_\+flex\+\_\+debug} = 0
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} $\ast$ \hyperlink{fortranscanner_8cpp_a265b4e5f4131304ad3fcf64406ad16e8}{include\+\_\+stack} = N\+U\+L\+L
+\item 
+int \hyperlink{fortranscanner_8cpp_aa76181ea4c570570808e63d1b4c45043}{include\+\_\+stack\+\_\+ptr} = 0
+\item 
+int \hyperlink{fortranscanner_8cpp_a1c997fb2c6f42c840fff0fd57e4acf34}{include\+\_\+stack\+\_\+cnt} = 0
+\item 
+\hyperlink{xmlcode_8cpp_abcefb20c54ce0f92452cfbb9cf657670}{Y\+Y\+\_\+\+D\+E\+C\+L} register \hyperlink{code_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{yy\+\_\+state\+\_\+type} \hyperlink{fortranscanner_8cpp_a86a21c2101611f87781b40b111e65aac}{yy\+\_\+current\+\_\+state}
+\item 
+register char $\ast$ \hyperlink{fortranscanner_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\+\_\+cp}
+\item 
+register char $\ast$ \hyperlink{fortranscanner_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\+\_\+bp}
+\item 
+register int \hyperlink{fortranscanner_8cpp_a7ffc8c947830757dd87ad202a6823edd}{yy\+\_\+act}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{fortranscanner_8cpp_afb9e56fc52f584e1e88a664ccaef225f}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Array\+Initializer@{Array\+Initializer}}
+\index{Array\+Initializer@{Array\+Initializer}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Array\+Initializer}]{\setlength{\rightskip}{0pt plus 5cm}\#define Array\+Initializer~15}\label{fortranscanner_8cpp_afb9e56fc52f584e1e88a664ccaef225f}
+\hypertarget{fortranscanner_8cpp_a2e77db5c6510952c641a3f298448082a}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Attribute\+List@{Attribute\+List}}
+\index{Attribute\+List@{Attribute\+List}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Attribute\+List}]{\setlength{\rightskip}{0pt plus 5cm}\#define Attribute\+List~12}\label{fortranscanner_8cpp_a2e77db5c6510952c641a3f298448082a}
+\hypertarget{fortranscanner_8cpp_ab766bbbee08d04b67e3fe599d6900873}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!B\+E\+G\+I\+N@{B\+E\+G\+I\+N}}
+\index{B\+E\+G\+I\+N@{B\+E\+G\+I\+N}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{B\+E\+G\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+E\+G\+I\+N~(yy\+\_\+start) = 1 + 2 $\ast$}\label{fortranscanner_8cpp_ab766bbbee08d04b67e3fe599d6900873}
+\hypertarget{fortranscanner_8cpp_aeb0b4e058c90a4f7734aef53278b7aa2}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Block\+Data@{Block\+Data}}
+\index{Block\+Data@{Block\+Data}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Block\+Data}]{\setlength{\rightskip}{0pt plus 5cm}\#define Block\+Data~29}\label{fortranscanner_8cpp_aeb0b4e058c90a4f7734aef53278b7aa2}
+\hypertarget{fortranscanner_8cpp_a734aadda90260df254153f157981235e}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Comment@{Comment}}
+\index{Comment@{Comment}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Comment}]{\setlength{\rightskip}{0pt plus 5cm}\#define Comment~7}\label{fortranscanner_8cpp_a734aadda90260df254153f157981235e}
+\hypertarget{fortranscanner_8cpp_a234e2efe67eececd88b140b46ea37463}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!D\+B\+G\+\_\+\+C\+T\+X@{D\+B\+G\+\_\+\+C\+T\+X}}
+\index{D\+B\+G\+\_\+\+C\+T\+X@{D\+B\+G\+\_\+\+C\+T\+X}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{D\+B\+G\+\_\+\+C\+T\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+B\+G\+\_\+\+C\+T\+X(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~do \{ \} {\bf while}(0)}\label{fortranscanner_8cpp_a234e2efe67eececd88b140b46ea37463}
+\hypertarget{fortranscanner_8cpp_a2b48c42f32bcf74ff456fe6484d1f589}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Doc\+Back\+Line@{Doc\+Back\+Line}}
+\index{Doc\+Back\+Line@{Doc\+Back\+Line}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Doc\+Back\+Line}]{\setlength{\rightskip}{0pt plus 5cm}\#define Doc\+Back\+Line~27}\label{fortranscanner_8cpp_a2b48c42f32bcf74ff456fe6484d1f589}
+\hypertarget{fortranscanner_8cpp_afa531c2189ebc4218f86a05f08694d27}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Doc\+Block@{Doc\+Block}}
+\index{Doc\+Block@{Doc\+Block}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Doc\+Block}]{\setlength{\rightskip}{0pt plus 5cm}\#define Doc\+Block~26}\label{fortranscanner_8cpp_afa531c2189ebc4218f86a05f08694d27}
+\hypertarget{fortranscanner_8cpp_aad1dc60a04a1d8cfc8b3ded13601e361}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!E\+C\+H\+O@{E\+C\+H\+O}}
+\index{E\+C\+H\+O@{E\+C\+H\+O}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{E\+C\+H\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+C\+H\+O~fwrite( {\bf fortranscanner\+Y\+Ytext}, {\bf fortranscanner\+Y\+Yleng}, 1, {\bf fortranscanner\+Y\+Yout} )}\label{fortranscanner_8cpp_aad1dc60a04a1d8cfc8b3ded13601e361}
+\hypertarget{fortranscanner_8cpp_a5bb21e46de9ab1e4cae0b149aceed5d1}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!End\+Doc@{End\+Doc}}
+\index{End\+Doc@{End\+Doc}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{End\+Doc}]{\setlength{\rightskip}{0pt plus 5cm}\#define End\+Doc~28}\label{fortranscanner_8cpp_a5bb21e46de9ab1e4cae0b149aceed5d1}
+\hypertarget{fortranscanner_8cpp_adf4b0db227e07782e28ade353a7ba7a1}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}}
+\index{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N~0}\label{fortranscanner_8cpp_adf4b0db227e07782e28ade353a7ba7a1}
+\hypertarget{fortranscanner_8cpp_a7f71d7fa2c403eb4b2f38cb9536f3c63}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}}
+\index{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E~1}\label{fortranscanner_8cpp_a7f71d7fa2c403eb4b2f38cb9536f3c63}
+\hypertarget{fortranscanner_8cpp_ad1a0b5ebcabffe388e9e9ebb2619c1fb}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}}
+\index{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H~2}\label{fortranscanner_8cpp_ad1a0b5ebcabffe388e9e9ebb2619c1fb}
+\hypertarget{fortranscanner_8cpp_a9465c9986fdda27730c9dff8d16a0887}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!F\+L\+E\+X\+\_\+\+B\+E\+T\+A@{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}}
+\index{F\+L\+E\+X\+\_\+\+B\+E\+T\+A@{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+E\+X\+\_\+\+B\+E\+T\+A}\label{fortranscanner_8cpp_a9465c9986fdda27730c9dff8d16a0887}
+\hypertarget{fortranscanner_8cpp_a3c3d1ef92e93b0bc81d7760a73d5c3b6}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R@{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}}
+\index{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R@{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}\label{fortranscanner_8cpp_a3c3d1ef92e93b0bc81d7760a73d5c3b6}
+\hypertarget{fortranscanner_8cpp_aec980b5a71bbe6d67931df20f0ebaec4}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!F\+L\+E\+X\+I\+N\+T\+\_\+\+H@{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}}
+\index{F\+L\+E\+X\+I\+N\+T\+\_\+\+H@{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+E\+X\+I\+N\+T\+\_\+\+H}\label{fortranscanner_8cpp_aec980b5a71bbe6d67931df20f0ebaec4}
+\hypertarget{fortranscanner_8cpp_a0902458ff45ec107b326d15aa2a6ac74}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Ywrap@{fortranscanner\+Y\+Ywrap}}
+\index{fortranscanner\+Y\+Ywrap@{fortranscanner\+Y\+Ywrap}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Ywrap}]{\setlength{\rightskip}{0pt plus 5cm}\#define fortranscanner\+Y\+Ywrap(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)~1}\label{fortranscanner_8cpp_a0902458ff45ec107b326d15aa2a6ac74}
+\hypertarget{fortranscanner_8cpp_aa3d063564f6ab16f6d408b8369d0e9ff}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!I\+N\+I\+T\+I\+A\+L@{I\+N\+I\+T\+I\+A\+L}}
+\index{I\+N\+I\+T\+I\+A\+L@{I\+N\+I\+T\+I\+A\+L}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{I\+N\+I\+T\+I\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+I\+T\+I\+A\+L~0}\label{fortranscanner_8cpp_aa3d063564f6ab16f6d408b8369d0e9ff}
+fortran parsing states comment parsing states prototype parsing \hypertarget{fortranscanner_8cpp_ae97274283a85d6ec796638132f0480f4}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Initialization@{Initialization}}
+\index{Initialization@{Initialization}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Initialization}]{\setlength{\rightskip}{0pt plus 5cm}\#define Initialization~14}\label{fortranscanner_8cpp_ae97274283a85d6ec796638132f0480f4}
+\hypertarget{fortranscanner_8cpp_ac58f2c111cc9989c86db2a7dc4fd84ca}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!I\+N\+T16\+\_\+\+M\+A\+X@{I\+N\+T16\+\_\+\+M\+A\+X}}
+\index{I\+N\+T16\+\_\+\+M\+A\+X@{I\+N\+T16\+\_\+\+M\+A\+X}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{I\+N\+T16\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T16\+\_\+\+M\+A\+X~(32767)}\label{fortranscanner_8cpp_ac58f2c111cc9989c86db2a7dc4fd84ca}
+\hypertarget{fortranscanner_8cpp_ad4e9955955b27624963643eac448118a}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!I\+N\+T16\+\_\+\+M\+I\+N@{I\+N\+T16\+\_\+\+M\+I\+N}}
+\index{I\+N\+T16\+\_\+\+M\+I\+N@{I\+N\+T16\+\_\+\+M\+I\+N}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{I\+N\+T16\+\_\+\+M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T16\+\_\+\+M\+I\+N~(-\/32767-\/1)}\label{fortranscanner_8cpp_ad4e9955955b27624963643eac448118a}
+\hypertarget{fortranscanner_8cpp_a181807730d4a375f848ba139813ce04f}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!I\+N\+T32\+\_\+\+M\+A\+X@{I\+N\+T32\+\_\+\+M\+A\+X}}
+\index{I\+N\+T32\+\_\+\+M\+A\+X@{I\+N\+T32\+\_\+\+M\+A\+X}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{I\+N\+T32\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T32\+\_\+\+M\+A\+X~(2147483647)}\label{fortranscanner_8cpp_a181807730d4a375f848ba139813ce04f}
+\hypertarget{fortranscanner_8cpp_a688eb21a22db27c2b2bd5836943cdcbe}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!I\+N\+T32\+\_\+\+M\+I\+N@{I\+N\+T32\+\_\+\+M\+I\+N}}
+\index{I\+N\+T32\+\_\+\+M\+I\+N@{I\+N\+T32\+\_\+\+M\+I\+N}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{I\+N\+T32\+\_\+\+M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T32\+\_\+\+M\+I\+N~(-\/2147483647-\/1)}\label{fortranscanner_8cpp_a688eb21a22db27c2b2bd5836943cdcbe}
+\hypertarget{fortranscanner_8cpp_aaf7f29f45f1a513b4748a4e5014ddf6a}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!I\+N\+T8\+\_\+\+M\+A\+X@{I\+N\+T8\+\_\+\+M\+A\+X}}
+\index{I\+N\+T8\+\_\+\+M\+A\+X@{I\+N\+T8\+\_\+\+M\+A\+X}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{I\+N\+T8\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T8\+\_\+\+M\+A\+X~(127)}\label{fortranscanner_8cpp_aaf7f29f45f1a513b4748a4e5014ddf6a}
+\hypertarget{fortranscanner_8cpp_aadcf2a81af243df333b31efa6461ab8e}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!I\+N\+T8\+\_\+\+M\+I\+N@{I\+N\+T8\+\_\+\+M\+I\+N}}
+\index{I\+N\+T8\+\_\+\+M\+I\+N@{I\+N\+T8\+\_\+\+M\+I\+N}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{I\+N\+T8\+\_\+\+M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T8\+\_\+\+M\+I\+N~(-\/128)}\label{fortranscanner_8cpp_aadcf2a81af243df333b31efa6461ab8e}
+\hypertarget{fortranscanner_8cpp_ab27798d224c47de3e3eec5ac8ea56e8c}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Interface\+Body@{Interface\+Body}}
+\index{Interface\+Body@{Interface\+Body}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Interface\+Body}]{\setlength{\rightskip}{0pt plus 5cm}\#define Interface\+Body~19}\label{fortranscanner_8cpp_ab27798d224c47de3e3eec5ac8ea56e8c}
+\hypertarget{fortranscanner_8cpp_a6252a35ef7bd8b22f2201a21380919b7}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Module@{Module}}
+\index{Module@{Module}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Module}]{\setlength{\rightskip}{0pt plus 5cm}\#define Module~8}\label{fortranscanner_8cpp_a6252a35ef7bd8b22f2201a21380919b7}
+\hypertarget{fortranscanner_8cpp_a2aa05804eb2b2c060206a02ae53e3269}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Module\+Body@{Module\+Body}}
+\index{Module\+Body@{Module\+Body}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Module\+Body}]{\setlength{\rightskip}{0pt plus 5cm}\#define Module\+Body~10}\label{fortranscanner_8cpp_a2aa05804eb2b2c060206a02ae53e3269}
+\hypertarget{fortranscanner_8cpp_a870b993c1ed3c9499e912668060e662a}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Module\+Body\+Contains@{Module\+Body\+Contains}}
+\index{Module\+Body\+Contains@{Module\+Body\+Contains}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Module\+Body\+Contains}]{\setlength{\rightskip}{0pt plus 5cm}\#define Module\+Body\+Contains~11}\label{fortranscanner_8cpp_a870b993c1ed3c9499e912668060e662a}
+\hypertarget{fortranscanner_8cpp_a36500e9fe5ea65a66658accbf4d7744c}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Module\+Procedure@{Module\+Procedure}}
+\index{Module\+Procedure@{Module\+Procedure}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Module\+Procedure}]{\setlength{\rightskip}{0pt plus 5cm}\#define Module\+Procedure~24}\label{fortranscanner_8cpp_a36500e9fe5ea65a66658accbf4d7744c}
+\hypertarget{fortranscanner_8cpp_a09e8313d350d50a798ca891a28872f51}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Parameterlist@{Parameterlist}}
+\index{Parameterlist@{Parameterlist}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Parameterlist}]{\setlength{\rightskip}{0pt plus 5cm}\#define Parameterlist~3}\label{fortranscanner_8cpp_a09e8313d350d50a798ca891a28872f51}
+\hypertarget{fortranscanner_8cpp_ab5bfc2e98d9a972e878ac6e476856228}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Prepass@{Prepass}}
+\index{Prepass@{Prepass}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Prepass}]{\setlength{\rightskip}{0pt plus 5cm}\#define Prepass~25}\label{fortranscanner_8cpp_ab5bfc2e98d9a972e878ac6e476856228}
+\hypertarget{fortranscanner_8cpp_a05be407ac4a1bdb2b1afa0bee3093deb}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Program@{Program}}
+\index{Program@{Program}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Program}]{\setlength{\rightskip}{0pt plus 5cm}\#define Program~9}\label{fortranscanner_8cpp_a05be407ac4a1bdb2b1afa0bee3093deb}
+\hypertarget{fortranscanner_8cpp_a2422adf721f4a12deef533081e53c971}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Prototype@{Prototype}}
+\index{Prototype@{Prototype}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Prototype}]{\setlength{\rightskip}{0pt plus 5cm}\#define Prototype~30}\label{fortranscanner_8cpp_a2422adf721f4a12deef533081e53c971}
+\hypertarget{fortranscanner_8cpp_a7ea31303ed90a933aa90a73ad9839e13}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Prototype\+Args@{Prototype\+Args}}
+\index{Prototype\+Args@{Prototype\+Args}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Prototype\+Args}]{\setlength{\rightskip}{0pt plus 5cm}\#define Prototype\+Args~32}\label{fortranscanner_8cpp_a7ea31303ed90a933aa90a73ad9839e13}
+\hypertarget{fortranscanner_8cpp_a053b3a453f9a91b90b42b760e07cfc66}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Prototype\+Subprog@{Prototype\+Subprog}}
+\index{Prototype\+Subprog@{Prototype\+Subprog}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Prototype\+Subprog}]{\setlength{\rightskip}{0pt plus 5cm}\#define Prototype\+Subprog~31}\label{fortranscanner_8cpp_a053b3a453f9a91b90b42b760e07cfc66}
+\hypertarget{fortranscanner_8cpp_a835f10dd1ab4bf9a80c4cd80ee6e3058}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!R\+E\+J\+E\+C\+T@{R\+E\+J\+E\+C\+T}}
+\index{R\+E\+J\+E\+C\+T@{R\+E\+J\+E\+C\+T}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{R\+E\+J\+E\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+J\+E\+C\+T}\label{fortranscanner_8cpp_a835f10dd1ab4bf9a80c4cd80ee6e3058}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\{ \(\backslash\)
+*\hyperlink{fortranscanner_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = (yy\_hold\_char); \textcolor{comment}{/* undo effects of setting up fortranscannerYYtext */} 
+      \hyperlink{fortranscanner_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{\(\backslash\)}
+\hyperlink{fortranscanner_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = (yy\_full\_match); \textcolor{comment}{/* restore poss. backed-over text */} \(\backslash\)
+(yy\_lp) = (yy\_full\_lp); \textcolor{comment}{/* restore orig. accepting pos. */} \(\backslash\)
+(yy\_state\_ptr) = (yy\_full\_state); \textcolor{comment}{/* restore orig. state */} \hyperlink{fortranscanner_8cpp_a86a21c2101611f87781b40b111e65aac}{\(\backslash\)}
+\hyperlink{fortranscanner_8cpp_a86a21c2101611f87781b40b111e65aac}{yy\_current\_state} = *(yy\_state\_ptr); \textcolor{comment}{/* restore curr. state */} \(\backslash\)
+++(yy\_lp); \(\backslash\)
+goto find\_rule; \(\backslash\)
+\}
+\end{DoxyCode}
+\hypertarget{fortranscanner_8cpp_a991581d134a6f84d55be043b6e34afd7}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Start@{Start}}
+\index{Start@{Start}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Start}]{\setlength{\rightskip}{0pt plus 5cm}\#define Start~6}\label{fortranscanner_8cpp_a991581d134a6f84d55be043b6e34afd7}
+\hypertarget{fortranscanner_8cpp_af8f8adc3e9acabd36d1790697854dac5}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Str\+Ignore@{Str\+Ignore}}
+\index{Str\+Ignore@{Str\+Ignore}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Str\+Ignore}]{\setlength{\rightskip}{0pt plus 5cm}\#define Str\+Ignore~20}\label{fortranscanner_8cpp_af8f8adc3e9acabd36d1790697854dac5}
+\hypertarget{fortranscanner_8cpp_ad3834cab10a0d63f8168683208864a90}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!String@{String}}
+\index{String@{String}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{String}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf String}~21}\label{fortranscanner_8cpp_ad3834cab10a0d63f8168683208864a90}
+\hypertarget{fortranscanner_8cpp_a12a6640aea50c03a59ed0a1ea09848cd}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Subprog@{Subprog}}
+\index{Subprog@{Subprog}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Subprog}]{\setlength{\rightskip}{0pt plus 5cm}\#define Subprog~1}\label{fortranscanner_8cpp_a12a6640aea50c03a59ed0a1ea09848cd}
+\hypertarget{fortranscanner_8cpp_a6027b94715ffb1922e744b8722e2fc82}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Subprog\+Body@{Subprog\+Body}}
+\index{Subprog\+Body@{Subprog\+Body}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Subprog\+Body}]{\setlength{\rightskip}{0pt plus 5cm}\#define Subprog\+Body~4}\label{fortranscanner_8cpp_a6027b94715ffb1922e744b8722e2fc82}
+\hypertarget{fortranscanner_8cpp_ade5ba27fb249101026c86a34c4f360b5}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Subprog\+Body\+Contains@{Subprog\+Body\+Contains}}
+\index{Subprog\+Body\+Contains@{Subprog\+Body\+Contains}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Subprog\+Body\+Contains}]{\setlength{\rightskip}{0pt plus 5cm}\#define Subprog\+Body\+Contains~5}\label{fortranscanner_8cpp_ade5ba27fb249101026c86a34c4f360b5}
+\hypertarget{fortranscanner_8cpp_a9bcb9b086389a98204c6defbcd2c6898}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Subprog\+Prefix@{Subprog\+Prefix}}
+\index{Subprog\+Prefix@{Subprog\+Prefix}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Subprog\+Prefix}]{\setlength{\rightskip}{0pt plus 5cm}\#define Subprog\+Prefix~2}\label{fortranscanner_8cpp_a9bcb9b086389a98204c6defbcd2c6898}
+\hypertarget{fortranscanner_8cpp_acb079124b9b9fc59444e89854809210b}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Typedef@{Typedef}}
+\index{Typedef@{Typedef}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Typedef}]{\setlength{\rightskip}{0pt plus 5cm}\#define Typedef~16}\label{fortranscanner_8cpp_acb079124b9b9fc59444e89854809210b}
+\hypertarget{fortranscanner_8cpp_a9fc364ac181bb6f7e2686a09347cef1f}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Typedef\+Body@{Typedef\+Body}}
+\index{Typedef\+Body@{Typedef\+Body}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Typedef\+Body}]{\setlength{\rightskip}{0pt plus 5cm}\#define Typedef\+Body~17}\label{fortranscanner_8cpp_a9fc364ac181bb6f7e2686a09347cef1f}
+\hypertarget{fortranscanner_8cpp_a36b2c44072d265bc4d9b9e16668776c4}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Typedef\+Body\+Contains@{Typedef\+Body\+Contains}}
+\index{Typedef\+Body\+Contains@{Typedef\+Body\+Contains}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Typedef\+Body\+Contains}]{\setlength{\rightskip}{0pt plus 5cm}\#define Typedef\+Body\+Contains~18}\label{fortranscanner_8cpp_a36b2c44072d265bc4d9b9e16668776c4}
+\hypertarget{fortranscanner_8cpp_a3ea490c9b3617d4479bd80ef93cd5602}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!U\+I\+N\+T16\+\_\+\+M\+A\+X@{U\+I\+N\+T16\+\_\+\+M\+A\+X}}
+\index{U\+I\+N\+T16\+\_\+\+M\+A\+X@{U\+I\+N\+T16\+\_\+\+M\+A\+X}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{U\+I\+N\+T16\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+I\+N\+T16\+\_\+\+M\+A\+X~(65535\+U)}\label{fortranscanner_8cpp_a3ea490c9b3617d4479bd80ef93cd5602}
+\hypertarget{fortranscanner_8cpp_ab5eb23180f7cc12b7d6c04a8ec067fdd}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!U\+I\+N\+T32\+\_\+\+M\+A\+X@{U\+I\+N\+T32\+\_\+\+M\+A\+X}}
+\index{U\+I\+N\+T32\+\_\+\+M\+A\+X@{U\+I\+N\+T32\+\_\+\+M\+A\+X}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{U\+I\+N\+T32\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+I\+N\+T32\+\_\+\+M\+A\+X~(4294967295\+U)}\label{fortranscanner_8cpp_ab5eb23180f7cc12b7d6c04a8ec067fdd}
+\hypertarget{fortranscanner_8cpp_aeb4e270a084ee26fe73e799861bd0252}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!U\+I\+N\+T8\+\_\+\+M\+A\+X@{U\+I\+N\+T8\+\_\+\+M\+A\+X}}
+\index{U\+I\+N\+T8\+\_\+\+M\+A\+X@{U\+I\+N\+T8\+\_\+\+M\+A\+X}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{U\+I\+N\+T8\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+I\+N\+T8\+\_\+\+M\+A\+X~(255\+U)}\label{fortranscanner_8cpp_aeb4e270a084ee26fe73e799861bd0252}
+\hypertarget{fortranscanner_8cpp_a448a4e9041a09588332733c6846c770c}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!unput@{unput}}
+\index{unput@{unput}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{unput}]{\setlength{\rightskip}{0pt plus 5cm}\#define unput(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf c}}
+\end{DoxyParamCaption}
+)~yyunput( {\bf c}, ({\bf yytext\+\_\+ptr})  )}\label{fortranscanner_8cpp_a448a4e9041a09588332733c6846c770c}
+\hypertarget{fortranscanner_8cpp_a06d02452157eee38f25368bb6fc0011f}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Use@{Use}}
+\index{Use@{Use}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Use}]{\setlength{\rightskip}{0pt plus 5cm}\#define Use~22}\label{fortranscanner_8cpp_a06d02452157eee38f25368bb6fc0011f}
+\hypertarget{fortranscanner_8cpp_ad9ef1480444a9dfcf6563a28cef07981}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Use\+Only@{Use\+Only}}
+\index{Use\+Only@{Use\+Only}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Use\+Only}]{\setlength{\rightskip}{0pt plus 5cm}\#define Use\+Only~23}\label{fortranscanner_8cpp_ad9ef1480444a9dfcf6563a28cef07981}
+\hypertarget{fortranscanner_8cpp_abd5eb2a4df92a38985d28db786722d87}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Variable@{Variable}}
+\index{Variable@{Variable}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Variable}]{\setlength{\rightskip}{0pt plus 5cm}\#define Variable~13}\label{fortranscanner_8cpp_abd5eb2a4df92a38985d28db786722d87}
+\hypertarget{fortranscanner_8cpp_a71ca89b3656acd0552f14949a571560b}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L@{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}}
+\index{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L@{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~({\bf Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}-\/$>$yy\+\_\+at\+\_\+bol)}\label{fortranscanner_8cpp_a71ca89b3656acd0552f14949a571560b}
+\hypertarget{fortranscanner_8cpp_a3cc40a460ad7df816678bcc05241e84c}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+B\+R\+E\+A\+K@{Y\+Y\+\_\+\+B\+R\+E\+A\+K}}
+\index{Y\+Y\+\_\+\+B\+R\+E\+A\+K@{Y\+Y\+\_\+\+B\+R\+E\+A\+K}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+R\+E\+A\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+R\+E\+A\+K~break;}\label{fortranscanner_8cpp_a3cc40a460ad7df816678bcc05241e84c}
+\hypertarget{fortranscanner_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E~262144}\label{fortranscanner_8cpp_ae7e51116e747d3390e7a6cfc6532834c}
+\hypertarget{fortranscanner_8cpp_ad689d97c15e807a6116ace7a420cea57}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G~2}\label{fortranscanner_8cpp_ad689d97c15e807a6116ace7a420cea57}
+\hypertarget{fortranscanner_8cpp_a53579db42834b88199458993912c646d}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W~0}\label{fortranscanner_8cpp_a53579db42834b88199458993912c646d}
+\hypertarget{fortranscanner_8cpp_a609d19f40900ecc2a5f812d9388c21fb}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L~1}\label{fortranscanner_8cpp_a609d19f40900ecc2a5f812d9388c21fb}
+\hypertarget{fortranscanner_8cpp_ac86ea8173dfcfc5c989d3295a77e2f95}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yy\+\_\+create\+\_\+buffer@{yy\+\_\+create\+\_\+buffer}}
+\index{yy\+\_\+create\+\_\+buffer@{yy\+\_\+create\+\_\+buffer}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yy\+\_\+create\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+create\+\_\+buffer~{\bf fortranscanner\+Y\+Y\+\_\+create\+\_\+buffer}}\label{fortranscanner_8cpp_ac86ea8173dfcfc5c989d3295a77e2f95}
+\hypertarget{fortranscanner_8cpp_aa093d500a6330d06d8e4760c494fac33}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}}
+\index{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}\label{fortranscanner_8cpp_aa093d500a6330d06d8e4760c494fac33}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+( (yy\_buffer\_stack) \(\backslash\)
+                          ? (yy\_buffer\_stack)[(yy\_buffer\_stack\_top)] \(\backslash\)
+                          : NULL)
+\end{DoxyCode}
+\hypertarget{fortranscanner_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}}
+\index{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E~(yy\+\_\+buffer\+\_\+stack)\mbox{[}(yy\+\_\+buffer\+\_\+stack\+\_\+top)\mbox{]}}\label{fortranscanner_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}
+\hypertarget{fortranscanner_8cpp_ae5b01ac2fa5a6ad5fb97559638abe686}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+D\+E\+C\+L@{Y\+Y\+\_\+\+D\+E\+C\+L}}
+\index{Y\+Y\+\_\+\+D\+E\+C\+L@{Y\+Y\+\_\+\+D\+E\+C\+L}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+D\+E\+C\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+D\+E\+C\+L~int {\bf fortranscanner\+Y\+Ylex} (void)}\label{fortranscanner_8cpp_ae5b01ac2fa5a6ad5fb97559638abe686}
+\hypertarget{fortranscanner_8cpp_a7682c8d9cec0859408d2421fbe4a5570}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S@{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}}
+\index{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S@{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S~1}\label{fortranscanner_8cpp_a7682c8d9cec0859408d2421fbe4a5570}
+\hypertarget{fortranscanner_8cpp_ad1868c6b38b45af25a4a0f449912a808}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yy\+\_\+delete\+\_\+buffer@{yy\+\_\+delete\+\_\+buffer}}
+\index{yy\+\_\+delete\+\_\+buffer@{yy\+\_\+delete\+\_\+buffer}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yy\+\_\+delete\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+delete\+\_\+buffer~{\bf fortranscanner\+Y\+Y\+\_\+delete\+\_\+buffer}}\label{fortranscanner_8cpp_ad1868c6b38b45af25a4a0f449912a808}
+\hypertarget{fortranscanner_8cpp_acc3486d769af4e4b2820346a0093cc79}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}\label{fortranscanner_8cpp_acc3486d769af4e4b2820346a0093cc79}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+(\hyperlink{fortranscanner_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\_ptr}) = \hyperlink{fortranscanner_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}; \hyperlink{fortranscanner_8cpp_a7a38734a2b4f1ea3fea054a3a5d0578f}{\(\backslash\)}
+\hyperlink{fortranscanner_8cpp_a7a38734a2b4f1ea3fea054a3a5d0578f}{    fortranscannerYYleng} = (\hyperlink{fortranscanner_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\_size\_t}) (\hyperlink{fortranscanner_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} - 
+      \hyperlink{fortranscanner_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}); \(\backslash\)
+    (yy\_hold\_char) = *\hyperlink{fortranscanner_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp}; \(\backslash\)
+    *\hyperlink{fortranscanner_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = \textcolor{charliteral}{'\(\backslash\)0'}; \(\backslash\)
+    (yy\_c\_buf\_p) = \hyperlink{fortranscanner_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp};
+\end{DoxyCode}
+\hypertarget{fortranscanner_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}}
+\index{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R~116}\label{fortranscanner_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}
+\hypertarget{fortranscanner_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}}
+\index{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R~0}\label{fortranscanner_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}
+\hypertarget{fortranscanner_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E@{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}}
+\index{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E@{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E~2}\label{fortranscanner_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}
+\hypertarget{fortranscanner_8cpp_a26938d921de835f6183c02e54cf08828}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E@{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}}
+\index{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E@{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E~void $\ast$}\label{fortranscanner_8cpp_a26938d921de835f6183c02e54cf08828}
+\hypertarget{fortranscanner_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R@{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}}
+\index{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R@{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf msg}}
+\end{DoxyParamCaption}
+)~yy\+\_\+fatal\+\_\+error( {\bf msg} )}\label{fortranscanner_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}
+\hypertarget{fortranscanner_8cpp_a301f4439c9b191c80db45f5b1a8c7269}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yy\+\_\+flex\+\_\+debug@{yy\+\_\+flex\+\_\+debug}}
+\index{yy\+\_\+flex\+\_\+debug@{yy\+\_\+flex\+\_\+debug}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yy\+\_\+flex\+\_\+debug}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+flex\+\_\+debug~{\bf fortranscanner\+Y\+Y\+\_\+flex\+\_\+debug}}\label{fortranscanner_8cpp_a301f4439c9b191c80db45f5b1a8c7269}
+\hypertarget{fortranscanner_8cpp_a243ca1d30872935faf05ea5118ed6fdc}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N~2}\label{fortranscanner_8cpp_a243ca1d30872935faf05ea5118ed6fdc}
+\hypertarget{fortranscanner_8cpp_a90f9d458829400869e47efb68a865677}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N~5}\label{fortranscanner_8cpp_a90f9d458829400869e47efb68a865677}
+\hypertarget{fortranscanner_8cpp_ac676bd06869180ea493e9b6d7c078dbb}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N~35}\label{fortranscanner_8cpp_ac676bd06869180ea493e9b6d7c078dbb}
+\hypertarget{fortranscanner_8cpp_ab01a4c7245136f22a63acac7c0ceb343}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yy\+\_\+flush\+\_\+buffer@{yy\+\_\+flush\+\_\+buffer}}
+\index{yy\+\_\+flush\+\_\+buffer@{yy\+\_\+flush\+\_\+buffer}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yy\+\_\+flush\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+flush\+\_\+buffer~{\bf fortranscanner\+Y\+Y\+\_\+flush\+\_\+buffer}}\label{fortranscanner_8cpp_ab01a4c7245136f22a63acac7c0ceb343}
+\hypertarget{fortranscanner_8cpp_ac5d478d90ea9a2ecd43d579067a2e89d}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}}
+\index{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R~{\bf fortranscanner\+Y\+Y\+\_\+flush\+\_\+buffer}({\bf Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R} )}\label{fortranscanner_8cpp_ac5d478d90ea9a2ecd43d579067a2e89d}
+\hypertarget{fortranscanner_8cpp_aa14efad9f9c24106a3e3398a4f6621c2}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yy\+\_\+init\+\_\+buffer@{yy\+\_\+init\+\_\+buffer}}
+\index{yy\+\_\+init\+\_\+buffer@{yy\+\_\+init\+\_\+buffer}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yy\+\_\+init\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+init\+\_\+buffer~fortranscanner\+Y\+Y\+\_\+init\+\_\+buffer}\label{fortranscanner_8cpp_aa14efad9f9c24106a3e3398a4f6621c2}
+\hypertarget{fortranscanner_8cpp_aacfdca45fa4beb8b06172525a53c424a}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+I\+N\+P\+U\+T}}
+\index{Y\+Y\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+I\+N\+P\+U\+T}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+I\+N\+P\+U\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+I\+N\+P\+U\+T(
+\begin{DoxyParamCaption}
+\item[{}]{buf, }
+\item[{}]{result, }
+\item[{}]{max\+\_\+size}
+\end{DoxyParamCaption}
+)~result=yyread(buf,max\+\_\+size);}\label{fortranscanner_8cpp_aacfdca45fa4beb8b06172525a53c424a}
+\hypertarget{fortranscanner_8cpp_a1ae16e642a197fa4948998525813c6f5}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D@{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}}
+\index{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D@{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D~short int}\label{fortranscanner_8cpp_a1ae16e642a197fa4948998525813c6f5}
+\hypertarget{fortranscanner_8cpp_a12e5f3a76911433480bca7f4edba6119}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O@{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}}
+\index{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O@{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a12e5f3a76911433480bca7f4edba6119}
+\hypertarget{fortranscanner_8cpp_a039fc377fd4784139d8706ba0ae229fa}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yy\+\_\+load\+\_\+buffer\+\_\+state@{yy\+\_\+load\+\_\+buffer\+\_\+state}}
+\index{yy\+\_\+load\+\_\+buffer\+\_\+state@{yy\+\_\+load\+\_\+buffer\+\_\+state}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yy\+\_\+load\+\_\+buffer\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+load\+\_\+buffer\+\_\+state~fortranscanner\+Y\+Y\+\_\+load\+\_\+buffer\+\_\+state}\label{fortranscanner_8cpp_a039fc377fd4784139d8706ba0ae229fa}
+\hypertarget{fortranscanner_8cpp_a68792d73820bc46a71d3d4e613f0b977}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J@{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}}
+\index{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J@{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J~0}\label{fortranscanner_8cpp_a68792d73820bc46a71d3d4e613f0b977}
+\hypertarget{fortranscanner_8cpp_a15b85de192a189d5a31cdd518e001e6e}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E@{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}}
+\index{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E@{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E~1}\label{fortranscanner_8cpp_a15b85de192a189d5a31cdd518e001e6e}
+\hypertarget{fortranscanner_8cpp_ab7eb911e18655f2f78e63afe5a8a4a12}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yy\+\_\+new\+\_\+buffer@{yy\+\_\+new\+\_\+buffer}}
+\index{yy\+\_\+new\+\_\+buffer@{yy\+\_\+new\+\_\+buffer}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yy\+\_\+new\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+new\+\_\+buffer~{\bf fortranscanner\+Y\+Y\+\_\+create\+\_\+buffer}}\label{fortranscanner_8cpp_ab7eb911e18655f2f78e63afe5a8a4a12}
+\hypertarget{fortranscanner_8cpp_a0406739e64fb5750cf995d2ae68ce69d}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E@{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}}
+\index{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E@{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E~{\bf fortranscanner\+Y\+Yrestart}({\bf fortranscanner\+Y\+Yin}  )}\label{fortranscanner_8cpp_a0406739e64fb5750cf995d2ae68ce69d}
+\hypertarget{fortranscanner_8cpp_a85523a0c7d95c059d251b4e9829947aa}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}}
+\index{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T~1}\label{fortranscanner_8cpp_a85523a0c7d95c059d251b4e9829947aa}
+\hypertarget{fortranscanner_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+N\+U\+L\+L@{Y\+Y\+\_\+\+N\+U\+L\+L}}
+\index{Y\+Y\+\_\+\+N\+U\+L\+L@{Y\+Y\+\_\+\+N\+U\+L\+L}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+U\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+U\+L\+L~0}\label{fortranscanner_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}
+\hypertarget{fortranscanner_8cpp_ae558785bb896e090901c2b905f6790c6}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S@{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}}
+\index{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S@{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S~115}\label{fortranscanner_8cpp_ae558785bb896e090901c2b905f6790c6}
+\hypertarget{fortranscanner_8cpp_aab1491ceccb1c95c14320b2903773a1c}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}}
+\index{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E~262144}\label{fortranscanner_8cpp_aab1491ceccb1c95c14320b2903773a1c}
+\hypertarget{fortranscanner_8cpp_a56858d18c7eda4f53664496ef566f651}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T@{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T@{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}\label{fortranscanner_8cpp_a56858d18c7eda4f53664496ef566f651}
+\hypertarget{fortranscanner_8cpp_a690504b662e4281515bf12722df178ba}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P@{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}}
+\index{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P@{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}\label{fortranscanner_8cpp_a690504b662e4281515bf12722df178ba}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} ( \hyperlink{fortranscanner_8cpp_a7a38734a2b4f1ea3fea054a3a5d0578f}{fortranscannerYYleng} > 0 ) \hyperlink{fortranscanner_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{fortranscanner_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{        YY\_CURRENT\_BUFFER\_LVALUE}->yy\_at\_bol = \(\backslash\)
+                (\hyperlink{fortranscanner_8cpp_a5d5a6b0a5a91f583413caba7675a51a4}{fortranscannerYYtext}[\hyperlink{fortranscanner_8cpp_a7a38734a2b4f1ea3fea054a3a5d0578f}{fortranscannerYYleng} - 1] == \textcolor{charliteral}{
+      '\(\backslash\)n'}); \hyperlink{fortranscanner_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{\(\backslash\)}
+\hyperlink{fortranscanner_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{    YY\_USER\_ACTION}
+\end{DoxyCode}
+\hypertarget{fortranscanner_8cpp_af1185350b7a92cf8aa5324c68850c8a6}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I@{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}}
+\index{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I@{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf c}}
+\end{DoxyParamCaption}
+)~((unsigned int) (unsigned char) {\bf c})}\label{fortranscanner_8cpp_af1185350b7a92cf8aa5324c68850c8a6}
+\hypertarget{fortranscanner_8cpp_a12e30d13a76a94e78010db9996d39c50}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yy\+\_\+set\+\_\+bol@{yy\+\_\+set\+\_\+bol}}
+\index{yy\+\_\+set\+\_\+bol@{yy\+\_\+set\+\_\+bol}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yy\+\_\+set\+\_\+bol}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+set\+\_\+bol(
+\begin{DoxyParamCaption}
+\item[{}]{at\+\_\+bol}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a12e30d13a76a94e78010db9996d39c50}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\{ \hyperlink{fortranscanner_8cpp_ad4a65b873df5c05570846b5413b41dfd}{\(\backslash\)}
+\hyperlink{fortranscanner_8cpp_ad4a65b873df5c05570846b5413b41dfd}{    if} ( ! \hyperlink{fortranscanner_8cpp_aa093d500a6330d06d8e4760c494fac33}{YY\_CURRENT\_BUFFER} )\{\(\backslash\)
+        fortranscannerYYensure\_buffer\_stack (); \hyperlink{fortranscanner_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{fortranscanner_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{        YY\_CURRENT\_BUFFER\_LVALUE} =    \(\backslash\)
+            fortranscannerYY\_create\_buffer(\hyperlink{fortranscanner_8cpp_ab773083d2802185678cbf9e8c3136aef}{fortranscannerYYin},
+      \hyperlink{fortranscanner_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{YY\_BUF\_SIZE} ); \(\backslash\)
+    \} \hyperlink{fortranscanner_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{fortranscanner_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{    YY\_CURRENT\_BUFFER\_LVALUE}->yy\_at\_bol = at\_bol; \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{fortranscanner_8cpp_ac56eb96366c08862bf0efe5d83d1fc4c}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yy\+\_\+set\+\_\+interactive@{yy\+\_\+set\+\_\+interactive}}
+\index{yy\+\_\+set\+\_\+interactive@{yy\+\_\+set\+\_\+interactive}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yy\+\_\+set\+\_\+interactive}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+set\+\_\+interactive(
+\begin{DoxyParamCaption}
+\item[{}]{is\+\_\+interactive}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_ac56eb96366c08862bf0efe5d83d1fc4c}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\{ \hyperlink{fortranscanner_8cpp_ad4a65b873df5c05570846b5413b41dfd}{\(\backslash\)}
+\hyperlink{fortranscanner_8cpp_ad4a65b873df5c05570846b5413b41dfd}{    if} ( ! \hyperlink{fortranscanner_8cpp_aa093d500a6330d06d8e4760c494fac33}{YY\_CURRENT\_BUFFER} )\{ \(\backslash\)
+        fortranscannerYYensure\_buffer\_stack (); \hyperlink{fortranscanner_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{fortranscanner_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{        YY\_CURRENT\_BUFFER\_LVALUE} =    \(\backslash\)
+            fortranscannerYY\_create\_buffer(\hyperlink{fortranscanner_8cpp_ab773083d2802185678cbf9e8c3136aef}{fortranscannerYYin},
+      \hyperlink{fortranscanner_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{YY\_BUF\_SIZE} ); \(\backslash\)
+    \} \hyperlink{fortranscanner_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{fortranscanner_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{    YY\_CURRENT\_BUFFER\_LVALUE}->yy\_is\_interactive = is\_interactive; \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{fortranscanner_8cpp_ae1ef5933028cbc587d31328e53d11a99}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P@{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}}
+\index{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P@{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}\label{fortranscanner_8cpp_ae1ef5933028cbc587d31328e53d11a99}
+\hypertarget{fortranscanner_8cpp_a8e14785f9eab7a997d659b25af9584c5}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+R\+T@{Y\+Y\+\_\+\+S\+T\+A\+R\+T}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+R\+T@{Y\+Y\+\_\+\+S\+T\+A\+R\+T}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+R\+T~(((yy\+\_\+start) -\/ 1) / 2)}\label{fortranscanner_8cpp_a8e14785f9eab7a997d659b25af9584c5}
+\hypertarget{fortranscanner_8cpp_a227e75c43b9e0cd41529974230be7e75}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R@{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R@{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R~25}\label{fortranscanner_8cpp_a227e75c43b9e0cd41529974230be7e75}
+\hypertarget{fortranscanner_8cpp_ac2f8b6fccdc516d96b02ac09a4dc01bd}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E~(({\bf Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E} + 2) $\ast$ sizeof({\bf yy\+\_\+state\+\_\+type}))}\label{fortranscanner_8cpp_ac2f8b6fccdc516d96b02ac09a4dc01bd}
+\hypertarget{fortranscanner_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F(
+\begin{DoxyParamCaption}
+\item[{}]{state}
+\end{DoxyParamCaption}
+)~({\bf Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R} + state + 1)}\label{fortranscanner_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}
+\hypertarget{fortranscanner_8cpp_a8aaa9e1fa7f13d6954d045ef973a9c84}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}\label{fortranscanner_8cpp_a8aaa9e1fa7f13d6954d045ef973a9c84}
+\hypertarget{fortranscanner_8cpp_a968d5b9e7e06a38bfca977b343d47d5c}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yy\+\_\+switch\+\_\+to\+\_\+buffer@{yy\+\_\+switch\+\_\+to\+\_\+buffer}}
+\index{yy\+\_\+switch\+\_\+to\+\_\+buffer@{yy\+\_\+switch\+\_\+to\+\_\+buffer}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yy\+\_\+switch\+\_\+to\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+switch\+\_\+to\+\_\+buffer~{\bf fortranscanner\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}}\label{fortranscanner_8cpp_a968d5b9e7e06a38bfca977b343d47d5c}
+\hypertarget{fortranscanner_8cpp_a7fce78ee876950ded902364014c917e6}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}}
+\index{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K~0x4000}\label{fortranscanner_8cpp_a7fce78ee876950ded902364014c917e6}
+\hypertarget{fortranscanner_8cpp_a76482842cdcaadf1dbdaf43df38765a2}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}}
+\index{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K~0x2000}\label{fortranscanner_8cpp_a76482842cdcaadf1dbdaf43df38765a2}
+\hypertarget{fortranscanner_8cpp_aa79d63ed3ff8d2249baf1732a73089f5}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}\label{fortranscanner_8cpp_aa79d63ed3ff8d2249baf1732a73089f5}
+\hypertarget{fortranscanner_8cpp_ae0f2b0b5f04b2338367826b5670774f9}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}}
+\index{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}\label{fortranscanner_8cpp_ae0f2b0b5f04b2338367826b5670774f9}
+\hypertarget{fortranscanner_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N~yy\+Col\+Nr+=(int){\bf fortranscanner\+Y\+Yleng};}\label{fortranscanner_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}
+\hypertarget{fortranscanner_8cpp_a803397ab738ee8630166680646a2d913}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yyalloc@{yyalloc}}
+\index{yyalloc@{yyalloc}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yyalloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf yyalloc}~{\bf fortranscanner\+Y\+Yalloc}}\label{fortranscanner_8cpp_a803397ab738ee8630166680646a2d913}
+\hypertarget{fortranscanner_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yyconst@{yyconst}}
+\index{yyconst@{yyconst}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yyconst}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyconst}\label{fortranscanner_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}
+\hypertarget{fortranscanner_8cpp_a4fa4368d47620ea80150b516e8884f6b}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yyfree@{yyfree}}
+\index{yyfree@{yyfree}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yyfree}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyfree~{\bf fortranscanner\+Y\+Yfree}}\label{fortranscanner_8cpp_a4fa4368d47620ea80150b516e8884f6b}
+\hypertarget{fortranscanner_8cpp_aa789f4617e33fb99594cb04a3688a0c1}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yyin@{yyin}}
+\index{yyin@{yyin}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yyin}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyin~{\bf fortranscanner\+Y\+Yin}}\label{fortranscanner_8cpp_aa789f4617e33fb99594cb04a3688a0c1}
+\hypertarget{fortranscanner_8cpp_afa07a629486cb790560bb95713ec7794}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yyleng@{yyleng}}
+\index{yyleng@{yyleng}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yyleng}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyleng~{\bf fortranscanner\+Y\+Yleng}}\label{fortranscanner_8cpp_afa07a629486cb790560bb95713ec7794}
+\hypertarget{fortranscanner_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yyless@{yyless}}
+\index{yyless@{yyless}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yyless}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyless(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \(\backslash\)
+        \{ \(\backslash\)
+        \textcolor{comment}{/* Undo effects of setting up fortranscannerYYtext. */} \(\backslash\)
+        int yyless\_macro\_arg = (\hyperlink{058__bracket__recursion_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n}); \(\backslash\)
+        YY\_LESS\_LINENO(yyless\_macro\_arg);\(\backslash\)
+        *\hyperlink{fortranscanner_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = (yy\_hold\_char); \hyperlink{fortranscanner_8cpp_a56858d18c7eda4f53664496ef566f651}{\(\backslash\)}
+\hyperlink{fortranscanner_8cpp_a56858d18c7eda4f53664496ef566f651}{        YY\_RESTORE\_YY\_MORE\_OFFSET} \(\backslash\)
+        (yy\_c\_buf\_p) = \hyperlink{fortranscanner_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = \hyperlink{fortranscanner_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp} + yyless\_macro\_arg - \hyperlink{fortranscanner_8cpp_a68792d73820bc46a71d3d4e613f0b977}{YY\_MORE\_ADJ}; 
+      \hyperlink{fortranscanner_8cpp_acc3486d769af4e4b2820346a0093cc79}{\(\backslash\)}
+\hyperlink{fortranscanner_8cpp_acc3486d769af4e4b2820346a0093cc79}{        YY\_DO\_BEFORE\_ACTION}; \textcolor{comment}{/* set up fortranscannerYYtext again */} \(\backslash\)
+        \} \hyperlink{fortranscanner_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{\(\backslash\)}
+\hyperlink{fortranscanner_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{    while} ( 0 )
+\end{DoxyCode}
+\hypertarget{fortranscanner_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yyless@{yyless}}
+\index{yyless@{yyless}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yyless}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyless(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \(\backslash\)
+        \{ \(\backslash\)
+        \textcolor{comment}{/* Undo effects of setting up fortranscannerYYtext. */} \(\backslash\)
+        int yyless\_macro\_arg = (\hyperlink{058__bracket__recursion_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n}); \(\backslash\)
+        YY\_LESS\_LINENO(yyless\_macro\_arg);\hyperlink{fortranscanner_8cpp_a5d5a6b0a5a91f583413caba7675a51a4}{\(\backslash\)}
+\hyperlink{fortranscanner_8cpp_a5d5a6b0a5a91f583413caba7675a51a4}{        fortranscannerYYtext}[\hyperlink{fortranscanner_8cpp_a7a38734a2b4f1ea3fea054a3a5d0578f}{fortranscannerYYleng}] = (
+      yy\_hold\_char); \(\backslash\)
+        (yy\_c\_buf\_p) = \hyperlink{fortranscanner_8cpp_a5d5a6b0a5a91f583413caba7675a51a4}{fortranscannerYYtext} + yyless\_macro\_arg; \(\backslash\)
+        (yy\_hold\_char) = *(yy\_c\_buf\_p); \(\backslash\)
+        *(yy\_c\_buf\_p) = \textcolor{charliteral}{'\(\backslash\)0'}; \hyperlink{fortranscanner_8cpp_a7a38734a2b4f1ea3fea054a3a5d0578f}{\(\backslash\)}
+\hyperlink{fortranscanner_8cpp_a7a38734a2b4f1ea3fea054a3a5d0578f}{        fortranscannerYYleng} = yyless\_macro\_arg; \(\backslash\)
+        \} \hyperlink{fortranscanner_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{\(\backslash\)}
+\hyperlink{fortranscanner_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{    while} ( 0 )
+\end{DoxyCode}
+\hypertarget{fortranscanner_8cpp_a5611300548b2030d86b6ab9168132b88}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yylex@{yylex}}
+\index{yylex@{yylex}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yylex}]{\setlength{\rightskip}{0pt plus 5cm}\#define yylex~{\bf fortranscanner\+Y\+Ylex}}\label{fortranscanner_8cpp_a5611300548b2030d86b6ab9168132b88}
+\hypertarget{fortranscanner_8cpp_ad71cf0fddcfe4f61de0929105b33226c}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yylineno@{yylineno}}
+\index{yylineno@{yylineno}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yylineno}]{\setlength{\rightskip}{0pt plus 5cm}\#define yylineno~{\bf fortranscanner\+Y\+Ylineno}}\label{fortranscanner_8cpp_ad71cf0fddcfe4f61de0929105b33226c}
+\hypertarget{fortranscanner_8cpp_a745d37b5e002b2e5f93ad42ea7b554be}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yymore@{yymore}}
+\index{yymore@{yymore}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yymore}]{\setlength{\rightskip}{0pt plus 5cm}\#define yymore(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~yymore\+\_\+used\+\_\+but\+\_\+not\+\_\+detected}\label{fortranscanner_8cpp_a745d37b5e002b2e5f93ad42ea7b554be}
+\hypertarget{fortranscanner_8cpp_a4fd44867d448dcb6fc32ea004a15de54}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yyout@{yyout}}
+\index{yyout@{yyout}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yyout}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyout~{\bf fortranscanner\+Y\+Yout}}\label{fortranscanner_8cpp_a4fd44867d448dcb6fc32ea004a15de54}
+\hypertarget{fortranscanner_8cpp_ab1eba250555ca003eb39387bb1a41d39}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yyrealloc@{yyrealloc}}
+\index{yyrealloc@{yyrealloc}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yyrealloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyrealloc~{\bf fortranscanner\+Y\+Yrealloc}}\label{fortranscanner_8cpp_ab1eba250555ca003eb39387bb1a41d39}
+\hypertarget{fortranscanner_8cpp_a2259355ac49295f72feab070a34a9b11}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yyrestart@{yyrestart}}
+\index{yyrestart@{yyrestart}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yyrestart}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyrestart~{\bf fortranscanner\+Y\+Yrestart}}\label{fortranscanner_8cpp_a2259355ac49295f72feab070a34a9b11}
+\hypertarget{fortranscanner_8cpp_a32b5b960944f946b192d54f672569cd9}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+S\+T\+A\+T\+E@{Y\+Y\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+S\+T\+A\+T\+E@{Y\+Y\+S\+T\+A\+T\+E}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+S\+T\+A\+T\+E~{\bf Y\+Y\+\_\+\+S\+T\+A\+R\+T}}\label{fortranscanner_8cpp_a32b5b960944f946b192d54f672569cd9}
+\hypertarget{fortranscanner_8cpp_a828cc83270f8f5bb1688e14dd4e28128}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E@{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}}
+\index{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E@{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E~\char`\"{}yytables\char`\"{}}\label{fortranscanner_8cpp_a828cc83270f8f5bb1688e14dd4e28128}
+\hypertarget{fortranscanner_8cpp_ac3286b18a2e91b4571b97df96a118e84}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yyterminate@{yyterminate}}
+\index{yyterminate@{yyterminate}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yyterminate}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyterminate(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~return {\bf Y\+Y\+\_\+\+N\+U\+L\+L}}\label{fortranscanner_8cpp_ac3286b18a2e91b4571b97df96a118e84}
+\hypertarget{fortranscanner_8cpp_a0d71f919dbec1ffd74b2460fa7e5ac28}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yytext@{yytext}}
+\index{yytext@{yytext}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yytext}]{\setlength{\rightskip}{0pt plus 5cm}\#define yytext~{\bf fortranscanner\+Y\+Ytext}}\label{fortranscanner_8cpp_a0d71f919dbec1ffd74b2460fa7e5ac28}
+\hypertarget{fortranscanner_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yytext\+\_\+ptr@{yytext\+\_\+ptr}}
+\index{yytext\+\_\+ptr@{yytext\+\_\+ptr}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yytext\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}\#define yytext\+\_\+ptr~{\bf fortranscanner\+Y\+Ytext}}\label{fortranscanner_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}
+\hypertarget{fortranscanner_8cpp_a5be541efdb129f7cefb2437f52fe7359}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yywrap@{yywrap}}
+\index{yywrap@{yywrap}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yywrap}]{\setlength{\rightskip}{0pt plus 5cm}\#define yywrap~{\bf fortranscanner\+Y\+Ywrap}}\label{fortranscanner_8cpp_a5be541efdb129f7cefb2437f52fe7359}
+
+
+\subsection{Documentation des définitions de type}
+\hypertarget{fortranscanner_8cpp_a2e73b2c75126814585525fb2e9d51159}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!flex\+\_\+int16\+\_\+t@{flex\+\_\+int16\+\_\+t}}
+\index{flex\+\_\+int16\+\_\+t@{flex\+\_\+int16\+\_\+t}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{flex\+\_\+int16\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef short int {\bf flex\+\_\+int16\+\_\+t}}\label{fortranscanner_8cpp_a2e73b2c75126814585525fb2e9d51159}
+\hypertarget{fortranscanner_8cpp_a838ce943cf44ef7769480714fc6c3ba9}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!flex\+\_\+int32\+\_\+t@{flex\+\_\+int32\+\_\+t}}
+\index{flex\+\_\+int32\+\_\+t@{flex\+\_\+int32\+\_\+t}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{flex\+\_\+int32\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf flex\+\_\+int32\+\_\+t}}\label{fortranscanner_8cpp_a838ce943cf44ef7769480714fc6c3ba9}
+\hypertarget{fortranscanner_8cpp_a7b0840dff4a2ef1702118aa12264b2a7}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!flex\+\_\+int8\+\_\+t@{flex\+\_\+int8\+\_\+t}}
+\index{flex\+\_\+int8\+\_\+t@{flex\+\_\+int8\+\_\+t}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{flex\+\_\+int8\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed char {\bf flex\+\_\+int8\+\_\+t}}\label{fortranscanner_8cpp_a7b0840dff4a2ef1702118aa12264b2a7}
+\hypertarget{fortranscanner_8cpp_ac50cdb9eefbef83a1cec89e3a7f6e1d2}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!flex\+\_\+uint16\+\_\+t@{flex\+\_\+uint16\+\_\+t}}
+\index{flex\+\_\+uint16\+\_\+t@{flex\+\_\+uint16\+\_\+t}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{flex\+\_\+uint16\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short int {\bf flex\+\_\+uint16\+\_\+t}}\label{fortranscanner_8cpp_ac50cdb9eefbef83a1cec89e3a7f6e1d2}
+\hypertarget{fortranscanner_8cpp_a36869712de12820c73aae736762e8e88}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!flex\+\_\+uint32\+\_\+t@{flex\+\_\+uint32\+\_\+t}}
+\index{flex\+\_\+uint32\+\_\+t@{flex\+\_\+uint32\+\_\+t}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{flex\+\_\+uint32\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf flex\+\_\+uint32\+\_\+t}}\label{fortranscanner_8cpp_a36869712de12820c73aae736762e8e88}
+\hypertarget{fortranscanner_8cpp_a0fac5ea484f64e75dbe6eba4aa61750c}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!flex\+\_\+uint8\+\_\+t@{flex\+\_\+uint8\+\_\+t}}
+\index{flex\+\_\+uint8\+\_\+t@{flex\+\_\+uint8\+\_\+t}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{flex\+\_\+uint8\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf flex\+\_\+uint8\+\_\+t}}\label{fortranscanner_8cpp_a0fac5ea484f64e75dbe6eba4aa61750c}
+\hypertarget{fortranscanner_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf yy\+\_\+buffer\+\_\+state}$\ast$ {\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}\label{fortranscanner_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}
+\hypertarget{fortranscanner_8cpp_a1f324b3cb0839eeb90145f0274e6946e}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Y\+Y\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+C\+H\+A\+R}}
+\index{Y\+Y\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+C\+H\+A\+R}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+C\+H\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf Y\+Y\+\_\+\+C\+H\+A\+R}}\label{fortranscanner_8cpp_a1f324b3cb0839eeb90145f0274e6946e}
+\hypertarget{fortranscanner_8cpp_ad557845057f187eec4be07e2717d2afa}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yy\+\_\+size\+\_\+t@{yy\+\_\+size\+\_\+t}}
+\index{yy\+\_\+size\+\_\+t@{yy\+\_\+size\+\_\+t}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yy\+\_\+size\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef size\+\_\+t {\bf yy\+\_\+size\+\_\+t}}\label{fortranscanner_8cpp_ad557845057f187eec4be07e2717d2afa}
+\hypertarget{fortranscanner_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yy\+\_\+state\+\_\+type@{yy\+\_\+state\+\_\+type}}
+\index{yy\+\_\+state\+\_\+type@{yy\+\_\+state\+\_\+type}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yy\+\_\+state\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf yy\+\_\+state\+\_\+type}}\label{fortranscanner_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}
+
+
+\subsection{Documentation du type de l\textquotesingle{}énumération}
+\hypertarget{fortranscanner_8cpp_af1ef2c97e255bd7f21d3b7614b283d9d}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Interface\+Type@{Interface\+Type}}
+\index{Interface\+Type@{Interface\+Type}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Interface\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Interface\+Type}}\label{fortranscanner_8cpp_af1ef2c97e255bd7f21d3b7614b283d9d}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{I\+F\+\_\+\+N\+O\+N\+E@{I\+F\+\_\+\+N\+O\+N\+E}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!I\+F\+\_\+\+N\+O\+N\+E@{I\+F\+\_\+\+N\+O\+N\+E}}\item[{\em 
+\hypertarget{fortranscanner_8cpp_af1ef2c97e255bd7f21d3b7614b283d9da46dbf2e0f925aa7b0f3f9edd25acf5e6}{}I\+F\+\_\+\+N\+O\+N\+E\label{fortranscanner_8cpp_af1ef2c97e255bd7f21d3b7614b283d9da46dbf2e0f925aa7b0f3f9edd25acf5e6}
+}]\index{I\+F\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C@{I\+F\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!I\+F\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C@{I\+F\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C}}\item[{\em 
+\hypertarget{fortranscanner_8cpp_af1ef2c97e255bd7f21d3b7614b283d9da89f0d2424cf9ae9c82a868376ceb29b9}{}I\+F\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\label{fortranscanner_8cpp_af1ef2c97e255bd7f21d3b7614b283d9da89f0d2424cf9ae9c82a868376ceb29b9}
+}]\index{I\+F\+\_\+\+G\+E\+N\+E\+R\+I\+C@{I\+F\+\_\+\+G\+E\+N\+E\+R\+I\+C}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!I\+F\+\_\+\+G\+E\+N\+E\+R\+I\+C@{I\+F\+\_\+\+G\+E\+N\+E\+R\+I\+C}}\item[{\em 
+\hypertarget{fortranscanner_8cpp_af1ef2c97e255bd7f21d3b7614b283d9da5d1432a4cae2b52cafb669c901908aa5}{}I\+F\+\_\+\+G\+E\+N\+E\+R\+I\+C\label{fortranscanner_8cpp_af1ef2c97e255bd7f21d3b7614b283d9da5d1432a4cae2b52cafb669c901908aa5}
+}]\index{I\+F\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T@{I\+F\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!I\+F\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T@{I\+F\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T}}\item[{\em 
+\hypertarget{fortranscanner_8cpp_af1ef2c97e255bd7f21d3b7614b283d9daa33f8bd097d7a6cd1210bed71c5cb937}{}I\+F\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\label{fortranscanner_8cpp_af1ef2c97e255bd7f21d3b7614b283d9daa33f8bd097d7a6cd1210bed71c5cb937}
+}]\end{description}
+\end{Desc}
+\hypertarget{fortranscanner_8cpp_a238692c76adb8cefb158cf28754f52d6}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!Scan\+Var@{Scan\+Var}}
+\index{Scan\+Var@{Scan\+Var}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{Scan\+Var}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Scan\+Var}}\label{fortranscanner_8cpp_a238692c76adb8cefb158cf28754f52d6}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{V\+\_\+\+I\+G\+N\+O\+R\+E@{V\+\_\+\+I\+G\+N\+O\+R\+E}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!V\+\_\+\+I\+G\+N\+O\+R\+E@{V\+\_\+\+I\+G\+N\+O\+R\+E}}\item[{\em 
+\hypertarget{fortranscanner_8cpp_a238692c76adb8cefb158cf28754f52d6a2e626c4ec60ad2b9514c8984aa1eb3ec}{}V\+\_\+\+I\+G\+N\+O\+R\+E\label{fortranscanner_8cpp_a238692c76adb8cefb158cf28754f52d6a2e626c4ec60ad2b9514c8984aa1eb3ec}
+}]\index{V\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E@{V\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!V\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E@{V\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E}}\item[{\em 
+\hypertarget{fortranscanner_8cpp_a238692c76adb8cefb158cf28754f52d6ab238d5b991ac184d0de8dca5478f5e5c}{}V\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\label{fortranscanner_8cpp_a238692c76adb8cefb158cf28754f52d6ab238d5b991ac184d0de8dca5478f5e5c}
+}]\index{V\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R@{V\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!V\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R@{V\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R}}\item[{\em 
+\hypertarget{fortranscanner_8cpp_a238692c76adb8cefb158cf28754f52d6abc50e5df37302e97005583c6ae1257a3}{}V\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\label{fortranscanner_8cpp_a238692c76adb8cefb158cf28754f52d6abc50e5df37302e97005583c6ae1257a3}
+}]\index{V\+\_\+\+R\+E\+S\+U\+L\+T@{V\+\_\+\+R\+E\+S\+U\+L\+T}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!V\+\_\+\+R\+E\+S\+U\+L\+T@{V\+\_\+\+R\+E\+S\+U\+L\+T}}\item[{\em 
+\hypertarget{fortranscanner_8cpp_a238692c76adb8cefb158cf28754f52d6a7dd6f98b4ec3c69395dc0873ae146e40}{}V\+\_\+\+R\+E\+S\+U\+L\+T\label{fortranscanner_8cpp_a238692c76adb8cefb158cf28754f52d6a7dd6f98b4ec3c69395dc0873ae146e40}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{fortranscanner_8cpp_a2bb10448b2db57b0e211270dfd168448}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Y\+\_\+create\+\_\+buffer@{fortranscanner\+Y\+Y\+\_\+create\+\_\+buffer}}
+\index{fortranscanner\+Y\+Y\+\_\+create\+\_\+buffer@{fortranscanner\+Y\+Y\+\_\+create\+\_\+buffer}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Y\+\_\+create\+\_\+buffer(\+F\+I\+L\+E $\ast$file, int size)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} fortranscanner\+Y\+Y\+\_\+create\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{file, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a2bb10448b2db57b0e211270dfd168448}
+Allocate and initialize an input buffer state. 
+\begin{DoxyParams}{Paramètres}
+{\em file} & \hyperlink{class_a}{A} readable stream. \\
+\hline
+{\em size} & The character buffer size in bytes. When in doubt, use {\ttfamily Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the allocated buffer state. 
+\end{DoxyReturn}
+\hypertarget{fortranscanner_8cpp_a377b9345a27a7e2dd6ca0c8c2cced473}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Y\+\_\+delete\+\_\+buffer@{fortranscanner\+Y\+Y\+\_\+delete\+\_\+buffer}}
+\index{fortranscanner\+Y\+Y\+\_\+delete\+\_\+buffer@{fortranscanner\+Y\+Y\+\_\+delete\+\_\+buffer}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Y\+\_\+delete\+\_\+buffer(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E b)}]{\setlength{\rightskip}{0pt plus 5cm}void fortranscanner\+Y\+Y\+\_\+delete\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{b}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a377b9345a27a7e2dd6ca0c8c2cced473}
+Destroy the buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em b} & a buffer created with \hyperlink{fortranscanner_8cpp_a2bb10448b2db57b0e211270dfd168448}{fortranscanner\+Y\+Y\+\_\+create\+\_\+buffer()} \\
+\hline
+\end{DoxyParams}
+\hypertarget{fortranscanner_8cpp_acb5be82ac7beae36c23d2e449eef1a5b}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Y\+\_\+flush\+\_\+buffer@{fortranscanner\+Y\+Y\+\_\+flush\+\_\+buffer}}
+\index{fortranscanner\+Y\+Y\+\_\+flush\+\_\+buffer@{fortranscanner\+Y\+Y\+\_\+flush\+\_\+buffer}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Y\+\_\+flush\+\_\+buffer(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E b)}]{\setlength{\rightskip}{0pt plus 5cm}void fortranscanner\+Y\+Y\+\_\+flush\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{b}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_acb5be82ac7beae36c23d2e449eef1a5b}
+Discard all buffered characters. On the next scan, Y\+Y\+\_\+\+I\+N\+P\+U\+T will be called. 
+\begin{DoxyParams}{Paramètres}
+{\em b} & the buffer state to be flushed, usually {\ttfamily Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{fortranscanner_8cpp_a8820ec024164c6b79fb5ea6feb071428}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Y\+\_\+scan\+\_\+buffer@{fortranscanner\+Y\+Y\+\_\+scan\+\_\+buffer}}
+\index{fortranscanner\+Y\+Y\+\_\+scan\+\_\+buffer@{fortranscanner\+Y\+Y\+\_\+scan\+\_\+buffer}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Y\+\_\+scan\+\_\+buffer(char $\ast$base, yy\+\_\+size\+\_\+t size)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} fortranscanner\+Y\+Y\+\_\+scan\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{base, }
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{size}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a8820ec024164c6b79fb5ea6feb071428}
+Setup the input buffer state to scan directly from a user-\/specified character buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em base} & the character buffer \\
+\hline
+{\em size} & the size in bytes of the character buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the newly allocated buffer state object. 
+\end{DoxyReturn}
+\hypertarget{fortranscanner_8cpp_ac136c47612d8af0bc7b0215c580424d0}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Y\+\_\+scan\+\_\+bytes@{fortranscanner\+Y\+Y\+\_\+scan\+\_\+bytes}}
+\index{fortranscanner\+Y\+Y\+\_\+scan\+\_\+bytes@{fortranscanner\+Y\+Y\+\_\+scan\+\_\+bytes}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Y\+\_\+scan\+\_\+bytes(yyconst char $\ast$bytes, yy\+\_\+size\+\_\+t len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} fortranscanner\+Y\+Y\+\_\+scan\+\_\+bytes (
+\begin{DoxyParamCaption}
+\item[{{\bf yyconst} char $\ast$}]{yybytes, }
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{\+\_\+yybytes\+\_\+len}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_ac136c47612d8af0bc7b0215c580424d0}
+Setup the input buffer state to scan the given bytes. The next call to \hyperlink{fortranscanner_8cpp_a3ff959ac5908cd16b1f3e6c7dc1ad0e2}{fortranscanner\+Y\+Ylex()} will scan from a {\itshape copy} of {\itshape bytes}. 
+\begin{DoxyParams}{Paramètres}
+{\em bytes} & the byte buffer to scan \\
+\hline
+{\em len} & the number of bytes in the buffer pointed to by {\itshape bytes}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the newly allocated buffer state object. 
+\end{DoxyReturn}
+\hypertarget{fortranscanner_8cpp_ac0b0d92030aabe68f7931a73b2aa2c78}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Y\+\_\+scan\+\_\+string@{fortranscanner\+Y\+Y\+\_\+scan\+\_\+string}}
+\index{fortranscanner\+Y\+Y\+\_\+scan\+\_\+string@{fortranscanner\+Y\+Y\+\_\+scan\+\_\+string}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Y\+\_\+scan\+\_\+string(yyconst char $\ast$yy\+\_\+str)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} fortranscanner\+Y\+Y\+\_\+scan\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{{\bf yyconst} char $\ast$}]{yystr}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_ac0b0d92030aabe68f7931a73b2aa2c78}
+Setup the input buffer state to scan a string. The next call to \hyperlink{fortranscanner_8cpp_a3ff959ac5908cd16b1f3e6c7dc1ad0e2}{fortranscanner\+Y\+Ylex()} will scan from a {\itshape copy} of {\itshape str}. 
+\begin{DoxyParams}{Paramètres}
+{\em yystr} & a N\+U\+L-\/terminated string to scan\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the newly allocated buffer state object. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If you want to scan bytes that may contain N\+U\+L values, then use \hyperlink{fortranscanner_8cpp_ac136c47612d8af0bc7b0215c580424d0}{fortranscanner\+Y\+Y\+\_\+scan\+\_\+bytes()} instead. 
+\end{DoxyNote}
+\hypertarget{fortranscanner_8cpp_ae584e419aa3a2fb276370555018262d5}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer@{fortranscanner\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}}
+\index{fortranscanner\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer@{fortranscanner\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E new\+\_\+buffer)}]{\setlength{\rightskip}{0pt plus 5cm}void fortranscanner\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{new\+\_\+buffer}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_ae584e419aa3a2fb276370555018262d5}
+Switch to a different input buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em new\+\_\+buffer} & The new input buffer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{fortranscanner_8cpp_a7e1d068a6ca98a69dc433cef7c49f111}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Yalloc@{fortranscanner\+Y\+Yalloc}}
+\index{fortranscanner\+Y\+Yalloc@{fortranscanner\+Y\+Yalloc}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Yalloc(yy\+\_\+size\+\_\+t)}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ fortranscanner\+Y\+Yalloc (
+\begin{DoxyParamCaption}
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{size}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a7e1d068a6ca98a69dc433cef7c49f111}
+\hypertarget{fortranscanner_8cpp_aac9459fec13f44d06d69328bd31f97f4}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Yfree@{fortranscanner\+Y\+Yfree}}
+\index{fortranscanner\+Y\+Yfree@{fortranscanner\+Y\+Yfree}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Yfree(void $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void fortranscanner\+Y\+Yfree (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_aac9459fec13f44d06d69328bd31f97f4}
+\hypertarget{fortranscanner_8cpp_a7aa1c3e0222a3dc6772f039bbd18cc74}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Yget\+\_\+debug@{fortranscanner\+Y\+Yget\+\_\+debug}}
+\index{fortranscanner\+Y\+Yget\+\_\+debug@{fortranscanner\+Y\+Yget\+\_\+debug}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Yget\+\_\+debug(void)}]{\setlength{\rightskip}{0pt plus 5cm}int fortranscanner\+Y\+Yget\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a7aa1c3e0222a3dc6772f039bbd18cc74}
+\hypertarget{fortranscanner_8cpp_a5c9a9f9eb69faac1ccca15eaa3e0dd23}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Yget\+\_\+extra@{fortranscanner\+Y\+Yget\+\_\+extra}}
+\index{fortranscanner\+Y\+Yget\+\_\+extra@{fortranscanner\+Y\+Yget\+\_\+extra}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Yget\+\_\+extra(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E} fortranscanner\+Y\+Yget\+\_\+extra (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a5c9a9f9eb69faac1ccca15eaa3e0dd23}
+\hypertarget{fortranscanner_8cpp_ae7eb52ac7da44869816708e3680b3657}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Yget\+\_\+in@{fortranscanner\+Y\+Yget\+\_\+in}}
+\index{fortranscanner\+Y\+Yget\+\_\+in@{fortranscanner\+Y\+Yget\+\_\+in}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Yget\+\_\+in(void)}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ fortranscanner\+Y\+Yget\+\_\+in (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_ae7eb52ac7da44869816708e3680b3657}
+Get the input stream. \hypertarget{fortranscanner_8cpp_ad86c9de066a76358f0be1781ee4dfbb0}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Yget\+\_\+leng@{fortranscanner\+Y\+Yget\+\_\+leng}}
+\index{fortranscanner\+Y\+Yget\+\_\+leng@{fortranscanner\+Y\+Yget\+\_\+leng}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Yget\+\_\+leng(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf yy\+\_\+size\+\_\+t} fortranscanner\+Y\+Yget\+\_\+leng (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_ad86c9de066a76358f0be1781ee4dfbb0}
+Get the length of the current token. \hypertarget{fortranscanner_8cpp_a2f67975b05eb8a2d33c5e065c5f56e7b}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Yget\+\_\+lineno@{fortranscanner\+Y\+Yget\+\_\+lineno}}
+\index{fortranscanner\+Y\+Yget\+\_\+lineno@{fortranscanner\+Y\+Yget\+\_\+lineno}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Yget\+\_\+lineno(void)}]{\setlength{\rightskip}{0pt plus 5cm}int fortranscanner\+Y\+Yget\+\_\+lineno (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a2f67975b05eb8a2d33c5e065c5f56e7b}
+Get the current line number. \hypertarget{fortranscanner_8cpp_a35662ecebd65c89efe8720ef713ba337}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Yget\+\_\+out@{fortranscanner\+Y\+Yget\+\_\+out}}
+\index{fortranscanner\+Y\+Yget\+\_\+out@{fortranscanner\+Y\+Yget\+\_\+out}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Yget\+\_\+out(void)}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ fortranscanner\+Y\+Yget\+\_\+out (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a35662ecebd65c89efe8720ef713ba337}
+Get the output stream. \hypertarget{fortranscanner_8cpp_a187c537c8a90b7941e3da5cf4e789ea4}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Yget\+\_\+text@{fortranscanner\+Y\+Yget\+\_\+text}}
+\index{fortranscanner\+Y\+Yget\+\_\+text@{fortranscanner\+Y\+Yget\+\_\+text}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Yget\+\_\+text(void)}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ fortranscanner\+Y\+Yget\+\_\+text (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a187c537c8a90b7941e3da5cf4e789ea4}
+Get the current token. \hypertarget{fortranscanner_8cpp_a3ff959ac5908cd16b1f3e6c7dc1ad0e2}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Ylex@{fortranscanner\+Y\+Ylex}}
+\index{fortranscanner\+Y\+Ylex@{fortranscanner\+Y\+Ylex}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Ylex(void)}]{\setlength{\rightskip}{0pt plus 5cm}int fortranscanner\+Y\+Ylex (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a3ff959ac5908cd16b1f3e6c7dc1ad0e2}
+\hypertarget{fortranscanner_8cpp_afd1bcd31ba40eb883743d30c6c6eaf34}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Ylex\+\_\+destroy@{fortranscanner\+Y\+Ylex\+\_\+destroy}}
+\index{fortranscanner\+Y\+Ylex\+\_\+destroy@{fortranscanner\+Y\+Ylex\+\_\+destroy}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Ylex\+\_\+destroy(void)}]{\setlength{\rightskip}{0pt plus 5cm}int fortranscanner\+Y\+Ylex\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_afd1bcd31ba40eb883743d30c6c6eaf34}
+\hypertarget{fortranscanner_8cpp_a4080b4914f3f8abfab0347b275d7e7c0}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Ypop\+\_\+buffer\+\_\+state@{fortranscanner\+Y\+Ypop\+\_\+buffer\+\_\+state}}
+\index{fortranscanner\+Y\+Ypop\+\_\+buffer\+\_\+state@{fortranscanner\+Y\+Ypop\+\_\+buffer\+\_\+state}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Ypop\+\_\+buffer\+\_\+state(void)}]{\setlength{\rightskip}{0pt plus 5cm}void fortranscanner\+Y\+Ypop\+\_\+buffer\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a4080b4914f3f8abfab0347b275d7e7c0}
+Removes and deletes the top of the stack, if present. The next element becomes the new top. \hypertarget{fortranscanner_8cpp_aaac7b42a358bf975a976e2027713805d}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Ypush\+\_\+buffer\+\_\+state@{fortranscanner\+Y\+Ypush\+\_\+buffer\+\_\+state}}
+\index{fortranscanner\+Y\+Ypush\+\_\+buffer\+\_\+state@{fortranscanner\+Y\+Ypush\+\_\+buffer\+\_\+state}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Ypush\+\_\+buffer\+\_\+state(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E new\+\_\+buffer)}]{\setlength{\rightskip}{0pt plus 5cm}void fortranscanner\+Y\+Ypush\+\_\+buffer\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{new\+\_\+buffer}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_aaac7b42a358bf975a976e2027713805d}
+Pushes the new state onto the stack. The new state becomes the current state. This function will allocate the stack if necessary. 
+\begin{DoxyParams}{Paramètres}
+{\em new\+\_\+buffer} & The new state. \\
+\hline
+\end{DoxyParams}
+\hypertarget{fortranscanner_8cpp_a1ee83f5f1406cab6d0c1893d336dd831}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Yrealloc@{fortranscanner\+Y\+Yrealloc}}
+\index{fortranscanner\+Y\+Yrealloc@{fortranscanner\+Y\+Yrealloc}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Yrealloc(void $\ast$, yy\+\_\+size\+\_\+t)}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ fortranscanner\+Y\+Yrealloc (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr, }
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{size}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a1ee83f5f1406cab6d0c1893d336dd831}
+\hypertarget{fortranscanner_8cpp_a3639ca5ab412e6658c0b9817cebe677a}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Yrestart@{fortranscanner\+Y\+Yrestart}}
+\index{fortranscanner\+Y\+Yrestart@{fortranscanner\+Y\+Yrestart}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Yrestart(\+F\+I\+L\+E $\ast$input\+\_\+file)}]{\setlength{\rightskip}{0pt plus 5cm}void fortranscanner\+Y\+Yrestart (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{input\+\_\+file}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a3639ca5ab412e6658c0b9817cebe677a}
+Immediately switch to a different input stream. 
+\begin{DoxyParams}{Paramètres}
+{\em input\+\_\+file} & \hyperlink{class_a}{A} readable stream.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function does not reset the start condition to {\ttfamily I\+N\+I\+T\+I\+A\+L} . 
+\end{DoxyNote}
+\hypertarget{fortranscanner_8cpp_a4b14510f08f71e5bc3ed782b20fa62dd}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Yset\+\_\+debug@{fortranscanner\+Y\+Yset\+\_\+debug}}
+\index{fortranscanner\+Y\+Yset\+\_\+debug@{fortranscanner\+Y\+Yset\+\_\+debug}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Yset\+\_\+debug(int debug\+\_\+flag)}]{\setlength{\rightskip}{0pt plus 5cm}void fortranscanner\+Y\+Yset\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{int}]{debug\+\_\+flag}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a4b14510f08f71e5bc3ed782b20fa62dd}
+\hypertarget{fortranscanner_8cpp_a1af42a29bfb4dcd13e0006bf54acd84f}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Yset\+\_\+extra@{fortranscanner\+Y\+Yset\+\_\+extra}}
+\index{fortranscanner\+Y\+Yset\+\_\+extra@{fortranscanner\+Y\+Yset\+\_\+extra}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Yset\+\_\+extra(\+Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E user\+\_\+defined)}]{\setlength{\rightskip}{0pt plus 5cm}void fortranscanner\+Y\+Yset\+\_\+extra (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}}]{user\+\_\+defined}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a1af42a29bfb4dcd13e0006bf54acd84f}
+\hypertarget{fortranscanner_8cpp_ade7bb2925497a58d4efd424a5675752b}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Yset\+\_\+in@{fortranscanner\+Y\+Yset\+\_\+in}}
+\index{fortranscanner\+Y\+Yset\+\_\+in@{fortranscanner\+Y\+Yset\+\_\+in}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Yset\+\_\+in(\+F\+I\+L\+E $\ast$in\+\_\+str)}]{\setlength{\rightskip}{0pt plus 5cm}void fortranscanner\+Y\+Yset\+\_\+in (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{in\+\_\+str}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_ade7bb2925497a58d4efd424a5675752b}
+Set the input stream. This does not discard the current input buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em in\+\_\+str} & \hyperlink{class_a}{A} readable stream.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{fortranscanner_8cpp_ae584e419aa3a2fb276370555018262d5}{fortranscanner\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer} 
+\end{DoxySeeAlso}
+\hypertarget{fortranscanner_8cpp_a403c24d9093072820afcb51a4d5a7620}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Yset\+\_\+lineno@{fortranscanner\+Y\+Yset\+\_\+lineno}}
+\index{fortranscanner\+Y\+Yset\+\_\+lineno@{fortranscanner\+Y\+Yset\+\_\+lineno}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Yset\+\_\+lineno(int line\+\_\+number)}]{\setlength{\rightskip}{0pt plus 5cm}void fortranscanner\+Y\+Yset\+\_\+lineno (
+\begin{DoxyParamCaption}
+\item[{int}]{line\+\_\+number}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a403c24d9093072820afcb51a4d5a7620}
+Set the current line number. 
+\begin{DoxyParams}{Paramètres}
+{\em line\+\_\+number} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{fortranscanner_8cpp_a8740bf196a6401d8b4817a90e4e9c62d}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Yset\+\_\+out@{fortranscanner\+Y\+Yset\+\_\+out}}
+\index{fortranscanner\+Y\+Yset\+\_\+out@{fortranscanner\+Y\+Yset\+\_\+out}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Yset\+\_\+out(\+F\+I\+L\+E $\ast$out\+\_\+str)}]{\setlength{\rightskip}{0pt plus 5cm}void fortranscanner\+Y\+Yset\+\_\+out (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{out\+\_\+str}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a8740bf196a6401d8b4817a90e4e9c62d}
+\hypertarget{fortranscanner_8cpp_ad4a65b873df5c05570846b5413b41dfd}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!if@{if}}
+\index{if@{if}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{if("!(yy\+\_\+init))}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{!}]{yy\+\_\+init}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_ad4a65b873df5c05570846b5413b41dfd}
+\hypertarget{fortranscanner_8cpp_ab4155ffea05dab2dafae68fd88a0517f}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!isatty@{isatty}}
+\index{isatty@{isatty}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{isatty(int)}]{\setlength{\rightskip}{0pt plus 5cm}int isatty (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_ab4155ffea05dab2dafae68fd88a0517f}
+\hypertarget{fortranscanner_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!while@{while}}
+\index{while@{while}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{while(1)}]{\setlength{\rightskip}{0pt plus 5cm}while (
+\begin{DoxyParamCaption}
+\item[{1}]{}
+\end{DoxyParamCaption}
+)}\label{fortranscanner_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}
+
+
+\subsection{Documentation des variables}
+\hypertarget{fortranscanner_8cpp_a1f859777da1a9c733c4d73584987a6ce}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Y\+\_\+flex\+\_\+debug@{fortranscanner\+Y\+Y\+\_\+flex\+\_\+debug}}
+\index{fortranscanner\+Y\+Y\+\_\+flex\+\_\+debug@{fortranscanner\+Y\+Y\+\_\+flex\+\_\+debug}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Y\+\_\+flex\+\_\+debug}]{\setlength{\rightskip}{0pt plus 5cm}int fortranscanner\+Y\+Y\+\_\+flex\+\_\+debug = 0}\label{fortranscanner_8cpp_a1f859777da1a9c733c4d73584987a6ce}
+\hypertarget{fortranscanner_8cpp_ab773083d2802185678cbf9e8c3136aef}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Yin@{fortranscanner\+Y\+Yin}}
+\index{fortranscanner\+Y\+Yin@{fortranscanner\+Y\+Yin}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Yin}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ fortranscanner\+Y\+Yin = (F\+I\+L\+E $\ast$) 0}\label{fortranscanner_8cpp_ab773083d2802185678cbf9e8c3136aef}
+\hypertarget{fortranscanner_8cpp_a7a38734a2b4f1ea3fea054a3a5d0578f}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Yleng@{fortranscanner\+Y\+Yleng}}
+\index{fortranscanner\+Y\+Yleng@{fortranscanner\+Y\+Yleng}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Yleng}]{\setlength{\rightskip}{0pt plus 5cm}{\bf yy\+\_\+size\+\_\+t} fortranscanner\+Y\+Yleng}\label{fortranscanner_8cpp_a7a38734a2b4f1ea3fea054a3a5d0578f}
+\hypertarget{fortranscanner_8cpp_a3e3e7201ee8885e2bb12cbea7b77e971}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Ylineno@{fortranscanner\+Y\+Ylineno}}
+\index{fortranscanner\+Y\+Ylineno@{fortranscanner\+Y\+Ylineno}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Ylineno}]{\setlength{\rightskip}{0pt plus 5cm}int fortranscanner\+Y\+Ylineno = 1}\label{fortranscanner_8cpp_a3e3e7201ee8885e2bb12cbea7b77e971}
+\hypertarget{fortranscanner_8cpp_a57511e5cb4459d2e6cc22bb07f1c078f}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Yout@{fortranscanner\+Y\+Yout}}
+\index{fortranscanner\+Y\+Yout@{fortranscanner\+Y\+Yout}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Yout}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ fortranscanner\+Y\+Yout = (F\+I\+L\+E $\ast$) 0}\label{fortranscanner_8cpp_a57511e5cb4459d2e6cc22bb07f1c078f}
+\hypertarget{fortranscanner_8cpp_a5d5a6b0a5a91f583413caba7675a51a4}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!fortranscanner\+Y\+Ytext@{fortranscanner\+Y\+Ytext}}
+\index{fortranscanner\+Y\+Ytext@{fortranscanner\+Y\+Ytext}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{fortranscanner\+Y\+Ytext}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ fortranscanner\+Y\+Ytext}\label{fortranscanner_8cpp_a5d5a6b0a5a91f583413caba7675a51a4}
+\hypertarget{fortranscanner_8cpp_a265b4e5f4131304ad3fcf64406ad16e8}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!include\+\_\+stack@{include\+\_\+stack}}
+\index{include\+\_\+stack@{include\+\_\+stack}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{include\+\_\+stack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}$\ast$ include\+\_\+stack = N\+U\+L\+L}\label{fortranscanner_8cpp_a265b4e5f4131304ad3fcf64406ad16e8}
+\hypertarget{fortranscanner_8cpp_a1c997fb2c6f42c840fff0fd57e4acf34}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!include\+\_\+stack\+\_\+cnt@{include\+\_\+stack\+\_\+cnt}}
+\index{include\+\_\+stack\+\_\+cnt@{include\+\_\+stack\+\_\+cnt}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{include\+\_\+stack\+\_\+cnt}]{\setlength{\rightskip}{0pt plus 5cm}int include\+\_\+stack\+\_\+cnt = 0}\label{fortranscanner_8cpp_a1c997fb2c6f42c840fff0fd57e4acf34}
+\hypertarget{fortranscanner_8cpp_aa76181ea4c570570808e63d1b4c45043}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!include\+\_\+stack\+\_\+ptr@{include\+\_\+stack\+\_\+ptr}}
+\index{include\+\_\+stack\+\_\+ptr@{include\+\_\+stack\+\_\+ptr}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{include\+\_\+stack\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}int include\+\_\+stack\+\_\+ptr = 0}\label{fortranscanner_8cpp_aa76181ea4c570570808e63d1b4c45043}
+\hypertarget{fortranscanner_8cpp_a7ffc8c947830757dd87ad202a6823edd}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yy\+\_\+act@{yy\+\_\+act}}
+\index{yy\+\_\+act@{yy\+\_\+act}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yy\+\_\+act}]{\setlength{\rightskip}{0pt plus 5cm}register int yy\+\_\+act}\label{fortranscanner_8cpp_a7ffc8c947830757dd87ad202a6823edd}
+\hypertarget{fortranscanner_8cpp_a71cf769ce518e8687bf8999b278c65f4}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yy\+\_\+bp@{yy\+\_\+bp}}
+\index{yy\+\_\+bp@{yy\+\_\+bp}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yy\+\_\+bp}]{\setlength{\rightskip}{0pt plus 5cm}register char $\ast$ yy\+\_\+bp}\label{fortranscanner_8cpp_a71cf769ce518e8687bf8999b278c65f4}
+\hypertarget{fortranscanner_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yy\+\_\+cp@{yy\+\_\+cp}}
+\index{yy\+\_\+cp@{yy\+\_\+cp}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yy\+\_\+cp}]{\setlength{\rightskip}{0pt plus 5cm}register char$\ast$ yy\+\_\+cp}\label{fortranscanner_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}
+\hypertarget{fortranscanner_8cpp_a86a21c2101611f87781b40b111e65aac}{}\index{fortranscanner.\+cpp@{fortranscanner.\+cpp}!yy\+\_\+current\+\_\+state@{yy\+\_\+current\+\_\+state}}
+\index{yy\+\_\+current\+\_\+state@{yy\+\_\+current\+\_\+state}!fortranscanner.\+cpp@{fortranscanner.\+cpp}}
+\subsubsection[{yy\+\_\+current\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+D\+E\+C\+L} register {\bf yy\+\_\+state\+\_\+type} yy\+\_\+current\+\_\+state}\label{fortranscanner_8cpp_a86a21c2101611f87781b40b111e65aac}
+The main scanner function which does all the work. 

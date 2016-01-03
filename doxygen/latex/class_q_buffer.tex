@@ -1,0 +1,330 @@
+\hypertarget{class_q_buffer}{}\section{Référence de la classe Q\+Buffer}
+\label{class_q_buffer}\index{Q\+Buffer@{Q\+Buffer}}
+
+
+The \hyperlink{class_q_buffer}{Q\+Buffer} class is an I/\+O device that operates on a Q\+Byte\+Array.  
+
+
+
+
+{\ttfamily \#include $<$qbuffer.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Q\+Buffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_buffer}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_buffer_a89e6eb0af3076429fcaf14755f856d9a}{Q\+Buffer} ()
+\item 
+\hyperlink{class_q_buffer_ac88f81ed56581532b835e83812a8650a}{Q\+Buffer} (\hyperlink{qcstring_8h_ad6a390648110655c217fe072d45fbcf5}{Q\+Byte\+Array})
+\item 
+\hyperlink{class_q_buffer_a23e9bc1bae06f2c96e456d6b5ca1b52d}{$\sim$\+Q\+Buffer} ()
+\item 
+\hyperlink{qcstring_8h_ad6a390648110655c217fe072d45fbcf5}{Q\+Byte\+Array} \hyperlink{class_q_buffer_a7398620a68038fd3cc54bece01f92f1c}{buffer} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_buffer_ad4c608788c2730ca60295488f75da423}{set\+Buffer} (\hyperlink{qcstring_8h_ad6a390648110655c217fe072d45fbcf5}{Q\+Byte\+Array})
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_buffer_aa3ceff2217a13a570e0dcec157b23b18}{open} (int)
+\item 
+void \hyperlink{class_q_buffer_affd0b382476516b0d4e3adfaf27c0247}{close} ()
+\item 
+void \hyperlink{class_q_buffer_a5e16941f9973d0263ea1ef79b54bc88f}{flush} ()
+\item 
+\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{class_q_buffer_a2e1a92c8a10018989540dda59bb4db18}{size} () const 
+\item 
+int \hyperlink{class_q_buffer_aee8ed63650b196c400fc9a94e55238f6}{at} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_buffer_a4b4cd4e092b55db973fa34f76403b65d}{at} (int)
+\item 
+int \hyperlink{class_q_buffer_a7deacf4bbd599f075f3dad4b20cafeb0}{read\+Block} (char $\ast$\hyperlink{060__command__switch_8tcl_a15229b450f26d8fa1c10bea4f3279f4d}{p}, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint})
+\item 
+int \hyperlink{class_q_buffer_ad8bdac07e525a782d0759d3082bb296a}{write\+Block} (const char $\ast$\hyperlink{060__command__switch_8tcl_a15229b450f26d8fa1c10bea4f3279f4d}{p}, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint})
+\item 
+int \hyperlink{class_q_buffer_adcbf115b0d36683e6da2d3baa367382d}{read\+Line} (char $\ast$\hyperlink{060__command__switch_8tcl_a15229b450f26d8fa1c10bea4f3279f4d}{p}, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint})
+\item 
+int \hyperlink{class_q_buffer_abec634737e1d5a9b314e822737e51992}{getch} ()
+\item 
+int \hyperlink{class_q_buffer_aa05ca49f73284ac1fa2b01ffb3be2874}{putch} (int)
+\item 
+int \hyperlink{class_q_buffer_a52f9ebc674d0651e6fd89e148529bb50}{ungetch} (int)
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qcstring_8h_ad6a390648110655c217fe072d45fbcf5}{Q\+Byte\+Array} \hyperlink{class_q_buffer_a25221a1da1f29140c2fbb75dd0a5ee4e}{a}
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+The \hyperlink{class_q_buffer}{Q\+Buffer} class is an I/\+O device that operates on a Q\+Byte\+Array. 
+
+\hyperlink{class_q_buffer}{Q\+Buffer} allows reading and writing a memory buffer. It is normally used together with a \hyperlink{class_q_text_stream}{Q\+Text\+Stream} or a \hyperlink{class_q_data_stream}{Q\+Data\+Stream}. \hyperlink{class_q_buffer}{Q\+Buffer} has an associated Q\+Byte\+Array which holds the buffer data. The \hyperlink{class_q_buffer_a2e1a92c8a10018989540dda59bb4db18}{size()} of the buffer is automatically adjusted as data is written.
+
+The constructor {\ttfamily \hyperlink{class_q_buffer_ac88f81ed56581532b835e83812a8650a}{Q\+Buffer(\+Q\+Byte\+Array)}} creates a \hyperlink{class_q_buffer}{Q\+Buffer} with an existing byte array. The byte array can also be set with \hyperlink{class_q_buffer_ad4c608788c2730ca60295488f75da423}{set\+Buffer()}. Writing to the \hyperlink{class_q_buffer}{Q\+Buffer} will modify the original byte array, since Q\+Byte\+Array is \hyperlink{}{explicitly shared.}
+
+Use \hyperlink{class_q_buffer_aa3ceff2217a13a570e0dcec157b23b18}{open()} to open the buffer before use, and to set the mode (read-\/only,write-\/only, etc.). \hyperlink{class_q_buffer_affd0b382476516b0d4e3adfaf27c0247}{close()} closes the buffer. The buffer must be closed before reopening or calling \hyperlink{class_q_buffer_ad4c608788c2730ca60295488f75da423}{set\+Buffer()}.
+
+The common way to use \hyperlink{class_q_buffer}{Q\+Buffer} is through  \hyperlink{class_q_data_stream}{Q\+Data\+Stream} or  \hyperlink{class_q_text_stream}{Q\+Text\+Stream} which have constructors that take a \hyperlink{class_q_buffer}{Q\+Buffer} parameter. For convenience, there are also \hyperlink{class_q_data_stream}{Q\+Data\+Stream} and \hyperlink{class_q_text_stream}{Q\+Text\+Stream} constructors that take a Q\+Byte\+Array parameter. These constructors create and open an internal \hyperlink{class_q_buffer}{Q\+Buffer}.
+
+Note that \hyperlink{class_q_text_stream}{Q\+Text\+Stream} can also operate on a \hyperlink{class_q_string}{Q\+String} (a Unicode string); a \hyperlink{class_q_buffer}{Q\+Buffer} cannot.
+
+You can also use \hyperlink{class_q_buffer}{Q\+Buffer} directly through the standard \hyperlink{class_q_i_o_device}{Q\+I\+O\+Device} functions \hyperlink{class_q_buffer_a7deacf4bbd599f075f3dad4b20cafeb0}{read\+Block()}, \hyperlink{class_q_buffer_ad8bdac07e525a782d0759d3082bb296a}{write\+Block()} \hyperlink{class_q_buffer_adcbf115b0d36683e6da2d3baa367382d}{read\+Line()}, \hyperlink{class_q_buffer_aee8ed63650b196c400fc9a94e55238f6}{at()}, \hyperlink{class_q_buffer_abec634737e1d5a9b314e822737e51992}{getch()}, \hyperlink{class_q_buffer_aa05ca49f73284ac1fa2b01ffb3be2874}{putch()} and \hyperlink{class_q_buffer_a52f9ebc674d0651e6fd89e148529bb50}{ungetch()}.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file}{Q\+File}, \hyperlink{class_q_data_stream}{Q\+Data\+Stream}, \hyperlink{class_q_text_stream}{Q\+Text\+Stream}, \hyperlink{qcstring_8h_ad6a390648110655c217fe072d45fbcf5}{Q\+Byte\+Array}, \hyperlink{}{Shared Classes} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_buffer_a89e6eb0af3076429fcaf14755f856d9a}{}\index{Q\+Buffer@{Q\+Buffer}!Q\+Buffer@{Q\+Buffer}}
+\index{Q\+Buffer@{Q\+Buffer}!Q\+Buffer@{Q\+Buffer}}
+\subsubsection[{Q\+Buffer()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Buffer\+::\+Q\+Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_buffer_a89e6eb0af3076429fcaf14755f856d9a}
+Constructs an empty buffer. \hypertarget{class_q_buffer_ac88f81ed56581532b835e83812a8650a}{}\index{Q\+Buffer@{Q\+Buffer}!Q\+Buffer@{Q\+Buffer}}
+\index{Q\+Buffer@{Q\+Buffer}!Q\+Buffer@{Q\+Buffer}}
+\subsubsection[{Q\+Buffer(\+Q\+Byte\+Array)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Buffer\+::\+Q\+Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Byte\+Array}}]{buf}
+\end{DoxyParamCaption}
+)}\label{class_q_buffer_ac88f81ed56581532b835e83812a8650a}
+Constructs a buffer that operates on {\itshape buf}. If you open the buffer in write mode ({\ttfamily I\+O\+\_\+\+Write\+Only} or {\ttfamily I\+O\+\_\+\+Read\+Write}) and write something into the buffer, {\itshape buf} will be modified.
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_c_string}{QCString} str = \textcolor{stringliteral}{"abc"};
+\hyperlink{class_q_buffer}{QBuffer} \hyperlink{058__bracket__recursion_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b}( str );
+\hyperlink{058__bracket__recursion_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b}.open( \hyperlink{qiodevice_8h_aee87f60968e118b038a637b83ccc4017}{IO\_WriteOnly} );
+\hyperlink{058__bracket__recursion_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b}.at( 3 );                    \textcolor{comment}{// position at \(\backslash\)0}
+\hyperlink{058__bracket__recursion_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b}.writeBlock( \textcolor{stringliteral}{"def"}, 4 );         \textcolor{comment}{// write including \(\backslash\)0}
+\hyperlink{058__bracket__recursion_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b}.close();
+  \textcolor{comment}{// Now, str == "abcdef"}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_buffer_ad4c608788c2730ca60295488f75da423}{set\+Buffer()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_buffer_a23e9bc1bae06f2c96e456d6b5ca1b52d}{}\index{Q\+Buffer@{Q\+Buffer}!````~Q\+Buffer@{$\sim$\+Q\+Buffer}}
+\index{````~Q\+Buffer@{$\sim$\+Q\+Buffer}!Q\+Buffer@{Q\+Buffer}}
+\subsubsection[{$\sim$\+Q\+Buffer()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Buffer\+::$\sim$\+Q\+Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_buffer_a23e9bc1bae06f2c96e456d6b5ca1b52d}
+Destructs the buffer. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_buffer_aee8ed63650b196c400fc9a94e55238f6}{}\index{Q\+Buffer@{Q\+Buffer}!at@{at}}
+\index{at@{at}!Q\+Buffer@{Q\+Buffer}}
+\subsubsection[{at() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Buffer\+::at (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_q_buffer_aee8ed63650b196c400fc9a94e55238f6}
+
+
+Réimplémentée à partir de \hyperlink{class_q_i_o_device_ae87e9d1d92b870e96ed04de97d7638f3}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_buffer_a4b4cd4e092b55db973fa34f76403b65d}{}\index{Q\+Buffer@{Q\+Buffer}!at@{at}}
+\index{at@{at}!Q\+Buffer@{Q\+Buffer}}
+\subsubsection[{at(int)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Buffer\+::at (
+\begin{DoxyParamCaption}
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_buffer_a4b4cd4e092b55db973fa34f76403b65d}
+
+
+Réimplémentée à partir de \hyperlink{class_q_i_o_device_a14643fc1c2e05c2addd1ecc03bd98017}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_buffer_a7398620a68038fd3cc54bece01f92f1c}{}\index{Q\+Buffer@{Q\+Buffer}!buffer@{buffer}}
+\index{buffer@{buffer}!Q\+Buffer@{Q\+Buffer}}
+\subsubsection[{buffer() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Byte\+Array} Q\+Buffer\+::buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_buffer_a7398620a68038fd3cc54bece01f92f1c}
+Returns this buffer\textquotesingle{}s byte array.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_buffer_ad4c608788c2730ca60295488f75da423}{set\+Buffer()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_buffer_affd0b382476516b0d4e3adfaf27c0247}{}\index{Q\+Buffer@{Q\+Buffer}!close@{close}}
+\index{close@{close}!Q\+Buffer@{Q\+Buffer}}
+\subsubsection[{close()}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Buffer\+::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_buffer_affd0b382476516b0d4e3adfaf27c0247}
+Closes an open buffer. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_buffer_aa3ceff2217a13a570e0dcec157b23b18}{open()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_a01a9ddac5d964b5b6a1f10005bf28a4f}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_buffer_a5e16941f9973d0263ea1ef79b54bc88f}{}\index{Q\+Buffer@{Q\+Buffer}!flush@{flush}}
+\index{flush@{flush}!Q\+Buffer@{Q\+Buffer}}
+\subsubsection[{flush()}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Buffer\+::flush (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_buffer_a5e16941f9973d0263ea1ef79b54bc88f}
+The flush function does nothing for a \hyperlink{class_q_buffer}{Q\+Buffer}. 
+
+Implémente \hyperlink{class_q_i_o_device_a39eccb592ae076fbc42108a3d590fb43}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_buffer_abec634737e1d5a9b314e822737e51992}{}\index{Q\+Buffer@{Q\+Buffer}!getch@{getch}}
+\index{getch@{getch}!Q\+Buffer@{Q\+Buffer}}
+\subsubsection[{getch()}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Buffer\+::getch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_buffer_abec634737e1d5a9b314e822737e51992}
+
+
+Implémente \hyperlink{class_q_i_o_device_a7cef61d66023f9cda6b0912082bd19fc}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_buffer_aa3ceff2217a13a570e0dcec157b23b18}{}\index{Q\+Buffer@{Q\+Buffer}!open@{open}}
+\index{open@{open}!Q\+Buffer@{Q\+Buffer}}
+\subsubsection[{open(int)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Buffer\+::open (
+\begin{DoxyParamCaption}
+\item[{int}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_buffer_aa3ceff2217a13a570e0dcec157b23b18}
+Opens the buffer in the mode {\itshape m}. Returns T\+R\+U\+E if successful, otherwise F\+A\+L\+S\+E. The buffer must be opened before use.
+
+The mode parameter {\itshape m} must be a combination of the following flags. 
+\begin{DoxyItemize}
+\item {\ttfamily I\+O\+\_\+\+Read\+Only} opens a buffer in read-\/only mode. 
+\item {\ttfamily I\+O\+\_\+\+Write\+Only} opens a buffer in write-\/only mode. 
+\item {\ttfamily I\+O\+\_\+\+Read\+Write} opens a buffer in read/write mode. 
+\item {\ttfamily I\+O\+\_\+\+Append} sets the buffer index to the end of the buffer. 
+\item {\ttfamily I\+O\+\_\+\+Truncate} truncates the buffer. 
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_buffer_affd0b382476516b0d4e3adfaf27c0247}{close()}, \hyperlink{class_q_i_o_device_a6d846c9a59c3ae8f57cf86405caba2a4}{is\+Open()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_ae4046ae7bf4d4cee1010239973314e42}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_buffer_aa05ca49f73284ac1fa2b01ffb3be2874}{}\index{Q\+Buffer@{Q\+Buffer}!putch@{putch}}
+\index{putch@{putch}!Q\+Buffer@{Q\+Buffer}}
+\subsubsection[{putch(int)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Buffer\+::putch (
+\begin{DoxyParamCaption}
+\item[{int}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_buffer_aa05ca49f73284ac1fa2b01ffb3be2874}
+Writes the character {\itshape ch} into the buffer, overwriting the character at the current index, extending the buffer if necessary.
+
+Returns {\itshape ch}, or -\/1 if some error occurred.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_buffer_abec634737e1d5a9b314e822737e51992}{getch()}, \hyperlink{class_q_buffer_a52f9ebc674d0651e6fd89e148529bb50}{ungetch()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_a5de5c1c1cba7ca36ba93289e30cd3029}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_buffer_a7deacf4bbd599f075f3dad4b20cafeb0}{}\index{Q\+Buffer@{Q\+Buffer}!read\+Block@{read\+Block}}
+\index{read\+Block@{read\+Block}!Q\+Buffer@{Q\+Buffer}}
+\subsubsection[{read\+Block(char $\ast$p, uint)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Buffer\+::read\+Block (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{p, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_buffer_a7deacf4bbd599f075f3dad4b20cafeb0}
+
+
+Implémente \hyperlink{class_q_i_o_device_a71f10647e4bd98141f45362b9a06983a}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_buffer_adcbf115b0d36683e6da2d3baa367382d}{}\index{Q\+Buffer@{Q\+Buffer}!read\+Line@{read\+Line}}
+\index{read\+Line@{read\+Line}!Q\+Buffer@{Q\+Buffer}}
+\subsubsection[{read\+Line(char $\ast$p, uint)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Buffer\+::read\+Line (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{p, }
+\item[{{\bf uint}}]{maxlen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_buffer_adcbf115b0d36683e6da2d3baa367382d}
+
+
+Réimplémentée à partir de \hyperlink{class_q_i_o_device_a4dc865ffcb5b7896ff8f9a1d828e4c0e}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_buffer_ad4c608788c2730ca60295488f75da423}{}\index{Q\+Buffer@{Q\+Buffer}!set\+Buffer@{set\+Buffer}}
+\index{set\+Buffer@{set\+Buffer}!Q\+Buffer@{Q\+Buffer}}
+\subsubsection[{set\+Buffer(\+Q\+Byte\+Array)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Buffer\+::set\+Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Byte\+Array}}]{buf}
+\end{DoxyParamCaption}
+)}\label{class_q_buffer_ad4c608788c2730ca60295488f75da423}
+Replaces the buffer\textquotesingle{}s contents with {\itshape buf}.
+
+This may not be done when \hyperlink{class_q_i_o_device_a6d846c9a59c3ae8f57cf86405caba2a4}{is\+Open()} is T\+R\+U\+E.
+
+Note that if you open the buffer in write mode ({\ttfamily I\+O\+\_\+\+Write\+Only} or I\+O\+\_\+\+Read\+Write) and write something into the buffer, {\itshape buf} is also modified because Q\+Byte\+Array is an explicitly shared class.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_buffer_a7398620a68038fd3cc54bece01f92f1c}{buffer()}, \hyperlink{class_q_buffer_aa3ceff2217a13a570e0dcec157b23b18}{open()}, \hyperlink{class_q_buffer_affd0b382476516b0d4e3adfaf27c0247}{close()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_buffer_a2e1a92c8a10018989540dda59bb4db18}{}\index{Q\+Buffer@{Q\+Buffer}!size@{size}}
+\index{size@{size}!Q\+Buffer@{Q\+Buffer}}
+\subsubsection[{size() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint} Q\+Buffer\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_q_buffer_a2e1a92c8a10018989540dda59bb4db18}
+
+
+Implémente \hyperlink{class_q_i_o_device_ab94989478f8bd6742f6bfcd27926341e}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_buffer_a52f9ebc674d0651e6fd89e148529bb50}{}\index{Q\+Buffer@{Q\+Buffer}!ungetch@{ungetch}}
+\index{ungetch@{ungetch}!Q\+Buffer@{Q\+Buffer}}
+\subsubsection[{ungetch(int)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Buffer\+::ungetch (
+\begin{DoxyParamCaption}
+\item[{int}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_buffer_a52f9ebc674d0651e6fd89e148529bb50}
+
+
+Implémente \hyperlink{class_q_i_o_device_aae3d67422103e8fc0411297b1d62c29a}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_buffer_ad8bdac07e525a782d0759d3082bb296a}{}\index{Q\+Buffer@{Q\+Buffer}!write\+Block@{write\+Block}}
+\index{write\+Block@{write\+Block}!Q\+Buffer@{Q\+Buffer}}
+\subsubsection[{write\+Block(const char $\ast$p, uint)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Buffer\+::write\+Block (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_buffer_ad8bdac07e525a782d0759d3082bb296a}
+Writes {\itshape len} bytes from {\itshape p} into the buffer at the current index, overwriting any characters there and extending the buffer if necessary. Returns the number of bytes actually written.
+
+Returns -\/1 if a serious error occurred.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_buffer_a7deacf4bbd599f075f3dad4b20cafeb0}{read\+Block()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_a5d937df1bde2f956872dd54e077807d1}{Q\+I\+O\+Device}.
+
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_q_buffer_a25221a1da1f29140c2fbb75dd0a5ee4e}{}\index{Q\+Buffer@{Q\+Buffer}!a@{a}}
+\index{a@{a}!Q\+Buffer@{Q\+Buffer}}
+\subsubsection[{a}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Byte\+Array} Q\+Buffer\+::a\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_buffer_a25221a1da1f29140c2fbb75dd0a5ee4e}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qbuffer_8h}{qbuffer.\+h}\item 
+qtools/\hyperlink{qbuffer_8cpp}{qbuffer.\+cpp}\end{DoxyCompactItemize}

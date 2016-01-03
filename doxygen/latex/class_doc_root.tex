@@ -1,0 +1,108 @@
+\hypertarget{class_doc_root}{}\section{Référence de la classe Doc\+Root}
+\label{class_doc_root}\index{Doc\+Root@{Doc\+Root}}
+
+
+{\ttfamily \#include $<$docparser.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Doc\+Root\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doc_root}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_root_ae1a133da5f3562011cfe90cfa145219f}{Doc\+Root} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_doc_root_a55c28ebe3e2082dbc9eaf5b4c8523c32}{indent}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} sl)
+\item 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadb}{Kind} \hyperlink{class_doc_root_abd93a1d4cb87a740b573f263bce16bb0}{kind} () const 
+\item 
+void \hyperlink{class_doc_root_aa5ddf3ae4f0557846668b54742d9b628}{accept} (\hyperlink{class_doc_visitor}{Doc\+Visitor} $\ast$v)
+\item 
+void \hyperlink{class_doc_root_a860207dd6bee34648ddbfd55e3ddaff8}{parse} ()
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_doc_root_a55c28ebe3e2082dbc9eaf5b4c8523c32}{indent} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_doc_root_a1c51c5192448ebd4f9fb4b25f494c07a}{single\+Line} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_doc_root_afaad083d5339b35bbac05bea90c0a55a}{is\+Empty} () const 
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Root node of documentation tree 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_doc_root_ae1a133da5f3562011cfe90cfa145219f}{}\index{Doc\+Root@{Doc\+Root}!Doc\+Root@{Doc\+Root}}
+\index{Doc\+Root@{Doc\+Root}!Doc\+Root@{Doc\+Root}}
+\subsubsection[{Doc\+Root(bool indent, bool sl)}]{\setlength{\rightskip}{0pt plus 5cm}Doc\+Root\+::\+Doc\+Root (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{indent, }
+\item[{{\bf bool}}]{sl}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_root_ae1a133da5f3562011cfe90cfa145219f}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_doc_root_aa5ddf3ae4f0557846668b54742d9b628}{}\index{Doc\+Root@{Doc\+Root}!accept@{accept}}
+\index{accept@{accept}!Doc\+Root@{Doc\+Root}}
+\subsubsection[{accept(\+Doc\+Visitor $\ast$v)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Root\+::accept (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Visitor} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_root_aa5ddf3ae4f0557846668b54742d9b628}
+Acceptor function for node visitors. Part of the visitor pattern. 
+\begin{DoxyParams}{Paramètres}
+{\em v} & Abstract visitor. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_doc_node_a5303a550cbe6395663bf9b9dad28cbf1}{Doc\+Node}.
+
+\hypertarget{class_doc_root_a55c28ebe3e2082dbc9eaf5b4c8523c32}{}\index{Doc\+Root@{Doc\+Root}!indent@{indent}}
+\index{indent@{indent}!Doc\+Root@{Doc\+Root}}
+\subsubsection[{indent() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Doc\+Root\+::indent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_root_a55c28ebe3e2082dbc9eaf5b4c8523c32}
+\hypertarget{class_doc_root_afaad083d5339b35bbac05bea90c0a55a}{}\index{Doc\+Root@{Doc\+Root}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!Doc\+Root@{Doc\+Root}}
+\subsubsection[{is\+Empty() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Doc\+Root\+::is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_root_afaad083d5339b35bbac05bea90c0a55a}
+\hypertarget{class_doc_root_abd93a1d4cb87a740b573f263bce16bb0}{}\index{Doc\+Root@{Doc\+Root}!kind@{kind}}
+\index{kind@{kind}!Doc\+Root@{Doc\+Root}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kind} Doc\+Root\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_root_abd93a1d4cb87a740b573f263bce16bb0}
+Returns the kind of node. Provides runtime type information 
+
+Implémente \hyperlink{class_doc_node_a92d4aaa169a813ded919aa858024c809}{Doc\+Node}.
+
+\hypertarget{class_doc_root_a860207dd6bee34648ddbfd55e3ddaff8}{}\index{Doc\+Root@{Doc\+Root}!parse@{parse}}
+\index{parse@{parse}!Doc\+Root@{Doc\+Root}}
+\subsubsection[{parse()}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Root\+::parse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_doc_root_a860207dd6bee34648ddbfd55e3ddaff8}
+\hypertarget{class_doc_root_a1c51c5192448ebd4f9fb4b25f494c07a}{}\index{Doc\+Root@{Doc\+Root}!single\+Line@{single\+Line}}
+\index{single\+Line@{single\+Line}!Doc\+Root@{Doc\+Root}}
+\subsubsection[{single\+Line() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Doc\+Root\+::single\+Line (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_root_a1c51c5192448ebd4f9fb4b25f494c07a}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{docparser_8h}{docparser.\+h}\item 
+src/\hyperlink{docparser_8cpp}{docparser.\+cpp}\end{DoxyCompactItemize}

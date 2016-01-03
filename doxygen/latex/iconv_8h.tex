@@ -1,0 +1,171 @@
+\hypertarget{iconv_8h}{}\section{Référence du fichier winbuild/iconv.h}
+\label{iconv_8h}\index{winbuild/iconv.\+h@{winbuild/iconv.\+h}}
+{\ttfamily \#include $<$stddef.\+h$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{iconv_8h_a492f909c4dcbd63e119bcbcd1a33ed54}{\+\_\+\+L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+V\+E\+R\+S\+I\+O\+N}~0x0109    /$\ast$ version number\+: (major$<$$<$8) + minor $\ast$/
+\item 
+\#define \hyperlink{iconv_8h_ac49d5124af616e603621c88ea35c8ecf}{L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D}~\+\_\+\+\_\+declspec(dllimport)
+\item 
+\#define \hyperlink{iconv_8h_a394d3fb485b2577035dd4a8055724273}{iconv\+\_\+t}~libiconv\+\_\+t
+\item 
+\#define \hyperlink{iconv_8h_ac6c071293826a4e66a717bb38db7794d}{E\+I\+L\+S\+E\+Q}
+\item 
+\#define \hyperlink{iconv_8h_abc93f77b3b8b5891765c9f3c483ec013}{iconv\+\_\+open}~libiconv\+\_\+open
+\item 
+\#define \hyperlink{iconv_8h_a44c0f9426dd91c55d783618e535404b7}{iconv}~libiconv
+\item 
+\#define \hyperlink{iconv_8h_a0c4ff4bdefbf1576f3e7bab5fbc5ec89}{iconv\+\_\+close}~libiconv\+\_\+close
+\item 
+\#define \hyperlink{iconv_8h_ae60c74ac0c07859c1d5567d14a11f8fb}{iconvctl}~libiconvctl
+\item 
+\#define \hyperlink{iconv_8h_a6ca6305e581ba124e7a6ab03d8ac4a3a}{I\+C\+O\+N\+V\+\_\+\+T\+R\+I\+V\+I\+A\+L\+P}~0  /$\ast$ int $\ast$argument $\ast$/
+\item 
+\#define \hyperlink{iconv_8h_a47e622b872dca351c3c0b9f0ff57557a}{I\+C\+O\+N\+V\+\_\+\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+L\+I\+T\+E\+R\+A\+T\+E}~1  /$\ast$ int $\ast$argument $\ast$/
+\item 
+\#define \hyperlink{iconv_8h_a602d69df30d30fbdbf237c0fb8ce463a}{I\+C\+O\+N\+V\+\_\+\+S\+E\+T\+\_\+\+T\+R\+A\+N\+S\+L\+I\+T\+E\+R\+A\+T\+E}~2  /$\ast$ const int $\ast$argument $\ast$/
+\item 
+\#define \hyperlink{iconv_8h_a02f90f9d8eee6df9e27fcd164d8a2775}{I\+C\+O\+N\+V\+\_\+\+G\+E\+T\+\_\+\+D\+I\+S\+C\+A\+R\+D\+\_\+\+I\+L\+S\+E\+Q}~3  /$\ast$ int $\ast$argument $\ast$/
+\item 
+\#define \hyperlink{iconv_8h_a0e3cc1c2619c9e3af2e020a107822ef9}{I\+C\+O\+N\+V\+\_\+\+S\+E\+T\+\_\+\+D\+I\+S\+C\+A\+R\+D\+\_\+\+I\+L\+S\+E\+Q}~4  /$\ast$ const int $\ast$argument $\ast$/
+\item 
+\#define \hyperlink{iconv_8h_aa00450dd05696fd91853ab093c8727e9}{iconvlist}~libiconvlist
+\end{DoxyCompactItemize}
+\subsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \hyperlink{iconv_8h_a72517f6ffadddaafa9d51dee9b535c9f}{iconv\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{iconv_8h_ac49d5124af616e603621c88ea35c8ecf}{L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D} \hyperlink{iconv_8h_a72517f6ffadddaafa9d51dee9b535c9f}{iconv\+\_\+t} \hyperlink{iconv_8h_aa46d173768b0d55d121d8d8d1ce6b460}{iconv\+\_\+open} (const char $\ast$tocode, const char $\ast$fromcode)
+\item 
+\hyperlink{iconv_8h_ac49d5124af616e603621c88ea35c8ecf}{L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D} size\+\_\+t \hyperlink{iconv_8h_afa6403195e1d3ea432947fb411f775f9}{iconv} (\hyperlink{iconv_8h_a72517f6ffadddaafa9d51dee9b535c9f}{iconv\+\_\+t} cd, const char $\ast$$\ast$inbuf, size\+\_\+t $\ast$inbytesleft, char $\ast$$\ast$outbuf, size\+\_\+t $\ast$outbytesleft)
+\item 
+\hyperlink{iconv_8h_ac49d5124af616e603621c88ea35c8ecf}{L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D} int \hyperlink{iconv_8h_a627006807aa859c882e54a8c64870e97}{iconv\+\_\+close} (\hyperlink{iconv_8h_a72517f6ffadddaafa9d51dee9b535c9f}{iconv\+\_\+t} cd)
+\item 
+\hyperlink{iconv_8h_ac49d5124af616e603621c88ea35c8ecf}{L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D} int \hyperlink{iconv_8h_ab5317c98fe71c05639746cf56c71704d}{iconvctl} (\hyperlink{iconv_8h_a72517f6ffadddaafa9d51dee9b535c9f}{iconv\+\_\+t} cd, int request, void $\ast$argument)
+\item 
+\hyperlink{iconv_8h_ac49d5124af616e603621c88ea35c8ecf}{L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D} void \hyperlink{iconv_8h_a93ab95dc2a245e2914aab526cf748d5b}{iconvlist} (int($\ast$do\+\_\+one)(unsigned int namescount,                                                                                                                                               const char $\ast$const $\ast$names,                                                                                                                                               void $\ast$data), void $\ast$data)
+\item 
+\hyperlink{iconv_8h_ac49d5124af616e603621c88ea35c8ecf}{L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D} void \hyperlink{iconv_8h_a248adbb2db9252bba2dfb336bcbd7625}{libiconv\+\_\+set\+\_\+relocation\+\_\+prefix} (const char $\ast$orig\+\_\+prefix, const char $\ast$curr\+\_\+prefix)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{iconv_8h_ac49d5124af616e603621c88ea35c8ecf}{L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D} int \hyperlink{iconv_8h_a4df2e1f445b1d5c6738c007a2ef2fbcf}{\+\_\+libiconv\+\_\+version}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{iconv_8h_a492f909c4dcbd63e119bcbcd1a33ed54}{}\index{iconv.\+h@{iconv.\+h}!\+\_\+\+L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+V\+E\+R\+S\+I\+O\+N@{\+\_\+\+L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{\+\_\+\+L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+V\+E\+R\+S\+I\+O\+N@{\+\_\+\+L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+V\+E\+R\+S\+I\+O\+N}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{\+\_\+\+L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+V\+E\+R\+S\+I\+O\+N~0x0109    /$\ast$ version number\+: (major$<$$<$8) + minor $\ast$/}\label{iconv_8h_a492f909c4dcbd63e119bcbcd1a33ed54}
+\hypertarget{iconv_8h_ac6c071293826a4e66a717bb38db7794d}{}\index{iconv.\+h@{iconv.\+h}!E\+I\+L\+S\+E\+Q@{E\+I\+L\+S\+E\+Q}}
+\index{E\+I\+L\+S\+E\+Q@{E\+I\+L\+S\+E\+Q}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{E\+I\+L\+S\+E\+Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+I\+L\+S\+E\+Q}\label{iconv_8h_ac6c071293826a4e66a717bb38db7794d}
+\hypertarget{iconv_8h_a44c0f9426dd91c55d783618e535404b7}{}\index{iconv.\+h@{iconv.\+h}!iconv@{iconv}}
+\index{iconv@{iconv}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{iconv}]{\setlength{\rightskip}{0pt plus 5cm}\#define iconv~libiconv}\label{iconv_8h_a44c0f9426dd91c55d783618e535404b7}
+\hypertarget{iconv_8h_a0c4ff4bdefbf1576f3e7bab5fbc5ec89}{}\index{iconv.\+h@{iconv.\+h}!iconv\+\_\+close@{iconv\+\_\+close}}
+\index{iconv\+\_\+close@{iconv\+\_\+close}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{iconv\+\_\+close}]{\setlength{\rightskip}{0pt plus 5cm}\#define iconv\+\_\+close~libiconv\+\_\+close}\label{iconv_8h_a0c4ff4bdefbf1576f3e7bab5fbc5ec89}
+\hypertarget{iconv_8h_a02f90f9d8eee6df9e27fcd164d8a2775}{}\index{iconv.\+h@{iconv.\+h}!I\+C\+O\+N\+V\+\_\+\+G\+E\+T\+\_\+\+D\+I\+S\+C\+A\+R\+D\+\_\+\+I\+L\+S\+E\+Q@{I\+C\+O\+N\+V\+\_\+\+G\+E\+T\+\_\+\+D\+I\+S\+C\+A\+R\+D\+\_\+\+I\+L\+S\+E\+Q}}
+\index{I\+C\+O\+N\+V\+\_\+\+G\+E\+T\+\_\+\+D\+I\+S\+C\+A\+R\+D\+\_\+\+I\+L\+S\+E\+Q@{I\+C\+O\+N\+V\+\_\+\+G\+E\+T\+\_\+\+D\+I\+S\+C\+A\+R\+D\+\_\+\+I\+L\+S\+E\+Q}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{I\+C\+O\+N\+V\+\_\+\+G\+E\+T\+\_\+\+D\+I\+S\+C\+A\+R\+D\+\_\+\+I\+L\+S\+E\+Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+C\+O\+N\+V\+\_\+\+G\+E\+T\+\_\+\+D\+I\+S\+C\+A\+R\+D\+\_\+\+I\+L\+S\+E\+Q~3  /$\ast$ int $\ast$argument $\ast$/}\label{iconv_8h_a02f90f9d8eee6df9e27fcd164d8a2775}
+\hypertarget{iconv_8h_a47e622b872dca351c3c0b9f0ff57557a}{}\index{iconv.\+h@{iconv.\+h}!I\+C\+O\+N\+V\+\_\+\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+L\+I\+T\+E\+R\+A\+T\+E@{I\+C\+O\+N\+V\+\_\+\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+L\+I\+T\+E\+R\+A\+T\+E}}
+\index{I\+C\+O\+N\+V\+\_\+\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+L\+I\+T\+E\+R\+A\+T\+E@{I\+C\+O\+N\+V\+\_\+\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+L\+I\+T\+E\+R\+A\+T\+E}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{I\+C\+O\+N\+V\+\_\+\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+L\+I\+T\+E\+R\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+C\+O\+N\+V\+\_\+\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+L\+I\+T\+E\+R\+A\+T\+E~1  /$\ast$ int $\ast$argument $\ast$/}\label{iconv_8h_a47e622b872dca351c3c0b9f0ff57557a}
+\hypertarget{iconv_8h_abc93f77b3b8b5891765c9f3c483ec013}{}\index{iconv.\+h@{iconv.\+h}!iconv\+\_\+open@{iconv\+\_\+open}}
+\index{iconv\+\_\+open@{iconv\+\_\+open}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{iconv\+\_\+open}]{\setlength{\rightskip}{0pt plus 5cm}\#define iconv\+\_\+open~libiconv\+\_\+open}\label{iconv_8h_abc93f77b3b8b5891765c9f3c483ec013}
+\hypertarget{iconv_8h_a0e3cc1c2619c9e3af2e020a107822ef9}{}\index{iconv.\+h@{iconv.\+h}!I\+C\+O\+N\+V\+\_\+\+S\+E\+T\+\_\+\+D\+I\+S\+C\+A\+R\+D\+\_\+\+I\+L\+S\+E\+Q@{I\+C\+O\+N\+V\+\_\+\+S\+E\+T\+\_\+\+D\+I\+S\+C\+A\+R\+D\+\_\+\+I\+L\+S\+E\+Q}}
+\index{I\+C\+O\+N\+V\+\_\+\+S\+E\+T\+\_\+\+D\+I\+S\+C\+A\+R\+D\+\_\+\+I\+L\+S\+E\+Q@{I\+C\+O\+N\+V\+\_\+\+S\+E\+T\+\_\+\+D\+I\+S\+C\+A\+R\+D\+\_\+\+I\+L\+S\+E\+Q}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{I\+C\+O\+N\+V\+\_\+\+S\+E\+T\+\_\+\+D\+I\+S\+C\+A\+R\+D\+\_\+\+I\+L\+S\+E\+Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+C\+O\+N\+V\+\_\+\+S\+E\+T\+\_\+\+D\+I\+S\+C\+A\+R\+D\+\_\+\+I\+L\+S\+E\+Q~4  /$\ast$ const int $\ast$argument $\ast$/}\label{iconv_8h_a0e3cc1c2619c9e3af2e020a107822ef9}
+\hypertarget{iconv_8h_a602d69df30d30fbdbf237c0fb8ce463a}{}\index{iconv.\+h@{iconv.\+h}!I\+C\+O\+N\+V\+\_\+\+S\+E\+T\+\_\+\+T\+R\+A\+N\+S\+L\+I\+T\+E\+R\+A\+T\+E@{I\+C\+O\+N\+V\+\_\+\+S\+E\+T\+\_\+\+T\+R\+A\+N\+S\+L\+I\+T\+E\+R\+A\+T\+E}}
+\index{I\+C\+O\+N\+V\+\_\+\+S\+E\+T\+\_\+\+T\+R\+A\+N\+S\+L\+I\+T\+E\+R\+A\+T\+E@{I\+C\+O\+N\+V\+\_\+\+S\+E\+T\+\_\+\+T\+R\+A\+N\+S\+L\+I\+T\+E\+R\+A\+T\+E}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{I\+C\+O\+N\+V\+\_\+\+S\+E\+T\+\_\+\+T\+R\+A\+N\+S\+L\+I\+T\+E\+R\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+C\+O\+N\+V\+\_\+\+S\+E\+T\+\_\+\+T\+R\+A\+N\+S\+L\+I\+T\+E\+R\+A\+T\+E~2  /$\ast$ const int $\ast$argument $\ast$/}\label{iconv_8h_a602d69df30d30fbdbf237c0fb8ce463a}
+\hypertarget{iconv_8h_a394d3fb485b2577035dd4a8055724273}{}\index{iconv.\+h@{iconv.\+h}!iconv\+\_\+t@{iconv\+\_\+t}}
+\index{iconv\+\_\+t@{iconv\+\_\+t}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{iconv\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf iconv\+\_\+t}~libiconv\+\_\+t}\label{iconv_8h_a394d3fb485b2577035dd4a8055724273}
+\hypertarget{iconv_8h_a6ca6305e581ba124e7a6ab03d8ac4a3a}{}\index{iconv.\+h@{iconv.\+h}!I\+C\+O\+N\+V\+\_\+\+T\+R\+I\+V\+I\+A\+L\+P@{I\+C\+O\+N\+V\+\_\+\+T\+R\+I\+V\+I\+A\+L\+P}}
+\index{I\+C\+O\+N\+V\+\_\+\+T\+R\+I\+V\+I\+A\+L\+P@{I\+C\+O\+N\+V\+\_\+\+T\+R\+I\+V\+I\+A\+L\+P}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{I\+C\+O\+N\+V\+\_\+\+T\+R\+I\+V\+I\+A\+L\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+C\+O\+N\+V\+\_\+\+T\+R\+I\+V\+I\+A\+L\+P~0  /$\ast$ int $\ast$argument $\ast$/}\label{iconv_8h_a6ca6305e581ba124e7a6ab03d8ac4a3a}
+\hypertarget{iconv_8h_ae60c74ac0c07859c1d5567d14a11f8fb}{}\index{iconv.\+h@{iconv.\+h}!iconvctl@{iconvctl}}
+\index{iconvctl@{iconvctl}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{iconvctl}]{\setlength{\rightskip}{0pt plus 5cm}\#define iconvctl~libiconvctl}\label{iconv_8h_ae60c74ac0c07859c1d5567d14a11f8fb}
+\hypertarget{iconv_8h_aa00450dd05696fd91853ab093c8727e9}{}\index{iconv.\+h@{iconv.\+h}!iconvlist@{iconvlist}}
+\index{iconvlist@{iconvlist}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{iconvlist}]{\setlength{\rightskip}{0pt plus 5cm}\#define iconvlist~libiconvlist}\label{iconv_8h_aa00450dd05696fd91853ab093c8727e9}
+\hypertarget{iconv_8h_ac49d5124af616e603621c88ea35c8ecf}{}\index{iconv.\+h@{iconv.\+h}!L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D@{L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D}}
+\index{L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D@{L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D~\+\_\+\+\_\+declspec(dllimport)}\label{iconv_8h_ac49d5124af616e603621c88ea35c8ecf}
+
+
+\subsection{Documentation des définitions de type}
+\hypertarget{iconv_8h_a72517f6ffadddaafa9d51dee9b535c9f}{}\index{iconv.\+h@{iconv.\+h}!iconv\+\_\+t@{iconv\+\_\+t}}
+\index{iconv\+\_\+t@{iconv\+\_\+t}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{iconv\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$ {\bf iconv\+\_\+t}}\label{iconv_8h_a72517f6ffadddaafa9d51dee9b535c9f}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{iconv_8h_afa6403195e1d3ea432947fb411f775f9}{}\index{iconv.\+h@{iconv.\+h}!iconv@{iconv}}
+\index{iconv@{iconv}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{iconv(iconv\+\_\+t cd, const char $\ast$$\ast$inbuf, size\+\_\+t $\ast$inbytesleft, char $\ast$$\ast$outbuf, size\+\_\+t $\ast$outbytesleft)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D} size\+\_\+t iconv (
+\begin{DoxyParamCaption}
+\item[{{\bf iconv\+\_\+t}}]{cd, }
+\item[{const char $\ast$$\ast$}]{inbuf, }
+\item[{size\+\_\+t $\ast$}]{inbytesleft, }
+\item[{char $\ast$$\ast$}]{outbuf, }
+\item[{size\+\_\+t $\ast$}]{outbytesleft}
+\end{DoxyParamCaption}
+)}\label{iconv_8h_afa6403195e1d3ea432947fb411f775f9}
+\hypertarget{iconv_8h_a627006807aa859c882e54a8c64870e97}{}\index{iconv.\+h@{iconv.\+h}!iconv\+\_\+close@{iconv\+\_\+close}}
+\index{iconv\+\_\+close@{iconv\+\_\+close}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{iconv\+\_\+close(iconv\+\_\+t cd)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D} int iconv\+\_\+close (
+\begin{DoxyParamCaption}
+\item[{{\bf iconv\+\_\+t}}]{cd}
+\end{DoxyParamCaption}
+)}\label{iconv_8h_a627006807aa859c882e54a8c64870e97}
+\hypertarget{iconv_8h_aa46d173768b0d55d121d8d8d1ce6b460}{}\index{iconv.\+h@{iconv.\+h}!iconv\+\_\+open@{iconv\+\_\+open}}
+\index{iconv\+\_\+open@{iconv\+\_\+open}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{iconv\+\_\+open(const char $\ast$tocode, const char $\ast$fromcode)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D} {\bf iconv\+\_\+t} iconv\+\_\+open (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{tocode, }
+\item[{const char $\ast$}]{fromcode}
+\end{DoxyParamCaption}
+)}\label{iconv_8h_aa46d173768b0d55d121d8d8d1ce6b460}
+\hypertarget{iconv_8h_ab5317c98fe71c05639746cf56c71704d}{}\index{iconv.\+h@{iconv.\+h}!iconvctl@{iconvctl}}
+\index{iconvctl@{iconvctl}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{iconvctl(iconv\+\_\+t cd, int request, void $\ast$argument)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D} int iconvctl (
+\begin{DoxyParamCaption}
+\item[{{\bf iconv\+\_\+t}}]{cd, }
+\item[{int}]{request, }
+\item[{void $\ast$}]{argument}
+\end{DoxyParamCaption}
+)}\label{iconv_8h_ab5317c98fe71c05639746cf56c71704d}
+\hypertarget{iconv_8h_a93ab95dc2a245e2914aab526cf748d5b}{}\index{iconv.\+h@{iconv.\+h}!iconvlist@{iconvlist}}
+\index{iconvlist@{iconvlist}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{iconvlist(int($\ast$do\+\_\+one)(unsigned int namescount,                                                                                                                                               const char $\ast$const $\ast$names,                                                                                                                                               void $\ast$data), void $\ast$data)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D} void iconvlist (
+\begin{DoxyParamCaption}
+\item[{int($\ast$)(unsigned int namescount,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   const char $\ast$const $\ast$names,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   void $\ast$data)}]{do\+\_\+one, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\label{iconv_8h_a93ab95dc2a245e2914aab526cf748d5b}
+\hypertarget{iconv_8h_a248adbb2db9252bba2dfb336bcbd7625}{}\index{iconv.\+h@{iconv.\+h}!libiconv\+\_\+set\+\_\+relocation\+\_\+prefix@{libiconv\+\_\+set\+\_\+relocation\+\_\+prefix}}
+\index{libiconv\+\_\+set\+\_\+relocation\+\_\+prefix@{libiconv\+\_\+set\+\_\+relocation\+\_\+prefix}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{libiconv\+\_\+set\+\_\+relocation\+\_\+prefix(const char $\ast$orig\+\_\+prefix, const char $\ast$curr\+\_\+prefix)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D} void libiconv\+\_\+set\+\_\+relocation\+\_\+prefix (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{orig\+\_\+prefix, }
+\item[{const char $\ast$}]{curr\+\_\+prefix}
+\end{DoxyParamCaption}
+)}\label{iconv_8h_a248adbb2db9252bba2dfb336bcbd7625}
+
+
+\subsection{Documentation des variables}
+\hypertarget{iconv_8h_a4df2e1f445b1d5c6738c007a2ef2fbcf}{}\index{iconv.\+h@{iconv.\+h}!\+\_\+libiconv\+\_\+version@{\+\_\+libiconv\+\_\+version}}
+\index{\+\_\+libiconv\+\_\+version@{\+\_\+libiconv\+\_\+version}!iconv.\+h@{iconv.\+h}}
+\subsubsection[{\+\_\+libiconv\+\_\+version}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+B\+I\+C\+O\+N\+V\+\_\+\+D\+L\+L\+\_\+\+E\+X\+P\+O\+R\+T\+E\+D} int \+\_\+libiconv\+\_\+version}\label{iconv_8h_a4df2e1f445b1d5c6738c007a2ef2fbcf}

@@ -1,0 +1,83 @@
+\hypertarget{class_access_stack}{}\section{Référence de la classe Access\+Stack}
+\label{class_access_stack}\index{Access\+Stack@{Access\+Stack}}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_access_stack_a7b39a1a6d9f477ec68863d87b6f41390}{Access\+Stack} ()
+\item 
+void \hyperlink{class_access_stack_a3b1805f54c909feaeeb8c4186a8e017b}{push} (\hyperlink{class_definition}{Definition} $\ast$scope, \hyperlink{class_file_def}{File\+Def} $\ast$file\+Scope, \hyperlink{class_definition}{Definition} $\ast$item)
+\item 
+void \hyperlink{class_access_stack_adea59c73a9c0d416fe4a98a9b4a0d504}{push} (\hyperlink{class_definition}{Definition} $\ast$scope, \hyperlink{class_file_def}{File\+Def} $\ast$file\+Scope, \hyperlink{class_definition}{Definition} $\ast$item, const \hyperlink{class_q_c_string}{Q\+C\+String} \&exp\+Scope)
+\item 
+void \hyperlink{class_access_stack_a3cd93006259acc5edf0cad527c3935bb}{pop} ()
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_access_stack_ac01ea73d80a7e32c5eef29ab05f366ca}{find} (\hyperlink{class_definition}{Definition} $\ast$scope, \hyperlink{class_file_def}{File\+Def} $\ast$file\+Scope, \hyperlink{class_definition}{Definition} $\ast$item)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_access_stack_afbb61058e2b8a0bfa2286dfb5ee06766}{find} (\hyperlink{class_definition}{Definition} $\ast$scope, \hyperlink{class_file_def}{File\+Def} $\ast$file\+Scope, \hyperlink{class_definition}{Definition} $\ast$item, const \hyperlink{class_q_c_string}{Q\+C\+String} \&exp\+Scope)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Helper class representing the stack of items considered while resolving the scope. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_access_stack_a7b39a1a6d9f477ec68863d87b6f41390}{}\index{Access\+Stack@{Access\+Stack}!Access\+Stack@{Access\+Stack}}
+\index{Access\+Stack@{Access\+Stack}!Access\+Stack@{Access\+Stack}}
+\subsubsection[{Access\+Stack()}]{\setlength{\rightskip}{0pt plus 5cm}Access\+Stack\+::\+Access\+Stack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_access_stack_a7b39a1a6d9f477ec68863d87b6f41390}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_access_stack_ac01ea73d80a7e32c5eef29ab05f366ca}{}\index{Access\+Stack@{Access\+Stack}!find@{find}}
+\index{find@{find}!Access\+Stack@{Access\+Stack}}
+\subsubsection[{find(\+Definition $\ast$scope, File\+Def $\ast$file\+Scope, Definition $\ast$item)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Access\+Stack\+::find (
+\begin{DoxyParamCaption}
+\item[{{\bf Definition} $\ast$}]{scope, }
+\item[{{\bf File\+Def} $\ast$}]{file\+Scope, }
+\item[{{\bf Definition} $\ast$}]{item}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_access_stack_ac01ea73d80a7e32c5eef29ab05f366ca}
+\hypertarget{class_access_stack_afbb61058e2b8a0bfa2286dfb5ee06766}{}\index{Access\+Stack@{Access\+Stack}!find@{find}}
+\index{find@{find}!Access\+Stack@{Access\+Stack}}
+\subsubsection[{find(\+Definition $\ast$scope, File\+Def $\ast$file\+Scope, Definition $\ast$item, const Q\+C\+String \&exp\+Scope)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Access\+Stack\+::find (
+\begin{DoxyParamCaption}
+\item[{{\bf Definition} $\ast$}]{scope, }
+\item[{{\bf File\+Def} $\ast$}]{file\+Scope, }
+\item[{{\bf Definition} $\ast$}]{item, }
+\item[{const {\bf Q\+C\+String} \&}]{exp\+Scope}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_access_stack_afbb61058e2b8a0bfa2286dfb5ee06766}
+\hypertarget{class_access_stack_a3cd93006259acc5edf0cad527c3935bb}{}\index{Access\+Stack@{Access\+Stack}!pop@{pop}}
+\index{pop@{pop}!Access\+Stack@{Access\+Stack}}
+\subsubsection[{pop()}]{\setlength{\rightskip}{0pt plus 5cm}void Access\+Stack\+::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_access_stack_a3cd93006259acc5edf0cad527c3935bb}
+\hypertarget{class_access_stack_a3b1805f54c909feaeeb8c4186a8e017b}{}\index{Access\+Stack@{Access\+Stack}!push@{push}}
+\index{push@{push}!Access\+Stack@{Access\+Stack}}
+\subsubsection[{push(\+Definition $\ast$scope, File\+Def $\ast$file\+Scope, Definition $\ast$item)}]{\setlength{\rightskip}{0pt plus 5cm}void Access\+Stack\+::push (
+\begin{DoxyParamCaption}
+\item[{{\bf Definition} $\ast$}]{scope, }
+\item[{{\bf File\+Def} $\ast$}]{file\+Scope, }
+\item[{{\bf Definition} $\ast$}]{item}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_access_stack_a3b1805f54c909feaeeb8c4186a8e017b}
+\hypertarget{class_access_stack_adea59c73a9c0d416fe4a98a9b4a0d504}{}\index{Access\+Stack@{Access\+Stack}!push@{push}}
+\index{push@{push}!Access\+Stack@{Access\+Stack}}
+\subsubsection[{push(\+Definition $\ast$scope, File\+Def $\ast$file\+Scope, Definition $\ast$item, const Q\+C\+String \&exp\+Scope)}]{\setlength{\rightskip}{0pt plus 5cm}void Access\+Stack\+::push (
+\begin{DoxyParamCaption}
+\item[{{\bf Definition} $\ast$}]{scope, }
+\item[{{\bf File\+Def} $\ast$}]{file\+Scope, }
+\item[{{\bf Definition} $\ast$}]{item, }
+\item[{const {\bf Q\+C\+String} \&}]{exp\+Scope}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_access_stack_adea59c73a9c0d416fe4a98a9b4a0d504}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{util_8cpp}{util.\+cpp}\end{DoxyCompactItemize}

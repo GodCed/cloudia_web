@@ -1,0 +1,89 @@
+\hypertarget{class_q_xml_entity_resolver}{}\section{Référence de la classe Q\+Xml\+Entity\+Resolver}
+\label{class_q_xml_entity_resolver}\index{Q\+Xml\+Entity\+Resolver@{Q\+Xml\+Entity\+Resolver}}
+
+
+The \hyperlink{class_q_xml_entity_resolver}{Q\+Xml\+Entity\+Resolver} class provides an interface to resolve extern entities contained in X\+M\+L data.  
+
+
+
+
+{\ttfamily \#include $<$qxml.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Q\+Xml\+Entity\+Resolver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_q_xml_entity_resolver}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_q_xml_entity_resolver_a3a3c77b09f121dbf6bc43124a9ded5f4}{$\sim$\+Q\+Xml\+Entity\+Resolver} ()
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_xml_entity_resolver_a4b0b6141c016eb3f7e37361f4ce13966}{resolve\+Entity} (const \hyperlink{class_q_string}{Q\+String} \&public\+Id, const \hyperlink{class_q_string}{Q\+String} \&system\+Id, \hyperlink{class_q_xml_input_source}{Q\+Xml\+Input\+Source} $\ast$\&ret)=0
+\item 
+virtual \hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_xml_entity_resolver_a3f190a7cd80a8faa3df903f963709370}{error\+String} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+The \hyperlink{class_q_xml_entity_resolver}{Q\+Xml\+Entity\+Resolver} class provides an interface to resolve extern entities contained in X\+M\+L data. 
+
+X\+M\+L
+
+If an application needs to implement customized handling for external entities, it must implement this interface and register it with \hyperlink{class_q_xml_reader_a82a810f10ac48cf35d698f57bc2d4647}{Q\+Xml\+Reader\+::set\+Entity\+Resolver()}.
+
+See also the \href{xml.html#introSAX2}{\tt Introduction to S\+A\+X2}.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_xml_d_t_d_handler}{Q\+Xml\+D\+T\+D\+Handler} \hyperlink{class_q_xml_decl_handler}{Q\+Xml\+Decl\+Handler} \hyperlink{class_q_xml_content_handler}{Q\+Xml\+Content\+Handler} \hyperlink{class_q_xml_error_handler}{Q\+Xml\+Error\+Handler} \hyperlink{class_q_xml_lexical_handler}{Q\+Xml\+Lexical\+Handler} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_xml_entity_resolver_a3a3c77b09f121dbf6bc43124a9ded5f4}{}\index{Q\+Xml\+Entity\+Resolver@{Q\+Xml\+Entity\+Resolver}!````~Q\+Xml\+Entity\+Resolver@{$\sim$\+Q\+Xml\+Entity\+Resolver}}
+\index{````~Q\+Xml\+Entity\+Resolver@{$\sim$\+Q\+Xml\+Entity\+Resolver}!Q\+Xml\+Entity\+Resolver@{Q\+Xml\+Entity\+Resolver}}
+\subsubsection[{$\sim$\+Q\+Xml\+Entity\+Resolver()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+Xml\+Entity\+Resolver\+::$\sim$\+Q\+Xml\+Entity\+Resolver (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_q_xml_entity_resolver_a3a3c77b09f121dbf6bc43124a9ded5f4}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_xml_entity_resolver_a3f190a7cd80a8faa3df903f963709370}{}\index{Q\+Xml\+Entity\+Resolver@{Q\+Xml\+Entity\+Resolver}!error\+String@{error\+String}}
+\index{error\+String@{error\+String}!Q\+Xml\+Entity\+Resolver@{Q\+Xml\+Entity\+Resolver}}
+\subsubsection[{error\+String()=0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Xml\+Entity\+Resolver\+::error\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_q_xml_entity_resolver_a3f190a7cd80a8faa3df903f963709370}
+The reader calls this function to get an error string if any of the handler functions returns F\+A\+L\+S\+E to him. 
+
+Implémenté dans \hyperlink{class_q_xml_default_handler_afcbe5fdce86cea4b7863e752c2413c45}{Q\+Xml\+Default\+Handler}.
+
+\hypertarget{class_q_xml_entity_resolver_a4b0b6141c016eb3f7e37361f4ce13966}{}\index{Q\+Xml\+Entity\+Resolver@{Q\+Xml\+Entity\+Resolver}!resolve\+Entity@{resolve\+Entity}}
+\index{resolve\+Entity@{resolve\+Entity}!Q\+Xml\+Entity\+Resolver@{Q\+Xml\+Entity\+Resolver}}
+\subsubsection[{resolve\+Entity(const Q\+String \&public\+Id, const Q\+String \&system\+Id, Q\+Xml\+Input\+Source $\ast$\&ret)=0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Xml\+Entity\+Resolver\+::resolve\+Entity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{public\+Id, }
+\item[{const {\bf Q\+String} \&}]{system\+Id, }
+\item[{{\bf Q\+Xml\+Input\+Source} $\ast$\&}]{ret}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_q_xml_entity_resolver_a4b0b6141c016eb3f7e37361f4ce13966}
+The reader will call this function before he opens any external entity, except the top-\/level document entity. The application may request the reader to resolve the entity itself ({\itshape ret} is 0) or to use an entirely different input source ({\itshape ret} points to the input source).
+
+The reader will delete the input source {\itshape ret} when he no longer needs it. So you should allocate it on the heap with {\ttfamily new}.
+
+The argument {\itshape public\+Id} is the public identifier of the external entity, {\itshape system\+Id} is the system identifier of the external entity and {\itshape ret} is the return value of this function\+: if it is 0 the reader should resolve the entity itself, if it is non-\/zero it must point to an input source which the reader will use instead.
+
+If this function returns F\+A\+L\+S\+E the reader will stop parsing and will report an error. The reader will use the function \hyperlink{class_q_xml_entity_resolver_a3f190a7cd80a8faa3df903f963709370}{error\+String()} to get the error message that will be used for reporting the error. 
+
+Implémenté dans \hyperlink{class_q_xml_default_handler_ac2fa1a7aff599d2832fca1d650a435a7}{Q\+Xml\+Default\+Handler}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qxml_8h}{qxml.\+h}\item 
+qtools/\hyperlink{qxml_8cpp}{qxml.\+cpp}\end{DoxyCompactItemize}

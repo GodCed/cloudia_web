@@ -1,0 +1,187 @@
+\hypertarget{class_diagram_item}{}\section{Référence de la classe Diagram\+Item}
+\label{class_diagram_item}\index{Diagram\+Item@{Diagram\+Item}}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_diagram_item_a4387e041c010990d1ef23d104ea082fe}{Diagram\+Item} (\hyperlink{class_diagram_item}{Diagram\+Item} $\ast$\hyperlink{060__command__switch_8tcl_a15229b450f26d8fa1c10bea4f3279f4d}{p}, int \hyperlink{class_diagram_item_afe8624dd8e709eb37ea43a4832393595}{number}, \hyperlink{class_class_def}{Class\+Def} $\ast$cd, \hyperlink{types_8h_a90e352184df58cd09455fe9996cd4ded}{Protection} prot, \hyperlink{types_8h_ab16236bdd10ddf4d73a9847350f0017e}{Specifier} virt, const char $\ast$ts)
+\item 
+\hyperlink{class_diagram_item_a28a42a62623db060c81d1c1f20062980}{$\sim$\+Diagram\+Item} ()
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_diagram_item_a48fbedab12c8a15d132e199153f48f3f}{label} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_diagram_item_a09c408ec4cb5762a843125723ff1c4b4}{file\+Name} () const 
+\item 
+\hyperlink{class_diagram_item}{Diagram\+Item} $\ast$ \hyperlink{class_diagram_item_ab2289efb497a6181accc11324b2007bb}{parent\+Item} ()
+\item 
+\hyperlink{class_diagram_item_list}{Diagram\+Item\+List} $\ast$ \hyperlink{class_diagram_item_a30aa024181c7ddd574492cfce67cc19e}{get\+Children} ()
+\item 
+void \hyperlink{class_diagram_item_aca2295801c4b08a1565e86da1c04c242}{move} (int dx, int dy)
+\item 
+int \hyperlink{class_diagram_item_afd98db9ecb3770cf71c2f1b0c4394465}{x\+Pos} () const 
+\item 
+int \hyperlink{class_diagram_item_ab8b6d897595c3402ddcd013e7ebec541}{y\+Pos} () const 
+\item 
+int \hyperlink{class_diagram_item_a06dfc36ac9ff18b07a882762da9bd71d}{avg\+Child\+Pos} () const 
+\item 
+int \hyperlink{class_diagram_item_a2cf0c86abbac20e140f779aebfc6a6b1}{num\+Children} () const 
+\item 
+void \hyperlink{class_diagram_item_a32ecbe11566dd5ede121ae0bbaf70945}{add\+Child} (\hyperlink{class_diagram_item}{Diagram\+Item} $\ast$di)
+\item 
+int \hyperlink{class_diagram_item_afe8624dd8e709eb37ea43a4832393595}{number} () const 
+\item 
+\hyperlink{types_8h_a90e352184df58cd09455fe9996cd4ded}{Protection} \hyperlink{class_diagram_item_ad83d50b127dea6a307422651d812b149}{protection} () const 
+\item 
+\hyperlink{types_8h_ab16236bdd10ddf4d73a9847350f0017e}{Specifier} \hyperlink{class_diagram_item_ad0d0d5e3defa519b446874d5fb4eb9ee}{virtualness} () const 
+\item 
+void \hyperlink{class_diagram_item_ad27e4ec4bbcf59eb0c8bf33571fec70d}{put\+In\+List} ()
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_diagram_item_a8f21bf299dbfe001dc2622562a5e0055}{is\+In\+List} () const 
+\item 
+\hyperlink{class_class_def}{Class\+Def} $\ast$ \hyperlink{class_diagram_item_ae1cbad40074f972b8e8eb644c37e27aa}{get\+Class\+Def} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Class representing a single node in the built-\/in class diagram 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_diagram_item_a4387e041c010990d1ef23d104ea082fe}{}\index{Diagram\+Item@{Diagram\+Item}!Diagram\+Item@{Diagram\+Item}}
+\index{Diagram\+Item@{Diagram\+Item}!Diagram\+Item@{Diagram\+Item}}
+\subsubsection[{Diagram\+Item(\+Diagram\+Item $\ast$p, int number, Class\+Def $\ast$cd, Protection prot, Specifier virt, const char $\ast$ts)}]{\setlength{\rightskip}{0pt plus 5cm}Diagram\+Item\+::\+Diagram\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf Diagram\+Item} $\ast$}]{p, }
+\item[{int}]{number, }
+\item[{{\bf Class\+Def} $\ast$}]{cd, }
+\item[{{\bf Protection}}]{prot, }
+\item[{{\bf Specifier}}]{virt, }
+\item[{const char $\ast$}]{ts}
+\end{DoxyParamCaption}
+)}\label{class_diagram_item_a4387e041c010990d1ef23d104ea082fe}
+\hypertarget{class_diagram_item_a28a42a62623db060c81d1c1f20062980}{}\index{Diagram\+Item@{Diagram\+Item}!````~Diagram\+Item@{$\sim$\+Diagram\+Item}}
+\index{````~Diagram\+Item@{$\sim$\+Diagram\+Item}!Diagram\+Item@{Diagram\+Item}}
+\subsubsection[{$\sim$\+Diagram\+Item()}]{\setlength{\rightskip}{0pt plus 5cm}Diagram\+Item\+::$\sim$\+Diagram\+Item (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_diagram_item_a28a42a62623db060c81d1c1f20062980}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_diagram_item_a32ecbe11566dd5ede121ae0bbaf70945}{}\index{Diagram\+Item@{Diagram\+Item}!add\+Child@{add\+Child}}
+\index{add\+Child@{add\+Child}!Diagram\+Item@{Diagram\+Item}}
+\subsubsection[{add\+Child(\+Diagram\+Item $\ast$di)}]{\setlength{\rightskip}{0pt plus 5cm}void Diagram\+Item\+::add\+Child (
+\begin{DoxyParamCaption}
+\item[{{\bf Diagram\+Item} $\ast$}]{di}
+\end{DoxyParamCaption}
+)}\label{class_diagram_item_a32ecbe11566dd5ede121ae0bbaf70945}
+\hypertarget{class_diagram_item_a06dfc36ac9ff18b07a882762da9bd71d}{}\index{Diagram\+Item@{Diagram\+Item}!avg\+Child\+Pos@{avg\+Child\+Pos}}
+\index{avg\+Child\+Pos@{avg\+Child\+Pos}!Diagram\+Item@{Diagram\+Item}}
+\subsubsection[{avg\+Child\+Pos() const }]{\setlength{\rightskip}{0pt plus 5cm}int Diagram\+Item\+::avg\+Child\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_diagram_item_a06dfc36ac9ff18b07a882762da9bd71d}
+\hypertarget{class_diagram_item_a09c408ec4cb5762a843125723ff1c4b4}{}\index{Diagram\+Item@{Diagram\+Item}!file\+Name@{file\+Name}}
+\index{file\+Name@{file\+Name}!Diagram\+Item@{Diagram\+Item}}
+\subsubsection[{file\+Name() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Diagram\+Item\+::file\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_diagram_item_a09c408ec4cb5762a843125723ff1c4b4}
+\hypertarget{class_diagram_item_a30aa024181c7ddd574492cfce67cc19e}{}\index{Diagram\+Item@{Diagram\+Item}!get\+Children@{get\+Children}}
+\index{get\+Children@{get\+Children}!Diagram\+Item@{Diagram\+Item}}
+\subsubsection[{get\+Children()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Diagram\+Item\+List}$\ast$ Diagram\+Item\+::get\+Children (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_diagram_item_a30aa024181c7ddd574492cfce67cc19e}
+\hypertarget{class_diagram_item_ae1cbad40074f972b8e8eb644c37e27aa}{}\index{Diagram\+Item@{Diagram\+Item}!get\+Class\+Def@{get\+Class\+Def}}
+\index{get\+Class\+Def@{get\+Class\+Def}!Diagram\+Item@{Diagram\+Item}}
+\subsubsection[{get\+Class\+Def() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Class\+Def}$\ast$ Diagram\+Item\+::get\+Class\+Def (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_diagram_item_ae1cbad40074f972b8e8eb644c37e27aa}
+\hypertarget{class_diagram_item_a8f21bf299dbfe001dc2622562a5e0055}{}\index{Diagram\+Item@{Diagram\+Item}!is\+In\+List@{is\+In\+List}}
+\index{is\+In\+List@{is\+In\+List}!Diagram\+Item@{Diagram\+Item}}
+\subsubsection[{is\+In\+List() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Diagram\+Item\+::is\+In\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_diagram_item_a8f21bf299dbfe001dc2622562a5e0055}
+\hypertarget{class_diagram_item_a48fbedab12c8a15d132e199153f48f3f}{}\index{Diagram\+Item@{Diagram\+Item}!label@{label}}
+\index{label@{label}!Diagram\+Item@{Diagram\+Item}}
+\subsubsection[{label() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Diagram\+Item\+::label (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_diagram_item_a48fbedab12c8a15d132e199153f48f3f}
+\hypertarget{class_diagram_item_aca2295801c4b08a1565e86da1c04c242}{}\index{Diagram\+Item@{Diagram\+Item}!move@{move}}
+\index{move@{move}!Diagram\+Item@{Diagram\+Item}}
+\subsubsection[{move(int dx, int dy)}]{\setlength{\rightskip}{0pt plus 5cm}void Diagram\+Item\+::move (
+\begin{DoxyParamCaption}
+\item[{int}]{dx, }
+\item[{int}]{dy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_diagram_item_aca2295801c4b08a1565e86da1c04c242}
+\hypertarget{class_diagram_item_afe8624dd8e709eb37ea43a4832393595}{}\index{Diagram\+Item@{Diagram\+Item}!number@{number}}
+\index{number@{number}!Diagram\+Item@{Diagram\+Item}}
+\subsubsection[{number() const }]{\setlength{\rightskip}{0pt plus 5cm}int Diagram\+Item\+::number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_diagram_item_afe8624dd8e709eb37ea43a4832393595}
+\hypertarget{class_diagram_item_a2cf0c86abbac20e140f779aebfc6a6b1}{}\index{Diagram\+Item@{Diagram\+Item}!num\+Children@{num\+Children}}
+\index{num\+Children@{num\+Children}!Diagram\+Item@{Diagram\+Item}}
+\subsubsection[{num\+Children() const }]{\setlength{\rightskip}{0pt plus 5cm}int Diagram\+Item\+::num\+Children (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_diagram_item_a2cf0c86abbac20e140f779aebfc6a6b1}
+\hypertarget{class_diagram_item_ab2289efb497a6181accc11324b2007bb}{}\index{Diagram\+Item@{Diagram\+Item}!parent\+Item@{parent\+Item}}
+\index{parent\+Item@{parent\+Item}!Diagram\+Item@{Diagram\+Item}}
+\subsubsection[{parent\+Item()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Diagram\+Item}$\ast$ Diagram\+Item\+::parent\+Item (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_diagram_item_ab2289efb497a6181accc11324b2007bb}
+\hypertarget{class_diagram_item_ad83d50b127dea6a307422651d812b149}{}\index{Diagram\+Item@{Diagram\+Item}!protection@{protection}}
+\index{protection@{protection}!Diagram\+Item@{Diagram\+Item}}
+\subsubsection[{protection() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Protection} Diagram\+Item\+::protection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_diagram_item_ad83d50b127dea6a307422651d812b149}
+\hypertarget{class_diagram_item_ad27e4ec4bbcf59eb0c8bf33571fec70d}{}\index{Diagram\+Item@{Diagram\+Item}!put\+In\+List@{put\+In\+List}}
+\index{put\+In\+List@{put\+In\+List}!Diagram\+Item@{Diagram\+Item}}
+\subsubsection[{put\+In\+List()}]{\setlength{\rightskip}{0pt plus 5cm}void Diagram\+Item\+::put\+In\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_diagram_item_ad27e4ec4bbcf59eb0c8bf33571fec70d}
+\hypertarget{class_diagram_item_ad0d0d5e3defa519b446874d5fb4eb9ee}{}\index{Diagram\+Item@{Diagram\+Item}!virtualness@{virtualness}}
+\index{virtualness@{virtualness}!Diagram\+Item@{Diagram\+Item}}
+\subsubsection[{virtualness() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Specifier} Diagram\+Item\+::virtualness (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_diagram_item_ad0d0d5e3defa519b446874d5fb4eb9ee}
+\hypertarget{class_diagram_item_afd98db9ecb3770cf71c2f1b0c4394465}{}\index{Diagram\+Item@{Diagram\+Item}!x\+Pos@{x\+Pos}}
+\index{x\+Pos@{x\+Pos}!Diagram\+Item@{Diagram\+Item}}
+\subsubsection[{x\+Pos() const }]{\setlength{\rightskip}{0pt plus 5cm}int Diagram\+Item\+::x\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_diagram_item_afd98db9ecb3770cf71c2f1b0c4394465}
+\hypertarget{class_diagram_item_ab8b6d897595c3402ddcd013e7ebec541}{}\index{Diagram\+Item@{Diagram\+Item}!y\+Pos@{y\+Pos}}
+\index{y\+Pos@{y\+Pos}!Diagram\+Item@{Diagram\+Item}}
+\subsubsection[{y\+Pos() const }]{\setlength{\rightskip}{0pt plus 5cm}int Diagram\+Item\+::y\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_diagram_item_ab8b6d897595c3402ddcd013e7ebec541}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{diagram_8cpp}{diagram.\+cpp}\end{DoxyCompactItemize}

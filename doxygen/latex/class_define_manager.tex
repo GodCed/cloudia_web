@@ -1,0 +1,142 @@
+\hypertarget{class_define_manager}{}\section{Référence de la classe Define\+Manager}
+\label{class_define_manager}\index{Define\+Manager@{Define\+Manager}}
+
+
+Singleton that manages the defines available while proprocessing files.  
+
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_define_manager_afbecee8baeba40d35a068f7f3e53fe3e}{start\+Context} (const char $\ast$file\+Name)
+\item 
+void \hyperlink{class_define_manager_aee1f4c46242ef774c2bb68fb546df57d}{end\+Context} ()
+\item 
+void \hyperlink{class_define_manager_a9398543779e313d7fee799d200d2054b}{add\+File\+To\+Context} (const char $\ast$file\+Name)
+\item 
+void \hyperlink{class_define_manager_add50ce745af761cdf1d05428855ada2c}{add\+Define} (const char $\ast$file\+Name, \hyperlink{class_define}{Define} $\ast$def)
+\item 
+void \hyperlink{class_define_manager_ad7fc54954b0c4e8896354bcf5449c188}{add\+Include} (const char $\ast$from\+File\+Name, const char $\ast$to\+File\+Name)
+\item 
+\hyperlink{class_define}{Define} $\ast$ \hyperlink{class_define_manager_a8d91b4cd399f920046c4144d95c7c823}{is\+Defined} (const char $\ast$name) const 
+\item 
+const \hyperlink{src_2define_8h_a10f99e0f6f8522fa4cf1e7e4ff485f35}{Define\+Dict} \& \hyperlink{class_define_manager_a175bc8197c677fee9cfba6ce307225a9}{define\+Context} () const 
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_define_manager}{Define\+Manager} \& \hyperlink{class_define_manager_abadbf233461748c2d5f037874c58c375}{instance} ()
+\item 
+static void \hyperlink{class_define_manager_ad3ccd619d92e9bd8e7e7357c6db68cbb}{delete\+Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_define_manager_a8146c1027737f308e2f7c7dc67a09f87}{Defines\+Per\+File}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Singleton that manages the defines available while proprocessing files. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_define_manager_add50ce745af761cdf1d05428855ada2c}{}\index{Define\+Manager@{Define\+Manager}!add\+Define@{add\+Define}}
+\index{add\+Define@{add\+Define}!Define\+Manager@{Define\+Manager}}
+\subsubsection[{add\+Define(const char $\ast$file\+Name, Define $\ast$def)}]{\setlength{\rightskip}{0pt plus 5cm}void Define\+Manager\+::add\+Define (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name, }
+\item[{{\bf Define} $\ast$}]{def}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_define_manager_add50ce745af761cdf1d05428855ada2c}
+Add a define to the manager object. 
+\begin{DoxyParams}{Paramètres}
+{\em file\+Name} & The file in which the define was found \\
+\hline
+{\em def} & The \hyperlink{class_define}{Define} object to add. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_define_manager_a9398543779e313d7fee799d200d2054b}{}\index{Define\+Manager@{Define\+Manager}!add\+File\+To\+Context@{add\+File\+To\+Context}}
+\index{add\+File\+To\+Context@{add\+File\+To\+Context}!Define\+Manager@{Define\+Manager}}
+\subsubsection[{add\+File\+To\+Context(const char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Define\+Manager\+::add\+File\+To\+Context (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_define_manager_a9398543779e313d7fee799d200d2054b}
+Add an included file to the current context. If the file has been pre-\/processed already, all defines are added to the context. 
+\begin{DoxyParams}{Paramètres}
+{\em file\+Name} & The name of the include file to add to the context. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_define_manager_ad7fc54954b0c4e8896354bcf5449c188}{}\index{Define\+Manager@{Define\+Manager}!add\+Include@{add\+Include}}
+\index{add\+Include@{add\+Include}!Define\+Manager@{Define\+Manager}}
+\subsubsection[{add\+Include(const char $\ast$from\+File\+Name, const char $\ast$to\+File\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Define\+Manager\+::add\+Include (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{from\+File\+Name, }
+\item[{const char $\ast$}]{to\+File\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_define_manager_ad7fc54954b0c4e8896354bcf5449c188}
+Add an include relation to the manager object. 
+\begin{DoxyParams}{Paramètres}
+{\em from\+File\+Name} & file name in which the include was found. \\
+\hline
+{\em to\+File\+Name} & file name that is included. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_define_manager_a175bc8197c677fee9cfba6ce307225a9}{}\index{Define\+Manager@{Define\+Manager}!define\+Context@{define\+Context}}
+\index{define\+Context@{define\+Context}!Define\+Manager@{Define\+Manager}}
+\subsubsection[{define\+Context() const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Define\+Dict}\& Define\+Manager\+::define\+Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_define_manager_a175bc8197c677fee9cfba6ce307225a9}
+Returns a reference to the defines found in the current context. \hypertarget{class_define_manager_ad3ccd619d92e9bd8e7e7357c6db68cbb}{}\index{Define\+Manager@{Define\+Manager}!delete\+Instance@{delete\+Instance}}
+\index{delete\+Instance@{delete\+Instance}!Define\+Manager@{Define\+Manager}}
+\subsubsection[{delete\+Instance()}]{\setlength{\rightskip}{0pt plus 5cm}static void Define\+Manager\+::delete\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_define_manager_ad3ccd619d92e9bd8e7e7357c6db68cbb}
+Deletes the singleton \hypertarget{class_define_manager_aee1f4c46242ef774c2bb68fb546df57d}{}\index{Define\+Manager@{Define\+Manager}!end\+Context@{end\+Context}}
+\index{end\+Context@{end\+Context}!Define\+Manager@{Define\+Manager}}
+\subsubsection[{end\+Context()}]{\setlength{\rightskip}{0pt plus 5cm}void Define\+Manager\+::end\+Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_define_manager_aee1f4c46242ef774c2bb68fb546df57d}
+Ends the context started with \hyperlink{class_define_manager_afbecee8baeba40d35a068f7f3e53fe3e}{start\+Context()} freeing any defines collected within in this context. \hypertarget{class_define_manager_abadbf233461748c2d5f037874c58c375}{}\index{Define\+Manager@{Define\+Manager}!instance@{instance}}
+\index{instance@{instance}!Define\+Manager@{Define\+Manager}}
+\subsubsection[{instance()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Define\+Manager}\& Define\+Manager\+::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_define_manager_abadbf233461748c2d5f037874c58c375}
+Returns a reference to the singleton \hypertarget{class_define_manager_a8d91b4cd399f920046c4144d95c7c823}{}\index{Define\+Manager@{Define\+Manager}!is\+Defined@{is\+Defined}}
+\index{is\+Defined@{is\+Defined}!Define\+Manager@{Define\+Manager}}
+\subsubsection[{is\+Defined(const char $\ast$name) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Define}$\ast$ Define\+Manager\+::is\+Defined (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_define_manager_a8d91b4cd399f920046c4144d95c7c823}
+Returns a \hyperlink{class_define}{Define} object given its name or 0 if the \hyperlink{class_define}{Define} does not exist. \hypertarget{class_define_manager_afbecee8baeba40d35a068f7f3e53fe3e}{}\index{Define\+Manager@{Define\+Manager}!start\+Context@{start\+Context}}
+\index{start\+Context@{start\+Context}!Define\+Manager@{Define\+Manager}}
+\subsubsection[{start\+Context(const char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Define\+Manager\+::start\+Context (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_define_manager_afbecee8baeba40d35a068f7f3e53fe3e}
+Starts a context in which defines are collected. Called at the start of a new file that is preprocessed. 
+\begin{DoxyParams}{Paramètres}
+{\em file\+Name} & the name of the file to process. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_define_manager_a8146c1027737f308e2f7c7dc67a09f87}{}\index{Define\+Manager@{Define\+Manager}!Defines\+Per\+File@{Defines\+Per\+File}}
+\index{Defines\+Per\+File@{Defines\+Per\+File}!Define\+Manager@{Define\+Manager}}
+\subsubsection[{Defines\+Per\+File}]{\setlength{\rightskip}{0pt plus 5cm}friend class Defines\+Per\+File\hspace{0.3cm}{\ttfamily [friend]}}\label{class_define_manager_a8146c1027737f308e2f7c7dc67a09f87}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+generated\+\_\+src/doxygen/\hyperlink{pre_8cpp}{pre.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,94 @@
+\hypertarget{class_q_xml_parse_exception}{}\section{Référence de la classe Q\+Xml\+Parse\+Exception}
+\label{class_q_xml_parse_exception}\index{Q\+Xml\+Parse\+Exception@{Q\+Xml\+Parse\+Exception}}
+
+
+The \hyperlink{class_q_xml_parse_exception}{Q\+Xml\+Parse\+Exception} class is used to report errors with the \hyperlink{class_q_xml_error_handler}{Q\+Xml\+Error\+Handler} interface.  
+
+
+
+
+{\ttfamily \#include $<$qxml.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_xml_parse_exception_a3ebf6309461dea4ad1df751e8e95ed2b}{Q\+Xml\+Parse\+Exception} (const \hyperlink{class_q_string}{Q\+String} \&name=\char`\"{}\char`\"{}, int \hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c}=-\/1, int \hyperlink{060__command__switch_8tcl_aff56f84b49947b84b2a304f51cf8e678}{l}=-\/1, const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{060__command__switch_8tcl_a15229b450f26d8fa1c10bea4f3279f4d}{p}=\char`\"{}\char`\"{}, const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}=\char`\"{}\char`\"{})
+\item 
+int \hyperlink{class_q_xml_parse_exception_a1443bedda08626819d6decb2c574b715}{column\+Number} () const 
+\item 
+int \hyperlink{class_q_xml_parse_exception_ae8e27c76765c18027d9cebd8f089c096}{line\+Number} () const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_xml_parse_exception_a0aae20f843f786b2f6a9f0fda7036171}{public\+Id} () const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_xml_parse_exception_a0744490f220f68ca5ed2a6d5f868a2ae}{system\+Id} () const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_xml_parse_exception_a3288a96ff30c5ddefb53f87a72846ee6}{message} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+The \hyperlink{class_q_xml_parse_exception}{Q\+Xml\+Parse\+Exception} class is used to report errors with the \hyperlink{class_q_xml_error_handler}{Q\+Xml\+Error\+Handler} interface. 
+
+X\+M\+L
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_xml_error_handler}{Q\+Xml\+Error\+Handler} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_xml_parse_exception_a3ebf6309461dea4ad1df751e8e95ed2b}{}\index{Q\+Xml\+Parse\+Exception@{Q\+Xml\+Parse\+Exception}!Q\+Xml\+Parse\+Exception@{Q\+Xml\+Parse\+Exception}}
+\index{Q\+Xml\+Parse\+Exception@{Q\+Xml\+Parse\+Exception}!Q\+Xml\+Parse\+Exception@{Q\+Xml\+Parse\+Exception}}
+\subsubsection[{Q\+Xml\+Parse\+Exception(const Q\+String \&name="""", int c=-\/1, int l=-\/1, const Q\+String \&p="""", const Q\+String \&s="""")}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Xml\+Parse\+Exception\+::\+Q\+Xml\+Parse\+Exception (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{name = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{int}]{c = {\ttfamily -\/1}, }
+\item[{int}]{l = {\ttfamily -\/1}, }
+\item[{const {\bf Q\+String} \&}]{p = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{const {\bf Q\+String} \&}]{s = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_xml_parse_exception_a3ebf6309461dea4ad1df751e8e95ed2b}
+Constructs a parse exception with the error string {\itshape name} in the column {\itshape c} and line {\itshape l} for the public identifier {\itshape p} and the system identifier {\itshape s}. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_xml_parse_exception_a1443bedda08626819d6decb2c574b715}{}\index{Q\+Xml\+Parse\+Exception@{Q\+Xml\+Parse\+Exception}!column\+Number@{column\+Number}}
+\index{column\+Number@{column\+Number}!Q\+Xml\+Parse\+Exception@{Q\+Xml\+Parse\+Exception}}
+\subsubsection[{column\+Number() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Xml\+Parse\+Exception\+::column\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_xml_parse_exception_a1443bedda08626819d6decb2c574b715}
+Returns the column number the error occured. \hypertarget{class_q_xml_parse_exception_ae8e27c76765c18027d9cebd8f089c096}{}\index{Q\+Xml\+Parse\+Exception@{Q\+Xml\+Parse\+Exception}!line\+Number@{line\+Number}}
+\index{line\+Number@{line\+Number}!Q\+Xml\+Parse\+Exception@{Q\+Xml\+Parse\+Exception}}
+\subsubsection[{line\+Number() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Xml\+Parse\+Exception\+::line\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_xml_parse_exception_ae8e27c76765c18027d9cebd8f089c096}
+Returns the line number the error occured. \hypertarget{class_q_xml_parse_exception_a3288a96ff30c5ddefb53f87a72846ee6}{}\index{Q\+Xml\+Parse\+Exception@{Q\+Xml\+Parse\+Exception}!message@{message}}
+\index{message@{message}!Q\+Xml\+Parse\+Exception@{Q\+Xml\+Parse\+Exception}}
+\subsubsection[{message() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Xml\+Parse\+Exception\+::message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_xml_parse_exception_a3288a96ff30c5ddefb53f87a72846ee6}
+Returns the error message. \hypertarget{class_q_xml_parse_exception_a0aae20f843f786b2f6a9f0fda7036171}{}\index{Q\+Xml\+Parse\+Exception@{Q\+Xml\+Parse\+Exception}!public\+Id@{public\+Id}}
+\index{public\+Id@{public\+Id}!Q\+Xml\+Parse\+Exception@{Q\+Xml\+Parse\+Exception}}
+\subsubsection[{public\+Id() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Xml\+Parse\+Exception\+::public\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_xml_parse_exception_a0aae20f843f786b2f6a9f0fda7036171}
+Returns the public identifier the error occured. \hypertarget{class_q_xml_parse_exception_a0744490f220f68ca5ed2a6d5f868a2ae}{}\index{Q\+Xml\+Parse\+Exception@{Q\+Xml\+Parse\+Exception}!system\+Id@{system\+Id}}
+\index{system\+Id@{system\+Id}!Q\+Xml\+Parse\+Exception@{Q\+Xml\+Parse\+Exception}}
+\subsubsection[{system\+Id() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Xml\+Parse\+Exception\+::system\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_xml_parse_exception_a0744490f220f68ca5ed2a6d5f868a2ae}
+Returns the system identifier the error occured. 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qxml_8h}{qxml.\+h}\item 
+qtools/\hyperlink{qxml_8cpp}{qxml.\+cpp}\end{DoxyCompactItemize}

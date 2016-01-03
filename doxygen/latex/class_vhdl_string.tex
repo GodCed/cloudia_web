@@ -1,0 +1,213 @@
+\hypertarget{class_vhdl_string}{}\section{Référence de la classe Vhdl\+String}
+\label{class_vhdl_string}\index{Vhdl\+String@{Vhdl\+String}}
+
+
+Minimal string class with std\+::string like behaviour that fulfills the Java\+C\+C string requirements.  
+
+
+
+
+{\ttfamily \#include $<$vhdlstring.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_vhdl_string_ad1747afcb0d13f711688ab21ae32fe9e}{Vhdl\+String} ()
+\item 
+\hyperlink{class_vhdl_string_a8fe423bc361c8030dc9f6ba110d87141}{Vhdl\+String} (const \hyperlink{class_vhdl_string}{Vhdl\+String} \&other)
+\item 
+\hyperlink{class_vhdl_string}{Vhdl\+String} \& \hyperlink{class_vhdl_string_ae3c975354c2e551238394e2966f15999}{operator=} (const \hyperlink{class_vhdl_string}{Vhdl\+String} \&other)
+\item 
+\hyperlink{class_vhdl_string_ac1475e34a382d8691a23ac4e1d25e379}{Vhdl\+String} (const char $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_vhdl_string_ab0fb86df3d26cfde46f9822599a53269}{Vhdl\+String} (const char $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, int \hyperlink{class_vhdl_string_a145a2564c0030411267a2ceda23148a7}{size})
+\item 
+\hyperlink{class_vhdl_string_a1e13bd31dbfa44d0607fb9383e413fbb}{$\sim$\+Vhdl\+String} ()
+\item 
+\hyperlink{class_vhdl_string}{Vhdl\+String} \& \hyperlink{class_vhdl_string_afa4734698d424fe3aa51f828a4f52446}{append} (const char $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, int \hyperlink{class_vhdl_string_a145a2564c0030411267a2ceda23148a7}{size})
+\item 
+\hyperlink{class_vhdl_string}{Vhdl\+String} \& \hyperlink{class_vhdl_string_a2ccc401ac9c92eae61386019e9539cd6}{append} (const char $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_vhdl_string}{Vhdl\+String} \& \hyperlink{class_vhdl_string_a1f11b119dfb6f63b4b77a6d272b6c0d3}{append} (const \hyperlink{class_vhdl_string}{Vhdl\+String} \&other)
+\item 
+\hyperlink{class_vhdl_string}{Vhdl\+String} \hyperlink{class_vhdl_string_ab19c70bd559db2d839ad189dba7d4308}{substr} (int pos=0, int len=-\/1)
+\item 
+int \hyperlink{class_vhdl_string_a535d1815abd7fcd1a292230c2457b043}{copy} (char $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, int len, int pos=0) const 
+\item 
+const char $\ast$ \hyperlink{class_vhdl_string_a7d6d779af6c5e59510c4b08901138f7b}{c\+\_\+str} () const 
+\item 
+const char $\ast$ \hyperlink{class_vhdl_string_a3a8d3aa7794f9a63cf855915eef029c5}{data} () const 
+\item 
+int \hyperlink{class_vhdl_string_a145a2564c0030411267a2ceda23148a7}{size} () const 
+\item 
+int \hyperlink{class_vhdl_string_a987fd03c027bda8fd8538c090014a8ec}{length} () const 
+\item 
+char \& \hyperlink{class_vhdl_string_ab395ac8365ea53886555cb1726262d38}{operator\mbox{[}$\,$\mbox{]}} (int \hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+const char \& \hyperlink{class_vhdl_string_ab0f39d33f771e91c290f8570fe4384bc}{operator\mbox{[}$\,$\mbox{]}} (int \hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}) const 
+\item 
+void \hyperlink{class_vhdl_string_a5deab91a4101cbd3fe7a08970b673697}{clear} ()
+\item 
+\hyperlink{class_vhdl_string}{Vhdl\+String} \& \hyperlink{class_vhdl_string_accbd0109902958307ae5a7f852a01289}{operator+=} (char \hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})
+\item 
+\hyperlink{class_vhdl_string}{Vhdl\+String} \& \hyperlink{class_vhdl_string_a6b3ffe71a23d70e319ec82b817f32181}{operator+=} (const char $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Minimal string class with std\+::string like behaviour that fulfills the Java\+C\+C string requirements. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_vhdl_string_ad1747afcb0d13f711688ab21ae32fe9e}{}\index{Vhdl\+String@{Vhdl\+String}!Vhdl\+String@{Vhdl\+String}}
+\index{Vhdl\+String@{Vhdl\+String}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{Vhdl\+String()}]{\setlength{\rightskip}{0pt plus 5cm}Vhdl\+String\+::\+Vhdl\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_ad1747afcb0d13f711688ab21ae32fe9e}
+\hypertarget{class_vhdl_string_a8fe423bc361c8030dc9f6ba110d87141}{}\index{Vhdl\+String@{Vhdl\+String}!Vhdl\+String@{Vhdl\+String}}
+\index{Vhdl\+String@{Vhdl\+String}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{Vhdl\+String(const Vhdl\+String \&other)}]{\setlength{\rightskip}{0pt plus 5cm}Vhdl\+String\+::\+Vhdl\+String (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vhdl\+String} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_a8fe423bc361c8030dc9f6ba110d87141}
+\hypertarget{class_vhdl_string_ac1475e34a382d8691a23ac4e1d25e379}{}\index{Vhdl\+String@{Vhdl\+String}!Vhdl\+String@{Vhdl\+String}}
+\index{Vhdl\+String@{Vhdl\+String}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{Vhdl\+String(const char $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}Vhdl\+String\+::\+Vhdl\+String (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_ac1475e34a382d8691a23ac4e1d25e379}
+\hypertarget{class_vhdl_string_ab0fb86df3d26cfde46f9822599a53269}{}\index{Vhdl\+String@{Vhdl\+String}!Vhdl\+String@{Vhdl\+String}}
+\index{Vhdl\+String@{Vhdl\+String}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{Vhdl\+String(const char $\ast$s, int size)}]{\setlength{\rightskip}{0pt plus 5cm}Vhdl\+String\+::\+Vhdl\+String (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_ab0fb86df3d26cfde46f9822599a53269}
+\hypertarget{class_vhdl_string_a1e13bd31dbfa44d0607fb9383e413fbb}{}\index{Vhdl\+String@{Vhdl\+String}!````~Vhdl\+String@{$\sim$\+Vhdl\+String}}
+\index{````~Vhdl\+String@{$\sim$\+Vhdl\+String}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{$\sim$\+Vhdl\+String()}]{\setlength{\rightskip}{0pt plus 5cm}Vhdl\+String\+::$\sim$\+Vhdl\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_a1e13bd31dbfa44d0607fb9383e413fbb}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_vhdl_string_afa4734698d424fe3aa51f828a4f52446}{}\index{Vhdl\+String@{Vhdl\+String}!append@{append}}
+\index{append@{append}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{append(const char $\ast$s, int size)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vhdl\+String}\& Vhdl\+String\+::append (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_afa4734698d424fe3aa51f828a4f52446}
+\hypertarget{class_vhdl_string_a2ccc401ac9c92eae61386019e9539cd6}{}\index{Vhdl\+String@{Vhdl\+String}!append@{append}}
+\index{append@{append}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{append(const char $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vhdl\+String}\& Vhdl\+String\+::append (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_a2ccc401ac9c92eae61386019e9539cd6}
+\hypertarget{class_vhdl_string_a1f11b119dfb6f63b4b77a6d272b6c0d3}{}\index{Vhdl\+String@{Vhdl\+String}!append@{append}}
+\index{append@{append}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{append(const Vhdl\+String \&other)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vhdl\+String}\& Vhdl\+String\+::append (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vhdl\+String} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_a1f11b119dfb6f63b4b77a6d272b6c0d3}
+\hypertarget{class_vhdl_string_a7d6d779af6c5e59510c4b08901138f7b}{}\index{Vhdl\+String@{Vhdl\+String}!c\+\_\+str@{c\+\_\+str}}
+\index{c\+\_\+str@{c\+\_\+str}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{c\+\_\+str() const }]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Vhdl\+String\+::c\+\_\+str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_a7d6d779af6c5e59510c4b08901138f7b}
+\hypertarget{class_vhdl_string_a5deab91a4101cbd3fe7a08970b673697}{}\index{Vhdl\+String@{Vhdl\+String}!clear@{clear}}
+\index{clear@{clear}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Vhdl\+String\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_a5deab91a4101cbd3fe7a08970b673697}
+\hypertarget{class_vhdl_string_a535d1815abd7fcd1a292230c2457b043}{}\index{Vhdl\+String@{Vhdl\+String}!copy@{copy}}
+\index{copy@{copy}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{copy(char $\ast$s, int len, int pos=0) const }]{\setlength{\rightskip}{0pt plus 5cm}int Vhdl\+String\+::copy (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s, }
+\item[{int}]{len, }
+\item[{int}]{pos = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_a535d1815abd7fcd1a292230c2457b043}
+\hypertarget{class_vhdl_string_a3a8d3aa7794f9a63cf855915eef029c5}{}\index{Vhdl\+String@{Vhdl\+String}!data@{data}}
+\index{data@{data}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{data() const }]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Vhdl\+String\+::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_a3a8d3aa7794f9a63cf855915eef029c5}
+\hypertarget{class_vhdl_string_a987fd03c027bda8fd8538c090014a8ec}{}\index{Vhdl\+String@{Vhdl\+String}!length@{length}}
+\index{length@{length}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{length() const }]{\setlength{\rightskip}{0pt plus 5cm}int Vhdl\+String\+::length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_a987fd03c027bda8fd8538c090014a8ec}
+\hypertarget{class_vhdl_string_accbd0109902958307ae5a7f852a01289}{}\index{Vhdl\+String@{Vhdl\+String}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{operator+=(char c)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vhdl\+String}\& Vhdl\+String\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_accbd0109902958307ae5a7f852a01289}
+\hypertarget{class_vhdl_string_a6b3ffe71a23d70e319ec82b817f32181}{}\index{Vhdl\+String@{Vhdl\+String}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{operator+=(const char $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vhdl\+String}\& Vhdl\+String\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_a6b3ffe71a23d70e319ec82b817f32181}
+\hypertarget{class_vhdl_string_ae3c975354c2e551238394e2966f15999}{}\index{Vhdl\+String@{Vhdl\+String}!operator=@{operator=}}
+\index{operator=@{operator=}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{operator=(const Vhdl\+String \&other)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vhdl\+String}\& Vhdl\+String\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vhdl\+String} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_ae3c975354c2e551238394e2966f15999}
+\hypertarget{class_vhdl_string_ab395ac8365ea53886555cb1726262d38}{}\index{Vhdl\+String@{Vhdl\+String}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{operator[](int i)}]{\setlength{\rightskip}{0pt plus 5cm}char\& Vhdl\+String\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_ab395ac8365ea53886555cb1726262d38}
+\hypertarget{class_vhdl_string_ab0f39d33f771e91c290f8570fe4384bc}{}\index{Vhdl\+String@{Vhdl\+String}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{operator[](int i) const }]{\setlength{\rightskip}{0pt plus 5cm}const char\& Vhdl\+String\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_ab0f39d33f771e91c290f8570fe4384bc}
+\hypertarget{class_vhdl_string_a145a2564c0030411267a2ceda23148a7}{}\index{Vhdl\+String@{Vhdl\+String}!size@{size}}
+\index{size@{size}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{size() const }]{\setlength{\rightskip}{0pt plus 5cm}int Vhdl\+String\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_a145a2564c0030411267a2ceda23148a7}
+\hypertarget{class_vhdl_string_ab19c70bd559db2d839ad189dba7d4308}{}\index{Vhdl\+String@{Vhdl\+String}!substr@{substr}}
+\index{substr@{substr}!Vhdl\+String@{Vhdl\+String}}
+\subsubsection[{substr(int pos=0, int len=-\/1)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vhdl\+String} Vhdl\+String\+::substr (
+\begin{DoxyParamCaption}
+\item[{int}]{pos = {\ttfamily 0}, }
+\item[{int}]{len = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vhdl_string_ab19c70bd559db2d839ad189dba7d4308}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+vhdlparser/\hyperlink{vhdlstring_8h}{vhdlstring.\+h}\end{DoxyCompactItemize}

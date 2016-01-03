@@ -1,0 +1,137 @@
+\hypertarget{class_template_list}{}\section{Référence de la classe Template\+List}
+\label{class_template_list}\index{Template\+List@{Template\+List}}
+
+
+Default implementation of a context value of type list.  
+
+
+
+
+{\ttfamily \#include $<$template.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Template\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_template_list}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_template_list_1_1_private}{Private}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_template_list_1_1_private}{Private} data of a template list object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{class_template_list_a7b9074d1ddbd265b768261ad6b359e61}{count} () const 
+\item 
+virtual \hyperlink{class_template_variant}{Template\+Variant} \hyperlink{class_template_list_a7c766dc3b4eb1adf0e867382827176c9}{at} (int index) const 
+\item 
+virtual \hyperlink{class_template_list_intf_1_1_const_iterator}{Template\+List\+Intf\+::\+Const\+Iterator} $\ast$ \hyperlink{class_template_list_ab7e1c552851aad0581bcce40f248cd82}{create\+Iterator} () const 
+\item 
+virtual int \hyperlink{class_template_list_a144bf4bdc326ba570eba62b1dc90f32f}{add\+Ref} ()
+\item 
+virtual int \hyperlink{class_template_list_aeff3b4d0cf58bc2bd92de00c51cde488}{release} ()
+\item 
+virtual void \hyperlink{class_template_list_ad866913882089b08eb818f801c251aed}{append} (const \hyperlink{class_template_variant}{Template\+Variant} \&v)
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_template_list}{Template\+List} $\ast$ \hyperlink{class_template_list_ada6751243c72ffd2c4a4a9aa0d752ef3}{alloc} ()
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_template_list_a5f57a87e481b901242e6e7e90bc03e2b}{Template\+List\+Const\+Iterator}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Default implementation of a context value of type list. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_template_list_a144bf4bdc326ba570eba62b1dc90f32f}{}\index{Template\+List@{Template\+List}!add\+Ref@{add\+Ref}}
+\index{add\+Ref@{add\+Ref}!Template\+List@{Template\+List}}
+\subsubsection[{add\+Ref()}]{\setlength{\rightskip}{0pt plus 5cm}int Template\+List\+::add\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_template_list_a144bf4bdc326ba570eba62b1dc90f32f}
+Increase object\textquotesingle{}s reference count 
+
+Implémente \hyperlink{class_template_list_intf_a4b4973e2e15396d10bc4e3085462ca2b}{Template\+List\+Intf}.
+
+\hypertarget{class_template_list_ada6751243c72ffd2c4a4a9aa0d752ef3}{}\index{Template\+List@{Template\+List}!alloc@{alloc}}
+\index{alloc@{alloc}!Template\+List@{Template\+List}}
+\subsubsection[{alloc()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+List} $\ast$ Template\+List\+::alloc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_template_list_ada6751243c72ffd2c4a4a9aa0d752ef3}
+Creates an instance with ref count set to 0 \hypertarget{class_template_list_ad866913882089b08eb818f801c251aed}{}\index{Template\+List@{Template\+List}!append@{append}}
+\index{append@{append}!Template\+List@{Template\+List}}
+\subsubsection[{append(const Template\+Variant \&v)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+List\+::append (
+\begin{DoxyParamCaption}
+\item[{const {\bf Template\+Variant} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_template_list_ad866913882089b08eb818f801c251aed}
+Appends element {\itshape v} to the end of the list \hypertarget{class_template_list_a7c766dc3b4eb1adf0e867382827176c9}{}\index{Template\+List@{Template\+List}!at@{at}}
+\index{at@{at}!Template\+List@{Template\+List}}
+\subsubsection[{at(int index) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Variant} Template\+List\+::at (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_template_list_a7c766dc3b4eb1adf0e867382827176c9}
+Returns the element at index position {\itshape index}. 
+
+Implémente \hyperlink{class_template_list_intf_ab6eb2617632cd4ef1921462ab8bdf6db}{Template\+List\+Intf}.
+
+\hypertarget{class_template_list_a7b9074d1ddbd265b768261ad6b359e61}{}\index{Template\+List@{Template\+List}!count@{count}}
+\index{count@{count}!Template\+List@{Template\+List}}
+\subsubsection[{count() const }]{\setlength{\rightskip}{0pt plus 5cm}int Template\+List\+::count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_template_list_a7b9074d1ddbd265b768261ad6b359e61}
+Returns the number of elements in the list 
+
+Implémente \hyperlink{class_template_list_intf_a14adca83cf54aae190e19986cc972a37}{Template\+List\+Intf}.
+
+\hypertarget{class_template_list_ab7e1c552851aad0581bcce40f248cd82}{}\index{Template\+List@{Template\+List}!create\+Iterator@{create\+Iterator}}
+\index{create\+Iterator@{create\+Iterator}!Template\+List@{Template\+List}}
+\subsubsection[{create\+Iterator() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+List\+Intf\+::\+Const\+Iterator} $\ast$ Template\+List\+::create\+Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_template_list_ab7e1c552851aad0581bcce40f248cd82}
+Creates a new iterator for this list. \begin{DoxyNote}{Note}
+the user should call delete on the returned pointer. 
+\end{DoxyNote}
+
+
+Implémente \hyperlink{class_template_list_intf_ad266da04b32224afba9c3f16d05a68a9}{Template\+List\+Intf}.
+
+\hypertarget{class_template_list_aeff3b4d0cf58bc2bd92de00c51cde488}{}\index{Template\+List@{Template\+List}!release@{release}}
+\index{release@{release}!Template\+List@{Template\+List}}
+\subsubsection[{release()}]{\setlength{\rightskip}{0pt plus 5cm}int Template\+List\+::release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_template_list_aeff3b4d0cf58bc2bd92de00c51cde488}
+Decreases object\textquotesingle{}s referenc count, destroy object if 0 
+
+Implémente \hyperlink{class_template_list_intf_a0c53169c740c09dac47efc62bbe39674}{Template\+List\+Intf}.
+
+
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_template_list_a5f57a87e481b901242e6e7e90bc03e2b}{}\index{Template\+List@{Template\+List}!Template\+List\+Const\+Iterator@{Template\+List\+Const\+Iterator}}
+\index{Template\+List\+Const\+Iterator@{Template\+List\+Const\+Iterator}!Template\+List@{Template\+List}}
+\subsubsection[{Template\+List\+Const\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Template\+List\+Const\+Iterator}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_template_list_a5f57a87e481b901242e6e7e90bc03e2b}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{template_8h}{template.\+h}\item 
+src/\hyperlink{template_8cpp}{template.\+cpp}\end{DoxyCompactItemize}

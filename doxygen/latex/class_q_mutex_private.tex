@@ -1,0 +1,84 @@
+\hypertarget{class_q_mutex_private}{}\section{Référence de la classe Q\+Mutex\+Private}
+\label{class_q_mutex_private}\index{Q\+Mutex\+Private@{Q\+Mutex\+Private}}
+
+
+{\ttfamily \#include $<$qmutex\+\_\+p.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_mutex_private_aa9c60c53c59f8c6d219516a519e99ef8}{Q\+Mutex\+Private} ()
+\item 
+\hyperlink{class_q_mutex_private_aed6b0e74b2755a17bb5ac7792717b427}{$\sim$\+Q\+Mutex\+Private} ()
+\item 
+void \hyperlink{class_q_mutex_private_a28563c090da051f5162ef1a109b2a07b}{wait} ()
+\item 
+void \hyperlink{class_q_mutex_private_ae3a1d392a534d8bd323428b1b0e80b8f}{wake\+Up} ()
+\end{DoxyCompactItemize}
+\subsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_atomic_int}{Q\+Atomic\+Int} \hyperlink{class_q_mutex_private_a4ac3e54a95eed7cc3b0f9a1bc80e34f1}{contenders}
+\item 
+volatile \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_mutex_private_acae53ac5787f6fe69be1321d069f5f7d}{wakeup}
+\item 
+pthread\+\_\+mutex\+\_\+t \hyperlink{class_q_mutex_private_acd3490bc71fdb04de75a7055b1211def}{mutex}
+\item 
+pthread\+\_\+cond\+\_\+t \hyperlink{class_q_mutex_private_a58da8d570849a70617e6f87d2945f639}{cond}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_mutex_private_aa9c60c53c59f8c6d219516a519e99ef8}{}\index{Q\+Mutex\+Private@{Q\+Mutex\+Private}!Q\+Mutex\+Private@{Q\+Mutex\+Private}}
+\index{Q\+Mutex\+Private@{Q\+Mutex\+Private}!Q\+Mutex\+Private@{Q\+Mutex\+Private}}
+\subsubsection[{Q\+Mutex\+Private()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Mutex\+Private\+::\+Q\+Mutex\+Private (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_mutex_private_aa9c60c53c59f8c6d219516a519e99ef8}
+\hypertarget{class_q_mutex_private_aed6b0e74b2755a17bb5ac7792717b427}{}\index{Q\+Mutex\+Private@{Q\+Mutex\+Private}!````~Q\+Mutex\+Private@{$\sim$\+Q\+Mutex\+Private}}
+\index{````~Q\+Mutex\+Private@{$\sim$\+Q\+Mutex\+Private}!Q\+Mutex\+Private@{Q\+Mutex\+Private}}
+\subsubsection[{$\sim$\+Q\+Mutex\+Private()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Mutex\+Private\+::$\sim$\+Q\+Mutex\+Private (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_mutex_private_aed6b0e74b2755a17bb5ac7792717b427}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_mutex_private_a28563c090da051f5162ef1a109b2a07b}{}\index{Q\+Mutex\+Private@{Q\+Mutex\+Private}!wait@{wait}}
+\index{wait@{wait}!Q\+Mutex\+Private@{Q\+Mutex\+Private}}
+\subsubsection[{wait()}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Mutex\+Private\+::wait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_mutex_private_a28563c090da051f5162ef1a109b2a07b}
+\hypertarget{class_q_mutex_private_ae3a1d392a534d8bd323428b1b0e80b8f}{}\index{Q\+Mutex\+Private@{Q\+Mutex\+Private}!wake\+Up@{wake\+Up}}
+\index{wake\+Up@{wake\+Up}!Q\+Mutex\+Private@{Q\+Mutex\+Private}}
+\subsubsection[{wake\+Up()}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Mutex\+Private\+::wake\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_mutex_private_ae3a1d392a534d8bd323428b1b0e80b8f}
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_q_mutex_private_a58da8d570849a70617e6f87d2945f639}{}\index{Q\+Mutex\+Private@{Q\+Mutex\+Private}!cond@{cond}}
+\index{cond@{cond}!Q\+Mutex\+Private@{Q\+Mutex\+Private}}
+\subsubsection[{cond}]{\setlength{\rightskip}{0pt plus 5cm}pthread\+\_\+cond\+\_\+t Q\+Mutex\+Private\+::cond}\label{class_q_mutex_private_a58da8d570849a70617e6f87d2945f639}
+\hypertarget{class_q_mutex_private_a4ac3e54a95eed7cc3b0f9a1bc80e34f1}{}\index{Q\+Mutex\+Private@{Q\+Mutex\+Private}!contenders@{contenders}}
+\index{contenders@{contenders}!Q\+Mutex\+Private@{Q\+Mutex\+Private}}
+\subsubsection[{contenders}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Atomic\+Int} Q\+Mutex\+Private\+::contenders}\label{class_q_mutex_private_a4ac3e54a95eed7cc3b0f9a1bc80e34f1}
+\hypertarget{class_q_mutex_private_acd3490bc71fdb04de75a7055b1211def}{}\index{Q\+Mutex\+Private@{Q\+Mutex\+Private}!mutex@{mutex}}
+\index{mutex@{mutex}!Q\+Mutex\+Private@{Q\+Mutex\+Private}}
+\subsubsection[{mutex}]{\setlength{\rightskip}{0pt plus 5cm}pthread\+\_\+mutex\+\_\+t Q\+Mutex\+Private\+::mutex}\label{class_q_mutex_private_acd3490bc71fdb04de75a7055b1211def}
+\hypertarget{class_q_mutex_private_acae53ac5787f6fe69be1321d069f5f7d}{}\index{Q\+Mutex\+Private@{Q\+Mutex\+Private}!wakeup@{wakeup}}
+\index{wakeup@{wakeup}!Q\+Mutex\+Private@{Q\+Mutex\+Private}}
+\subsubsection[{wakeup}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf bool} Q\+Mutex\+Private\+::wakeup}\label{class_q_mutex_private_acae53ac5787f6fe69be1321d069f5f7d}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qmutex__p_8h}{qmutex\+\_\+p.\+h}\item 
+qtools/\hyperlink{qmutex__unix_8cpp}{qmutex\+\_\+unix.\+cpp}\item 
+qtools/\hyperlink{qmutex__win32_8cpp}{qmutex\+\_\+win32.\+cpp}\end{DoxyCompactItemize}

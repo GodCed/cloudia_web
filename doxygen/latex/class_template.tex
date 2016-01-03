@@ -1,0 +1,69 @@
+\hypertarget{class_template}{}\section{Référence de la classe Template}
+\label{class_template}\index{Template@{Template}}
+
+
+Abstract interface for a template.  
+
+
+
+
+{\ttfamily \#include $<$template.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Template\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_template}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_template_a42de08b6f1a3e319f351d412ab721b25}{$\sim$\+Template} ()
+\item 
+virtual void \hyperlink{class_template_af9582cccc21e9aea39bd3fdbc609b03c}{render} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&ts, \hyperlink{class_template_context}{Template\+Context} $\ast$\hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Abstract interface for a template. 
+
+\begin{DoxyNote}{Note}
+Must be created and is deleted by the \hyperlink{class_template_engine}{Template\+Engine} 
+\end{DoxyNote}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_template_a42de08b6f1a3e319f351d412ab721b25}{}\index{Template@{Template}!````~Template@{$\sim$\+Template}}
+\index{````~Template@{$\sim$\+Template}!Template@{Template}}
+\subsubsection[{$\sim$\+Template()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Template\+::$\sim$\+Template (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_template_a42de08b6f1a3e319f351d412ab721b25}
+Destructor 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_template_af9582cccc21e9aea39bd3fdbc609b03c}{}\index{Template@{Template}!render@{render}}
+\index{render@{render}!Template@{Template}}
+\subsubsection[{render(\+F\+Text\+Stream \&ts, Template\+Context $\ast$c)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Template\+::render (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{ts, }
+\item[{{\bf Template\+Context} $\ast$}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_template_af9582cccc21e9aea39bd3fdbc609b03c}
+Renders a template instance to a stream. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em ts} & The text stream to write the results to. \\
+\hline
+\mbox{\tt in}  & {\em c} & The context containing data that can be used when instantiating the template. \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \hyperlink{class_template_impl_a99ab0382fe9d8d2337647a8c28df70f1}{Template\+Impl}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{template_8h}{template.\+h}\end{DoxyCompactItemize}

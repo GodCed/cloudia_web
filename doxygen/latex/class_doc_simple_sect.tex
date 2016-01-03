@@ -1,0 +1,211 @@
+\hypertarget{class_doc_simple_sect}{}\section{Référence de la classe Doc\+Simple\+Sect}
+\label{class_doc_simple_sect}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}
+
+
+{\ttfamily \#include $<$docparser.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Doc\+Simple\+Sect\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doc_simple_sect}
+\end{center}
+\end{figure}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9b}{Type} \{ \\*
+\hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba9fea43f94c363209267026e3cf9583c6}{Unknown}, 
+\hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba3bca11381a4eecb0a155993159e1f471}{See}, 
+\hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9bafbc7207cbd14361819ce4f2c8c33595d}{Return}, 
+\hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba93b679802935bef0edcd5d13787c93d7}{Author}, 
+\\*
+\hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba3e7dc72d1c6e9b0fd204ec7db9c47f6a}{Authors}, 
+\hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9baf32673a5f516e2100d41b917f37cfdf1}{Version}, 
+\hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9babede06022ff92538707861de74d9fdb5}{Since}, 
+\hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba7ebb3d39104e4023d8f64d46e9166305}{Date}, 
+\\*
+\hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9bada884137c8ff6a93503a9c561d5c35d0}{Note}, 
+\hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba407aa635cc75a80b3e222e307c43c988}{Warning}, 
+\hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba2e0c7884fe9de17cc8ec29cc8c445fa1}{Copyright}, 
+\hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba68b35aae9972a5f2f4b739edb91db575}{Pre}, 
+\\*
+\hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba10f52cafbfab59b29c286ac5d38251c8}{Post}, 
+\hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9baa5d61ff7b823df12aa9a3895342561b8}{Invar}, 
+\hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba71e7bd96894c8ce74ca64456d34d3939}{Remark}, 
+\hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9bae3e95855fe383d4767691416f122bda8}{Attention}, 
+\\*
+\hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba0cdc5e6cf3a4156f2e4cb80d267ea87d}{User}, 
+\hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9bae7ac2742a06bed8be1747d68ec4af980}{Rcs}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_simple_sect_a0ef58433b1e5f366b593d17a9ba4b9e1}{Doc\+Simple\+Sect} (\hyperlink{class_doc_node}{Doc\+Node} $\ast$\hyperlink{class_doc_node_a990d8b983962776a647e6231d38bd329}{parent}, \hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9b}{Type} \hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t})
+\item 
+virtual \hyperlink{class_doc_simple_sect_a5b8a0f80776d4071348a14ce769f61f7}{$\sim$\+Doc\+Simple\+Sect} ()
+\item 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadb}{Kind} \hyperlink{class_doc_simple_sect_adf5bfabb7a7bbb3deb064746aea10fb8}{kind} () const 
+\item 
+\hyperlink{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9b}{Type} \hyperlink{class_doc_simple_sect_a0dffdc45b4639e500e4d033616688808}{type} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_simple_sect_abff4299d4d90b70dfa44ff56fb9baebc}{type\+String} () const 
+\item 
+void \hyperlink{class_doc_simple_sect_a83c0f2c289b0d15403d1adf94c98982d}{accept} (\hyperlink{class_doc_visitor}{Doc\+Visitor} $\ast$v)
+\item 
+int \hyperlink{class_doc_simple_sect_a6d4285005170976f90f3aa926a7be8c0}{parse} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} user\+Title, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} needs\+Separator)
+\item 
+int \hyperlink{class_doc_simple_sect_a781284e66505901d40fd6d9df8663b3e}{parse\+Rcs} ()
+\item 
+int \hyperlink{class_doc_simple_sect_a5cdcf0db314a3f9721842c3134550ce2}{parse\+Xml} ()
+\item 
+void \hyperlink{class_doc_simple_sect_ae538f74c2d44222c9a45ef304c89e041}{append\+Link\+Word} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&word)
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Node representing a simple section 
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9b}{}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!Type@{Type}}
+\index{Type@{Type}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Doc\+Simple\+Sect\+::\+Type}}\label{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9b}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Unknown@{Unknown}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!Unknown@{Unknown}}\item[{\em 
+\hypertarget{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba9fea43f94c363209267026e3cf9583c6}{}Unknown\label{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba9fea43f94c363209267026e3cf9583c6}
+}]\index{See@{See}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!See@{See}}\item[{\em 
+\hypertarget{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba3bca11381a4eecb0a155993159e1f471}{}See\label{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba3bca11381a4eecb0a155993159e1f471}
+}]\index{Return@{Return}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!Return@{Return}}\item[{\em 
+\hypertarget{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9bafbc7207cbd14361819ce4f2c8c33595d}{}Return\label{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9bafbc7207cbd14361819ce4f2c8c33595d}
+}]\index{Author@{Author}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!Author@{Author}}\item[{\em 
+\hypertarget{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba93b679802935bef0edcd5d13787c93d7}{}Author\label{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba93b679802935bef0edcd5d13787c93d7}
+}]\index{Authors@{Authors}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!Authors@{Authors}}\item[{\em 
+\hypertarget{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba3e7dc72d1c6e9b0fd204ec7db9c47f6a}{}Authors\label{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba3e7dc72d1c6e9b0fd204ec7db9c47f6a}
+}]\index{Version@{Version}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!Version@{Version}}\item[{\em 
+\hypertarget{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9baf32673a5f516e2100d41b917f37cfdf1}{}Version\label{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9baf32673a5f516e2100d41b917f37cfdf1}
+}]\index{Since@{Since}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!Since@{Since}}\item[{\em 
+\hypertarget{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9babede06022ff92538707861de74d9fdb5}{}Since\label{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9babede06022ff92538707861de74d9fdb5}
+}]\index{Date@{Date}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!Date@{Date}}\item[{\em 
+\hypertarget{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba7ebb3d39104e4023d8f64d46e9166305}{}Date\label{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba7ebb3d39104e4023d8f64d46e9166305}
+}]\index{Note@{Note}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!Note@{Note}}\item[{\em 
+\hypertarget{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9bada884137c8ff6a93503a9c561d5c35d0}{}Note\label{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9bada884137c8ff6a93503a9c561d5c35d0}
+}]\index{Warning@{Warning}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!Warning@{Warning}}\item[{\em 
+\hypertarget{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba407aa635cc75a80b3e222e307c43c988}{}Warning\label{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba407aa635cc75a80b3e222e307c43c988}
+}]\index{Copyright@{Copyright}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!Copyright@{Copyright}}\item[{\em 
+\hypertarget{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba2e0c7884fe9de17cc8ec29cc8c445fa1}{}Copyright\label{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba2e0c7884fe9de17cc8ec29cc8c445fa1}
+}]\index{Pre@{Pre}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!Pre@{Pre}}\item[{\em 
+\hypertarget{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba68b35aae9972a5f2f4b739edb91db575}{}Pre\label{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba68b35aae9972a5f2f4b739edb91db575}
+}]\index{Post@{Post}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!Post@{Post}}\item[{\em 
+\hypertarget{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba10f52cafbfab59b29c286ac5d38251c8}{}Post\label{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba10f52cafbfab59b29c286ac5d38251c8}
+}]\index{Invar@{Invar}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!Invar@{Invar}}\item[{\em 
+\hypertarget{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9baa5d61ff7b823df12aa9a3895342561b8}{}Invar\label{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9baa5d61ff7b823df12aa9a3895342561b8}
+}]\index{Remark@{Remark}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!Remark@{Remark}}\item[{\em 
+\hypertarget{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba71e7bd96894c8ce74ca64456d34d3939}{}Remark\label{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba71e7bd96894c8ce74ca64456d34d3939}
+}]\index{Attention@{Attention}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!Attention@{Attention}}\item[{\em 
+\hypertarget{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9bae3e95855fe383d4767691416f122bda8}{}Attention\label{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9bae3e95855fe383d4767691416f122bda8}
+}]\index{User@{User}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!User@{User}}\item[{\em 
+\hypertarget{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba0cdc5e6cf3a4156f2e4cb80d267ea87d}{}User\label{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9ba0cdc5e6cf3a4156f2e4cb80d267ea87d}
+}]\index{Rcs@{Rcs}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!Rcs@{Rcs}}\item[{\em 
+\hypertarget{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9bae7ac2742a06bed8be1747d68ec4af980}{}Rcs\label{class_doc_simple_sect_a3b9f9dd4952f3d819b347f74a6769a9bae7ac2742a06bed8be1747d68ec4af980}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_doc_simple_sect_a0ef58433b1e5f366b593d17a9ba4b9e1}{}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}
+\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}
+\subsubsection[{Doc\+Simple\+Sect(\+Doc\+Node $\ast$parent, Type t)}]{\setlength{\rightskip}{0pt plus 5cm}Doc\+Simple\+Sect\+::\+Doc\+Simple\+Sect (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Node} $\ast$}]{parent, }
+\item[{{\bf Type}}]{t}
+\end{DoxyParamCaption}
+)}\label{class_doc_simple_sect_a0ef58433b1e5f366b593d17a9ba4b9e1}
+\hypertarget{class_doc_simple_sect_a5b8a0f80776d4071348a14ce769f61f7}{}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!````~Doc\+Simple\+Sect@{$\sim$\+Doc\+Simple\+Sect}}
+\index{````~Doc\+Simple\+Sect@{$\sim$\+Doc\+Simple\+Sect}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}
+\subsubsection[{$\sim$\+Doc\+Simple\+Sect()}]{\setlength{\rightskip}{0pt plus 5cm}Doc\+Simple\+Sect\+::$\sim$\+Doc\+Simple\+Sect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_doc_simple_sect_a5b8a0f80776d4071348a14ce769f61f7}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_doc_simple_sect_a83c0f2c289b0d15403d1adf94c98982d}{}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!accept@{accept}}
+\index{accept@{accept}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}
+\subsubsection[{accept(\+Doc\+Visitor $\ast$v)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Simple\+Sect\+::accept (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Visitor} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_doc_simple_sect_a83c0f2c289b0d15403d1adf94c98982d}
+Acceptor function for node visitors. Part of the visitor pattern. 
+\begin{DoxyParams}{Paramètres}
+{\em v} & Abstract visitor. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_doc_node_a5303a550cbe6395663bf9b9dad28cbf1}{Doc\+Node}.
+
+\hypertarget{class_doc_simple_sect_ae538f74c2d44222c9a45ef304c89e041}{}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!append\+Link\+Word@{append\+Link\+Word}}
+\index{append\+Link\+Word@{append\+Link\+Word}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}
+\subsubsection[{append\+Link\+Word(const Q\+C\+String \&word)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Simple\+Sect\+::append\+Link\+Word (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{word}
+\end{DoxyParamCaption}
+)}\label{class_doc_simple_sect_ae538f74c2d44222c9a45ef304c89e041}
+\hypertarget{class_doc_simple_sect_adf5bfabb7a7bbb3deb064746aea10fb8}{}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!kind@{kind}}
+\index{kind@{kind}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kind} Doc\+Simple\+Sect\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_simple_sect_adf5bfabb7a7bbb3deb064746aea10fb8}
+Returns the kind of node. Provides runtime type information 
+
+Implémente \hyperlink{class_doc_node_a92d4aaa169a813ded919aa858024c809}{Doc\+Node}.
+
+\hypertarget{class_doc_simple_sect_a6d4285005170976f90f3aa926a7be8c0}{}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!parse@{parse}}
+\index{parse@{parse}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}
+\subsubsection[{parse(bool user\+Title, bool needs\+Separator)}]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Simple\+Sect\+::parse (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{user\+Title, }
+\item[{{\bf bool}}]{needs\+Separator}
+\end{DoxyParamCaption}
+)}\label{class_doc_simple_sect_a6d4285005170976f90f3aa926a7be8c0}
+\hypertarget{class_doc_simple_sect_a781284e66505901d40fd6d9df8663b3e}{}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!parse\+Rcs@{parse\+Rcs}}
+\index{parse\+Rcs@{parse\+Rcs}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}
+\subsubsection[{parse\+Rcs()}]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Simple\+Sect\+::parse\+Rcs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_doc_simple_sect_a781284e66505901d40fd6d9df8663b3e}
+\hypertarget{class_doc_simple_sect_a5cdcf0db314a3f9721842c3134550ce2}{}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!parse\+Xml@{parse\+Xml}}
+\index{parse\+Xml@{parse\+Xml}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}
+\subsubsection[{parse\+Xml()}]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Simple\+Sect\+::parse\+Xml (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_doc_simple_sect_a5cdcf0db314a3f9721842c3134550ce2}
+\hypertarget{class_doc_simple_sect_a0dffdc45b4639e500e4d033616688808}{}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!type@{type}}
+\index{type@{type}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}
+\subsubsection[{type() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Type} Doc\+Simple\+Sect\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_simple_sect_a0dffdc45b4639e500e4d033616688808}
+\hypertarget{class_doc_simple_sect_abff4299d4d90b70dfa44ff56fb9baebc}{}\index{Doc\+Simple\+Sect@{Doc\+Simple\+Sect}!type\+String@{type\+String}}
+\index{type\+String@{type\+String}!Doc\+Simple\+Sect@{Doc\+Simple\+Sect}}
+\subsubsection[{type\+String() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Simple\+Sect\+::type\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_doc_simple_sect_abff4299d4d90b70dfa44ff56fb9baebc}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{docparser_8h}{docparser.\+h}\item 
+src/\hyperlink{docparser_8cpp}{docparser.\+cpp}\end{DoxyCompactItemize}

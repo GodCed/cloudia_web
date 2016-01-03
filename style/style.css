@@ -1,0 +1,514 @@
+/*****************************************
+ * Copyright © 2015 ClouDIA project Inc.
+ * Cascade Style Sheet (CSS)
+ *
+ * Developer(s) (in alphabetic order) :
+ *  Cédric Godin
+ *  Danick Côté-Martel
+ *  Donavan Martin
+ *****************************************/
+ 
+ /*
+ *
+ *Handy color codes:
+ *
+ *ClouDIA   Blue: #003380
+ *ClouDIA  Green: #338000
+ *ClouDIA Orange: #FF6600
+ *ClouDIA    Red: #AA0000
+ ClouDIA   White: #f7f7f7
+ *
+ *ClouDIA more green: rgb(0,155,58)
+ *
+ */
+ 
+/*-----------------------------------------
+/**
+ * Useful utilities
+ * Description : Practical classses used in many sections
+ *
+ **/
+ 
+ /*
+ *  Image URL
+ *  Useful to put the background's source at the bottom of the page
+ */
+ 
+ #imagesrc {
+	position: absolute;
+	bottom: 32px;
+	left: 0;
+	right: 0;
+	color: white;
+	opacity: 0.2;
+}
+
+ #imagesrc-r {
+	position: absolute;
+	bottom: 32px;
+	left: 0;
+	right: 0;
+	color: white;
+	opacity: 0.3;
+	text-align: right;
+}
+
+.green-header {
+	 color: #338000;
+ }
+ 
+ .red-header {
+	 color: #AA0000;
+ }
+ 
+  .orange-header {
+	 color: #FF6600;
+ }
+ 
+ .blue-header {
+	 color: #003380;
+ }
+ 
+ .grey-header {
+	 color: #B2B2B2;
+ }
+ 
+ a {
+     color: #003380;
+     text-decoration: underline;
+ }
+ 
+ a:hover {
+     color: #FF6600;
+     text-decoration: none;
+ }
+ 
+/*-----------------------------------------
+/**
+ * Homepage
+ * Description : Style for the homepage
+ *
+ **/ 
+ 
+ #homearea {
+	background-image: url("../res/images/backgrounds/brazil.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	/* http://upload.wikimedia.org/wikipedia/commons/7/71/1632x1224_sertaoe_rio_grande_do_norte_landscape_panorama_brasil.jpg */
+ }
+
+/*-----------------------------------------
+/**
+ * Carousel
+ * Description : Style for the carousel's section
+ *
+ **/
+ 
+ .carousel img {
+     width: 100%;
+     min-height: 200px;
+     object-fit: cover;
+ }
+ 
+ 
+
+/*-----------------------------------------
+/**
+ * Sponsors
+ * Description : Style for the sponsors' section
+ *
+ **/
+ 
+ .sponsors {
+	 color: white;
+ }
+ 
+ .logo {
+	 padding-bottom: 20px;
+	 max-height: 170px;
+	 min-width: 150px;
+	 height: auto;
+	 width: auto;
+ }
+ 
+/*-----------------------------------------
+/**
+ * About
+ * Description : Style for the about section
+ *
+ **/
+ 
+ .about {
+	 font-size: 12pt;
+	 background-color: rgba(255,255,255,0.7);
+     text-align: justify;
+ }
+ 
+ .thumbnail {
+     background-color: rgba(0,0,0,0);
+     border: none;
+     shadow: none;
+     -webkit-box-shadow: none;
+     box-shadow: none;
+ }
+ 
+ .cloudiaicon {
+     padding-right: 10%;
+     padding-bottom: 15%;
+     width: 100%;
+ }
+ 
+ .iconzone {
+     width: 30%;
+ }
+ 
+ /*-----------------------------------------
+/**
+ * FAQ
+ * Description : Style for the FAQ
+ *
+ **/
+ 
+ #faqarea {
+    background-image: url("../res/images/backgrounds/city.jpg");
+	background-repeat: no-repeat;
+	background-position:bottom center;
+	background-size: cover;
+	/* http://upload.wikimedia.org/wikipedia/commons/1/1a/Melbourne_City_Yarra_River_Commonwealth_Games_MCG_Misty.jpg */
+ }
+ 
+.panel-heading, .panel-default, .panel-default > .panel-heading {
+     background-image: none;
+     background-color: rgba(250,250,250,0.7);
+ }
+ 
+ .panel-title {
+     background-color: none;
+ }
+ 
+ .panel-body {
+     background-image: none;
+     background-color: rgba(255,255,255,0.3);
+ }
+ 
+ .faq {
+     padding-top: 30px;
+ }
+ 
+ .panel-title a {
+     text-decoration: none;
+ }
+
+/*-----------------------------------------
+/**
+ * Footer
+ * Description : Style for the copyright at the bottom
+ *
+ **/
+ 
+
+html, body {
+    padding: 0;
+   margin:0;
+   height:100%;
+}
+
+#facebook-icon {
+	height: 20px;
+	width: auto;
+}
+
+#droplanguage {
+    width: 100px;
+}
+
+.navbar-right .dropdown-menu {
+    right: auto;
+}
+
+/*
+*
+*The following are required to keep the footer at the bottom of the page
+*
+*/
+
+/* Whole page must be within this tag. Useful for full page bacground too */
+.wrapper {
+   min-height:100%;
+   width: 100%;
+   position:relative;
+}
+
+/* All content must be within this tag */
+.content {
+	padding-top: 50px;		/* Height of the header */
+   	padding-bottom: 50px;   	/* Height of the footer */
+	height: inherit;
+	width: inherit;
+	z-index: -1;
+}
+
+/*-----------------------------------------
+/**
+ * Account
+ * Description : Style for the account' pages
+ *
+ **/
+ 
+ #logform {
+	 padding-top: 30px;
+ }
+ 
+ #passgroup {
+	 margin-top: 30px;
+	 padding-top: 10px;
+	 margin-bottom: 10px;
+	 background-color: rgba(255,255,255,0);
+	 color: white;
+ }
+ 
+ #passform {
+	 padding-top: 20px;
+ }
+ 
+ #logarea {
+	background-image: url("../res/images/backgrounds/canyon.jpg");
+	background-repeat: no-repeat;
+	background-position:top right;
+	background-size: cover;
+	/* http://commons.wikimedia.org/wiki/File:Cataract_Canyon_Sunrise.jpg */
+ }
+ 
+ #signarea {
+	color: white;
+	background-image: url("../res/images/backgrounds/river.jpg");
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: cover;
+	/* http://upload.wikimedia.org/wikipedia/commons/7/78/Doubtful_Sound_Clear.jpg */
+ }
+ 
+  #passarea {
+	background-image: url("../res/images/backgrounds/waterfall2.jpg");
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: cover;
+	/* http://upload.wikimedia.org/wikipedia/commons/f/f6/Waterfall_Lepena.JPG.jpg */
+}
+
+#homebtn {
+	margin-bottom: 15px;
+}
+
+.logbtn:hover {
+    background-image: none;
+    background-color: #FF6600;
+    color: white;
+}
+
+.logsubmit {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#forget {
+    text-decoration: bold;
+}
+
+#signbtn {
+    text-decoration: none;
+}
+
+/*-----------------------------------------
+/**
+ * Stations
+ * Description : Style for the station's pages
+ *
+ **/
+ 
+ .tile {
+	 min-height: 50px;
+	 min-width: 100px;
+	 font-size: 14pt;
+	 margin: 15px;
+ }
+ 
+ #navarea {
+	 overflow-y: scroll;
+	 position:absolute;
+	 top: 0;
+	 bottom: 0;
+	 left: 0;
+	 padding-top: 15px;
+	 padding-bottom: 15px;
+	 margin-top: 50px;
+	 margin-bottom: 50px;
+	 background-color: rgba(255,255,255,0.2);
+	 color: white;
+ }
+
+ 
+.displaydata {
+	 position:absolute;
+	 top: 0;
+	 bottom: 0;
+	 right: 0;
+	 padding-top: 15px;
+	 padding-bottom: 15px;
+	 margin-top: 50px;
+	 margin-bottom: 50px;
+	 background-color: rgba(255,255,255,0.3);
+ }
+ 
+ #dataarea {
+	background-image: url("../res/images/backgrounds/grass.jpg");
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: cover;
+	/* http://static.pexels.com/wp-content/uploads/2014/12/blurred-drop-of-water-nature-3782.jpg */
+ }
+ 
+ .text {
+	 background: none;
+	 border: none;
+	 text-align: left;
+	 width: 100%;
+ }
+ 
+  .back {
+	 margin-top: 20px;
+	 background: none;
+	 border: none;
+	 text-align: left;
+	 width: 100%;
+ }
+ 
+ .station_name {
+     text-decoration: none;
+     margin-top: 15px;
+     font-size: 14pt;
+ }
+ 
+ .station_name:hover {
+     color: white;
+ }
+ 
+  .sensor_name {
+     color: white;
+     text-decoration: none;
+     margin-top: 10px;
+ }
+ 
+ .sensor_name:hover {
+     color: white;
+ }
+ 
+ tr {
+     background-color: none;
+     background-image: none;
+ }
+ 
+ .table .table {
+     background-color: none;
+ }
+ 
+ /****
+ Header
+ ****/
+ 
+ .navbar-default {
+  background-color: #003380;
+  border-color: #338000;
+}
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #c7c7c7;
+}
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #f7f7f7;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #c7c7c7;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #c7c7c7;
+  background-color: #338000;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #c7c7c7;
+  background-color: #338000;
+}
+.navbar-default .navbar-toggle {
+  border-color: #338000;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #338000;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-link {
+  color: #ffffff;
+}
+.navbar-default .navbar-link:hover {
+  color: #c7c7c7;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #c7c7c7;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #c7c7c7;
+    background-color: #338000;
+  }
+}
+
+/*-----------------------------------------
+/**
+ * Header
+ * Description : Style for the site's header
+ *
+ **/
+ 
+ .navigbar{
+	 opacity: 0.9;
+     font-size: 12pt;
+     font-weight: lighter;
+ }
+ 
+.navigbar a {
+     text-decoration: none;
+ }
+ 
+.navigbar a {
+     text-decoration: none;
+ }
+ 
+ .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+     background-color: #FF6600;
+     color: white;
+ }
+ 
+ .cloudia-logo{ 
+	 height: 30px;
+	 width: 130px;
+ }
+ 
+ .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+     background-color: #FF6600;
+ }
+

@@ -1,0 +1,149 @@
+\hypertarget{class_output_doc_interface}{}\section{Référence de la classe Output\+Doc\+Interface}
+\label{class_output_doc_interface}\index{Output\+Doc\+Interface@{Output\+Doc\+Interface}}
+
+
+{\ttfamily \#include $<$outputgen.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Output\+Doc\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_output_doc_interface}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_output_doc_interface_a1a2f1e861208c6ded212292921096109}{$\sim$\+Output\+Doc\+Interface} ()
+\item 
+virtual void \hyperlink{class_output_doc_interface_a304402b5e336d9706678f3d11e5efeae}{disable\+All\+But} (\hyperlink{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cf}{Output\+Generator\+::\+Output\+Type} \hyperlink{060__command__switch_8tcl_a495e7a4ede0831107e9d435080a7c268}{o})=0
+\item 
+virtual void \hyperlink{class_output_doc_interface_a418b5b7b81a6d37eff05a7cfe8143573}{enable\+All} ()=0
+\item 
+virtual void \hyperlink{class_output_doc_interface_a8adfa92c26950748e6d853dde09a98f5}{disable\+All} ()=0
+\item 
+virtual void \hyperlink{class_output_doc_interface_a9fbc5bc49aefab5a46f18864f396f011}{disable} (\hyperlink{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cf}{Output\+Generator\+::\+Output\+Type} \hyperlink{060__command__switch_8tcl_a495e7a4ede0831107e9d435080a7c268}{o})=0
+\item 
+virtual void \hyperlink{class_output_doc_interface_ac6eb8fe41ef1c29d92348db248989263}{enable} (\hyperlink{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cf}{Output\+Generator\+::\+Output\+Type} \hyperlink{060__command__switch_8tcl_a495e7a4ede0831107e9d435080a7c268}{o})=0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_output_doc_interface_a6b48e942d7e057f79ed44f96353dab24}{is\+Enabled} (\hyperlink{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cf}{Output\+Generator\+::\+Output\+Type} \hyperlink{060__command__switch_8tcl_a495e7a4ede0831107e9d435080a7c268}{o})=0
+\item 
+virtual void \hyperlink{class_output_doc_interface_aba5fd4dd5b0360723e62fedc7d353f29}{push\+Generator\+State} ()=0
+\item 
+virtual void \hyperlink{class_output_doc_interface_a4fb05016264d9c9f0946c2fd8e7b8e56}{pop\+Generator\+State} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Interface used for generating documentation.
+
+This abstract class is used by several functions to generate the output for a specific format. This interface contains some state saving and changing functions for dealing with format specific output. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_output_doc_interface_a1a2f1e861208c6ded212292921096109}{}\index{Output\+Doc\+Interface@{Output\+Doc\+Interface}!````~Output\+Doc\+Interface@{$\sim$\+Output\+Doc\+Interface}}
+\index{````~Output\+Doc\+Interface@{$\sim$\+Output\+Doc\+Interface}!Output\+Doc\+Interface@{Output\+Doc\+Interface}}
+\subsubsection[{$\sim$\+Output\+Doc\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Output\+Doc\+Interface\+::$\sim$\+Output\+Doc\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_output_doc_interface_a1a2f1e861208c6ded212292921096109}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_output_doc_interface_a9fbc5bc49aefab5a46f18864f396f011}{}\index{Output\+Doc\+Interface@{Output\+Doc\+Interface}!disable@{disable}}
+\index{disable@{disable}!Output\+Doc\+Interface@{Output\+Doc\+Interface}}
+\subsubsection[{disable(\+Output\+Generator\+::\+Output\+Type o)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Doc\+Interface\+::disable (
+\begin{DoxyParamCaption}
+\item[{{\bf Output\+Generator\+::\+Output\+Type}}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_doc_interface_a9fbc5bc49aefab5a46f18864f396f011}
+Disables a specific output format (useful for \hyperlink{class_output_list}{Output\+List} only) 
+
+Implémenté dans \hyperlink{class_output_list_a22f8c17b8c14518aa55f8af3c2abab0f}{Output\+List}.
+
+\hypertarget{class_output_doc_interface_a8adfa92c26950748e6d853dde09a98f5}{}\index{Output\+Doc\+Interface@{Output\+Doc\+Interface}!disable\+All@{disable\+All}}
+\index{disable\+All@{disable\+All}!Output\+Doc\+Interface@{Output\+Doc\+Interface}}
+\subsubsection[{disable\+All()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Doc\+Interface\+::disable\+All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_doc_interface_a8adfa92c26950748e6d853dde09a98f5}
+Disables all output formats (useful for \hyperlink{class_output_list}{Output\+List} only) 
+
+Implémenté dans \hyperlink{class_output_list_a6a75284d21a037302ea3d7dc6e1558d4}{Output\+List}.
+
+\hypertarget{class_output_doc_interface_a304402b5e336d9706678f3d11e5efeae}{}\index{Output\+Doc\+Interface@{Output\+Doc\+Interface}!disable\+All\+But@{disable\+All\+But}}
+\index{disable\+All\+But@{disable\+All\+But}!Output\+Doc\+Interface@{Output\+Doc\+Interface}}
+\subsubsection[{disable\+All\+But(\+Output\+Generator\+::\+Output\+Type o)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Doc\+Interface\+::disable\+All\+But (
+\begin{DoxyParamCaption}
+\item[{{\bf Output\+Generator\+::\+Output\+Type}}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_doc_interface_a304402b5e336d9706678f3d11e5efeae}
+Create a new output generator. This can later by appended to the current one using append().
+
+Disables all output formats except format {\itshape o} (useful for \hyperlink{class_output_list}{Output\+List} only) 
+
+Implémenté dans \hyperlink{class_output_list_a73f9be626eea01f1ccd1b446dcf2c003}{Output\+List}.
+
+\hypertarget{class_output_doc_interface_ac6eb8fe41ef1c29d92348db248989263}{}\index{Output\+Doc\+Interface@{Output\+Doc\+Interface}!enable@{enable}}
+\index{enable@{enable}!Output\+Doc\+Interface@{Output\+Doc\+Interface}}
+\subsubsection[{enable(\+Output\+Generator\+::\+Output\+Type o)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Doc\+Interface\+::enable (
+\begin{DoxyParamCaption}
+\item[{{\bf Output\+Generator\+::\+Output\+Type}}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_doc_interface_ac6eb8fe41ef1c29d92348db248989263}
+Enables a specific output format (useful for \hyperlink{class_output_list}{Output\+List} only) 
+
+Implémenté dans \hyperlink{class_output_list_a4006394472d6c49f7db435628832c49d}{Output\+List}.
+
+\hypertarget{class_output_doc_interface_a418b5b7b81a6d37eff05a7cfe8143573}{}\index{Output\+Doc\+Interface@{Output\+Doc\+Interface}!enable\+All@{enable\+All}}
+\index{enable\+All@{enable\+All}!Output\+Doc\+Interface@{Output\+Doc\+Interface}}
+\subsubsection[{enable\+All()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Doc\+Interface\+::enable\+All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_doc_interface_a418b5b7b81a6d37eff05a7cfe8143573}
+Enables all output formats as far as they have been enabled in the config file. (useful for \hyperlink{class_output_list}{Output\+List} only) 
+
+Implémenté dans \hyperlink{class_output_list_ad32603ff4c4ba4d39e0bad7ede5924bf}{Output\+List}.
+
+\hypertarget{class_output_doc_interface_a6b48e942d7e057f79ed44f96353dab24}{}\index{Output\+Doc\+Interface@{Output\+Doc\+Interface}!is\+Enabled@{is\+Enabled}}
+\index{is\+Enabled@{is\+Enabled}!Output\+Doc\+Interface@{Output\+Doc\+Interface}}
+\subsubsection[{is\+Enabled(\+Output\+Generator\+::\+Output\+Type o)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} Output\+Doc\+Interface\+::is\+Enabled (
+\begin{DoxyParamCaption}
+\item[{{\bf Output\+Generator\+::\+Output\+Type}}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_doc_interface_a6b48e942d7e057f79ed44f96353dab24}
+Check whether a specific output format is currently enabled (useful for \hyperlink{class_output_list}{Output\+List} only) 
+
+Implémenté dans \hyperlink{class_output_list_a63a7bebe83b904d00b2350863c7c7399}{Output\+List}.
+
+\hypertarget{class_output_doc_interface_a4fb05016264d9c9f0946c2fd8e7b8e56}{}\index{Output\+Doc\+Interface@{Output\+Doc\+Interface}!pop\+Generator\+State@{pop\+Generator\+State}}
+\index{pop\+Generator\+State@{pop\+Generator\+State}!Output\+Doc\+Interface@{Output\+Doc\+Interface}}
+\subsubsection[{pop\+Generator\+State()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Doc\+Interface\+::pop\+Generator\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_doc_interface_a4fb05016264d9c9f0946c2fd8e7b8e56}
+Pops the state of the current generator (or list of generators) on a stack. Should be preceded by a call the \hyperlink{class_output_doc_interface_aba5fd4dd5b0360723e62fedc7d353f29}{push\+Generator\+State()}. 
+
+Implémenté dans \hyperlink{class_output_list_a94eb1af2ea07425ef1faa539d24adcf8}{Output\+List}.
+
+\hypertarget{class_output_doc_interface_aba5fd4dd5b0360723e62fedc7d353f29}{}\index{Output\+Doc\+Interface@{Output\+Doc\+Interface}!push\+Generator\+State@{push\+Generator\+State}}
+\index{push\+Generator\+State@{push\+Generator\+State}!Output\+Doc\+Interface@{Output\+Doc\+Interface}}
+\subsubsection[{push\+Generator\+State()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Doc\+Interface\+::push\+Generator\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_doc_interface_aba5fd4dd5b0360723e62fedc7d353f29}
+Appends the output generated by generator {\itshape g} to this generator.
+
+Pushes the state of the current generator (or list of generators) on a stack. 
+
+Implémenté dans \hyperlink{class_output_list_a885957a64f7d87aefb663c4ec903188f}{Output\+List}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{outputgen_8h}{outputgen.\+h}\end{DoxyCompactItemize}

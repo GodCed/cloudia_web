@@ -1,0 +1,76 @@
+\hypertarget{class_property_mapper}{}\section{Référence de la classe Property\+Mapper}
+\label{class_property_mapper}\index{Property\+Mapper@{Property\+Mapper}}
+
+
+Helper class to map a property name to a handler member function.  
+
+
+Graphe d\textquotesingle{}héritage de Property\+Mapper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_property_mapper}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_property_mapper_a4a8e8245d3d8c94a7c3609c2515812ec}{Property\+Mapper} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{class_property_mapper_ac427558104544b59dde63e66eba5174d}{add\+Property} (const char $\ast$name, const T $\ast$obj, typename Property\+Func$<$ T $>$\+::Handler handle)
+\item 
+\hyperlink{class_template_variant}{Template\+Variant} \hyperlink{class_property_mapper_ae2268afc92cea42272bb42d3137679c3}{get} (const char $\ast$name) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Helper class to map a property name to a handler member function. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_property_mapper_a4a8e8245d3d8c94a7c3609c2515812ec}{}\index{Property\+Mapper@{Property\+Mapper}!Property\+Mapper@{Property\+Mapper}}
+\index{Property\+Mapper@{Property\+Mapper}!Property\+Mapper@{Property\+Mapper}}
+\subsubsection[{Property\+Mapper()}]{\setlength{\rightskip}{0pt plus 5cm}Property\+Mapper\+::\+Property\+Mapper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_property_mapper_a4a8e8245d3d8c94a7c3609c2515812ec}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_property_mapper_ac427558104544b59dde63e66eba5174d}{}\index{Property\+Mapper@{Property\+Mapper}!add\+Property@{add\+Property}}
+\index{add\+Property@{add\+Property}!Property\+Mapper@{Property\+Mapper}}
+\subsubsection[{add\+Property(const char $\ast$name, const T $\ast$obj, typename Property\+Func$<$ T $>$\+::\+Handler handle)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void Property\+Mapper\+::add\+Property (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const T $\ast$}]{obj, }
+\item[{typename Property\+Func$<$ T $>$\+::Handler handle}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_property_mapper_ac427558104544b59dde63e66eba5174d}
+Add a property to the map 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em name} & The name of the property to add. \\
+\hline
+\mbox{\tt in}  & {\em obj} & The object handling access to the property. \\
+\hline
+\mbox{\tt in}  & {\em handle} & The method to call when the property is accessed. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_property_mapper_ae2268afc92cea42272bb42d3137679c3}{}\index{Property\+Mapper@{Property\+Mapper}!get@{get}}
+\index{get@{get}!Property\+Mapper@{Property\+Mapper}}
+\subsubsection[{get(const char $\ast$name) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Variant} Property\+Mapper\+::get (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_property_mapper_ae2268afc92cea42272bb42d3137679c3}
+Gets the value of a property. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em name} & The name of the property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{class_a}{A} variant representing the properties value or an invalid variant if it was not found. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{context_8cpp}{context.\+cpp}\end{DoxyCompactItemize}

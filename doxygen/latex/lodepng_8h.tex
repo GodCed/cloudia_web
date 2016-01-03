@@ -1,0 +1,509 @@
+\hypertarget{lodepng_8h}{}\section{Référence du fichier src/lodepng.h}
+\label{lodepng_8h}\index{src/lodepng.\+h@{src/lodepng.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_lode_zlib___deflate_settings}{Lode\+Zlib\+\_\+\+Deflate\+Settings}
+\item 
+struct \hyperlink{struct_lode_p_n_g___info_color}{Lode\+P\+N\+G\+\_\+\+Info\+Color}
+\item 
+struct \hyperlink{struct_lode_p_n_g___info_png}{Lode\+P\+N\+G\+\_\+\+Info\+Png}
+\item 
+struct \hyperlink{struct_lode_p_n_g___info_raw}{Lode\+P\+N\+G\+\_\+\+Info\+Raw}
+\item 
+struct \hyperlink{struct_lode_p_n_g___encode_settings}{Lode\+P\+N\+G\+\_\+\+Encode\+Settings}
+\item 
+struct \hyperlink{struct_lode_p_n_g___encoder}{Lode\+P\+N\+G\+\_\+\+Encoder}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{lodepng_8h_a66c036f5e0213ff2cc380bab4486738d}{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+Z\+L\+I\+B}~/$\ast$deflate\&zlib encoder and deflate\&zlib decoder$\ast$/
+\item 
+\#define \hyperlink{lodepng_8h_af557b37dd9fcaed5be60c0b143e54b38}{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+P\+N\+G}~/$\ast$png encoder and png decoder$\ast$/
+\item 
+\#define \hyperlink{lodepng_8h_a2285c1e239bc24607901ad98e8ebb7eb}{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+E\+N\+C\+O\+D\+E\+R}~/$\ast$deflate\&zlib encoder and png encoder$\ast$/
+\item 
+\#define \hyperlink{lodepng_8h_af8e782a2a5642d12dba9aa38a7a00133}{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+D\+I\+S\+K}~/$\ast$the optional built in harddisk file loading and saving functions$\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct_lode_zlib___deflate_settings}{Lode\+Zlib\+\_\+\+Deflate\+Settings} \hyperlink{lodepng_8h_a8debe7f5da0bf1ac56b999581c5ff373}{Lode\+Zlib\+\_\+\+Deflate\+Settings}
+\item 
+typedef struct \hyperlink{struct_lode_p_n_g___info_color}{Lode\+P\+N\+G\+\_\+\+Info\+Color} \hyperlink{lodepng_8h_a5b6d0855e597df1f8771133ac8519c68}{Lode\+P\+N\+G\+\_\+\+Info\+Color}
+\item 
+typedef struct \hyperlink{struct_lode_p_n_g___info_png}{Lode\+P\+N\+G\+\_\+\+Info\+Png} \hyperlink{lodepng_8h_ad7aa263b5f38fa369d3407cecce2d4a6}{Lode\+P\+N\+G\+\_\+\+Info\+Png}
+\item 
+typedef struct \hyperlink{struct_lode_p_n_g___info_raw}{Lode\+P\+N\+G\+\_\+\+Info\+Raw} \hyperlink{lodepng_8h_ad47762640307d9ad1a0438cc361c7393}{Lode\+P\+N\+G\+\_\+\+Info\+Raw}
+\item 
+typedef struct \hyperlink{struct_lode_p_n_g___encode_settings}{Lode\+P\+N\+G\+\_\+\+Encode\+Settings} \hyperlink{lodepng_8h_ae9cbe4fb955219e09f32b03e1e17e61a}{Lode\+P\+N\+G\+\_\+\+Encode\+Settings}
+\item 
+typedef struct \hyperlink{struct_lode_p_n_g___encoder}{Lode\+P\+N\+G\+\_\+\+Encoder} \hyperlink{lodepng_8h_a9b0692bac09f10ddfc1923147661ed42}{Lode\+P\+N\+G\+\_\+\+Encoder}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{lodepng_8h_aa3c00d6565b6bf50aa7e68516941da40}{Lode\+Zlib\+\_\+\+Deflate\+Settings\+\_\+init} (\hyperlink{struct_lode_zlib___deflate_settings}{Lode\+Zlib\+\_\+\+Deflate\+Settings} $\ast$settings)
+\item 
+unsigned \hyperlink{lodepng_8h_afa4868843f0e8ef801f1510c29de9edc}{Lode\+Zlib\+\_\+compress} (unsigned char $\ast$$\ast$out, size\+\_\+t $\ast$outsize, const unsigned char $\ast$in, size\+\_\+t insize, const \hyperlink{struct_lode_zlib___deflate_settings}{Lode\+Zlib\+\_\+\+Deflate\+Settings} $\ast$settings)
+\item 
+unsigned \hyperlink{lodepng_8h_a4e9b1ed7e3242b335ddd8b4a0aba161f}{Lode\+P\+N\+G\+\_\+chunk\+\_\+length} (const unsigned char $\ast$chunk)
+\item 
+void \hyperlink{lodepng_8h_af3cff22c00facc19aa15202f1001e863}{Lode\+P\+N\+G\+\_\+chunk\+\_\+type} (char type\mbox{[}5\mbox{]}, const unsigned char $\ast$chunk)
+\item 
+unsigned char \hyperlink{lodepng_8h_a1e3ab3e373966fd2c323bd5a698ccfb1}{Lode\+P\+N\+G\+\_\+chunk\+\_\+type\+\_\+equals} (const unsigned char $\ast$chunk, const char $\ast$type)
+\item 
+unsigned char \hyperlink{lodepng_8h_abaf9330852c93cddc2e633f975e56193}{Lode\+P\+N\+G\+\_\+chunk\+\_\+critical} (const unsigned char $\ast$chunk)
+\item 
+unsigned char \hyperlink{lodepng_8h_a08a6b93d30eb7ee67b9c0788436b3bd6}{Lode\+P\+N\+G\+\_\+chunk\+\_\+private} (const unsigned char $\ast$chunk)
+\item 
+unsigned char \hyperlink{lodepng_8h_af89aa48b710fa002d71884069726bf8c}{Lode\+P\+N\+G\+\_\+chunk\+\_\+safetocopy} (const unsigned char $\ast$chunk)
+\item 
+unsigned char $\ast$ \hyperlink{lodepng_8h_a5f9dec8a5637a646a41821af36faa152}{Lode\+P\+N\+G\+\_\+chunk\+\_\+data} (unsigned char $\ast$chunk)
+\item 
+const unsigned char $\ast$ \hyperlink{lodepng_8h_ab2b9a3341171c2cd4a31bdff0211f007}{Lode\+P\+N\+G\+\_\+chunk\+\_\+data\+\_\+const} (const unsigned char $\ast$chunk)
+\item 
+unsigned \hyperlink{lodepng_8h_a1d08e922a7f80b5afcde010489db6579}{Lode\+P\+N\+G\+\_\+chunk\+\_\+check\+\_\+crc} (const unsigned char $\ast$chunk)
+\item 
+void \hyperlink{lodepng_8h_a35e023707c907e36ad1435754cfbb4da}{Lode\+P\+N\+G\+\_\+chunk\+\_\+generate\+\_\+crc} (unsigned char $\ast$chunk)
+\item 
+unsigned char $\ast$ \hyperlink{lodepng_8h_ab1a96344114c67ce549c848c44a9597b}{Lode\+P\+N\+G\+\_\+chunk\+\_\+next} (unsigned char $\ast$chunk)
+\item 
+const unsigned char $\ast$ \hyperlink{lodepng_8h_a16e9565fa7d5805df2256db07ed49177}{Lode\+P\+N\+G\+\_\+chunk\+\_\+next\+\_\+const} (const unsigned char $\ast$chunk)
+\item 
+unsigned \hyperlink{lodepng_8h_a8047414db7062af3671e20c90a4a4ae7}{Lode\+P\+N\+G\+\_\+append\+\_\+chunk} (unsigned char $\ast$$\ast$out, size\+\_\+t $\ast$outlength, const unsigned char $\ast$chunk)
+\item 
+unsigned \hyperlink{lodepng_8h_a75457d20497de64abea3a34daefc4f8c}{Lode\+P\+N\+G\+\_\+create\+\_\+chunk} (unsigned char $\ast$$\ast$out, size\+\_\+t $\ast$outlength, unsigned length, const char $\ast$type, const unsigned char $\ast$data)
+\item 
+void \hyperlink{lodepng_8h_abaea3ca539b3d5f1624ac8286f47b34c}{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+init} (\hyperlink{struct_lode_p_n_g___info_color}{Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$info)
+\item 
+void \hyperlink{lodepng_8h_a2f5ecf25393f688611987c61f698f1ce}{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+cleanup} (\hyperlink{struct_lode_p_n_g___info_color}{Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$info)
+\item 
+unsigned \hyperlink{lodepng_8h_ad7beb96e92dd01a605c669af79a54a00}{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+copy} (\hyperlink{struct_lode_p_n_g___info_color}{Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$dest, const \hyperlink{struct_lode_p_n_g___info_color}{Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$source)
+\item 
+void \hyperlink{lodepng_8h_ac78fd072f3dcc91ee6e3a250cfa64ea5}{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+clear\+Palette} (\hyperlink{struct_lode_p_n_g___info_color}{Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$info)
+\item 
+unsigned \hyperlink{lodepng_8h_af062c1db1f9e18f47aa2d9a86651dea3}{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+add\+Palette} (\hyperlink{struct_lode_p_n_g___info_color}{Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$info, unsigned char \hyperlink{060__command__switch_8tcl_a0a0bd3dc69dd06934c4e6362155e0ace}{r}, unsigned char \hyperlink{060__command__switch_8tcl_af08b4b5bfa9edf0b0a7dee1c2b2c29e0}{g}, unsigned char \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b}, unsigned char \hyperlink{060__command__switch_8tcl_ab08ae027fc5777bc4f0629f1b60b35db}{a})
+\item 
+unsigned \hyperlink{lodepng_8h_a81151c0087467b4ac2a815b3234fdb5a}{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+get\+Bpp} (const \hyperlink{struct_lode_p_n_g___info_color}{Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$info)
+\item 
+unsigned \hyperlink{lodepng_8h_a62159dfd6cf8a67b55d5bbc70fee589b}{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+get\+Channels} (const \hyperlink{struct_lode_p_n_g___info_color}{Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$info)
+\item 
+unsigned \hyperlink{lodepng_8h_ac0564ed5cbac6fcfda3b28b3078cde65}{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+is\+Greyscale\+Type} (const \hyperlink{struct_lode_p_n_g___info_color}{Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$info)
+\item 
+unsigned \hyperlink{lodepng_8h_af139bc36c2a9b88d21dc3652520a3f73}{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+is\+Alpha\+Type} (const \hyperlink{struct_lode_p_n_g___info_color}{Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$info)
+\item 
+void \hyperlink{lodepng_8h_a66ddccc82c59e05d746086f56997b4cd}{Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+init} (\hyperlink{struct_lode_p_n_g___info_png}{Lode\+P\+N\+G\+\_\+\+Info\+Png} $\ast$info)
+\item 
+void \hyperlink{lodepng_8h_a7884592df167f7136fc928cacf1efd36}{Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+cleanup} (\hyperlink{struct_lode_p_n_g___info_png}{Lode\+P\+N\+G\+\_\+\+Info\+Png} $\ast$info)
+\item 
+unsigned \hyperlink{lodepng_8h_a0e188efe0b87e1b7d11a01ff85881368}{Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+copy} (\hyperlink{struct_lode_p_n_g___info_png}{Lode\+P\+N\+G\+\_\+\+Info\+Png} $\ast$dest, const \hyperlink{struct_lode_p_n_g___info_png}{Lode\+P\+N\+G\+\_\+\+Info\+Png} $\ast$source)
+\item 
+void \hyperlink{lodepng_8h_a279c66151f5c87b2225ebe866ce98f71}{Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+init} (\hyperlink{struct_lode_p_n_g___info_raw}{Lode\+P\+N\+G\+\_\+\+Info\+Raw} $\ast$info)
+\item 
+void \hyperlink{lodepng_8h_ae8ee35b701bba217323f27723d2690f5}{Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+cleanup} (\hyperlink{struct_lode_p_n_g___info_raw}{Lode\+P\+N\+G\+\_\+\+Info\+Raw} $\ast$info)
+\item 
+unsigned \hyperlink{lodepng_8h_a745b94bf14f6c3497b6280863e71e5a6}{Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+copy} (\hyperlink{struct_lode_p_n_g___info_raw}{Lode\+P\+N\+G\+\_\+\+Info\+Raw} $\ast$dest, const \hyperlink{struct_lode_p_n_g___info_raw}{Lode\+P\+N\+G\+\_\+\+Info\+Raw} $\ast$source)
+\item 
+unsigned \hyperlink{lodepng_8h_a9e7ce5d1928b44ba6a7c30465b996c68}{Lode\+P\+N\+G\+\_\+convert} (unsigned char $\ast$out, const unsigned char $\ast$in, \hyperlink{struct_lode_p_n_g___info_color}{Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$info\+Out, \hyperlink{struct_lode_p_n_g___info_color}{Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$info\+In, unsigned w, unsigned \hyperlink{060__command__switch_8tcl_af96fd0966e32a310a0778d2e5c357700}{h})
+\item 
+void \hyperlink{lodepng_8h_a3cd7cc1583795fd14b7fe1179e005ab1}{Lode\+P\+N\+G\+\_\+\+Encode\+Settings\+\_\+init} (\hyperlink{struct_lode_p_n_g___encode_settings}{Lode\+P\+N\+G\+\_\+\+Encode\+Settings} $\ast$settings)
+\item 
+void \hyperlink{lodepng_8h_a187956c5e5784f77f5b17181310be304}{Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+init} (\hyperlink{struct_lode_p_n_g___encoder}{Lode\+P\+N\+G\+\_\+\+Encoder} $\ast$encoder)
+\item 
+void \hyperlink{lodepng_8h_a7269f380122edb94715d5e2e87eab835}{Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+cleanup} (\hyperlink{struct_lode_p_n_g___encoder}{Lode\+P\+N\+G\+\_\+\+Encoder} $\ast$encoder)
+\item 
+void \hyperlink{lodepng_8h_a0c0160b2f998d5966324922a153ee557}{Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+copy} (\hyperlink{struct_lode_p_n_g___encoder}{Lode\+P\+N\+G\+\_\+\+Encoder} $\ast$dest, const \hyperlink{struct_lode_p_n_g___encoder}{Lode\+P\+N\+G\+\_\+\+Encoder} $\ast$source)
+\item 
+void \hyperlink{lodepng_8h_aeb8588ff6ad7dae8c5322b1520aa5687}{Lode\+P\+N\+G\+\_\+encode} (\hyperlink{struct_lode_p_n_g___encoder}{Lode\+P\+N\+G\+\_\+\+Encoder} $\ast$encoder, unsigned char $\ast$$\ast$out, size\+\_\+t $\ast$outsize, const unsigned char $\ast$image, unsigned w, unsigned \hyperlink{060__command__switch_8tcl_af96fd0966e32a310a0778d2e5c357700}{h})
+\item 
+unsigned \hyperlink{lodepng_8h_a75be5c73ab8b78aa8e583976007a363f}{Lode\+P\+N\+G\+\_\+encode32} (unsigned char $\ast$$\ast$out, size\+\_\+t $\ast$outsize, const unsigned char $\ast$image, unsigned w, unsigned \hyperlink{060__command__switch_8tcl_af96fd0966e32a310a0778d2e5c357700}{h})
+\item 
+unsigned \hyperlink{lodepng_8h_aac29eed979899d7823ee53bbf073118c}{Lode\+P\+N\+G\+\_\+encode32f} (const char $\ast$filename, const unsigned char $\ast$image, unsigned w, unsigned \hyperlink{060__command__switch_8tcl_af96fd0966e32a310a0778d2e5c357700}{h})
+\item 
+unsigned \hyperlink{lodepng_8h_aca6d9a07dd0805433de47feb04e0fc52}{Lode\+P\+N\+G\+\_\+load\+File} (unsigned char $\ast$$\ast$out, size\+\_\+t $\ast$outsize, const char $\ast$filename)
+\item 
+unsigned \hyperlink{lodepng_8h_a35604ddb7255afb1526979ca40815987}{Lode\+P\+N\+G\+\_\+save\+File} (const unsigned char $\ast$buffer, size\+\_\+t buffersize, const char $\ast$filename)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{struct_lode_zlib___deflate_settings}{Lode\+Zlib\+\_\+\+Deflate\+Settings} \hyperlink{lodepng_8h_a12bc0ceafd3730e97d84555369fde896}{Lode\+Zlib\+\_\+default\+Deflate\+Settings}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{lodepng_8h_af8e782a2a5642d12dba9aa38a7a00133}{}\index{lodepng.\+h@{lodepng.\+h}!L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+D\+I\+S\+K@{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+D\+I\+S\+K}}
+\index{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+D\+I\+S\+K@{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+D\+I\+S\+K}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+D\+I\+S\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+D\+I\+S\+K~/$\ast$the optional built in harddisk file loading and saving functions$\ast$/}\label{lodepng_8h_af8e782a2a5642d12dba9aa38a7a00133}
+\hypertarget{lodepng_8h_a2285c1e239bc24607901ad98e8ebb7eb}{}\index{lodepng.\+h@{lodepng.\+h}!L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+E\+N\+C\+O\+D\+E\+R@{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+E\+N\+C\+O\+D\+E\+R}}
+\index{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+E\+N\+C\+O\+D\+E\+R@{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+E\+N\+C\+O\+D\+E\+R}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+E\+N\+C\+O\+D\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+E\+N\+C\+O\+D\+E\+R~/$\ast$deflate\&zlib encoder and png encoder$\ast$/}\label{lodepng_8h_a2285c1e239bc24607901ad98e8ebb7eb}
+\hypertarget{lodepng_8h_af557b37dd9fcaed5be60c0b143e54b38}{}\index{lodepng.\+h@{lodepng.\+h}!L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+P\+N\+G@{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+P\+N\+G}}
+\index{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+P\+N\+G@{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+P\+N\+G}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+P\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+P\+N\+G~/$\ast$png encoder and png decoder$\ast$/}\label{lodepng_8h_af557b37dd9fcaed5be60c0b143e54b38}
+\hypertarget{lodepng_8h_a66c036f5e0213ff2cc380bab4486738d}{}\index{lodepng.\+h@{lodepng.\+h}!L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+Z\+L\+I\+B@{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+Z\+L\+I\+B}}
+\index{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+Z\+L\+I\+B@{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+Z\+L\+I\+B}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+Z\+L\+I\+B}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+O\+D\+E\+P\+N\+G\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+Z\+L\+I\+B~/$\ast$deflate\&zlib encoder and deflate\&zlib decoder$\ast$/}\label{lodepng_8h_a66c036f5e0213ff2cc380bab4486738d}
+
+
+\subsection{Documentation des définitions de type}
+\hypertarget{lodepng_8h_a9b0692bac09f10ddfc1923147661ed42}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Encoder@{Lode\+P\+N\+G\+\_\+\+Encoder}}
+\index{Lode\+P\+N\+G\+\_\+\+Encoder@{Lode\+P\+N\+G\+\_\+\+Encoder}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Encoder}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Lode\+P\+N\+G\+\_\+\+Encoder}  {\bf Lode\+P\+N\+G\+\_\+\+Encoder}}\label{lodepng_8h_a9b0692bac09f10ddfc1923147661ed42}
+\hypertarget{lodepng_8h_ae9cbe4fb955219e09f32b03e1e17e61a}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Encode\+Settings@{Lode\+P\+N\+G\+\_\+\+Encode\+Settings}}
+\index{Lode\+P\+N\+G\+\_\+\+Encode\+Settings@{Lode\+P\+N\+G\+\_\+\+Encode\+Settings}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Encode\+Settings}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Lode\+P\+N\+G\+\_\+\+Encode\+Settings}  {\bf Lode\+P\+N\+G\+\_\+\+Encode\+Settings}}\label{lodepng_8h_ae9cbe4fb955219e09f32b03e1e17e61a}
+\hypertarget{lodepng_8h_a5b6d0855e597df1f8771133ac8519c68}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Info\+Color@{Lode\+P\+N\+G\+\_\+\+Info\+Color}}
+\index{Lode\+P\+N\+G\+\_\+\+Info\+Color@{Lode\+P\+N\+G\+\_\+\+Info\+Color}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Info\+Color}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Lode\+P\+N\+G\+\_\+\+Info\+Color}  {\bf Lode\+P\+N\+G\+\_\+\+Info\+Color}}\label{lodepng_8h_a5b6d0855e597df1f8771133ac8519c68}
+\hypertarget{lodepng_8h_ad7aa263b5f38fa369d3407cecce2d4a6}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Info\+Png@{Lode\+P\+N\+G\+\_\+\+Info\+Png}}
+\index{Lode\+P\+N\+G\+\_\+\+Info\+Png@{Lode\+P\+N\+G\+\_\+\+Info\+Png}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Info\+Png}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Lode\+P\+N\+G\+\_\+\+Info\+Png}  {\bf Lode\+P\+N\+G\+\_\+\+Info\+Png}}\label{lodepng_8h_ad7aa263b5f38fa369d3407cecce2d4a6}
+\hypertarget{lodepng_8h_ad47762640307d9ad1a0438cc361c7393}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Info\+Raw@{Lode\+P\+N\+G\+\_\+\+Info\+Raw}}
+\index{Lode\+P\+N\+G\+\_\+\+Info\+Raw@{Lode\+P\+N\+G\+\_\+\+Info\+Raw}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Info\+Raw}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Lode\+P\+N\+G\+\_\+\+Info\+Raw}  {\bf Lode\+P\+N\+G\+\_\+\+Info\+Raw}}\label{lodepng_8h_ad47762640307d9ad1a0438cc361c7393}
+\hypertarget{lodepng_8h_a8debe7f5da0bf1ac56b999581c5ff373}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+Zlib\+\_\+\+Deflate\+Settings@{Lode\+Zlib\+\_\+\+Deflate\+Settings}}
+\index{Lode\+Zlib\+\_\+\+Deflate\+Settings@{Lode\+Zlib\+\_\+\+Deflate\+Settings}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+Zlib\+\_\+\+Deflate\+Settings}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Lode\+Zlib\+\_\+\+Deflate\+Settings}  {\bf Lode\+Zlib\+\_\+\+Deflate\+Settings}}\label{lodepng_8h_a8debe7f5da0bf1ac56b999581c5ff373}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{lodepng_8h_a8047414db7062af3671e20c90a4a4ae7}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+append\+\_\+chunk@{Lode\+P\+N\+G\+\_\+append\+\_\+chunk}}
+\index{Lode\+P\+N\+G\+\_\+append\+\_\+chunk@{Lode\+P\+N\+G\+\_\+append\+\_\+chunk}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+append\+\_\+chunk(unsigned char $\ast$$\ast$out, size\+\_\+t $\ast$outlength, const unsigned char $\ast$chunk)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Lode\+P\+N\+G\+\_\+append\+\_\+chunk (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$$\ast$}]{out, }
+\item[{size\+\_\+t $\ast$}]{outlength, }
+\item[{const unsigned char $\ast$}]{chunk}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a8047414db7062af3671e20c90a4a4ae7}
+\hypertarget{lodepng_8h_a1d08e922a7f80b5afcde010489db6579}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+chunk\+\_\+check\+\_\+crc@{Lode\+P\+N\+G\+\_\+chunk\+\_\+check\+\_\+crc}}
+\index{Lode\+P\+N\+G\+\_\+chunk\+\_\+check\+\_\+crc@{Lode\+P\+N\+G\+\_\+chunk\+\_\+check\+\_\+crc}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+chunk\+\_\+check\+\_\+crc(const unsigned char $\ast$chunk)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Lode\+P\+N\+G\+\_\+chunk\+\_\+check\+\_\+crc (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$}]{chunk}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a1d08e922a7f80b5afcde010489db6579}
+\hypertarget{lodepng_8h_abaf9330852c93cddc2e633f975e56193}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+chunk\+\_\+critical@{Lode\+P\+N\+G\+\_\+chunk\+\_\+critical}}
+\index{Lode\+P\+N\+G\+\_\+chunk\+\_\+critical@{Lode\+P\+N\+G\+\_\+chunk\+\_\+critical}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+chunk\+\_\+critical(const unsigned char $\ast$chunk)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Lode\+P\+N\+G\+\_\+chunk\+\_\+critical (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$}]{chunk}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_abaf9330852c93cddc2e633f975e56193}
+\hypertarget{lodepng_8h_a5f9dec8a5637a646a41821af36faa152}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+chunk\+\_\+data@{Lode\+P\+N\+G\+\_\+chunk\+\_\+data}}
+\index{Lode\+P\+N\+G\+\_\+chunk\+\_\+data@{Lode\+P\+N\+G\+\_\+chunk\+\_\+data}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+chunk\+\_\+data(unsigned char $\ast$chunk)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ Lode\+P\+N\+G\+\_\+chunk\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{chunk}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a5f9dec8a5637a646a41821af36faa152}
+\hypertarget{lodepng_8h_ab2b9a3341171c2cd4a31bdff0211f007}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+chunk\+\_\+data\+\_\+const@{Lode\+P\+N\+G\+\_\+chunk\+\_\+data\+\_\+const}}
+\index{Lode\+P\+N\+G\+\_\+chunk\+\_\+data\+\_\+const@{Lode\+P\+N\+G\+\_\+chunk\+\_\+data\+\_\+const}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+chunk\+\_\+data\+\_\+const(const unsigned char $\ast$chunk)}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned char$\ast$ Lode\+P\+N\+G\+\_\+chunk\+\_\+data\+\_\+const (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$}]{chunk}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_ab2b9a3341171c2cd4a31bdff0211f007}
+\hypertarget{lodepng_8h_a35e023707c907e36ad1435754cfbb4da}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+chunk\+\_\+generate\+\_\+crc@{Lode\+P\+N\+G\+\_\+chunk\+\_\+generate\+\_\+crc}}
+\index{Lode\+P\+N\+G\+\_\+chunk\+\_\+generate\+\_\+crc@{Lode\+P\+N\+G\+\_\+chunk\+\_\+generate\+\_\+crc}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+chunk\+\_\+generate\+\_\+crc(unsigned char $\ast$chunk)}]{\setlength{\rightskip}{0pt plus 5cm}void Lode\+P\+N\+G\+\_\+chunk\+\_\+generate\+\_\+crc (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{chunk}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a35e023707c907e36ad1435754cfbb4da}
+\hypertarget{lodepng_8h_a4e9b1ed7e3242b335ddd8b4a0aba161f}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+chunk\+\_\+length@{Lode\+P\+N\+G\+\_\+chunk\+\_\+length}}
+\index{Lode\+P\+N\+G\+\_\+chunk\+\_\+length@{Lode\+P\+N\+G\+\_\+chunk\+\_\+length}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+chunk\+\_\+length(const unsigned char $\ast$chunk)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Lode\+P\+N\+G\+\_\+chunk\+\_\+length (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$}]{chunk}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a4e9b1ed7e3242b335ddd8b4a0aba161f}
+\hypertarget{lodepng_8h_ab1a96344114c67ce549c848c44a9597b}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+chunk\+\_\+next@{Lode\+P\+N\+G\+\_\+chunk\+\_\+next}}
+\index{Lode\+P\+N\+G\+\_\+chunk\+\_\+next@{Lode\+P\+N\+G\+\_\+chunk\+\_\+next}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+chunk\+\_\+next(unsigned char $\ast$chunk)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ Lode\+P\+N\+G\+\_\+chunk\+\_\+next (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{chunk}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_ab1a96344114c67ce549c848c44a9597b}
+\hypertarget{lodepng_8h_a16e9565fa7d5805df2256db07ed49177}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+chunk\+\_\+next\+\_\+const@{Lode\+P\+N\+G\+\_\+chunk\+\_\+next\+\_\+const}}
+\index{Lode\+P\+N\+G\+\_\+chunk\+\_\+next\+\_\+const@{Lode\+P\+N\+G\+\_\+chunk\+\_\+next\+\_\+const}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+chunk\+\_\+next\+\_\+const(const unsigned char $\ast$chunk)}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned char$\ast$ Lode\+P\+N\+G\+\_\+chunk\+\_\+next\+\_\+const (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$}]{chunk}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a16e9565fa7d5805df2256db07ed49177}
+\hypertarget{lodepng_8h_a08a6b93d30eb7ee67b9c0788436b3bd6}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+chunk\+\_\+private@{Lode\+P\+N\+G\+\_\+chunk\+\_\+private}}
+\index{Lode\+P\+N\+G\+\_\+chunk\+\_\+private@{Lode\+P\+N\+G\+\_\+chunk\+\_\+private}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+chunk\+\_\+private(const unsigned char $\ast$chunk)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Lode\+P\+N\+G\+\_\+chunk\+\_\+private (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$}]{chunk}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a08a6b93d30eb7ee67b9c0788436b3bd6}
+\hypertarget{lodepng_8h_af89aa48b710fa002d71884069726bf8c}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+chunk\+\_\+safetocopy@{Lode\+P\+N\+G\+\_\+chunk\+\_\+safetocopy}}
+\index{Lode\+P\+N\+G\+\_\+chunk\+\_\+safetocopy@{Lode\+P\+N\+G\+\_\+chunk\+\_\+safetocopy}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+chunk\+\_\+safetocopy(const unsigned char $\ast$chunk)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Lode\+P\+N\+G\+\_\+chunk\+\_\+safetocopy (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$}]{chunk}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_af89aa48b710fa002d71884069726bf8c}
+\hypertarget{lodepng_8h_af3cff22c00facc19aa15202f1001e863}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+chunk\+\_\+type@{Lode\+P\+N\+G\+\_\+chunk\+\_\+type}}
+\index{Lode\+P\+N\+G\+\_\+chunk\+\_\+type@{Lode\+P\+N\+G\+\_\+chunk\+\_\+type}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+chunk\+\_\+type(char type[5], const unsigned char $\ast$chunk)}]{\setlength{\rightskip}{0pt plus 5cm}void Lode\+P\+N\+G\+\_\+chunk\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{char}]{type\mbox{[}5\mbox{]}, }
+\item[{const unsigned char $\ast$}]{chunk}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_af3cff22c00facc19aa15202f1001e863}
+\hypertarget{lodepng_8h_a1e3ab3e373966fd2c323bd5a698ccfb1}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+chunk\+\_\+type\+\_\+equals@{Lode\+P\+N\+G\+\_\+chunk\+\_\+type\+\_\+equals}}
+\index{Lode\+P\+N\+G\+\_\+chunk\+\_\+type\+\_\+equals@{Lode\+P\+N\+G\+\_\+chunk\+\_\+type\+\_\+equals}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+chunk\+\_\+type\+\_\+equals(const unsigned char $\ast$chunk, const char $\ast$type)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Lode\+P\+N\+G\+\_\+chunk\+\_\+type\+\_\+equals (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$}]{chunk, }
+\item[{const char $\ast$}]{type}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a1e3ab3e373966fd2c323bd5a698ccfb1}
+\hypertarget{lodepng_8h_a9e7ce5d1928b44ba6a7c30465b996c68}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+convert@{Lode\+P\+N\+G\+\_\+convert}}
+\index{Lode\+P\+N\+G\+\_\+convert@{Lode\+P\+N\+G\+\_\+convert}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+convert(unsigned char $\ast$out, const unsigned char $\ast$in, Lode\+P\+N\+G\+\_\+\+Info\+Color $\ast$info\+Out, Lode\+P\+N\+G\+\_\+\+Info\+Color $\ast$info\+In, unsigned w, unsigned h)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Lode\+P\+N\+G\+\_\+convert (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{out, }
+\item[{const unsigned char $\ast$}]{in, }
+\item[{{\bf Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$}]{info\+Out, }
+\item[{{\bf Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$}]{info\+In, }
+\item[{unsigned}]{w, }
+\item[{unsigned}]{h}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a9e7ce5d1928b44ba6a7c30465b996c68}
+\hypertarget{lodepng_8h_a75457d20497de64abea3a34daefc4f8c}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+create\+\_\+chunk@{Lode\+P\+N\+G\+\_\+create\+\_\+chunk}}
+\index{Lode\+P\+N\+G\+\_\+create\+\_\+chunk@{Lode\+P\+N\+G\+\_\+create\+\_\+chunk}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+create\+\_\+chunk(unsigned char $\ast$$\ast$out, size\+\_\+t $\ast$outlength, unsigned length, const char $\ast$type, const unsigned char $\ast$data)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Lode\+P\+N\+G\+\_\+create\+\_\+chunk (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$$\ast$}]{out, }
+\item[{size\+\_\+t $\ast$}]{outlength, }
+\item[{unsigned}]{length, }
+\item[{const char $\ast$}]{type, }
+\item[{const unsigned char $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a75457d20497de64abea3a34daefc4f8c}
+\hypertarget{lodepng_8h_aeb8588ff6ad7dae8c5322b1520aa5687}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+encode@{Lode\+P\+N\+G\+\_\+encode}}
+\index{Lode\+P\+N\+G\+\_\+encode@{Lode\+P\+N\+G\+\_\+encode}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+encode(\+Lode\+P\+N\+G\+\_\+\+Encoder $\ast$encoder, unsigned char $\ast$$\ast$out, size\+\_\+t $\ast$outsize, const unsigned char $\ast$image, unsigned w, unsigned h)}]{\setlength{\rightskip}{0pt plus 5cm}void Lode\+P\+N\+G\+\_\+encode (
+\begin{DoxyParamCaption}
+\item[{{\bf Lode\+P\+N\+G\+\_\+\+Encoder} $\ast$}]{encoder, }
+\item[{unsigned char $\ast$$\ast$}]{out, }
+\item[{size\+\_\+t $\ast$}]{outsize, }
+\item[{const unsigned char $\ast$}]{image, }
+\item[{unsigned}]{w, }
+\item[{unsigned}]{h}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_aeb8588ff6ad7dae8c5322b1520aa5687}
+\hypertarget{lodepng_8h_a75be5c73ab8b78aa8e583976007a363f}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+encode32@{Lode\+P\+N\+G\+\_\+encode32}}
+\index{Lode\+P\+N\+G\+\_\+encode32@{Lode\+P\+N\+G\+\_\+encode32}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+encode32(unsigned char $\ast$$\ast$out, size\+\_\+t $\ast$outsize, const unsigned char $\ast$image, unsigned w, unsigned h)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Lode\+P\+N\+G\+\_\+encode32 (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$$\ast$}]{out, }
+\item[{size\+\_\+t $\ast$}]{outsize, }
+\item[{const unsigned char $\ast$}]{image, }
+\item[{unsigned}]{w, }
+\item[{unsigned}]{h}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a75be5c73ab8b78aa8e583976007a363f}
+\hypertarget{lodepng_8h_aac29eed979899d7823ee53bbf073118c}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+encode32f@{Lode\+P\+N\+G\+\_\+encode32f}}
+\index{Lode\+P\+N\+G\+\_\+encode32f@{Lode\+P\+N\+G\+\_\+encode32f}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+encode32f(const char $\ast$filename, const unsigned char $\ast$image, unsigned w, unsigned h)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Lode\+P\+N\+G\+\_\+encode32f (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{const unsigned char $\ast$}]{image, }
+\item[{unsigned}]{w, }
+\item[{unsigned}]{h}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_aac29eed979899d7823ee53bbf073118c}
+\hypertarget{lodepng_8h_a7269f380122edb94715d5e2e87eab835}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+cleanup@{Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+cleanup}}
+\index{Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+cleanup@{Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+cleanup}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+cleanup(\+Lode\+P\+N\+G\+\_\+\+Encoder $\ast$encoder)}]{\setlength{\rightskip}{0pt plus 5cm}void Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+cleanup (
+\begin{DoxyParamCaption}
+\item[{{\bf Lode\+P\+N\+G\+\_\+\+Encoder} $\ast$}]{encoder}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a7269f380122edb94715d5e2e87eab835}
+\hypertarget{lodepng_8h_a0c0160b2f998d5966324922a153ee557}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+copy@{Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+copy}}
+\index{Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+copy@{Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+copy}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+copy(\+Lode\+P\+N\+G\+\_\+\+Encoder $\ast$dest, const Lode\+P\+N\+G\+\_\+\+Encoder $\ast$source)}]{\setlength{\rightskip}{0pt plus 5cm}void Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+copy (
+\begin{DoxyParamCaption}
+\item[{{\bf Lode\+P\+N\+G\+\_\+\+Encoder} $\ast$}]{dest, }
+\item[{const {\bf Lode\+P\+N\+G\+\_\+\+Encoder} $\ast$}]{source}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a0c0160b2f998d5966324922a153ee557}
+\hypertarget{lodepng_8h_a187956c5e5784f77f5b17181310be304}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+init@{Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+init}}
+\index{Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+init@{Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+init}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+init(\+Lode\+P\+N\+G\+\_\+\+Encoder $\ast$encoder)}]{\setlength{\rightskip}{0pt plus 5cm}void Lode\+P\+N\+G\+\_\+\+Encoder\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf Lode\+P\+N\+G\+\_\+\+Encoder} $\ast$}]{encoder}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a187956c5e5784f77f5b17181310be304}
+\hypertarget{lodepng_8h_a3cd7cc1583795fd14b7fe1179e005ab1}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Encode\+Settings\+\_\+init@{Lode\+P\+N\+G\+\_\+\+Encode\+Settings\+\_\+init}}
+\index{Lode\+P\+N\+G\+\_\+\+Encode\+Settings\+\_\+init@{Lode\+P\+N\+G\+\_\+\+Encode\+Settings\+\_\+init}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Encode\+Settings\+\_\+init(\+Lode\+P\+N\+G\+\_\+\+Encode\+Settings $\ast$settings)}]{\setlength{\rightskip}{0pt plus 5cm}void Lode\+P\+N\+G\+\_\+\+Encode\+Settings\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf Lode\+P\+N\+G\+\_\+\+Encode\+Settings} $\ast$}]{settings}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a3cd7cc1583795fd14b7fe1179e005ab1}
+\hypertarget{lodepng_8h_af062c1db1f9e18f47aa2d9a86651dea3}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+add\+Palette@{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+add\+Palette}}
+\index{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+add\+Palette@{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+add\+Palette}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+add\+Palette(\+Lode\+P\+N\+G\+\_\+\+Info\+Color $\ast$info, unsigned char r, unsigned char g, unsigned char b, unsigned char a)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+add\+Palette (
+\begin{DoxyParamCaption}
+\item[{{\bf Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$}]{info, }
+\item[{unsigned char}]{r, }
+\item[{unsigned char}]{g, }
+\item[{unsigned char}]{b, }
+\item[{unsigned char}]{a}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_af062c1db1f9e18f47aa2d9a86651dea3}
+\hypertarget{lodepng_8h_a2f5ecf25393f688611987c61f698f1ce}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+cleanup@{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+cleanup}}
+\index{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+cleanup@{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+cleanup}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+cleanup(\+Lode\+P\+N\+G\+\_\+\+Info\+Color $\ast$info)}]{\setlength{\rightskip}{0pt plus 5cm}void Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+cleanup (
+\begin{DoxyParamCaption}
+\item[{{\bf Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a2f5ecf25393f688611987c61f698f1ce}
+\hypertarget{lodepng_8h_ac78fd072f3dcc91ee6e3a250cfa64ea5}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+clear\+Palette@{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+clear\+Palette}}
+\index{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+clear\+Palette@{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+clear\+Palette}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+clear\+Palette(\+Lode\+P\+N\+G\+\_\+\+Info\+Color $\ast$info)}]{\setlength{\rightskip}{0pt plus 5cm}void Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+clear\+Palette (
+\begin{DoxyParamCaption}
+\item[{{\bf Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_ac78fd072f3dcc91ee6e3a250cfa64ea5}
+\hypertarget{lodepng_8h_ad7beb96e92dd01a605c669af79a54a00}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+copy@{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+copy}}
+\index{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+copy@{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+copy}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+copy(\+Lode\+P\+N\+G\+\_\+\+Info\+Color $\ast$dest, const Lode\+P\+N\+G\+\_\+\+Info\+Color $\ast$source)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+copy (
+\begin{DoxyParamCaption}
+\item[{{\bf Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$}]{dest, }
+\item[{const {\bf Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$}]{source}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_ad7beb96e92dd01a605c669af79a54a00}
+\hypertarget{lodepng_8h_a81151c0087467b4ac2a815b3234fdb5a}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+get\+Bpp@{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+get\+Bpp}}
+\index{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+get\+Bpp@{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+get\+Bpp}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+get\+Bpp(const Lode\+P\+N\+G\+\_\+\+Info\+Color $\ast$info)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+get\+Bpp (
+\begin{DoxyParamCaption}
+\item[{const {\bf Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a81151c0087467b4ac2a815b3234fdb5a}
+\hypertarget{lodepng_8h_a62159dfd6cf8a67b55d5bbc70fee589b}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+get\+Channels@{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+get\+Channels}}
+\index{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+get\+Channels@{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+get\+Channels}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+get\+Channels(const Lode\+P\+N\+G\+\_\+\+Info\+Color $\ast$info)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+get\+Channels (
+\begin{DoxyParamCaption}
+\item[{const {\bf Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a62159dfd6cf8a67b55d5bbc70fee589b}
+\hypertarget{lodepng_8h_abaea3ca539b3d5f1624ac8286f47b34c}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+init@{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+init}}
+\index{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+init@{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+init}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+init(\+Lode\+P\+N\+G\+\_\+\+Info\+Color $\ast$info)}]{\setlength{\rightskip}{0pt plus 5cm}void Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_abaea3ca539b3d5f1624ac8286f47b34c}
+\hypertarget{lodepng_8h_af139bc36c2a9b88d21dc3652520a3f73}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+is\+Alpha\+Type@{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+is\+Alpha\+Type}}
+\index{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+is\+Alpha\+Type@{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+is\+Alpha\+Type}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+is\+Alpha\+Type(const Lode\+P\+N\+G\+\_\+\+Info\+Color $\ast$info)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+is\+Alpha\+Type (
+\begin{DoxyParamCaption}
+\item[{const {\bf Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_af139bc36c2a9b88d21dc3652520a3f73}
+\hypertarget{lodepng_8h_ac0564ed5cbac6fcfda3b28b3078cde65}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+is\+Greyscale\+Type@{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+is\+Greyscale\+Type}}
+\index{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+is\+Greyscale\+Type@{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+is\+Greyscale\+Type}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+is\+Greyscale\+Type(const Lode\+P\+N\+G\+\_\+\+Info\+Color $\ast$info)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Lode\+P\+N\+G\+\_\+\+Info\+Color\+\_\+is\+Greyscale\+Type (
+\begin{DoxyParamCaption}
+\item[{const {\bf Lode\+P\+N\+G\+\_\+\+Info\+Color} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_ac0564ed5cbac6fcfda3b28b3078cde65}
+\hypertarget{lodepng_8h_a7884592df167f7136fc928cacf1efd36}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+cleanup@{Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+cleanup}}
+\index{Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+cleanup@{Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+cleanup}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+cleanup(\+Lode\+P\+N\+G\+\_\+\+Info\+Png $\ast$info)}]{\setlength{\rightskip}{0pt plus 5cm}void Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+cleanup (
+\begin{DoxyParamCaption}
+\item[{{\bf Lode\+P\+N\+G\+\_\+\+Info\+Png} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a7884592df167f7136fc928cacf1efd36}
+\hypertarget{lodepng_8h_a0e188efe0b87e1b7d11a01ff85881368}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+copy@{Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+copy}}
+\index{Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+copy@{Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+copy}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+copy(\+Lode\+P\+N\+G\+\_\+\+Info\+Png $\ast$dest, const Lode\+P\+N\+G\+\_\+\+Info\+Png $\ast$source)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+copy (
+\begin{DoxyParamCaption}
+\item[{{\bf Lode\+P\+N\+G\+\_\+\+Info\+Png} $\ast$}]{dest, }
+\item[{const {\bf Lode\+P\+N\+G\+\_\+\+Info\+Png} $\ast$}]{source}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a0e188efe0b87e1b7d11a01ff85881368}
+\hypertarget{lodepng_8h_a66ddccc82c59e05d746086f56997b4cd}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+init@{Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+init}}
+\index{Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+init@{Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+init}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+init(\+Lode\+P\+N\+G\+\_\+\+Info\+Png $\ast$info)}]{\setlength{\rightskip}{0pt plus 5cm}void Lode\+P\+N\+G\+\_\+\+Info\+Png\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf Lode\+P\+N\+G\+\_\+\+Info\+Png} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a66ddccc82c59e05d746086f56997b4cd}
+\hypertarget{lodepng_8h_ae8ee35b701bba217323f27723d2690f5}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+cleanup@{Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+cleanup}}
+\index{Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+cleanup@{Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+cleanup}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+cleanup(\+Lode\+P\+N\+G\+\_\+\+Info\+Raw $\ast$info)}]{\setlength{\rightskip}{0pt plus 5cm}void Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+cleanup (
+\begin{DoxyParamCaption}
+\item[{{\bf Lode\+P\+N\+G\+\_\+\+Info\+Raw} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_ae8ee35b701bba217323f27723d2690f5}
+\hypertarget{lodepng_8h_a745b94bf14f6c3497b6280863e71e5a6}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+copy@{Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+copy}}
+\index{Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+copy@{Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+copy}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+copy(\+Lode\+P\+N\+G\+\_\+\+Info\+Raw $\ast$dest, const Lode\+P\+N\+G\+\_\+\+Info\+Raw $\ast$source)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+copy (
+\begin{DoxyParamCaption}
+\item[{{\bf Lode\+P\+N\+G\+\_\+\+Info\+Raw} $\ast$}]{dest, }
+\item[{const {\bf Lode\+P\+N\+G\+\_\+\+Info\+Raw} $\ast$}]{source}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a745b94bf14f6c3497b6280863e71e5a6}
+\hypertarget{lodepng_8h_a279c66151f5c87b2225ebe866ce98f71}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+init@{Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+init}}
+\index{Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+init@{Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+init}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+init(\+Lode\+P\+N\+G\+\_\+\+Info\+Raw $\ast$info)}]{\setlength{\rightskip}{0pt plus 5cm}void Lode\+P\+N\+G\+\_\+\+Info\+Raw\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf Lode\+P\+N\+G\+\_\+\+Info\+Raw} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a279c66151f5c87b2225ebe866ce98f71}
+\hypertarget{lodepng_8h_aca6d9a07dd0805433de47feb04e0fc52}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+load\+File@{Lode\+P\+N\+G\+\_\+load\+File}}
+\index{Lode\+P\+N\+G\+\_\+load\+File@{Lode\+P\+N\+G\+\_\+load\+File}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+load\+File(unsigned char $\ast$$\ast$out, size\+\_\+t $\ast$outsize, const char $\ast$filename)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Lode\+P\+N\+G\+\_\+load\+File (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$$\ast$}]{out, }
+\item[{size\+\_\+t $\ast$}]{outsize, }
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_aca6d9a07dd0805433de47feb04e0fc52}
+\hypertarget{lodepng_8h_a35604ddb7255afb1526979ca40815987}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+P\+N\+G\+\_\+save\+File@{Lode\+P\+N\+G\+\_\+save\+File}}
+\index{Lode\+P\+N\+G\+\_\+save\+File@{Lode\+P\+N\+G\+\_\+save\+File}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+P\+N\+G\+\_\+save\+File(const unsigned char $\ast$buffer, size\+\_\+t buffersize, const char $\ast$filename)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Lode\+P\+N\+G\+\_\+save\+File (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$}]{buffer, }
+\item[{size\+\_\+t}]{buffersize, }
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_a35604ddb7255afb1526979ca40815987}
+\hypertarget{lodepng_8h_afa4868843f0e8ef801f1510c29de9edc}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+Zlib\+\_\+compress@{Lode\+Zlib\+\_\+compress}}
+\index{Lode\+Zlib\+\_\+compress@{Lode\+Zlib\+\_\+compress}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+Zlib\+\_\+compress(unsigned char $\ast$$\ast$out, size\+\_\+t $\ast$outsize, const unsigned char $\ast$in, size\+\_\+t insize, const Lode\+Zlib\+\_\+\+Deflate\+Settings $\ast$settings)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Lode\+Zlib\+\_\+compress (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$$\ast$}]{out, }
+\item[{size\+\_\+t $\ast$}]{outsize, }
+\item[{const unsigned char $\ast$}]{in, }
+\item[{size\+\_\+t}]{insize, }
+\item[{const {\bf Lode\+Zlib\+\_\+\+Deflate\+Settings} $\ast$}]{settings}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_afa4868843f0e8ef801f1510c29de9edc}
+\hypertarget{lodepng_8h_aa3c00d6565b6bf50aa7e68516941da40}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+Zlib\+\_\+\+Deflate\+Settings\+\_\+init@{Lode\+Zlib\+\_\+\+Deflate\+Settings\+\_\+init}}
+\index{Lode\+Zlib\+\_\+\+Deflate\+Settings\+\_\+init@{Lode\+Zlib\+\_\+\+Deflate\+Settings\+\_\+init}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+Zlib\+\_\+\+Deflate\+Settings\+\_\+init(\+Lode\+Zlib\+\_\+\+Deflate\+Settings $\ast$settings)}]{\setlength{\rightskip}{0pt plus 5cm}void Lode\+Zlib\+\_\+\+Deflate\+Settings\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf Lode\+Zlib\+\_\+\+Deflate\+Settings} $\ast$}]{settings}
+\end{DoxyParamCaption}
+)}\label{lodepng_8h_aa3c00d6565b6bf50aa7e68516941da40}
+
+
+\subsection{Documentation des variables}
+\hypertarget{lodepng_8h_a12bc0ceafd3730e97d84555369fde896}{}\index{lodepng.\+h@{lodepng.\+h}!Lode\+Zlib\+\_\+default\+Deflate\+Settings@{Lode\+Zlib\+\_\+default\+Deflate\+Settings}}
+\index{Lode\+Zlib\+\_\+default\+Deflate\+Settings@{Lode\+Zlib\+\_\+default\+Deflate\+Settings}!lodepng.\+h@{lodepng.\+h}}
+\subsubsection[{Lode\+Zlib\+\_\+default\+Deflate\+Settings}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Lode\+Zlib\+\_\+\+Deflate\+Settings} Lode\+Zlib\+\_\+default\+Deflate\+Settings}\label{lodepng_8h_a12bc0ceafd3730e97d84555369fde896}

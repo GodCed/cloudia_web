@@ -1,0 +1,208 @@
+\hypertarget{class_index_list}{}\section{Référence de la classe Index\+List}
+\label{class_index_list}\index{Index\+List@{Index\+List}}
+
+
+\hyperlink{class_a}{A} list of index interfaces.  
+
+
+
+
+{\ttfamily \#include $<$index.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Index\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_index_list}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_index_list_a9d525f0a264b6aba4f8acf2d513a31ea}{Index\+List} ()
+\item 
+void \hyperlink{class_index_list_a8120913e328f96fec6e5b2070902f4e7}{add\+Index} (\hyperlink{class_index_intf}{Index\+Intf} $\ast$intf)
+\item 
+void \hyperlink{class_index_list_ae7334e24bfdf93caf3db9d61ae62caf6}{disable} ()
+\item 
+void \hyperlink{class_index_list_aabffffbc2e50eeb9437640c369dfd6b7}{enable} ()
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_index_list_a716ecb0b2b7f39d7db022d61297d9b8a}{is\+Enabled} () const 
+\item 
+void \hyperlink{class_index_list_a104b016afa73759d65b08f6c1cced210}{initialize} ()
+\item 
+void \hyperlink{class_index_list_af04e11231983acb4dbf381e809bfa178}{finalize} ()
+\item 
+void \hyperlink{class_index_list_ac6af95293030206c0224260e9b1d7aca}{inc\+Contents\+Depth} ()
+\item 
+void \hyperlink{class_index_list_a4bad65cd2fadab4529bbfe5df78cc019}{dec\+Contents\+Depth} ()
+\item 
+void \hyperlink{class_index_list_afac63d024f410eaf10960f240e881f0b}{add\+Contents\+Item} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} is\+Dir, const char $\ast$name, const char $\ast$ref, const char $\ast$file, const char $\ast$anchor, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} separate\+Index=\hyperlink{qglobal_8h_a10e004b6916e78ff4ea8379be80b80cc}{F\+A\+L\+S\+E}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} add\+To\+Nav\+Index=\hyperlink{qglobal_8h_a10e004b6916e78ff4ea8379be80b80cc}{F\+A\+L\+S\+E}, \hyperlink{class_definition}{Definition} $\ast$def=0)
+\item 
+void \hyperlink{class_index_list_aab8f1fb60ccd7074dfcacab6584ebaa2}{add\+Index\+Item} (\hyperlink{class_definition}{Definition} $\ast$context, \hyperlink{class_member_def}{Member\+Def} $\ast$md, const char $\ast$section\+Anchor=0, const char $\ast$title=0)
+\item 
+void \hyperlink{class_index_list_a847ef82be5132a43cf70e516f6c525aa}{add\+Index\+File} (const char $\ast$name)
+\item 
+void \hyperlink{class_index_list_aacfe4c4bf0fa41efea7015fc6aa372d6}{add\+Image\+File} (const char $\ast$name)
+\item 
+void \hyperlink{class_index_list_a86a377209f0483a032c4e3c241a946a9}{add\+Style\+Sheet\+File} (const char $\ast$name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\hyperlink{class_a}{A} list of index interfaces. 
+
+This class itself implements all methods of \hyperlink{class_index_intf}{Index\+Intf} and just forwards the calls to all items in the list. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_index_list_a9d525f0a264b6aba4f8acf2d513a31ea}{}\index{Index\+List@{Index\+List}!Index\+List@{Index\+List}}
+\index{Index\+List@{Index\+List}!Index\+List@{Index\+List}}
+\subsubsection[{Index\+List()}]{\setlength{\rightskip}{0pt plus 5cm}Index\+List\+::\+Index\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_index_list_a9d525f0a264b6aba4f8acf2d513a31ea}
+Creates a list of indexes 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_index_list_afac63d024f410eaf10960f240e881f0b}{}\index{Index\+List@{Index\+List}!add\+Contents\+Item@{add\+Contents\+Item}}
+\index{add\+Contents\+Item@{add\+Contents\+Item}!Index\+List@{Index\+List}}
+\subsubsection[{add\+Contents\+Item(bool is\+Dir, const char $\ast$name, const char $\ast$ref, const char $\ast$file, const char $\ast$anchor, bool separate\+Index=\+F\+A\+L\+S\+E, bool add\+To\+Nav\+Index=\+F\+A\+L\+S\+E, Definition $\ast$def=0)}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+List\+::add\+Contents\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{is\+Dir, }
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{ref, }
+\item[{const char $\ast$}]{file, }
+\item[{const char $\ast$}]{anchor, }
+\item[{{\bf bool}}]{separate\+Index = {\ttfamily {\bf F\+A\+L\+S\+E}}, }
+\item[{{\bf bool}}]{add\+To\+Nav\+Index = {\ttfamily {\bf F\+A\+L\+S\+E}}, }
+\item[{{\bf Definition} $\ast$}]{def = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_index_list_afac63d024f410eaf10960f240e881f0b}
+
+
+Implémente \hyperlink{class_index_intf_aab43652b639ce5cd25f5b16e54e20f26}{Index\+Intf}.
+
+\hypertarget{class_index_list_aacfe4c4bf0fa41efea7015fc6aa372d6}{}\index{Index\+List@{Index\+List}!add\+Image\+File@{add\+Image\+File}}
+\index{add\+Image\+File@{add\+Image\+File}!Index\+List@{Index\+List}}
+\subsubsection[{add\+Image\+File(const char $\ast$name)}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+List\+::add\+Image\+File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_index_list_aacfe4c4bf0fa41efea7015fc6aa372d6}
+
+
+Implémente \hyperlink{class_index_intf_ac1650d4596d97cdd1de428b06a76daad}{Index\+Intf}.
+
+\hypertarget{class_index_list_a8120913e328f96fec6e5b2070902f4e7}{}\index{Index\+List@{Index\+List}!add\+Index@{add\+Index}}
+\index{add\+Index@{add\+Index}!Index\+List@{Index\+List}}
+\subsubsection[{add\+Index(\+Index\+Intf $\ast$intf)}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+List\+::add\+Index (
+\begin{DoxyParamCaption}
+\item[{{\bf Index\+Intf} $\ast$}]{intf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_index_list_a8120913e328f96fec6e5b2070902f4e7}
+Add an index generator to the list \hypertarget{class_index_list_a847ef82be5132a43cf70e516f6c525aa}{}\index{Index\+List@{Index\+List}!add\+Index\+File@{add\+Index\+File}}
+\index{add\+Index\+File@{add\+Index\+File}!Index\+List@{Index\+List}}
+\subsubsection[{add\+Index\+File(const char $\ast$name)}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+List\+::add\+Index\+File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_index_list_a847ef82be5132a43cf70e516f6c525aa}
+
+
+Implémente \hyperlink{class_index_intf_a153c5c5995155d112c33fed544b44094}{Index\+Intf}.
+
+\hypertarget{class_index_list_aab8f1fb60ccd7074dfcacab6584ebaa2}{}\index{Index\+List@{Index\+List}!add\+Index\+Item@{add\+Index\+Item}}
+\index{add\+Index\+Item@{add\+Index\+Item}!Index\+List@{Index\+List}}
+\subsubsection[{add\+Index\+Item(\+Definition $\ast$context, Member\+Def $\ast$md, const char $\ast$section\+Anchor=0, const char $\ast$title=0)}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+List\+::add\+Index\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf Definition} $\ast$}]{context, }
+\item[{{\bf Member\+Def} $\ast$}]{md, }
+\item[{const char $\ast$}]{section\+Anchor = {\ttfamily 0}, }
+\item[{const char $\ast$}]{title = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_index_list_aab8f1fb60ccd7074dfcacab6584ebaa2}
+
+
+Implémente \hyperlink{class_index_intf_a762276e6f0229fb784a592acd2cf6a8b}{Index\+Intf}.
+
+\hypertarget{class_index_list_a86a377209f0483a032c4e3c241a946a9}{}\index{Index\+List@{Index\+List}!add\+Style\+Sheet\+File@{add\+Style\+Sheet\+File}}
+\index{add\+Style\+Sheet\+File@{add\+Style\+Sheet\+File}!Index\+List@{Index\+List}}
+\subsubsection[{add\+Style\+Sheet\+File(const char $\ast$name)}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+List\+::add\+Style\+Sheet\+File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_index_list_a86a377209f0483a032c4e3c241a946a9}
+
+
+Implémente \hyperlink{class_index_intf_a3989fce1306feb90e477cb53fd0daee0}{Index\+Intf}.
+
+\hypertarget{class_index_list_a4bad65cd2fadab4529bbfe5df78cc019}{}\index{Index\+List@{Index\+List}!dec\+Contents\+Depth@{dec\+Contents\+Depth}}
+\index{dec\+Contents\+Depth@{dec\+Contents\+Depth}!Index\+List@{Index\+List}}
+\subsubsection[{dec\+Contents\+Depth()}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+List\+::dec\+Contents\+Depth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_index_list_a4bad65cd2fadab4529bbfe5df78cc019}
+
+
+Implémente \hyperlink{class_index_intf_a920918399556e9afd4d927de3d1f4247}{Index\+Intf}.
+
+\hypertarget{class_index_list_ae7334e24bfdf93caf3db9d61ae62caf6}{}\index{Index\+List@{Index\+List}!disable@{disable}}
+\index{disable@{disable}!Index\+List@{Index\+List}}
+\subsubsection[{disable()}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+List\+::disable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_index_list_ae7334e24bfdf93caf3db9d61ae62caf6}
+\hypertarget{class_index_list_aabffffbc2e50eeb9437640c369dfd6b7}{}\index{Index\+List@{Index\+List}!enable@{enable}}
+\index{enable@{enable}!Index\+List@{Index\+List}}
+\subsubsection[{enable()}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+List\+::enable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_index_list_aabffffbc2e50eeb9437640c369dfd6b7}
+\hypertarget{class_index_list_af04e11231983acb4dbf381e809bfa178}{}\index{Index\+List@{Index\+List}!finalize@{finalize}}
+\index{finalize@{finalize}!Index\+List@{Index\+List}}
+\subsubsection[{finalize()}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+List\+::finalize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_index_list_af04e11231983acb4dbf381e809bfa178}
+
+
+Implémente \hyperlink{class_index_intf_aa5532a767c4ac41167d014209b2ea8d7}{Index\+Intf}.
+
+\hypertarget{class_index_list_ac6af95293030206c0224260e9b1d7aca}{}\index{Index\+List@{Index\+List}!inc\+Contents\+Depth@{inc\+Contents\+Depth}}
+\index{inc\+Contents\+Depth@{inc\+Contents\+Depth}!Index\+List@{Index\+List}}
+\subsubsection[{inc\+Contents\+Depth()}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+List\+::inc\+Contents\+Depth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_index_list_ac6af95293030206c0224260e9b1d7aca}
+
+
+Implémente \hyperlink{class_index_intf_ac5ff1647bcf1cc65543258df162a0a7c}{Index\+Intf}.
+
+\hypertarget{class_index_list_a104b016afa73759d65b08f6c1cced210}{}\index{Index\+List@{Index\+List}!initialize@{initialize}}
+\index{initialize@{initialize}!Index\+List@{Index\+List}}
+\subsubsection[{initialize()}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+List\+::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_index_list_a104b016afa73759d65b08f6c1cced210}
+
+
+Implémente \hyperlink{class_index_intf_a0e46b4afa0ed269e2d089c8444590515}{Index\+Intf}.
+
+\hypertarget{class_index_list_a716ecb0b2b7f39d7db022d61297d9b8a}{}\index{Index\+List@{Index\+List}!is\+Enabled@{is\+Enabled}}
+\index{is\+Enabled@{is\+Enabled}!Index\+List@{Index\+List}}
+\subsubsection[{is\+Enabled() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Index\+List\+::is\+Enabled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_index_list_a716ecb0b2b7f39d7db022d61297d9b8a}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{index_8h}{index.\+h}\end{DoxyCompactItemize}

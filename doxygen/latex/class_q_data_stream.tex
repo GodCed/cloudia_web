@@ -1,0 +1,636 @@
+\hypertarget{class_q_data_stream}{}\section{Référence de la classe Q\+Data\+Stream}
+\label{class_q_data_stream}\index{Q\+Data\+Stream@{Q\+Data\+Stream}}
+
+
+The \hyperlink{class_q_data_stream}{Q\+Data\+Stream} class provides serialization of binary data to a \hyperlink{class_q_i_o_device}{Q\+I\+O\+Device}.  
+
+
+
+
+{\ttfamily \#include $<$qdatastream.\+h$>$}
+
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_q_data_stream_a0cc872752a2cc23a0cf2bcb359cdf135}{Byte\+Order} \{ \hyperlink{class_q_data_stream_a0cc872752a2cc23a0cf2bcb359cdf135ab7cf4164d1175a7377c64f8671bc28de}{Big\+Endian}, 
+\hyperlink{class_q_data_stream_a0cc872752a2cc23a0cf2bcb359cdf135a646810b428b314ff8dd6bedb589f0f5a}{Little\+Endian}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_data_stream_ae8cfdb0d4d326f4bfbc38f8906e00f7b}{Q\+Data\+Stream} ()
+\item 
+\hyperlink{class_q_data_stream_a267a2b11f97234fe12449e82d03fe652}{Q\+Data\+Stream} (\hyperlink{class_q_i_o_device}{Q\+I\+O\+Device} $\ast$)
+\item 
+\hyperlink{class_q_data_stream_a0fe70be1e1b5371ea40859c25918f321}{Q\+Data\+Stream} (\hyperlink{qcstring_8h_ad6a390648110655c217fe072d45fbcf5}{Q\+Byte\+Array}, int mode)
+\item 
+virtual \hyperlink{class_q_data_stream_a69b54286e9842e39edad381c0e9e6cd6}{$\sim$\+Q\+Data\+Stream} ()
+\item 
+\hyperlink{class_q_i_o_device}{Q\+I\+O\+Device} $\ast$ \hyperlink{class_q_data_stream_a2d361d7eb01d7c62e01d37b00ada16f0}{device} () const 
+\item 
+void \hyperlink{class_q_data_stream_aa05d0c83cccfb3f193c365c6ee3bb323}{set\+Device} (\hyperlink{class_q_i_o_device}{Q\+I\+O\+Device} $\ast$)
+\item 
+void \hyperlink{class_q_data_stream_a00d9db572b7ce41ea1a8b321b024acbd}{unset\+Device} ()
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_data_stream_aa651223db998942ab8ebdad08ea598f1}{at\+End} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_data_stream_a85852207e006d972193308297473ded9}{eof} () const 
+\item 
+int \hyperlink{class_q_data_stream_a8c2c0afbfa6a670c3ea58e124c0bb680}{byte\+Order} () const 
+\item 
+void \hyperlink{class_q_data_stream_af15532c2efeaca9f8818fca55a7d7d02}{set\+Byte\+Order} (int)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_data_stream_ad223fd515286c4c3febd08393984a683}{is\+Printable\+Data} () const 
+\item 
+void \hyperlink{class_q_data_stream_acc3df7d01950ab1a4673019f4f471e8d}{set\+Printable\+Data} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})
+\item 
+int \hyperlink{class_q_data_stream_ae140798d7698d48eb9b0be4f3e492735}{version} () const 
+\item 
+void \hyperlink{class_q_data_stream_afdc50005a7d1651a711a54ec0869a22d}{set\+Version} (int)
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_aebb5fe86181c3a74f7b6c0fa95c10bb0}{operator$>$$>$} (\hyperlink{qglobal_8h_a3b0e377e9b1bc26fe98cee6677f2d3ce}{Q\+\_\+\+I\+N\+T8} \&\hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_a52e7c242ac64bc58936f537a3b53aced}{operator$>$$>$} (\hyperlink{qglobal_8h_afcae3d7f830f1fb1305d5649c98c989e}{Q\+\_\+\+U\+I\+N\+T8} \&\hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_a6e54a73d831ec308b04b1c11fcb28f17}{operator$>$$>$} (\hyperlink{qglobal_8h_ac991d0327a21ab58c009da3dc087efb1}{Q\+\_\+\+I\+N\+T16} \&\hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_a9074e93a86770cb900c817178ab5d166}{operator$>$$>$} (\hyperlink{qglobal_8h_a6a315c2c82253f8c08fcac0c3458fe2d}{Q\+\_\+\+U\+I\+N\+T16} \&\hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_ad3d2f16864f5457f9bf67279d6017980}{operator$>$$>$} (\hyperlink{qglobal_8h_a7adc07f83f3448f63c6b02e33b573b06}{Q\+\_\+\+I\+N\+T32} \&\hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_a56a4cf0d69f504a02e3a4f6518324036}{operator$>$$>$} (\hyperlink{qglobal_8h_a7d7782cbf40536d689976070bd0cfd27}{Q\+\_\+\+U\+I\+N\+T32} \&\hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_a9e3bb76fb6ff57fbc375734621f965d0}{operator$>$$>$} (\hyperlink{qglobal_8h_a83547f6159951b80dd9951942533e685}{Q\+\_\+\+I\+N\+T64} \&\hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_a6b229aa34e28f6623cb6e30666736058}{operator$>$$>$} (\hyperlink{qglobal_8h_a63d4b44b9f20259c7cff6c1904c046ea}{Q\+\_\+\+U\+I\+N\+T64} \&\hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_a91a008aea3483414151f12f5c7090d28}{operator$>$$>$} (float \&\hyperlink{060__command__switch_8tcl_af6830d2c644b45088ea8f1f74a46b778}{f})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_a104e26e0d013188f9cc91d232d70d7f0}{operator$>$$>$} (double \&\hyperlink{060__command__switch_8tcl_af6830d2c644b45088ea8f1f74a46b778}{f})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_a50d7a4dfbb348b1f48a88853b0a8c340}{operator$>$$>$} (char $\ast$\&str)
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_acfee699863f4dfd77304a28fb0f777b0}{operator$<$$<$} (\hyperlink{qglobal_8h_a3b0e377e9b1bc26fe98cee6677f2d3ce}{Q\+\_\+\+I\+N\+T8} \hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_a27489574dd585cc4135a62a79ffddd31}{operator$<$$<$} (\hyperlink{qglobal_8h_afcae3d7f830f1fb1305d5649c98c989e}{Q\+\_\+\+U\+I\+N\+T8} \hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_a3e9c6b46679fd2c4f329f583bf71ae54}{operator$<$$<$} (\hyperlink{qglobal_8h_ac991d0327a21ab58c009da3dc087efb1}{Q\+\_\+\+I\+N\+T16} \hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_a4a3c9a1b9992a8ce634ce0f31abe2e46}{operator$<$$<$} (\hyperlink{qglobal_8h_a6a315c2c82253f8c08fcac0c3458fe2d}{Q\+\_\+\+U\+I\+N\+T16} \hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_af393e47c4b68b6d23a626b563b1285ca}{operator$<$$<$} (\hyperlink{qglobal_8h_a7adc07f83f3448f63c6b02e33b573b06}{Q\+\_\+\+I\+N\+T32} \hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_a87eeac568a1c8662b2cc22d1377a91e9}{operator$<$$<$} (\hyperlink{qglobal_8h_a7d7782cbf40536d689976070bd0cfd27}{Q\+\_\+\+U\+I\+N\+T32} \hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_afe1363161b0226397b87d6e878895339}{operator$<$$<$} (\hyperlink{qglobal_8h_a83547f6159951b80dd9951942533e685}{Q\+\_\+\+I\+N\+T64} \hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_a096e99ad349228cd45a2bbb4256663e5}{operator$<$$<$} (\hyperlink{qglobal_8h_a63d4b44b9f20259c7cff6c1904c046ea}{Q\+\_\+\+U\+I\+N\+T64} \hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_ac4e26950daf4c0f894d6b3e709b7ec58}{operator$<$$<$} (float \hyperlink{060__command__switch_8tcl_af6830d2c644b45088ea8f1f74a46b778}{f})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_a61587be69fdaa840c4d42eb592c79af2}{operator$<$$<$} (double \hyperlink{060__command__switch_8tcl_af6830d2c644b45088ea8f1f74a46b778}{f})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_acf97e65484056bc6b3fb150c4f339344}{operator$<$$<$} (const char $\ast$str)
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_a296311b844103880ec50b43a2ebbfcaa}{read\+Bytes} (char $\ast$\&, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \&len)
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_a04938bc54d1158276cf01be169d159ea}{read\+Raw\+Bytes} (char $\ast$, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_a8f1af77d483ecfd515c9eac3822aaaa5}{write\+Bytes} (const char $\ast$, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{class_q_data_stream_aab2b83b4d7407ed57ff9eea136cb2e5e}{write\+Raw\+Bytes} (const char $\ast$, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+The \hyperlink{class_q_data_stream}{Q\+Data\+Stream} class provides serialization of binary data to a \hyperlink{class_q_i_o_device}{Q\+I\+O\+Device}. 
+
+\hyperlink{class_a}{A} data stream is a binary stream of encoded information which is 100\% independent of the host computer operation system, C\+P\+U or byte order. \hyperlink{class_a}{A} stream that is written by a P\+C under D\+O\+S/\+Windows can be read by a Sun S\+P\+A\+R\+C running Solaris.
+
+The \hyperlink{class_q_data_stream}{Q\+Data\+Stream} class implements serialization of primitive types, like {\ttfamily char}, {\ttfamily short}, {\ttfamily int}, {\ttfamily char$\ast$} etc. Serialization of more complex data is accomplished by breaking up the data into primitive units.
+
+The programmer can select which byte order to use when serializing data. The default setting is big endian (M\+S\+B first). Changing it to little endian breaks the portability (unless the reader also changes to little endian). We recommend keeping this setting unless you have special requirements.
+
+\hyperlink{class_a}{A} data stream cooperates closely with a \hyperlink{class_q_i_o_device}{Q\+I\+O\+Device}. \hyperlink{class_a}{A} \hyperlink{class_q_i_o_device}{Q\+I\+O\+Device} represents an input/output medium one can read data from and write data to. The \hyperlink{class_q_file}{Q\+File} class is an example of an I\+O device.
+
+\hyperlink{struct_example}{Example} (write data to a stream)\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_file}{QFile} \hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}( \textcolor{stringliteral}{"file.dta"} );
+\hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}.open( \hyperlink{qiodevice_8h_aee87f60968e118b038a637b83ccc4017}{IO\_WriteOnly} );           \textcolor{comment}{// open file for writing}
+\hyperlink{class_q_data_stream}{QDataStream} \hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}( &\hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f} );          \textcolor{comment}{// serialize using f}
+\hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s} << \textcolor{stringliteral}{"the answer is"};         \textcolor{comment}{// serialize string}
+\hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s} << (\hyperlink{qglobal_8h_a7adc07f83f3448f63c6b02e33b573b06}{Q\_INT32})42;             \textcolor{comment}{// serialize integer}
+\end{DoxyCode}
+
+
+\hyperlink{struct_example}{Example} (read data from a stream)\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_file}{QFile} \hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}( \textcolor{stringliteral}{"file.dta"} );
+\hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}.open( \hyperlink{qiodevice_8h_ab5766c5e147f3dfced5890741f22063a}{IO\_ReadOnly} );            \textcolor{comment}{// open file for reading}
+\hyperlink{class_q_data_stream}{QDataStream} \hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}( &\hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f} );          \textcolor{comment}{// serialize using f}
+\textcolor{keywordtype}{char}   *str;
+\hyperlink{qglobal_8h_a7adc07f83f3448f63c6b02e33b573b06}{Q\_INT32} \hyperlink{058__bracket__recursion_8tcl_ab08ae027fc5777bc4f0629f1b60b35db}{a};
+\hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s} >> str >> \hyperlink{058__bracket__recursion_8tcl_ab08ae027fc5777bc4f0629f1b60b35db}{a};                \textcolor{comment}{// "the answer is" and 42}
+\textcolor{keyword}{delete} str;                   \textcolor{comment}{// delete string}
+\end{DoxyCode}
+
+
+In the last example, if you read into a \hyperlink{class_q_string}{Q\+String} instead of a {\ttfamily char$\ast$} you do not have to delete it.
+
+Normally, each item written to the stream is written in a fixed binary format. For example, a {\ttfamily char$\ast$} is written as a 32-\/bit integer equal to the length of the string including the N\+U\+L byte, followed by all the characters of the string including the N\+U\+L byte. Similarly when reading a string, 4 bytes are read to create the 32-\/bit length value, then that many characters for the string including the N\+U\+L. For a complete description of all Qt types supporting data streaming see \hyperlink{}{Format of the Q\+Data\+Stream operators } .
+
+If you want a \char`\"{}parsing\char`\"{} input stream, see \hyperlink{class_q_text_stream}{Q\+Text\+Stream}. If you just want the data to be human-\/readable to aid in debugging, you can set the data stream into printable data mode with \hyperlink{class_q_data_stream_acc3df7d01950ab1a4673019f4f471e8d}{set\+Printable\+Data()}. The data is then written slower, in a human readable bloated form that is sufficient for debugging.
+
+If you are producing a new binary data format, such as a file format for documents created by your application, you could use a \hyperlink{class_q_data_stream}{Q\+Data\+Stream} to write the data in a portable format. Typically, you would write a brief header containing a magic string and a version number to give yourself room for future expansion. For example\+:
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// Open the file.}
+\hyperlink{class_q_file}{QFile} \hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}( \textcolor{stringliteral}{"file.xxx"} );
+\hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}.open( \hyperlink{qiodevice_8h_aee87f60968e118b038a637b83ccc4017}{IO\_WriteOnly} );
+\hyperlink{class_q_data_stream}{QDataStream} \hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}( &\hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f} );
+
+\textcolor{comment}{// Write a header with a "magic number" and a version}
+\hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s} << 0xa0b0c0d0;
+\hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s} << 123;
+
+\textcolor{comment}{// Write the data}
+\hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s} << [lots of interesting data]
+\end{DoxyCode}
+
+
+Then read it in with\+:
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// Open the file.}
+\hyperlink{class_q_file}{QFile} \hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}( \textcolor{stringliteral}{"file.xxx"} );
+\hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}.open( \hyperlink{qiodevice_8h_ab5766c5e147f3dfced5890741f22063a}{IO\_ReadOnly} );
+\hyperlink{class_q_data_stream}{QDataStream} \hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}( &\hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f} );
+
+\textcolor{comment}{// Read and check the header}
+\hyperlink{qglobal_8h_a7d7782cbf40536d689976070bd0cfd27}{Q\_UINT32} magic;
+\hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s} >> magic;
+\textcolor{keywordflow}{if} ( magic != 0xa0b0c0d0 )
+\textcolor{keywordflow}{return} XXX\_BAD\_FILE\_FORMAT;
+
+\textcolor{comment}{// Read the version}
+\hyperlink{qglobal_8h_a7adc07f83f3448f63c6b02e33b573b06}{Q\_INT32} \hyperlink{class_q_data_stream_ae140798d7698d48eb9b0be4f3e492735}{version};
+\hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s} >> \hyperlink{class_q_data_stream_ae140798d7698d48eb9b0be4f3e492735}{version};
+\textcolor{keywordflow}{if} ( version < 100 )
+\textcolor{keywordflow}{return} XXX\_BAD\_FILE\_TOO\_OLD;
+\textcolor{keywordflow}{if} ( version > 123 )
+\textcolor{keywordflow}{return} XXX\_BAD\_FILE\_TOO\_NEW;
+\textcolor{keywordflow}{if} ( version <= 110 )
+\hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}.setVersion(1);
+
+\textcolor{comment}{// Read the data}
+\hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s} >> [lots of interesting data];
+\textcolor{keywordflow}{if} ( version > 120 )
+\hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s} >> [data \textcolor{keyword}{new} in XXX version 1.2];
+\hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s} >> [other interesting data];
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_text_stream}{Q\+Text\+Stream} Q\+Variant 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{class_q_data_stream_a0cc872752a2cc23a0cf2bcb359cdf135}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!Byte\+Order@{Byte\+Order}}
+\index{Byte\+Order@{Byte\+Order}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{Byte\+Order}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Q\+Data\+Stream\+::\+Byte\+Order}}\label{class_q_data_stream_a0cc872752a2cc23a0cf2bcb359cdf135}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Big\+Endian@{Big\+Endian}!Q\+Data\+Stream@{Q\+Data\+Stream}}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!Big\+Endian@{Big\+Endian}}\item[{\em 
+\hypertarget{class_q_data_stream_a0cc872752a2cc23a0cf2bcb359cdf135ab7cf4164d1175a7377c64f8671bc28de}{}Big\+Endian\label{class_q_data_stream_a0cc872752a2cc23a0cf2bcb359cdf135ab7cf4164d1175a7377c64f8671bc28de}
+}]\index{Little\+Endian@{Little\+Endian}!Q\+Data\+Stream@{Q\+Data\+Stream}}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!Little\+Endian@{Little\+Endian}}\item[{\em 
+\hypertarget{class_q_data_stream_a0cc872752a2cc23a0cf2bcb359cdf135a646810b428b314ff8dd6bedb589f0f5a}{}Little\+Endian\label{class_q_data_stream_a0cc872752a2cc23a0cf2bcb359cdf135a646810b428b314ff8dd6bedb589f0f5a}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_data_stream_ae8cfdb0d4d326f4bfbc38f8906e00f7b}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\index{Q\+Data\+Stream@{Q\+Data\+Stream}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{Q\+Data\+Stream()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Data\+Stream\+::\+Q\+Data\+Stream (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_ae8cfdb0d4d326f4bfbc38f8906e00f7b}
+Constructs a data stream that has no I\+O device.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_data_stream_aa05d0c83cccfb3f193c365c6ee3bb323}{set\+Device()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_data_stream_a267a2b11f97234fe12449e82d03fe652}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\index{Q\+Data\+Stream@{Q\+Data\+Stream}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{Q\+Data\+Stream(\+Q\+I\+O\+Device $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Data\+Stream\+::\+Q\+Data\+Stream (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+I\+O\+Device} $\ast$}]{d}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_a267a2b11f97234fe12449e82d03fe652}
+Constructs a data stream that uses the I\+O device {\itshape d}.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_data_stream_aa05d0c83cccfb3f193c365c6ee3bb323}{set\+Device()}, \hyperlink{class_q_data_stream_a2d361d7eb01d7c62e01d37b00ada16f0}{device()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_data_stream_a0fe70be1e1b5371ea40859c25918f321}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\index{Q\+Data\+Stream@{Q\+Data\+Stream}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{Q\+Data\+Stream(\+Q\+Byte\+Array, int mode)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Data\+Stream\+::\+Q\+Data\+Stream (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Byte\+Array}}]{a, }
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_a0fe70be1e1b5371ea40859c25918f321}
+Constructs a data stream that operates on a byte array through an internal \hyperlink{class_q_buffer}{Q\+Buffer} device.
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\textcolor{keyword}{static} \textcolor{keywordtype}{char} bindata[] = \{ 231, 1, 44, ... \};
+\hyperlink{class_q_array}{QByteArray}    \hyperlink{058__bracket__recursion_8tcl_ab08ae027fc5777bc4f0629f1b60b35db}{a};
+a.\hyperlink{class_q_array_a5d29d910696e670349a33854710f4d1f}{setRawData}( bindata, \textcolor{keyword}{sizeof}(bindata) ); \textcolor{comment}{// a points to bindata}
+\hyperlink{class_q_data_stream}{QDataStream} \hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}( a, \hyperlink{qiodevice_8h_ab5766c5e147f3dfced5890741f22063a}{IO\_ReadOnly} );      \textcolor{comment}{// open on a's data}
+\hyperlink{058__bracket__recursion_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s} >> [something];             \textcolor{comment}{// read raw bindata}
+a.\hyperlink{class_q_array_a7bdf2011fa958db2fe21c50e202125c3}{resetRawData}( bindata, \textcolor{keyword}{sizeof}(bindata) ); \textcolor{comment}{// finished}
+\end{DoxyCode}
+
+
+The \hyperlink{class_q_array_a5d29d910696e670349a33854710f4d1f}{Q\+Array\+::set\+Raw\+Data()} function is not for the inexperienced. \hypertarget{class_q_data_stream_a69b54286e9842e39edad381c0e9e6cd6}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!````~Q\+Data\+Stream@{$\sim$\+Q\+Data\+Stream}}
+\index{````~Q\+Data\+Stream@{$\sim$\+Q\+Data\+Stream}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{$\sim$\+Q\+Data\+Stream()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Data\+Stream\+::$\sim$\+Q\+Data\+Stream (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_data_stream_a69b54286e9842e39edad381c0e9e6cd6}
+Destructs the data stream.
+
+The destructor will not affect the current I\+O device, unless it is an internal I\+O device processing a Q\+Byte\+Array passed in the constructor. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_data_stream_aa651223db998942ab8ebdad08ea598f1}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!at\+End@{at\+End}}
+\index{at\+End@{at\+End}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{at\+End() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Data\+Stream\+::at\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_data_stream_aa651223db998942ab8ebdad08ea598f1}
+Returns T\+R\+U\+E if the I\+O device has reached the end position (end of stream or file) or if there is no I\+O device set.
+
+Returns F\+A\+L\+S\+E if the current position of the read/write head of the I\+O device is somewhere before the end position.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_i_o_device_a857ac5294bd88a1308e4c998af81f490}{Q\+I\+O\+Device\+::at\+End()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_data_stream_a8c2c0afbfa6a670c3ea58e124c0bb680}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!byte\+Order@{byte\+Order}}
+\index{byte\+Order@{byte\+Order}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{byte\+Order() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Data\+Stream\+::byte\+Order (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_data_stream_a8c2c0afbfa6a670c3ea58e124c0bb680}
+Returns the current byte order setting -\/ either {\ttfamily Big\+Endian} or {\ttfamily Little\+Endian}.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_data_stream_af15532c2efeaca9f8818fca55a7d7d02}{set\+Byte\+Order()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_data_stream_a2d361d7eb01d7c62e01d37b00ada16f0}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!device@{device}}
+\index{device@{device}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{device() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+I\+O\+Device} $\ast$ Q\+Data\+Stream\+::device (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_data_stream_a2d361d7eb01d7c62e01d37b00ada16f0}
+Returns the I\+O device currently set. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_data_stream_aa05d0c83cccfb3f193c365c6ee3bb323}{set\+Device()}, \hyperlink{class_q_data_stream_a00d9db572b7ce41ea1a8b321b024acbd}{unset\+Device()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_data_stream_a85852207e006d972193308297473ded9}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!eof@{eof}}
+\index{eof@{eof}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{eof() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Data\+Stream\+::eof (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_data_stream_a85852207e006d972193308297473ded9}
+Returns T\+R\+U\+E if the I\+O device has reached the end position (end of stream or file) or if there is no I\+O device set.
+
+Returns F\+A\+L\+S\+E if the current position of the read/write head of the I\+O device is somewhere before the end position.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_i_o_device_a857ac5294bd88a1308e4c998af81f490}{Q\+I\+O\+Device\+::at\+End()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_data_stream_ad223fd515286c4c3febd08393984a683}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!is\+Printable\+Data@{is\+Printable\+Data}}
+\index{is\+Printable\+Data@{is\+Printable\+Data}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{is\+Printable\+Data() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+Data\+Stream\+::is\+Printable\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_data_stream_ad223fd515286c4c3febd08393984a683}
+Returns T\+R\+U\+E if the printable data flag has been set. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_data_stream_acc3df7d01950ab1a4673019f4f471e8d}{set\+Printable\+Data()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_data_stream_acfee699863f4dfd77304a28fb0f777b0}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$<$$<$(\+Q\+\_\+\+I\+N\+T8 i)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+\_\+\+I\+N\+T8}}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_acfee699863f4dfd77304a28fb0f777b0}
+Writes a signed byte to the stream. \hypertarget{class_q_data_stream_a27489574dd585cc4135a62a79ffddd31}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$<$$<$(\+Q\+\_\+\+U\+I\+N\+T8 i)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+\_\+\+U\+I\+N\+T8}}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_data_stream_a27489574dd585cc4135a62a79ffddd31}
+Writes an unsigned byte to the stream and returns a reference to the stream. \hypertarget{class_q_data_stream_a3e9c6b46679fd2c4f329f583bf71ae54}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$<$$<$(\+Q\+\_\+\+I\+N\+T16 i)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+\_\+\+I\+N\+T16}}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_a3e9c6b46679fd2c4f329f583bf71ae54}
+Writes a signed 16-\/bit integer to the stream and returns a reference to the stream. \hypertarget{class_q_data_stream_a4a3c9a1b9992a8ce634ce0f31abe2e46}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$<$$<$(\+Q\+\_\+\+U\+I\+N\+T16 i)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+\_\+\+U\+I\+N\+T16}}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_data_stream_a4a3c9a1b9992a8ce634ce0f31abe2e46}
+Writes an unsigned 16-\/bit integer to the stream and returns a reference to the stream. \hypertarget{class_q_data_stream_af393e47c4b68b6d23a626b563b1285ca}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$<$$<$(\+Q\+\_\+\+I\+N\+T32 i)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+\_\+\+I\+N\+T32}}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_af393e47c4b68b6d23a626b563b1285ca}
+Writes a signed 32-\/bit integer to the stream and returns a reference to the stream.
+
+Writes a signed integer to the stream as a 32-\/bit signed integer (Q\+\_\+\+I\+N\+T32). Returns a reference to the stream. \hypertarget{class_q_data_stream_a87eeac568a1c8662b2cc22d1377a91e9}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$<$$<$(\+Q\+\_\+\+U\+I\+N\+T32 i)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+\_\+\+U\+I\+N\+T32}}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_data_stream_a87eeac568a1c8662b2cc22d1377a91e9}
+Writes an unsigned 32-\/bit integer to the stream and returns a reference to the stream. \hypertarget{class_q_data_stream_afe1363161b0226397b87d6e878895339}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$<$$<$(\+Q\+\_\+\+I\+N\+T64 i)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+\_\+\+I\+N\+T64}}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_afe1363161b0226397b87d6e878895339}
+Writes a signed 64-\/bit integer to the stream and returns a reference to the stream, or calls the Q\+\_\+\+I\+N\+T32-\/operator if 64 bit is not available. \hypertarget{class_q_data_stream_a096e99ad349228cd45a2bbb4256663e5}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$<$$<$(\+Q\+\_\+\+U\+I\+N\+T64 i)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+\_\+\+U\+I\+N\+T64}}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_data_stream_a096e99ad349228cd45a2bbb4256663e5}
+Writes an unsigned 64-\/bit integer to the stream and returns a reference to the stream, or uses the Q\+\_\+\+U\+I\+N\+T32-\/operator if 64 bit is not available. \hypertarget{class_q_data_stream_ac4e26950daf4c0f894d6b3e709b7ec58}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$<$$<$(float f)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{float}]{f}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_ac4e26950daf4c0f894d6b3e709b7ec58}
+Writes a 32-\/bit floating point number to the stream using the standard I\+E\+E\+E754 format. Returns a reference to the stream. \hypertarget{class_q_data_stream_a61587be69fdaa840c4d42eb592c79af2}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$<$$<$(double f)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{double}]{f}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_a61587be69fdaa840c4d42eb592c79af2}
+Writes a 64-\/bit floating point number to the stream using the standard I\+E\+E\+E754 format. Returns a reference to the stream. \hypertarget{class_q_data_stream_acf97e65484056bc6b3fb150c4f339344}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$<$$<$(const char $\ast$str)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_acf97e65484056bc6b3fb150c4f339344}
+Writes the \textquotesingle{}\textbackslash{}0\textquotesingle{}-\/terminated string {\itshape s} to the stream and returns a reference to the stream.
+
+The string is serialized using \hyperlink{class_q_data_stream_a8f1af77d483ecfd515c9eac3822aaaa5}{write\+Bytes()}. \hypertarget{class_q_data_stream_aebb5fe86181c3a74f7b6c0fa95c10bb0}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$>$$>$(\+Q\+\_\+\+I\+N\+T8 \&i)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+\_\+\+I\+N\+T8} \&}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_aebb5fe86181c3a74f7b6c0fa95c10bb0}
+Reads a signed byte from the stream. \hypertarget{class_q_data_stream_a52e7c242ac64bc58936f537a3b53aced}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$>$$>$(\+Q\+\_\+\+U\+I\+N\+T8 \&i)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+\_\+\+U\+I\+N\+T8} \&}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_data_stream_a52e7c242ac64bc58936f537a3b53aced}
+Reads an unsigned byte from the stream and returns a reference to the stream. \hypertarget{class_q_data_stream_a6e54a73d831ec308b04b1c11fcb28f17}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$>$$>$(\+Q\+\_\+\+I\+N\+T16 \&i)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+\_\+\+I\+N\+T16} \&}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_a6e54a73d831ec308b04b1c11fcb28f17}
+Reads a signed 16-\/bit integer from the stream and returns a reference to the stream. \hypertarget{class_q_data_stream_a9074e93a86770cb900c817178ab5d166}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$>$$>$(\+Q\+\_\+\+U\+I\+N\+T16 \&i)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+\_\+\+U\+I\+N\+T16} \&}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_data_stream_a9074e93a86770cb900c817178ab5d166}
+Reads an unsigned 16-\/bit integer from the stream and returns a reference to the stream. \hypertarget{class_q_data_stream_ad3d2f16864f5457f9bf67279d6017980}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$>$$>$(\+Q\+\_\+\+I\+N\+T32 \&i)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+\_\+\+I\+N\+T32} \&}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_ad3d2f16864f5457f9bf67279d6017980}
+Reads a signed 32-\/bit integer from the stream and returns a reference to the stream. \hypertarget{class_q_data_stream_a56a4cf0d69f504a02e3a4f6518324036}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$>$$>$(\+Q\+\_\+\+U\+I\+N\+T32 \&i)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+\_\+\+U\+I\+N\+T32} \&}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_data_stream_a56a4cf0d69f504a02e3a4f6518324036}
+Reads an unsigned 32-\/bit integer from the stream and returns a reference to the stream. \hypertarget{class_q_data_stream_a9e3bb76fb6ff57fbc375734621f965d0}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$>$$>$(\+Q\+\_\+\+I\+N\+T64 \&i)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+\_\+\+I\+N\+T64} \&}]{i}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_a9e3bb76fb6ff57fbc375734621f965d0}
+Reads a signed 64-\/bit integer from the stream and returns a reference to the stream, or uses the Q\+\_\+\+U\+I\+N\+T32 operator if 64 bit is not available. \hypertarget{class_q_data_stream_a6b229aa34e28f6623cb6e30666736058}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$>$$>$(\+Q\+\_\+\+U\+I\+N\+T64 \&i)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+\_\+\+U\+I\+N\+T64} \&}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_data_stream_a6b229aa34e28f6623cb6e30666736058}
+Reads an unsigned 64-\/bit integer from the stream and returns a reference to the stream, or uses the Q\+\_\+\+U\+I\+N\+T32 operator if 64 bit is not available. \hypertarget{class_q_data_stream_a91a008aea3483414151f12f5c7090d28}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$>$$>$(float \&f)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{float \&}]{f}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_a91a008aea3483414151f12f5c7090d28}
+Reads a 32-\/bit floating point number from the stream using the standard I\+E\+E\+E754 format. Returns a reference to the stream. \hypertarget{class_q_data_stream_a104e26e0d013188f9cc91d232d70d7f0}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$>$$>$(double \&f)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{double \&}]{f}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_a104e26e0d013188f9cc91d232d70d7f0}
+Reads a 64-\/bit floating point number from the stream using the standard I\+E\+E\+E754 format. Returns a reference to the stream. \hypertarget{class_q_data_stream_a50d7a4dfbb348b1f48a88853b0a8c340}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{operator$>$$>$(char $\ast$\&str)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{char $\ast$\&}]{s}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_a50d7a4dfbb348b1f48a88853b0a8c340}
+Reads the \textquotesingle{}\textbackslash{}0\textquotesingle{}-\/terminated string {\itshape s} from the stream and returns a reference to the stream.
+
+Space for the string is allocated using {\ttfamily new} -\/ the caller must eventually call delete\mbox{[}\mbox{]} on the value. \hypertarget{class_q_data_stream_a296311b844103880ec50b43a2ebbfcaa}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!read\+Bytes@{read\+Bytes}}
+\index{read\+Bytes@{read\+Bytes}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{read\+Bytes(char $\ast$\&, uint \&len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::read\+Bytes (
+\begin{DoxyParamCaption}
+\item[{char $\ast$\&}]{s, }
+\item[{{\bf uint} \&}]{l}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_a296311b844103880ec50b43a2ebbfcaa}
+Reads the buffer {\itshape s} from the stream and returns a reference to the stream.
+
+The buffer {\itshape s} is allocated using {\ttfamily new}. Destroy it with the {\ttfamily delete}\mbox{[}\mbox{]} operator. If the length is zero or {\itshape s} cannot be allocated, {\itshape s} is set to 0.
+
+The {\itshape l} parameter will be set to the length of the buffer.
+
+The serialization format is an Q\+\_\+\+U\+I\+N\+T32 length specifier first, then the data ({\itshape l} bytes).
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_data_stream_a04938bc54d1158276cf01be169d159ea}{read\+Raw\+Bytes()}, \hyperlink{class_q_data_stream_a8f1af77d483ecfd515c9eac3822aaaa5}{write\+Bytes()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_data_stream_a04938bc54d1158276cf01be169d159ea}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!read\+Raw\+Bytes@{read\+Raw\+Bytes}}
+\index{read\+Raw\+Bytes@{read\+Raw\+Bytes}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{read\+Raw\+Bytes(char $\ast$, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::read\+Raw\+Bytes (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_a04938bc54d1158276cf01be169d159ea}
+Reads {\itshape len} bytes from the stream into {\itshape s} and returns a reference to the stream.
+
+The buffer {\itshape s} must be preallocated.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_data_stream_a296311b844103880ec50b43a2ebbfcaa}{read\+Bytes()}, \hyperlink{class_q_i_o_device_a71f10647e4bd98141f45362b9a06983a}{Q\+I\+O\+Device\+::read\+Block()}, \hyperlink{class_q_data_stream_aab2b83b4d7407ed57ff9eea136cb2e5e}{write\+Raw\+Bytes()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_data_stream_af15532c2efeaca9f8818fca55a7d7d02}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!set\+Byte\+Order@{set\+Byte\+Order}}
+\index{set\+Byte\+Order@{set\+Byte\+Order}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{set\+Byte\+Order(int)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Data\+Stream\+::set\+Byte\+Order (
+\begin{DoxyParamCaption}
+\item[{int}]{bo}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_af15532c2efeaca9f8818fca55a7d7d02}
+Sets the serialization byte order to {\itshape bo}.
+
+The {\itshape bo} parameter can be {\ttfamily \hyperlink{class_q_data_stream_a0cc872752a2cc23a0cf2bcb359cdf135ab7cf4164d1175a7377c64f8671bc28de}{Q\+Data\+Stream\+::\+Big\+Endian}} or {\ttfamily \hyperlink{class_q_data_stream_a0cc872752a2cc23a0cf2bcb359cdf135a646810b428b314ff8dd6bedb589f0f5a}{Q\+Data\+Stream\+::\+Little\+Endian}}.
+
+The default setting is big endian. We recommend leaving this setting unless you have special requirements.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_data_stream_a8c2c0afbfa6a670c3ea58e124c0bb680}{byte\+Order()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_data_stream_aa05d0c83cccfb3f193c365c6ee3bb323}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!set\+Device@{set\+Device}}
+\index{set\+Device@{set\+Device}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{set\+Device(\+Q\+I\+O\+Device $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Data\+Stream\+::set\+Device (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+I\+O\+Device} $\ast$}]{d}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_aa05d0c83cccfb3f193c365c6ee3bb323}
+void \hyperlink{class_q_data_stream_aa05d0c83cccfb3f193c365c6ee3bb323}{Q\+Data\+Stream\+::set\+Device(\+Q\+I\+O\+Device $\ast$d )} Sets the I\+O device to {\itshape d}. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_data_stream_a2d361d7eb01d7c62e01d37b00ada16f0}{device()}, \hyperlink{class_q_data_stream_a00d9db572b7ce41ea1a8b321b024acbd}{unset\+Device()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_data_stream_acc3df7d01950ab1a4673019f4f471e8d}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!set\+Printable\+Data@{set\+Printable\+Data}}
+\index{set\+Printable\+Data@{set\+Printable\+Data}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{set\+Printable\+Data(bool)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Data\+Stream\+::set\+Printable\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{enable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_data_stream_acc3df7d01950ab1a4673019f4f471e8d}
+Sets or clears the printable data flag.
+
+If this flag is set, the write functions will generate output that consists of printable characters (7 bit A\+S\+C\+I\+I).
+
+We recommend enabling printable data only for debugging purposes (it is slower and creates larger output). \hypertarget{class_q_data_stream_afdc50005a7d1651a711a54ec0869a22d}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!set\+Version@{set\+Version}}
+\index{set\+Version@{set\+Version}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{set\+Version(int)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Data\+Stream\+::set\+Version (
+\begin{DoxyParamCaption}
+\item[{int}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_data_stream_afdc50005a7d1651a711a54ec0869a22d}
+Sets the version number of the data serialization format.
+
+In order to accomodate for new functionality, the datastream serialization format of some Qt classes has changed in some versions of Qt. If you want to read data that was created by an earlier version of Qt, or write data that can be read by a program that was compiled with an earlier version of Qt, use this function to modify the serialization format of \hyperlink{class_q_data_stream}{Q\+Data\+Stream}.
+
+For Qt 1.\+x compatibility, use {\itshape v} == 1.
+
+For Qt 2.\+0.\+x compatibility, use {\itshape v} == 2 (Not required for reading in Qt 2.\+1).
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_data_stream_ae140798d7698d48eb9b0be4f3e492735}{version()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_data_stream_a00d9db572b7ce41ea1a8b321b024acbd}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!unset\+Device@{unset\+Device}}
+\index{unset\+Device@{unset\+Device}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{unset\+Device()}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+Data\+Stream\+::unset\+Device (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_a00d9db572b7ce41ea1a8b321b024acbd}
+Unsets the I\+O device. This is the same as calling set\+Device( 0 ). \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_data_stream_a2d361d7eb01d7c62e01d37b00ada16f0}{device()}, \hyperlink{class_q_data_stream_aa05d0c83cccfb3f193c365c6ee3bb323}{set\+Device()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_data_stream_ae140798d7698d48eb9b0be4f3e492735}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!version@{version}}
+\index{version@{version}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{version() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+Data\+Stream\+::version (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_data_stream_ae140798d7698d48eb9b0be4f3e492735}
+Returns the version number of the data serialization format. In Qt 2.\+1, this number is by default 3. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_data_stream_afdc50005a7d1651a711a54ec0869a22d}{set\+Version()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_data_stream_a8f1af77d483ecfd515c9eac3822aaaa5}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!write\+Bytes@{write\+Bytes}}
+\index{write\+Bytes@{write\+Bytes}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{write\+Bytes(const char $\ast$, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::write\+Bytes (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_a8f1af77d483ecfd515c9eac3822aaaa5}
+Writes the length specifier {\itshape len} and the buffer {\itshape s} to the stream and returns a reference to the stream.
+
+The {\itshape len} is serialized as an Q\+\_\+\+U\+I\+N\+T32, followed by {\itshape len} bytes from {\itshape s}.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_data_stream_aab2b83b4d7407ed57ff9eea136cb2e5e}{write\+Raw\+Bytes()}, \hyperlink{class_q_data_stream_a296311b844103880ec50b43a2ebbfcaa}{read\+Bytes()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_data_stream_aab2b83b4d7407ed57ff9eea136cb2e5e}{}\index{Q\+Data\+Stream@{Q\+Data\+Stream}!write\+Raw\+Bytes@{write\+Raw\+Bytes}}
+\index{write\+Raw\+Bytes@{write\+Raw\+Bytes}!Q\+Data\+Stream@{Q\+Data\+Stream}}
+\subsubsection[{write\+Raw\+Bytes(const char $\ast$, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream} \& Q\+Data\+Stream\+::write\+Raw\+Bytes (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)}\label{class_q_data_stream_aab2b83b4d7407ed57ff9eea136cb2e5e}
+Writes {\itshape len} bytes from {\itshape s} to the stream and returns a reference to the stream.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_data_stream_a8f1af77d483ecfd515c9eac3822aaaa5}{write\+Bytes()}, \hyperlink{class_q_i_o_device_a5d937df1bde2f956872dd54e077807d1}{Q\+I\+O\+Device\+::write\+Block()}, \hyperlink{class_q_data_stream_a04938bc54d1158276cf01be169d159ea}{read\+Raw\+Bytes()} 
+\end{DoxySeeAlso}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qdatastream_8h}{qdatastream.\+h}\item 
+qtools/\hyperlink{qdatastream_8cpp}{qdatastream.\+cpp}\end{DoxyCompactItemize}

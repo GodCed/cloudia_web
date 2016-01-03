@@ -1,0 +1,104 @@
+\hypertarget{class_dot_file_patcher}{}\section{Référence de la classe Dot\+File\+Patcher}
+\label{class_dot_file_patcher}\index{Dot\+File\+Patcher@{Dot\+File\+Patcher}}
+
+
+{\ttfamily \#include $<$dot.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_dot_file_patcher_1_1_map}{Map}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_dot_file_patcher_aaf02acecacecc1482f18bfaf154ec3aa}{Dot\+File\+Patcher} (const char $\ast$patch\+File)
+\item 
+int \hyperlink{class_dot_file_patcher_aa53ad66e5d0c6a04f6d198aa030b63f3}{add\+Map} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&map\+File, const \hyperlink{class_q_c_string}{Q\+C\+String} \&rel\+Path, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} url\+Only, const \hyperlink{class_q_c_string}{Q\+C\+String} \&context, const \hyperlink{class_q_c_string}{Q\+C\+String} \&label)
+\item 
+int \hyperlink{class_dot_file_patcher_af67aa4441f3e872f6d3c69667572c052}{add\+Figure} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&base\+Name, const \hyperlink{class_q_c_string}{Q\+C\+String} \&figure\+Name, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} height\+Check)
+\item 
+int \hyperlink{class_dot_file_patcher_aac97171a3985fd07e09fef2a25819a16}{add\+S\+V\+G\+Conversion} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&rel\+Path, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} url\+Only, const \hyperlink{class_q_c_string}{Q\+C\+String} \&context, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} zoomable, int graph\+Id)
+\item 
+int \hyperlink{class_dot_file_patcher_a8a0183f93570ac3b1a8df3e0f7229a2b}{add\+S\+V\+G\+Object} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&base\+Name, const \hyperlink{class_q_c_string}{Q\+C\+String} \&figure\+Name, const \hyperlink{class_q_c_string}{Q\+C\+String} \&rel\+Path)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_dot_file_patcher_a659e502ffc3ddcf46e1f53820ee5926e}{run} ()
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_dot_file_patcher_a4a23a9a5cdb7f82892685f1d062de564}{file} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Helper class to insert a set of map file into an output file 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_dot_file_patcher_aaf02acecacecc1482f18bfaf154ec3aa}{}\index{Dot\+File\+Patcher@{Dot\+File\+Patcher}!Dot\+File\+Patcher@{Dot\+File\+Patcher}}
+\index{Dot\+File\+Patcher@{Dot\+File\+Patcher}!Dot\+File\+Patcher@{Dot\+File\+Patcher}}
+\subsubsection[{Dot\+File\+Patcher(const char $\ast$patch\+File)}]{\setlength{\rightskip}{0pt plus 5cm}Dot\+File\+Patcher\+::\+Dot\+File\+Patcher (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{patch\+File}
+\end{DoxyParamCaption}
+)}\label{class_dot_file_patcher_aaf02acecacecc1482f18bfaf154ec3aa}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_dot_file_patcher_af67aa4441f3e872f6d3c69667572c052}{}\index{Dot\+File\+Patcher@{Dot\+File\+Patcher}!add\+Figure@{add\+Figure}}
+\index{add\+Figure@{add\+Figure}!Dot\+File\+Patcher@{Dot\+File\+Patcher}}
+\subsubsection[{add\+Figure(const Q\+C\+String \&base\+Name, const Q\+C\+String \&figure\+Name, bool height\+Check)}]{\setlength{\rightskip}{0pt plus 5cm}int Dot\+File\+Patcher\+::add\+Figure (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{base\+Name, }
+\item[{const {\bf Q\+C\+String} \&}]{figure\+Name, }
+\item[{{\bf bool}}]{height\+Check}
+\end{DoxyParamCaption}
+)}\label{class_dot_file_patcher_af67aa4441f3e872f6d3c69667572c052}
+\hypertarget{class_dot_file_patcher_aa53ad66e5d0c6a04f6d198aa030b63f3}{}\index{Dot\+File\+Patcher@{Dot\+File\+Patcher}!add\+Map@{add\+Map}}
+\index{add\+Map@{add\+Map}!Dot\+File\+Patcher@{Dot\+File\+Patcher}}
+\subsubsection[{add\+Map(const Q\+C\+String \&map\+File, const Q\+C\+String \&rel\+Path, bool url\+Only, const Q\+C\+String \&context, const Q\+C\+String \&label)}]{\setlength{\rightskip}{0pt plus 5cm}int Dot\+File\+Patcher\+::add\+Map (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{map\+File, }
+\item[{const {\bf Q\+C\+String} \&}]{rel\+Path, }
+\item[{{\bf bool}}]{url\+Only, }
+\item[{const {\bf Q\+C\+String} \&}]{context, }
+\item[{const {\bf Q\+C\+String} \&}]{label}
+\end{DoxyParamCaption}
+)}\label{class_dot_file_patcher_aa53ad66e5d0c6a04f6d198aa030b63f3}
+\hypertarget{class_dot_file_patcher_aac97171a3985fd07e09fef2a25819a16}{}\index{Dot\+File\+Patcher@{Dot\+File\+Patcher}!add\+S\+V\+G\+Conversion@{add\+S\+V\+G\+Conversion}}
+\index{add\+S\+V\+G\+Conversion@{add\+S\+V\+G\+Conversion}!Dot\+File\+Patcher@{Dot\+File\+Patcher}}
+\subsubsection[{add\+S\+V\+G\+Conversion(const Q\+C\+String \&rel\+Path, bool url\+Only, const Q\+C\+String \&context, bool zoomable, int graph\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}int Dot\+File\+Patcher\+::add\+S\+V\+G\+Conversion (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{rel\+Path, }
+\item[{{\bf bool}}]{url\+Only, }
+\item[{const {\bf Q\+C\+String} \&}]{context, }
+\item[{{\bf bool}}]{zoomable, }
+\item[{int}]{graph\+Id}
+\end{DoxyParamCaption}
+)}\label{class_dot_file_patcher_aac97171a3985fd07e09fef2a25819a16}
+\hypertarget{class_dot_file_patcher_a8a0183f93570ac3b1a8df3e0f7229a2b}{}\index{Dot\+File\+Patcher@{Dot\+File\+Patcher}!add\+S\+V\+G\+Object@{add\+S\+V\+G\+Object}}
+\index{add\+S\+V\+G\+Object@{add\+S\+V\+G\+Object}!Dot\+File\+Patcher@{Dot\+File\+Patcher}}
+\subsubsection[{add\+S\+V\+G\+Object(const Q\+C\+String \&base\+Name, const Q\+C\+String \&figure\+Name, const Q\+C\+String \&rel\+Path)}]{\setlength{\rightskip}{0pt plus 5cm}int Dot\+File\+Patcher\+::add\+S\+V\+G\+Object (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{base\+Name, }
+\item[{const {\bf Q\+C\+String} \&}]{figure\+Name, }
+\item[{const {\bf Q\+C\+String} \&}]{rel\+Path}
+\end{DoxyParamCaption}
+)}\label{class_dot_file_patcher_a8a0183f93570ac3b1a8df3e0f7229a2b}
+\hypertarget{class_dot_file_patcher_a4a23a9a5cdb7f82892685f1d062de564}{}\index{Dot\+File\+Patcher@{Dot\+File\+Patcher}!file@{file}}
+\index{file@{file}!Dot\+File\+Patcher@{Dot\+File\+Patcher}}
+\subsubsection[{file() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Dot\+File\+Patcher\+::file (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_dot_file_patcher_a4a23a9a5cdb7f82892685f1d062de564}
+\hypertarget{class_dot_file_patcher_a659e502ffc3ddcf46e1f53820ee5926e}{}\index{Dot\+File\+Patcher@{Dot\+File\+Patcher}!run@{run}}
+\index{run@{run}!Dot\+File\+Patcher@{Dot\+File\+Patcher}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Dot\+File\+Patcher\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_dot_file_patcher_a659e502ffc3ddcf46e1f53820ee5926e}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{dot_8h}{dot.\+h}\item 
+src/\hyperlink{dot_8cpp}{dot.\+cpp}\end{DoxyCompactItemize}

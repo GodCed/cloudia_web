@@ -1,0 +1,215 @@
+\hypertarget{class_nesting_context}{}\section{Référence de la classe Nesting\+Context}
+\label{class_nesting_context}\index{Nesting\+Context@{Nesting\+Context}}
+
+
+{\ttfamily \#include $<$context.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Nesting\+Context\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_nesting_context}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_nesting_context_1_1_private}{Private}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{class_nesting_context_ac5166b174fb93f0a905feefc4962cbad}{count} () const 
+\item 
+virtual \hyperlink{class_template_variant}{Template\+Variant} \hyperlink{class_nesting_context_a58d05d659b9ddd3ae68dba30205b138d}{at} (int index) const 
+\item 
+virtual \hyperlink{class_template_list_intf_1_1_const_iterator}{Template\+List\+Intf\+::\+Const\+Iterator} $\ast$ \hyperlink{class_nesting_context_adf3506a618869758eeba666db44f321f}{create\+Iterator} () const 
+\item 
+virtual int \hyperlink{class_nesting_context_a71b0b342e5bb1b434a0390a77640df55}{add\+Ref} ()
+\item 
+virtual int \hyperlink{class_nesting_context_a4f43acface7c31d6bb2aa3d9a9f2ea13}{release} ()
+\item 
+void \hyperlink{class_nesting_context_a0f51902303237dea662f7773633d1833}{add\+Namespaces} (const \hyperlink{class_namespace_s_dict}{Namespace\+S\+Dict} \&ns\+Dict, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} root\+Only, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_nesting_context_ae520871daeb0cf070443873fefc2c3ed}{add\+Classes})
+\item 
+void \hyperlink{class_nesting_context_ae520871daeb0cf070443873fefc2c3ed}{add\+Classes} (const \hyperlink{class_class_s_dict}{Class\+S\+Dict} \&cl\+Dict, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} root\+Only)
+\item 
+void \hyperlink{class_nesting_context_a9ad1a2be0df92986ce455d836f9b72f0}{add\+Dirs} (const \hyperlink{class_dir_s_dict}{Dir\+S\+Dict} \&)
+\item 
+void \hyperlink{class_nesting_context_a512b12070aa7042bd1d21b75d5393897}{add\+Dirs} (const \hyperlink{class_dir_list}{Dir\+List} \&)
+\item 
+void \hyperlink{class_nesting_context_adda61f73cae330126a7172393797c6df}{add\+Files} (const \hyperlink{class_file_name_list}{File\+Name\+List} \&)
+\item 
+void \hyperlink{class_nesting_context_a9c2b94e274f88aa43230b3de7f7a1602}{add\+Files} (const \hyperlink{class_file_list}{File\+List} \&)
+\item 
+void \hyperlink{class_nesting_context_a0b561031193905299f81f1f42bbd7d2f}{add\+Pages} (const \hyperlink{class_page_s_dict}{Page\+S\+Dict} \&pages, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} root\+Only)
+\item 
+void \hyperlink{class_nesting_context_aa5f09a9e6d48406b9bb06b1d9a603c3c}{add\+Modules} (const \hyperlink{class_group_s_dict}{Group\+S\+Dict} \&modules)
+\item 
+void \hyperlink{class_nesting_context_a671e6a557f74d6c37e0dc441644b9eea}{add\+Modules} (const \hyperlink{class_group_list}{Group\+List} \&modules)
+\item 
+void \hyperlink{class_nesting_context_a626b0bfd1cae233e80a32bba17299a0e}{add\+Class\+Hierarchy} (const \hyperlink{class_class_s_dict}{Class\+S\+Dict} \&cl\+Dict, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} root\+Only)
+\item 
+void \hyperlink{class_nesting_context_a420f6c00ef503715ea4127909c492630}{add\+Derived\+Classes} (const \hyperlink{class_base_class_list}{Base\+Class\+List} $\ast$bcl, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} hide\+Super)
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_nesting_context}{Nesting\+Context} $\ast$ \hyperlink{class_nesting_context_af781c93a616e539e857a135aa97a09cc}{alloc} (const \hyperlink{class_nesting_node_context}{Nesting\+Node\+Context} $\ast$parent, int level)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_nesting_context_ae520871daeb0cf070443873fefc2c3ed}{}\index{Nesting\+Context@{Nesting\+Context}!add\+Classes@{add\+Classes}}
+\index{add\+Classes@{add\+Classes}!Nesting\+Context@{Nesting\+Context}}
+\subsubsection[{add\+Classes(const Class\+S\+Dict \&cl\+Dict, bool root\+Only)}]{\setlength{\rightskip}{0pt plus 5cm}void Nesting\+Context\+::add\+Classes (
+\begin{DoxyParamCaption}
+\item[{const {\bf Class\+S\+Dict} \&}]{cl\+Dict, }
+\item[{{\bf bool}}]{root\+Only}
+\end{DoxyParamCaption}
+)}\label{class_nesting_context_ae520871daeb0cf070443873fefc2c3ed}
+\hypertarget{class_nesting_context_a626b0bfd1cae233e80a32bba17299a0e}{}\index{Nesting\+Context@{Nesting\+Context}!add\+Class\+Hierarchy@{add\+Class\+Hierarchy}}
+\index{add\+Class\+Hierarchy@{add\+Class\+Hierarchy}!Nesting\+Context@{Nesting\+Context}}
+\subsubsection[{add\+Class\+Hierarchy(const Class\+S\+Dict \&cl\+Dict, bool root\+Only)}]{\setlength{\rightskip}{0pt plus 5cm}void Nesting\+Context\+::add\+Class\+Hierarchy (
+\begin{DoxyParamCaption}
+\item[{const {\bf Class\+S\+Dict} \&}]{cl\+Dict, }
+\item[{{\bf bool}}]{root\+Only}
+\end{DoxyParamCaption}
+)}\label{class_nesting_context_a626b0bfd1cae233e80a32bba17299a0e}
+\hypertarget{class_nesting_context_a420f6c00ef503715ea4127909c492630}{}\index{Nesting\+Context@{Nesting\+Context}!add\+Derived\+Classes@{add\+Derived\+Classes}}
+\index{add\+Derived\+Classes@{add\+Derived\+Classes}!Nesting\+Context@{Nesting\+Context}}
+\subsubsection[{add\+Derived\+Classes(const Base\+Class\+List $\ast$bcl, bool hide\+Super)}]{\setlength{\rightskip}{0pt plus 5cm}void Nesting\+Context\+::add\+Derived\+Classes (
+\begin{DoxyParamCaption}
+\item[{const {\bf Base\+Class\+List} $\ast$}]{bcl, }
+\item[{{\bf bool}}]{hide\+Super}
+\end{DoxyParamCaption}
+)}\label{class_nesting_context_a420f6c00ef503715ea4127909c492630}
+\hypertarget{class_nesting_context_a9ad1a2be0df92986ce455d836f9b72f0}{}\index{Nesting\+Context@{Nesting\+Context}!add\+Dirs@{add\+Dirs}}
+\index{add\+Dirs@{add\+Dirs}!Nesting\+Context@{Nesting\+Context}}
+\subsubsection[{add\+Dirs(const Dir\+S\+Dict \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Nesting\+Context\+::add\+Dirs (
+\begin{DoxyParamCaption}
+\item[{const {\bf Dir\+S\+Dict} \&}]{dirs}
+\end{DoxyParamCaption}
+)}\label{class_nesting_context_a9ad1a2be0df92986ce455d836f9b72f0}
+\hypertarget{class_nesting_context_a512b12070aa7042bd1d21b75d5393897}{}\index{Nesting\+Context@{Nesting\+Context}!add\+Dirs@{add\+Dirs}}
+\index{add\+Dirs@{add\+Dirs}!Nesting\+Context@{Nesting\+Context}}
+\subsubsection[{add\+Dirs(const Dir\+List \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Nesting\+Context\+::add\+Dirs (
+\begin{DoxyParamCaption}
+\item[{const {\bf Dir\+List} \&}]{dirs}
+\end{DoxyParamCaption}
+)}\label{class_nesting_context_a512b12070aa7042bd1d21b75d5393897}
+\hypertarget{class_nesting_context_adda61f73cae330126a7172393797c6df}{}\index{Nesting\+Context@{Nesting\+Context}!add\+Files@{add\+Files}}
+\index{add\+Files@{add\+Files}!Nesting\+Context@{Nesting\+Context}}
+\subsubsection[{add\+Files(const File\+Name\+List \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Nesting\+Context\+::add\+Files (
+\begin{DoxyParamCaption}
+\item[{const {\bf File\+Name\+List} \&}]{files}
+\end{DoxyParamCaption}
+)}\label{class_nesting_context_adda61f73cae330126a7172393797c6df}
+\hypertarget{class_nesting_context_a9c2b94e274f88aa43230b3de7f7a1602}{}\index{Nesting\+Context@{Nesting\+Context}!add\+Files@{add\+Files}}
+\index{add\+Files@{add\+Files}!Nesting\+Context@{Nesting\+Context}}
+\subsubsection[{add\+Files(const File\+List \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Nesting\+Context\+::add\+Files (
+\begin{DoxyParamCaption}
+\item[{const {\bf File\+List} \&}]{files}
+\end{DoxyParamCaption}
+)}\label{class_nesting_context_a9c2b94e274f88aa43230b3de7f7a1602}
+\hypertarget{class_nesting_context_aa5f09a9e6d48406b9bb06b1d9a603c3c}{}\index{Nesting\+Context@{Nesting\+Context}!add\+Modules@{add\+Modules}}
+\index{add\+Modules@{add\+Modules}!Nesting\+Context@{Nesting\+Context}}
+\subsubsection[{add\+Modules(const Group\+S\+Dict \&modules)}]{\setlength{\rightskip}{0pt plus 5cm}void Nesting\+Context\+::add\+Modules (
+\begin{DoxyParamCaption}
+\item[{const {\bf Group\+S\+Dict} \&}]{modules}
+\end{DoxyParamCaption}
+)}\label{class_nesting_context_aa5f09a9e6d48406b9bb06b1d9a603c3c}
+\hypertarget{class_nesting_context_a671e6a557f74d6c37e0dc441644b9eea}{}\index{Nesting\+Context@{Nesting\+Context}!add\+Modules@{add\+Modules}}
+\index{add\+Modules@{add\+Modules}!Nesting\+Context@{Nesting\+Context}}
+\subsubsection[{add\+Modules(const Group\+List \&modules)}]{\setlength{\rightskip}{0pt plus 5cm}void Nesting\+Context\+::add\+Modules (
+\begin{DoxyParamCaption}
+\item[{const {\bf Group\+List} \&}]{modules}
+\end{DoxyParamCaption}
+)}\label{class_nesting_context_a671e6a557f74d6c37e0dc441644b9eea}
+\hypertarget{class_nesting_context_a0f51902303237dea662f7773633d1833}{}\index{Nesting\+Context@{Nesting\+Context}!add\+Namespaces@{add\+Namespaces}}
+\index{add\+Namespaces@{add\+Namespaces}!Nesting\+Context@{Nesting\+Context}}
+\subsubsection[{add\+Namespaces(const Namespace\+S\+Dict \&ns\+Dict, bool root\+Only, bool add\+Classes)}]{\setlength{\rightskip}{0pt plus 5cm}void Nesting\+Context\+::add\+Namespaces (
+\begin{DoxyParamCaption}
+\item[{const {\bf Namespace\+S\+Dict} \&}]{ns\+Dict, }
+\item[{{\bf bool}}]{root\+Only, }
+\item[{{\bf bool}}]{add\+Classes}
+\end{DoxyParamCaption}
+)}\label{class_nesting_context_a0f51902303237dea662f7773633d1833}
+\hypertarget{class_nesting_context_a0b561031193905299f81f1f42bbd7d2f}{}\index{Nesting\+Context@{Nesting\+Context}!add\+Pages@{add\+Pages}}
+\index{add\+Pages@{add\+Pages}!Nesting\+Context@{Nesting\+Context}}
+\subsubsection[{add\+Pages(const Page\+S\+Dict \&pages, bool root\+Only)}]{\setlength{\rightskip}{0pt plus 5cm}void Nesting\+Context\+::add\+Pages (
+\begin{DoxyParamCaption}
+\item[{const {\bf Page\+S\+Dict} \&}]{pages, }
+\item[{{\bf bool}}]{root\+Only}
+\end{DoxyParamCaption}
+)}\label{class_nesting_context_a0b561031193905299f81f1f42bbd7d2f}
+\hypertarget{class_nesting_context_a71b0b342e5bb1b434a0390a77640df55}{}\index{Nesting\+Context@{Nesting\+Context}!add\+Ref@{add\+Ref}}
+\index{add\+Ref@{add\+Ref}!Nesting\+Context@{Nesting\+Context}}
+\subsubsection[{add\+Ref()}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Nesting\+Context\+::add\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_nesting_context_a71b0b342e5bb1b434a0390a77640df55}
+Increase object\textquotesingle{}s reference count 
+
+Implémente \hyperlink{class_template_list_intf_a4b4973e2e15396d10bc4e3085462ca2b}{Template\+List\+Intf}.
+
+\hypertarget{class_nesting_context_af781c93a616e539e857a135aa97a09cc}{}\index{Nesting\+Context@{Nesting\+Context}!alloc@{alloc}}
+\index{alloc@{alloc}!Nesting\+Context@{Nesting\+Context}}
+\subsubsection[{alloc(const Nesting\+Node\+Context $\ast$parent, int level)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Nesting\+Context}$\ast$ Nesting\+Context\+::alloc (
+\begin{DoxyParamCaption}
+\item[{const {\bf Nesting\+Node\+Context} $\ast$}]{parent, }
+\item[{int}]{level}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_nesting_context_af781c93a616e539e857a135aa97a09cc}
+\hypertarget{class_nesting_context_a58d05d659b9ddd3ae68dba30205b138d}{}\index{Nesting\+Context@{Nesting\+Context}!at@{at}}
+\index{at@{at}!Nesting\+Context@{Nesting\+Context}}
+\subsubsection[{at(int index) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Variant} Nesting\+Context\+::at (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_nesting_context_a58d05d659b9ddd3ae68dba30205b138d}
+Returns the element at index position {\itshape index}. 
+
+Implémente \hyperlink{class_template_list_intf_ab6eb2617632cd4ef1921462ab8bdf6db}{Template\+List\+Intf}.
+
+\hypertarget{class_nesting_context_ac5166b174fb93f0a905feefc4962cbad}{}\index{Nesting\+Context@{Nesting\+Context}!count@{count}}
+\index{count@{count}!Nesting\+Context@{Nesting\+Context}}
+\subsubsection[{count() const }]{\setlength{\rightskip}{0pt plus 5cm}int Nesting\+Context\+::count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_nesting_context_ac5166b174fb93f0a905feefc4962cbad}
+Returns the number of elements in the list 
+
+Implémente \hyperlink{class_template_list_intf_a14adca83cf54aae190e19986cc972a37}{Template\+List\+Intf}.
+
+\hypertarget{class_nesting_context_adf3506a618869758eeba666db44f321f}{}\index{Nesting\+Context@{Nesting\+Context}!create\+Iterator@{create\+Iterator}}
+\index{create\+Iterator@{create\+Iterator}!Nesting\+Context@{Nesting\+Context}}
+\subsubsection[{create\+Iterator() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+List\+Intf\+::\+Const\+Iterator} $\ast$ Nesting\+Context\+::create\+Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_nesting_context_adf3506a618869758eeba666db44f321f}
+Creates a new iterator for this list. \begin{DoxyNote}{Note}
+the user should call delete on the returned pointer. 
+\end{DoxyNote}
+
+
+Implémente \hyperlink{class_template_list_intf_ad266da04b32224afba9c3f16d05a68a9}{Template\+List\+Intf}.
+
+\hypertarget{class_nesting_context_a4f43acface7c31d6bb2aa3d9a9f2ea13}{}\index{Nesting\+Context@{Nesting\+Context}!release@{release}}
+\index{release@{release}!Nesting\+Context@{Nesting\+Context}}
+\subsubsection[{release()}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Nesting\+Context\+::release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_nesting_context_a4f43acface7c31d6bb2aa3d9a9f2ea13}
+Decreases object\textquotesingle{}s referenc count, destroy object if 0 
+
+Implémente \hyperlink{class_template_list_intf_a0c53169c740c09dac47efc62bbe39674}{Template\+List\+Intf}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{context_8h}{context.\+h}\item 
+src/\hyperlink{context_8cpp}{context.\+cpp}\end{DoxyCompactItemize}

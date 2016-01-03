@@ -1,0 +1,145 @@
+\hypertarget{class_doc_msc_file}{}\section{Référence de la classe Doc\+Msc\+File}
+\label{class_doc_msc_file}\index{Doc\+Msc\+File@{Doc\+Msc\+File}}
+
+
+{\ttfamily \#include $<$docparser.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Doc\+Msc\+File\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doc_msc_file}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_msc_file_a0a89ab57d101a38da934fe2372ff40e8}{Doc\+Msc\+File} (\hyperlink{class_doc_node}{Doc\+Node} $\ast$\hyperlink{class_doc_node_a990d8b983962776a647e6231d38bd329}{parent}, const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{class_doc_msc_file_a624798bf7254e57ecfc5f60f2e57b680}{name}, const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{class_doc_msc_file_acd9843033dd0cdc3a0e129645108fa69}{context})
+\item 
+void \hyperlink{class_doc_msc_file_af75b42178732dcddf90d1a8b4612d3d9}{parse} ()
+\item 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadb}{Kind} \hyperlink{class_doc_msc_file_a660203067a59a6dbe35453479bff1947}{kind} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_msc_file_a624798bf7254e57ecfc5f60f2e57b680}{name} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_msc_file_ae8b2c310f6c4659dd0a647bb72e88e71}{file} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_msc_file_a169c410a794d388c6b933b5d5bc7583c}{rel\+Path} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_doc_msc_file_a5f437ff76e39b48283de1aef4ef7dad6}{has\+Caption} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_msc_file_aa5e2451c2e8576b149149db04b653bc5}{width} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_msc_file_a639809349424946ba6cbb041f41b4905}{height} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_msc_file_acd9843033dd0cdc3a0e129645108fa69}{context} () const 
+\item 
+void \hyperlink{class_doc_msc_file_aeb1ca7bcae9714c6cd1c71c1665a1dd1}{accept} (\hyperlink{class_doc_visitor}{Doc\+Visitor} $\ast$v)
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Node representing a msc file 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_doc_msc_file_a0a89ab57d101a38da934fe2372ff40e8}{}\index{Doc\+Msc\+File@{Doc\+Msc\+File}!Doc\+Msc\+File@{Doc\+Msc\+File}}
+\index{Doc\+Msc\+File@{Doc\+Msc\+File}!Doc\+Msc\+File@{Doc\+Msc\+File}}
+\subsubsection[{Doc\+Msc\+File(\+Doc\+Node $\ast$parent, const Q\+C\+String \&name, const Q\+C\+String \&context)}]{\setlength{\rightskip}{0pt plus 5cm}Doc\+Msc\+File\+::\+Doc\+Msc\+File (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Node} $\ast$}]{parent, }
+\item[{const {\bf Q\+C\+String} \&}]{name, }
+\item[{const {\bf Q\+C\+String} \&}]{context}
+\end{DoxyParamCaption}
+)}\label{class_doc_msc_file_a0a89ab57d101a38da934fe2372ff40e8}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_doc_msc_file_aeb1ca7bcae9714c6cd1c71c1665a1dd1}{}\index{Doc\+Msc\+File@{Doc\+Msc\+File}!accept@{accept}}
+\index{accept@{accept}!Doc\+Msc\+File@{Doc\+Msc\+File}}
+\subsubsection[{accept(\+Doc\+Visitor $\ast$v)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Msc\+File\+::accept (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Visitor} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_msc_file_aeb1ca7bcae9714c6cd1c71c1665a1dd1}
+Acceptor function for node visitors. Part of the visitor pattern. 
+\begin{DoxyParams}{Paramètres}
+{\em v} & Abstract visitor. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_doc_node_a5303a550cbe6395663bf9b9dad28cbf1}{Doc\+Node}.
+
+\hypertarget{class_doc_msc_file_acd9843033dd0cdc3a0e129645108fa69}{}\index{Doc\+Msc\+File@{Doc\+Msc\+File}!context@{context}}
+\index{context@{context}!Doc\+Msc\+File@{Doc\+Msc\+File}}
+\subsubsection[{context() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Msc\+File\+::context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_msc_file_acd9843033dd0cdc3a0e129645108fa69}
+\hypertarget{class_doc_msc_file_ae8b2c310f6c4659dd0a647bb72e88e71}{}\index{Doc\+Msc\+File@{Doc\+Msc\+File}!file@{file}}
+\index{file@{file}!Doc\+Msc\+File@{Doc\+Msc\+File}}
+\subsubsection[{file() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Msc\+File\+::file (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_msc_file_ae8b2c310f6c4659dd0a647bb72e88e71}
+\hypertarget{class_doc_msc_file_a5f437ff76e39b48283de1aef4ef7dad6}{}\index{Doc\+Msc\+File@{Doc\+Msc\+File}!has\+Caption@{has\+Caption}}
+\index{has\+Caption@{has\+Caption}!Doc\+Msc\+File@{Doc\+Msc\+File}}
+\subsubsection[{has\+Caption() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Doc\+Msc\+File\+::has\+Caption (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_msc_file_a5f437ff76e39b48283de1aef4ef7dad6}
+\hypertarget{class_doc_msc_file_a639809349424946ba6cbb041f41b4905}{}\index{Doc\+Msc\+File@{Doc\+Msc\+File}!height@{height}}
+\index{height@{height}!Doc\+Msc\+File@{Doc\+Msc\+File}}
+\subsubsection[{height() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Msc\+File\+::height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_msc_file_a639809349424946ba6cbb041f41b4905}
+\hypertarget{class_doc_msc_file_a660203067a59a6dbe35453479bff1947}{}\index{Doc\+Msc\+File@{Doc\+Msc\+File}!kind@{kind}}
+\index{kind@{kind}!Doc\+Msc\+File@{Doc\+Msc\+File}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kind} Doc\+Msc\+File\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_msc_file_a660203067a59a6dbe35453479bff1947}
+Returns the kind of node. Provides runtime type information 
+
+Implémente \hyperlink{class_doc_node_a92d4aaa169a813ded919aa858024c809}{Doc\+Node}.
+
+\hypertarget{class_doc_msc_file_a624798bf7254e57ecfc5f60f2e57b680}{}\index{Doc\+Msc\+File@{Doc\+Msc\+File}!name@{name}}
+\index{name@{name}!Doc\+Msc\+File@{Doc\+Msc\+File}}
+\subsubsection[{name() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Msc\+File\+::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_msc_file_a624798bf7254e57ecfc5f60f2e57b680}
+\hypertarget{class_doc_msc_file_af75b42178732dcddf90d1a8b4612d3d9}{}\index{Doc\+Msc\+File@{Doc\+Msc\+File}!parse@{parse}}
+\index{parse@{parse}!Doc\+Msc\+File@{Doc\+Msc\+File}}
+\subsubsection[{parse()}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Msc\+File\+::parse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_doc_msc_file_af75b42178732dcddf90d1a8b4612d3d9}
+\hypertarget{class_doc_msc_file_a169c410a794d388c6b933b5d5bc7583c}{}\index{Doc\+Msc\+File@{Doc\+Msc\+File}!rel\+Path@{rel\+Path}}
+\index{rel\+Path@{rel\+Path}!Doc\+Msc\+File@{Doc\+Msc\+File}}
+\subsubsection[{rel\+Path() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Msc\+File\+::rel\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_msc_file_a169c410a794d388c6b933b5d5bc7583c}
+\hypertarget{class_doc_msc_file_aa5e2451c2e8576b149149db04b653bc5}{}\index{Doc\+Msc\+File@{Doc\+Msc\+File}!width@{width}}
+\index{width@{width}!Doc\+Msc\+File@{Doc\+Msc\+File}}
+\subsubsection[{width() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Msc\+File\+::width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_msc_file_aa5e2451c2e8576b149149db04b653bc5}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{docparser_8h}{docparser.\+h}\item 
+src/\hyperlink{docparser_8cpp}{docparser.\+cpp}\end{DoxyCompactItemize}

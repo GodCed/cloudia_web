@@ -1,0 +1,34 @@
+\hypertarget{db_8js}{\section{Référence du fichier /home/www/public\-\_\-html/dev/server/db.js}
+\label{db_8js}\index{/home/www/public\-\_\-html/dev/server/db.\-js@{/home/www/public\-\_\-html/dev/server/db.\-js}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+var \hyperlink{db_8js_ac6a1b1fd00c35062aea99d6f37a15054}{db} = require('mysql')
+\item 
+var \hyperlink{db_8js_aeac120c9ce32d189166215752b0b1a76}{config} = require('./config')
+\item 
+module \hyperlink{db_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des variables}
+\hypertarget{db_8js_aeac120c9ce32d189166215752b0b1a76}{\index{db.\-js@{db.\-js}!config@{config}}
+\index{config@{config}!db.js@{db.\-js}}
+\subsubsection[{config}]{\setlength{\rightskip}{0pt plus 5cm}var config = require('./config')}}\label{db_8js_aeac120c9ce32d189166215752b0b1a76}
+\hypertarget{db_8js_ac6a1b1fd00c35062aea99d6f37a15054}{\index{db.\-js@{db.\-js}!db@{db}}
+\index{db@{db}!db.js@{db.\-js}}
+\subsubsection[{db}]{\setlength{\rightskip}{0pt plus 5cm}var db = require('mysql')}}\label{db_8js_ac6a1b1fd00c35062aea99d6f37a15054}
+\hypertarget{db_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{\index{db.\-js@{db.\-js}!exports@{exports}}
+\index{exports@{exports}!db.js@{db.\-js}}
+\subsubsection[{exports}]{\setlength{\rightskip}{0pt plus 5cm}module exports}}\label{db_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}
+{\bfseries Valeur initiale \-:}
+\begin{DoxyCode}
+ \hyperlink{db_8js_ac6a1b1fd00c35062aea99d6f37a15054}{db}.createConnection(\{
+    host: \hyperlink{db_8js_aeac120c9ce32d189166215752b0b1a76}{config}.db\_host,
+    port: \hyperlink{db_8js_aeac120c9ce32d189166215752b0b1a76}{config}.db\_port,
+    user: \hyperlink{db_8js_aeac120c9ce32d189166215752b0b1a76}{config}.db\_user,
+    password: \hyperlink{db_8js_aeac120c9ce32d189166215752b0b1a76}{config}.db\_password,
+    database: \hyperlink{db_8js_aeac120c9ce32d189166215752b0b1a76}{config}.db\_name
+\})
+\end{DoxyCode}

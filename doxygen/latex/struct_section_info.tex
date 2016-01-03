@@ -1,0 +1,140 @@
+\hypertarget{struct_section_info}{}\section{Référence de la structure Section\+Info}
+\label{struct_section_info}\index{Section\+Info@{Section\+Info}}
+
+
+{\ttfamily \#include $<$section.\+h$>$}
+
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1}{Section\+Type} \{ \\*
+\hyperlink{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1ab7fe9ec79f1d04f6e6be2a58b9b47405}{Page} = 0, 
+\hyperlink{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1a15dc8071785cc7fe6101a290d5450e57}{Section} = 1, 
+\hyperlink{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1a68f0c1758676721ca67c36c1dc151816}{Subsection} = 2, 
+\hyperlink{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1acdfc66de4770347c39215c584c175c53}{Subsubsection} = 3, 
+\\*
+\hyperlink{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1a85d1f347c175312d178170b0dd3ed35c}{Paragraph} = 4, 
+\hyperlink{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1a49cff4beb26b3e91717992c9228bd15b}{Anchor} = 5
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_section_info_a32f7bf6d4f16717331867621b5753fe1}{Section\+Info} (const char $\ast$\hyperlink{060__command__switch_8tcl_af6830d2c644b45088ea8f1f74a46b778}{f}, const int lin, const char $\ast$\hyperlink{060__command__switch_8tcl_aff56f84b49947b84b2a304f51cf8e678}{l}, const char $\ast$\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, \hyperlink{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1}{Section\+Type} st, int lev, const char $\ast$\hyperlink{060__command__switch_8tcl_a0a0bd3dc69dd06934c4e6362155e0ace}{r}=0)
+\item 
+\hyperlink{struct_section_info_acd07dd13cd3d649a7a103e91d5c59cd9}{Section\+Info} (const \hyperlink{struct_section_info}{Section\+Info} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{struct_section_info_affd6ea0ae5137a85cb23f82abff8dd9e}{$\sim$\+Section\+Info} ()
+\end{DoxyCompactItemize}
+\subsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{struct_section_info_a3f1540ed748f49b622915063e97a0a9c}{label}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{struct_section_info_a6351881d52095f7bbe11e96a7102f9a6}{title}
+\item 
+\hyperlink{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1}{Section\+Type} \hyperlink{struct_section_info_a028667b2061a4cfa8a5ed9765e0583d2}{type}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{struct_section_info_ad0f4c1f86263d2a044d2b5a183bb3387}{ref}
+\item 
+\hyperlink{class_definition}{Definition} $\ast$ \hyperlink{struct_section_info_aae5dcda2890356ecfcb2cd21f12c2ef7}{definition}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{struct_section_info_a8973ffe375fd2b350a04f51f0785fd58}{file\+Name}
+\item 
+int \hyperlink{struct_section_info_ae57cb5b4a832c3768cf3f59fc1469846}{line\+Nr}
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{struct_section_info_a6f1606b8414caf31008f55d8b33d4fcc}{generated}
+\item 
+int \hyperlink{struct_section_info_ac215add41d774d87dfd6a56acb4570c5}{level}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Class representing a section in a page 
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1}{}\index{Section\+Info@{Section\+Info}!Section\+Type@{Section\+Type}}
+\index{Section\+Type@{Section\+Type}!Section\+Info@{Section\+Info}}
+\subsubsection[{Section\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Section\+Info\+::\+Section\+Type}}\label{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Page@{Page}!Section\+Info@{Section\+Info}}\index{Section\+Info@{Section\+Info}!Page@{Page}}\item[{\em 
+\hypertarget{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1ab7fe9ec79f1d04f6e6be2a58b9b47405}{}Page\label{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1ab7fe9ec79f1d04f6e6be2a58b9b47405}
+}]\index{Section@{Section}!Section\+Info@{Section\+Info}}\index{Section\+Info@{Section\+Info}!Section@{Section}}\item[{\em 
+\hypertarget{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1a15dc8071785cc7fe6101a290d5450e57}{}Section\label{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1a15dc8071785cc7fe6101a290d5450e57}
+}]\index{Subsection@{Subsection}!Section\+Info@{Section\+Info}}\index{Section\+Info@{Section\+Info}!Subsection@{Subsection}}\item[{\em 
+\hypertarget{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1a68f0c1758676721ca67c36c1dc151816}{}Subsection\label{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1a68f0c1758676721ca67c36c1dc151816}
+}]\index{Subsubsection@{Subsubsection}!Section\+Info@{Section\+Info}}\index{Section\+Info@{Section\+Info}!Subsubsection@{Subsubsection}}\item[{\em 
+\hypertarget{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1acdfc66de4770347c39215c584c175c53}{}Subsubsection\label{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1acdfc66de4770347c39215c584c175c53}
+}]\index{Paragraph@{Paragraph}!Section\+Info@{Section\+Info}}\index{Section\+Info@{Section\+Info}!Paragraph@{Paragraph}}\item[{\em 
+\hypertarget{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1a85d1f347c175312d178170b0dd3ed35c}{}Paragraph\label{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1a85d1f347c175312d178170b0dd3ed35c}
+}]\index{Anchor@{Anchor}!Section\+Info@{Section\+Info}}\index{Section\+Info@{Section\+Info}!Anchor@{Anchor}}\item[{\em 
+\hypertarget{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1a49cff4beb26b3e91717992c9228bd15b}{}Anchor\label{struct_section_info_a32308f52dd59422b14fb75a92c90ebf1a49cff4beb26b3e91717992c9228bd15b}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{struct_section_info_a32f7bf6d4f16717331867621b5753fe1}{}\index{Section\+Info@{Section\+Info}!Section\+Info@{Section\+Info}}
+\index{Section\+Info@{Section\+Info}!Section\+Info@{Section\+Info}}
+\subsubsection[{Section\+Info(const char $\ast$f, const int lin, const char $\ast$l, const char $\ast$t, Section\+Type st, int lev, const char $\ast$r=0)}]{\setlength{\rightskip}{0pt plus 5cm}Section\+Info\+::\+Section\+Info (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{f, }
+\item[{const int}]{lin, }
+\item[{const char $\ast$}]{l, }
+\item[{const char $\ast$}]{t, }
+\item[{{\bf Section\+Type}}]{st, }
+\item[{int}]{lev, }
+\item[{const char $\ast$}]{r = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_section_info_a32f7bf6d4f16717331867621b5753fe1}
+\hypertarget{struct_section_info_acd07dd13cd3d649a7a103e91d5c59cd9}{}\index{Section\+Info@{Section\+Info}!Section\+Info@{Section\+Info}}
+\index{Section\+Info@{Section\+Info}!Section\+Info@{Section\+Info}}
+\subsubsection[{Section\+Info(const Section\+Info \&s)}]{\setlength{\rightskip}{0pt plus 5cm}Section\+Info\+::\+Section\+Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf Section\+Info} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_section_info_acd07dd13cd3d649a7a103e91d5c59cd9}
+\hypertarget{struct_section_info_affd6ea0ae5137a85cb23f82abff8dd9e}{}\index{Section\+Info@{Section\+Info}!````~Section\+Info@{$\sim$\+Section\+Info}}
+\index{````~Section\+Info@{$\sim$\+Section\+Info}!Section\+Info@{Section\+Info}}
+\subsubsection[{$\sim$\+Section\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}Section\+Info\+::$\sim$\+Section\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_section_info_affd6ea0ae5137a85cb23f82abff8dd9e}
+
+
+\subsection{Documentation des données membres}
+\hypertarget{struct_section_info_aae5dcda2890356ecfcb2cd21f12c2ef7}{}\index{Section\+Info@{Section\+Info}!definition@{definition}}
+\index{definition@{definition}!Section\+Info@{Section\+Info}}
+\subsubsection[{definition}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Definition}$\ast$ Section\+Info\+::definition}\label{struct_section_info_aae5dcda2890356ecfcb2cd21f12c2ef7}
+\hypertarget{struct_section_info_a8973ffe375fd2b350a04f51f0785fd58}{}\index{Section\+Info@{Section\+Info}!file\+Name@{file\+Name}}
+\index{file\+Name@{file\+Name}!Section\+Info@{Section\+Info}}
+\subsubsection[{file\+Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Section\+Info\+::file\+Name}\label{struct_section_info_a8973ffe375fd2b350a04f51f0785fd58}
+\hypertarget{struct_section_info_a6f1606b8414caf31008f55d8b33d4fcc}{}\index{Section\+Info@{Section\+Info}!generated@{generated}}
+\index{generated@{generated}!Section\+Info@{Section\+Info}}
+\subsubsection[{generated}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Section\+Info\+::generated}\label{struct_section_info_a6f1606b8414caf31008f55d8b33d4fcc}
+\hypertarget{struct_section_info_a3f1540ed748f49b622915063e97a0a9c}{}\index{Section\+Info@{Section\+Info}!label@{label}}
+\index{label@{label}!Section\+Info@{Section\+Info}}
+\subsubsection[{label}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Section\+Info\+::label}\label{struct_section_info_a3f1540ed748f49b622915063e97a0a9c}
+\hypertarget{struct_section_info_ac215add41d774d87dfd6a56acb4570c5}{}\index{Section\+Info@{Section\+Info}!level@{level}}
+\index{level@{level}!Section\+Info@{Section\+Info}}
+\subsubsection[{level}]{\setlength{\rightskip}{0pt plus 5cm}int Section\+Info\+::level}\label{struct_section_info_ac215add41d774d87dfd6a56acb4570c5}
+\hypertarget{struct_section_info_ae57cb5b4a832c3768cf3f59fc1469846}{}\index{Section\+Info@{Section\+Info}!line\+Nr@{line\+Nr}}
+\index{line\+Nr@{line\+Nr}!Section\+Info@{Section\+Info}}
+\subsubsection[{line\+Nr}]{\setlength{\rightskip}{0pt plus 5cm}int Section\+Info\+::line\+Nr}\label{struct_section_info_ae57cb5b4a832c3768cf3f59fc1469846}
+\hypertarget{struct_section_info_ad0f4c1f86263d2a044d2b5a183bb3387}{}\index{Section\+Info@{Section\+Info}!ref@{ref}}
+\index{ref@{ref}!Section\+Info@{Section\+Info}}
+\subsubsection[{ref}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Section\+Info\+::ref}\label{struct_section_info_ad0f4c1f86263d2a044d2b5a183bb3387}
+\hypertarget{struct_section_info_a6351881d52095f7bbe11e96a7102f9a6}{}\index{Section\+Info@{Section\+Info}!title@{title}}
+\index{title@{title}!Section\+Info@{Section\+Info}}
+\subsubsection[{title}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Section\+Info\+::title}\label{struct_section_info_a6351881d52095f7bbe11e96a7102f9a6}
+\hypertarget{struct_section_info_a028667b2061a4cfa8a5ed9765e0583d2}{}\index{Section\+Info@{Section\+Info}!type@{type}}
+\index{type@{type}!Section\+Info@{Section\+Info}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Section\+Type} Section\+Info\+::type}\label{struct_section_info_a028667b2061a4cfa8a5ed9765e0583d2}
+
+
+La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{section_8h}{section.\+h}\end{DoxyCompactItemize}

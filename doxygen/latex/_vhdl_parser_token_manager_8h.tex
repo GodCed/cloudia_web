@@ -1,0 +1,100 @@
+\hypertarget{_vhdl_parser_token_manager_8h}{}\section{Référence du fichier vhdlparser/\+Vhdl\+Parser\+Token\+Manager.h}
+\label{_vhdl_parser_token_manager_8h}\index{vhdlparser/\+Vhdl\+Parser\+Token\+Manager.\+h@{vhdlparser/\+Vhdl\+Parser\+Token\+Manager.\+h}}
+{\ttfamily \#include \char`\"{}stdio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Java\+C\+C.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Char\+Stream.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Token.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Error\+Handler.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Token\+Manager.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Vhdl\+Parser\+Constants.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Vhdl\+Parser.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classvhdl_1_1parser_1_1_vhdl_parser_token_manager}{vhdl\+::parser\+::\+Vhdl\+Parser\+Token\+Manager}
+\end{DoxyCompactItemize}
+\subsection*{Espaces de nommage}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacevhdl}{vhdl}
+\item 
+ \hyperlink{namespacevhdl_1_1parser}{vhdl\+::parser}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_vhdl_parser_token_manager_8h_a001c4feea657cf8f87bdfa1ba634d903}{jj\+Check\+N\+Add}(state)
+\item 
+\#define \hyperlink{_vhdl_parser_token_manager_8h_ae29e4eeaebc760a0db8ff362fd5c04da}{jj\+Add\+States}(start,  end)
+\item 
+\#define \hyperlink{_vhdl_parser_token_manager_8h_a3060e5c9431b27a30958ee20caf16a88}{jj\+Check\+N\+Add\+Two\+States}(state1,  state2)
+\item 
+\#define \hyperlink{_vhdl_parser_token_manager_8h_ad9d46166825cfbc7cad6c6fc6c88fa98}{jj\+Check\+N\+Add\+States}(start,  end)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{_vhdl_parser_token_manager_8h_ae29e4eeaebc760a0db8ff362fd5c04da}{}\index{Vhdl\+Parser\+Token\+Manager.\+h@{Vhdl\+Parser\+Token\+Manager.\+h}!jj\+Add\+States@{jj\+Add\+States}}
+\index{jj\+Add\+States@{jj\+Add\+States}!Vhdl\+Parser\+Token\+Manager.\+h@{Vhdl\+Parser\+Token\+Manager.\+h}}
+\subsubsection[{jj\+Add\+States}]{\setlength{\rightskip}{0pt plus 5cm}\#define jj\+Add\+States(
+\begin{DoxyParamCaption}
+\item[{}]{start, }
+\item[{}]{end}
+\end{DoxyParamCaption}
+)}\label{_vhdl_parser_token_manager_8h_ae29e4eeaebc760a0db8ff362fd5c04da}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\{\(\backslash\)
+   for (\textcolor{keywordtype}{int} x = start; x <= end; x++) \{\(\backslash\)
+      jjstateSet[jjnewStateCnt++] = jjnextStates[x];\(\backslash\)
+   \} \textcolor{comment}{/*while (start++ != end);*/}\(\backslash\)
+\}
+\end{DoxyCode}
+\hypertarget{_vhdl_parser_token_manager_8h_a001c4feea657cf8f87bdfa1ba634d903}{}\index{Vhdl\+Parser\+Token\+Manager.\+h@{Vhdl\+Parser\+Token\+Manager.\+h}!jj\+Check\+N\+Add@{jj\+Check\+N\+Add}}
+\index{jj\+Check\+N\+Add@{jj\+Check\+N\+Add}!Vhdl\+Parser\+Token\+Manager.\+h@{Vhdl\+Parser\+Token\+Manager.\+h}}
+\subsubsection[{jj\+Check\+N\+Add}]{\setlength{\rightskip}{0pt plus 5cm}\#define jj\+Check\+N\+Add(
+\begin{DoxyParamCaption}
+\item[{}]{state}
+\end{DoxyParamCaption}
+)}\label{_vhdl_parser_token_manager_8h_a001c4feea657cf8f87bdfa1ba634d903}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\{\(\backslash\)
+   if (jjrounds[state] != jjround)\(\backslash\)
+   \{\(\backslash\)
+      jjstateSet[jjnewStateCnt++] = state;\(\backslash\)
+      jjrounds[state] = jjround;\(\backslash\)
+   \}\(\backslash\)
+\}
+\end{DoxyCode}
+\hypertarget{_vhdl_parser_token_manager_8h_ad9d46166825cfbc7cad6c6fc6c88fa98}{}\index{Vhdl\+Parser\+Token\+Manager.\+h@{Vhdl\+Parser\+Token\+Manager.\+h}!jj\+Check\+N\+Add\+States@{jj\+Check\+N\+Add\+States}}
+\index{jj\+Check\+N\+Add\+States@{jj\+Check\+N\+Add\+States}!Vhdl\+Parser\+Token\+Manager.\+h@{Vhdl\+Parser\+Token\+Manager.\+h}}
+\subsubsection[{jj\+Check\+N\+Add\+States}]{\setlength{\rightskip}{0pt plus 5cm}\#define jj\+Check\+N\+Add\+States(
+\begin{DoxyParamCaption}
+\item[{}]{start, }
+\item[{}]{end}
+\end{DoxyParamCaption}
+)}\label{_vhdl_parser_token_manager_8h_ad9d46166825cfbc7cad6c6fc6c88fa98}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\{\(\backslash\)
+   for (\textcolor{keywordtype}{int} x = start; x <= end; x++) \{\(\backslash\)
+      jjCheckNAdd(jjnextStates[x]);\(\backslash\)
+   \} \textcolor{comment}{/*while (start++ != end);*/}\(\backslash\)
+\}
+\end{DoxyCode}
+\hypertarget{_vhdl_parser_token_manager_8h_a3060e5c9431b27a30958ee20caf16a88}{}\index{Vhdl\+Parser\+Token\+Manager.\+h@{Vhdl\+Parser\+Token\+Manager.\+h}!jj\+Check\+N\+Add\+Two\+States@{jj\+Check\+N\+Add\+Two\+States}}
+\index{jj\+Check\+N\+Add\+Two\+States@{jj\+Check\+N\+Add\+Two\+States}!Vhdl\+Parser\+Token\+Manager.\+h@{Vhdl\+Parser\+Token\+Manager.\+h}}
+\subsubsection[{jj\+Check\+N\+Add\+Two\+States}]{\setlength{\rightskip}{0pt plus 5cm}\#define jj\+Check\+N\+Add\+Two\+States(
+\begin{DoxyParamCaption}
+\item[{}]{state1, }
+\item[{}]{state2}
+\end{DoxyParamCaption}
+)}\label{_vhdl_parser_token_manager_8h_a3060e5c9431b27a30958ee20caf16a88}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\{\(\backslash\)
+   jjCheckNAdd(state1);\(\backslash\)
+   jjCheckNAdd(state2);\(\backslash\)
+\}
+\end{DoxyCode}

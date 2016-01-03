@@ -1,0 +1,47 @@
+\hypertarget{class_q_utf8_decoder}{}\section{Référence de la classe Q\+Utf8\+Decoder}
+\label{class_q_utf8_decoder}\index{Q\+Utf8\+Decoder@{Q\+Utf8\+Decoder}}
+Graphe d\textquotesingle{}héritage de Q\+Utf8\+Decoder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_utf8_decoder}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_utf8_decoder_a84e13c9eb4ba643420154fde38b9eed2}{Q\+Utf8\+Decoder} ()
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_utf8_decoder_a8e58c9ca286bd2285123d2bbc1489ae3}{to\+Unicode} (const char $\ast$chars, int len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_utf8_decoder_a84e13c9eb4ba643420154fde38b9eed2}{}\index{Q\+Utf8\+Decoder@{Q\+Utf8\+Decoder}!Q\+Utf8\+Decoder@{Q\+Utf8\+Decoder}}
+\index{Q\+Utf8\+Decoder@{Q\+Utf8\+Decoder}!Q\+Utf8\+Decoder@{Q\+Utf8\+Decoder}}
+\subsubsection[{Q\+Utf8\+Decoder()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Utf8\+Decoder\+::\+Q\+Utf8\+Decoder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_utf8_decoder_a84e13c9eb4ba643420154fde38b9eed2}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_utf8_decoder_a8e58c9ca286bd2285123d2bbc1489ae3}{}\index{Q\+Utf8\+Decoder@{Q\+Utf8\+Decoder}!to\+Unicode@{to\+Unicode}}
+\index{to\+Unicode@{to\+Unicode}!Q\+Utf8\+Decoder@{Q\+Utf8\+Decoder}}
+\subsubsection[{to\+Unicode(const char $\ast$chars, int len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+Utf8\+Decoder\+::to\+Unicode (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{chars, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_q_utf8_decoder_a8e58c9ca286bd2285123d2bbc1489ae3}
+Converts the first {\itshape len} bytes at {\itshape chars} to Unicode, returning the result.
+
+If not all characters are used (eg. only part of a multi-\/byte encoding is at the end of the characters), the decoder remembers enough state to continue with the next call to this function. 
+
+Implémente \hyperlink{class_q_text_decoder_aec543f7f6670dfda14164268e2da879d}{Q\+Text\+Decoder}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qutfcodec_8cpp}{qutfcodec.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,175 @@
+\hypertarget{template_8cpp}{}\section{Référence du fichier src/template.cpp}
+\label{template_8cpp}\index{src/template.\+cpp@{src/template.\+cpp}}
+{\ttfamily \#include \char`\"{}template.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdarg.\+h$>$}\\*
+{\ttfamily \#include $<$qlist.\+h$>$}\\*
+{\ttfamily \#include $<$qarray.\+h$>$}\\*
+{\ttfamily \#include $<$qdict.\+h$>$}\\*
+{\ttfamily \#include $<$qstrlist.\+h$>$}\\*
+{\ttfamily \#include $<$qvaluelist.\+h$>$}\\*
+{\ttfamily \#include $<$qstack.\+h$>$}\\*
+{\ttfamily \#include $<$qfile.\+h$>$}\\*
+{\ttfamily \#include $<$qregexp.\+h$>$}\\*
+{\ttfamily \#include $<$qcstring.\+h$>$}\\*
+{\ttfamily \#include $<$qdir.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}sortdict.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ftextstream.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}resourcemgr.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_template_variant_1_1_private}{Template\+Variant\+::\+Private}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_template_variant_1_1_private}{Private} data of a template variant object. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_struct_1_1_private}{Template\+Struct\+::\+Private}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_template_struct_1_1_private}{Private} data of a template struct object. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_list_1_1_private}{Template\+List\+::\+Private}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_template_list_1_1_private}{Private} data of a template list object. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_list_const_iterator}{Template\+List\+Const\+Iterator}
+\item 
+class \hyperlink{class_operator}{Operator}
+\begin{DoxyCompactList}\small\item\em Class representing operators that can appear in template expressions. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_block_context}{Template\+Block\+Context}
+\begin{DoxyCompactList}\small\item\em Class holding stacks of blocks available in the context. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_template_key_value}{Template\+Key\+Value}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_a}{A} container to store a key-\/value pair. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_context_impl}{Template\+Context\+Impl}
+\begin{DoxyCompactList}\small\item\em Internal class representing the implementation of a template context. \end{DoxyCompactList}\item 
+class \hyperlink{class_filter_add}{Filter\+Add}
+\begin{DoxyCompactList}\small\item\em The implementation of the \char`\"{}add\char`\"{} filter. \end{DoxyCompactList}\item 
+class \hyperlink{class_filter_get}{Filter\+Get}
+\begin{DoxyCompactList}\small\item\em The implementation of the \char`\"{}get\char`\"{} filter. \end{DoxyCompactList}\item 
+class \hyperlink{class_filter_append}{Filter\+Append}
+\begin{DoxyCompactList}\small\item\em The implementation of the \char`\"{}append\char`\"{} filter. \end{DoxyCompactList}\item 
+class \hyperlink{class_filter_prepend}{Filter\+Prepend}
+\begin{DoxyCompactList}\small\item\em The implementation of the \char`\"{}prepend\char`\"{} filter. \end{DoxyCompactList}\item 
+class \hyperlink{class_filter_length}{Filter\+Length}
+\begin{DoxyCompactList}\small\item\em The implementation of the \char`\"{}length\char`\"{} filter. \end{DoxyCompactList}\item 
+class \hyperlink{class_filter_default}{Filter\+Default}
+\begin{DoxyCompactList}\small\item\em The implementation of the \char`\"{}default\char`\"{} filter. \end{DoxyCompactList}\item 
+class \hyperlink{class_filter_flatten}{Filter\+Flatten}
+\begin{DoxyCompactList}\small\item\em The implementation of the \char`\"{}flatten\char`\"{} filter. \end{DoxyCompactList}\item 
+class \hyperlink{class_filter_list_sort}{Filter\+List\+Sort}
+\begin{DoxyCompactList}\small\item\em The implementation of the \char`\"{}listsort\char`\"{} filter. \end{DoxyCompactList}\item 
+class \hyperlink{class_filter_group_by}{Filter\+Group\+By}
+\begin{DoxyCompactList}\small\item\em The implementation of the \char`\"{}group\+By\char`\"{} filter. \end{DoxyCompactList}\item 
+class \hyperlink{class_filter_paginate}{Filter\+Paginate}
+\begin{DoxyCompactList}\small\item\em The implementation of the \char`\"{}paginate\char`\"{} filter. \end{DoxyCompactList}\item 
+class \hyperlink{class_filter_alpha_index}{Filter\+Alpha\+Index}
+\begin{DoxyCompactList}\small\item\em The implementation of the \char`\"{}alpha\+Index\char`\"{} filter. \end{DoxyCompactList}\item 
+class \hyperlink{class_filter_strip_path}{Filter\+Strip\+Path}
+\begin{DoxyCompactList}\small\item\em The implementation of the \char`\"{}default\char`\"{} filter. \end{DoxyCompactList}\item 
+class \hyperlink{class_filter_no_wrap}{Filter\+No\+Wrap}
+\begin{DoxyCompactList}\small\item\em The implementation of the \char`\"{}default\char`\"{} filter. \end{DoxyCompactList}\item 
+class \hyperlink{class_filter_divisible_by}{Filter\+Divisible\+By}
+\begin{DoxyCompactList}\small\item\em The implementation of the \char`\"{}divisibleby\char`\"{} filter. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_filter_factory}{Template\+Filter\+Factory}
+\begin{DoxyCompactList}\small\item\em Factory singleton for registering and creating filters. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_filter_factory_1_1_auto_register}{Template\+Filter\+Factory\+::\+Auto\+Register$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Helper class for registering a filter function. \end{DoxyCompactList}\item 
+class \hyperlink{class_expr_ast}{Expr\+Ast}
+\begin{DoxyCompactList}\small\item\em Base class for all nodes in the abstract syntax tree of an expression. \end{DoxyCompactList}\item 
+class \hyperlink{class_expr_ast_number}{Expr\+Ast\+Number}
+\begin{DoxyCompactList}\small\item\em Class representing a number in the A\+S\+T. \end{DoxyCompactList}\item 
+class \hyperlink{class_expr_ast_variable}{Expr\+Ast\+Variable}
+\begin{DoxyCompactList}\small\item\em Class representing a variable in the A\+S\+T. \end{DoxyCompactList}\item 
+class \hyperlink{class_expr_ast_function_variable}{Expr\+Ast\+Function\+Variable}
+\item 
+class \hyperlink{class_expr_ast_filter}{Expr\+Ast\+Filter}
+\begin{DoxyCompactList}\small\item\em Class representing a filter in the A\+S\+T. \end{DoxyCompactList}\item 
+class \hyperlink{class_expr_ast_filter_appl}{Expr\+Ast\+Filter\+Appl}
+\begin{DoxyCompactList}\small\item\em Class representing a filter applied to an expression in the A\+S\+T. \end{DoxyCompactList}\item 
+class \hyperlink{class_expr_ast_literal}{Expr\+Ast\+Literal}
+\begin{DoxyCompactList}\small\item\em Class representing a string literal in the A\+S\+T. \end{DoxyCompactList}\item 
+class \hyperlink{class_expr_ast_negate}{Expr\+Ast\+Negate}
+\begin{DoxyCompactList}\small\item\em Class representing a negation (not) operator in the A\+S\+T. \end{DoxyCompactList}\item 
+class \hyperlink{class_expr_ast_unary}{Expr\+Ast\+Unary}
+\item 
+class \hyperlink{class_expr_ast_binary}{Expr\+Ast\+Binary}
+\begin{DoxyCompactList}\small\item\em Class representing a binary operator in the A\+S\+T. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node}{Template\+Node}
+\begin{DoxyCompactList}\small\item\em Base class of all nodes in a template\textquotesingle{}s A\+S\+T. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_parser}{Template\+Parser}
+\begin{DoxyCompactList}\small\item\em Parser for templates. \end{DoxyCompactList}\item 
+class \hyperlink{class_expression_parser}{Expression\+Parser}
+\begin{DoxyCompactList}\small\item\em Recursive decent parser for Django style template expressions. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_token}{Template\+Token}
+\begin{DoxyCompactList}\small\item\em Class representing a lexical token in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_list}{Template\+Node\+List}
+\begin{DoxyCompactList}\small\item\em Class representing a list of A\+S\+T nodes in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_impl}{Template\+Impl}
+\begin{DoxyCompactList}\small\item\em Internal class representing the implementation of a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_text}{Template\+Node\+Text}
+\begin{DoxyCompactList}\small\item\em Class representing a piece of plain text in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_variable}{Template\+Node\+Variable}
+\begin{DoxyCompactList}\small\item\em Class representing a variable in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_creator}{Template\+Node\+Creator$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Helper class for creating template A\+S\+T tag nodes and returning the template for a given node. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_if}{Template\+Node\+If}
+\begin{DoxyCompactList}\small\item\em Class representing an \textquotesingle{}if\textquotesingle{} tag in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_repeat}{Template\+Node\+Repeat}
+\begin{DoxyCompactList}\small\item\em Class representing a \textquotesingle{}for\textquotesingle{} tag in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_range}{Template\+Node\+Range}
+\begin{DoxyCompactList}\small\item\em Class representing a \textquotesingle{}range\textquotesingle{} tag in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_for}{Template\+Node\+For}
+\begin{DoxyCompactList}\small\item\em Class representing a \textquotesingle{}for\textquotesingle{} tag in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_msg}{Template\+Node\+Msg}
+\begin{DoxyCompactList}\small\item\em Class representing an \textquotesingle{}markers\textquotesingle{} tag in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_block}{Template\+Node\+Block}
+\begin{DoxyCompactList}\small\item\em Class representing a \textquotesingle{}block\textquotesingle{} tag in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_extend}{Template\+Node\+Extend}
+\begin{DoxyCompactList}\small\item\em Class representing a \textquotesingle{}extend\textquotesingle{} tag in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_include}{Template\+Node\+Include}
+\begin{DoxyCompactList}\small\item\em Class representing an \textquotesingle{}include\textquotesingle{} tag in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_create}{Template\+Node\+Create}
+\begin{DoxyCompactList}\small\item\em Class representing an \textquotesingle{}create\textquotesingle{} tag in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_tree}{Template\+Node\+Tree}
+\begin{DoxyCompactList}\small\item\em Class representing an \textquotesingle{}tree\textquotesingle{} tag in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_index_entry}{Template\+Node\+Index\+Entry}
+\begin{DoxyCompactList}\small\item\em Class representing an \textquotesingle{}indexentry\textquotesingle{} tag in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_open_sub_index}{Template\+Node\+Open\+Sub\+Index}
+\begin{DoxyCompactList}\small\item\em Class representing an \textquotesingle{}opensubindex\textquotesingle{} tag in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_close_sub_index}{Template\+Node\+Close\+Sub\+Index}
+\begin{DoxyCompactList}\small\item\em Class representing an \textquotesingle{}closesubindex\textquotesingle{} tag in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_with}{Template\+Node\+With}
+\begin{DoxyCompactList}\small\item\em Class representing an \textquotesingle{}with\textquotesingle{} tag in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_cycle}{Template\+Node\+Cycle}
+\begin{DoxyCompactList}\small\item\em Class representing an \textquotesingle{}set\textquotesingle{} tag in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_set}{Template\+Node\+Set}
+\begin{DoxyCompactList}\small\item\em Class representing an \textquotesingle{}set\textquotesingle{} tag in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_spaceless}{Template\+Node\+Spaceless}
+\begin{DoxyCompactList}\small\item\em Class representing an \textquotesingle{}spaceless\textquotesingle{} tag in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_markers}{Template\+Node\+Markers}
+\begin{DoxyCompactList}\small\item\em Class representing an \textquotesingle{}markers\textquotesingle{} tag in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_resource}{Template\+Node\+Resource}
+\begin{DoxyCompactList}\small\item\em Class representing an \textquotesingle{}markers\textquotesingle{} tag in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_factory}{Template\+Node\+Factory}
+\begin{DoxyCompactList}\small\item\em Factory class for creating tag A\+S\+T nodes found in a template. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_node_factory_1_1_auto_register}{Template\+Node\+Factory\+::\+Auto\+Register$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Helper class for registering a template A\+S\+T node. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_lexer}{Template\+Lexer}
+\begin{DoxyCompactList}\small\item\em Lexer class for turning a template into a list of tokens. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_engine_1_1_private}{Template\+Engine\+::\+Private}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_template_engine_1_1_private}{Private} data of the template engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{template_8cpp_ab1b100016578b875cd432e6b519ffc0b}{E\+N\+A\+B\+L\+E\+\_\+\+T\+R\+A\+C\+I\+N\+G}~0
+\item 
+\#define \hyperlink{template_8cpp_a494d31903e7b0333dfa03b0778679113}{T\+R\+A\+C\+E}(x)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{template_8cpp_ab1b100016578b875cd432e6b519ffc0b}{}\index{template.\+cpp@{template.\+cpp}!E\+N\+A\+B\+L\+E\+\_\+\+T\+R\+A\+C\+I\+N\+G@{E\+N\+A\+B\+L\+E\+\_\+\+T\+R\+A\+C\+I\+N\+G}}
+\index{E\+N\+A\+B\+L\+E\+\_\+\+T\+R\+A\+C\+I\+N\+G@{E\+N\+A\+B\+L\+E\+\_\+\+T\+R\+A\+C\+I\+N\+G}!template.\+cpp@{template.\+cpp}}
+\subsubsection[{E\+N\+A\+B\+L\+E\+\_\+\+T\+R\+A\+C\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+N\+A\+B\+L\+E\+\_\+\+T\+R\+A\+C\+I\+N\+G~0}\label{template_8cpp_ab1b100016578b875cd432e6b519ffc0b}
+\hypertarget{template_8cpp_a494d31903e7b0333dfa03b0778679113}{}\index{template.\+cpp@{template.\+cpp}!T\+R\+A\+C\+E@{T\+R\+A\+C\+E}}
+\index{T\+R\+A\+C\+E@{T\+R\+A\+C\+E}!template.\+cpp@{template.\+cpp}}
+\subsubsection[{T\+R\+A\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+R\+A\+C\+E(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}\label{template_8cpp_a494d31903e7b0333dfa03b0778679113}

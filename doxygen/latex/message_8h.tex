@@ -1,0 +1,132 @@
+\hypertarget{message_8h}{}\section{Référence du fichier src/message.h}
+\label{message_8h}\index{src/message.\+h@{src/message.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdarg.\+h$>$}\\*
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{message_8h_aba549a028419cd48a3f373037c2c57eb}{msg} (const char $\ast$fmt,...)
+\item 
+void \hyperlink{message_8h_ac12b157a1efe7b031cb8d0de93e2f0d6}{warn} (const char $\ast$file, int line, const char $\ast$fmt,...)
+\item 
+void \hyperlink{message_8h_a1ea0df06120a86a2e092ca839b108be3}{va\+\_\+warn} (const char $\ast$file, int line, const char $\ast$fmt, va\+\_\+list args)
+\item 
+void \hyperlink{message_8h_a13fc8bbf2602cc597f2cc223cfd6be0a}{warn\+\_\+simple} (const char $\ast$file, int line, const char $\ast$text)
+\item 
+void \hyperlink{message_8h_a71da3f2eeb14a943214bf5986124133a}{warn\+\_\+undoc} (const char $\ast$file, int line, const char $\ast$fmt,...)
+\item 
+void \hyperlink{message_8h_aa53c6662002163281ef295732ea52493}{warn\+\_\+doc\+\_\+error} (const char $\ast$file, int line, const char $\ast$fmt,...)
+\item 
+void \hyperlink{message_8h_a1fd98c6976d3826490804976e17eb83f}{warn\+\_\+uncond} (const char $\ast$fmt,...)
+\item 
+void \hyperlink{message_8h_aede5746344fdce99647541101eaa7f06}{err} (const char $\ast$fmt,...)
+\item 
+void \hyperlink{message_8h_aeecc0899fdbc164f9939793f022afa7c}{err\+\_\+full} (const char $\ast$file, int line, const char $\ast$fmt,...)
+\item 
+void \hyperlink{message_8h_aa0b7262dc94aba9476d8669db4f3920e}{init\+Warning\+Format} ()
+\item 
+void \hyperlink{message_8h_afeaf3cf484d932b2198498b3209f7e03}{printlex} (int dbg, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} enter, const char $\ast$lex\+Name, const char $\ast$file\+Name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{message_8h_aede5746344fdce99647541101eaa7f06}{}\index{message.\+h@{message.\+h}!err@{err}}
+\index{err@{err}!message.\+h@{message.\+h}}
+\subsubsection[{err(const char $\ast$fmt,...)}]{\setlength{\rightskip}{0pt plus 5cm}void err (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{message_8h_aede5746344fdce99647541101eaa7f06}
+\hypertarget{message_8h_aeecc0899fdbc164f9939793f022afa7c}{}\index{message.\+h@{message.\+h}!err\+\_\+full@{err\+\_\+full}}
+\index{err\+\_\+full@{err\+\_\+full}!message.\+h@{message.\+h}}
+\subsubsection[{err\+\_\+full(const char $\ast$file, int line, const char $\ast$fmt,...)}]{\setlength{\rightskip}{0pt plus 5cm}void err\+\_\+full (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file, }
+\item[{int}]{line, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{message_8h_aeecc0899fdbc164f9939793f022afa7c}
+\hypertarget{message_8h_aa0b7262dc94aba9476d8669db4f3920e}{}\index{message.\+h@{message.\+h}!init\+Warning\+Format@{init\+Warning\+Format}}
+\index{init\+Warning\+Format@{init\+Warning\+Format}!message.\+h@{message.\+h}}
+\subsubsection[{init\+Warning\+Format()}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Warning\+Format (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{message_8h_aa0b7262dc94aba9476d8669db4f3920e}
+\hypertarget{message_8h_aba549a028419cd48a3f373037c2c57eb}{}\index{message.\+h@{message.\+h}!msg@{msg}}
+\index{msg@{msg}!message.\+h@{message.\+h}}
+\subsubsection[{msg(const char $\ast$fmt,...)}]{\setlength{\rightskip}{0pt plus 5cm}void msg (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{message_8h_aba549a028419cd48a3f373037c2c57eb}
+\hypertarget{message_8h_afeaf3cf484d932b2198498b3209f7e03}{}\index{message.\+h@{message.\+h}!printlex@{printlex}}
+\index{printlex@{printlex}!message.\+h@{message.\+h}}
+\subsubsection[{printlex(int dbg, bool enter, const char $\ast$lex\+Name, const char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void printlex (
+\begin{DoxyParamCaption}
+\item[{int}]{dbg, }
+\item[{{\bf bool}}]{enter, }
+\item[{const char $\ast$}]{lex\+Name, }
+\item[{const char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{message_8h_afeaf3cf484d932b2198498b3209f7e03}
+\hypertarget{message_8h_a1ea0df06120a86a2e092ca839b108be3}{}\index{message.\+h@{message.\+h}!va\+\_\+warn@{va\+\_\+warn}}
+\index{va\+\_\+warn@{va\+\_\+warn}!message.\+h@{message.\+h}}
+\subsubsection[{va\+\_\+warn(const char $\ast$file, int line, const char $\ast$fmt, va\+\_\+list args)}]{\setlength{\rightskip}{0pt plus 5cm}void va\+\_\+warn (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file, }
+\item[{int}]{line, }
+\item[{const char $\ast$}]{fmt, }
+\item[{va\+\_\+list}]{args}
+\end{DoxyParamCaption}
+)}\label{message_8h_a1ea0df06120a86a2e092ca839b108be3}
+\hypertarget{message_8h_ac12b157a1efe7b031cb8d0de93e2f0d6}{}\index{message.\+h@{message.\+h}!warn@{warn}}
+\index{warn@{warn}!message.\+h@{message.\+h}}
+\subsubsection[{warn(const char $\ast$file, int line, const char $\ast$fmt,...)}]{\setlength{\rightskip}{0pt plus 5cm}void warn (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file, }
+\item[{int}]{line, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{message_8h_ac12b157a1efe7b031cb8d0de93e2f0d6}
+\hypertarget{message_8h_aa53c6662002163281ef295732ea52493}{}\index{message.\+h@{message.\+h}!warn\+\_\+doc\+\_\+error@{warn\+\_\+doc\+\_\+error}}
+\index{warn\+\_\+doc\+\_\+error@{warn\+\_\+doc\+\_\+error}!message.\+h@{message.\+h}}
+\subsubsection[{warn\+\_\+doc\+\_\+error(const char $\ast$file, int line, const char $\ast$fmt,...)}]{\setlength{\rightskip}{0pt plus 5cm}void warn\+\_\+doc\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file, }
+\item[{int}]{line, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{message_8h_aa53c6662002163281ef295732ea52493}
+\hypertarget{message_8h_a13fc8bbf2602cc597f2cc223cfd6be0a}{}\index{message.\+h@{message.\+h}!warn\+\_\+simple@{warn\+\_\+simple}}
+\index{warn\+\_\+simple@{warn\+\_\+simple}!message.\+h@{message.\+h}}
+\subsubsection[{warn\+\_\+simple(const char $\ast$file, int line, const char $\ast$text)}]{\setlength{\rightskip}{0pt plus 5cm}void warn\+\_\+simple (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file, }
+\item[{int}]{line, }
+\item[{const char $\ast$}]{text}
+\end{DoxyParamCaption}
+)}\label{message_8h_a13fc8bbf2602cc597f2cc223cfd6be0a}
+\hypertarget{message_8h_a1fd98c6976d3826490804976e17eb83f}{}\index{message.\+h@{message.\+h}!warn\+\_\+uncond@{warn\+\_\+uncond}}
+\index{warn\+\_\+uncond@{warn\+\_\+uncond}!message.\+h@{message.\+h}}
+\subsubsection[{warn\+\_\+uncond(const char $\ast$fmt,...)}]{\setlength{\rightskip}{0pt plus 5cm}void warn\+\_\+uncond (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{message_8h_a1fd98c6976d3826490804976e17eb83f}
+\hypertarget{message_8h_a71da3f2eeb14a943214bf5986124133a}{}\index{message.\+h@{message.\+h}!warn\+\_\+undoc@{warn\+\_\+undoc}}
+\index{warn\+\_\+undoc@{warn\+\_\+undoc}!message.\+h@{message.\+h}}
+\subsubsection[{warn\+\_\+undoc(const char $\ast$file, int line, const char $\ast$fmt,...)}]{\setlength{\rightskip}{0pt plus 5cm}void warn\+\_\+undoc (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file, }
+\item[{int}]{line, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{message_8h_a71da3f2eeb14a943214bf5986124133a}

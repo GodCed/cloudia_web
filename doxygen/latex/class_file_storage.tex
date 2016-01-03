@@ -1,0 +1,125 @@
+\hypertarget{class_file_storage}{}\section{Référence de la classe File\+Storage}
+\label{class_file_storage}\index{File\+Storage@{File\+Storage}}
+
+
+\hyperlink{class_store}{Store} implementation based on a file. Writing is linear, after that the file is re-\/opened for reading. Reading is random (seek+read).  
+
+
+
+
+{\ttfamily \#include $<$filestorage.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de File\+Storage\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_file_storage}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_file_storage_a3a88a71218e6e8cb6c7af942ac1daf47}{File\+Storage} ()
+\item 
+\hyperlink{class_file_storage_afa4f6304190c22b38d504402aeeb8d12}{File\+Storage} (const \hyperlink{class_q_string}{Q\+String} \&name)
+\item 
+int \hyperlink{class_file_storage_ae28163449c4c40730b5e27b75362e22d}{read} (char $\ast$buf, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} size)
+\item 
+int \hyperlink{class_file_storage_a9f680051229bda7bca2639e5464bca77}{write} (const char $\ast$buf, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} size)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_file_storage_ae033a7582c81d34ce0dba7e3b9e261a4}{open} (int \hyperlink{060__command__switch_8tcl_a78d127e8bda64d4471ac811ad512fbd9}{m})
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_file_storage_a1eccec51152846d9793e81abe6be2f3d}{seek} (\hyperlink{qglobal_8h_aecfc3c54bd29ad5964e1c1c3ccbf89df}{int64} \hyperlink{class_file_storage_aca71d590a66b59c587cdda09317ede93}{pos})
+\item 
+\hyperlink{qglobal_8h_aecfc3c54bd29ad5964e1c1c3ccbf89df}{int64} \hyperlink{class_file_storage_aca71d590a66b59c587cdda09317ede93}{pos} () const 
+\item 
+void \hyperlink{class_file_storage_a117ef83c02af566b40f58d9e7c93dbfd}{close} ()
+\item 
+void \hyperlink{class_file_storage_a34fae2b5ed8a461f14648784058098e2}{set\+Name} (const char $\ast$name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\hyperlink{class_store}{Store} implementation based on a file. Writing is linear, after that the file is re-\/opened for reading. Reading is random (seek+read). 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_file_storage_a3a88a71218e6e8cb6c7af942ac1daf47}{}\index{File\+Storage@{File\+Storage}!File\+Storage@{File\+Storage}}
+\index{File\+Storage@{File\+Storage}!File\+Storage@{File\+Storage}}
+\subsubsection[{File\+Storage()}]{\setlength{\rightskip}{0pt plus 5cm}File\+Storage\+::\+File\+Storage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_file_storage_a3a88a71218e6e8cb6c7af942ac1daf47}
+\hypertarget{class_file_storage_afa4f6304190c22b38d504402aeeb8d12}{}\index{File\+Storage@{File\+Storage}!File\+Storage@{File\+Storage}}
+\index{File\+Storage@{File\+Storage}!File\+Storage@{File\+Storage}}
+\subsubsection[{File\+Storage(const Q\+String \&name)}]{\setlength{\rightskip}{0pt plus 5cm}File\+Storage\+::\+File\+Storage (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_file_storage_afa4f6304190c22b38d504402aeeb8d12}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_file_storage_a117ef83c02af566b40f58d9e7c93dbfd}{}\index{File\+Storage@{File\+Storage}!close@{close}}
+\index{close@{close}!File\+Storage@{File\+Storage}}
+\subsubsection[{close()}]{\setlength{\rightskip}{0pt plus 5cm}void File\+Storage\+::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_file_storage_a117ef83c02af566b40f58d9e7c93dbfd}
+\hypertarget{class_file_storage_ae033a7582c81d34ce0dba7e3b9e261a4}{}\index{File\+Storage@{File\+Storage}!open@{open}}
+\index{open@{open}!File\+Storage@{File\+Storage}}
+\subsubsection[{open(int m)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} File\+Storage\+::open (
+\begin{DoxyParamCaption}
+\item[{int}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_file_storage_ae033a7582c81d34ce0dba7e3b9e261a4}
+\hypertarget{class_file_storage_aca71d590a66b59c587cdda09317ede93}{}\index{File\+Storage@{File\+Storage}!pos@{pos}}
+\index{pos@{pos}!File\+Storage@{File\+Storage}}
+\subsubsection[{pos() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf int64} File\+Storage\+::pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_file_storage_aca71d590a66b59c587cdda09317ede93}
+\hypertarget{class_file_storage_ae28163449c4c40730b5e27b75362e22d}{}\index{File\+Storage@{File\+Storage}!read@{read}}
+\index{read@{read}!File\+Storage@{File\+Storage}}
+\subsubsection[{read(char $\ast$buf, uint size)}]{\setlength{\rightskip}{0pt plus 5cm}int File\+Storage\+::read (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buf, }
+\item[{{\bf uint}}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_file_storage_ae28163449c4c40730b5e27b75362e22d}
+Read {\itshape size} bytes from the store into {\itshape buf}. 
+
+Implémente \hyperlink{class_storage_intf_a125b99d1511364f4fe49709feec46bb4}{Storage\+Intf}.
+
+\hypertarget{class_file_storage_a1eccec51152846d9793e81abe6be2f3d}{}\index{File\+Storage@{File\+Storage}!seek@{seek}}
+\index{seek@{seek}!File\+Storage@{File\+Storage}}
+\subsubsection[{seek(int64 pos)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} File\+Storage\+::seek (
+\begin{DoxyParamCaption}
+\item[{{\bf int64}}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_file_storage_a1eccec51152846d9793e81abe6be2f3d}
+\hypertarget{class_file_storage_a34fae2b5ed8a461f14648784058098e2}{}\index{File\+Storage@{File\+Storage}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!File\+Storage@{File\+Storage}}
+\subsubsection[{set\+Name(const char $\ast$name)}]{\setlength{\rightskip}{0pt plus 5cm}void File\+Storage\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_file_storage_a34fae2b5ed8a461f14648784058098e2}
+\hypertarget{class_file_storage_a9f680051229bda7bca2639e5464bca77}{}\index{File\+Storage@{File\+Storage}!write@{write}}
+\index{write@{write}!File\+Storage@{File\+Storage}}
+\subsubsection[{write(const char $\ast$buf, uint size)}]{\setlength{\rightskip}{0pt plus 5cm}int File\+Storage\+::write (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{buf, }
+\item[{{\bf uint}}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_file_storage_a9f680051229bda7bca2639e5464bca77}
+Write {\itshape size} bytes from {\itshape buf} into the store. 
+
+Implémente \hyperlink{class_storage_intf_a97b26023c6cf0590423e428947d6febb}{Storage\+Intf}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{filestorage_8h}{filestorage.\+h}\end{DoxyCompactItemize}

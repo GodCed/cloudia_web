@@ -1,0 +1,126 @@
+\hypertarget{qregexp_8cpp}{}\section{Référence du fichier qtools/qregexp.cpp}
+\label{qregexp_8cpp}\index{qtools/qregexp.\+cpp@{qtools/qregexp.\+cpp}}
+{\ttfamily \#include \char`\"{}qregexp.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{qregexp_8cpp_a657064959cae30025b95643ad3f76d9b}{G\+E\+N}(x)~$\ast$\hyperlink{060__command__switch_8tcl_af43f4b1f0064a33b2d662af9f06d3a00}{d}++ = (x)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{qregexp_8cpp_ac23e8e593063682dcfb044c8d98f6e13}{E\+N\+D} = 0x00000000
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{qregexp_8cpp_a0e05ff05cd20362a15744acb34e43814}{P\+W\+S} = 0x10010000
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{qregexp_8cpp_a7ec26ae52bce96a1134c907f0d202959}{P\+D\+G} = 0x10020000
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{qregexp_8cpp_acaad098bf66edfbd45dad32996508711}{C\+C\+L} = 0x20010000
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{qregexp_8cpp_ae534dc98cf5fbc38239eb4ae2c3df37f}{C\+C\+N} = 0x20020000
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{qregexp_8cpp_ada942e4e8b99f2c59068c3043260ed7c}{C\+H\+R} = 0x40000000
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{qregexp_8cpp_a45444519aa34d6ecb25730dac3fb525c}{B\+O\+L} = 0x80010000
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{qregexp_8cpp_a41f731a03448884e595e54934809398b}{E\+O\+L} = 0x80020000
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{qregexp_8cpp_a5b4d77dab13165f748063e9d24619415}{B\+O\+W} = 0x80030000
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{qregexp_8cpp_a5350fdecda617f1ebd592bf6cb3acd0b}{E\+O\+W} = 0x80040000
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{qregexp_8cpp_a16fd518e67130ae21e718c75313bdbed}{A\+N\+Y} = 0x80050000
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{qregexp_8cpp_abff5ec8f0353c2ef805e98d4650b0c80}{C\+L\+O} = 0x80070000
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{qregexp_8cpp_a68dcd641f47a79d14cd514e45928f8b8}{O\+P\+T} = 0x80080000
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{qregexp_8cpp_a0dab7ea160b1b892063955b91a1fec60}{M\+C\+C} = 0x20000000
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{qregexp_8cpp_ad2f7c6640f9ffd1b07c8354566bcffbd}{M\+C\+D} = 0xffff0000
+\item 
+const \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{qregexp_8cpp_a32d3d0c1c389451821efa0da58b35eda}{M\+V\+L} = 0x0000ffff
+\item 
+const int \hyperlink{qregexp_8cpp_a61b1d7754a59bb3bef00153f17842866}{Pat\+Ok} = 0
+\item 
+const int \hyperlink{qregexp_8cpp_a88e567877f496a346c64afd7b09c7561}{Pat\+Null} = 1
+\item 
+const int \hyperlink{qregexp_8cpp_abeef1efd274e2209cd759f317e543786}{Pat\+Syntax} = 2
+\item 
+const int \hyperlink{qregexp_8cpp_a7cd77ea3ea8114e85b93e64799b298be}{Pat\+Overflow} = 4
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{qregexp_8cpp_a657064959cae30025b95643ad3f76d9b}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!G\+E\+N@{G\+E\+N}}
+\index{G\+E\+N@{G\+E\+N}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{G\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+N(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~$\ast${\bf d}++ = (x)}\label{qregexp_8cpp_a657064959cae30025b95643ad3f76d9b}
+
+
+\subsection{Documentation des variables}
+\hypertarget{qregexp_8cpp_a16fd518e67130ae21e718c75313bdbed}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!A\+N\+Y@{A\+N\+Y}}
+\index{A\+N\+Y@{A\+N\+Y}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{A\+N\+Y}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} A\+N\+Y = 0x80050000}\label{qregexp_8cpp_a16fd518e67130ae21e718c75313bdbed}
+\hypertarget{qregexp_8cpp_a45444519aa34d6ecb25730dac3fb525c}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!B\+O\+L@{B\+O\+L}}
+\index{B\+O\+L@{B\+O\+L}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{B\+O\+L}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} B\+O\+L = 0x80010000}\label{qregexp_8cpp_a45444519aa34d6ecb25730dac3fb525c}
+\hypertarget{qregexp_8cpp_a5b4d77dab13165f748063e9d24619415}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!B\+O\+W@{B\+O\+W}}
+\index{B\+O\+W@{B\+O\+W}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{B\+O\+W}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} B\+O\+W = 0x80030000}\label{qregexp_8cpp_a5b4d77dab13165f748063e9d24619415}
+\hypertarget{qregexp_8cpp_acaad098bf66edfbd45dad32996508711}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!C\+C\+L@{C\+C\+L}}
+\index{C\+C\+L@{C\+C\+L}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{C\+C\+L}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} C\+C\+L = 0x20010000}\label{qregexp_8cpp_acaad098bf66edfbd45dad32996508711}
+\hypertarget{qregexp_8cpp_ae534dc98cf5fbc38239eb4ae2c3df37f}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!C\+C\+N@{C\+C\+N}}
+\index{C\+C\+N@{C\+C\+N}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{C\+C\+N}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} C\+C\+N = 0x20020000}\label{qregexp_8cpp_ae534dc98cf5fbc38239eb4ae2c3df37f}
+\hypertarget{qregexp_8cpp_ada942e4e8b99f2c59068c3043260ed7c}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!C\+H\+R@{C\+H\+R}}
+\index{C\+H\+R@{C\+H\+R}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{C\+H\+R}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} C\+H\+R = 0x40000000}\label{qregexp_8cpp_ada942e4e8b99f2c59068c3043260ed7c}
+\hypertarget{qregexp_8cpp_abff5ec8f0353c2ef805e98d4650b0c80}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!C\+L\+O@{C\+L\+O}}
+\index{C\+L\+O@{C\+L\+O}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{C\+L\+O}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} C\+L\+O = 0x80070000}\label{qregexp_8cpp_abff5ec8f0353c2ef805e98d4650b0c80}
+\hypertarget{qregexp_8cpp_ac23e8e593063682dcfb044c8d98f6e13}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!E\+N\+D@{E\+N\+D}}
+\index{E\+N\+D@{E\+N\+D}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{E\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} E\+N\+D = 0x00000000}\label{qregexp_8cpp_ac23e8e593063682dcfb044c8d98f6e13}
+\hypertarget{qregexp_8cpp_a41f731a03448884e595e54934809398b}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!E\+O\+L@{E\+O\+L}}
+\index{E\+O\+L@{E\+O\+L}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{E\+O\+L}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} E\+O\+L = 0x80020000}\label{qregexp_8cpp_a41f731a03448884e595e54934809398b}
+\hypertarget{qregexp_8cpp_a5350fdecda617f1ebd592bf6cb3acd0b}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!E\+O\+W@{E\+O\+W}}
+\index{E\+O\+W@{E\+O\+W}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{E\+O\+W}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} E\+O\+W = 0x80040000}\label{qregexp_8cpp_a5350fdecda617f1ebd592bf6cb3acd0b}
+\hypertarget{qregexp_8cpp_a0dab7ea160b1b892063955b91a1fec60}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!M\+C\+C@{M\+C\+C}}
+\index{M\+C\+C@{M\+C\+C}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{M\+C\+C}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} M\+C\+C = 0x20000000}\label{qregexp_8cpp_a0dab7ea160b1b892063955b91a1fec60}
+\hypertarget{qregexp_8cpp_ad2f7c6640f9ffd1b07c8354566bcffbd}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!M\+C\+D@{M\+C\+D}}
+\index{M\+C\+D@{M\+C\+D}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{M\+C\+D}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} M\+C\+D = 0xffff0000}\label{qregexp_8cpp_ad2f7c6640f9ffd1b07c8354566bcffbd}
+\hypertarget{qregexp_8cpp_a32d3d0c1c389451821efa0da58b35eda}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!M\+V\+L@{M\+V\+L}}
+\index{M\+V\+L@{M\+V\+L}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{M\+V\+L}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} M\+V\+L = 0x0000ffff}\label{qregexp_8cpp_a32d3d0c1c389451821efa0da58b35eda}
+\hypertarget{qregexp_8cpp_a68dcd641f47a79d14cd514e45928f8b8}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!O\+P\+T@{O\+P\+T}}
+\index{O\+P\+T@{O\+P\+T}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{O\+P\+T}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} O\+P\+T = 0x80080000}\label{qregexp_8cpp_a68dcd641f47a79d14cd514e45928f8b8}
+\hypertarget{qregexp_8cpp_a88e567877f496a346c64afd7b09c7561}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!Pat\+Null@{Pat\+Null}}
+\index{Pat\+Null@{Pat\+Null}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{Pat\+Null}]{\setlength{\rightskip}{0pt plus 5cm}const int Pat\+Null = 1}\label{qregexp_8cpp_a88e567877f496a346c64afd7b09c7561}
+\hypertarget{qregexp_8cpp_a61b1d7754a59bb3bef00153f17842866}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!Pat\+Ok@{Pat\+Ok}}
+\index{Pat\+Ok@{Pat\+Ok}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{Pat\+Ok}]{\setlength{\rightskip}{0pt plus 5cm}const int Pat\+Ok = 0}\label{qregexp_8cpp_a61b1d7754a59bb3bef00153f17842866}
+\hypertarget{qregexp_8cpp_a7cd77ea3ea8114e85b93e64799b298be}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!Pat\+Overflow@{Pat\+Overflow}}
+\index{Pat\+Overflow@{Pat\+Overflow}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{Pat\+Overflow}]{\setlength{\rightskip}{0pt plus 5cm}const int Pat\+Overflow = 4}\label{qregexp_8cpp_a7cd77ea3ea8114e85b93e64799b298be}
+\hypertarget{qregexp_8cpp_abeef1efd274e2209cd759f317e543786}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!Pat\+Syntax@{Pat\+Syntax}}
+\index{Pat\+Syntax@{Pat\+Syntax}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{Pat\+Syntax}]{\setlength{\rightskip}{0pt plus 5cm}const int Pat\+Syntax = 2}\label{qregexp_8cpp_abeef1efd274e2209cd759f317e543786}
+\hypertarget{qregexp_8cpp_a7ec26ae52bce96a1134c907f0d202959}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!P\+D\+G@{P\+D\+G}}
+\index{P\+D\+G@{P\+D\+G}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{P\+D\+G}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} P\+D\+G = 0x10020000}\label{qregexp_8cpp_a7ec26ae52bce96a1134c907f0d202959}
+\hypertarget{qregexp_8cpp_a0e05ff05cd20362a15744acb34e43814}{}\index{qregexp.\+cpp@{qregexp.\+cpp}!P\+W\+S@{P\+W\+S}}
+\index{P\+W\+S@{P\+W\+S}!qregexp.\+cpp@{qregexp.\+cpp}}
+\subsubsection[{P\+W\+S}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} P\+W\+S = 0x10010000}\label{qregexp_8cpp_a0e05ff05cd20362a15744acb34e43814}

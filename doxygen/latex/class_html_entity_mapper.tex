@@ -1,0 +1,251 @@
+\hypertarget{class_html_entity_mapper}{}\section{Référence de la classe Html\+Entity\+Mapper}
+\label{class_html_entity_mapper}\index{Html\+Entity\+Mapper@{Html\+Entity\+Mapper}}
+
+
+Singleton helper class to map html entities to other formats.  
+
+
+
+
+{\ttfamily \#include $<$htmlentity.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_symbol_abea9ba345564542cc6b65ae4c76be6c2}{Doc\+Symbol\+::\+Sym\+Type} \hyperlink{class_html_entity_mapper_a4bc462512023c6698e6a1176f1a88999}{name2sym} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&sym\+Name) const 
+\begin{DoxyCompactList}\small\item\em Give code of the requested H\+T\+M\+L entity name. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_html_entity_mapper_a0c1aef06cbed120b9e1ac386e1e500b5}{utf8} (\hyperlink{class_doc_symbol_abea9ba345564542cc6b65ae4c76be6c2}{Doc\+Symbol\+::\+Sym\+Type} symb, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} use\+In\+Printf=\hyperlink{qglobal_8h_a10e004b6916e78ff4ea8379be80b80cc}{F\+A\+L\+S\+E}) const 
+\begin{DoxyCompactList}\small\item\em Access routine to the U\+T\+F8 code of the H\+T\+M\+L entity. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_html_entity_mapper_a8a117e2fe7c7f38860f4d1123cb9734a}{html} (\hyperlink{class_doc_symbol_abea9ba345564542cc6b65ae4c76be6c2}{Doc\+Symbol\+::\+Sym\+Type} symb, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} use\+In\+Printf=\hyperlink{qglobal_8h_a10e004b6916e78ff4ea8379be80b80cc}{F\+A\+L\+S\+E}) const 
+\begin{DoxyCompactList}\small\item\em Access routine to the html code of the H\+T\+M\+L entity. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_html_entity_mapper_abc6b60d7d8e1f889ebd7c22c56b6f801}{xml} (\hyperlink{class_doc_symbol_abea9ba345564542cc6b65ae4c76be6c2}{Doc\+Symbol\+::\+Sym\+Type} symb) const 
+\begin{DoxyCompactList}\small\item\em Access routine to the X\+M\+L code of the H\+T\+M\+L entity. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_html_entity_mapper_a9e1b84fe6b05bb22a2de46a312f25692}{docbook} (\hyperlink{class_doc_symbol_abea9ba345564542cc6b65ae4c76be6c2}{Doc\+Symbol\+::\+Sym\+Type} symb) const 
+\begin{DoxyCompactList}\small\item\em Access routine to the docbook code of the H\+T\+M\+L entity. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_html_entity_mapper_adf5d438d76175bf69b8b3f5f5cf48049}{latex} (\hyperlink{class_doc_symbol_abea9ba345564542cc6b65ae4c76be6c2}{Doc\+Symbol\+::\+Sym\+Type} symb) const 
+\begin{DoxyCompactList}\small\item\em Access routine to the La\+Te\+X code of the H\+T\+M\+L entity. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_html_entity_mapper_ad37ccaeb13f37df8a8822dd34a0f72ac}{man} (\hyperlink{class_doc_symbol_abea9ba345564542cc6b65ae4c76be6c2}{Doc\+Symbol\+::\+Sym\+Type} symb) const 
+\begin{DoxyCompactList}\small\item\em Access routine to the man code of the H\+T\+M\+L entity. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_html_entity_mapper_aa3649e98f6a2eb010fe066f28f41bfe0}{rtf} (\hyperlink{class_doc_symbol_abea9ba345564542cc6b65ae4c76be6c2}{Doc\+Symbol\+::\+Sym\+Type} symb) const 
+\begin{DoxyCompactList}\small\item\em Access routine to the R\+T\+F code of the H\+T\+M\+L entity. \end{DoxyCompactList}\item 
+const \hyperlink{struct_doc_symbol_1_1_perl_symb}{Doc\+Symbol\+::\+Perl\+Symb} $\ast$ \hyperlink{class_html_entity_mapper_a6904c7bc4187272ab3b8de3887015901}{perl} (\hyperlink{class_doc_symbol_abea9ba345564542cc6b65ae4c76be6c2}{Doc\+Symbol\+::\+Sym\+Type} symb) const 
+\begin{DoxyCompactList}\small\item\em Access routine to the perl struct with the perl code of the H\+T\+M\+L entity. \end{DoxyCompactList}\item 
+void \hyperlink{class_html_entity_mapper_a8aacc9cd8ba8159378ad2f143058ae49}{write\+X\+M\+L\+Schema} (\hyperlink{class_f_text_stream}{F\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t})
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_html_entity_mapper}{Html\+Entity\+Mapper} $\ast$ \hyperlink{class_html_entity_mapper_ae6ddba77b763691a6e3a1c9021e8d944}{instance} ()
+\item 
+static void \hyperlink{class_html_entity_mapper_aa45124007f692528edfa91ffbcb21f12}{delete\+Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Singleton helper class to map html entities to other formats. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_html_entity_mapper_aa45124007f692528edfa91ffbcb21f12}{}\index{Html\+Entity\+Mapper@{Html\+Entity\+Mapper}!delete\+Instance@{delete\+Instance}}
+\index{delete\+Instance@{delete\+Instance}!Html\+Entity\+Mapper@{Html\+Entity\+Mapper}}
+\subsubsection[{delete\+Instance()}]{\setlength{\rightskip}{0pt plus 5cm}void Html\+Entity\+Mapper\+::delete\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_html_entity_mapper_aa45124007f692528edfa91ffbcb21f12}
+Deletes the one and only instance of the H\+T\+M\+L entity mapper \hypertarget{class_html_entity_mapper_a9e1b84fe6b05bb22a2de46a312f25692}{}\index{Html\+Entity\+Mapper@{Html\+Entity\+Mapper}!docbook@{docbook}}
+\index{docbook@{docbook}!Html\+Entity\+Mapper@{Html\+Entity\+Mapper}}
+\subsubsection[{docbook(\+Doc\+Symbol\+::\+Sym\+Type symb) const }]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Html\+Entity\+Mapper\+::docbook (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Symbol\+::\+Sym\+Type}}]{symb}
+\end{DoxyParamCaption}
+) const}\label{class_html_entity_mapper_a9e1b84fe6b05bb22a2de46a312f25692}
+
+
+Access routine to the docbook code of the H\+T\+M\+L entity. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em symb} & Code of the requested H\+T\+M\+L entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the docbook code of the H\+T\+M\+L entity, in case the docbook code is unknown {\ttfamily N\+U\+L\+L} is returned. 
+\end{DoxyReturn}
+\hypertarget{class_html_entity_mapper_a8a117e2fe7c7f38860f4d1123cb9734a}{}\index{Html\+Entity\+Mapper@{Html\+Entity\+Mapper}!html@{html}}
+\index{html@{html}!Html\+Entity\+Mapper@{Html\+Entity\+Mapper}}
+\subsubsection[{html(\+Doc\+Symbol\+::\+Sym\+Type symb, bool use\+In\+Printf=\+F\+A\+L\+S\+E) const }]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Html\+Entity\+Mapper\+::html (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Symbol\+::\+Sym\+Type}}]{symb, }
+\item[{{\bf bool}}]{use\+In\+Printf = {\ttfamily {\bf F\+A\+L\+S\+E}}}
+\end{DoxyParamCaption}
+) const}\label{class_html_entity_mapper_a8a117e2fe7c7f38860f4d1123cb9734a}
+
+
+Access routine to the html code of the H\+T\+M\+L entity. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em symb} & Code of the requested H\+T\+M\+L entity \\
+\hline
+{\em use\+In\+Printf} & If T\+R\+U\+E the result will be escaped such that it can be used in a printf string pattern \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the html representation of the H\+T\+M\+L entity, in case the html code is unknown {\ttfamily N\+U\+L\+L} is returned. 
+\end{DoxyReturn}
+\hypertarget{class_html_entity_mapper_ae6ddba77b763691a6e3a1c9021e8d944}{}\index{Html\+Entity\+Mapper@{Html\+Entity\+Mapper}!instance@{instance}}
+\index{instance@{instance}!Html\+Entity\+Mapper@{Html\+Entity\+Mapper}}
+\subsubsection[{instance()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Html\+Entity\+Mapper} $\ast$ Html\+Entity\+Mapper\+::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_html_entity_mapper_ae6ddba77b763691a6e3a1c9021e8d944}
+Returns the one and only instance of the H\+T\+M\+L entity mapper \hypertarget{class_html_entity_mapper_adf5d438d76175bf69b8b3f5f5cf48049}{}\index{Html\+Entity\+Mapper@{Html\+Entity\+Mapper}!latex@{latex}}
+\index{latex@{latex}!Html\+Entity\+Mapper@{Html\+Entity\+Mapper}}
+\subsubsection[{latex(\+Doc\+Symbol\+::\+Sym\+Type symb) const }]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Html\+Entity\+Mapper\+::latex (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Symbol\+::\+Sym\+Type}}]{symb}
+\end{DoxyParamCaption}
+) const}\label{class_html_entity_mapper_adf5d438d76175bf69b8b3f5f5cf48049}
+
+
+Access routine to the La\+Te\+X code of the H\+T\+M\+L entity. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em symb} & Code of the requested H\+T\+M\+L entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the La\+Te\+X code of the H\+T\+M\+L entity, in case the La\+Te\+X code is unknown {\ttfamily N\+U\+L\+L} is returned. 
+\end{DoxyReturn}
+\hypertarget{class_html_entity_mapper_ad37ccaeb13f37df8a8822dd34a0f72ac}{}\index{Html\+Entity\+Mapper@{Html\+Entity\+Mapper}!man@{man}}
+\index{man@{man}!Html\+Entity\+Mapper@{Html\+Entity\+Mapper}}
+\subsubsection[{man(\+Doc\+Symbol\+::\+Sym\+Type symb) const }]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Html\+Entity\+Mapper\+::man (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Symbol\+::\+Sym\+Type}}]{symb}
+\end{DoxyParamCaption}
+) const}\label{class_html_entity_mapper_ad37ccaeb13f37df8a8822dd34a0f72ac}
+
+
+Access routine to the man code of the H\+T\+M\+L entity. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em symb} & Code of the requested H\+T\+M\+L entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the man of the H\+T\+M\+L entity, in case the man code is unknown {\ttfamily N\+U\+L\+L} is returned. 
+\end{DoxyReturn}
+\hypertarget{class_html_entity_mapper_a4bc462512023c6698e6a1176f1a88999}{}\index{Html\+Entity\+Mapper@{Html\+Entity\+Mapper}!name2sym@{name2sym}}
+\index{name2sym@{name2sym}!Html\+Entity\+Mapper@{Html\+Entity\+Mapper}}
+\subsubsection[{name2sym(const Q\+C\+String \&sym\+Name) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Doc\+Symbol\+::\+Sym\+Type} Html\+Entity\+Mapper\+::name2sym (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{sym\+Name}
+\end{DoxyParamCaption}
+) const}\label{class_html_entity_mapper_a4bc462512023c6698e6a1176f1a88999}
+
+
+Give code of the requested H\+T\+M\+L entity name. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em sym\+Name} & H\+T\+M\+L entity name without {\ttfamily \&} and {\ttfamily }; \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the code for the requested H\+T\+M\+L entity name, in case the requested H\+T\+M\+L item does not exist {\ttfamily Doc\+Symbol\+::\+Sym\+\_\+unknown} is returned. 
+\end{DoxyReturn}
+\hypertarget{class_html_entity_mapper_a6904c7bc4187272ab3b8de3887015901}{}\index{Html\+Entity\+Mapper@{Html\+Entity\+Mapper}!perl@{perl}}
+\index{perl@{perl}!Html\+Entity\+Mapper@{Html\+Entity\+Mapper}}
+\subsubsection[{perl(\+Doc\+Symbol\+::\+Sym\+Type symb) const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Doc\+Symbol\+::\+Perl\+Symb} $\ast$ Html\+Entity\+Mapper\+::perl (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Symbol\+::\+Sym\+Type}}]{symb}
+\end{DoxyParamCaption}
+) const}\label{class_html_entity_mapper_a6904c7bc4187272ab3b8de3887015901}
+
+
+Access routine to the perl struct with the perl code of the H\+T\+M\+L entity. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em symb} & Code of the requested H\+T\+M\+L entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the pointer to perl struct with the perl code of the H\+T\+M\+L entity, in case the perl code does not exists the N\+U\+L\+L pointer is entered in the {\ttfamily symb} field and in the {\ttfamily \hyperlink{class_doc_symbol_a513eebcda007c5999064ab5de1d1e847a0a5a5284026a93c0d41427779e98e211}{Doc\+Symbol\+::\+Perl\+\_\+unknown}} in the {\ttfamily type} field. 
+\end{DoxyReturn}
+\hypertarget{class_html_entity_mapper_aa3649e98f6a2eb010fe066f28f41bfe0}{}\index{Html\+Entity\+Mapper@{Html\+Entity\+Mapper}!rtf@{rtf}}
+\index{rtf@{rtf}!Html\+Entity\+Mapper@{Html\+Entity\+Mapper}}
+\subsubsection[{rtf(\+Doc\+Symbol\+::\+Sym\+Type symb) const }]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Html\+Entity\+Mapper\+::rtf (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Symbol\+::\+Sym\+Type}}]{symb}
+\end{DoxyParamCaption}
+) const}\label{class_html_entity_mapper_aa3649e98f6a2eb010fe066f28f41bfe0}
+
+
+Access routine to the R\+T\+F code of the H\+T\+M\+L entity. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em symb} & Code of the requested H\+T\+M\+L entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the R\+T\+F of the H\+T\+M\+L entity, in case the R\+T\+F code is unknown {\ttfamily N\+U\+L\+L} is returned. 
+\end{DoxyReturn}
+\hypertarget{class_html_entity_mapper_a0c1aef06cbed120b9e1ac386e1e500b5}{}\index{Html\+Entity\+Mapper@{Html\+Entity\+Mapper}!utf8@{utf8}}
+\index{utf8@{utf8}!Html\+Entity\+Mapper@{Html\+Entity\+Mapper}}
+\subsubsection[{utf8(\+Doc\+Symbol\+::\+Sym\+Type symb, bool use\+In\+Printf=\+F\+A\+L\+S\+E) const }]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Html\+Entity\+Mapper\+::utf8 (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Symbol\+::\+Sym\+Type}}]{symb, }
+\item[{{\bf bool}}]{use\+In\+Printf = {\ttfamily {\bf F\+A\+L\+S\+E}}}
+\end{DoxyParamCaption}
+) const}\label{class_html_entity_mapper_a0c1aef06cbed120b9e1ac386e1e500b5}
+
+
+Access routine to the U\+T\+F8 code of the H\+T\+M\+L entity. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em symb} & Code of the requested H\+T\+M\+L entity \\
+\hline
+{\em use\+In\+Printf} & If T\+R\+U\+E the result will be escaped such that it can be used in a printf string pattern \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the U\+T\+F8 code of the H\+T\+M\+L entity, in case the U\+T\+F code is unknown {\ttfamily N\+U\+L\+L} is returned. 
+\end{DoxyReturn}
+\hypertarget{class_html_entity_mapper_a8aacc9cd8ba8159378ad2f143058ae49}{}\index{Html\+Entity\+Mapper@{Html\+Entity\+Mapper}!write\+X\+M\+L\+Schema@{write\+X\+M\+L\+Schema}}
+\index{write\+X\+M\+L\+Schema@{write\+X\+M\+L\+Schema}!Html\+Entity\+Mapper@{Html\+Entity\+Mapper}}
+\subsubsection[{write\+X\+M\+L\+Schema(\+F\+Text\+Stream \&t)}]{\setlength{\rightskip}{0pt plus 5cm}void Html\+Entity\+Mapper\+::write\+X\+M\+L\+Schema (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+Text\+Stream} \&}]{t}
+\end{DoxyParamCaption}
+)}\label{class_html_entity_mapper_a8aacc9cd8ba8159378ad2f143058ae49}
+\hypertarget{class_html_entity_mapper_abc6b60d7d8e1f889ebd7c22c56b6f801}{}\index{Html\+Entity\+Mapper@{Html\+Entity\+Mapper}!xml@{xml}}
+\index{xml@{xml}!Html\+Entity\+Mapper@{Html\+Entity\+Mapper}}
+\subsubsection[{xml(\+Doc\+Symbol\+::\+Sym\+Type symb) const }]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Html\+Entity\+Mapper\+::xml (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Symbol\+::\+Sym\+Type}}]{symb}
+\end{DoxyParamCaption}
+) const}\label{class_html_entity_mapper_abc6b60d7d8e1f889ebd7c22c56b6f801}
+
+
+Access routine to the X\+M\+L code of the H\+T\+M\+L entity. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em symb} & Code of the requested H\+T\+M\+L entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the X\+M\+L code of the H\+T\+M\+L entity, in case the X\+M\+L code is unknown {\ttfamily N\+U\+L\+L} is returned. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{htmlentity_8h}{htmlentity.\+h}\item 
+src/\hyperlink{htmlentity_8cpp}{htmlentity.\+cpp}\end{DoxyCompactItemize}

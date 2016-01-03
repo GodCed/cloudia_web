@@ -1,0 +1,91 @@
+\hypertarget{class_doc_auto_list_item}{}\section{Référence de la classe Doc\+Auto\+List\+Item}
+\label{class_doc_auto_list_item}\index{Doc\+Auto\+List\+Item@{Doc\+Auto\+List\+Item}}
+
+
+{\ttfamily \#include $<$docparser.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Doc\+Auto\+List\+Item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doc_auto_list_item}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_auto_list_item_a2b29a9aa6b46c4c2c95f361bd3e14112}{Doc\+Auto\+List\+Item} (\hyperlink{class_doc_node}{Doc\+Node} $\ast$\hyperlink{class_doc_node_a990d8b983962776a647e6231d38bd329}{parent}, int indent, int num)
+\item 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadb}{Kind} \hyperlink{class_doc_auto_list_item_aeb2aa1d89092c13e93dedb21ac3854fe}{kind} () const 
+\item 
+int \hyperlink{class_doc_auto_list_item_abb9509ef81850f8cd74479a1454c3dc9}{item\+Number} () const 
+\item 
+void \hyperlink{class_doc_auto_list_item_ad3efa9a8be51c6f39682425a139f1025}{accept} (\hyperlink{class_doc_visitor}{Doc\+Visitor} $\ast$v)
+\item 
+int \hyperlink{class_doc_auto_list_item_abb513e12cef0ab6a17ac78a795d4cedb}{parse} ()
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Node representing an item of a auto list 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_doc_auto_list_item_a2b29a9aa6b46c4c2c95f361bd3e14112}{}\index{Doc\+Auto\+List\+Item@{Doc\+Auto\+List\+Item}!Doc\+Auto\+List\+Item@{Doc\+Auto\+List\+Item}}
+\index{Doc\+Auto\+List\+Item@{Doc\+Auto\+List\+Item}!Doc\+Auto\+List\+Item@{Doc\+Auto\+List\+Item}}
+\subsubsection[{Doc\+Auto\+List\+Item(\+Doc\+Node $\ast$parent, int indent, int num)}]{\setlength{\rightskip}{0pt plus 5cm}Doc\+Auto\+List\+Item\+::\+Doc\+Auto\+List\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Node} $\ast$}]{parent, }
+\item[{int}]{indent, }
+\item[{int}]{num}
+\end{DoxyParamCaption}
+)}\label{class_doc_auto_list_item_a2b29a9aa6b46c4c2c95f361bd3e14112}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_doc_auto_list_item_ad3efa9a8be51c6f39682425a139f1025}{}\index{Doc\+Auto\+List\+Item@{Doc\+Auto\+List\+Item}!accept@{accept}}
+\index{accept@{accept}!Doc\+Auto\+List\+Item@{Doc\+Auto\+List\+Item}}
+\subsubsection[{accept(\+Doc\+Visitor $\ast$v)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Auto\+List\+Item\+::accept (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Visitor} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_auto_list_item_ad3efa9a8be51c6f39682425a139f1025}
+Acceptor function for node visitors. Part of the visitor pattern. 
+\begin{DoxyParams}{Paramètres}
+{\em v} & Abstract visitor. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_doc_node_a5303a550cbe6395663bf9b9dad28cbf1}{Doc\+Node}.
+
+\hypertarget{class_doc_auto_list_item_abb9509ef81850f8cd74479a1454c3dc9}{}\index{Doc\+Auto\+List\+Item@{Doc\+Auto\+List\+Item}!item\+Number@{item\+Number}}
+\index{item\+Number@{item\+Number}!Doc\+Auto\+List\+Item@{Doc\+Auto\+List\+Item}}
+\subsubsection[{item\+Number() const }]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Auto\+List\+Item\+::item\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_auto_list_item_abb9509ef81850f8cd74479a1454c3dc9}
+\hypertarget{class_doc_auto_list_item_aeb2aa1d89092c13e93dedb21ac3854fe}{}\index{Doc\+Auto\+List\+Item@{Doc\+Auto\+List\+Item}!kind@{kind}}
+\index{kind@{kind}!Doc\+Auto\+List\+Item@{Doc\+Auto\+List\+Item}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kind} Doc\+Auto\+List\+Item\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_auto_list_item_aeb2aa1d89092c13e93dedb21ac3854fe}
+Returns the kind of node. Provides runtime type information 
+
+Implémente \hyperlink{class_doc_node_a92d4aaa169a813ded919aa858024c809}{Doc\+Node}.
+
+\hypertarget{class_doc_auto_list_item_abb513e12cef0ab6a17ac78a795d4cedb}{}\index{Doc\+Auto\+List\+Item@{Doc\+Auto\+List\+Item}!parse@{parse}}
+\index{parse@{parse}!Doc\+Auto\+List\+Item@{Doc\+Auto\+List\+Item}}
+\subsubsection[{parse()}]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Auto\+List\+Item\+::parse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_doc_auto_list_item_abb513e12cef0ab6a17ac78a795d4cedb}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{docparser_8h}{docparser.\+h}\item 
+src/\hyperlink{docparser_8cpp}{docparser.\+cpp}\end{DoxyCompactItemize}

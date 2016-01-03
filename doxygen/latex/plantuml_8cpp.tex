@@ -1,0 +1,56 @@
+\hypertarget{plantuml_8cpp}{}\section{Référence du fichier src/plantuml.cpp}
+\label{plantuml_8cpp}\index{src/plantuml.\+cpp@{src/plantuml.\+cpp}}
+{\ttfamily \#include \char`\"{}plantuml.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}portable.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$qdir.\+h$>$}\\*
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{plantuml_8cpp_a036aace77ddcb20d588914f3f25f3f98}{write\+Plant\+U\+M\+L\+Source} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&out\+Dir, const \hyperlink{class_q_c_string}{Q\+C\+String} \&file\+Name, const \hyperlink{class_q_c_string}{Q\+C\+String} \&content)
+\item 
+void \hyperlink{plantuml_8cpp_a886823014d78a0ae469c52fd95d1b323}{generate\+Plant\+U\+M\+L\+Output} (const char $\ast$base\+Name, const char $\ast$out\+Dir, \hyperlink{plantuml_8h_a43c8b86e84c469b026c806149bf758aa}{Plant\+U\+M\+L\+Output\+Format} format)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{plantuml_8cpp_a886823014d78a0ae469c52fd95d1b323}{}\index{plantuml.\+cpp@{plantuml.\+cpp}!generate\+Plant\+U\+M\+L\+Output@{generate\+Plant\+U\+M\+L\+Output}}
+\index{generate\+Plant\+U\+M\+L\+Output@{generate\+Plant\+U\+M\+L\+Output}!plantuml.\+cpp@{plantuml.\+cpp}}
+\subsubsection[{generate\+Plant\+U\+M\+L\+Output(const char $\ast$base\+Name, const char $\ast$out\+Dir, Plant\+U\+M\+L\+Output\+Format format)}]{\setlength{\rightskip}{0pt plus 5cm}void generate\+Plant\+U\+M\+L\+Output (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{base\+Name, }
+\item[{const char $\ast$}]{out\+Dir, }
+\item[{{\bf Plant\+U\+M\+L\+Output\+Format}}]{format}
+\end{DoxyParamCaption}
+)}\label{plantuml_8cpp_a886823014d78a0ae469c52fd95d1b323}
+Convert a Plant\+U\+M\+L file to an image. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em base\+Name} & the name of the generated file (as returned by \hyperlink{plantuml_8h_a036aace77ddcb20d588914f3f25f3f98}{write\+Plant\+U\+M\+L\+Source()}) \\
+\hline
+\mbox{\tt in}  & {\em out\+Dir} & the directory to write the resulting image into. \\
+\hline
+\mbox{\tt in}  & {\em format} & the image format to generate. \\
+\hline
+\end{DoxyParams}
+\hypertarget{plantuml_8cpp_a036aace77ddcb20d588914f3f25f3f98}{}\index{plantuml.\+cpp@{plantuml.\+cpp}!write\+Plant\+U\+M\+L\+Source@{write\+Plant\+U\+M\+L\+Source}}
+\index{write\+Plant\+U\+M\+L\+Source@{write\+Plant\+U\+M\+L\+Source}!plantuml.\+cpp@{plantuml.\+cpp}}
+\subsubsection[{write\+Plant\+U\+M\+L\+Source(const Q\+C\+String \&out\+Dir, const Q\+C\+String \&file\+Name, const Q\+C\+String \&content)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} write\+Plant\+U\+M\+L\+Source (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{out\+Dir, }
+\item[{const {\bf Q\+C\+String} \&}]{file\+Name, }
+\item[{const {\bf Q\+C\+String} \&}]{content}
+\end{DoxyParamCaption}
+)}\label{plantuml_8cpp_a036aace77ddcb20d588914f3f25f3f98}
+Write a Plant\+U\+M\+L compatible file. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em out\+Dir} & the output directory to write the file to. \\
+\hline
+\mbox{\tt in}  & {\em file\+Name} & the name of the file. If empty a name will be chosen automatically. \\
+\hline
+\mbox{\tt in}  & {\em content} & the contents of the Plant\+U\+M\+L file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+The name of the generated file. 
+\end{DoxyReturn}

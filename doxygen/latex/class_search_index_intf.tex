@@ -1,0 +1,117 @@
+\hypertarget{class_search_index_intf}{}\section{Référence de la classe Search\+Index\+Intf}
+\label{class_search_index_intf}\index{Search\+Index\+Intf@{Search\+Index\+Intf}}
+
+
+{\ttfamily \#include $<$searchindex.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Search\+Index\+Intf\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_search_index_intf}
+\end{center}
+\end{figure}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_search_index_intf_ade3dd4c1f8bc6487f0f3dccba5c6f9ea}{Kind} \{ \hyperlink{class_search_index_intf_ade3dd4c1f8bc6487f0f3dccba5c6f9eaa4e9f47fa9f92dd54889f2e95261a1041}{Internal}, 
+\hyperlink{class_search_index_intf_ade3dd4c1f8bc6487f0f3dccba5c6f9eaa507071eac5d8808e1e91570d8c20523b}{External}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_search_index_intf_acf0114aef9108626eacc8c3fa065a46d}{Search\+Index\+Intf} (\hyperlink{class_search_index_intf_ade3dd4c1f8bc6487f0f3dccba5c6f9ea}{Kind} \hyperlink{060__command__switch_8tcl_a20363f854eb4098a446733d63d34dbc1}{k})
+\item 
+virtual \hyperlink{class_search_index_intf_a02fd1bf25d2f9f7d5ff12fcee678be80}{$\sim$\+Search\+Index\+Intf} ()
+\item 
+virtual void \hyperlink{class_search_index_intf_afb1f4d8ad5e2f24848f902ae82e38d31}{set\+Current\+Doc} (\hyperlink{class_definition}{Definition} $\ast$ctx, const char $\ast$anchor, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} is\+Source\+File)=0
+\item 
+virtual void \hyperlink{class_search_index_intf_abc2c1e940b5b534bbcec2b8a2356a7be}{add\+Word} (const char $\ast$word, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} hi\+Priority)=0
+\item 
+virtual void \hyperlink{class_search_index_intf_a58f5360b72b2379373e3efd001b7287a}{write} (const char $\ast$file)=0
+\item 
+\hyperlink{class_search_index_intf_ade3dd4c1f8bc6487f0f3dccba5c6f9ea}{Kind} \hyperlink{class_search_index_intf_a7cd92ca2c1615831b8880c63b8800030}{kind} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{class_search_index_intf_ade3dd4c1f8bc6487f0f3dccba5c6f9ea}{}\index{Search\+Index\+Intf@{Search\+Index\+Intf}!Kind@{Kind}}
+\index{Kind@{Kind}!Search\+Index\+Intf@{Search\+Index\+Intf}}
+\subsubsection[{Kind}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Search\+Index\+Intf\+::\+Kind}}\label{class_search_index_intf_ade3dd4c1f8bc6487f0f3dccba5c6f9ea}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Internal@{Internal}!Search\+Index\+Intf@{Search\+Index\+Intf}}\index{Search\+Index\+Intf@{Search\+Index\+Intf}!Internal@{Internal}}\item[{\em 
+\hypertarget{class_search_index_intf_ade3dd4c1f8bc6487f0f3dccba5c6f9eaa4e9f47fa9f92dd54889f2e95261a1041}{}Internal\label{class_search_index_intf_ade3dd4c1f8bc6487f0f3dccba5c6f9eaa4e9f47fa9f92dd54889f2e95261a1041}
+}]\index{External@{External}!Search\+Index\+Intf@{Search\+Index\+Intf}}\index{Search\+Index\+Intf@{Search\+Index\+Intf}!External@{External}}\item[{\em 
+\hypertarget{class_search_index_intf_ade3dd4c1f8bc6487f0f3dccba5c6f9eaa507071eac5d8808e1e91570d8c20523b}{}External\label{class_search_index_intf_ade3dd4c1f8bc6487f0f3dccba5c6f9eaa507071eac5d8808e1e91570d8c20523b}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_search_index_intf_acf0114aef9108626eacc8c3fa065a46d}{}\index{Search\+Index\+Intf@{Search\+Index\+Intf}!Search\+Index\+Intf@{Search\+Index\+Intf}}
+\index{Search\+Index\+Intf@{Search\+Index\+Intf}!Search\+Index\+Intf@{Search\+Index\+Intf}}
+\subsubsection[{Search\+Index\+Intf(\+Kind k)}]{\setlength{\rightskip}{0pt plus 5cm}Search\+Index\+Intf\+::\+Search\+Index\+Intf (
+\begin{DoxyParamCaption}
+\item[{{\bf Kind}}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_search_index_intf_acf0114aef9108626eacc8c3fa065a46d}
+\hypertarget{class_search_index_intf_a02fd1bf25d2f9f7d5ff12fcee678be80}{}\index{Search\+Index\+Intf@{Search\+Index\+Intf}!````~Search\+Index\+Intf@{$\sim$\+Search\+Index\+Intf}}
+\index{````~Search\+Index\+Intf@{$\sim$\+Search\+Index\+Intf}!Search\+Index\+Intf@{Search\+Index\+Intf}}
+\subsubsection[{$\sim$\+Search\+Index\+Intf()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Search\+Index\+Intf\+::$\sim$\+Search\+Index\+Intf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_search_index_intf_a02fd1bf25d2f9f7d5ff12fcee678be80}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_search_index_intf_abc2c1e940b5b534bbcec2b8a2356a7be}{}\index{Search\+Index\+Intf@{Search\+Index\+Intf}!add\+Word@{add\+Word}}
+\index{add\+Word@{add\+Word}!Search\+Index\+Intf@{Search\+Index\+Intf}}
+\subsubsection[{add\+Word(const char $\ast$word, bool hi\+Priority)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Search\+Index\+Intf\+::add\+Word (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{word, }
+\item[{{\bf bool}}]{hi\+Priority}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_search_index_intf_abc2c1e940b5b534bbcec2b8a2356a7be}
+
+
+Implémenté dans \hyperlink{class_search_index_external_af54cf0b5fb981a1d36c32f8d47b4cfca}{Search\+Index\+External}, et \hyperlink{class_search_index_a24345f511da7dc5ccc6d12b232f8fb53}{Search\+Index}.
+
+\hypertarget{class_search_index_intf_a7cd92ca2c1615831b8880c63b8800030}{}\index{Search\+Index\+Intf@{Search\+Index\+Intf}!kind@{kind}}
+\index{kind@{kind}!Search\+Index\+Intf@{Search\+Index\+Intf}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kind} Search\+Index\+Intf\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_search_index_intf_a7cd92ca2c1615831b8880c63b8800030}
+\hypertarget{class_search_index_intf_afb1f4d8ad5e2f24848f902ae82e38d31}{}\index{Search\+Index\+Intf@{Search\+Index\+Intf}!set\+Current\+Doc@{set\+Current\+Doc}}
+\index{set\+Current\+Doc@{set\+Current\+Doc}!Search\+Index\+Intf@{Search\+Index\+Intf}}
+\subsubsection[{set\+Current\+Doc(\+Definition $\ast$ctx, const char $\ast$anchor, bool is\+Source\+File)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Search\+Index\+Intf\+::set\+Current\+Doc (
+\begin{DoxyParamCaption}
+\item[{{\bf Definition} $\ast$}]{ctx, }
+\item[{const char $\ast$}]{anchor, }
+\item[{{\bf bool}}]{is\+Source\+File}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_search_index_intf_afb1f4d8ad5e2f24848f902ae82e38d31}
+
+
+Implémenté dans \hyperlink{class_search_index_external_adcee9e316b56c1e9ae77c807f0b1db59}{Search\+Index\+External}, et \hyperlink{class_search_index_a805db5eec11f404b16f5ae2f23c9664b}{Search\+Index}.
+
+\hypertarget{class_search_index_intf_a58f5360b72b2379373e3efd001b7287a}{}\index{Search\+Index\+Intf@{Search\+Index\+Intf}!write@{write}}
+\index{write@{write}!Search\+Index\+Intf@{Search\+Index\+Intf}}
+\subsubsection[{write(const char $\ast$file)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Search\+Index\+Intf\+::write (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_search_index_intf_a58f5360b72b2379373e3efd001b7287a}
+
+
+Implémenté dans \hyperlink{class_search_index_external_a6a3bf5db1a454bb12cac4e3253962206}{Search\+Index\+External}, et \hyperlink{class_search_index_a84c14c8f3e4fd88df1f20363ca307279}{Search\+Index}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{searchindex_8h}{searchindex.\+h}\end{DoxyCompactItemize}

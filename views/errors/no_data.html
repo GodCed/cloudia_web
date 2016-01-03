@@ -1,0 +1,57 @@
+<!-- ALL PAGE ERROR CAN BE SET HERE ! 
+  to set an error to an elements in yours page use this :
+
+        // append error to container if no data
+        $( "#container" ).load( "../errors/no_data.html #no_data");
+        // We can use id of a div,li,a,p ... if we want...  
+        //$( "#container" ).load( "../errors/no_data.html #another_error div");
+
+//-->
+  
+<div id="no_data">
+    <link rel="stylesheet" href="../../style/style.css"/>
+    <div id="e404" style="">
+        <div id="content2">
+            <div id="wrapper">
+                <h1 id="header_error_id" class="e404 red-header"></h1>
+                <h2 id="header2_error_id"></h2>
+            </div>
+        </div>
+    </div>	
+</div>
+
+<div id="no_selection">
+    <link rel="stylesheet" href="../../style/style.css"/>
+    <div id="e404" style="">
+        <div id="content2">
+            <div id="wrapper">
+                <h1 class="e404 orange-header"><?php echo $language['error_no_data_h1']?></h1>
+                <h2><?php echo $language['error_no_select_h2']?></h2>
+            </div>
+        </div>
+    </div>	
+</div>
+
+<div id="not_logged">
+    <link rel="stylesheet" href="../../style/style.css"/>
+    <div id="e404" style="">
+        <div id="content2">
+            <div id="wrapper">
+                <h1 class="e404 red-header"><?php echo $language['error_no_logged_h1']?></h1>
+                <h2><?php echo $language['error_no_logged_h2']?></h2>
+            </div>
+        </div>
+    </div>	
+</div>
+
+<div id="account_created">
+    <link rel="stylesheet" href="../../style/style.css"/>
+    <div id="e404" style="">
+        <div id="content2">
+            <div id="wrapper">
+                <h1 class="e404 red-header"><?php echo $language['error_account_created']?></h1>
+                <h2><?php echo $language['error_account_created2']?></h2>
+            </div>
+        </div>
+    </div>	
+</div>

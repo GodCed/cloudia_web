@@ -1,0 +1,136 @@
+\documentclass{book}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{makeidx}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage[table]{xcolor}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{sectsty}
+\usepackage{amssymb}
+\usepackage[titles]{tocloft}
+\usepackage{doxygen}
+\lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=4,numbers=left }
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\familydefault}{\sfdefault}
+\hfuzz=15pt
+\setlength{\emergencystretch}{15pt}
+\hbadness=750
+\tolerance=750
+\begin{document}
+\hypersetup{pageanchor=false,citecolor=blue}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large Cloudia\-\_\-\-W\-E\-B }\\
+\vspace*{1cm}
+{\large Généré par Doxygen 1.8.1.2}\\
+\vspace*{0.5cm}
+{\small Lundi Juin 8 2015 18:06:34}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true,citecolor=blue}
+\chapter{Index des classes}
+\input{annotated}
+\chapter{Index des fichiers}
+\input{files}
+\chapter{Documentation des classes}
+\input{classemail__sender}
+\input{classhash__pass}
+\input{class_user}
+\chapter{Documentation des fichiers}
+\input{controllers_2account_2change__password_2change__password_8php}
+\input{views_2account_2change__password_8php}
+\input{email__passw__sender_8php}
+\input{forgot__password_8php}
+\input{hash__pass_8class_8php}
+\input{verify_login_8php}
+\input{_phpmyadmin_communication_8php}
+\input{verifyaccount_script_8php}
+\input{_user_8php}
+\input{data_8php}
+\input{index_8php}
+\input{views_2index_2index_8php}
+\input{apply__language_8php}
+\input{set__language_8php}
+\input{config_8js}
+\input{config__exemple_8js}
+\input{balises_8js}
+\input{blogpost_8js}
+\input{latlong_8js}
+\input{mesures_8js}
+\input{multilanguage_8js}
+\input{sensor_8js}
+\input{sensor__unit_8js}
+\input{sensors__alerts_8js}
+\input{stations_8js}
+\input{db_8js}
+\input{_d_b__settings_8php}
+\input{_d_b__settings__example_8php}
+\input{index_8js}
+\input{style_8css}
+\input{account__created_8php}
+\input{change__password__result_8php}
+\input{forget__password_8php}
+\input{forgot__password__result_8php}
+\input{log__in_8php}
+\input{log__out_8php}
+\input{settings_8php}
+\input{sign__in_8php}
+\input{about_8php}
+\input{blog_8php}
+\input{carousel_8php}
+\input{faq_8php}
+\input{sponsor_8php}
+\input{no__data_8html}
+\input{not__logged_8php}
+\input{footer_8php}
+\input{header_8php}
+\input{redirect__logout_8php}
+\input{session__start_8php}
+\input{data__list_8js}
+\input{faq_8js}
+\input{graph_8js}
+\input{graph__d_8js}
+\input{maps_8js}
+\input{nav__app_8js}
+\input{query_8js}
+\input{nav__app_8php}
+\input{show__measure_8php}
+\printindex
+\end{document}

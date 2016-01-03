@@ -1,0 +1,68 @@
+\hypertarget{class_q_l_node}{}\section{Référence de la classe Q\+L\+Node}
+\label{class_q_l_node}\index{Q\+L\+Node@{Q\+L\+Node}}
+
+
+The \hyperlink{class_q_l_node}{Q\+L\+Node} class is an internal class for the \hyperlink{class_q_list}{Q\+List} template collection.  
+
+
+
+
+{\ttfamily \#include $<$qglist.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_collection_ac6f3ddbf999e31fb797927f71ae6b5d7}{Q\+Collection\+::\+Item} \hyperlink{class_q_l_node_a7ed136ea4cd9729dd3b37bd904cc0e62}{get\+Data} ()
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_q_l_node_a9bfde3c3259271cb86b87bd78b399dd5}{Q\+G\+List}
+\item 
+class \hyperlink{class_q_l_node_a13dc100371e8931a394e57af8df9fbb3}{Q\+G\+List\+Iterator}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+The \hyperlink{class_q_l_node}{Q\+L\+Node} class is an internal class for the \hyperlink{class_q_list}{Q\+List} template collection. 
+
+\hyperlink{class_q_l_node}{Q\+L\+Node} is a doubly linked list node; it has three pointers\+: 
+\begin{DoxyEnumerate}
+\item Pointer to the previous node. 
+\item Pointer to the next node. 
+\item Pointer to the actual data. 
+\end{DoxyEnumerate}
+
+Sometimes it might be practical to have direct access to the list nodes in a \hyperlink{class_q_list}{Q\+List}, but it is seldom required.
+
+\begin{DoxyWarning}{Avertissement}
+Be very careful if you want to access the list nodes. The heap can easily get corrupted if you make a mistake.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_g_list_a7d76ecf243f2229caae1ae9caf555e4d}{Q\+List\+::current\+Node()}, \hyperlink{class_q_g_list_af146dd013966d2571f182dc9f1eca10b}{Q\+List\+::remove\+Node()}, \hyperlink{class_q_g_list_a256c045c464961c22f30259083c80a3c}{Q\+List\+::take\+Node()} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_l_node_a7ed136ea4cd9729dd3b37bd904cc0e62}{}\index{Q\+L\+Node@{Q\+L\+Node}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!Q\+L\+Node@{Q\+L\+Node}}
+\subsubsection[{get\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Collection\+::\+Item} Q\+L\+Node\+::get\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_l_node_a7ed136ea4cd9729dd3b37bd904cc0e62}
+Returns a pointer ({\ttfamily void$\ast$}) to the actual data in the list node. 
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_q_l_node_a9bfde3c3259271cb86b87bd78b399dd5}{}\index{Q\+L\+Node@{Q\+L\+Node}!Q\+G\+List@{Q\+G\+List}}
+\index{Q\+G\+List@{Q\+G\+List}!Q\+L\+Node@{Q\+L\+Node}}
+\subsubsection[{Q\+G\+List}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Q\+G\+List}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_q_l_node_a9bfde3c3259271cb86b87bd78b399dd5}
+\hypertarget{class_q_l_node_a13dc100371e8931a394e57af8df9fbb3}{}\index{Q\+L\+Node@{Q\+L\+Node}!Q\+G\+List\+Iterator@{Q\+G\+List\+Iterator}}
+\index{Q\+G\+List\+Iterator@{Q\+G\+List\+Iterator}!Q\+L\+Node@{Q\+L\+Node}}
+\subsubsection[{Q\+G\+List\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Q\+G\+List\+Iterator}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_q_l_node_a13dc100371e8931a394e57af8df9fbb3}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qglist_8h}{qglist.\+h}\item 
+qtools/\hyperlink{qglist_8cpp}{qglist.\+cpp}\end{DoxyCompactItemize}

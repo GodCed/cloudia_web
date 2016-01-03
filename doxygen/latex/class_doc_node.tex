@@ -1,0 +1,317 @@
+\hypertarget{class_doc_node}{}\section{Référence de la classe Doc\+Node}
+\label{class_doc_node}\index{Doc\+Node@{Doc\+Node}}
+
+
+{\ttfamily \#include $<$docparser.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Doc\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_doc_node}
+\end{center}
+\end{figure}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadb}{Kind} \{ \\*
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba40f32b4da392f2e607acd9dcd51e97ef}{Kind\+\_\+\+Root} = 0, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbafaa72c1c3a23f07645d1546177e265ad}{Kind\+\_\+\+Word} = 1, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba19ac8d817d8ba62f451c9ac6b06052c9}{Kind\+\_\+\+White\+Space} = 2, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbab386d3972ee5815e6403a2ba94d13da7}{Kind\+\_\+\+Para} = 3, 
+\\*
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbaf4af6d302524a2a72e6503fa4b5008cc}{Kind\+\_\+\+Auto\+List} = 4, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba09e40b89d37e12cd78384c04aea5c185}{Kind\+\_\+\+Auto\+List\+Item} = 5, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba11cfbdc9641f7d5e57bbf9d2d1ac29f6}{Kind\+\_\+\+Symbol} = 6, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbaf65de407d32b599b5b8e3172e910921f}{Kind\+\_\+\+U\+R\+L} = 7, 
+\\*
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba23b15e9d0bd5a796e7ea6bc5ddb90a51}{Kind\+\_\+\+Style\+Change} = 8, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbac383a7308a123820e290b129354b945b}{Kind\+\_\+\+Simple\+Sect} = 9, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba3a4f43b18aee3dae38339c2e322f019d}{Kind\+\_\+\+Title} = 10, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba653816fa54d8104dc69848cd470e9e50}{Kind\+\_\+\+Simple\+List} = 11, 
+\\*
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba3484d4b967a5e3650a21218cafe45bfc}{Kind\+\_\+\+Simple\+List\+Item} = 12, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba2adb5849cad20cab071f918a8da06938}{Kind\+\_\+\+Section} = 13, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba647ae404715ce1ea95d747d03302d069}{Kind\+\_\+\+Verbatim} = 14, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbabf87f371a0f69d86d0e6606d31133d40}{Kind\+\_\+\+X\+Ref\+Item} = 15, 
+\\*
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba2d89d13df0a6a173008cc476ed19da5a}{Kind\+\_\+\+Html\+List} = 16, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba3899f85cc2bbe76eebc01969f026c4a8}{Kind\+\_\+\+Html\+List\+Item} = 17, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbad53b68c158dba60a523d4fd261741c1a}{Kind\+\_\+\+Html\+Desc\+List} = 18, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbac9568654cd0eaa2d2e6705eb88b8bb6f}{Kind\+\_\+\+Html\+Desc\+Data} = 19, 
+\\*
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba0e47ad72ee03a88acc5d35755230a4bc}{Kind\+\_\+\+Html\+Desc\+Title} = 20, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbaaa0953fe727d5208d808d6200db9d8c4}{Kind\+\_\+\+Html\+Table} = 21, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba4aecc53268c197469ae7e36a82297f66}{Kind\+\_\+\+Html\+Row} = 22, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbae35a8fc01717b7fba896f3f9103b641a}{Kind\+\_\+\+Html\+Cell} = 23, 
+\\*
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba3f64e51b724ff9f596689e66165d4e5f}{Kind\+\_\+\+Html\+Caption} = 24, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba806ec6c0d1fe6c3d855364ae3ab6f02e}{Kind\+\_\+\+Line\+Break} = 25, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba66fdcd73d28143e4eee061037d1c0d05}{Kind\+\_\+\+Hor\+Ruler} = 26, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba5acf76d5bed04d9f8973b5599e4c7d61}{Kind\+\_\+\+Anchor} = 27, 
+\\*
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba0c99bba8a3a83741f4cb5b488be07919}{Kind\+\_\+\+Index\+Entry} = 28, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbaa908f2050f29caaa1852bc6bfc2167d7}{Kind\+\_\+\+Internal} = 29, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba219784882f7a809370a515cbf18c2794}{Kind\+\_\+\+H\+Ref} = 30, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba0d394262ed69236213f48850d00655e1}{Kind\+\_\+\+Include} = 31, 
+\\*
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba22a463e2625469c3243a58a25ec2ac5e}{Kind\+\_\+\+Inc\+Operator} = 32, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbac559cf092ec1d51d36500217b128df91}{Kind\+\_\+\+Html\+Header} = 33, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba130db602d847e2889247e35215f6ab61}{Kind\+\_\+\+Image} = 34, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba31635222d2661ef99e79b44bf3b58382}{Kind\+\_\+\+Dot\+File} = 35, 
+\\*
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba3ea5a7ccd9136dff8ecd035c4d403c4d}{Kind\+\_\+\+Link} = 36, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba7e37091374b5c3a40bc6080b727b8633}{Kind\+\_\+\+Ref} = 37, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbad6f44af7d7a9d2545d12570f1c911514}{Kind\+\_\+\+Formula} = 38, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbab434fb5f35821ac8e092397720a9986e}{Kind\+\_\+\+Sec\+Ref\+Item} = 39, 
+\\*
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba8a1dc5275094432667a3b3f60ca6924e}{Kind\+\_\+\+Sec\+Ref\+List} = 40, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba9e64be26f9961dd56b44dc8bf940f612}{Kind\+\_\+\+Simple\+Sect\+Sep} = 41, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba3078fef47a0dd99f4a3c2ea943e9dc38}{Kind\+\_\+\+Linked\+Word} = 42, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba98f09f518a149bbd2ca945d8be62b2eb}{Kind\+\_\+\+Param\+Sect} = 43, 
+\\*
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbada1efab7269767fb09ed0468023d47ef}{Kind\+\_\+\+Param\+List} = 44, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba08795b9078b94b17470db06f10e47e9a}{Kind\+\_\+\+Internal\+Ref} = 45, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba2c31b7a4358465ca132212321e15fc20}{Kind\+\_\+\+Copy} = 46, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba7625967c18a27b98c0253b1d8813b22a}{Kind\+\_\+\+Text} = 47, 
+\\*
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbaf7a503a623b646514dbf0a1cdd4bc56d}{Kind\+\_\+\+Msc\+File} = 48, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbacfac967afd367665bc4a4890828fc98d}{Kind\+\_\+\+Html\+Block\+Quote} = 49, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba2c92a0041dfb7d3d024370d59840a9ec}{Kind\+\_\+\+Vhdl\+Flow} = 50, 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba69391b77ca63fb33ccdbacdd0b27fdf6}{Kind\+\_\+\+Par\+Block} = 51, 
+\\*
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbacd1f2cb054b56af8d6a5afc5d112cfe9}{Kind\+\_\+\+Dia\+File} = 52
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_node_a98d902adedf9b2270a6673e59dbab89e}{Doc\+Node} ()
+\item 
+virtual \hyperlink{class_doc_node_a024e5ba89b140e83416f9f85f5f6d036}{$\sim$\+Doc\+Node} ()
+\item 
+virtual \hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadb}{Kind} \hyperlink{class_doc_node_a92d4aaa169a813ded919aa858024c809}{kind} () const  =0
+\item 
+\hyperlink{class_doc_node}{Doc\+Node} $\ast$ \hyperlink{class_doc_node_a990d8b983962776a647e6231d38bd329}{parent} () const 
+\item 
+void \hyperlink{class_doc_node_a2855de7ff1248fdb71e579087ae56098}{set\+Parent} (\hyperlink{class_doc_node}{Doc\+Node} $\ast$\hyperlink{class_doc_node_a990d8b983962776a647e6231d38bd329}{parent})
+\item 
+virtual void \hyperlink{class_doc_node_a5303a550cbe6395663bf9b9dad28cbf1}{accept} (\hyperlink{class_doc_visitor}{Doc\+Visitor} $\ast$v)=0
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_doc_node_aef508bc4dc916756c919594db7930d54}{is\+Preformatted} () const 
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_doc_node_a7059408f429dc1358764e334079ca986}{set\+Inside\+Preformatted} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{060__command__switch_8tcl_a15229b450f26d8fa1c10bea4f3279f4d}{p})
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_node}{Doc\+Node} $\ast$ \hyperlink{class_doc_node_a5f1139016d8919795a0e1c722d3e4b91}{m\+\_\+parent}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Abstract node interface with type information. 
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadb}{}\index{Doc\+Node@{Doc\+Node}!Kind@{Kind}}
+\index{Kind@{Kind}!Doc\+Node@{Doc\+Node}}
+\subsubsection[{Kind}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Doc\+Node\+::\+Kind}}\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadb}
+Available node types. \begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Kind\+\_\+\+Root@{Kind\+\_\+\+Root}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Root@{Kind\+\_\+\+Root}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba40f32b4da392f2e607acd9dcd51e97ef}{}Kind\+\_\+\+Root\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba40f32b4da392f2e607acd9dcd51e97ef}
+}]\index{Kind\+\_\+\+Word@{Kind\+\_\+\+Word}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Word@{Kind\+\_\+\+Word}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbafaa72c1c3a23f07645d1546177e265ad}{}Kind\+\_\+\+Word\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbafaa72c1c3a23f07645d1546177e265ad}
+}]\index{Kind\+\_\+\+White\+Space@{Kind\+\_\+\+White\+Space}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+White\+Space@{Kind\+\_\+\+White\+Space}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba19ac8d817d8ba62f451c9ac6b06052c9}{}Kind\+\_\+\+White\+Space\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba19ac8d817d8ba62f451c9ac6b06052c9}
+}]\index{Kind\+\_\+\+Para@{Kind\+\_\+\+Para}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Para@{Kind\+\_\+\+Para}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbab386d3972ee5815e6403a2ba94d13da7}{}Kind\+\_\+\+Para\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbab386d3972ee5815e6403a2ba94d13da7}
+}]\index{Kind\+\_\+\+Auto\+List@{Kind\+\_\+\+Auto\+List}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Auto\+List@{Kind\+\_\+\+Auto\+List}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbaf4af6d302524a2a72e6503fa4b5008cc}{}Kind\+\_\+\+Auto\+List\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbaf4af6d302524a2a72e6503fa4b5008cc}
+}]\index{Kind\+\_\+\+Auto\+List\+Item@{Kind\+\_\+\+Auto\+List\+Item}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Auto\+List\+Item@{Kind\+\_\+\+Auto\+List\+Item}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba09e40b89d37e12cd78384c04aea5c185}{}Kind\+\_\+\+Auto\+List\+Item\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba09e40b89d37e12cd78384c04aea5c185}
+}]\index{Kind\+\_\+\+Symbol@{Kind\+\_\+\+Symbol}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Symbol@{Kind\+\_\+\+Symbol}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba11cfbdc9641f7d5e57bbf9d2d1ac29f6}{}Kind\+\_\+\+Symbol\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba11cfbdc9641f7d5e57bbf9d2d1ac29f6}
+}]\index{Kind\+\_\+\+U\+R\+L@{Kind\+\_\+\+U\+R\+L}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+U\+R\+L@{Kind\+\_\+\+U\+R\+L}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbaf65de407d32b599b5b8e3172e910921f}{}Kind\+\_\+\+U\+R\+L\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbaf65de407d32b599b5b8e3172e910921f}
+}]\index{Kind\+\_\+\+Style\+Change@{Kind\+\_\+\+Style\+Change}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Style\+Change@{Kind\+\_\+\+Style\+Change}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba23b15e9d0bd5a796e7ea6bc5ddb90a51}{}Kind\+\_\+\+Style\+Change\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba23b15e9d0bd5a796e7ea6bc5ddb90a51}
+}]\index{Kind\+\_\+\+Simple\+Sect@{Kind\+\_\+\+Simple\+Sect}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Simple\+Sect@{Kind\+\_\+\+Simple\+Sect}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbac383a7308a123820e290b129354b945b}{}Kind\+\_\+\+Simple\+Sect\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbac383a7308a123820e290b129354b945b}
+}]\index{Kind\+\_\+\+Title@{Kind\+\_\+\+Title}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Title@{Kind\+\_\+\+Title}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba3a4f43b18aee3dae38339c2e322f019d}{}Kind\+\_\+\+Title\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba3a4f43b18aee3dae38339c2e322f019d}
+}]\index{Kind\+\_\+\+Simple\+List@{Kind\+\_\+\+Simple\+List}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Simple\+List@{Kind\+\_\+\+Simple\+List}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba653816fa54d8104dc69848cd470e9e50}{}Kind\+\_\+\+Simple\+List\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba653816fa54d8104dc69848cd470e9e50}
+}]\index{Kind\+\_\+\+Simple\+List\+Item@{Kind\+\_\+\+Simple\+List\+Item}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Simple\+List\+Item@{Kind\+\_\+\+Simple\+List\+Item}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba3484d4b967a5e3650a21218cafe45bfc}{}Kind\+\_\+\+Simple\+List\+Item\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba3484d4b967a5e3650a21218cafe45bfc}
+}]\index{Kind\+\_\+\+Section@{Kind\+\_\+\+Section}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Section@{Kind\+\_\+\+Section}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba2adb5849cad20cab071f918a8da06938}{}Kind\+\_\+\+Section\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba2adb5849cad20cab071f918a8da06938}
+}]\index{Kind\+\_\+\+Verbatim@{Kind\+\_\+\+Verbatim}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Verbatim@{Kind\+\_\+\+Verbatim}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba647ae404715ce1ea95d747d03302d069}{}Kind\+\_\+\+Verbatim\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba647ae404715ce1ea95d747d03302d069}
+}]\index{Kind\+\_\+\+X\+Ref\+Item@{Kind\+\_\+\+X\+Ref\+Item}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+X\+Ref\+Item@{Kind\+\_\+\+X\+Ref\+Item}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbabf87f371a0f69d86d0e6606d31133d40}{}Kind\+\_\+\+X\+Ref\+Item\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbabf87f371a0f69d86d0e6606d31133d40}
+}]\index{Kind\+\_\+\+Html\+List@{Kind\+\_\+\+Html\+List}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Html\+List@{Kind\+\_\+\+Html\+List}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba2d89d13df0a6a173008cc476ed19da5a}{}Kind\+\_\+\+Html\+List\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba2d89d13df0a6a173008cc476ed19da5a}
+}]\index{Kind\+\_\+\+Html\+List\+Item@{Kind\+\_\+\+Html\+List\+Item}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Html\+List\+Item@{Kind\+\_\+\+Html\+List\+Item}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba3899f85cc2bbe76eebc01969f026c4a8}{}Kind\+\_\+\+Html\+List\+Item\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba3899f85cc2bbe76eebc01969f026c4a8}
+}]\index{Kind\+\_\+\+Html\+Desc\+List@{Kind\+\_\+\+Html\+Desc\+List}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Html\+Desc\+List@{Kind\+\_\+\+Html\+Desc\+List}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbad53b68c158dba60a523d4fd261741c1a}{}Kind\+\_\+\+Html\+Desc\+List\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbad53b68c158dba60a523d4fd261741c1a}
+}]\index{Kind\+\_\+\+Html\+Desc\+Data@{Kind\+\_\+\+Html\+Desc\+Data}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Html\+Desc\+Data@{Kind\+\_\+\+Html\+Desc\+Data}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbac9568654cd0eaa2d2e6705eb88b8bb6f}{}Kind\+\_\+\+Html\+Desc\+Data\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbac9568654cd0eaa2d2e6705eb88b8bb6f}
+}]\index{Kind\+\_\+\+Html\+Desc\+Title@{Kind\+\_\+\+Html\+Desc\+Title}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Html\+Desc\+Title@{Kind\+\_\+\+Html\+Desc\+Title}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba0e47ad72ee03a88acc5d35755230a4bc}{}Kind\+\_\+\+Html\+Desc\+Title\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba0e47ad72ee03a88acc5d35755230a4bc}
+}]\index{Kind\+\_\+\+Html\+Table@{Kind\+\_\+\+Html\+Table}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Html\+Table@{Kind\+\_\+\+Html\+Table}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbaaa0953fe727d5208d808d6200db9d8c4}{}Kind\+\_\+\+Html\+Table\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbaaa0953fe727d5208d808d6200db9d8c4}
+}]\index{Kind\+\_\+\+Html\+Row@{Kind\+\_\+\+Html\+Row}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Html\+Row@{Kind\+\_\+\+Html\+Row}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba4aecc53268c197469ae7e36a82297f66}{}Kind\+\_\+\+Html\+Row\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba4aecc53268c197469ae7e36a82297f66}
+}]\index{Kind\+\_\+\+Html\+Cell@{Kind\+\_\+\+Html\+Cell}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Html\+Cell@{Kind\+\_\+\+Html\+Cell}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbae35a8fc01717b7fba896f3f9103b641a}{}Kind\+\_\+\+Html\+Cell\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbae35a8fc01717b7fba896f3f9103b641a}
+}]\index{Kind\+\_\+\+Html\+Caption@{Kind\+\_\+\+Html\+Caption}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Html\+Caption@{Kind\+\_\+\+Html\+Caption}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba3f64e51b724ff9f596689e66165d4e5f}{}Kind\+\_\+\+Html\+Caption\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba3f64e51b724ff9f596689e66165d4e5f}
+}]\index{Kind\+\_\+\+Line\+Break@{Kind\+\_\+\+Line\+Break}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Line\+Break@{Kind\+\_\+\+Line\+Break}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba806ec6c0d1fe6c3d855364ae3ab6f02e}{}Kind\+\_\+\+Line\+Break\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba806ec6c0d1fe6c3d855364ae3ab6f02e}
+}]\index{Kind\+\_\+\+Hor\+Ruler@{Kind\+\_\+\+Hor\+Ruler}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Hor\+Ruler@{Kind\+\_\+\+Hor\+Ruler}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba66fdcd73d28143e4eee061037d1c0d05}{}Kind\+\_\+\+Hor\+Ruler\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba66fdcd73d28143e4eee061037d1c0d05}
+}]\index{Kind\+\_\+\+Anchor@{Kind\+\_\+\+Anchor}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Anchor@{Kind\+\_\+\+Anchor}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba5acf76d5bed04d9f8973b5599e4c7d61}{}Kind\+\_\+\+Anchor\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba5acf76d5bed04d9f8973b5599e4c7d61}
+}]\index{Kind\+\_\+\+Index\+Entry@{Kind\+\_\+\+Index\+Entry}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Index\+Entry@{Kind\+\_\+\+Index\+Entry}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba0c99bba8a3a83741f4cb5b488be07919}{}Kind\+\_\+\+Index\+Entry\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba0c99bba8a3a83741f4cb5b488be07919}
+}]\index{Kind\+\_\+\+Internal@{Kind\+\_\+\+Internal}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Internal@{Kind\+\_\+\+Internal}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbaa908f2050f29caaa1852bc6bfc2167d7}{}Kind\+\_\+\+Internal\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbaa908f2050f29caaa1852bc6bfc2167d7}
+}]\index{Kind\+\_\+\+H\+Ref@{Kind\+\_\+\+H\+Ref}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+H\+Ref@{Kind\+\_\+\+H\+Ref}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba219784882f7a809370a515cbf18c2794}{}Kind\+\_\+\+H\+Ref\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba219784882f7a809370a515cbf18c2794}
+}]\index{Kind\+\_\+\+Include@{Kind\+\_\+\+Include}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Include@{Kind\+\_\+\+Include}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba0d394262ed69236213f48850d00655e1}{}Kind\+\_\+\+Include\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba0d394262ed69236213f48850d00655e1}
+}]\index{Kind\+\_\+\+Inc\+Operator@{Kind\+\_\+\+Inc\+Operator}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Inc\+Operator@{Kind\+\_\+\+Inc\+Operator}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba22a463e2625469c3243a58a25ec2ac5e}{}Kind\+\_\+\+Inc\+Operator\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba22a463e2625469c3243a58a25ec2ac5e}
+}]\index{Kind\+\_\+\+Html\+Header@{Kind\+\_\+\+Html\+Header}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Html\+Header@{Kind\+\_\+\+Html\+Header}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbac559cf092ec1d51d36500217b128df91}{}Kind\+\_\+\+Html\+Header\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbac559cf092ec1d51d36500217b128df91}
+}]\index{Kind\+\_\+\+Image@{Kind\+\_\+\+Image}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Image@{Kind\+\_\+\+Image}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba130db602d847e2889247e35215f6ab61}{}Kind\+\_\+\+Image\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba130db602d847e2889247e35215f6ab61}
+}]\index{Kind\+\_\+\+Dot\+File@{Kind\+\_\+\+Dot\+File}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Dot\+File@{Kind\+\_\+\+Dot\+File}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba31635222d2661ef99e79b44bf3b58382}{}Kind\+\_\+\+Dot\+File\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba31635222d2661ef99e79b44bf3b58382}
+}]\index{Kind\+\_\+\+Link@{Kind\+\_\+\+Link}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Link@{Kind\+\_\+\+Link}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba3ea5a7ccd9136dff8ecd035c4d403c4d}{}Kind\+\_\+\+Link\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba3ea5a7ccd9136dff8ecd035c4d403c4d}
+}]\index{Kind\+\_\+\+Ref@{Kind\+\_\+\+Ref}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Ref@{Kind\+\_\+\+Ref}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba7e37091374b5c3a40bc6080b727b8633}{}Kind\+\_\+\+Ref\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba7e37091374b5c3a40bc6080b727b8633}
+}]\index{Kind\+\_\+\+Formula@{Kind\+\_\+\+Formula}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Formula@{Kind\+\_\+\+Formula}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbad6f44af7d7a9d2545d12570f1c911514}{}Kind\+\_\+\+Formula\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbad6f44af7d7a9d2545d12570f1c911514}
+}]\index{Kind\+\_\+\+Sec\+Ref\+Item@{Kind\+\_\+\+Sec\+Ref\+Item}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Sec\+Ref\+Item@{Kind\+\_\+\+Sec\+Ref\+Item}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbab434fb5f35821ac8e092397720a9986e}{}Kind\+\_\+\+Sec\+Ref\+Item\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbab434fb5f35821ac8e092397720a9986e}
+}]\index{Kind\+\_\+\+Sec\+Ref\+List@{Kind\+\_\+\+Sec\+Ref\+List}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Sec\+Ref\+List@{Kind\+\_\+\+Sec\+Ref\+List}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba8a1dc5275094432667a3b3f60ca6924e}{}Kind\+\_\+\+Sec\+Ref\+List\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba8a1dc5275094432667a3b3f60ca6924e}
+}]\index{Kind\+\_\+\+Simple\+Sect\+Sep@{Kind\+\_\+\+Simple\+Sect\+Sep}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Simple\+Sect\+Sep@{Kind\+\_\+\+Simple\+Sect\+Sep}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba9e64be26f9961dd56b44dc8bf940f612}{}Kind\+\_\+\+Simple\+Sect\+Sep\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba9e64be26f9961dd56b44dc8bf940f612}
+}]\index{Kind\+\_\+\+Linked\+Word@{Kind\+\_\+\+Linked\+Word}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Linked\+Word@{Kind\+\_\+\+Linked\+Word}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba3078fef47a0dd99f4a3c2ea943e9dc38}{}Kind\+\_\+\+Linked\+Word\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba3078fef47a0dd99f4a3c2ea943e9dc38}
+}]\index{Kind\+\_\+\+Param\+Sect@{Kind\+\_\+\+Param\+Sect}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Param\+Sect@{Kind\+\_\+\+Param\+Sect}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba98f09f518a149bbd2ca945d8be62b2eb}{}Kind\+\_\+\+Param\+Sect\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba98f09f518a149bbd2ca945d8be62b2eb}
+}]\index{Kind\+\_\+\+Param\+List@{Kind\+\_\+\+Param\+List}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Param\+List@{Kind\+\_\+\+Param\+List}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbada1efab7269767fb09ed0468023d47ef}{}Kind\+\_\+\+Param\+List\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbada1efab7269767fb09ed0468023d47ef}
+}]\index{Kind\+\_\+\+Internal\+Ref@{Kind\+\_\+\+Internal\+Ref}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Internal\+Ref@{Kind\+\_\+\+Internal\+Ref}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba08795b9078b94b17470db06f10e47e9a}{}Kind\+\_\+\+Internal\+Ref\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba08795b9078b94b17470db06f10e47e9a}
+}]\index{Kind\+\_\+\+Copy@{Kind\+\_\+\+Copy}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Copy@{Kind\+\_\+\+Copy}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba2c31b7a4358465ca132212321e15fc20}{}Kind\+\_\+\+Copy\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba2c31b7a4358465ca132212321e15fc20}
+}]\index{Kind\+\_\+\+Text@{Kind\+\_\+\+Text}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Text@{Kind\+\_\+\+Text}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba7625967c18a27b98c0253b1d8813b22a}{}Kind\+\_\+\+Text\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba7625967c18a27b98c0253b1d8813b22a}
+}]\index{Kind\+\_\+\+Msc\+File@{Kind\+\_\+\+Msc\+File}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Msc\+File@{Kind\+\_\+\+Msc\+File}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbaf7a503a623b646514dbf0a1cdd4bc56d}{}Kind\+\_\+\+Msc\+File\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbaf7a503a623b646514dbf0a1cdd4bc56d}
+}]\index{Kind\+\_\+\+Html\+Block\+Quote@{Kind\+\_\+\+Html\+Block\+Quote}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Html\+Block\+Quote@{Kind\+\_\+\+Html\+Block\+Quote}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbacfac967afd367665bc4a4890828fc98d}{}Kind\+\_\+\+Html\+Block\+Quote\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbacfac967afd367665bc4a4890828fc98d}
+}]\index{Kind\+\_\+\+Vhdl\+Flow@{Kind\+\_\+\+Vhdl\+Flow}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Vhdl\+Flow@{Kind\+\_\+\+Vhdl\+Flow}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba2c92a0041dfb7d3d024370d59840a9ec}{}Kind\+\_\+\+Vhdl\+Flow\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba2c92a0041dfb7d3d024370d59840a9ec}
+}]\index{Kind\+\_\+\+Par\+Block@{Kind\+\_\+\+Par\+Block}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Par\+Block@{Kind\+\_\+\+Par\+Block}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba69391b77ca63fb33ccdbacdd0b27fdf6}{}Kind\+\_\+\+Par\+Block\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadba69391b77ca63fb33ccdbacdd0b27fdf6}
+}]\index{Kind\+\_\+\+Dia\+File@{Kind\+\_\+\+Dia\+File}!Doc\+Node@{Doc\+Node}}\index{Doc\+Node@{Doc\+Node}!Kind\+\_\+\+Dia\+File@{Kind\+\_\+\+Dia\+File}}\item[{\em 
+\hypertarget{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbacd1f2cb054b56af8d6a5afc5d112cfe9}{}Kind\+\_\+\+Dia\+File\label{class_doc_node_aebd16e89ca590d84cbd40543ea5faadbacd1f2cb054b56af8d6a5afc5d112cfe9}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_doc_node_a98d902adedf9b2270a6673e59dbab89e}{}\index{Doc\+Node@{Doc\+Node}!Doc\+Node@{Doc\+Node}}
+\index{Doc\+Node@{Doc\+Node}!Doc\+Node@{Doc\+Node}}
+\subsubsection[{Doc\+Node()}]{\setlength{\rightskip}{0pt plus 5cm}Doc\+Node\+::\+Doc\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_node_a98d902adedf9b2270a6673e59dbab89e}
+Creates a new node \hypertarget{class_doc_node_a024e5ba89b140e83416f9f85f5f6d036}{}\index{Doc\+Node@{Doc\+Node}!````~Doc\+Node@{$\sim$\+Doc\+Node}}
+\index{````~Doc\+Node@{$\sim$\+Doc\+Node}!Doc\+Node@{Doc\+Node}}
+\subsubsection[{$\sim$\+Doc\+Node()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Doc\+Node\+::$\sim$\+Doc\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_node_a024e5ba89b140e83416f9f85f5f6d036}
+Destroys a node. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_doc_node_a5303a550cbe6395663bf9b9dad28cbf1}{}\index{Doc\+Node@{Doc\+Node}!accept@{accept}}
+\index{accept@{accept}!Doc\+Node@{Doc\+Node}}
+\subsubsection[{accept(\+Doc\+Visitor $\ast$v)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Doc\+Node\+::accept (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Visitor} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_doc_node_a5303a550cbe6395663bf9b9dad28cbf1}
+Acceptor function for node visitors. Part of the visitor pattern. 
+\begin{DoxyParams}{Paramètres}
+{\em v} & Abstract visitor. \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \hyperlink{class_doc_root_aa5ddf3ae4f0557846668b54742d9b628}{Doc\+Root}, \hyperlink{class_doc_text_ae54567e57c08f0be11156d2bab58872d}{Doc\+Text}, \hyperlink{class_doc_html_block_quote_a6abcc247f3496e6422a7421eed062d41}{Doc\+Html\+Block\+Quote}, \hyperlink{class_doc_html_table_a800ecff89a18489af2a256c1a984e60a}{Doc\+Html\+Table}, \hyperlink{class_doc_html_row_a1b62250676fc8c1223c94fbc61beeb0e}{Doc\+Html\+Row}, \hyperlink{class_doc_html_caption_a30adf37b8dff0fd708bd2dec5553f4b2}{Doc\+Html\+Caption}, \hyperlink{class_doc_html_cell_a52cc927e1684777332944884f2ee9869}{Doc\+Html\+Cell}, \hyperlink{class_doc_html_desc_data_a4c69206e824affc9734c2a02c2ec912e}{Doc\+Html\+Desc\+Data}, \hyperlink{class_doc_html_list_item_af6b3a9f366666555c4dcceecc1a0742e}{Doc\+Html\+List\+Item}, \hyperlink{class_doc_simple_list_item_a977fe7d09d43c8bad1f91ddeac6f37f3}{Doc\+Simple\+List\+Item}, \hyperlink{class_doc_param_list_a4d62b1b89bf07c2debb1d71523379b8c}{Doc\+Param\+List}, \hyperlink{class_doc_para_a5c8cd8dc94b86fc379fe68fb4cfb50dd}{Doc\+Para}, \hyperlink{class_doc_param_sect_a8d62e64afbf83c9397c5479ffcacebd2}{Doc\+Param\+Sect}, \hyperlink{class_doc_simple_sect_sep_a75f9ed4d18c1fa4c83de3d9ef276bc7e}{Doc\+Simple\+Sect\+Sep}, \hyperlink{class_doc_simple_sect_a83c0f2c289b0d15403d1adf94c98982d}{Doc\+Simple\+Sect}, \hyperlink{class_doc_html_list_aa812a843c0756a9a1f88637563b2e5fd}{Doc\+Html\+List}, \hyperlink{class_doc_simple_list_a764781c073f3b4a6dd4d3b28a8a5c971}{Doc\+Simple\+List}, \hyperlink{class_doc_par_block_a29de0c7684503d2b885c363250608498}{Doc\+Par\+Block}, \hyperlink{class_doc_internal_a5bc31645d59f7a949298fe2d9bd8f976}{Doc\+Internal}, \hyperlink{class_doc_sec_ref_list_a9d3f6c837060c798649e068bbf3282c1}{Doc\+Sec\+Ref\+List}, \hyperlink{class_doc_sec_ref_item_a3dda5f27166b11c6a054e6f95d11d9a7}{Doc\+Sec\+Ref\+Item}, \hyperlink{class_doc_section_a18117f5ac173ad791c25cd0620703909}{Doc\+Section}, \hyperlink{class_doc_html_desc_list_a3e5ceeb75fd9713c900f4eb375c4e64b}{Doc\+Html\+Desc\+List}, \hyperlink{class_doc_html_desc_title_a66fa1bbbff8bf83e80844aa642ddca89}{Doc\+Html\+Desc\+Title}, \hyperlink{class_doc_html_header_a6eb2ce828e30e808a5f1d362cfa057d4}{Doc\+Html\+Header}, \hyperlink{class_doc_h_ref_a2d706b25d10a510cbe3600a843f87c3f}{Doc\+H\+Ref}, \hyperlink{class_doc_internal_ref_afb9d447c755b630a33218907e01a22f3}{Doc\+Internal\+Ref}, \hyperlink{class_doc_ref_a25a0bbf3186201c53d4a2f08448e4a0e}{Doc\+Ref}, \hyperlink{class_doc_link_ae9bd6b72ba2afe4ba35c4e3d854de0fa}{Doc\+Link}, \hyperlink{class_doc_vhdl_flow_ad17bde1b8f83295658f79669479c9262}{Doc\+Vhdl\+Flow}, \hyperlink{class_doc_dia_file_a617f514d0d0e57be3537886f827e734c}{Doc\+Dia\+File}, \hyperlink{class_doc_msc_file_aeb1ca7bcae9714c6cd1c71c1665a1dd1}{Doc\+Msc\+File}, \hyperlink{class_doc_dot_file_aa703c320494383f6b44a257b5db4ef4c}{Doc\+Dot\+File}, \hyperlink{class_doc_image_a1b4b4bf3bd61ff33e96b612fe5c0d0d8}{Doc\+Image}, \hyperlink{class_doc_x_ref_item_a4850d4a3b5fe80bbbcec8433276a5cb7}{Doc\+X\+Ref\+Item}, \hyperlink{class_doc_title_a364fe0325e849a4ca80318e0336a3244}{Doc\+Title}, \hyperlink{class_doc_auto_list_item_ad3efa9a8be51c6f39682425a139f1025}{Doc\+Auto\+List\+Item}, \hyperlink{class_doc_auto_list_ad73217f2d93cb92e86455a08fa4f6c7c}{Doc\+Auto\+List}, \hyperlink{class_doc_copy_a9b719f84800b76fcb9d441b9b64245d0}{Doc\+Copy}, \hyperlink{class_doc_index_entry_a509e4da75e8dbfaf40488509357c6e3c}{Doc\+Index\+Entry}, \hyperlink{class_doc_formula_a714e301b3a0805e3f117e42d3953b881}{Doc\+Formula}, \hyperlink{class_doc_inc_operator_a04e255a29d4ab90b17f2ebc233fe288a}{Doc\+Inc\+Operator}, \hyperlink{class_doc_include_a93c7e5ac3c65445b45512ff29ad3be0b}{Doc\+Include}, \hyperlink{class_doc_verbatim_ae98dce2edd2ad0fa399930f8e61ee9b0}{Doc\+Verbatim}, \hyperlink{class_doc_white_space_af3830207874d11f5e9fd193fe875d0fa}{Doc\+White\+Space}, \hyperlink{class_doc_symbol_ab7e27f7abdd4004918f6b39c09a05fd8}{Doc\+Symbol}, \hyperlink{class_doc_style_change_aa6c460a097e12a52603f4560daf1125f}{Doc\+Style\+Change}, \hyperlink{class_doc_cite_a0f18374c2b9d937c71e317b9d36f1647}{Doc\+Cite}, \hyperlink{class_doc_anchor_aab4638b79fb244e363d5d028c7a2cd65}{Doc\+Anchor}, \hyperlink{class_doc_hor_ruler_abd8d0ca3ec21f2ad20719c3840724118}{Doc\+Hor\+Ruler}, \hyperlink{class_doc_line_break_aa5f5795df35745cb45db9e77aeda2186}{Doc\+Line\+Break}, \hyperlink{class_doc_u_r_l_a15d23d59342d72ebc769947aca10e972}{Doc\+U\+R\+L}, \hyperlink{class_doc_linked_word_a0b72d6562825d9af44811eff41dd0600}{Doc\+Linked\+Word}, et \hyperlink{class_doc_word_a68a82c3d5879eee5e06214f42667f224}{Doc\+Word}.
+
+\hypertarget{class_doc_node_aef508bc4dc916756c919594db7930d54}{}\index{Doc\+Node@{Doc\+Node}!is\+Preformatted@{is\+Preformatted}}
+\index{is\+Preformatted@{is\+Preformatted}!Doc\+Node@{Doc\+Node}}
+\subsubsection[{is\+Preformatted() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Doc\+Node\+::is\+Preformatted (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_node_aef508bc4dc916756c919594db7930d54}
+Returns T\+R\+U\+E iff this node is inside a preformatted section \hypertarget{class_doc_node_a92d4aaa169a813ded919aa858024c809}{}\index{Doc\+Node@{Doc\+Node}!kind@{kind}}
+\index{kind@{kind}!Doc\+Node@{Doc\+Node}}
+\subsubsection[{kind() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Kind} Doc\+Node\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_doc_node_a92d4aaa169a813ded919aa858024c809}
+Returns the kind of node. Provides runtime type information 
+
+Implémenté dans \hyperlink{class_doc_root_abd93a1d4cb87a740b573f263bce16bb0}{Doc\+Root}, \hyperlink{class_doc_text_aa559edcbf1308364e687fdf3974d697e}{Doc\+Text}, \hyperlink{class_doc_html_block_quote_a58326d3d9cc4b5e71b2f80ff7b14bb07}{Doc\+Html\+Block\+Quote}, \hyperlink{class_doc_html_table_a60ce1cfeb24493e752acf644cad532c8}{Doc\+Html\+Table}, \hyperlink{class_doc_html_row_a7a03b3b7b19800deb159ed949dd87603}{Doc\+Html\+Row}, \hyperlink{class_doc_html_caption_a20c637403279b29a285480892e22e8fe}{Doc\+Html\+Caption}, \hyperlink{class_doc_html_cell_a3875c8b0c463b0b436baf054f7ed78d7}{Doc\+Html\+Cell}, \hyperlink{class_doc_html_desc_data_a2a4d493b0a381d7b877a88427710c336}{Doc\+Html\+Desc\+Data}, \hyperlink{class_doc_html_list_item_a943a9497abc63b442fdbdefbac9b9c9e}{Doc\+Html\+List\+Item}, \hyperlink{class_doc_simple_list_item_a0a4b7c196769a7249753b90edc55d379}{Doc\+Simple\+List\+Item}, \hyperlink{class_doc_param_list_a52e0a7a0ff48215cd1254cf975613082}{Doc\+Param\+List}, \hyperlink{class_doc_para_ac802ce4f07b2fcde259e6cd520dc040c}{Doc\+Para}, \hyperlink{class_doc_param_sect_a735fe99dbbbb6747bf1afe89590ee5db}{Doc\+Param\+Sect}, \hyperlink{class_doc_simple_sect_sep_a8ff7bd01c4efadd180b110dafa22dc5d}{Doc\+Simple\+Sect\+Sep}, \hyperlink{class_doc_simple_sect_adf5bfabb7a7bbb3deb064746aea10fb8}{Doc\+Simple\+Sect}, \hyperlink{class_doc_html_list_a3fd48ae88b3ffd6958310044dd7b2776}{Doc\+Html\+List}, \hyperlink{class_doc_simple_list_a997bd62a35be538fb085aaf0a124a964}{Doc\+Simple\+List}, \hyperlink{class_doc_par_block_a72632d08552cce9b69ed0fcd57f6ea7a}{Doc\+Par\+Block}, \hyperlink{class_doc_internal_a19b3cc051342dca36f64b7d7807d6d2b}{Doc\+Internal}, \hyperlink{class_doc_sec_ref_list_a6fb709a2a9f41dbe22d72ba38c6628c8}{Doc\+Sec\+Ref\+List}, \hyperlink{class_doc_sec_ref_item_a7461641d829cd19f9a9d73c1cbd4faaa}{Doc\+Sec\+Ref\+Item}, \hyperlink{class_doc_section_a0a88929cb01b6ce40417cffccc62baae}{Doc\+Section}, \hyperlink{class_doc_html_desc_list_a6b4a7203e86e33ed7da41acf08c38048}{Doc\+Html\+Desc\+List}, \hyperlink{class_doc_html_desc_title_a8630a49156f0a7fb48f873fe01075dc1}{Doc\+Html\+Desc\+Title}, \hyperlink{class_doc_html_header_aa2db7940be2aec52a9eaa1074743a90d}{Doc\+Html\+Header}, \hyperlink{class_doc_h_ref_a0ec431176b2cd13882d80d5bbcec8837}{Doc\+H\+Ref}, \hyperlink{class_doc_internal_ref_a996948b84815ba40e200d7c64328bde3}{Doc\+Internal\+Ref}, \hyperlink{class_doc_ref_adc5f2538aaa8e2bb57ddabd1417bff60}{Doc\+Ref}, \hyperlink{class_doc_link_ac41924438e83e9b7b4c6efa5aa869ef6}{Doc\+Link}, \hyperlink{class_doc_vhdl_flow_a8fdb29b6f93e88bf2e45510c6b712f17}{Doc\+Vhdl\+Flow}, \hyperlink{class_doc_dia_file_a5043a8fbcac2e7a8eb90728bd1e6917d}{Doc\+Dia\+File}, \hyperlink{class_doc_msc_file_a660203067a59a6dbe35453479bff1947}{Doc\+Msc\+File}, \hyperlink{class_doc_dot_file_a8da6c248870bf1cf517f8121033a7b01}{Doc\+Dot\+File}, \hyperlink{class_doc_image_ae701a5efbe3afc7a80c919d55043a7af}{Doc\+Image}, \hyperlink{class_doc_x_ref_item_a107c0e90e9bcc41dac53e2c8a344cdcc}{Doc\+X\+Ref\+Item}, \hyperlink{class_doc_title_a11ac976faab4d0bdb64ca1c802792ba9}{Doc\+Title}, \hyperlink{class_doc_auto_list_item_aeb2aa1d89092c13e93dedb21ac3854fe}{Doc\+Auto\+List\+Item}, \hyperlink{class_doc_auto_list_a253f7960bb1755b218e618822e1885dd}{Doc\+Auto\+List}, \hyperlink{class_doc_copy_a5c3a1f4707d25e4fdf42b3e8b4e0b0f5}{Doc\+Copy}, \hyperlink{class_doc_index_entry_ad0521249b714be998798243d517e1a00}{Doc\+Index\+Entry}, \hyperlink{class_doc_formula_a1e0b1e16b62c6c470eb5e1599eefebee}{Doc\+Formula}, \hyperlink{class_doc_inc_operator_a6485c0b46a71b4f2a2743e7f51396473}{Doc\+Inc\+Operator}, \hyperlink{class_doc_include_ad1a68704c4dd1f8b70e2061709e9f20a}{Doc\+Include}, \hyperlink{class_doc_verbatim_a480c731f4c8eefadd7d07d2e7e0ae119}{Doc\+Verbatim}, \hyperlink{class_doc_white_space_a35036e443e5fd91b1414d898a4d545e8}{Doc\+White\+Space}, \hyperlink{class_doc_symbol_abe1dd032ae5550cafb1f803c4bb96165}{Doc\+Symbol}, \hyperlink{class_doc_style_change_a78293478748976cb16d98778a5ec2f90}{Doc\+Style\+Change}, \hyperlink{class_doc_cite_ad4ed29144c44f63665be6d2995994217}{Doc\+Cite}, \hyperlink{class_doc_anchor_a80224579e5b31cc07fbd690678e0a4e8}{Doc\+Anchor}, \hyperlink{class_doc_hor_ruler_acdf68a250c2d1ef116e41e24d68b748d}{Doc\+Hor\+Ruler}, \hyperlink{class_doc_line_break_ab73512b9c677bc609409356e330301fc}{Doc\+Line\+Break}, \hyperlink{class_doc_u_r_l_ae6ac3c451918aaeb47fa71dfd33d37f5}{Doc\+U\+R\+L}, \hyperlink{class_doc_linked_word_a3e45d2549b26f57524fee9147c3d2641}{Doc\+Linked\+Word}, et \hyperlink{class_doc_word_a03be3d15f272974e08d22f415cc38bc3}{Doc\+Word}.
+
+\hypertarget{class_doc_node_a990d8b983962776a647e6231d38bd329}{}\index{Doc\+Node@{Doc\+Node}!parent@{parent}}
+\index{parent@{parent}!Doc\+Node@{Doc\+Node}}
+\subsubsection[{parent() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Doc\+Node}$\ast$ Doc\+Node\+::parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_node_a990d8b983962776a647e6231d38bd329}
+Returns the parent of this node or 0 for the root node. \hypertarget{class_doc_node_a7059408f429dc1358764e334079ca986}{}\index{Doc\+Node@{Doc\+Node}!set\+Inside\+Preformatted@{set\+Inside\+Preformatted}}
+\index{set\+Inside\+Preformatted@{set\+Inside\+Preformatted}!Doc\+Node@{Doc\+Node}}
+\subsubsection[{set\+Inside\+Preformatted(bool p)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Node\+::set\+Inside\+Preformatted (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_doc_node_a7059408f429dc1358764e334079ca986}
+Sets whether or not this item is inside a preformatted section \hypertarget{class_doc_node_a2855de7ff1248fdb71e579087ae56098}{}\index{Doc\+Node@{Doc\+Node}!set\+Parent@{set\+Parent}}
+\index{set\+Parent@{set\+Parent}!Doc\+Node@{Doc\+Node}}
+\subsubsection[{set\+Parent(\+Doc\+Node $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Node\+::set\+Parent (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Node} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_node_a2855de7ff1248fdb71e579087ae56098}
+Sets a new parent for this node. 
+
+\subsection{Documentation des données membres}
+\hypertarget{class_doc_node_a5f1139016d8919795a0e1c722d3e4b91}{}\index{Doc\+Node@{Doc\+Node}!m\+\_\+parent@{m\+\_\+parent}}
+\index{m\+\_\+parent@{m\+\_\+parent}!Doc\+Node@{Doc\+Node}}
+\subsubsection[{m\+\_\+parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Doc\+Node}$\ast$ Doc\+Node\+::m\+\_\+parent\hspace{0.3cm}{\ttfamily [protected]}}\label{class_doc_node_a5f1139016d8919795a0e1c722d3e4b91}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{docparser_8h}{docparser.\+h}\end{DoxyCompactItemize}

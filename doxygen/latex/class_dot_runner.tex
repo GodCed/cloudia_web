@@ -1,0 +1,88 @@
+\hypertarget{class_dot_runner}{}\section{Référence de la classe Dot\+Runner}
+\label{class_dot_runner}\index{Dot\+Runner@{Dot\+Runner}}
+
+
+{\ttfamily \#include $<$dot.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_dot_runner_1_1_cleanup_item}{Cleanup\+Item}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_dot_runner_a0139716432105faf63356af65f993559}{Dot\+Runner} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&file, const \hyperlink{class_q_c_string}{Q\+C\+String} \&font\+Path, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} check\+Result, const \hyperlink{class_q_c_string}{Q\+C\+String} \&image\+Name=\hyperlink{class_q_c_string}{Q\+C\+String}())
+\item 
+void \hyperlink{class_dot_runner_a7438f2a23b1ee231d3281a515914e4e1}{add\+Job} (const char $\ast$format, const char $\ast$output)
+\item 
+void \hyperlink{class_dot_runner_a84e3b1076cb4529baad7d694c35dadba}{add\+Post\+Processing} (const char $\ast$cmd, const char $\ast$args)
+\item 
+void \hyperlink{class_dot_runner_a2c9b6af873f263c04913504d0f420274}{prevent\+Clean\+Up} ()
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_dot_runner_ac1afaee16ddd8bf0bc6b18aaed6b44fd}{run} ()
+\item 
+\hyperlink{struct_dot_runner_1_1_cleanup_item}{Cleanup\+Item} \hyperlink{class_dot_runner_ac2dc7713295b7fe7c9baabdd4fad1066}{cleanup} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Helper class to run dot from doxygen. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_dot_runner_a0139716432105faf63356af65f993559}{}\index{Dot\+Runner@{Dot\+Runner}!Dot\+Runner@{Dot\+Runner}}
+\index{Dot\+Runner@{Dot\+Runner}!Dot\+Runner@{Dot\+Runner}}
+\subsubsection[{Dot\+Runner(const Q\+C\+String \&file, const Q\+C\+String \&font\+Path, bool check\+Result, const Q\+C\+String \&image\+Name=\+Q\+C\+String())}]{\setlength{\rightskip}{0pt plus 5cm}Dot\+Runner\+::\+Dot\+Runner (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{file, }
+\item[{const {\bf Q\+C\+String} \&}]{font\+Path, }
+\item[{{\bf bool}}]{check\+Result, }
+\item[{const {\bf Q\+C\+String} \&}]{image\+Name = {\ttfamily {\bf Q\+C\+String}()}}
+\end{DoxyParamCaption}
+)}\label{class_dot_runner_a0139716432105faf63356af65f993559}
+Creates a runner for a dot {\itshape file}. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_dot_runner_a7438f2a23b1ee231d3281a515914e4e1}{}\index{Dot\+Runner@{Dot\+Runner}!add\+Job@{add\+Job}}
+\index{add\+Job@{add\+Job}!Dot\+Runner@{Dot\+Runner}}
+\subsubsection[{add\+Job(const char $\ast$format, const char $\ast$output)}]{\setlength{\rightskip}{0pt plus 5cm}void Dot\+Runner\+::add\+Job (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{format, }
+\item[{const char $\ast$}]{output}
+\end{DoxyParamCaption}
+)}\label{class_dot_runner_a7438f2a23b1ee231d3281a515914e4e1}
+Adds an additional job to the run. Performing multiple jobs one file can be faster. \hypertarget{class_dot_runner_a84e3b1076cb4529baad7d694c35dadba}{}\index{Dot\+Runner@{Dot\+Runner}!add\+Post\+Processing@{add\+Post\+Processing}}
+\index{add\+Post\+Processing@{add\+Post\+Processing}!Dot\+Runner@{Dot\+Runner}}
+\subsubsection[{add\+Post\+Processing(const char $\ast$cmd, const char $\ast$args)}]{\setlength{\rightskip}{0pt plus 5cm}void Dot\+Runner\+::add\+Post\+Processing (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{cmd, }
+\item[{const char $\ast$}]{args}
+\end{DoxyParamCaption}
+)}\label{class_dot_runner_a84e3b1076cb4529baad7d694c35dadba}
+\hypertarget{class_dot_runner_ac2dc7713295b7fe7c9baabdd4fad1066}{}\index{Dot\+Runner@{Dot\+Runner}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!Dot\+Runner@{Dot\+Runner}}
+\subsubsection[{cleanup() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cleanup\+Item} Dot\+Runner\+::cleanup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_dot_runner_ac2dc7713295b7fe7c9baabdd4fad1066}
+\hypertarget{class_dot_runner_a2c9b6af873f263c04913504d0f420274}{}\index{Dot\+Runner@{Dot\+Runner}!prevent\+Clean\+Up@{prevent\+Clean\+Up}}
+\index{prevent\+Clean\+Up@{prevent\+Clean\+Up}!Dot\+Runner@{Dot\+Runner}}
+\subsubsection[{prevent\+Clean\+Up()}]{\setlength{\rightskip}{0pt plus 5cm}void Dot\+Runner\+::prevent\+Clean\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_dot_runner_a2c9b6af873f263c04913504d0f420274}
+\hypertarget{class_dot_runner_ac1afaee16ddd8bf0bc6b18aaed6b44fd}{}\index{Dot\+Runner@{Dot\+Runner}!run@{run}}
+\index{run@{run}!Dot\+Runner@{Dot\+Runner}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Dot\+Runner\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_dot_runner_ac1afaee16ddd8bf0bc6b18aaed6b44fd}
+Runs dot for all jobs added. 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{dot_8h}{dot.\+h}\item 
+src/\hyperlink{dot_8cpp}{dot.\+cpp}\end{DoxyCompactItemize}

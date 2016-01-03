@@ -1,0 +1,93 @@
+\hypertarget{vhdljjparser_8h}{}\section{Référence du fichier src/vhdljjparser.h}
+\label{vhdljjparser_8h}\index{src/vhdljjparser.\+h@{src/vhdljjparser.\+h}}
+{\ttfamily \#include \char`\"{}parserintf.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$qarray.\+h$>$}\\*
+{\ttfamily \#include $<$qfile.\+h$>$}\\*
+{\ttfamily \#include $<$qdict.\+h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}entry.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}vhdldocgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qstringlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}vhdlcode.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}memberlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_v_h_d_l_language_scanner}{V\+H\+D\+L\+Language\+Scanner}
+\begin{DoxyCompactList}\small\item\em V\+H\+D\+L parser using state-\/based lexical scanning. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_vhdl_conf_node}{Vhdl\+Conf\+Node}
+\end{DoxyCompactItemize}
+\subsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{vhdljjparser_8h_abc5c98fcc1211af2b80116dd6e0a035da8e89e0b7af6e95f474497610bb27e0ff}{G\+E\+N\+\_\+\+S\+E\+C} =0x1, 
+\hyperlink{vhdljjparser_8h_abc5c98fcc1211af2b80116dd6e0a035daa5503414fe63aab4976c75c9a3ed1cd9}{P\+A\+R\+A\+M\+\_\+\+S\+E\+C}, 
+\hyperlink{vhdljjparser_8h_abc5c98fcc1211af2b80116dd6e0a035da2280357a804e05bf9a4a5b0d6f16f242}{C\+O\+N\+T\+E\+X\+T\+\_\+\+S\+E\+C}, 
+\hyperlink{vhdljjparser_8h_abc5c98fcc1211af2b80116dd6e0a035da4607367e534cc60250c99e26a99402ea}{P\+R\+O\+T\+E\+C\+T\+E\+D\+\_\+\+S\+E\+C}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{vhdljjparser_8h_a93c3fb444e4e0cf55717caf47af2de07}{parser\+Vhdlfile} (const char $\ast$input\+Buffer)
+\item 
+void \hyperlink{vhdljjparser_8h_abb4387a41f8bb939973c2b392f0793c6}{vhdlscan\+Free\+Scanner} ()
+\item 
+\hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{struct_vhdl_conf_node}{Vhdl\+Conf\+Node} $>$ \& \hyperlink{vhdljjparser_8h_a5efc2ed713b6083cc1a1484e8f603a4c}{get\+Vhdl\+Configuration} ()
+\item 
+\hyperlink{class_q_list}{Q\+List}$<$ \hyperlink{class_entry}{Entry} $>$ \& \hyperlink{vhdljjparser_8h_a3ae4601d4c5d37ca67a882be32425b54}{get\+Vhdl\+Inst\+List} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation du type de l\textquotesingle{}énumération}
+\hypertarget{vhdljjparser_8h_abc5c98fcc1211af2b80116dd6e0a035d}{}\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{vhdljjparser_8h_abc5c98fcc1211af2b80116dd6e0a035d}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{G\+E\+N\+\_\+\+S\+E\+C@{G\+E\+N\+\_\+\+S\+E\+C}!vhdljjparser.\+h@{vhdljjparser.\+h}}\index{vhdljjparser.\+h@{vhdljjparser.\+h}!G\+E\+N\+\_\+\+S\+E\+C@{G\+E\+N\+\_\+\+S\+E\+C}}\item[{\em 
+\hypertarget{vhdljjparser_8h_abc5c98fcc1211af2b80116dd6e0a035da8e89e0b7af6e95f474497610bb27e0ff}{}G\+E\+N\+\_\+\+S\+E\+C\label{vhdljjparser_8h_abc5c98fcc1211af2b80116dd6e0a035da8e89e0b7af6e95f474497610bb27e0ff}
+}]\index{P\+A\+R\+A\+M\+\_\+\+S\+E\+C@{P\+A\+R\+A\+M\+\_\+\+S\+E\+C}!vhdljjparser.\+h@{vhdljjparser.\+h}}\index{vhdljjparser.\+h@{vhdljjparser.\+h}!P\+A\+R\+A\+M\+\_\+\+S\+E\+C@{P\+A\+R\+A\+M\+\_\+\+S\+E\+C}}\item[{\em 
+\hypertarget{vhdljjparser_8h_abc5c98fcc1211af2b80116dd6e0a035daa5503414fe63aab4976c75c9a3ed1cd9}{}P\+A\+R\+A\+M\+\_\+\+S\+E\+C\label{vhdljjparser_8h_abc5c98fcc1211af2b80116dd6e0a035daa5503414fe63aab4976c75c9a3ed1cd9}
+}]\index{C\+O\+N\+T\+E\+X\+T\+\_\+\+S\+E\+C@{C\+O\+N\+T\+E\+X\+T\+\_\+\+S\+E\+C}!vhdljjparser.\+h@{vhdljjparser.\+h}}\index{vhdljjparser.\+h@{vhdljjparser.\+h}!C\+O\+N\+T\+E\+X\+T\+\_\+\+S\+E\+C@{C\+O\+N\+T\+E\+X\+T\+\_\+\+S\+E\+C}}\item[{\em 
+\hypertarget{vhdljjparser_8h_abc5c98fcc1211af2b80116dd6e0a035da2280357a804e05bf9a4a5b0d6f16f242}{}C\+O\+N\+T\+E\+X\+T\+\_\+\+S\+E\+C\label{vhdljjparser_8h_abc5c98fcc1211af2b80116dd6e0a035da2280357a804e05bf9a4a5b0d6f16f242}
+}]\index{P\+R\+O\+T\+E\+C\+T\+E\+D\+\_\+\+S\+E\+C@{P\+R\+O\+T\+E\+C\+T\+E\+D\+\_\+\+S\+E\+C}!vhdljjparser.\+h@{vhdljjparser.\+h}}\index{vhdljjparser.\+h@{vhdljjparser.\+h}!P\+R\+O\+T\+E\+C\+T\+E\+D\+\_\+\+S\+E\+C@{P\+R\+O\+T\+E\+C\+T\+E\+D\+\_\+\+S\+E\+C}}\item[{\em 
+\hypertarget{vhdljjparser_8h_abc5c98fcc1211af2b80116dd6e0a035da4607367e534cc60250c99e26a99402ea}{}P\+R\+O\+T\+E\+C\+T\+E\+D\+\_\+\+S\+E\+C\label{vhdljjparser_8h_abc5c98fcc1211af2b80116dd6e0a035da4607367e534cc60250c99e26a99402ea}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{vhdljjparser_8h_a5efc2ed713b6083cc1a1484e8f603a4c}{}\index{vhdljjparser.\+h@{vhdljjparser.\+h}!get\+Vhdl\+Configuration@{get\+Vhdl\+Configuration}}
+\index{get\+Vhdl\+Configuration@{get\+Vhdl\+Configuration}!vhdljjparser.\+h@{vhdljjparser.\+h}}
+\subsubsection[{get\+Vhdl\+Configuration()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+List}$<${\bf Vhdl\+Conf\+Node}$>$\& get\+Vhdl\+Configuration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{vhdljjparser_8h_a5efc2ed713b6083cc1a1484e8f603a4c}
+\hypertarget{vhdljjparser_8h_a3ae4601d4c5d37ca67a882be32425b54}{}\index{vhdljjparser.\+h@{vhdljjparser.\+h}!get\+Vhdl\+Inst\+List@{get\+Vhdl\+Inst\+List}}
+\index{get\+Vhdl\+Inst\+List@{get\+Vhdl\+Inst\+List}!vhdljjparser.\+h@{vhdljjparser.\+h}}
+\subsubsection[{get\+Vhdl\+Inst\+List()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+List}$<${\bf Entry}$>$\& get\+Vhdl\+Inst\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{vhdljjparser_8h_a3ae4601d4c5d37ca67a882be32425b54}
+\hypertarget{vhdljjparser_8h_a93c3fb444e4e0cf55717caf47af2de07}{}\index{vhdljjparser.\+h@{vhdljjparser.\+h}!parser\+Vhdlfile@{parser\+Vhdlfile}}
+\index{parser\+Vhdlfile@{parser\+Vhdlfile}!vhdljjparser.\+h@{vhdljjparser.\+h}}
+\subsubsection[{parser\+Vhdlfile(const char $\ast$input\+Buffer)}]{\setlength{\rightskip}{0pt plus 5cm}void parser\+Vhdlfile (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{input\+Buffer}
+\end{DoxyParamCaption}
+)}\label{vhdljjparser_8h_a93c3fb444e4e0cf55717caf47af2de07}
+\hypertarget{vhdljjparser_8h_abb4387a41f8bb939973c2b392f0793c6}{}\index{vhdljjparser.\+h@{vhdljjparser.\+h}!vhdlscan\+Free\+Scanner@{vhdlscan\+Free\+Scanner}}
+\index{vhdlscan\+Free\+Scanner@{vhdlscan\+Free\+Scanner}!vhdljjparser.\+h@{vhdljjparser.\+h}}
+\subsubsection[{vhdlscan\+Free\+Scanner()}]{\setlength{\rightskip}{0pt plus 5cm}void vhdlscan\+Free\+Scanner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{vhdljjparser_8h_abb4387a41f8bb939973c2b392f0793c6}

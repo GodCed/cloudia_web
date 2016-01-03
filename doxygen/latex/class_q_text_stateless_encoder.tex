@@ -1,0 +1,47 @@
+\hypertarget{class_q_text_stateless_encoder}{}\section{Référence de la classe Q\+Text\+Stateless\+Encoder}
+\label{class_q_text_stateless_encoder}\index{Q\+Text\+Stateless\+Encoder@{Q\+Text\+Stateless\+Encoder}}
+Graphe d\textquotesingle{}héritage de Q\+Text\+Stateless\+Encoder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_text_stateless_encoder}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_text_stateless_encoder_af214e4fae6622da28c20d516acf8ed82}{Q\+Text\+Stateless\+Encoder} (const \hyperlink{class_q_text_codec}{Q\+Text\+Codec} $\ast$)
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_q_text_stateless_encoder_a8466950847e702e588d182a582ba660f}{from\+Unicode} (const \hyperlink{class_q_string}{Q\+String} \&uc, int \&len\+In\+Out)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_text_stateless_encoder_af214e4fae6622da28c20d516acf8ed82}{}\index{Q\+Text\+Stateless\+Encoder@{Q\+Text\+Stateless\+Encoder}!Q\+Text\+Stateless\+Encoder@{Q\+Text\+Stateless\+Encoder}}
+\index{Q\+Text\+Stateless\+Encoder@{Q\+Text\+Stateless\+Encoder}!Q\+Text\+Stateless\+Encoder@{Q\+Text\+Stateless\+Encoder}}
+\subsubsection[{Q\+Text\+Stateless\+Encoder(const Q\+Text\+Codec $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Text\+Stateless\+Encoder\+::\+Q\+Text\+Stateless\+Encoder (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Text\+Codec} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\label{class_q_text_stateless_encoder_af214e4fae6622da28c20d516acf8ed82}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_text_stateless_encoder_a8466950847e702e588d182a582ba660f}{}\index{Q\+Text\+Stateless\+Encoder@{Q\+Text\+Stateless\+Encoder}!from\+Unicode@{from\+Unicode}}
+\index{from\+Unicode@{from\+Unicode}!Q\+Text\+Stateless\+Encoder@{Q\+Text\+Stateless\+Encoder}}
+\subsubsection[{from\+Unicode(const Q\+String \&uc, int \&len\+In\+Out)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Q\+Text\+Stateless\+Encoder\+::from\+Unicode (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{uc, }
+\item[{int \&}]{len\+In\+Out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_text_stateless_encoder_a8466950847e702e588d182a582ba660f}
+Converts {\itshape len\+In\+Out} characters (not bytes) from {\itshape uc}, producing a \hyperlink{class_q_c_string}{Q\+C\+String}. {\itshape len\+In\+Out} will also be set to the \hyperlink{class_q_c_string_a70bdaa04f2325aee395c4e1ccc1c942c}{length} of the result (in bytes).
+
+The encoder is free to record state to use when subsequent calls are made to this function (for example, it might change modes with escape sequences if needed during the encoding of one string, then assume that mode applies when a subsequent call begins). 
+
+Implémente \hyperlink{class_q_text_encoder_a3b199427ee9b7f862fe65811165dbbfa}{Q\+Text\+Encoder}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qtextcodec_8cpp}{qtextcodec.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,280 @@
+\hypertarget{class_q_string_buffer}{}\section{Référence de la classe Q\+String\+Buffer}
+\label{class_q_string_buffer}\index{Q\+String\+Buffer@{Q\+String\+Buffer}}
+Graphe d\textquotesingle{}héritage de Q\+String\+Buffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_string_buffer}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_string_buffer_ab5fe1a964b28565381b6c180e69a9056}{Q\+String\+Buffer} (\hyperlink{class_q_string}{Q\+String} $\ast$str)
+\item 
+\hyperlink{class_q_string_buffer_a4bd0997b2ba1ac9b40802260e570b521}{$\sim$\+Q\+String\+Buffer} ()
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_string_buffer_a593d2870764f6888dd1aabea55304a46}{open} (int \hyperlink{060__command__switch_8tcl_a78d127e8bda64d4471ac811ad512fbd9}{m})
+\item 
+void \hyperlink{class_q_string_buffer_aabc8736ce1f90cd66212c5a6b2e166ea}{close} ()
+\item 
+void \hyperlink{class_q_string_buffer_a2961ddd6de68bb9e681ae8e18b6b298b}{flush} ()
+\item 
+\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{class_q_string_buffer_a3879e3602960ecedd4943b65f520cf9d}{size} () const 
+\item 
+int \hyperlink{class_q_string_buffer_a432df0ebe98f845130d64a2097a97674}{at} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_string_buffer_a36caaffb3e157196ce5201f0f7c9fa25}{at} (int pos)
+\item 
+int \hyperlink{class_q_string_buffer_a6cda82dda018af5291df80676eb037a4}{read\+Block} (char $\ast$\hyperlink{060__command__switch_8tcl_a15229b450f26d8fa1c10bea4f3279f4d}{p}, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+int \hyperlink{class_q_string_buffer_a4c17bf2b2702b837ba614bd92ad0d7a2}{write\+Block} (const char $\ast$\hyperlink{060__command__switch_8tcl_a15229b450f26d8fa1c10bea4f3279f4d}{p}, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+int \hyperlink{class_q_string_buffer_acebe86e5beeaff3863673fc56089e2da}{getch} ()
+\item 
+int \hyperlink{class_q_string_buffer_ac95cff6e837ae523527b9d78cb6a4074}{putch} (int ch)
+\item 
+int \hyperlink{class_q_string_buffer_ad6e53fb9f2f2969b9f9a7a1daa2d7af2}{ungetch} (int ch)
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_string}{Q\+String} $\ast$ \hyperlink{class_q_string_buffer_a04a03f7ce67b5cf129bb46b816b57450}{s}
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_string_buffer_ab5fe1a964b28565381b6c180e69a9056}{}\index{Q\+String\+Buffer@{Q\+String\+Buffer}!Q\+String\+Buffer@{Q\+String\+Buffer}}
+\index{Q\+String\+Buffer@{Q\+String\+Buffer}!Q\+String\+Buffer@{Q\+String\+Buffer}}
+\subsubsection[{Q\+String\+Buffer(\+Q\+String $\ast$str)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String\+Buffer\+::\+Q\+String\+Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+String} $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\label{class_q_string_buffer_ab5fe1a964b28565381b6c180e69a9056}
+\hypertarget{class_q_string_buffer_a4bd0997b2ba1ac9b40802260e570b521}{}\index{Q\+String\+Buffer@{Q\+String\+Buffer}!````~Q\+String\+Buffer@{$\sim$\+Q\+String\+Buffer}}
+\index{````~Q\+String\+Buffer@{$\sim$\+Q\+String\+Buffer}!Q\+String\+Buffer@{Q\+String\+Buffer}}
+\subsubsection[{$\sim$\+Q\+String\+Buffer()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String\+Buffer\+::$\sim$\+Q\+String\+Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_string_buffer_a4bd0997b2ba1ac9b40802260e570b521}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_string_buffer_a432df0ebe98f845130d64a2097a97674}{}\index{Q\+String\+Buffer@{Q\+String\+Buffer}!at@{at}}
+\index{at@{at}!Q\+String\+Buffer@{Q\+String\+Buffer}}
+\subsubsection[{at() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+String\+Buffer\+::at (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_string_buffer_a432df0ebe98f845130d64a2097a97674}
+Virtual function that returns the current I/\+O device index.
+
+This index is the data read/write head of the I/\+O device.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_string_buffer_a3879e3602960ecedd4943b65f520cf9d}{size()} 
+\end{DoxySeeAlso}
+
+
+Réimplémentée à partir de \hyperlink{class_q_i_o_device_ae87e9d1d92b870e96ed04de97d7638f3}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_string_buffer_a36caaffb3e157196ce5201f0f7c9fa25}{}\index{Q\+String\+Buffer@{Q\+String\+Buffer}!at@{at}}
+\index{at@{at}!Q\+String\+Buffer@{Q\+String\+Buffer}}
+\subsubsection[{at(int pos)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+String\+Buffer\+::at (
+\begin{DoxyParamCaption}
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_string_buffer_a36caaffb3e157196ce5201f0f7c9fa25}
+Virtual function that sets the I/\+O device index to {\itshape pos}. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_string_buffer_a3879e3602960ecedd4943b65f520cf9d}{size()} 
+\end{DoxySeeAlso}
+
+
+Réimplémentée à partir de \hyperlink{class_q_i_o_device_a14643fc1c2e05c2addd1ecc03bd98017}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_string_buffer_aabc8736ce1f90cd66212c5a6b2e166ea}{}\index{Q\+String\+Buffer@{Q\+String\+Buffer}!close@{close}}
+\index{close@{close}!Q\+String\+Buffer@{Q\+String\+Buffer}}
+\subsubsection[{close()}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+String\+Buffer\+::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_string_buffer_aabc8736ce1f90cd66212c5a6b2e166ea}
+Closes the I/\+O device.
+
+This virtual function must be reimplemented by all subclasses.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_string_buffer_a593d2870764f6888dd1aabea55304a46}{open()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_a01a9ddac5d964b5b6a1f10005bf28a4f}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_string_buffer_a2961ddd6de68bb9e681ae8e18b6b298b}{}\index{Q\+String\+Buffer@{Q\+String\+Buffer}!flush@{flush}}
+\index{flush@{flush}!Q\+String\+Buffer@{Q\+String\+Buffer}}
+\subsubsection[{flush()}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+String\+Buffer\+::flush (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_string_buffer_a2961ddd6de68bb9e681ae8e18b6b298b}
+Flushes an open I/\+O device.
+
+This virtual function must be reimplemented by all subclasses. 
+
+Implémente \hyperlink{class_q_i_o_device_a39eccb592ae076fbc42108a3d590fb43}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_string_buffer_acebe86e5beeaff3863673fc56089e2da}{}\index{Q\+String\+Buffer@{Q\+String\+Buffer}!getch@{getch}}
+\index{getch@{getch}!Q\+String\+Buffer@{Q\+String\+Buffer}}
+\subsubsection[{getch()}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+String\+Buffer\+::getch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_string_buffer_acebe86e5beeaff3863673fc56089e2da}
+Reads a single byte/character from the I/\+O device.
+
+Returns the byte/character read, or -\/1 if the end of the I/\+O device has been reached.
+
+This virtual function must be reimplemented by all subclasses.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_string_buffer_ac95cff6e837ae523527b9d78cb6a4074}{putch()}, \hyperlink{class_q_string_buffer_ad6e53fb9f2f2969b9f9a7a1daa2d7af2}{ungetch()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_a7cef61d66023f9cda6b0912082bd19fc}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_string_buffer_a593d2870764f6888dd1aabea55304a46}{}\index{Q\+String\+Buffer@{Q\+String\+Buffer}!open@{open}}
+\index{open@{open}!Q\+String\+Buffer@{Q\+String\+Buffer}}
+\subsubsection[{open(int m)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+String\+Buffer\+::open (
+\begin{DoxyParamCaption}
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_string_buffer_a593d2870764f6888dd1aabea55304a46}
+Opens the I/\+O device using the specified {\itshape mode}. Returns T\+R\+U\+E if successful, or F\+A\+L\+S\+E if the device could not be opened.
+
+The mode parameter {\itshape m} must be a combination of the following flags. 
+\begin{DoxyItemize}
+\item {\ttfamily I\+O\+\_\+\+Raw} specified raw (unbuffered) file access. 
+\item {\ttfamily I\+O\+\_\+\+Read\+Only} opens a file in read-\/only mode. 
+\item {\ttfamily I\+O\+\_\+\+Write\+Only} opens a file in write-\/only mode. 
+\item {\ttfamily I\+O\+\_\+\+Read\+Write} opens a file in read/write mode. 
+\item {\ttfamily I\+O\+\_\+\+Append} sets the file index to the end of the file. 
+\item {\ttfamily I\+O\+\_\+\+Truncate} truncates the file. 
+\item {\ttfamily I\+O\+\_\+\+Translate} enables carriage returns and linefeed translation for text files under M\+S-\/\+D\+O\+S, Window, O\+S/2 and Macintosh. On Unix systems this flag has no effect. Use with caution as it will also transform every linefeed written to the file into a C\+R\+L\+F pair. This is likely to corrupt your file when writing binary data to it. Cannot be combined with {\ttfamily I\+O\+\_\+\+Raw}. 
+\end{DoxyItemize}
+
+This virtual function must be reimplemented by all subclasses.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_string_buffer_aabc8736ce1f90cd66212c5a6b2e166ea}{close()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_ae4046ae7bf4d4cee1010239973314e42}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_string_buffer_ac95cff6e837ae523527b9d78cb6a4074}{}\index{Q\+String\+Buffer@{Q\+String\+Buffer}!putch@{putch}}
+\index{putch@{putch}!Q\+String\+Buffer@{Q\+String\+Buffer}}
+\subsubsection[{putch(int ch)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+String\+Buffer\+::putch (
+\begin{DoxyParamCaption}
+\item[{int}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_string_buffer_ac95cff6e837ae523527b9d78cb6a4074}
+Writes the character {\itshape ch} to the I/\+O device.
+
+Returns {\itshape ch}, or -\/1 if some error occurred.
+
+This virtual function must be reimplemented by all subclasses.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_string_buffer_acebe86e5beeaff3863673fc56089e2da}{getch()}, \hyperlink{class_q_string_buffer_ad6e53fb9f2f2969b9f9a7a1daa2d7af2}{ungetch()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_a5de5c1c1cba7ca36ba93289e30cd3029}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_string_buffer_a6cda82dda018af5291df80676eb037a4}{}\index{Q\+String\+Buffer@{Q\+String\+Buffer}!read\+Block@{read\+Block}}
+\index{read\+Block@{read\+Block}!Q\+String\+Buffer@{Q\+String\+Buffer}}
+\subsubsection[{read\+Block(char $\ast$p, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+String\+Buffer\+::read\+Block (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{data, }
+\item[{{\bf uint}}]{maxlen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_string_buffer_a6cda82dda018af5291df80676eb037a4}
+Reads at most {\itshape maxlen} bytes from the I/\+O device into {\itshape data} and returns the number of bytes actually read.
+
+This virtual function must be reimplemented by all subclasses.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_string_buffer_a4c17bf2b2702b837ba614bd92ad0d7a2}{write\+Block()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_a71f10647e4bd98141f45362b9a06983a}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_string_buffer_a3879e3602960ecedd4943b65f520cf9d}{}\index{Q\+String\+Buffer@{Q\+String\+Buffer}!size@{size}}
+\index{size@{size}!Q\+String\+Buffer@{Q\+String\+Buffer}}
+\subsubsection[{size() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint} Q\+String\+Buffer\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_string_buffer_a3879e3602960ecedd4943b65f520cf9d}
+Virtual function that returns the size of the I/\+O device. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_string_buffer_a432df0ebe98f845130d64a2097a97674}{at()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_ab94989478f8bd6742f6bfcd27926341e}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_string_buffer_ad6e53fb9f2f2969b9f9a7a1daa2d7af2}{}\index{Q\+String\+Buffer@{Q\+String\+Buffer}!ungetch@{ungetch}}
+\index{ungetch@{ungetch}!Q\+String\+Buffer@{Q\+String\+Buffer}}
+\subsubsection[{ungetch(int ch)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+String\+Buffer\+::ungetch (
+\begin{DoxyParamCaption}
+\item[{int}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_string_buffer_ad6e53fb9f2f2969b9f9a7a1daa2d7af2}
+Puts the character {\itshape ch} back into the I/\+O device and decrements the index if it is not zero.
+
+This function is normally called to \char`\"{}undo\char`\"{} a \hyperlink{class_q_string_buffer_acebe86e5beeaff3863673fc56089e2da}{getch()} operation.
+
+Returns {\itshape ch}, or -\/1 if some error occurred.
+
+This virtual function must be reimplemented by all subclasses.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_string_buffer_acebe86e5beeaff3863673fc56089e2da}{getch()}, \hyperlink{class_q_string_buffer_ac95cff6e837ae523527b9d78cb6a4074}{putch()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_aae3d67422103e8fc0411297b1d62c29a}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_string_buffer_a4c17bf2b2702b837ba614bd92ad0d7a2}{}\index{Q\+String\+Buffer@{Q\+String\+Buffer}!write\+Block@{write\+Block}}
+\index{write\+Block@{write\+Block}!Q\+String\+Buffer@{Q\+String\+Buffer}}
+\subsubsection[{write\+Block(const char $\ast$p, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+String\+Buffer\+::write\+Block (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_string_buffer_a4c17bf2b2702b837ba614bd92ad0d7a2}
+Writes {\itshape len} bytes from {\itshape p} to the I/\+O device and returns the number of bytes actually written.
+
+This virtual function must be reimplemented by all subclasses.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_string_buffer_a6cda82dda018af5291df80676eb037a4}{read\+Block()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_a5d937df1bde2f956872dd54e077807d1}{Q\+I\+O\+Device}.
+
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_q_string_buffer_a04a03f7ce67b5cf129bb46b816b57450}{}\index{Q\+String\+Buffer@{Q\+String\+Buffer}!s@{s}}
+\index{s@{s}!Q\+String\+Buffer@{Q\+String\+Buffer}}
+\subsubsection[{s}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String}$\ast$ Q\+String\+Buffer\+::s\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_string_buffer_a04a03f7ce67b5cf129bb46b816b57450}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qtextstream_8cpp}{qtextstream.\+cpp}\end{DoxyCompactItemize}

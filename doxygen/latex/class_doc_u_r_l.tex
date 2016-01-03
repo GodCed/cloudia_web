@@ -1,0 +1,90 @@
+\hypertarget{class_doc_u_r_l}{}\section{Référence de la classe Doc\+U\+R\+L}
+\label{class_doc_u_r_l}\index{Doc\+U\+R\+L@{Doc\+U\+R\+L}}
+
+
+{\ttfamily \#include $<$docparser.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Doc\+U\+R\+L\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doc_u_r_l}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_u_r_l_ac3f8801a6f7507cbed9a9af5bd8d89be}{Doc\+U\+R\+L} (\hyperlink{class_doc_node}{Doc\+Node} $\ast$\hyperlink{class_doc_node_a990d8b983962776a647e6231d38bd329}{parent}, const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{class_doc_u_r_l_a339a2025d12d5cc62cc9132fb18619bc}{url}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_doc_u_r_l_ac9e105de17ad9048a210dcaafce3c7fb}{is\+Email})
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_u_r_l_a339a2025d12d5cc62cc9132fb18619bc}{url} () const 
+\item 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadb}{Kind} \hyperlink{class_doc_u_r_l_ae6ac3c451918aaeb47fa71dfd33d37f5}{kind} () const 
+\item 
+void \hyperlink{class_doc_u_r_l_a15d23d59342d72ebc769947aca10e972}{accept} (\hyperlink{class_doc_visitor}{Doc\+Visitor} $\ast$v)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_doc_u_r_l_ac9e105de17ad9048a210dcaafce3c7fb}{is\+Email} () const 
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Node representing an \hyperlink{struct_u_r_l}{U\+R\+L} (or email address) 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_doc_u_r_l_ac3f8801a6f7507cbed9a9af5bd8d89be}{}\index{Doc\+U\+R\+L@{Doc\+U\+R\+L}!Doc\+U\+R\+L@{Doc\+U\+R\+L}}
+\index{Doc\+U\+R\+L@{Doc\+U\+R\+L}!Doc\+U\+R\+L@{Doc\+U\+R\+L}}
+\subsubsection[{Doc\+U\+R\+L(\+Doc\+Node $\ast$parent, const Q\+C\+String \&url, bool is\+Email)}]{\setlength{\rightskip}{0pt plus 5cm}Doc\+U\+R\+L\+::\+Doc\+U\+R\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Node} $\ast$}]{parent, }
+\item[{const {\bf Q\+C\+String} \&}]{url, }
+\item[{{\bf bool}}]{is\+Email}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_u_r_l_ac3f8801a6f7507cbed9a9af5bd8d89be}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_doc_u_r_l_a15d23d59342d72ebc769947aca10e972}{}\index{Doc\+U\+R\+L@{Doc\+U\+R\+L}!accept@{accept}}
+\index{accept@{accept}!Doc\+U\+R\+L@{Doc\+U\+R\+L}}
+\subsubsection[{accept(\+Doc\+Visitor $\ast$v)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+U\+R\+L\+::accept (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Visitor} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_u_r_l_a15d23d59342d72ebc769947aca10e972}
+Acceptor function for node visitors. Part of the visitor pattern. 
+\begin{DoxyParams}{Paramètres}
+{\em v} & Abstract visitor. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_doc_node_a5303a550cbe6395663bf9b9dad28cbf1}{Doc\+Node}.
+
+\hypertarget{class_doc_u_r_l_ac9e105de17ad9048a210dcaafce3c7fb}{}\index{Doc\+U\+R\+L@{Doc\+U\+R\+L}!is\+Email@{is\+Email}}
+\index{is\+Email@{is\+Email}!Doc\+U\+R\+L@{Doc\+U\+R\+L}}
+\subsubsection[{is\+Email() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Doc\+U\+R\+L\+::is\+Email (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_u_r_l_ac9e105de17ad9048a210dcaafce3c7fb}
+\hypertarget{class_doc_u_r_l_ae6ac3c451918aaeb47fa71dfd33d37f5}{}\index{Doc\+U\+R\+L@{Doc\+U\+R\+L}!kind@{kind}}
+\index{kind@{kind}!Doc\+U\+R\+L@{Doc\+U\+R\+L}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kind} Doc\+U\+R\+L\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_u_r_l_ae6ac3c451918aaeb47fa71dfd33d37f5}
+Returns the kind of node. Provides runtime type information 
+
+Implémente \hyperlink{class_doc_node_a92d4aaa169a813ded919aa858024c809}{Doc\+Node}.
+
+\hypertarget{class_doc_u_r_l_a339a2025d12d5cc62cc9132fb18619bc}{}\index{Doc\+U\+R\+L@{Doc\+U\+R\+L}!url@{url}}
+\index{url@{url}!Doc\+U\+R\+L@{Doc\+U\+R\+L}}
+\subsubsection[{url() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+U\+R\+L\+::url (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_u_r_l_a339a2025d12d5cc62cc9132fb18619bc}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{docparser_8h}{docparser.\+h}\end{DoxyCompactItemize}

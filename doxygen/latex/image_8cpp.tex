@@ -1,0 +1,96 @@
+\hypertarget{image_8cpp}{}\section{Référence du fichier src/image.cpp}
+\label{image_8cpp}\index{src/image.\+cpp@{src/image.\+cpp}}
+{\ttfamily \#include \char`\"{}image.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$qfile.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}lodepng.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_color}{Color}
+\end{DoxyCompactItemize}
+\subsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \hyperlink{image_8cpp_ae3a497195d617519e5353ea7b417940f}{Byte}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{image_8cpp_addcb648439e446f4cdc7f81ed8bd7701}{char\+Set\+Width} =80
+\item 
+const int \hyperlink{image_8cpp_ac01e29ec591af8444cb2cb5e9128d130}{char\+Height} =12
+\item 
+const int \hyperlink{image_8cpp_a7039c6d467143b65eee4688f35178297}{num\+Chars} =96
+\item 
+unsigned short \hyperlink{image_8cpp_a3f015eca9b8327e05044743748629ae9}{char\+Pos} \mbox{[}\hyperlink{image_8cpp_a7039c6d467143b65eee4688f35178297}{num\+Chars}\mbox{]}
+\item 
+unsigned char \hyperlink{image_8cpp_afdd592511fae7801258a4408091d4342}{char\+Width} \mbox{[}\hyperlink{image_8cpp_a7039c6d467143b65eee4688f35178297}{num\+Chars}\mbox{]}
+\item 
+unsigned char \hyperlink{image_8cpp_a54eb9c5e56292b27cc59fca445f72f4b}{font\+Raw} \mbox{[}\hyperlink{image_8cpp_addcb648439e446f4cdc7f81ed8bd7701}{char\+Set\+Width} $\ast$\hyperlink{image_8cpp_ac01e29ec591af8444cb2cb5e9128d130}{char\+Height}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des définitions de type}
+\hypertarget{image_8cpp_ae3a497195d617519e5353ea7b417940f}{}\index{image.\+cpp@{image.\+cpp}!Byte@{Byte}}
+\index{Byte@{Byte}!image.\+cpp@{image.\+cpp}}
+\subsubsection[{Byte}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf Byte}}\label{image_8cpp_ae3a497195d617519e5353ea7b417940f}
+
+
+\subsection{Documentation des variables}
+\hypertarget{image_8cpp_ac01e29ec591af8444cb2cb5e9128d130}{}\index{image.\+cpp@{image.\+cpp}!char\+Height@{char\+Height}}
+\index{char\+Height@{char\+Height}!image.\+cpp@{image.\+cpp}}
+\subsubsection[{char\+Height}]{\setlength{\rightskip}{0pt plus 5cm}const int char\+Height =12}\label{image_8cpp_ac01e29ec591af8444cb2cb5e9128d130}
+\hypertarget{image_8cpp_a3f015eca9b8327e05044743748629ae9}{}\index{image.\+cpp@{image.\+cpp}!char\+Pos@{char\+Pos}}
+\index{char\+Pos@{char\+Pos}!image.\+cpp@{image.\+cpp}}
+\subsubsection[{char\+Pos}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short char\+Pos\mbox{[}{\bf num\+Chars}\mbox{]}}\label{image_8cpp_a3f015eca9b8327e05044743748629ae9}
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}
+= 
+  \{   
+      0,  5,  8, 13, 20, 27, 38, 47, 
+     50, 54, 58, 65, 72, 76, 83, 87, 
+     91, 98,105,112,119,126,133,140,
+    147,154,161,164,167,174,181,188,
+    195,207,216,224,233,242,250,258,
+    267,276,279,286,294,301,312,321,
+    331,339,349,357,365,372,380,389,
+    400,409,418,427,430,434,437,443,
+    450,453,460,467,474,481,488,492,
+    499,506,509,512,518,521,530,537,
+    544,551,557,562,568,571,578,585,
+    594,600,607,613,617,620,624,631
+  \}
+\end{DoxyCode}
+\hypertarget{image_8cpp_addcb648439e446f4cdc7f81ed8bd7701}{}\index{image.\+cpp@{image.\+cpp}!char\+Set\+Width@{char\+Set\+Width}}
+\index{char\+Set\+Width@{char\+Set\+Width}!image.\+cpp@{image.\+cpp}}
+\subsubsection[{char\+Set\+Width}]{\setlength{\rightskip}{0pt plus 5cm}const int char\+Set\+Width =80}\label{image_8cpp_addcb648439e446f4cdc7f81ed8bd7701}
+\hypertarget{image_8cpp_afdd592511fae7801258a4408091d4342}{}\index{image.\+cpp@{image.\+cpp}!char\+Width@{char\+Width}}
+\index{char\+Width@{char\+Width}!image.\+cpp@{image.\+cpp}}
+\subsubsection[{char\+Width}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char char\+Width\mbox{[}{\bf num\+Chars}\mbox{]}}\label{image_8cpp_afdd592511fae7801258a4408091d4342}
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}
+= 
+  \{
+     5, 3, 5, 7, 7,11, 9, 3,
+     4, 4, 7, 7, 4, 7, 4, 4,
+
+     7, 7, 7, 7, 7, 7, 7, 7,
+     7, 7, 3, 3, 7, 7, 7, 7,
+    12, 9, 8, 9, 9, 8, 8, 9,
+     9, 3, 7, 8, 7,11, 9,10,
+     8,10, 8, 8, 7, 8, 9,11,
+     9, 9, 9, 3, 4, 3, 6, 7,
+     3, 7, 7, 7, 7, 7, 4, 7,
+     7, 3, 3, 6, 3, 9, 7, 7,
+     7, 6, 5, 6, 3, 7, 7, 9,
+     6, 7, 6, 4, 3, 4, 7, 5   
+  \}
+\end{DoxyCode}
+\hypertarget{image_8cpp_a54eb9c5e56292b27cc59fca445f72f4b}{}\index{image.\+cpp@{image.\+cpp}!font\+Raw@{font\+Raw}}
+\index{font\+Raw@{font\+Raw}!image.\+cpp@{image.\+cpp}}
+\subsubsection[{font\+Raw}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char font\+Raw\mbox{[}{\bf char\+Set\+Width} $\ast${\bf char\+Height}\mbox{]}}\label{image_8cpp_a54eb9c5e56292b27cc59fca445f72f4b}
+\hypertarget{image_8cpp_a7039c6d467143b65eee4688f35178297}{}\index{image.\+cpp@{image.\+cpp}!num\+Chars@{num\+Chars}}
+\index{num\+Chars@{num\+Chars}!image.\+cpp@{image.\+cpp}}
+\subsubsection[{num\+Chars}]{\setlength{\rightskip}{0pt plus 5cm}const int num\+Chars =96}\label{image_8cpp_a7039c6d467143b65eee4688f35178297}

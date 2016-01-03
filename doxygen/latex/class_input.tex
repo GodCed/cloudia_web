@@ -1,0 +1,221 @@
+\hypertarget{class_input}{}\section{Référence de la classe Input}
+\label{class_input}\index{Input@{Input}}
+
+
+{\ttfamily \#include $<$input.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Input\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_input}
+\end{center}
+\end{figure}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_input_a4138334795f6330759839617744e20a9}{Kind} \{ \\*
+\hyperlink{class_input_a4138334795f6330759839617744e20a9a2dbfddf6e62a7a0ad551c5e636d1e7b5}{Bool}, 
+\hyperlink{class_input_a4138334795f6330759839617744e20a9ac18e0843f53d18e021a7390507179f93}{Int}, 
+\hyperlink{class_input_a4138334795f6330759839617744e20a9a0bf868e02e196a9573daba25c8988a4d}{String}, 
+\hyperlink{class_input_a4138334795f6330759839617744e20a9abc5bd7ac23a47a029c0d9c8ca8802f4b}{Str\+List}, 
+\\*
+\hyperlink{class_input_a4138334795f6330759839617744e20a9a67a65b3167f2256495725a8522d3091e}{Obsolete}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_input_a230646fa6e6433b4d9ac3535b7d52087}{$\sim$\+Input} ()
+\item 
+virtual Q\+Variant \& \hyperlink{class_input_a72c6ccd2eff708b1f91b8503427ec312}{value} ()=0
+\item 
+virtual void \hyperlink{class_input_a0436098ba644b5a7f643dd0c2d33d26a}{update} ()=0
+\item 
+virtual \hyperlink{class_input_a4138334795f6330759839617744e20a9}{Kind} \hyperlink{class_input_ae5753682055225699b21f97354a317f0}{kind} () const  =0
+\item 
+virtual \hyperlink{class_q_string}{Q\+String} \hyperlink{class_input_af0cf2f0042064e90ccabe2d8b55f2a45}{docs} () const  =0
+\item 
+virtual \hyperlink{class_q_string}{Q\+String} \hyperlink{class_input_a5b54bd6c8aa55a0cdf892594766e6dbe}{id} () const  =0
+\item 
+virtual \hyperlink{class_q_string}{Q\+String} \hyperlink{class_input_aa080eb91625dc520aa3fe873b5f576da}{template\+Docs} () const  =0
+\item 
+virtual void \hyperlink{class_input_ac7db8341f42bd6313fc5370f8dea0394}{add\+Dependency} (\hyperlink{class_input}{Input} $\ast$option)=0
+\item 
+virtual void \hyperlink{class_input_a29e1927059a522781963fc8d0a872822}{set\+Enabled} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})=0
+\item 
+virtual void \hyperlink{class_input_a8758a9e88aecbbd9be1d438ba5b8454c}{update\+Dependencies} ()=0
+\item 
+virtual void \hyperlink{class_input_a2456add66c0c39982467a6a376c057fb}{reset} ()=0
+\item 
+virtual void \hyperlink{class_input_a761f73fb00d6e0e3e391edafcfde1134}{write\+Value} (\hyperlink{class_q_text_stream}{Q\+Text\+Stream} \&\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}, \hyperlink{class_q_text_codec}{Q\+Text\+Codec} $\ast$codec)=0
+\item 
+virtual void \hyperlink{class_input_a88188054c6f323aa45226c91101850d9}{set\+Template\+Docs} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_input_af0cf2f0042064e90ccabe2d8b55f2a45}{docs})=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{class_input_a4138334795f6330759839617744e20a9}{}\index{Input@{Input}!Kind@{Kind}}
+\index{Kind@{Kind}!Input@{Input}}
+\subsubsection[{Kind}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Input\+::\+Kind}}\label{class_input_a4138334795f6330759839617744e20a9}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Bool@{Bool}!Input@{Input}}\index{Input@{Input}!Bool@{Bool}}\item[{\em 
+\hypertarget{class_input_a4138334795f6330759839617744e20a9a2dbfddf6e62a7a0ad551c5e636d1e7b5}{}Bool\label{class_input_a4138334795f6330759839617744e20a9a2dbfddf6e62a7a0ad551c5e636d1e7b5}
+}]\index{Int@{Int}!Input@{Input}}\index{Input@{Input}!Int@{Int}}\item[{\em 
+\hypertarget{class_input_a4138334795f6330759839617744e20a9ac18e0843f53d18e021a7390507179f93}{}Int\label{class_input_a4138334795f6330759839617744e20a9ac18e0843f53d18e021a7390507179f93}
+}]\index{String@{String}!Input@{Input}}\index{Input@{Input}!String@{String}}\item[{\em 
+\hypertarget{class_input_a4138334795f6330759839617744e20a9a0bf868e02e196a9573daba25c8988a4d}{}String\label{class_input_a4138334795f6330759839617744e20a9a0bf868e02e196a9573daba25c8988a4d}
+}]\index{Str\+List@{Str\+List}!Input@{Input}}\index{Input@{Input}!Str\+List@{Str\+List}}\item[{\em 
+\hypertarget{class_input_a4138334795f6330759839617744e20a9abc5bd7ac23a47a029c0d9c8ca8802f4b}{}Str\+List\label{class_input_a4138334795f6330759839617744e20a9abc5bd7ac23a47a029c0d9c8ca8802f4b}
+}]\index{Obsolete@{Obsolete}!Input@{Input}}\index{Input@{Input}!Obsolete@{Obsolete}}\item[{\em 
+\hypertarget{class_input_a4138334795f6330759839617744e20a9a67a65b3167f2256495725a8522d3091e}{}Obsolete\label{class_input_a4138334795f6330759839617744e20a9a67a65b3167f2256495725a8522d3091e}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_input_a230646fa6e6433b4d9ac3535b7d52087}{}\index{Input@{Input}!````~Input@{$\sim$\+Input}}
+\index{````~Input@{$\sim$\+Input}!Input@{Input}}
+\subsubsection[{$\sim$\+Input()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Input\+::$\sim$\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_input_a230646fa6e6433b4d9ac3535b7d52087}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_input_ac7db8341f42bd6313fc5370f8dea0394}{}\index{Input@{Input}!add\+Dependency@{add\+Dependency}}
+\index{add\+Dependency@{add\+Dependency}!Input@{Input}}
+\subsubsection[{add\+Dependency(\+Input $\ast$option)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Input\+::add\+Dependency (
+\begin{DoxyParamCaption}
+\item[{{\bf Input} $\ast$}]{option}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_input_ac7db8341f42bd6313fc5370f8dea0394}
+
+
+Implémenté dans \hyperlink{class_input_string_a46b5ce5badcf1c6df3a891810cb91e41}{Input\+String}, \hyperlink{class_input_str_list_a226fe44b40476b696f03492b77c6ee3f}{Input\+Str\+List}, \hyperlink{class_input_int_af87701d09b1c6c53122857cf06f3ac9f}{Input\+Int}, et \hyperlink{class_input_bool_a36279aa5a2078ccedad5ab36e4106be6}{Input\+Bool}.
+
+\hypertarget{class_input_af0cf2f0042064e90ccabe2d8b55f2a45}{}\index{Input@{Input}!docs@{docs}}
+\index{docs@{docs}!Input@{Input}}
+\subsubsection[{docs() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Q\+String} Input\+::docs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_input_af0cf2f0042064e90ccabe2d8b55f2a45}
+
+
+Implémenté dans \hyperlink{class_input_string_ae8c833a186bc89fb7c1c62bdeea192ff}{Input\+String}, \hyperlink{class_input_str_list_afc1f5afc3ad234b70a33143c092aee87}{Input\+Str\+List}, \hyperlink{class_input_int_ac7adddde8113cfe304612caf4a38eb53}{Input\+Int}, et \hyperlink{class_input_bool_aedb9acc995075518636589c840fe9856}{Input\+Bool}.
+
+\hypertarget{class_input_a5b54bd6c8aa55a0cdf892594766e6dbe}{}\index{Input@{Input}!id@{id}}
+\index{id@{id}!Input@{Input}}
+\subsubsection[{id() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Q\+String} Input\+::id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_input_a5b54bd6c8aa55a0cdf892594766e6dbe}
+
+
+Implémenté dans \hyperlink{class_input_string_ae41fde1d4de62d762094778a91d3afe2}{Input\+String}, \hyperlink{class_input_str_list_ac77454b074e83a217d1689c15aaa3aaa}{Input\+Str\+List}, \hyperlink{class_input_int_a97c8bc657f2e6476264a5a6c0cbafb66}{Input\+Int}, et \hyperlink{class_input_bool_a6f67a6e052be4d249ce78a760cbf9224}{Input\+Bool}.
+
+\hypertarget{class_input_ae5753682055225699b21f97354a317f0}{}\index{Input@{Input}!kind@{kind}}
+\index{kind@{kind}!Input@{Input}}
+\subsubsection[{kind() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Kind} Input\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_input_ae5753682055225699b21f97354a317f0}
+
+
+Implémenté dans \hyperlink{class_input_string_af404b1b40894f7c4dd35239be66edca6}{Input\+String}, \hyperlink{class_input_str_list_a81c119323085a14b815ce58882bf34be}{Input\+Str\+List}, \hyperlink{class_input_int_a1a2b43b9021875569032d4574a9bb53b}{Input\+Int}, et \hyperlink{class_input_bool_a776c09b3f7c91a24f126063bd9388a28}{Input\+Bool}.
+
+\hypertarget{class_input_a2456add66c0c39982467a6a376c057fb}{}\index{Input@{Input}!reset@{reset}}
+\index{reset@{reset}!Input@{Input}}
+\subsubsection[{reset()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Input\+::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_input_a2456add66c0c39982467a6a376c057fb}
+\hypertarget{class_input_a29e1927059a522781963fc8d0a872822}{}\index{Input@{Input}!set\+Enabled@{set\+Enabled}}
+\index{set\+Enabled@{set\+Enabled}!Input@{Input}}
+\subsubsection[{set\+Enabled(bool)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Input\+::set\+Enabled (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_input_a29e1927059a522781963fc8d0a872822}
+
+
+Implémenté dans \hyperlink{class_input_string_add9620f611a4e69090232a7b15c7e74e}{Input\+String}, \hyperlink{class_input_str_list_a79ba8c5252c084ff39301b7f5f5a6871}{Input\+Str\+List}, \hyperlink{class_input_int_a0ac54eacde8aaf5b63b61f3ad1552cca}{Input\+Int}, et \hyperlink{class_input_bool_a4a289ec0e02329cd950fe7ad4a08fe9a}{Input\+Bool}.
+
+\hypertarget{class_input_a88188054c6f323aa45226c91101850d9}{}\index{Input@{Input}!set\+Template\+Docs@{set\+Template\+Docs}}
+\index{set\+Template\+Docs@{set\+Template\+Docs}!Input@{Input}}
+\subsubsection[{set\+Template\+Docs(const Q\+String \&docs)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Input\+::set\+Template\+Docs (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{docs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_input_a88188054c6f323aa45226c91101850d9}
+
+
+Implémenté dans \hyperlink{class_input_string_af6b070828f85757ca6cf565288ab1dd1}{Input\+String}, \hyperlink{class_input_str_list_ab8098b108a58dd377d60eb904fdbf3c7}{Input\+Str\+List}, \hyperlink{class_input_int_ad4f9a0ed2073110852122054cc03c774}{Input\+Int}, et \hyperlink{class_input_bool_ad07ccc2906cd40e6443e83541d85aff0}{Input\+Bool}.
+
+\hypertarget{class_input_aa080eb91625dc520aa3fe873b5f576da}{}\index{Input@{Input}!template\+Docs@{template\+Docs}}
+\index{template\+Docs@{template\+Docs}!Input@{Input}}
+\subsubsection[{template\+Docs() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Q\+String} Input\+::template\+Docs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_input_aa080eb91625dc520aa3fe873b5f576da}
+
+
+Implémenté dans \hyperlink{class_input_string_ab68dd8e3de51ec030e2b09f6dc8acd42}{Input\+String}, \hyperlink{class_input_str_list_a257bd03a73d42e765969082d9b0174a5}{Input\+Str\+List}, \hyperlink{class_input_int_a13208cb8140282b89b249e6f926ae3b9}{Input\+Int}, et \hyperlink{class_input_bool_aa4603113305c42b037258c1102ac4256}{Input\+Bool}.
+
+\hypertarget{class_input_a0436098ba644b5a7f643dd0c2d33d26a}{}\index{Input@{Input}!update@{update}}
+\index{update@{update}!Input@{Input}}
+\subsubsection[{update()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Input\+::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_input_a0436098ba644b5a7f643dd0c2d33d26a}
+
+
+Implémenté dans \hyperlink{class_input_string_a0f19d3ccb9191a54b94e1b290b525742}{Input\+String}, \hyperlink{class_input_str_list_a29cf7f5d0f8aab6a573179f6ab9045da}{Input\+Str\+List}, \hyperlink{class_input_int_a9e800d343da95c2df7fb768e20c9a112}{Input\+Int}, et \hyperlink{class_input_bool_a4430d88dc8bf58a9166dc84bef7b7782}{Input\+Bool}.
+
+\hypertarget{class_input_a8758a9e88aecbbd9be1d438ba5b8454c}{}\index{Input@{Input}!update\+Dependencies@{update\+Dependencies}}
+\index{update\+Dependencies@{update\+Dependencies}!Input@{Input}}
+\subsubsection[{update\+Dependencies()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Input\+::update\+Dependencies (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_input_a8758a9e88aecbbd9be1d438ba5b8454c}
+
+
+Implémenté dans \hyperlink{class_input_string_afc5b4853b2226058f4b996c114967f81}{Input\+String}, \hyperlink{class_input_str_list_aeca36d956357014a77036cddf1f48cb8}{Input\+Str\+List}, \hyperlink{class_input_int_a74643e6c6b576950df380fb21a7de54a}{Input\+Int}, et \hyperlink{class_input_bool_a87d74369df2db35004c265be9c4593ab}{Input\+Bool}.
+
+\hypertarget{class_input_a72c6ccd2eff708b1f91b8503427ec312}{}\index{Input@{Input}!value@{value}}
+\index{value@{value}!Input@{Input}}
+\subsubsection[{value()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+Variant\& Input\+::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_input_a72c6ccd2eff708b1f91b8503427ec312}
+
+
+Implémenté dans \hyperlink{class_input_string_a9c3a16a3861e950f8790d8c7e157cdc1}{Input\+String}, \hyperlink{class_input_str_list_a60756f0f9f3fc4303a7c17550ae81a46}{Input\+Str\+List}, \hyperlink{class_input_int_a7fe2f461003ff32c996a2aeb9ee07384}{Input\+Int}, et \hyperlink{class_input_bool_a0798a64139304e63ab3e2c67dcf5d0d6}{Input\+Bool}.
+
+\hypertarget{class_input_a761f73fb00d6e0e3e391edafcfde1134}{}\index{Input@{Input}!write\+Value@{write\+Value}}
+\index{write\+Value@{write\+Value}!Input@{Input}}
+\subsubsection[{write\+Value(\+Q\+Text\+Stream \&t, Q\+Text\+Codec $\ast$codec)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Input\+::write\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Text\+Stream} \&}]{t, }
+\item[{{\bf Q\+Text\+Codec} $\ast$}]{codec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_input_a761f73fb00d6e0e3e391edafcfde1134}
+
+
+Implémenté dans \hyperlink{class_input_string_ae515cffbe50507d2c97ffa3ea36cade0}{Input\+String}, \hyperlink{class_input_str_list_a74b3b1b206990199513fa4d1c2c54143}{Input\+Str\+List}, \hyperlink{class_input_int_a2920733e59e4716c8fd0e5e9adf67ba1}{Input\+Int}, et \hyperlink{class_input_bool_a4df0a3a3df21135cf337c5cb516d8705}{Input\+Bool}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+addon/doxywizard/\hyperlink{input_8h}{input.\+h}\end{DoxyCompactItemize}

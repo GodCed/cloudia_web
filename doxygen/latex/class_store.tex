@@ -1,0 +1,180 @@
+\hypertarget{class_store}{}\section{Référence de la classe Store}
+\label{class_store}\index{Store@{Store}}
+
+
+The \hyperlink{class_store}{Store} is a file based memory manager.  
+
+
+
+
+{\ttfamily \#include $<$store.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Store\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_store}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_store_a5f58eadcb7385d5a5aa6830daef84f7d}{Store} ()
+\item 
+\hyperlink{class_store_a4fd725fdb2de0632ed98bfbd131c2512}{$\sim$\+Store} ()
+\item 
+int \hyperlink{class_store_a9707050019d12be2db8ea1b38d535f03}{open} (const char $\ast$name)
+\item 
+\hyperlink{portable_8h_a25423a5b429a3ee0610315d93938bd0b}{portable\+\_\+off\+\_\+t} \hyperlink{class_store_ac1ce3fb86b3bc46125756b9ef782c095}{alloc} ()
+\item 
+int \hyperlink{class_store_aec754c74cf190cb55281a923db21194a}{write} (const char $\ast$buf, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} size)
+\item 
+void \hyperlink{class_store_a616a1f53fa04d39d505a03b1f49ab7a6}{end} ()
+\item 
+void \hyperlink{class_store_aed5b8a83aa15dfc3f7f1ca930a4d2583}{release} (\hyperlink{portable_8h_a25423a5b429a3ee0610315d93938bd0b}{portable\+\_\+off\+\_\+t} handle)
+\item 
+void \hyperlink{class_store_a1a3dd916ae5c4c2e6ca4d13f418344a9}{close} ()
+\item 
+void \hyperlink{class_store_ad77053023f371abfc70f76ee2a14c377}{seek} (\hyperlink{portable_8h_a25423a5b429a3ee0610315d93938bd0b}{portable\+\_\+off\+\_\+t} handle)
+\item 
+int \hyperlink{class_store_a02df7a98367838e436f8f8b3367016d1}{read} (char $\ast$buf, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} size)
+\item 
+void \hyperlink{class_store_a3b1a8632a1a6180cbcf210a3bfe51698}{print\+Stats} ()
+\item 
+\hyperlink{portable_8h_a25423a5b429a3ee0610315d93938bd0b}{portable\+\_\+off\+\_\+t} \hyperlink{class_store_ad81d168e4f03617ee3e63a8c7fe58f5a}{pos} () const 
+\item 
+void \hyperlink{class_store_a1aa92a07ee209dcce2542a80aba174be}{dump\+Block} (\hyperlink{portable_8h_a25423a5b429a3ee0610315d93938bd0b}{portable\+\_\+off\+\_\+t} start, \hyperlink{portable_8h_a25423a5b429a3ee0610315d93938bd0b}{portable\+\_\+off\+\_\+t} \hyperlink{class_store_a616a1f53fa04d39d505a03b1f49ab7a6}{end})
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+The \hyperlink{class_store}{Store} is a file based memory manager. 
+
+You can open the store using \hyperlink{class_store_a9707050019d12be2db8ea1b38d535f03}{open()}. Then obtain a handle via \hyperlink{class_store_ac1ce3fb86b3bc46125756b9ef782c095}{alloc()} followed by a sequence of \hyperlink{class_store_aec754c74cf190cb55281a923db21194a}{write()} commands to store information, and finalize it using \hyperlink{class_store_a616a1f53fa04d39d505a03b1f49ab7a6}{end()}.
+
+Later on you locate the information with \hyperlink{class_store_ad77053023f371abfc70f76ee2a14c377}{seek()} using the handle obtained with \hyperlink{class_store_ac1ce3fb86b3bc46125756b9ef782c095}{alloc()}, and then use a sequence of \hyperlink{class_store_a02df7a98367838e436f8f8b3367016d1}{read()} calls to read the information back.
+
+If no longer needed the storage space can be freed using \hyperlink{class_store_aed5b8a83aa15dfc3f7f1ca930a4d2583}{release()}.
+
+The store will dynamically grow the file on disk if needed. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_store_a5f58eadcb7385d5a5aa6830daef84f7d}{}\index{Store@{Store}!Store@{Store}}
+\index{Store@{Store}!Store@{Store}}
+\subsubsection[{Store()}]{\setlength{\rightskip}{0pt plus 5cm}Store\+::\+Store (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_store_a5f58eadcb7385d5a5aa6830daef84f7d}
+Creates a store. \hypertarget{class_store_a4fd725fdb2de0632ed98bfbd131c2512}{}\index{Store@{Store}!````~Store@{$\sim$\+Store}}
+\index{````~Store@{$\sim$\+Store}!Store@{Store}}
+\subsubsection[{$\sim$\+Store()}]{\setlength{\rightskip}{0pt plus 5cm}Store\+::$\sim$\+Store (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_store_a4fd725fdb2de0632ed98bfbd131c2512}
+Releases the store object. Will close the underlying file if opened. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_store_ac1ce3fb86b3bc46125756b9ef782c095}{}\index{Store@{Store}!alloc@{alloc}}
+\index{alloc@{alloc}!Store@{Store}}
+\subsubsection[{alloc()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf portable\+\_\+off\+\_\+t} Store\+::alloc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_store_ac1ce3fb86b3bc46125756b9ef782c095}
+Allocates a handle to write to and read from. \hypertarget{class_store_a1a3dd916ae5c4c2e6ca4d13f418344a9}{}\index{Store@{Store}!close@{close}}
+\index{close@{close}!Store@{Store}}
+\subsubsection[{close()}]{\setlength{\rightskip}{0pt plus 5cm}void Store\+::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_store_a1a3dd916ae5c4c2e6ca4d13f418344a9}
+Closes the store \hypertarget{class_store_a1aa92a07ee209dcce2542a80aba174be}{}\index{Store@{Store}!dump\+Block@{dump\+Block}}
+\index{dump\+Block@{dump\+Block}!Store@{Store}}
+\subsubsection[{dump\+Block(portable\+\_\+off\+\_\+t start, portable\+\_\+off\+\_\+t end)}]{\setlength{\rightskip}{0pt plus 5cm}void Store\+::dump\+Block (
+\begin{DoxyParamCaption}
+\item[{{\bf portable\+\_\+off\+\_\+t}}]{start, }
+\item[{{\bf portable\+\_\+off\+\_\+t}}]{end}
+\end{DoxyParamCaption}
+)}\label{class_store_a1aa92a07ee209dcce2542a80aba174be}
+\hypertarget{class_store_a616a1f53fa04d39d505a03b1f49ab7a6}{}\index{Store@{Store}!end@{end}}
+\index{end@{end}!Store@{Store}}
+\subsubsection[{end()}]{\setlength{\rightskip}{0pt plus 5cm}void Store\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_store_a616a1f53fa04d39d505a03b1f49ab7a6}
+Ends the sequence of writes. \begin{DoxyNote}{Note}
+After this call, first \hyperlink{class_store_ac1ce3fb86b3bc46125756b9ef782c095}{alloc()} has to be called before new writes can be done. 
+\end{DoxyNote}
+\hypertarget{class_store_a9707050019d12be2db8ea1b38d535f03}{}\index{Store@{Store}!open@{open}}
+\index{open@{open}!Store@{Store}}
+\subsubsection[{open(const char $\ast$name)}]{\setlength{\rightskip}{0pt plus 5cm}int Store\+::open (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\label{class_store_a9707050019d12be2db8ea1b38d535f03}
+Opens the file underlying the store using {\itshape name} as the file name. Returns 0 upon success, or -\/1 otherwise. \hypertarget{class_store_ad81d168e4f03617ee3e63a8c7fe58f5a}{}\index{Store@{Store}!pos@{pos}}
+\index{pos@{pos}!Store@{Store}}
+\subsubsection[{pos() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf portable\+\_\+off\+\_\+t} Store\+::pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_store_ad81d168e4f03617ee3e63a8c7fe58f5a}
+\hypertarget{class_store_a3b1a8632a1a6180cbcf210a3bfe51698}{}\index{Store@{Store}!print\+Stats@{print\+Stats}}
+\index{print\+Stats@{print\+Stats}!Store@{Store}}
+\subsubsection[{print\+Stats()}]{\setlength{\rightskip}{0pt plus 5cm}void Store\+::print\+Stats (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_store_a3b1a8632a1a6180cbcf210a3bfe51698}
+\hypertarget{class_store_a02df7a98367838e436f8f8b3367016d1}{}\index{Store@{Store}!read@{read}}
+\index{read@{read}!Store@{Store}}
+\subsubsection[{read(char $\ast$buf, uint size)}]{\setlength{\rightskip}{0pt plus 5cm}int Store\+::read (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buf, }
+\item[{{\bf uint}}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_store_a02df7a98367838e436f8f8b3367016d1}
+Reads {\itshape size} bytes from the store into the array pointed to be {\itshape buf}. \begin{DoxyNote}{Note}
+Before reading \hyperlink{class_store_ad77053023f371abfc70f76ee2a14c377}{seek()} has to be called to set the right start of the store. 
+\end{DoxyNote}
+
+
+Implémente \hyperlink{class_storage_intf_a125b99d1511364f4fe49709feec46bb4}{Storage\+Intf}.
+
+\hypertarget{class_store_aed5b8a83aa15dfc3f7f1ca930a4d2583}{}\index{Store@{Store}!release@{release}}
+\index{release@{release}!Store@{Store}}
+\subsubsection[{release(portable\+\_\+off\+\_\+t handle)}]{\setlength{\rightskip}{0pt plus 5cm}void Store\+::release (
+\begin{DoxyParamCaption}
+\item[{{\bf portable\+\_\+off\+\_\+t}}]{handle}
+\end{DoxyParamCaption}
+)}\label{class_store_aed5b8a83aa15dfc3f7f1ca930a4d2583}
+Releases the memory corresponding to the handle returned with \hyperlink{class_store_ac1ce3fb86b3bc46125756b9ef782c095}{alloc()} \hypertarget{class_store_ad77053023f371abfc70f76ee2a14c377}{}\index{Store@{Store}!seek@{seek}}
+\index{seek@{seek}!Store@{Store}}
+\subsubsection[{seek(portable\+\_\+off\+\_\+t handle)}]{\setlength{\rightskip}{0pt plus 5cm}void Store\+::seek (
+\begin{DoxyParamCaption}
+\item[{{\bf portable\+\_\+off\+\_\+t}}]{handle}
+\end{DoxyParamCaption}
+)}\label{class_store_ad77053023f371abfc70f76ee2a14c377}
+Goes to the start of information corresponding to handle {\itshape pos} \hypertarget{class_store_aec754c74cf190cb55281a923db21194a}{}\index{Store@{Store}!write@{write}}
+\index{write@{write}!Store@{Store}}
+\subsubsection[{write(const char $\ast$buf, uint size)}]{\setlength{\rightskip}{0pt plus 5cm}int Store\+::write (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{buf, }
+\item[{{\bf uint}}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_store_aec754c74cf190cb55281a923db21194a}
+Writes {\itshape size} bytes in array {\itshape buf} to the store. First \hyperlink{class_store_ac1ce3fb86b3bc46125756b9ef782c095}{alloc()} has to be called. \begin{DoxyNote}{Note}
+The information can only be read after \hyperlink{class_store_a616a1f53fa04d39d505a03b1f49ab7a6}{end()} has been called. 
+\end{DoxyNote}
+
+
+Implémente \hyperlink{class_storage_intf_a97b26023c6cf0590423e428947d6febb}{Storage\+Intf}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{store_8h}{store.\+h}\item 
+src/\hyperlink{store_8cpp}{store.\+cpp}\end{DoxyCompactItemize}

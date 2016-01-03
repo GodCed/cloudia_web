@@ -1,0 +1,281 @@
+\hypertarget{class_template_variant}{}\section{Référence de la classe Template\+Variant}
+\label{class_template_variant}\index{Template\+Variant@{Template\+Variant}}
+
+
+Variant type which can hold one value of a fixed set of types.  
+
+
+
+
+{\ttfamily \#include $<$template.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_template_variant_1_1_delegate}{Delegate}
+\begin{DoxyCompactList}\small\item\em Helper class to create a delegate that can store a function/method call. \end{DoxyCompactList}\item 
+class \hyperlink{class_template_variant_1_1_private}{Private}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_template_variant_1_1_private}{Private} data of a template variant object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__template__api_ga4c0d322ba971480bfbd2a8f418eadc81}{Type} \{ \\*
+\hyperlink{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81ac64bfef699f6847ca4a1589b5057a943}{None}, 
+\hyperlink{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81aaa4ac74b26768c0a9aae405dc0ab4291}{Bool}, 
+\hyperlink{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81af502b2f0adb48b330d54c141ab7d6b17}{Integer}, 
+\hyperlink{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81a97c566900c9dce7f38cb2c1fd9e6890d}{String}, 
+\\*
+\hyperlink{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81a95bec7591d52d9a3e93851d6cb6f3064}{Struct}, 
+\hyperlink{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81a06b8f56fd37b6285112638c331f29252}{List}, 
+\hyperlink{group__template__api_gga4c0d322ba971480bfbd2a8f418eadc81afa78594f4b9f7fa93f71ef39deae0323}{Function}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__template__api_ga4c0d322ba971480bfbd2a8f418eadc81}{Type} \hyperlink{class_template_variant_a0ecde929e26b060fa747ef2996cff3a9}{type} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_template_variant_ab53cef3158c8fb05ba4c4fdb5186b2b9}{type\+As\+String} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_template_variant_a772e0224697b18c250b12768b3ad17b5}{is\+Valid} () const 
+\item 
+\hyperlink{class_template_variant_a56e1f12ff7f2fc2f9c5d269495161201}{Template\+Variant} ()
+\item 
+\hyperlink{class_template_variant_ae41a75ce11e1187f0934f26bb78f8bd2}{Template\+Variant} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b})
+\item 
+\hyperlink{class_template_variant_a374d1ccdd4841ab6ddc7fa7cd23e69fd}{Template\+Variant} (int v)
+\item 
+\hyperlink{class_template_variant_a1a57277efae2fbb361f65c2992f61c6e}{Template\+Variant} (const char $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_template_variant_aff07dc3f78f5862853eaebe1eed9689d}{raw}=\hyperlink{qglobal_8h_a10e004b6916e78ff4ea8379be80b80cc}{F\+A\+L\+S\+E})
+\item 
+\hyperlink{class_template_variant_af81e60a076fd6bb5fec55ee424797a85}{Template\+Variant} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_template_variant_aff07dc3f78f5862853eaebe1eed9689d}{raw}=\hyperlink{qglobal_8h_a10e004b6916e78ff4ea8379be80b80cc}{F\+A\+L\+S\+E})
+\item 
+\hyperlink{class_template_variant_a700516fd1c548baa21a65fd11b25e2b8}{Template\+Variant} (\hyperlink{class_template_struct_intf}{Template\+Struct\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_template_variant_a4e55aab3ce72fb006fa4e36b16bec0b6}{Template\+Variant} (\hyperlink{class_template_list_intf}{Template\+List\+Intf} $\ast$\hyperlink{060__command__switch_8tcl_aff56f84b49947b84b2a304f51cf8e678}{l})
+\item 
+\hyperlink{class_template_variant_a38cceb9da15e4edeb649545edbb647cc}{Template\+Variant} (const \hyperlink{class_template_variant_1_1_delegate}{Delegate} \&delegate)
+\item 
+\hyperlink{class_template_variant_a8fa8f46048c3cde3c719932060101a0a}{$\sim$\+Template\+Variant} ()
+\item 
+\hyperlink{class_template_variant_ad9594af6ca3e9f1f2688ac4f03fe106c}{Template\+Variant} (const \hyperlink{class_template_variant}{Template\+Variant} \&v)
+\item 
+\hyperlink{class_template_variant}{Template\+Variant} \& \hyperlink{class_template_variant_a113fe73f8110597f42969c431385aa19}{operator=} (const \hyperlink{class_template_variant}{Template\+Variant} \&v)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_template_variant_a8bb71720af66556958d79aa6c64f559b}{operator==} (\hyperlink{class_template_variant}{Template\+Variant} \&other)
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_template_variant_a33468148fdf1ef36de68de186de7feb0}{to\+String} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_template_variant_a6b6357ec45060e81b2bf4c89e57bc829}{to\+Bool} () const 
+\item 
+int \hyperlink{class_template_variant_a80848a37b7e3af3a8f98e4766d5ae588}{to\+Int} () const 
+\item 
+\hyperlink{class_template_list_intf}{Template\+List\+Intf} $\ast$ \hyperlink{class_template_variant_a861eeeb205056c09900594212f3fa18d}{to\+List} () const 
+\item 
+\hyperlink{class_template_struct_intf}{Template\+Struct\+Intf} $\ast$ \hyperlink{class_template_variant_abe7a7435852a58e5b11657e9f7fccd59}{to\+Struct} () const 
+\item 
+\hyperlink{class_template_variant}{Template\+Variant} \hyperlink{class_template_variant_aa36e21ae53656963fd75b799e4fd0808}{call} (const \hyperlink{class_q_value_list}{Q\+Value\+List}$<$ \hyperlink{class_template_variant}{Template\+Variant} $>$ \&args)
+\item 
+void \hyperlink{class_template_variant_a3ca5dec8397f15321f13085ee5fefcc1}{set\+Raw} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b})
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_template_variant_aff07dc3f78f5862853eaebe1eed9689d}{raw} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Variant type which can hold one value of a fixed set of types. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_template_variant_a56e1f12ff7f2fc2f9c5d269495161201}{}\index{Template\+Variant@{Template\+Variant}!Template\+Variant@{Template\+Variant}}
+\index{Template\+Variant@{Template\+Variant}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{Template\+Variant()}]{\setlength{\rightskip}{0pt plus 5cm}Template\+Variant\+::\+Template\+Variant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_template_variant_a56e1f12ff7f2fc2f9c5d269495161201}
+Constructs an invalid variant. \hypertarget{class_template_variant_ae41a75ce11e1187f0934f26bb78f8bd2}{}\index{Template\+Variant@{Template\+Variant}!Template\+Variant@{Template\+Variant}}
+\index{Template\+Variant@{Template\+Variant}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{Template\+Variant(bool b)}]{\setlength{\rightskip}{0pt plus 5cm}Template\+Variant\+::\+Template\+Variant (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\label{class_template_variant_ae41a75ce11e1187f0934f26bb78f8bd2}
+Constructs a new variant with a boolean value {\itshape b}. \hypertarget{class_template_variant_a374d1ccdd4841ab6ddc7fa7cd23e69fd}{}\index{Template\+Variant@{Template\+Variant}!Template\+Variant@{Template\+Variant}}
+\index{Template\+Variant@{Template\+Variant}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{Template\+Variant(int v)}]{\setlength{\rightskip}{0pt plus 5cm}Template\+Variant\+::\+Template\+Variant (
+\begin{DoxyParamCaption}
+\item[{int}]{v}
+\end{DoxyParamCaption}
+)}\label{class_template_variant_a374d1ccdd4841ab6ddc7fa7cd23e69fd}
+Constructs a new variant with a integer value {\itshape v}. \hypertarget{class_template_variant_a1a57277efae2fbb361f65c2992f61c6e}{}\index{Template\+Variant@{Template\+Variant}!Template\+Variant@{Template\+Variant}}
+\index{Template\+Variant@{Template\+Variant}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{Template\+Variant(const char $\ast$s, bool raw=\+F\+A\+L\+S\+E)}]{\setlength{\rightskip}{0pt plus 5cm}Template\+Variant\+::\+Template\+Variant (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s, }
+\item[{{\bf bool}}]{raw = {\ttfamily {\bf F\+A\+L\+S\+E}}}
+\end{DoxyParamCaption}
+)}\label{class_template_variant_a1a57277efae2fbb361f65c2992f61c6e}
+Constructs a new variant with a string value {\itshape s}. \hypertarget{class_template_variant_af81e60a076fd6bb5fec55ee424797a85}{}\index{Template\+Variant@{Template\+Variant}!Template\+Variant@{Template\+Variant}}
+\index{Template\+Variant@{Template\+Variant}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{Template\+Variant(const Q\+C\+String \&s, bool raw=\+F\+A\+L\+S\+E)}]{\setlength{\rightskip}{0pt plus 5cm}Template\+Variant\+::\+Template\+Variant (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s, }
+\item[{{\bf bool}}]{raw = {\ttfamily {\bf F\+A\+L\+S\+E}}}
+\end{DoxyParamCaption}
+)}\label{class_template_variant_af81e60a076fd6bb5fec55ee424797a85}
+Constructs a new variant with a string value {\itshape s}. \hypertarget{class_template_variant_a700516fd1c548baa21a65fd11b25e2b8}{}\index{Template\+Variant@{Template\+Variant}!Template\+Variant@{Template\+Variant}}
+\index{Template\+Variant@{Template\+Variant}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{Template\+Variant(\+Template\+Struct\+Intf $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}Template\+Variant\+::\+Template\+Variant (
+\begin{DoxyParamCaption}
+\item[{{\bf Template\+Struct\+Intf} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{class_template_variant_a700516fd1c548baa21a65fd11b25e2b8}
+Constructs a new variant with a struct value {\itshape s}. \begin{DoxyNote}{Note}
+. The variant will hold a reference to the object. 
+\end{DoxyNote}
+\hypertarget{class_template_variant_a4e55aab3ce72fb006fa4e36b16bec0b6}{}\index{Template\+Variant@{Template\+Variant}!Template\+Variant@{Template\+Variant}}
+\index{Template\+Variant@{Template\+Variant}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{Template\+Variant(\+Template\+List\+Intf $\ast$l)}]{\setlength{\rightskip}{0pt plus 5cm}Template\+Variant\+::\+Template\+Variant (
+\begin{DoxyParamCaption}
+\item[{{\bf Template\+List\+Intf} $\ast$}]{l}
+\end{DoxyParamCaption}
+)}\label{class_template_variant_a4e55aab3ce72fb006fa4e36b16bec0b6}
+Constructs a new variant with a list value {\itshape l}. \begin{DoxyNote}{Note}
+. The variant will hold a reference to the object. 
+\end{DoxyNote}
+\hypertarget{class_template_variant_a38cceb9da15e4edeb649545edbb647cc}{}\index{Template\+Variant@{Template\+Variant}!Template\+Variant@{Template\+Variant}}
+\index{Template\+Variant@{Template\+Variant}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{Template\+Variant(const Delegate \&delegate)}]{\setlength{\rightskip}{0pt plus 5cm}Template\+Variant\+::\+Template\+Variant (
+\begin{DoxyParamCaption}
+\item[{const {\bf Delegate} \&}]{delegate}
+\end{DoxyParamCaption}
+)}\label{class_template_variant_a38cceb9da15e4edeb649545edbb647cc}
+Constructs a new variant which represents a method call 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em delegate} & \hyperlink{class_template_variant_1_1_delegate}{Delegate} object to invoke when calling \hyperlink{class_template_variant_aa36e21ae53656963fd75b799e4fd0808}{call()} on this variant. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Use \hyperlink{class_template_variant_1_1_delegate_a6a013222ab665507469657d09c07c92b}{Template\+Variant\+::\+Delegate\+::from\+Method()} and \hyperlink{class_template_variant_1_1_delegate_a226f1f2e20f6d26fea2d989fd91bd8a8}{Template\+Variant\+::\+Delegate\+::from\+Function()} to create \hyperlink{class_template_variant_1_1_delegate}{Delegate} objects. 
+\end{DoxyNote}
+\hypertarget{class_template_variant_a8fa8f46048c3cde3c719932060101a0a}{}\index{Template\+Variant@{Template\+Variant}!````~Template\+Variant@{$\sim$\+Template\+Variant}}
+\index{````~Template\+Variant@{$\sim$\+Template\+Variant}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{$\sim$\+Template\+Variant()}]{\setlength{\rightskip}{0pt plus 5cm}Template\+Variant\+::$\sim$\+Template\+Variant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_template_variant_a8fa8f46048c3cde3c719932060101a0a}
+Destroys the Variant object \hypertarget{class_template_variant_ad9594af6ca3e9f1f2688ac4f03fe106c}{}\index{Template\+Variant@{Template\+Variant}!Template\+Variant@{Template\+Variant}}
+\index{Template\+Variant@{Template\+Variant}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{Template\+Variant(const Template\+Variant \&v)}]{\setlength{\rightskip}{0pt plus 5cm}Template\+Variant\+::\+Template\+Variant (
+\begin{DoxyParamCaption}
+\item[{const {\bf Template\+Variant} \&}]{v}
+\end{DoxyParamCaption}
+)}\label{class_template_variant_ad9594af6ca3e9f1f2688ac4f03fe106c}
+Constructs a copy of the variant, {\itshape v}, passed as the argument to this constructor. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_template_variant_aa36e21ae53656963fd75b799e4fd0808}{}\index{Template\+Variant@{Template\+Variant}!call@{call}}
+\index{call@{call}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{call(const Q\+Value\+List$<$ Template\+Variant $>$ \&args)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Variant} Template\+Variant\+::call (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Value\+List}$<$ {\bf Template\+Variant} $>$ \&}]{args}
+\end{DoxyParamCaption}
+)}\label{class_template_variant_aa36e21ae53656963fd75b799e4fd0808}
+Return the result of apply this function with {\itshape args}. Returns an empty string if the variant type is not a function. \hypertarget{class_template_variant_a772e0224697b18c250b12768b3ad17b5}{}\index{Template\+Variant@{Template\+Variant}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{is\+Valid() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Template\+Variant\+::is\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_template_variant_a772e0224697b18c250b12768b3ad17b5}
+Returns T\+R\+U\+E if the variant holds a valid value, or F\+A\+L\+S\+E otherwise \hypertarget{class_template_variant_a113fe73f8110597f42969c431385aa19}{}\index{Template\+Variant@{Template\+Variant}!operator=@{operator=}}
+\index{operator=@{operator=}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{operator=(const Template\+Variant \&v)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Variant} \& Template\+Variant\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Template\+Variant} \&}]{v}
+\end{DoxyParamCaption}
+)}\label{class_template_variant_a113fe73f8110597f42969c431385aa19}
+Assigns the value of the variant {\itshape v} to this variant. \hypertarget{class_template_variant_a8bb71720af66556958d79aa6c64f559b}{}\index{Template\+Variant@{Template\+Variant}!operator==@{operator==}}
+\index{operator==@{operator==}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{operator==(\+Template\+Variant \&other)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Template\+Variant\+::operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf Template\+Variant} \&}]{other}
+\end{DoxyParamCaption}
+)}\label{class_template_variant_a8bb71720af66556958d79aa6c64f559b}
+Compares this Q\+Variant with v and returns true if they are equal; otherwise returns false. \hypertarget{class_template_variant_aff07dc3f78f5862853eaebe1eed9689d}{}\index{Template\+Variant@{Template\+Variant}!raw@{raw}}
+\index{raw@{raw}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{raw() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Template\+Variant\+::raw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_template_variant_aff07dc3f78f5862853eaebe1eed9689d}
+Returns whether or not the value of the Value is raw. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_template_variant_a3ca5dec8397f15321f13085ee5fefcc1}{set\+Raw()} 
+\end{DoxySeeAlso}
+\hypertarget{class_template_variant_a3ca5dec8397f15321f13085ee5fefcc1}{}\index{Template\+Variant@{Template\+Variant}!set\+Raw@{set\+Raw}}
+\index{set\+Raw@{set\+Raw}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{set\+Raw(bool b)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Variant\+::set\+Raw (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{b}
+\end{DoxyParamCaption}
+)}\label{class_template_variant_a3ca5dec8397f15321f13085ee5fefcc1}
+Sets whether or not the value of the Variant should be escaped or written as-\/is (raw). 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em b} & T\+R\+U\+E means write as-\/is, F\+A\+L\+S\+E means apply escaping. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_template_variant_a6b6357ec45060e81b2bf4c89e57bc829}{}\index{Template\+Variant@{Template\+Variant}!to\+Bool@{to\+Bool}}
+\index{to\+Bool@{to\+Bool}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{to\+Bool() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Template\+Variant\+::to\+Bool (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_template_variant_a6b6357ec45060e81b2bf4c89e57bc829}
+Returns the variant as a boolean. \hypertarget{class_template_variant_a80848a37b7e3af3a8f98e4766d5ae588}{}\index{Template\+Variant@{Template\+Variant}!to\+Int@{to\+Int}}
+\index{to\+Int@{to\+Int}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{to\+Int() const }]{\setlength{\rightskip}{0pt plus 5cm}int Template\+Variant\+::to\+Int (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_template_variant_a80848a37b7e3af3a8f98e4766d5ae588}
+Returns the variant as an integer. \hypertarget{class_template_variant_a861eeeb205056c09900594212f3fa18d}{}\index{Template\+Variant@{Template\+Variant}!to\+List@{to\+List}}
+\index{to\+List@{to\+List}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{to\+List() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+List\+Intf} $\ast$ Template\+Variant\+::to\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_template_variant_a861eeeb205056c09900594212f3fa18d}
+Returns the pointer to list referenced by this variant or 0 if this variant does not have list type. \hypertarget{class_template_variant_a33468148fdf1ef36de68de186de7feb0}{}\index{Template\+Variant@{Template\+Variant}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{to\+String() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Template\+Variant\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_template_variant_a33468148fdf1ef36de68de186de7feb0}
+Returns the variant as a string. \hypertarget{class_template_variant_abe7a7435852a58e5b11657e9f7fccd59}{}\index{Template\+Variant@{Template\+Variant}!to\+Struct@{to\+Struct}}
+\index{to\+Struct@{to\+Struct}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{to\+Struct() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Struct\+Intf} $\ast$ Template\+Variant\+::to\+Struct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_template_variant_abe7a7435852a58e5b11657e9f7fccd59}
+Returns the pointer to struct referenced by this variant or 0 if this variant does not have struct type. \hypertarget{class_template_variant_a0ecde929e26b060fa747ef2996cff3a9}{}\index{Template\+Variant@{Template\+Variant}!type@{type}}
+\index{type@{type}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{type() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Variant\+::\+Type} Template\+Variant\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_template_variant_a0ecde929e26b060fa747ef2996cff3a9}
+Returns the type of the value stored in the variant \hypertarget{class_template_variant_ab53cef3158c8fb05ba4c4fdb5186b2b9}{}\index{Template\+Variant@{Template\+Variant}!type\+As\+String@{type\+As\+String}}
+\index{type\+As\+String@{type\+As\+String}!Template\+Variant@{Template\+Variant}}
+\subsubsection[{type\+As\+String() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Template\+Variant\+::type\+As\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_template_variant_ab53cef3158c8fb05ba4c4fdb5186b2b9}
+Return a string representation of the type of the value stored in the variant 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{template_8h}{template.\+h}\item 
+src/\hyperlink{template_8cpp}{template.\+cpp}\end{DoxyCompactItemize}

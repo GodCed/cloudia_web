@@ -1,0 +1,66 @@
+\hypertarget{rtfgen_8cpp}{}\section{Référence du fichier src/rtfgen.cpp}
+\label{rtfgen_8cpp}\index{src/rtfgen.\+cpp@{src/rtfgen.\+cpp}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$qdir.\+h$>$}\\*
+{\ttfamily \#include $<$qregexp.\+h$>$}\\*
+{\ttfamily \#include $<$qtextstream.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}rtfgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doxygen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}diagram.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}language.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dot.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}version.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pagedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}rtfstyle.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}rtfdocvisitor.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}docparser.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dirdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}vhdldocgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}portable.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}groupdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}classlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}filename.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}namespacedef.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{rtfgen_8cpp_a8e937453cd49cd7e753fa4e9d77d3c38}{D\+B\+G\+\_\+\+R\+T\+F}(x)
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{rtfgen_8cpp_abe03bf3096ce8ecd54bd585fced49356}{is\+Lead\+Bytes} (int \hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})
+\item 
+void \hyperlink{rtfgen_8cpp_a6c46025b4ad3cde983f30c1a70a10d28}{test\+R\+T\+F\+Output} (const char $\ast$name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{rtfgen_8cpp_a8e937453cd49cd7e753fa4e9d77d3c38}{}\index{rtfgen.\+cpp@{rtfgen.\+cpp}!D\+B\+G\+\_\+\+R\+T\+F@{D\+B\+G\+\_\+\+R\+T\+F}}
+\index{D\+B\+G\+\_\+\+R\+T\+F@{D\+B\+G\+\_\+\+R\+T\+F}!rtfgen.\+cpp@{rtfgen.\+cpp}}
+\subsubsection[{D\+B\+G\+\_\+\+R\+T\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+B\+G\+\_\+\+R\+T\+F(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}\label{rtfgen_8cpp_a8e937453cd49cd7e753fa4e9d77d3c38}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{rtfgen_8cpp_abe03bf3096ce8ecd54bd585fced49356}{}\index{rtfgen.\+cpp@{rtfgen.\+cpp}!is\+Lead\+Bytes@{is\+Lead\+Bytes}}
+\index{is\+Lead\+Bytes@{is\+Lead\+Bytes}!rtfgen.\+cpp@{rtfgen.\+cpp}}
+\subsubsection[{is\+Lead\+Bytes(int c)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} is\+Lead\+Bytes (
+\begin{DoxyParamCaption}
+\item[{int}]{c}
+\end{DoxyParamCaption}
+)}\label{rtfgen_8cpp_abe03bf3096ce8ecd54bd585fced49356}
+\hypertarget{rtfgen_8cpp_a6c46025b4ad3cde983f30c1a70a10d28}{}\index{rtfgen.\+cpp@{rtfgen.\+cpp}!test\+R\+T\+F\+Output@{test\+R\+T\+F\+Output}}
+\index{test\+R\+T\+F\+Output@{test\+R\+T\+F\+Output}!rtfgen.\+cpp@{rtfgen.\+cpp}}
+\subsubsection[{test\+R\+T\+F\+Output(const char $\ast$name)}]{\setlength{\rightskip}{0pt plus 5cm}void test\+R\+T\+F\+Output (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\label{rtfgen_8cpp_a6c46025b4ad3cde983f30c1a70a10d28}
+Tests the integrity of the result by counting brackets. 

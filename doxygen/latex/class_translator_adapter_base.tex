@@ -1,0 +1,86 @@
+\hypertarget{class_translator_adapter_base}{}\section{Référence de la classe Translator\+Adapter\+Base}
+\label{class_translator_adapter_base}\index{Translator\+Adapter\+Base@{Translator\+Adapter\+Base}}
+
+
+{\ttfamily \#include $<$translator\+\_\+adapter.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Translator\+Adapter\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.347561cm]{class_translator_adapter_base}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_translator_adapter_base_acc5b89c39bae2a9bca490016ec15c79f}{update\+Needed\+Message} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_translator_adapter_base_a1be363973c6841e1d917b32529a03ae0}{$\sim$\+Translator\+Adapter\+Base} ()
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_translator_adapter_base_a71493b87a34d6e4c232e540734aba698}{create\+Update\+Needed\+Message} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&language\+Name, const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{src_2version_8h_a36cd4423c6c7f435d232a1ad0f9ad4d7}{version\+String})
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_translator_english}{Translator\+English} \hyperlink{class_translator_adapter_base_a75fd1d1116debf9adacfef772a04a7b1}{english}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Base of the translator adapter tree.
+
+This abstract class provides access to the english translations, to be used as a substitute for not implemented local translations. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_translator_adapter_base_a1be363973c6841e1d917b32529a03ae0}{}\index{Translator\+Adapter\+Base@{Translator\+Adapter\+Base}!````~Translator\+Adapter\+Base@{$\sim$\+Translator\+Adapter\+Base}}
+\index{````~Translator\+Adapter\+Base@{$\sim$\+Translator\+Adapter\+Base}!Translator\+Adapter\+Base@{Translator\+Adapter\+Base}}
+\subsubsection[{$\sim$\+Translator\+Adapter\+Base()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Translator\+Adapter\+Base\+::$\sim$\+Translator\+Adapter\+Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_translator_adapter_base_a1be363973c6841e1d917b32529a03ae0}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_translator_adapter_base_a71493b87a34d6e4c232e540734aba698}{}\index{Translator\+Adapter\+Base@{Translator\+Adapter\+Base}!create\+Update\+Needed\+Message@{create\+Update\+Needed\+Message}}
+\index{create\+Update\+Needed\+Message@{create\+Update\+Needed\+Message}!Translator\+Adapter\+Base@{Translator\+Adapter\+Base}}
+\subsubsection[{create\+Update\+Needed\+Message(const Q\+C\+String \&language\+Name, const Q\+C\+String \&version\+String)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Translator\+Adapter\+Base\+::create\+Update\+Needed\+Message (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{language\+Name, }
+\item[{const {\bf Q\+C\+String} \&}]{version\+String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_translator_adapter_base_a71493b87a34d6e4c232e540734aba698}
+An auxiliary inline method used by the \hyperlink{class_translator_adapter_base_acc5b89c39bae2a9bca490016ec15c79f}{update\+Needed\+Message()} for building a warning message. \hypertarget{class_translator_adapter_base_acc5b89c39bae2a9bca490016ec15c79f}{}\index{Translator\+Adapter\+Base@{Translator\+Adapter\+Base}!update\+Needed\+Message@{update\+Needed\+Message}}
+\index{update\+Needed\+Message@{update\+Needed\+Message}!Translator\+Adapter\+Base@{Translator\+Adapter\+Base}}
+\subsubsection[{update\+Needed\+Message()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Q\+C\+String} Translator\+Adapter\+Base\+::update\+Needed\+Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_translator_adapter_base_acc5b89c39bae2a9bca490016ec15c79f}
+This method is used to generate a warning message to signal the user that the translation of his/her language of choice needs updating. It must be implemented by the translator adapter class (pure virtual).
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_translator_adapter_base_a71493b87a34d6e4c232e540734aba698}{create\+Update\+Needed\+Message()} 
+\end{DoxySeeAlso}
+
+
+Réimplémentée à partir de \hyperlink{class_translator_a8841e027d8a0e661d0cef7e06d75c22a}{Translator}.
+
+
+
+Implémenté dans \hyperlink{class_translator_adapter__1__4__6_ab19b01d4e00c95ef1e6eb631fbe6ada4}{Translator\+Adapter\+\_\+1\+\_\+4\+\_\+6}, \hyperlink{class_translator_adapter__1__5__4_a587a31dad925e47f206b6a0cda9eedd0}{Translator\+Adapter\+\_\+1\+\_\+5\+\_\+4}, \hyperlink{class_translator_adapter__1__6__0_abc231eb2c1864ca9f878e7e5deb94f54}{Translator\+Adapter\+\_\+1\+\_\+6\+\_\+0}, \hyperlink{class_translator_adapter__1__6__3_ab3d79abfb926c41bd7609eeb706654fe}{Translator\+Adapter\+\_\+1\+\_\+6\+\_\+3}, \hyperlink{class_translator_adapter__1__7__5_a6e69d48e79a13c9d934f9af1a8befd8a}{Translator\+Adapter\+\_\+1\+\_\+7\+\_\+5}, \hyperlink{class_translator_adapter__1__8__0_a47cedb130d9a178d9c632584d4f2abec}{Translator\+Adapter\+\_\+1\+\_\+8\+\_\+0}, \hyperlink{class_translator_adapter__1__8__2_a307747456f69ab8dcb0c2be27f429e80}{Translator\+Adapter\+\_\+1\+\_\+8\+\_\+2}, et \hyperlink{class_translator_adapter__1__8__4_a87dbcf9a99bf2ddfd9593461d331b714}{Translator\+Adapter\+\_\+1\+\_\+8\+\_\+4}.
+
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_translator_adapter_base_a75fd1d1116debf9adacfef772a04a7b1}{}\index{Translator\+Adapter\+Base@{Translator\+Adapter\+Base}!english@{english}}
+\index{english@{english}!Translator\+Adapter\+Base@{Translator\+Adapter\+Base}}
+\subsubsection[{english}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Translator\+English} Translator\+Adapter\+Base\+::english\hspace{0.3cm}{\ttfamily [protected]}}\label{class_translator_adapter_base_a75fd1d1116debf9adacfef772a04a7b1}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{translator__adapter_8h}{translator\+\_\+adapter.\+h}\end{DoxyCompactItemize}

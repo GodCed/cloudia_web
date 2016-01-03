@@ -1,0 +1,329 @@
+\hypertarget{class_template_context_impl}{}\section{Référence de la classe Template\+Context\+Impl}
+\label{class_template_context_impl}\index{Template\+Context\+Impl@{Template\+Context\+Impl}}
+
+
+Internal class representing the implementation of a template context.  
+
+
+Graphe d\textquotesingle{}héritage de Template\+Context\+Impl\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_template_context_impl}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_template_context_impl_a6da4cfdaac8611752bd98c42a5d6b1fa}{Template\+Context\+Impl} (const \hyperlink{class_template_engine}{Template\+Engine} $\ast$\hyperlink{060__command__switch_8tcl_aff65a51a703804e0ad1adbcfd76c86f8}{e})
+\item 
+virtual \hyperlink{class_template_context_impl_a113d17e20b9d4c8730c9e743336d330c}{$\sim$\+Template\+Context\+Impl} ()
+\item 
+void \hyperlink{class_template_context_impl_a006f67f94724147908dda84dd8522d34}{push} ()
+\item 
+void \hyperlink{class_template_context_impl_af8856e3207a53fad3f700353d71b575e}{pop} ()
+\item 
+void \hyperlink{class_template_context_impl_a1ff06ac572e4d0456bca3feeac5f96f7}{set} (const char $\ast$name, const \hyperlink{class_template_variant}{Template\+Variant} \&v)
+\item 
+\hyperlink{class_template_variant}{Template\+Variant} \hyperlink{class_template_context_impl_ae1ff616d73b4100177e502231deaaed4}{get} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&name) const 
+\item 
+const \hyperlink{class_template_variant}{Template\+Variant} $\ast$ \hyperlink{class_template_context_impl_a43e75de03aca93dc5cadddb42b000100}{get\+Ref} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&name) const 
+\item 
+void \hyperlink{class_template_context_impl_a1178c98a679ecb3e02722b4e8f39c1e3}{set\+Output\+Directory} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&dir)
+\item 
+void \hyperlink{class_template_context_impl_a812fdb58baecd7830e42ef8508a005e8}{set\+Escape\+Intf} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&ext, \hyperlink{class_template_escape_intf}{Template\+Escape\+Intf} $\ast$intf)
+\item 
+void \hyperlink{class_template_context_impl_aa7a5421a3e04b6fdf07c4734b8dc8f46}{select\+Escape\+Intf} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&ext)
+\item 
+void \hyperlink{class_template_context_impl_aaf4534a93bb799f160385999259d3b7f}{set\+Active\+Escape\+Intf} (\hyperlink{class_template_escape_intf}{Template\+Escape\+Intf} $\ast$intf)
+\item 
+void \hyperlink{class_template_context_impl_a70bde90b2b3c08769cd0c7587ffaf33a}{set\+Spaceless\+Intf} (\hyperlink{class_template_spaceless_intf}{Template\+Spaceless\+Intf} $\ast$intf)
+\item 
+\hyperlink{class_template_block_context}{Template\+Block\+Context} $\ast$ \hyperlink{class_template_context_impl_aa95cf328b6caf850d094d38e39487fd8}{block\+Context} ()
+\item 
+\hyperlink{class_template_variant}{Template\+Variant} \hyperlink{class_template_context_impl_a8febf34c8fb5c0515663e0417d3fb5c5}{get\+Primary} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&name) const 
+\item 
+void \hyperlink{class_template_context_impl_afb0b4a00e7ab9bcfbc37e52103d4f587}{set\+Location} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{class_template_context_impl_a792c08f0d7ce4f6e372cd32829612d45}{template\+Name}, int \hyperlink{class_template_context_impl_a88f0b51c9c3a1228f82bdee72b1654cc}{line})
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_template_context_impl_a792c08f0d7ce4f6e372cd32829612d45}{template\+Name} () const 
+\item 
+int \hyperlink{class_template_context_impl_a88f0b51c9c3a1228f82bdee72b1654cc}{line} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_template_context_impl_ab929a45f08f2067796c7252e94919002}{output\+Directory} () const 
+\item 
+\hyperlink{class_template_escape_intf}{Template\+Escape\+Intf} $\ast$ \hyperlink{class_template_context_impl_aa293744dd1aa26a45a81b4da2c11af06}{escape\+Intf} () const 
+\item 
+\hyperlink{class_template_spaceless_intf}{Template\+Spaceless\+Intf} $\ast$ \hyperlink{class_template_context_impl_a4d51f265327807c55a4c0b1bada85737}{spaceless\+Intf} () const 
+\item 
+void \hyperlink{class_template_context_impl_a0cbc1d21d6a36a04fec3bad7ac677330}{enable\+Spaceless} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b})
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_template_context_impl_abf1f5740a52f928aca134d7e3f213a8a}{spaceless\+Enabled} () const 
+\item 
+void \hyperlink{class_template_context_impl_ab61bf29c3fb5ba7639dc8a010ce67b6d}{warn} (const char $\ast$file\+Name, int \hyperlink{class_template_context_impl_a88f0b51c9c3a1228f82bdee72b1654cc}{line}, const char $\ast$fmt,...) const 
+\item 
+void \hyperlink{class_template_context_impl_abbc758144c9e9485547d59e8b6911c9d}{open\+Sub\+Index} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&index\+Name)
+\item 
+void \hyperlink{class_template_context_impl_afd3109a0f91006ab2a730e6af55f2b97}{close\+Sub\+Index} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&index\+Name)
+\item 
+void \hyperlink{class_template_context_impl_ae79b62ed2da2f5dcaf52b691deacec28}{add\+Index\+Entry} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&index\+Name, const \hyperlink{class_q_value_list}{Q\+Value\+List}$<$ \hyperlink{struct_template_key_value}{Template\+Key\+Value} $>$ \&arguments)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Internal class representing the implementation of a template context. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_template_context_impl_a6da4cfdaac8611752bd98c42a5d6b1fa}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\index{Template\+Context\+Impl@{Template\+Context\+Impl}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{Template\+Context\+Impl(const Template\+Engine $\ast$e)}]{\setlength{\rightskip}{0pt plus 5cm}Template\+Context\+Impl\+::\+Template\+Context\+Impl (
+\begin{DoxyParamCaption}
+\item[{const {\bf Template\+Engine} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}\label{class_template_context_impl_a6da4cfdaac8611752bd98c42a5d6b1fa}
+\hypertarget{class_template_context_impl_a113d17e20b9d4c8730c9e743336d330c}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!````~Template\+Context\+Impl@{$\sim$\+Template\+Context\+Impl}}
+\index{````~Template\+Context\+Impl@{$\sim$\+Template\+Context\+Impl}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{$\sim$\+Template\+Context\+Impl()}]{\setlength{\rightskip}{0pt plus 5cm}Template\+Context\+Impl\+::$\sim$\+Template\+Context\+Impl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_template_context_impl_a113d17e20b9d4c8730c9e743336d330c}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_template_context_impl_ae79b62ed2da2f5dcaf52b691deacec28}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!add\+Index\+Entry@{add\+Index\+Entry}}
+\index{add\+Index\+Entry@{add\+Index\+Entry}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{add\+Index\+Entry(const Q\+C\+String \&index\+Name, const Q\+Value\+List$<$ Template\+Key\+Value $>$ \&arguments)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Context\+Impl\+::add\+Index\+Entry (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{index\+Name, }
+\item[{const {\bf Q\+Value\+List}$<$ {\bf Template\+Key\+Value} $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+)}\label{class_template_context_impl_ae79b62ed2da2f5dcaf52b691deacec28}
+\hypertarget{class_template_context_impl_aa95cf328b6caf850d094d38e39487fd8}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!block\+Context@{block\+Context}}
+\index{block\+Context@{block\+Context}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{block\+Context()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Block\+Context} $\ast$ Template\+Context\+Impl\+::block\+Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_template_context_impl_aa95cf328b6caf850d094d38e39487fd8}
+\hypertarget{class_template_context_impl_afd3109a0f91006ab2a730e6af55f2b97}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!close\+Sub\+Index@{close\+Sub\+Index}}
+\index{close\+Sub\+Index@{close\+Sub\+Index}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{close\+Sub\+Index(const Q\+C\+String \&index\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Context\+Impl\+::close\+Sub\+Index (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{index\+Name}
+\end{DoxyParamCaption}
+)}\label{class_template_context_impl_afd3109a0f91006ab2a730e6af55f2b97}
+\hypertarget{class_template_context_impl_a0cbc1d21d6a36a04fec3bad7ac677330}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!enable\+Spaceless@{enable\+Spaceless}}
+\index{enable\+Spaceless@{enable\+Spaceless}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{enable\+Spaceless(bool b)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Context\+Impl\+::enable\+Spaceless (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_context_impl_a0cbc1d21d6a36a04fec3bad7ac677330}
+\hypertarget{class_template_context_impl_aa293744dd1aa26a45a81b4da2c11af06}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!escape\+Intf@{escape\+Intf}}
+\index{escape\+Intf@{escape\+Intf}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{escape\+Intf() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Escape\+Intf}$\ast$ Template\+Context\+Impl\+::escape\+Intf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_context_impl_aa293744dd1aa26a45a81b4da2c11af06}
+\hypertarget{class_template_context_impl_ae1ff616d73b4100177e502231deaaed4}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!get@{get}}
+\index{get@{get}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{get(const Q\+C\+String \&name) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Variant} Template\+Context\+Impl\+::get (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_template_context_impl_ae1ff616d73b4100177e502231deaaed4}
+Gets the value for a given key 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em name} & The name of key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+The value, which can be an invalid variant in case the key was not found. 
+\end{DoxyReturn}
+
+
+Implémente \hyperlink{class_template_context_ac71db7b45ea80f9f2e37b29373bb0b8c}{Template\+Context}.
+
+\hypertarget{class_template_context_impl_a8febf34c8fb5c0515663e0417d3fb5c5}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!get\+Primary@{get\+Primary}}
+\index{get\+Primary@{get\+Primary}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{get\+Primary(const Q\+C\+String \&name) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Variant} Template\+Context\+Impl\+::get\+Primary (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{name}
+\end{DoxyParamCaption}
+) const}\label{class_template_context_impl_a8febf34c8fb5c0515663e0417d3fb5c5}
+\hypertarget{class_template_context_impl_a43e75de03aca93dc5cadddb42b000100}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!get\+Ref@{get\+Ref}}
+\index{get\+Ref@{get\+Ref}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{get\+Ref(const Q\+C\+String \&name) const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Template\+Variant} $\ast$ Template\+Context\+Impl\+::get\+Ref (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_template_context_impl_a43e75de03aca93dc5cadddb42b000100}
+Returns a pointer to the value corresponding to a given key. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em name} & The name of key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{class_a}{A} pointer to the value, or 0 in case the key was not found. 
+\end{DoxyReturn}
+
+
+Implémente \hyperlink{class_template_context_aa53297dffcc3e712ed7fd2454340efb6}{Template\+Context}.
+
+\hypertarget{class_template_context_impl_a88f0b51c9c3a1228f82bdee72b1654cc}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!line@{line}}
+\index{line@{line}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{line() const }]{\setlength{\rightskip}{0pt plus 5cm}int Template\+Context\+Impl\+::line (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_context_impl_a88f0b51c9c3a1228f82bdee72b1654cc}
+\hypertarget{class_template_context_impl_abbc758144c9e9485547d59e8b6911c9d}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!open\+Sub\+Index@{open\+Sub\+Index}}
+\index{open\+Sub\+Index@{open\+Sub\+Index}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{open\+Sub\+Index(const Q\+C\+String \&index\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Context\+Impl\+::open\+Sub\+Index (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{index\+Name}
+\end{DoxyParamCaption}
+)}\label{class_template_context_impl_abbc758144c9e9485547d59e8b6911c9d}
+\hypertarget{class_template_context_impl_ab929a45f08f2067796c7252e94919002}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!output\+Directory@{output\+Directory}}
+\index{output\+Directory@{output\+Directory}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{output\+Directory() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Template\+Context\+Impl\+::output\+Directory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_context_impl_ab929a45f08f2067796c7252e94919002}
+\hypertarget{class_template_context_impl_af8856e3207a53fad3f700353d71b575e}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!pop@{pop}}
+\index{pop@{pop}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{pop()}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Context\+Impl\+::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_template_context_impl_af8856e3207a53fad3f700353d71b575e}
+Pop the current scope from the stack. 
+
+Implémente \hyperlink{class_template_context_a853868792ccd7f9c5fed55338d23d019}{Template\+Context}.
+
+\hypertarget{class_template_context_impl_a006f67f94724147908dda84dd8522d34}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!push@{push}}
+\index{push@{push}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{push()}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Context\+Impl\+::push (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_template_context_impl_a006f67f94724147908dda84dd8522d34}
+Push a new scope on the stack. 
+
+Implémente \hyperlink{class_template_context_aac3a3e3c8e604db05e74cba7b1ce8554}{Template\+Context}.
+
+\hypertarget{class_template_context_impl_aa7a5421a3e04b6fdf07c4734b8dc8f46}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!select\+Escape\+Intf@{select\+Escape\+Intf}}
+\index{select\+Escape\+Intf@{select\+Escape\+Intf}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{select\+Escape\+Intf(const Q\+C\+String \&ext)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Context\+Impl\+::select\+Escape\+Intf (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{ext}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_context_impl_aa7a5421a3e04b6fdf07c4734b8dc8f46}
+\hypertarget{class_template_context_impl_a1ff06ac572e4d0456bca3feeac5f96f7}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!set@{set}}
+\index{set@{set}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{set(const char $\ast$name, const Template\+Variant \&v)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Context\+Impl\+::set (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const {\bf Template\+Variant} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_template_context_impl_a1ff06ac572e4d0456bca3feeac5f96f7}
+Sets a value in the current scope. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em name} & The name of the value; the key in the dictionary. \\
+\hline
+\mbox{\tt in}  & {\em v} & The value associated with the key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+When a given key is already present, its value will be replaced by {\itshape v} 
+\end{DoxyNote}
+
+
+Implémente \hyperlink{class_template_context_a99d037bab858efc4fa8602fae3a5af9c}{Template\+Context}.
+
+\hypertarget{class_template_context_impl_aaf4534a93bb799f160385999259d3b7f}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!set\+Active\+Escape\+Intf@{set\+Active\+Escape\+Intf}}
+\index{set\+Active\+Escape\+Intf@{set\+Active\+Escape\+Intf}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{set\+Active\+Escape\+Intf(\+Template\+Escape\+Intf $\ast$intf)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Context\+Impl\+::set\+Active\+Escape\+Intf (
+\begin{DoxyParamCaption}
+\item[{{\bf Template\+Escape\+Intf} $\ast$}]{intf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_context_impl_aaf4534a93bb799f160385999259d3b7f}
+\hypertarget{class_template_context_impl_a812fdb58baecd7830e42ef8508a005e8}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!set\+Escape\+Intf@{set\+Escape\+Intf}}
+\index{set\+Escape\+Intf@{set\+Escape\+Intf}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{set\+Escape\+Intf(const Q\+C\+String \&ext, Template\+Escape\+Intf $\ast$intf)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Context\+Impl\+::set\+Escape\+Intf (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{extension, }
+\item[{{\bf Template\+Escape\+Intf} $\ast$}]{intf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_template_context_impl_a812fdb58baecd7830e42ef8508a005e8}
+Sets the interface that will be used for escaping the result of variable expansion before writing it to the output. 
+
+Implémente \hyperlink{class_template_context_afad803f8d522fb63ad4b91a2034b06a0}{Template\+Context}.
+
+\hypertarget{class_template_context_impl_afb0b4a00e7ab9bcfbc37e52103d4f587}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!set\+Location@{set\+Location}}
+\index{set\+Location@{set\+Location}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{set\+Location(const Q\+C\+String \&template\+Name, int line)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Context\+Impl\+::set\+Location (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{template\+Name, }
+\item[{int}]{line}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_context_impl_afb0b4a00e7ab9bcfbc37e52103d4f587}
+\hypertarget{class_template_context_impl_a1178c98a679ecb3e02722b4e8f39c1e3}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!set\+Output\+Directory@{set\+Output\+Directory}}
+\index{set\+Output\+Directory@{set\+Output\+Directory}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{set\+Output\+Directory(const Q\+C\+String \&dir)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Context\+Impl\+::set\+Output\+Directory (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{dir}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_template_context_impl_a1178c98a679ecb3e02722b4e8f39c1e3}
+When files are create (i.\+e. by \{\% create ... \%\}) they written to the directory {\itshape dir}. 
+
+Implémente \hyperlink{class_template_context_ab3aaaa03df934615ccfa3209420cd93d}{Template\+Context}.
+
+\hypertarget{class_template_context_impl_a70bde90b2b3c08769cd0c7587ffaf33a}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!set\+Spaceless\+Intf@{set\+Spaceless\+Intf}}
+\index{set\+Spaceless\+Intf@{set\+Spaceless\+Intf}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{set\+Spaceless\+Intf(\+Template\+Spaceless\+Intf $\ast$intf)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Context\+Impl\+::set\+Spaceless\+Intf (
+\begin{DoxyParamCaption}
+\item[{{\bf Template\+Spaceless\+Intf} $\ast$}]{intf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_template_context_impl_a70bde90b2b3c08769cd0c7587ffaf33a}
+Sets the interface that will be used inside a spaceless block to remove any redundant whitespace. 
+
+Implémente \hyperlink{class_template_context_a11e64f588d21aeda2b57a4bc4e06ecc7}{Template\+Context}.
+
+\hypertarget{class_template_context_impl_abf1f5740a52f928aca134d7e3f213a8a}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!spaceless\+Enabled@{spaceless\+Enabled}}
+\index{spaceless\+Enabled@{spaceless\+Enabled}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{spaceless\+Enabled() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Template\+Context\+Impl\+::spaceless\+Enabled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_context_impl_abf1f5740a52f928aca134d7e3f213a8a}
+\hypertarget{class_template_context_impl_a4d51f265327807c55a4c0b1bada85737}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!spaceless\+Intf@{spaceless\+Intf}}
+\index{spaceless\+Intf@{spaceless\+Intf}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{spaceless\+Intf() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Spaceless\+Intf}$\ast$ Template\+Context\+Impl\+::spaceless\+Intf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_context_impl_a4d51f265327807c55a4c0b1bada85737}
+\hypertarget{class_template_context_impl_a792c08f0d7ce4f6e372cd32829612d45}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!template\+Name@{template\+Name}}
+\index{template\+Name@{template\+Name}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{template\+Name() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Template\+Context\+Impl\+::template\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_context_impl_a792c08f0d7ce4f6e372cd32829612d45}
+\hypertarget{class_template_context_impl_ab61bf29c3fb5ba7639dc8a010ce67b6d}{}\index{Template\+Context\+Impl@{Template\+Context\+Impl}!warn@{warn}}
+\index{warn@{warn}!Template\+Context\+Impl@{Template\+Context\+Impl}}
+\subsubsection[{warn(const char $\ast$file\+Name, int line, const char $\ast$fmt,...) const }]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Context\+Impl\+::warn (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name, }
+\item[{int}]{line, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+) const}\label{class_template_context_impl_ab61bf29c3fb5ba7639dc8a010ce67b6d}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{template_8cpp}{template.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,110 @@
+\hypertarget{class_doc_auto_list}{}\section{Référence de la classe Doc\+Auto\+List}
+\label{class_doc_auto_list}\index{Doc\+Auto\+List@{Doc\+Auto\+List}}
+
+
+{\ttfamily \#include $<$docparser.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Doc\+Auto\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doc_auto_list}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_auto_list_a783a7889add7c4cda00ee00c015dff53}{Doc\+Auto\+List} (\hyperlink{class_doc_node}{Doc\+Node} $\ast$\hyperlink{class_doc_node_a990d8b983962776a647e6231d38bd329}{parent}, int \hyperlink{class_doc_auto_list_adae7607dae59771721e16ae63502f56c}{indent}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_doc_auto_list_a033852c5e9be4e27f4681fd781612ec8}{is\+Enum\+List}, int \hyperlink{class_doc_auto_list_a132513bfc603eb423c6ef9ff8f8356ee}{depth})
+\item 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadb}{Kind} \hyperlink{class_doc_auto_list_a253f7960bb1755b218e618822e1885dd}{kind} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_doc_auto_list_a033852c5e9be4e27f4681fd781612ec8}{is\+Enum\+List} () const 
+\item 
+int \hyperlink{class_doc_auto_list_adae7607dae59771721e16ae63502f56c}{indent} () const 
+\item 
+int \hyperlink{class_doc_auto_list_a132513bfc603eb423c6ef9ff8f8356ee}{depth} () const 
+\item 
+void \hyperlink{class_doc_auto_list_ad73217f2d93cb92e86455a08fa4f6c7c}{accept} (\hyperlink{class_doc_visitor}{Doc\+Visitor} $\ast$v)
+\item 
+int \hyperlink{class_doc_auto_list_a8ed0df6d4e379da2f903e00517957e62}{parse} ()
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Node representing an auto List 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_doc_auto_list_a783a7889add7c4cda00ee00c015dff53}{}\index{Doc\+Auto\+List@{Doc\+Auto\+List}!Doc\+Auto\+List@{Doc\+Auto\+List}}
+\index{Doc\+Auto\+List@{Doc\+Auto\+List}!Doc\+Auto\+List@{Doc\+Auto\+List}}
+\subsubsection[{Doc\+Auto\+List(\+Doc\+Node $\ast$parent, int indent, bool is\+Enum\+List, int depth)}]{\setlength{\rightskip}{0pt plus 5cm}Doc\+Auto\+List\+::\+Doc\+Auto\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Node} $\ast$}]{parent, }
+\item[{int}]{indent, }
+\item[{{\bf bool}}]{is\+Enum\+List, }
+\item[{int}]{depth}
+\end{DoxyParamCaption}
+)}\label{class_doc_auto_list_a783a7889add7c4cda00ee00c015dff53}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_doc_auto_list_ad73217f2d93cb92e86455a08fa4f6c7c}{}\index{Doc\+Auto\+List@{Doc\+Auto\+List}!accept@{accept}}
+\index{accept@{accept}!Doc\+Auto\+List@{Doc\+Auto\+List}}
+\subsubsection[{accept(\+Doc\+Visitor $\ast$v)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Auto\+List\+::accept (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Visitor} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_auto_list_ad73217f2d93cb92e86455a08fa4f6c7c}
+Acceptor function for node visitors. Part of the visitor pattern. 
+\begin{DoxyParams}{Paramètres}
+{\em v} & Abstract visitor. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_doc_node_a5303a550cbe6395663bf9b9dad28cbf1}{Doc\+Node}.
+
+\hypertarget{class_doc_auto_list_a132513bfc603eb423c6ef9ff8f8356ee}{}\index{Doc\+Auto\+List@{Doc\+Auto\+List}!depth@{depth}}
+\index{depth@{depth}!Doc\+Auto\+List@{Doc\+Auto\+List}}
+\subsubsection[{depth() const }]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Auto\+List\+::depth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_auto_list_a132513bfc603eb423c6ef9ff8f8356ee}
+\hypertarget{class_doc_auto_list_adae7607dae59771721e16ae63502f56c}{}\index{Doc\+Auto\+List@{Doc\+Auto\+List}!indent@{indent}}
+\index{indent@{indent}!Doc\+Auto\+List@{Doc\+Auto\+List}}
+\subsubsection[{indent() const }]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Auto\+List\+::indent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_auto_list_adae7607dae59771721e16ae63502f56c}
+\hypertarget{class_doc_auto_list_a033852c5e9be4e27f4681fd781612ec8}{}\index{Doc\+Auto\+List@{Doc\+Auto\+List}!is\+Enum\+List@{is\+Enum\+List}}
+\index{is\+Enum\+List@{is\+Enum\+List}!Doc\+Auto\+List@{Doc\+Auto\+List}}
+\subsubsection[{is\+Enum\+List() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Doc\+Auto\+List\+::is\+Enum\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_auto_list_a033852c5e9be4e27f4681fd781612ec8}
+\hypertarget{class_doc_auto_list_a253f7960bb1755b218e618822e1885dd}{}\index{Doc\+Auto\+List@{Doc\+Auto\+List}!kind@{kind}}
+\index{kind@{kind}!Doc\+Auto\+List@{Doc\+Auto\+List}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kind} Doc\+Auto\+List\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_auto_list_a253f7960bb1755b218e618822e1885dd}
+Returns the kind of node. Provides runtime type information 
+
+Implémente \hyperlink{class_doc_node_a92d4aaa169a813ded919aa858024c809}{Doc\+Node}.
+
+\hypertarget{class_doc_auto_list_a8ed0df6d4e379da2f903e00517957e62}{}\index{Doc\+Auto\+List@{Doc\+Auto\+List}!parse@{parse}}
+\index{parse@{parse}!Doc\+Auto\+List@{Doc\+Auto\+List}}
+\subsubsection[{parse()}]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Auto\+List\+::parse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_doc_auto_list_a8ed0df6d4e379da2f903e00517957e62}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{docparser_8h}{docparser.\+h}\item 
+src/\hyperlink{docparser_8cpp}{docparser.\+cpp}\end{DoxyCompactItemize}

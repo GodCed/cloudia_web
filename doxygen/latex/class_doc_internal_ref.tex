@@ -1,0 +1,108 @@
+\hypertarget{class_doc_internal_ref}{}\section{Référence de la classe Doc\+Internal\+Ref}
+\label{class_doc_internal_ref}\index{Doc\+Internal\+Ref@{Doc\+Internal\+Ref}}
+
+
+{\ttfamily \#include $<$docparser.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Doc\+Internal\+Ref\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doc_internal_ref}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_internal_ref_a15b7019ec093e3e7357e368a58530efb}{Doc\+Internal\+Ref} (\hyperlink{class_doc_node}{Doc\+Node} $\ast$\hyperlink{class_doc_node_a990d8b983962776a647e6231d38bd329}{parent}, const \hyperlink{class_q_c_string}{Q\+C\+String} \&target)
+\item 
+void \hyperlink{class_doc_internal_ref_ab9cc38fde444889a618974f396bf36ed}{parse} ()
+\item 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadb}{Kind} \hyperlink{class_doc_internal_ref_a996948b84815ba40e200d7c64328bde3}{kind} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_internal_ref_a4e5328d5eda9f64bb7916c16dd0d9c3a}{file} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_internal_ref_a49ef423c8ea2f61019c255e1d71a4254}{rel\+Path} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_internal_ref_a7f1dcd091e2c30a6bbe8873c4499d059}{anchor} () const 
+\item 
+void \hyperlink{class_doc_internal_ref_afb9d447c755b630a33218907e01a22f3}{accept} (\hyperlink{class_doc_visitor}{Doc\+Visitor} $\ast$v)
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Node representing an internal reference to some item 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_doc_internal_ref_a15b7019ec093e3e7357e368a58530efb}{}\index{Doc\+Internal\+Ref@{Doc\+Internal\+Ref}!Doc\+Internal\+Ref@{Doc\+Internal\+Ref}}
+\index{Doc\+Internal\+Ref@{Doc\+Internal\+Ref}!Doc\+Internal\+Ref@{Doc\+Internal\+Ref}}
+\subsubsection[{Doc\+Internal\+Ref(\+Doc\+Node $\ast$parent, const Q\+C\+String \&target)}]{\setlength{\rightskip}{0pt plus 5cm}Doc\+Internal\+Ref\+::\+Doc\+Internal\+Ref (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Node} $\ast$}]{parent, }
+\item[{const {\bf Q\+C\+String} \&}]{target}
+\end{DoxyParamCaption}
+)}\label{class_doc_internal_ref_a15b7019ec093e3e7357e368a58530efb}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_doc_internal_ref_afb9d447c755b630a33218907e01a22f3}{}\index{Doc\+Internal\+Ref@{Doc\+Internal\+Ref}!accept@{accept}}
+\index{accept@{accept}!Doc\+Internal\+Ref@{Doc\+Internal\+Ref}}
+\subsubsection[{accept(\+Doc\+Visitor $\ast$v)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Internal\+Ref\+::accept (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Visitor} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_internal_ref_afb9d447c755b630a33218907e01a22f3}
+Acceptor function for node visitors. Part of the visitor pattern. 
+\begin{DoxyParams}{Paramètres}
+{\em v} & Abstract visitor. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_doc_node_a5303a550cbe6395663bf9b9dad28cbf1}{Doc\+Node}.
+
+\hypertarget{class_doc_internal_ref_a7f1dcd091e2c30a6bbe8873c4499d059}{}\index{Doc\+Internal\+Ref@{Doc\+Internal\+Ref}!anchor@{anchor}}
+\index{anchor@{anchor}!Doc\+Internal\+Ref@{Doc\+Internal\+Ref}}
+\subsubsection[{anchor() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Internal\+Ref\+::anchor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_internal_ref_a7f1dcd091e2c30a6bbe8873c4499d059}
+\hypertarget{class_doc_internal_ref_a4e5328d5eda9f64bb7916c16dd0d9c3a}{}\index{Doc\+Internal\+Ref@{Doc\+Internal\+Ref}!file@{file}}
+\index{file@{file}!Doc\+Internal\+Ref@{Doc\+Internal\+Ref}}
+\subsubsection[{file() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Internal\+Ref\+::file (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_internal_ref_a4e5328d5eda9f64bb7916c16dd0d9c3a}
+\hypertarget{class_doc_internal_ref_a996948b84815ba40e200d7c64328bde3}{}\index{Doc\+Internal\+Ref@{Doc\+Internal\+Ref}!kind@{kind}}
+\index{kind@{kind}!Doc\+Internal\+Ref@{Doc\+Internal\+Ref}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kind} Doc\+Internal\+Ref\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_internal_ref_a996948b84815ba40e200d7c64328bde3}
+Returns the kind of node. Provides runtime type information 
+
+Implémente \hyperlink{class_doc_node_a92d4aaa169a813ded919aa858024c809}{Doc\+Node}.
+
+\hypertarget{class_doc_internal_ref_ab9cc38fde444889a618974f396bf36ed}{}\index{Doc\+Internal\+Ref@{Doc\+Internal\+Ref}!parse@{parse}}
+\index{parse@{parse}!Doc\+Internal\+Ref@{Doc\+Internal\+Ref}}
+\subsubsection[{parse()}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Internal\+Ref\+::parse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_doc_internal_ref_ab9cc38fde444889a618974f396bf36ed}
+\hypertarget{class_doc_internal_ref_a49ef423c8ea2f61019c255e1d71a4254}{}\index{Doc\+Internal\+Ref@{Doc\+Internal\+Ref}!rel\+Path@{rel\+Path}}
+\index{rel\+Path@{rel\+Path}!Doc\+Internal\+Ref@{Doc\+Internal\+Ref}}
+\subsubsection[{rel\+Path() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Internal\+Ref\+::rel\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_internal_ref_a49ef423c8ea2f61019c255e1d71a4254}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{docparser_8h}{docparser.\+h}\item 
+src/\hyperlink{docparser_8cpp}{docparser.\+cpp}\end{DoxyCompactItemize}

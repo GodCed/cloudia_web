@@ -1,0 +1,176 @@
+\hypertarget{class_q_g_dict_iterator}{}\section{Référence de la classe Q\+G\+Dict\+Iterator}
+\label{class_q_g_dict_iterator}\index{Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}}
+
+
+An internal class for implementing Q\+Dict\+Iterator and \hyperlink{class_q_int_dict_iterator}{Q\+Int\+Dict\+Iterator}.  
+
+
+
+
+{\ttfamily \#include $<$qgdict.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Q\+G\+Dict\+Iterator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.647059cm]{class_q_g_dict_iterator}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_g_dict_iterator_ad3a8cee70c155fb51cdb49f4d0200fff}{Q\+G\+Dict\+Iterator} (const \hyperlink{class_q_g_dict}{Q\+G\+Dict} \&)
+\item 
+\hyperlink{class_q_g_dict_iterator_a877692de8c5afd9fbc1cad31022c6bdc}{Q\+G\+Dict\+Iterator} (const \hyperlink{class_q_g_dict_iterator}{Q\+G\+Dict\+Iterator} \&)
+\item 
+\hyperlink{class_q_g_dict_iterator}{Q\+G\+Dict\+Iterator} \& \hyperlink{class_q_g_dict_iterator_a4ae06e135ad6a141c8c682051eea4d89}{operator=} (const \hyperlink{class_q_g_dict_iterator}{Q\+G\+Dict\+Iterator} \&)
+\item 
+\hyperlink{class_q_g_dict_iterator_a82aad9acca4983ae9c42f4ee756558c7}{$\sim$\+Q\+G\+Dict\+Iterator} ()
+\item 
+\hyperlink{class_q_collection_ac6f3ddbf999e31fb797927f71ae6b5d7}{Q\+Collection\+::\+Item} \hyperlink{class_q_g_dict_iterator_a67e4f848a3e0e4577dd862e410b71d5b}{to\+First} ()
+\item 
+\hyperlink{class_q_collection_ac6f3ddbf999e31fb797927f71ae6b5d7}{Q\+Collection\+::\+Item} \hyperlink{class_q_g_dict_iterator_a6dcacb12fa9d964ed5ba3c17fb194dfc}{get} () const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_g_dict_iterator_af9a4bd4fcdc16e7ef2f215b07b7c7e59}{get\+Key\+String} () const 
+\item 
+const char $\ast$ \hyperlink{class_q_g_dict_iterator_aba49d47c7ddaf2b40efa071b9a03712e}{get\+Key\+Ascii} () const 
+\item 
+intptr\+\_\+t \hyperlink{class_q_g_dict_iterator_ac1005f63b163ff0b62159e79f06d1b97}{get\+Key\+Int} () const 
+\item 
+void $\ast$ \hyperlink{class_q_g_dict_iterator_af2347c20deb8cb712998d18e14247bed}{get\+Key\+Ptr} () const 
+\item 
+\hyperlink{class_q_collection_ac6f3ddbf999e31fb797927f71ae6b5d7}{Q\+Collection\+::\+Item} \hyperlink{class_q_g_dict_iterator_a3833bbdb7178dbfcbac95547ef4c6bcf}{operator()} ()
+\item 
+\hyperlink{class_q_collection_ac6f3ddbf999e31fb797927f71ae6b5d7}{Q\+Collection\+::\+Item} \hyperlink{class_q_g_dict_iterator_ab4cdd2c2b2ab8714c8144a5bb54a7409}{operator++} ()
+\item 
+\hyperlink{class_q_collection_ac6f3ddbf999e31fb797927f71ae6b5d7}{Q\+Collection\+::\+Item} \hyperlink{class_q_g_dict_iterator_a71905aff98dbecf1de97bb164d1b3203}{operator+=} (\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint})
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_g_dict}{Q\+G\+Dict} $\ast$ \hyperlink{class_q_g_dict_iterator_a21c8a54a9eac2887ffa1ab1d801d544f}{dict}
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_q_g_dict_iterator_a97b03fadfd4d68d39a3a5e5aa0e69111}{Q\+G\+Dict}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+An internal class for implementing Q\+Dict\+Iterator and \hyperlink{class_q_int_dict_iterator}{Q\+Int\+Dict\+Iterator}. 
+
+\hyperlink{class_q_g_dict_iterator}{Q\+G\+Dict\+Iterator} is a strictly internal class that does the heavy work for Q\+Dict\+Iterator and \hyperlink{class_q_int_dict_iterator}{Q\+Int\+Dict\+Iterator}. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_g_dict_iterator_ad3a8cee70c155fb51cdb49f4d0200fff}{}\index{Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}!Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}}
+\index{Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}!Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}}
+\subsubsection[{Q\+G\+Dict\+Iterator(const Q\+G\+Dict \&)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+G\+Dict\+Iterator\+::\+Q\+G\+Dict\+Iterator (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+G\+Dict} \&}]{d}
+\end{DoxyParamCaption}
+)}\label{class_q_g_dict_iterator_ad3a8cee70c155fb51cdb49f4d0200fff}
+\hypertarget{class_q_g_dict_iterator_a877692de8c5afd9fbc1cad31022c6bdc}{}\index{Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}!Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}}
+\index{Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}!Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}}
+\subsubsection[{Q\+G\+Dict\+Iterator(const Q\+G\+Dict\+Iterator \&)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+G\+Dict\+Iterator\+::\+Q\+G\+Dict\+Iterator (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+G\+Dict\+Iterator} \&}]{it}
+\end{DoxyParamCaption}
+)}\label{class_q_g_dict_iterator_a877692de8c5afd9fbc1cad31022c6bdc}
+\hypertarget{class_q_g_dict_iterator_a82aad9acca4983ae9c42f4ee756558c7}{}\index{Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}!````~Q\+G\+Dict\+Iterator@{$\sim$\+Q\+G\+Dict\+Iterator}}
+\index{````~Q\+G\+Dict\+Iterator@{$\sim$\+Q\+G\+Dict\+Iterator}!Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}}
+\subsubsection[{$\sim$\+Q\+G\+Dict\+Iterator()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+G\+Dict\+Iterator\+::$\sim$\+Q\+G\+Dict\+Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_g_dict_iterator_a82aad9acca4983ae9c42f4ee756558c7}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_g_dict_iterator_a6dcacb12fa9d964ed5ba3c17fb194dfc}{}\index{Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}!get@{get}}
+\index{get@{get}!Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}}
+\subsubsection[{get() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Collection\+::\+Item} Q\+G\+Dict\+Iterator\+::get (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_g_dict_iterator_a6dcacb12fa9d964ed5ba3c17fb194dfc}
+\hypertarget{class_q_g_dict_iterator_aba49d47c7ddaf2b40efa071b9a03712e}{}\index{Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}!get\+Key\+Ascii@{get\+Key\+Ascii}}
+\index{get\+Key\+Ascii@{get\+Key\+Ascii}!Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}}
+\subsubsection[{get\+Key\+Ascii() const }]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Q\+G\+Dict\+Iterator\+::get\+Key\+Ascii (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_g_dict_iterator_aba49d47c7ddaf2b40efa071b9a03712e}
+\hypertarget{class_q_g_dict_iterator_ac1005f63b163ff0b62159e79f06d1b97}{}\index{Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}!get\+Key\+Int@{get\+Key\+Int}}
+\index{get\+Key\+Int@{get\+Key\+Int}!Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}}
+\subsubsection[{get\+Key\+Int() const }]{\setlength{\rightskip}{0pt plus 5cm}intptr\+\_\+t Q\+G\+Dict\+Iterator\+::get\+Key\+Int (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_g_dict_iterator_ac1005f63b163ff0b62159e79f06d1b97}
+\hypertarget{class_q_g_dict_iterator_af2347c20deb8cb712998d18e14247bed}{}\index{Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}!get\+Key\+Ptr@{get\+Key\+Ptr}}
+\index{get\+Key\+Ptr@{get\+Key\+Ptr}!Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}}
+\subsubsection[{get\+Key\+Ptr() const }]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ Q\+G\+Dict\+Iterator\+::get\+Key\+Ptr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_g_dict_iterator_af2347c20deb8cb712998d18e14247bed}
+\hypertarget{class_q_g_dict_iterator_af9a4bd4fcdc16e7ef2f215b07b7c7e59}{}\index{Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}!get\+Key\+String@{get\+Key\+String}}
+\index{get\+Key\+String@{get\+Key\+String}!Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}}
+\subsubsection[{get\+Key\+String() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+G\+Dict\+Iterator\+::get\+Key\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_g_dict_iterator_af9a4bd4fcdc16e7ef2f215b07b7c7e59}
+\hypertarget{class_q_g_dict_iterator_a3833bbdb7178dbfcbac95547ef4c6bcf}{}\index{Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}!operator()@{operator()}}
+\index{operator()@{operator()}!Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}}
+\subsubsection[{operator()()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Collection\+::\+Item} Q\+G\+Dict\+Iterator\+::operator() (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_g_dict_iterator_a3833bbdb7178dbfcbac95547ef4c6bcf}
+\hypertarget{class_q_g_dict_iterator_ab4cdd2c2b2ab8714c8144a5bb54a7409}{}\index{Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}}
+\subsubsection[{operator++()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Collection\+::\+Item} Q\+G\+Dict\+Iterator\+::operator++ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_g_dict_iterator_ab4cdd2c2b2ab8714c8144a5bb54a7409}
+\hypertarget{class_q_g_dict_iterator_a71905aff98dbecf1de97bb164d1b3203}{}\index{Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}}
+\subsubsection[{operator+=(uint)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Collection\+::\+Item} Q\+G\+Dict\+Iterator\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{{\bf uint}}]{jumps}
+\end{DoxyParamCaption}
+)}\label{class_q_g_dict_iterator_a71905aff98dbecf1de97bb164d1b3203}
+\hypertarget{class_q_g_dict_iterator_a4ae06e135ad6a141c8c682051eea4d89}{}\index{Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}!operator=@{operator=}}
+\index{operator=@{operator=}!Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}}
+\subsubsection[{operator=(const Q\+G\+Dict\+Iterator \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+G\+Dict\+Iterator} \& Q\+G\+Dict\+Iterator\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+G\+Dict\+Iterator} \&}]{it}
+\end{DoxyParamCaption}
+)}\label{class_q_g_dict_iterator_a4ae06e135ad6a141c8c682051eea4d89}
+\hypertarget{class_q_g_dict_iterator_a67e4f848a3e0e4577dd862e410b71d5b}{}\index{Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}!to\+First@{to\+First}}
+\index{to\+First@{to\+First}!Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}}
+\subsubsection[{to\+First()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Collection\+::\+Item} Q\+G\+Dict\+Iterator\+::to\+First (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_g_dict_iterator_a67e4f848a3e0e4577dd862e410b71d5b}
+
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_q_g_dict_iterator_a97b03fadfd4d68d39a3a5e5aa0e69111}{}\index{Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}!Q\+G\+Dict@{Q\+G\+Dict}}
+\index{Q\+G\+Dict@{Q\+G\+Dict}!Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}}
+\subsubsection[{Q\+G\+Dict}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Q\+G\+Dict}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_q_g_dict_iterator_a97b03fadfd4d68d39a3a5e5aa0e69111}
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_q_g_dict_iterator_a21c8a54a9eac2887ffa1ab1d801d544f}{}\index{Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}!dict@{dict}}
+\index{dict@{dict}!Q\+G\+Dict\+Iterator@{Q\+G\+Dict\+Iterator}}
+\subsubsection[{dict}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+G\+Dict}$\ast$ Q\+G\+Dict\+Iterator\+::dict\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_g_dict_iterator_a21c8a54a9eac2887ffa1ab1d801d544f}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qgdict_8h}{qgdict.\+h}\item 
+qtools/\hyperlink{qgdict_8cpp}{qgdict.\+cpp}\end{DoxyCompactItemize}

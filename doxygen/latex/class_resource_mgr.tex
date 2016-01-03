@@ -1,0 +1,102 @@
+\hypertarget{class_resource_mgr}{}\section{Référence de la classe Resource\+Mgr}
+\label{class_resource_mgr}\index{Resource\+Mgr@{Resource\+Mgr}}
+
+
+Singleton for managing resources compiled into an executable.  
+
+
+
+
+{\ttfamily \#include $<$resourcemgr.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_resource_mgr_1_1_private}{Private}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_resource_mgr_a2894f6f64a5376dfc475bde3f8acd0f3}{register\+Resources} (const \hyperlink{struct_resource}{Resource} resources\mbox{[}$\,$\mbox{]}, int num\+Resources)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_resource_mgr_ae5b15c9ca20c48687a25568f2d5ca584}{copy\+Category} (const char $\ast$category\+Name, const char $\ast$target\+Dir) const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_resource_mgr_a9228da2e127bd9e78b04223eecb88136}{copy\+Resource} (const char $\ast$name, const char $\ast$target\+Dir) const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_resource_mgr_acd241b543ffa91530190d9b189625080}{copy\+Resource\+As} (const char $\ast$name, const char $\ast$target\+Dir, const char $\ast$target\+Name) const 
+\item 
+const \hyperlink{struct_resource}{Resource} $\ast$ \hyperlink{class_resource_mgr_ac2cb332c4dfba7d45e5615cae4e05937}{get} (const char $\ast$name) const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_resource_mgr_aadb4a3796bba9cf4b2fc097f3aebd071}{get\+As\+String} (const char $\ast$name) const 
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_resource_mgr}{Resource\+Mgr} \& \hyperlink{class_resource_mgr_a02fb3176893696eaf659d680c8b08064}{instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Singleton for managing resources compiled into an executable. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_resource_mgr_ae5b15c9ca20c48687a25568f2d5ca584}{}\index{Resource\+Mgr@{Resource\+Mgr}!copy\+Category@{copy\+Category}}
+\index{copy\+Category@{copy\+Category}!Resource\+Mgr@{Resource\+Mgr}}
+\subsubsection[{copy\+Category(const char $\ast$category\+Name, const char $\ast$target\+Dir) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Resource\+Mgr\+::copy\+Category (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{category\+Name, }
+\item[{const char $\ast$}]{target\+Dir}
+\end{DoxyParamCaption}
+) const}\label{class_resource_mgr_ae5b15c9ca20c48687a25568f2d5ca584}
+Copies all resource belonging to a given category to a given target directory \hypertarget{class_resource_mgr_a9228da2e127bd9e78b04223eecb88136}{}\index{Resource\+Mgr@{Resource\+Mgr}!copy\+Resource@{copy\+Resource}}
+\index{copy\+Resource@{copy\+Resource}!Resource\+Mgr@{Resource\+Mgr}}
+\subsubsection[{copy\+Resource(const char $\ast$name, const char $\ast$target\+Dir) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Resource\+Mgr\+::copy\+Resource (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{target\+Dir}
+\end{DoxyParamCaption}
+) const}\label{class_resource_mgr_a9228da2e127bd9e78b04223eecb88136}
+Copies a registered resource to a given target directory \hypertarget{class_resource_mgr_acd241b543ffa91530190d9b189625080}{}\index{Resource\+Mgr@{Resource\+Mgr}!copy\+Resource\+As@{copy\+Resource\+As}}
+\index{copy\+Resource\+As@{copy\+Resource\+As}!Resource\+Mgr@{Resource\+Mgr}}
+\subsubsection[{copy\+Resource\+As(const char $\ast$name, const char $\ast$target\+Dir, const char $\ast$target\+Name) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Resource\+Mgr\+::copy\+Resource\+As (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{target\+Dir, }
+\item[{const char $\ast$}]{target\+Name}
+\end{DoxyParamCaption}
+) const}\label{class_resource_mgr_acd241b543ffa91530190d9b189625080}
+Copies a registered resource to a given target directory under a given target name \hypertarget{class_resource_mgr_ac2cb332c4dfba7d45e5615cae4e05937}{}\index{Resource\+Mgr@{Resource\+Mgr}!get@{get}}
+\index{get@{get}!Resource\+Mgr@{Resource\+Mgr}}
+\subsubsection[{get(const char $\ast$name) const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Resource} $\ast$ Resource\+Mgr\+::get (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+) const}\label{class_resource_mgr_ac2cb332c4dfba7d45e5615cae4e05937}
+Returns a pointer to the resource object with the given name. \hypertarget{class_resource_mgr_aadb4a3796bba9cf4b2fc097f3aebd071}{}\index{Resource\+Mgr@{Resource\+Mgr}!get\+As\+String@{get\+As\+String}}
+\index{get\+As\+String@{get\+As\+String}!Resource\+Mgr@{Resource\+Mgr}}
+\subsubsection[{get\+As\+String(const char $\ast$name) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Resource\+Mgr\+::get\+As\+String (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+) const}\label{class_resource_mgr_aadb4a3796bba9cf4b2fc097f3aebd071}
+Gets the resource data as a \hyperlink{class_c}{C} string \hypertarget{class_resource_mgr_a02fb3176893696eaf659d680c8b08064}{}\index{Resource\+Mgr@{Resource\+Mgr}!instance@{instance}}
+\index{instance@{instance}!Resource\+Mgr@{Resource\+Mgr}}
+\subsubsection[{instance()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\+Mgr} \& Resource\+Mgr\+::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_resource_mgr_a02fb3176893696eaf659d680c8b08064}
+Returns the one and only instance of this class \hypertarget{class_resource_mgr_a2894f6f64a5376dfc475bde3f8acd0f3}{}\index{Resource\+Mgr@{Resource\+Mgr}!register\+Resources@{register\+Resources}}
+\index{register\+Resources@{register\+Resources}!Resource\+Mgr@{Resource\+Mgr}}
+\subsubsection[{register\+Resources(const Resource resources[], int num\+Resources)}]{\setlength{\rightskip}{0pt plus 5cm}void Resource\+Mgr\+::register\+Resources (
+\begin{DoxyParamCaption}
+\item[{const {\bf Resource}}]{resources\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{num\+Resources}
+\end{DoxyParamCaption}
+)}\label{class_resource_mgr_a2894f6f64a5376dfc475bde3f8acd0f3}
+Registers an array of resources 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{resourcemgr_8h}{resourcemgr.\+h}\item 
+src/\hyperlink{resourcemgr_8cpp}{resourcemgr.\+cpp}\end{DoxyCompactItemize}

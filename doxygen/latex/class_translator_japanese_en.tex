@@ -1,0 +1,115 @@
+\hypertarget{class_translator_japanese_en}{}\section{Référence de la classe Translator\+Japanese\+En}
+\label{class_translator_japanese_en}\index{Translator\+Japanese\+En@{Translator\+Japanese\+En}}
+
+
+{\ttfamily \#include $<$translator\+\_\+je.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Translator\+Japanese\+En\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_translator_japanese_en}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_translator_japanese_en_a920e7fc0a427b655de47f4085d331099}{id\+Language} ()
+\item 
+virtual \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_translator_japanese_en_a82a0008e9f9183374a7581124053ca4f}{latex\+Language\+Support\+Command} ()
+\item 
+virtual \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_translator_japanese_en_a4da6df8b58582eb97ffef9f75e070c0f}{tr\+R\+T\+Fansicp} ()
+\item 
+virtual \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_translator_japanese_en_aff3e71dc3a1d71f056fea3299c8a427e}{tr\+R\+T\+F\+Char\+Set} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_translator_japanese_en_a920e7fc0a427b655de47f4085d331099}{}\index{Translator\+Japanese\+En@{Translator\+Japanese\+En}!id\+Language@{id\+Language}}
+\index{id\+Language@{id\+Language}!Translator\+Japanese\+En@{Translator\+Japanese\+En}}
+\subsubsection[{id\+Language()}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Q\+C\+String} Translator\+Japanese\+En\+::id\+Language (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_translator_japanese_en_a920e7fc0a427b655de47f4085d331099}
+Used for identification of the language. The identification should not be translated. It should be replaced by the name of the language in English using lower-\/case characters only (e.\+g. \char`\"{}czech\char`\"{}, \char`\"{}japanese\char`\"{}, \char`\"{}russian\char`\"{}, etc.). It should be equal to the identification used in \hyperlink{language_8cpp}{language.\+cpp}. 
+
+Réimplémentée à partir de \hyperlink{class_translator_english_a940d6ef2aa0aa8a8011426219d145a53}{Translator\+English}.
+
+\hypertarget{class_translator_japanese_en_a82a0008e9f9183374a7581124053ca4f}{}\index{Translator\+Japanese\+En@{Translator\+Japanese\+En}!latex\+Language\+Support\+Command@{latex\+Language\+Support\+Command}}
+\index{latex\+Language\+Support\+Command@{latex\+Language\+Support\+Command}!Translator\+Japanese\+En@{Translator\+Japanese\+En}}
+\subsubsection[{latex\+Language\+Support\+Command()}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Q\+C\+String} Translator\+Japanese\+En\+::latex\+Language\+Support\+Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_translator_japanese_en_a82a0008e9f9183374a7581124053ca4f}
+Used to get the La\+Te\+X command(s) for the language support. This method should return string with commands that switch La\+Te\+X to the desired language. For example 
+\begin{DoxyPre}"\(\backslash\)\(\backslash\)usepackage[german]\{babel\}\(\backslash\)n"
+ \end{DoxyPre}
+ or 
+\begin{DoxyPre}"\(\backslash\)\(\backslash\)usepackage\{polski\}\(\backslash\)n"
+ "\(\backslash\)\(\backslash\)usepackage[latin2]\{inputenc\}\(\backslash\)n"
+ "\(\backslash\)\(\backslash\)usepackage[T1]\{fontenc\}\(\backslash\)n"
+ \end{DoxyPre}
+
+
+The English La\+Te\+X does not use such commands. Because of this the empty string is returned in this implementation. 
+
+Réimplémentée à partir de \hyperlink{class_translator_english_a48ecd4aaa9aa68947257ff29016a808a}{Translator\+English}.
+
+\hypertarget{class_translator_japanese_en_a4da6df8b58582eb97ffef9f75e070c0f}{}\index{Translator\+Japanese\+En@{Translator\+Japanese\+En}!tr\+R\+T\+Fansicp@{tr\+R\+T\+Fansicp}}
+\index{tr\+R\+T\+Fansicp@{tr\+R\+T\+Fansicp}!Translator\+Japanese\+En@{Translator\+Japanese\+En}}
+\subsubsection[{tr\+R\+T\+Fansicp()}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Q\+C\+String} Translator\+Japanese\+En\+::tr\+R\+T\+Fansicp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_translator_japanese_en_a4da6df8b58582eb97ffef9f75e070c0f}
+Used as ansicpg for R\+T\+F file
+
+The following table shows the correlation of Charset name, Charset Value and 
+\begin{DoxyPre}
+Codepage number:
+\subsubsection*{Charset Name       Charset Value(hex)  Codepage number
+}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}
+DEFAULT\_CHARSET           1 (x01)
+SYMBOL\_CHARSET            2 (x02)
+OEM\_CHARSET             255 (xFF)
+ANSI\_CHARSET              0 (x00)            1252
+RUSSIAN\_CHARSET         204 (xCC)            1251
+EE\_CHARSET              238 (xEE)            1250
+GREEK\_CHARSET           161 (xA1)            1253
+TURKISH\_CHARSET         162 (xA2)            1254
+BALTIC\_CHARSET          186 (xBA)            1257
+HEBREW\_CHARSET          177 (xB1)            1255
+ARABIC \_CHARSET         178 (xB2)            1256
+SHIFTJIS\_CHARSET        128 (x80)             932
+HANGEUL\_CHARSET         129 (x81)             949
+GB2313\_CHARSET          134 (x86)             936
+CHINESEBIG5\_CHARSET     136 (x88)             950
+\end{DoxyPre}
+ 
+
+Réimplémentée à partir de \hyperlink{class_translator_english_a58d43df9c7e82cf874f2d0ac64547a3a}{Translator\+English}.
+
+\hypertarget{class_translator_japanese_en_aff3e71dc3a1d71f056fea3299c8a427e}{}\index{Translator\+Japanese\+En@{Translator\+Japanese\+En}!tr\+R\+T\+F\+Char\+Set@{tr\+R\+T\+F\+Char\+Set}}
+\index{tr\+R\+T\+F\+Char\+Set@{tr\+R\+T\+F\+Char\+Set}!Translator\+Japanese\+En@{Translator\+Japanese\+En}}
+\subsubsection[{tr\+R\+T\+F\+Char\+Set()}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Q\+C\+String} Translator\+Japanese\+En\+::tr\+R\+T\+F\+Char\+Set (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_translator_japanese_en_aff3e71dc3a1d71f056fea3299c8a427e}
+Used as ansicpg for R\+T\+F fcharset \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_translator_japanese_en_a4da6df8b58582eb97ffef9f75e070c0f}{tr\+R\+T\+Fansicp()} for \hyperlink{060__command__switch_8tcl_ab08ae027fc5777bc4f0629f1b60b35db}{a} table of possible \hyperlink{qtextcodec_8cpp_a48ca6217f9d5d1de9776060e1a8dbe58}{values}. 
+\end{DoxySeeAlso}
+
+
+Réimplémentée à partir de \hyperlink{class_translator_english_a5c66e7339c73f03d5cae6291c21b98b8}{Translator\+English}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{translator__je_8h}{translator\+\_\+je.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,148 @@
+\hypertarget{class_table_handler}{}\section{Référence de la classe Table\+Handler}
+\label{class_table_handler}\index{Table\+Handler@{Table\+Handler}}
+
+
+Node representing an entry in the table.  
+
+
+
+
+{\ttfamily \#include $<$dochandler.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Table\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.538461cm]{class_table_handler}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_table_handler_a9e0613ea8ae5607d225932bcc9f62215}{Table\+Handler} (\hyperlink{class_i_base_handler}{I\+Base\+Handler} $\ast$parent)
+\item 
+virtual \hyperlink{class_table_handler_af9fedd38ed9ff9d9dbe89fc896ea7cbe}{$\sim$\+Table\+Handler} ()
+\item 
+void \hyperlink{class_table_handler_a09ce57d19969e097b1bd637923672003}{start\+Table} (const \hyperlink{class_q_xml_attributes}{Q\+Xml\+Attributes} \&attrib)
+\item 
+void \hyperlink{class_table_handler_ad906939d05d7140280515a0f2b0f0031}{end\+Table} ()
+\item 
+void \hyperlink{class_table_handler_a907149d6a57a20bbb142d60d457209fe}{start\+Row} (const \hyperlink{class_q_xml_attributes}{Q\+Xml\+Attributes} \&attrib)
+\item 
+void \hyperlink{class_table_handler_a8e3d08c867677c9e2d9bac9b53b781e2}{start\+Caption} (const \hyperlink{class_q_xml_attributes}{Q\+Xml\+Attributes} \&attrib)
+\item 
+void \hyperlink{class_table_handler_a2fb38f8951f0982bcd2a17d0d1a2182f}{end\+Caption} ()
+\item 
+virtual Kind \hyperlink{class_table_handler_a4cfaeef846b7947cad14fee44164986a}{kind} () const 
+\item 
+virtual \hyperlink{class_i_doc_iterator}{I\+Doc\+Iterator} $\ast$ \hyperlink{class_table_handler_aae0b7835560d333e88c056613ebf32c1}{rows} () const 
+\item 
+virtual int \hyperlink{class_table_handler_a39b0ac569b3b66f148c209ced5c4a45b}{num\+Columns} () const 
+\item 
+virtual const \hyperlink{class_i_string}{I\+String} $\ast$ \hyperlink{class_table_handler_aa76530a9277b9419e0ad632638b61432}{caption} () const 
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_table_handler_ab0165532e287d023758cc64c24e40fb7}{Table\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Node representing an entry in the table. 
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_table_handler_a9e0613ea8ae5607d225932bcc9f62215}{}\index{Table\+Handler@{Table\+Handler}!Table\+Handler@{Table\+Handler}}
+\index{Table\+Handler@{Table\+Handler}!Table\+Handler@{Table\+Handler}}
+\subsubsection[{Table\+Handler(\+I\+Base\+Handler $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Table\+Handler\+::\+Table\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Base\+Handler} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_table_handler_a9e0613ea8ae5607d225932bcc9f62215}
+\hypertarget{class_table_handler_af9fedd38ed9ff9d9dbe89fc896ea7cbe}{}\index{Table\+Handler@{Table\+Handler}!````~Table\+Handler@{$\sim$\+Table\+Handler}}
+\index{````~Table\+Handler@{$\sim$\+Table\+Handler}!Table\+Handler@{Table\+Handler}}
+\subsubsection[{$\sim$\+Table\+Handler()}]{\setlength{\rightskip}{0pt plus 5cm}Table\+Handler\+::$\sim$\+Table\+Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_table_handler_af9fedd38ed9ff9d9dbe89fc896ea7cbe}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_table_handler_aa76530a9277b9419e0ad632638b61432}{}\index{Table\+Handler@{Table\+Handler}!caption@{caption}}
+\index{caption@{caption}!Table\+Handler@{Table\+Handler}}
+\subsubsection[{caption() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf I\+String}$\ast$ Table\+Handler\+::caption (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_table_handler_aa76530a9277b9419e0ad632638b61432}
+\hypertarget{class_table_handler_a2fb38f8951f0982bcd2a17d0d1a2182f}{}\index{Table\+Handler@{Table\+Handler}!end\+Caption@{end\+Caption}}
+\index{end\+Caption@{end\+Caption}!Table\+Handler@{Table\+Handler}}
+\subsubsection[{end\+Caption()}]{\setlength{\rightskip}{0pt plus 5cm}void Table\+Handler\+::end\+Caption (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_table_handler_a2fb38f8951f0982bcd2a17d0d1a2182f}
+\hypertarget{class_table_handler_ad906939d05d7140280515a0f2b0f0031}{}\index{Table\+Handler@{Table\+Handler}!end\+Table@{end\+Table}}
+\index{end\+Table@{end\+Table}!Table\+Handler@{Table\+Handler}}
+\subsubsection[{end\+Table()}]{\setlength{\rightskip}{0pt plus 5cm}void Table\+Handler\+::end\+Table (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_table_handler_ad906939d05d7140280515a0f2b0f0031}
+\hypertarget{class_table_handler_a4cfaeef846b7947cad14fee44164986a}{}\index{Table\+Handler@{Table\+Handler}!kind@{kind}}
+\index{kind@{kind}!Table\+Handler@{Table\+Handler}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual Kind Table\+Handler\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_table_handler_a4cfaeef846b7947cad14fee44164986a}
+\hypertarget{class_table_handler_a39b0ac569b3b66f148c209ced5c4a45b}{}\index{Table\+Handler@{Table\+Handler}!num\+Columns@{num\+Columns}}
+\index{num\+Columns@{num\+Columns}!Table\+Handler@{Table\+Handler}}
+\subsubsection[{num\+Columns() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual int Table\+Handler\+::num\+Columns (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_table_handler_a39b0ac569b3b66f148c209ced5c4a45b}
+\hypertarget{class_table_handler_aae0b7835560d333e88c056613ebf32c1}{}\index{Table\+Handler@{Table\+Handler}!rows@{rows}}
+\index{rows@{rows}!Table\+Handler@{Table\+Handler}}
+\subsubsection[{rows() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Doc\+Iterator} $\ast$ Table\+Handler\+::rows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_table_handler_aae0b7835560d333e88c056613ebf32c1}
+\hypertarget{class_table_handler_a8e3d08c867677c9e2d9bac9b53b781e2}{}\index{Table\+Handler@{Table\+Handler}!start\+Caption@{start\+Caption}}
+\index{start\+Caption@{start\+Caption}!Table\+Handler@{Table\+Handler}}
+\subsubsection[{start\+Caption(const Q\+Xml\+Attributes \&attrib)}]{\setlength{\rightskip}{0pt plus 5cm}void Table\+Handler\+::start\+Caption (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Xml\+Attributes} \&}]{attrib}
+\end{DoxyParamCaption}
+)}\label{class_table_handler_a8e3d08c867677c9e2d9bac9b53b781e2}
+\hypertarget{class_table_handler_a907149d6a57a20bbb142d60d457209fe}{}\index{Table\+Handler@{Table\+Handler}!start\+Row@{start\+Row}}
+\index{start\+Row@{start\+Row}!Table\+Handler@{Table\+Handler}}
+\subsubsection[{start\+Row(const Q\+Xml\+Attributes \&attrib)}]{\setlength{\rightskip}{0pt plus 5cm}void Table\+Handler\+::start\+Row (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Xml\+Attributes} \&}]{attrib}
+\end{DoxyParamCaption}
+)}\label{class_table_handler_a907149d6a57a20bbb142d60d457209fe}
+\hypertarget{class_table_handler_a09ce57d19969e097b1bd637923672003}{}\index{Table\+Handler@{Table\+Handler}!start\+Table@{start\+Table}}
+\index{start\+Table@{start\+Table}!Table\+Handler@{Table\+Handler}}
+\subsubsection[{start\+Table(const Q\+Xml\+Attributes \&attrib)}]{\setlength{\rightskip}{0pt plus 5cm}void Table\+Handler\+::start\+Table (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Xml\+Attributes} \&}]{attrib}
+\end{DoxyParamCaption}
+)}\label{class_table_handler_a09ce57d19969e097b1bd637923672003}
+
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_table_handler_ab0165532e287d023758cc64c24e40fb7}{}\index{Table\+Handler@{Table\+Handler}!Table\+Iterator@{Table\+Iterator}}
+\index{Table\+Iterator@{Table\+Iterator}!Table\+Handler@{Table\+Handler}}
+\subsubsection[{Table\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Table\+Iterator}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_table_handler_ab0165532e287d023758cc64c24e40fb7}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+addon/doxmlparser/src/\hyperlink{dochandler_8h}{dochandler.\+h}\item 
+addon/doxmlparser/src/\hyperlink{dochandler_8cpp}{dochandler.\+cpp}\end{DoxyCompactItemize}

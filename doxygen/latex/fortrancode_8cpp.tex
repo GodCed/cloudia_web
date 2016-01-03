@@ -1,0 +1,1314 @@
+\hypertarget{fortrancode_8cpp}{}\section{Référence du fichier generated\+\_\+src/doxygen/fortrancode.cpp}
+\label{fortrancode_8cpp}\index{generated\+\_\+src/doxygen/fortrancode.\+cpp@{generated\+\_\+src/doxygen/fortrancode.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$qregexp.\+h$>$}\\*
+{\ttfamily \#include $<$qdir.\+h$>$}\\*
+{\ttfamily \#include $<$qstringlist.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}entry.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doxygen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}outputlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}membername.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}searchindex.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}defargs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}memberlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}groupdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}classlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}filedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}namespacedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tooltip.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fortrancode.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structyy__buffer__state}{yy\+\_\+buffer\+\_\+state}
+\item 
+struct \hyperlink{structyy__trans__info}{yy\+\_\+trans\+\_\+info}
+\item 
+class \hyperlink{class_use_entry}{Use\+Entry}
+\item 
+class \hyperlink{class_use_s_dict}{Use\+S\+Dict}
+\item 
+class \hyperlink{class_scope}{Scope}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a1ae16e642a197fa4948998525813c6f5}{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}~short int
+\item 
+\#define \hyperlink{fortrancode_8cpp_ac86ea8173dfcfc5c989d3295a77e2f95}{yy\+\_\+create\+\_\+buffer}~\hyperlink{fortrancode_8cpp_ae36a6419adf0035417c6b0f888715772}{fortrancode\+Y\+Y\+\_\+create\+\_\+buffer}
+\item 
+\#define \hyperlink{fortrancode_8cpp_ad1868c6b38b45af25a4a0f449912a808}{yy\+\_\+delete\+\_\+buffer}~\hyperlink{fortrancode_8cpp_ac62703a90140b4ca5b273a85fe800d41}{fortrancode\+Y\+Y\+\_\+delete\+\_\+buffer}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a301f4439c9b191c80db45f5b1a8c7269}{yy\+\_\+flex\+\_\+debug}~\hyperlink{fortrancode_8cpp_ad182c7a53af22425b6bfb530e5103464}{fortrancode\+Y\+Y\+\_\+flex\+\_\+debug}
+\item 
+\#define \hyperlink{fortrancode_8cpp_aa14efad9f9c24106a3e3398a4f6621c2}{yy\+\_\+init\+\_\+buffer}~fortrancode\+Y\+Y\+\_\+init\+\_\+buffer
+\item 
+\#define \hyperlink{fortrancode_8cpp_ab01a4c7245136f22a63acac7c0ceb343}{yy\+\_\+flush\+\_\+buffer}~\hyperlink{fortrancode_8cpp_a005e102a7a94ad56c0dc052c0d316d89}{fortrancode\+Y\+Y\+\_\+flush\+\_\+buffer}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a039fc377fd4784139d8706ba0ae229fa}{yy\+\_\+load\+\_\+buffer\+\_\+state}~fortrancode\+Y\+Y\+\_\+load\+\_\+buffer\+\_\+state
+\item 
+\#define \hyperlink{fortrancode_8cpp_a968d5b9e7e06a38bfca977b343d47d5c}{yy\+\_\+switch\+\_\+to\+\_\+buffer}~\hyperlink{fortrancode_8cpp_aec8490145da7bfdc8cb0c3452ee58678}{fortrancode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}
+\item 
+\#define \hyperlink{fortrancode_8cpp_aa789f4617e33fb99594cb04a3688a0c1}{yyin}~\hyperlink{fortrancode_8cpp_a2aafd9df09912afde6ceda482ae61753}{fortrancode\+Y\+Yin}
+\item 
+\#define \hyperlink{fortrancode_8cpp_afa07a629486cb790560bb95713ec7794}{yyleng}~\hyperlink{fortrancode_8cpp_a6ae2b834beeff1e67bcc3c5f91cb5a4f}{fortrancode\+Y\+Yleng}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a5611300548b2030d86b6ab9168132b88}{yylex}~\hyperlink{fortrancode_8cpp_ad3da989a320451d19e0e3bee9f0f2f08}{fortrancode\+Y\+Ylex}
+\item 
+\#define \hyperlink{fortrancode_8cpp_ad71cf0fddcfe4f61de0929105b33226c}{yylineno}~\hyperlink{fortrancode_8cpp_a74a2c9f1b54facbdd351937ef67ac4e2}{fortrancode\+Y\+Ylineno}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a4fd44867d448dcb6fc32ea004a15de54}{yyout}~\hyperlink{fortrancode_8cpp_a5aec14805e4ef0862b816c23088cd76c}{fortrancode\+Y\+Yout}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a2259355ac49295f72feab070a34a9b11}{yyrestart}~\hyperlink{fortrancode_8cpp_a8ebc83c3fbdb5aa3f10f96abbaa78393}{fortrancode\+Y\+Yrestart}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a0d71f919dbec1ffd74b2460fa7e5ac28}{yytext}~\hyperlink{fortrancode_8cpp_a8ae7f8fc5819b5f9a8d2969cb8acc16b}{fortrancode\+Y\+Ytext}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a5be541efdb129f7cefb2437f52fe7359}{yywrap}~\hyperlink{fortrancode_8cpp_aeeb068e495866cd6fc2e786decf6ba65}{fortrancode\+Y\+Ywrap}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a803397ab738ee8630166680646a2d913}{yyalloc}~\hyperlink{fortrancode_8cpp_ae05b18dcea66200bf09ca6ca4bf561ac}{fortrancode\+Y\+Yalloc}
+\item 
+\#define \hyperlink{fortrancode_8cpp_ab1eba250555ca003eb39387bb1a41d39}{yyrealloc}~\hyperlink{fortrancode_8cpp_aed7471c0a46db189456c5ab0dcd41f06}{fortrancode\+Y\+Yrealloc}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a4fa4368d47620ea80150b516e8884f6b}{yyfree}~\hyperlink{fortrancode_8cpp_a84d5cc9edfd00e023bd9717888760568}{fortrancode\+Y\+Yfree}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a3c3d1ef92e93b0bc81d7760a73d5c3b6}{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a243ca1d30872935faf05ea5118ed6fdc}{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}~2
+\item 
+\#define \hyperlink{fortrancode_8cpp_a90f9d458829400869e47efb68a865677}{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}~5
+\item 
+\#define \hyperlink{fortrancode_8cpp_ac676bd06869180ea493e9b6d7c078dbb}{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}~35
+\item 
+\#define \hyperlink{fortrancode_8cpp_a9465c9986fdda27730c9dff8d16a0887}{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}
+\item 
+\#define \hyperlink{fortrancode_8cpp_aec980b5a71bbe6d67931df20f0ebaec4}{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}
+\item 
+\#define \hyperlink{fortrancode_8cpp_aadcf2a81af243df333b31efa6461ab8e}{I\+N\+T8\+\_\+\+M\+I\+N}~(-\/128)
+\item 
+\#define \hyperlink{fortrancode_8cpp_ad4e9955955b27624963643eac448118a}{I\+N\+T16\+\_\+\+M\+I\+N}~(-\/32767-\/1)
+\item 
+\#define \hyperlink{fortrancode_8cpp_a688eb21a22db27c2b2bd5836943cdcbe}{I\+N\+T32\+\_\+\+M\+I\+N}~(-\/2147483647-\/1)
+\item 
+\#define \hyperlink{fortrancode_8cpp_aaf7f29f45f1a513b4748a4e5014ddf6a}{I\+N\+T8\+\_\+\+M\+A\+X}~(127)
+\item 
+\#define \hyperlink{fortrancode_8cpp_ac58f2c111cc9989c86db2a7dc4fd84ca}{I\+N\+T16\+\_\+\+M\+A\+X}~(32767)
+\item 
+\#define \hyperlink{fortrancode_8cpp_a181807730d4a375f848ba139813ce04f}{I\+N\+T32\+\_\+\+M\+A\+X}~(2147483647)
+\item 
+\#define \hyperlink{fortrancode_8cpp_aeb4e270a084ee26fe73e799861bd0252}{U\+I\+N\+T8\+\_\+\+M\+A\+X}~(255\+U)
+\item 
+\#define \hyperlink{fortrancode_8cpp_a3ea490c9b3617d4479bd80ef93cd5602}{U\+I\+N\+T16\+\_\+\+M\+A\+X}~(65535\+U)
+\item 
+\#define \hyperlink{fortrancode_8cpp_ab5eb23180f7cc12b7d6c04a8ec067fdd}{U\+I\+N\+T32\+\_\+\+M\+A\+X}~(4294967295\+U)
+\item 
+\#define \hyperlink{fortrancode_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}{Y\+Y\+\_\+\+N\+U\+L\+L}~0
+\item 
+\#define \hyperlink{fortrancode_8cpp_af1185350b7a92cf8aa5324c68850c8a6}{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}(\hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})~((unsigned int) (unsigned char) \hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})
+\item 
+\#define \hyperlink{fortrancode_8cpp_ab766bbbee08d04b67e3fe599d6900873}{B\+E\+G\+I\+N}~(yy\+\_\+start) = 1 + 2 $\ast$
+\item 
+\#define \hyperlink{fortrancode_8cpp_a8e14785f9eab7a997d659b25af9584c5}{Y\+Y\+\_\+\+S\+T\+A\+R\+T}~(((yy\+\_\+start) -\/ 1) / 2)
+\item 
+\#define \hyperlink{fortrancode_8cpp_a32b5b960944f946b192d54f672569cd9}{Y\+Y\+S\+T\+A\+T\+E}~\hyperlink{xmlcode_8cpp_a8e14785f9eab7a997d659b25af9584c5}{Y\+Y\+\_\+\+S\+T\+A\+R\+T}
+\item 
+\#define \hyperlink{fortrancode_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}(state)~(\hyperlink{xmlcode_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R} + state + 1)
+\item 
+\#define \hyperlink{fortrancode_8cpp_a0406739e64fb5750cf995d2ae68ce69d}{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}~\hyperlink{fortrancode_8cpp_a8ebc83c3fbdb5aa3f10f96abbaa78393}{fortrancode\+Y\+Yrestart}(\hyperlink{fortrancode_8cpp_a2aafd9df09912afde6ceda482ae61753}{fortrancode\+Y\+Yin}  )
+\item 
+\#define \hyperlink{fortrancode_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}~0
+\item 
+\#define \hyperlink{fortrancode_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}~262144
+\item 
+\#define \hyperlink{fortrancode_8cpp_ac2f8b6fccdc516d96b02ac09a4dc01bd}{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}~((\hyperlink{xmlcode_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E} + 2) $\ast$ sizeof(\hyperlink{code_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{yy\+\_\+state\+\_\+type}))
+\item 
+\#define \hyperlink{fortrancode_8cpp_aa79d63ed3ff8d2249baf1732a73089f5}{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}
+\item 
+\#define \hyperlink{fortrancode_8cpp_ae0f2b0b5f04b2338367826b5670774f9}{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}
+\item 
+\#define \hyperlink{fortrancode_8cpp_adf4b0db227e07782e28ade353a7ba7a1}{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}~0
+\item 
+\#define \hyperlink{fortrancode_8cpp_a7f71d7fa2c403eb4b2f38cb9536f3c63}{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}~1
+\item 
+\#define \hyperlink{fortrancode_8cpp_ad1a0b5ebcabffe388e9e9ebb2619c1fb}{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}~2
+\item 
+\#define \hyperlink{fortrancode_8cpp_a12e5f3a76911433480bca7f4edba6119}{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+\#define \hyperlink{fortrancode_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{yyless}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+\#define \hyperlink{fortrancode_8cpp_a448a4e9041a09588332733c6846c770c}{unput}(\hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})~yyunput( \hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c}, (\hyperlink{xmlcode_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\+\_\+ptr})  )
+\item 
+\#define \hyperlink{fortrancode_8cpp_a8aaa9e1fa7f13d6954d045ef973a9c84}{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a53579db42834b88199458993912c646d}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}~0
+\item 
+\#define \hyperlink{fortrancode_8cpp_a609d19f40900ecc2a5f812d9388c21fb}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}~1
+\item 
+\#define \hyperlink{fortrancode_8cpp_ad689d97c15e807a6116ace7a420cea57}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}~2
+\item 
+\#define \hyperlink{fortrancode_8cpp_aa093d500a6330d06d8e4760c494fac33}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}~(yy\+\_\+buffer\+\_\+stack)\mbox{[}(yy\+\_\+buffer\+\_\+stack\+\_\+top)\mbox{]}
+\item 
+\#define \hyperlink{fortrancode_8cpp_ac5d478d90ea9a2ecd43d579067a2e89d}{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}~\hyperlink{fortrancode_8cpp_a005e102a7a94ad56c0dc052c0d316d89}{fortrancode\+Y\+Y\+\_\+flush\+\_\+buffer}(\hyperlink{xmlcode_8cpp_aa093d500a6330d06d8e4760c494fac33}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R} )
+\item 
+\#define \hyperlink{fortrancode_8cpp_ab7eb911e18655f2f78e63afe5a8a4a12}{yy\+\_\+new\+\_\+buffer}~\hyperlink{fortrancode_8cpp_ae36a6419adf0035417c6b0f888715772}{fortrancode\+Y\+Y\+\_\+create\+\_\+buffer}
+\item 
+\#define \hyperlink{fortrancode_8cpp_ac56eb96366c08862bf0efe5d83d1fc4c}{yy\+\_\+set\+\_\+interactive}(is\+\_\+interactive)
+\item 
+\#define \hyperlink{fortrancode_8cpp_a12e30d13a76a94e78010db9996d39c50}{yy\+\_\+set\+\_\+bol}(at\+\_\+bol)
+\item 
+\#define \hyperlink{fortrancode_8cpp_a71ca89b3656acd0552f14949a571560b}{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}()~(\hyperlink{xmlcode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}-\/$>$yy\+\_\+at\+\_\+bol)
+\item 
+\#define \hyperlink{fortrancode_8cpp_aeeb068e495866cd6fc2e786decf6ba65}{fortrancode\+Y\+Ywrap}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})~1
+\item 
+\#define \hyperlink{fortrancode_8cpp_ae1ef5933028cbc587d31328e53d11a99}{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\+\_\+ptr}~\hyperlink{fortrancode_8cpp_a8ae7f8fc5819b5f9a8d2969cb8acc16b}{fortrancode\+Y\+Ytext}
+\item 
+\#define \hyperlink{fortrancode_8cpp_acc3486d769af4e4b2820346a0093cc79}{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}
+\item 
+\#define \hyperlink{fortrancode_8cpp_ae558785bb896e090901c2b905f6790c6}{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}~66
+\item 
+\#define \hyperlink{fortrancode_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}~67
+\item 
+\#define \hyperlink{fortrancode_8cpp_a76482842cdcaadf1dbdaf43df38765a2}{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}~0x2000
+\item 
+\#define \hyperlink{fortrancode_8cpp_a7fce78ee876950ded902364014c917e6}{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}~0x4000
+\item 
+\#define \hyperlink{fortrancode_8cpp_a835f10dd1ab4bf9a80c4cd80ee6e3058}{R\+E\+J\+E\+C\+T}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a745d37b5e002b2e5f93ad42ea7b554be}{yymore}()~yymore\+\_\+used\+\_\+but\+\_\+not\+\_\+detected
+\item 
+\#define \hyperlink{fortrancode_8cpp_a68792d73820bc46a71d3d4e613f0b977}{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}~0
+\item 
+\#define \hyperlink{fortrancode_8cpp_a56858d18c7eda4f53664496ef566f651}{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a234e2efe67eececd88b140b46ea37463}{D\+B\+G\+\_\+\+C\+T\+X}(x)~do \{ \} \hyperlink{xmlcode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{while}(0)
+\item 
+\#define \hyperlink{fortrancode_8cpp_a15b85de192a189d5a31cdd518e001e6e}{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}~1
+\item 
+\#define \hyperlink{fortrancode_8cpp_ac3eedc6d2e3e4c9b2bacd0f1ebeab98a}{Y\+Y\+\_\+\+N\+O\+\_\+\+T\+O\+P\+\_\+\+S\+T\+A\+T\+E}~1
+\item 
+\#define \hyperlink{fortrancode_8cpp_a85523a0c7d95c059d251b4e9829947aa}{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}~1
+\item 
+\#define \hyperlink{fortrancode_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}~\{\hyperlink{fortrancode_8cpp_ab0517027b61f63c8a563733d6e813ad1}{yy\+\_\+old\+\_\+start} = \hyperlink{fortrancode_8cpp_a66a71125f0f01a2a8d1a3608807695fa}{yy\+\_\+my\+\_\+start}; \hyperlink{fortrancode_8cpp_a66a71125f0f01a2a8d1a3608807695fa}{yy\+\_\+my\+\_\+start} = \hyperlink{fortrancode_8cpp_adc3fff33a8db22a36f05baec1001a010}{yy\+\_\+end}; \hyperlink{fortrancode_8cpp_adc3fff33a8db22a36f05baec1001a010}{yy\+\_\+end} += \hyperlink{fortrancode_8cpp_a6ae2b834beeff1e67bcc3c5f91cb5a4f}{fortrancode\+Y\+Yleng};\}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a9a0fdbfa8e6dc0e59c2015a0f1e663c2}{Y\+Y\+\_\+\+F\+T\+N\+\_\+\+R\+E\+S\+E\+T}~\{\hyperlink{fortrancode_8cpp_ab0517027b61f63c8a563733d6e813ad1}{yy\+\_\+old\+\_\+start} = 0; \hyperlink{fortrancode_8cpp_a66a71125f0f01a2a8d1a3608807695fa}{yy\+\_\+my\+\_\+start} = 0; \hyperlink{fortrancode_8cpp_adc3fff33a8db22a36f05baec1001a010}{yy\+\_\+end} = 1;\}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a633f0b53ce61259dee93c2398f1674f0}{Y\+Y\+\_\+\+F\+T\+N\+\_\+\+R\+E\+J\+E\+C\+T}~\{\hyperlink{fortrancode_8cpp_adc3fff33a8db22a36f05baec1001a010}{yy\+\_\+end} = \hyperlink{fortrancode_8cpp_a66a71125f0f01a2a8d1a3608807695fa}{yy\+\_\+my\+\_\+start}; \hyperlink{fortrancode_8cpp_a66a71125f0f01a2a8d1a3608807695fa}{yy\+\_\+my\+\_\+start} = \hyperlink{fortrancode_8cpp_ab0517027b61f63c8a563733d6e813ad1}{yy\+\_\+old\+\_\+start}; \hyperlink{xmlcode_8cpp_a835f10dd1ab4bf9a80c4cd80ee6e3058}{R\+E\+J\+E\+C\+T};\}
+\item 
+\#define \hyperlink{fortrancode_8cpp_aacfdca45fa4beb8b06172525a53c424a}{Y\+Y\+\_\+\+I\+N\+P\+U\+T}(buf,  result,  max\+\_\+size)~result=yyread(buf,max\+\_\+size);
+\item 
+\#define \hyperlink{fortrancode_8cpp_aa3d063564f6ab16f6d408b8369d0e9ff}{I\+N\+I\+T\+I\+A\+L}~0
+\item 
+\#define \hyperlink{fortrancode_8cpp_a991581d134a6f84d55be043b6e34afd7}{Start}~1
+\item 
+\#define \hyperlink{fortrancode_8cpp_a9754cabc94b8f98dc228327ce01f0661}{Sub\+Call}~2
+\item 
+\#define \hyperlink{fortrancode_8cpp_a5bcad47b596f32300f541fb55c663131}{Func\+Def}~3
+\item 
+\#define \hyperlink{fortrancode_8cpp_a4ca64a5cbd08c078c3163551277f6463}{Class\+Name}~4
+\item 
+\#define \hyperlink{fortrancode_8cpp_a97981648294e24c044922bdd90c4c059}{Class\+Var}~5
+\item 
+\#define \hyperlink{fortrancode_8cpp_a12a6640aea50c03a59ed0a1ea09848cd}{Subprog}~6
+\item 
+\#define \hyperlink{fortrancode_8cpp_afa531c2189ebc4218f86a05f08694d27}{Doc\+Block}~7
+\item 
+\#define \hyperlink{fortrancode_8cpp_a06d02452157eee38f25368bb6fc0011f}{Use}~8
+\item 
+\#define \hyperlink{fortrancode_8cpp_ad9ef1480444a9dfcf6563a28cef07981}{Use\+Only}~9
+\item 
+\#define \hyperlink{fortrancode_8cpp_a83eb8adc12438a58a8c5e174f757554d}{Import}~10
+\item 
+\#define \hyperlink{fortrancode_8cpp_acc6c0182c297fdfccbe60ca4343f5ec6}{Declaration}~11
+\item 
+\#define \hyperlink{fortrancode_8cpp_af0503fc139c9bb0728b6a045f33fc835}{Declaration\+Binding}~12
+\item 
+\#define \hyperlink{fortrancode_8cpp_abe77926fcd5ed688d464d105395ead8f}{Decl\+Cont\+Line}~13
+\item 
+\#define \hyperlink{fortrancode_8cpp_a09e8313d350d50a798ca891a28872f51}{Parameterlist}~14
+\item 
+\#define \hyperlink{fortrancode_8cpp_ad3834cab10a0d63f8168683208864a90}{String}~15
+\item 
+\#define \hyperlink{fortrancode_8cpp_ab7de3e12ff46bbed288e5bff267ed5fc}{Subprogend}~16
+\item 
+\#define \hyperlink{fortrancode_8cpp_a26938d921de835f6183c02e54cf08828}{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}~void $\ast$
+\item 
+\#define \hyperlink{fortrancode_8cpp_aab1491ceccb1c95c14320b2903773a1c}{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}~262144
+\item 
+\#define \hyperlink{fortrancode_8cpp_aad1dc60a04a1d8cfc8b3ded13601e361}{E\+C\+H\+O}~fwrite( \hyperlink{fortrancode_8cpp_a8ae7f8fc5819b5f9a8d2969cb8acc16b}{fortrancode\+Y\+Ytext}, \hyperlink{fortrancode_8cpp_a6ae2b834beeff1e67bcc3c5f91cb5a4f}{fortrancode\+Y\+Yleng}, 1, \hyperlink{fortrancode_8cpp_a5aec14805e4ef0862b816c23088cd76c}{fortrancode\+Y\+Yout} )
+\item 
+\#define \hyperlink{fortrancode_8cpp_ac3286b18a2e91b4571b97df96a118e84}{yyterminate}()~return \hyperlink{xmlcode_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}{Y\+Y\+\_\+\+N\+U\+L\+L}
+\item 
+\#define \hyperlink{fortrancode_8cpp_a227e75c43b9e0cd41529974230be7e75}{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}~25
+\item 
+\#define \hyperlink{fortrancode_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}(\hyperlink{message_8h_aba549a028419cd48a3f373037c2c57eb}{msg})~yy\+\_\+fatal\+\_\+error( \hyperlink{message_8h_aba549a028419cd48a3f373037c2c57eb}{msg} )
+\item 
+\#define \hyperlink{fortrancode_8cpp_a7682c8d9cec0859408d2421fbe4a5570}{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}~1
+\item 
+\#define \hyperlink{fortrancode_8cpp_ae5b01ac2fa5a6ad5fb97559638abe686}{Y\+Y\+\_\+\+D\+E\+C\+L}~int \hyperlink{fortrancode_8cpp_ad3da989a320451d19e0e3bee9f0f2f08}{fortrancode\+Y\+Ylex} (void)
+\item 
+\#define \hyperlink{fortrancode_8cpp_a3cc40a460ad7df816678bcc05241e84c}{Y\+Y\+\_\+\+B\+R\+E\+A\+K}~break;
+\item 
+\#define \hyperlink{fortrancode_8cpp_a690504b662e4281515bf12722df178ba}{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}
+\item 
+\#define \hyperlink{fortrancode_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}~2
+\item 
+\#define \hyperlink{fortrancode_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{yyless}(\hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+\#define \hyperlink{fortrancode_8cpp_a828cc83270f8f5bb1688e14dd4e28128}{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}~\char`\"{}yytables\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef signed char \hyperlink{fortrancode_8cpp_a7b0840dff4a2ef1702118aa12264b2a7}{flex\+\_\+int8\+\_\+t}
+\item 
+typedef short int \hyperlink{fortrancode_8cpp_a2e73b2c75126814585525fb2e9d51159}{flex\+\_\+int16\+\_\+t}
+\item 
+typedef int \hyperlink{fortrancode_8cpp_a838ce943cf44ef7769480714fc6c3ba9}{flex\+\_\+int32\+\_\+t}
+\item 
+typedef unsigned char \hyperlink{fortrancode_8cpp_a0fac5ea484f64e75dbe6eba4aa61750c}{flex\+\_\+uint8\+\_\+t}
+\item 
+typedef unsigned short int \hyperlink{fortrancode_8cpp_ac50cdb9eefbef83a1cec89e3a7f6e1d2}{flex\+\_\+uint16\+\_\+t}
+\item 
+typedef unsigned int \hyperlink{fortrancode_8cpp_a36869712de12820c73aae736762e8e88}{flex\+\_\+uint32\+\_\+t}
+\item 
+typedef struct \hyperlink{structyy__buffer__state}{yy\+\_\+buffer\+\_\+state} $\ast$ \hyperlink{fortrancode_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}
+\item 
+typedef size\+\_\+t \hyperlink{fortrancode_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t}
+\item 
+typedef unsigned char \hyperlink{fortrancode_8cpp_a1f324b3cb0839eeb90145f0274e6946e}{Y\+Y\+\_\+\+C\+H\+A\+R}
+\item 
+typedef int \hyperlink{fortrancode_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{yy\+\_\+state\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fortrancode_8cpp_a8ebc83c3fbdb5aa3f10f96abbaa78393}{fortrancode\+Y\+Yrestart} (F\+I\+L\+E $\ast$input\+\_\+file)
+\item 
+void \hyperlink{fortrancode_8cpp_aec8490145da7bfdc8cb0c3452ee58678}{fortrancode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} new\+\_\+buffer)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{fortrancode_8cpp_ae36a6419adf0035417c6b0f888715772}{fortrancode\+Y\+Y\+\_\+create\+\_\+buffer} (F\+I\+L\+E $\ast$file, int size)
+\item 
+void \hyperlink{fortrancode_8cpp_ac62703a90140b4ca5b273a85fe800d41}{fortrancode\+Y\+Y\+\_\+delete\+\_\+buffer} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b})
+\item 
+void \hyperlink{fortrancode_8cpp_a005e102a7a94ad56c0dc052c0d316d89}{fortrancode\+Y\+Y\+\_\+flush\+\_\+buffer} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b})
+\item 
+void \hyperlink{fortrancode_8cpp_a6963c62cfec195502a62592c41983748}{fortrancode\+Y\+Ypush\+\_\+buffer\+\_\+state} (\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} new\+\_\+buffer)
+\item 
+void \hyperlink{fortrancode_8cpp_a1bc575e8e96e1f8d152ff4adeff86710}{fortrancode\+Y\+Ypop\+\_\+buffer\+\_\+state} (void)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{fortrancode_8cpp_a97b6fab8857dd561d10ab72615f12970}{fortrancode\+Y\+Y\+\_\+scan\+\_\+buffer} (char $\ast$base, \hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} size)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{fortrancode_8cpp_af908c4865f1eb2f8e04e9a8752b70f8d}{fortrancode\+Y\+Y\+\_\+scan\+\_\+string} (\hyperlink{xmlcode_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst} char $\ast$yy\+\_\+str)
+\item 
+\hyperlink{code_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} \hyperlink{fortrancode_8cpp_a10147db891604291b47adfcd368fe1c2}{fortrancode\+Y\+Y\+\_\+scan\+\_\+bytes} (\hyperlink{xmlcode_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst} char $\ast$bytes, \hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} len)
+\item 
+void $\ast$ \hyperlink{fortrancode_8cpp_ae05b18dcea66200bf09ca6ca4bf561ac}{fortrancode\+Y\+Yalloc} (\hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t})
+\item 
+void $\ast$ \hyperlink{fortrancode_8cpp_aed7471c0a46db189456c5ab0dcd41f06}{fortrancode\+Y\+Yrealloc} (void $\ast$, \hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t})
+\item 
+void \hyperlink{fortrancode_8cpp_a84d5cc9edfd00e023bd9717888760568}{fortrancode\+Y\+Yfree} (void $\ast$)
+\item 
+int \hyperlink{fortrancode_8cpp_a6c33315d8a6aaa5267565c771b930051}{fortrancode\+Y\+Ylex\+\_\+destroy} (void)
+\item 
+int \hyperlink{fortrancode_8cpp_aaa901d717afb6916f6c8890d24748b74}{fortrancode\+Y\+Yget\+\_\+debug} (void)
+\item 
+void \hyperlink{fortrancode_8cpp_aadc78da354e1b858867bc89723726070}{fortrancode\+Y\+Yset\+\_\+debug} (int debug\+\_\+flag)
+\item 
+\hyperlink{xmlcode_8cpp_a26938d921de835f6183c02e54cf08828}{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E} \hyperlink{fortrancode_8cpp_a529572b2d3ed61439d58ea367f7f3c28}{fortrancode\+Y\+Yget\+\_\+extra} (void)
+\item 
+void \hyperlink{fortrancode_8cpp_ae30eaaf9f121c53d1c1e92a68da4f104}{fortrancode\+Y\+Yset\+\_\+extra} (\hyperlink{xmlcode_8cpp_a26938d921de835f6183c02e54cf08828}{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E} user\+\_\+defined)
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{fortrancode_8cpp_a3bf20ddbaa14289764b4dfba45cd8f4a}{fortrancode\+Y\+Yget\+\_\+in} (void)
+\item 
+void \hyperlink{fortrancode_8cpp_aa2c95bcb17e12596152ddb669163d77a}{fortrancode\+Y\+Yset\+\_\+in} (F\+I\+L\+E $\ast$in\+\_\+str)
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{fortrancode_8cpp_aaf263cb7b436d7f0faeafbc48f416094}{fortrancode\+Y\+Yget\+\_\+out} (void)
+\item 
+void \hyperlink{fortrancode_8cpp_aec57d5403414e8a7d0b746e37cd2c1e0}{fortrancode\+Y\+Yset\+\_\+out} (F\+I\+L\+E $\ast$out\+\_\+str)
+\item 
+\hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} \hyperlink{fortrancode_8cpp_aad7ef58da027c5144c8f075b75f2c413}{fortrancode\+Y\+Yget\+\_\+leng} (void)
+\item 
+char $\ast$ \hyperlink{fortrancode_8cpp_a8f80a5567ec4b4807d7a82f8b2c086ae}{fortrancode\+Y\+Yget\+\_\+text} (void)
+\item 
+int \hyperlink{fortrancode_8cpp_a0bf560347bd1c8cdf9a5779c2b95a23d}{fortrancode\+Y\+Yget\+\_\+lineno} (void)
+\item 
+void \hyperlink{fortrancode_8cpp_a92348639b0bac0bc262790b7abba9fa2}{fortrancode\+Y\+Yset\+\_\+lineno} (int line\+\_\+number)
+\item 
+int \hyperlink{fortrancode_8cpp_ad3da989a320451d19e0e3bee9f0f2f08}{fortrancode\+Y\+Ylex} (void)
+\item 
+\hyperlink{fortrancode_8cpp_ad4a65b873df5c05570846b5413b41dfd}{if} (!(yy\+\_\+init))
+\item 
+\hyperlink{fortrancode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{while} (1)
+\item 
+int \hyperlink{fortrancode_8cpp_ab4155ffea05dab2dafae68fd88a0517f}{isatty} (int)
+\item 
+void \hyperlink{fortrancode_8cpp_a4d60ec1afc4309e30e686400f692b1b2}{reset\+Fortran\+Code\+Parser\+State} ()
+\item 
+void \hyperlink{fortrancode_8cpp_a606f2fa004c65faa4364c5b9045a2114}{parse\+Fortran\+Code} (\hyperlink{class_code_output_interface}{Code\+Output\+Interface} \&od, const char $\ast$class\+Name, const \hyperlink{class_q_c_string}{Q\+C\+String} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} ex\+Block, const char $\ast$ex\+Name, \hyperlink{class_file_def}{File\+Def} $\ast$fd, int start\+Line, int end\+Line, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} inline\+Fragment, \hyperlink{class_member_def}{Member\+Def} $\ast$member\+Def, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}, \hyperlink{class_definition}{Definition} $\ast$search\+Ctx, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{tclscanner_8cpp_ac23b94d6976d5bb0c9f1885c5a2e7a53}{collect\+X\+Refs}, \hyperlink{types_8h_ad3f2a8c13ceee9c0aaeabf930dd88266}{Fortran\+Format} format)
+\item 
+void \hyperlink{fortrancode_8cpp_ad332742eb805482fc1390b0a0e632c45}{fortrancode\+Y\+Ydummy} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{code_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\+\_\+size\+\_\+t} \hyperlink{fortrancode_8cpp_a6ae2b834beeff1e67bcc3c5f91cb5a4f}{fortrancode\+Y\+Yleng}
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{fortrancode_8cpp_a2aafd9df09912afde6ceda482ae61753}{fortrancode\+Y\+Yin} = (F\+I\+L\+E $\ast$) 0
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{fortrancode_8cpp_a5aec14805e4ef0862b816c23088cd76c}{fortrancode\+Y\+Yout} = (F\+I\+L\+E $\ast$) 0
+\item 
+int \hyperlink{fortrancode_8cpp_a74a2c9f1b54facbdd351937ef67ac4e2}{fortrancode\+Y\+Ylineno} = 1
+\item 
+char $\ast$ \hyperlink{fortrancode_8cpp_a8ae7f8fc5819b5f9a8d2969cb8acc16b}{fortrancode\+Y\+Ytext}
+\item 
+int \hyperlink{fortrancode_8cpp_ad182c7a53af22425b6bfb530e5103464}{fortrancode\+Y\+Y\+\_\+flex\+\_\+debug} = 0
+\item 
+int \hyperlink{fortrancode_8cpp_ab0517027b61f63c8a563733d6e813ad1}{yy\+\_\+old\+\_\+start} = 0
+\item 
+int \hyperlink{fortrancode_8cpp_a66a71125f0f01a2a8d1a3608807695fa}{yy\+\_\+my\+\_\+start} = 0
+\item 
+int \hyperlink{fortrancode_8cpp_adc3fff33a8db22a36f05baec1001a010}{yy\+\_\+end} = 1
+\item 
+\hyperlink{fortrancode_8cpp_abcefb20c54ce0f92452cfbb9cf657670}{Y\+Y\+\_\+\+D\+E\+C\+L}
+\item 
+register char $\ast$ \hyperlink{fortrancode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\+\_\+cp}
+\item 
+register char $\ast$ \hyperlink{fortrancode_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\+\_\+bp}
+\item 
+register int \hyperlink{fortrancode_8cpp_a7ffc8c947830757dd87ad202a6823edd}{yy\+\_\+act}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{fortrancode_8cpp_ab766bbbee08d04b67e3fe599d6900873}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!B\+E\+G\+I\+N@{B\+E\+G\+I\+N}}
+\index{B\+E\+G\+I\+N@{B\+E\+G\+I\+N}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{B\+E\+G\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+E\+G\+I\+N~(yy\+\_\+start) = 1 + 2 $\ast$}\label{fortrancode_8cpp_ab766bbbee08d04b67e3fe599d6900873}
+\hypertarget{fortrancode_8cpp_a4ca64a5cbd08c078c3163551277f6463}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Class\+Name@{Class\+Name}}
+\index{Class\+Name@{Class\+Name}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Class\+Name}]{\setlength{\rightskip}{0pt plus 5cm}\#define Class\+Name~4}\label{fortrancode_8cpp_a4ca64a5cbd08c078c3163551277f6463}
+\hypertarget{fortrancode_8cpp_a97981648294e24c044922bdd90c4c059}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Class\+Var@{Class\+Var}}
+\index{Class\+Var@{Class\+Var}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Class\+Var}]{\setlength{\rightskip}{0pt plus 5cm}\#define Class\+Var~5}\label{fortrancode_8cpp_a97981648294e24c044922bdd90c4c059}
+\hypertarget{fortrancode_8cpp_a234e2efe67eececd88b140b46ea37463}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!D\+B\+G\+\_\+\+C\+T\+X@{D\+B\+G\+\_\+\+C\+T\+X}}
+\index{D\+B\+G\+\_\+\+C\+T\+X@{D\+B\+G\+\_\+\+C\+T\+X}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{D\+B\+G\+\_\+\+C\+T\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+B\+G\+\_\+\+C\+T\+X(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~do \{ \} {\bf while}(0)}\label{fortrancode_8cpp_a234e2efe67eececd88b140b46ea37463}
+\begin{DoxyRefDesc}{A faire}
+\item[\hyperlink{todo__todo000001}{A faire}]
+\begin{DoxyItemize}
+\item continutation lines not always recognized
+\begin{DoxyItemize}
+\item merging of use-\/statements with same module name and different only-\/names
+\item rename part of use-\/statement
+\item links to interface functions
+\item references to variables 
+\end{DoxyItemize}
+\end{DoxyItemize}\end{DoxyRefDesc}
+\hypertarget{fortrancode_8cpp_acc6c0182c297fdfccbe60ca4343f5ec6}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Declaration@{Declaration}}
+\index{Declaration@{Declaration}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Declaration}]{\setlength{\rightskip}{0pt plus 5cm}\#define Declaration~11}\label{fortrancode_8cpp_acc6c0182c297fdfccbe60ca4343f5ec6}
+\hypertarget{fortrancode_8cpp_af0503fc139c9bb0728b6a045f33fc835}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Declaration\+Binding@{Declaration\+Binding}}
+\index{Declaration\+Binding@{Declaration\+Binding}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Declaration\+Binding}]{\setlength{\rightskip}{0pt plus 5cm}\#define Declaration\+Binding~12}\label{fortrancode_8cpp_af0503fc139c9bb0728b6a045f33fc835}
+\hypertarget{fortrancode_8cpp_abe77926fcd5ed688d464d105395ead8f}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Decl\+Cont\+Line@{Decl\+Cont\+Line}}
+\index{Decl\+Cont\+Line@{Decl\+Cont\+Line}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Decl\+Cont\+Line}]{\setlength{\rightskip}{0pt plus 5cm}\#define Decl\+Cont\+Line~13}\label{fortrancode_8cpp_abe77926fcd5ed688d464d105395ead8f}
+\hypertarget{fortrancode_8cpp_afa531c2189ebc4218f86a05f08694d27}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Doc\+Block@{Doc\+Block}}
+\index{Doc\+Block@{Doc\+Block}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Doc\+Block}]{\setlength{\rightskip}{0pt plus 5cm}\#define Doc\+Block~7}\label{fortrancode_8cpp_afa531c2189ebc4218f86a05f08694d27}
+\hypertarget{fortrancode_8cpp_aad1dc60a04a1d8cfc8b3ded13601e361}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!E\+C\+H\+O@{E\+C\+H\+O}}
+\index{E\+C\+H\+O@{E\+C\+H\+O}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{E\+C\+H\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+C\+H\+O~fwrite( {\bf fortrancode\+Y\+Ytext}, {\bf fortrancode\+Y\+Yleng}, 1, {\bf fortrancode\+Y\+Yout} )}\label{fortrancode_8cpp_aad1dc60a04a1d8cfc8b3ded13601e361}
+\hypertarget{fortrancode_8cpp_adf4b0db227e07782e28ade353a7ba7a1}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}}
+\index{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+A\+N~0}\label{fortrancode_8cpp_adf4b0db227e07782e28ade353a7ba7a1}
+\hypertarget{fortrancode_8cpp_a7f71d7fa2c403eb4b2f38cb9536f3c63}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}}
+\index{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+L\+E~1}\label{fortrancode_8cpp_a7f71d7fa2c403eb4b2f38cb9536f3c63}
+\hypertarget{fortrancode_8cpp_ad1a0b5ebcabffe388e9e9ebb2619c1fb}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}}
+\index{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+C\+H~2}\label{fortrancode_8cpp_ad1a0b5ebcabffe388e9e9ebb2619c1fb}
+\hypertarget{fortrancode_8cpp_a9465c9986fdda27730c9dff8d16a0887}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!F\+L\+E\+X\+\_\+\+B\+E\+T\+A@{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}}
+\index{F\+L\+E\+X\+\_\+\+B\+E\+T\+A@{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{F\+L\+E\+X\+\_\+\+B\+E\+T\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+E\+X\+\_\+\+B\+E\+T\+A}\label{fortrancode_8cpp_a9465c9986fdda27730c9dff8d16a0887}
+\hypertarget{fortrancode_8cpp_a3c3d1ef92e93b0bc81d7760a73d5c3b6}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R@{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}}
+\index{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R@{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+E\+R}\label{fortrancode_8cpp_a3c3d1ef92e93b0bc81d7760a73d5c3b6}
+\hypertarget{fortrancode_8cpp_aec980b5a71bbe6d67931df20f0ebaec4}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!F\+L\+E\+X\+I\+N\+T\+\_\+\+H@{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}}
+\index{F\+L\+E\+X\+I\+N\+T\+\_\+\+H@{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{F\+L\+E\+X\+I\+N\+T\+\_\+\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+E\+X\+I\+N\+T\+\_\+\+H}\label{fortrancode_8cpp_aec980b5a71bbe6d67931df20f0ebaec4}
+\hypertarget{fortrancode_8cpp_aeeb068e495866cd6fc2e786decf6ba65}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Ywrap@{fortrancode\+Y\+Ywrap}}
+\index{fortrancode\+Y\+Ywrap@{fortrancode\+Y\+Ywrap}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Ywrap}]{\setlength{\rightskip}{0pt plus 5cm}\#define fortrancode\+Y\+Ywrap(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)~1}\label{fortrancode_8cpp_aeeb068e495866cd6fc2e786decf6ba65}
+\hypertarget{fortrancode_8cpp_a5bcad47b596f32300f541fb55c663131}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Func\+Def@{Func\+Def}}
+\index{Func\+Def@{Func\+Def}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Func\+Def}]{\setlength{\rightskip}{0pt plus 5cm}\#define Func\+Def~3}\label{fortrancode_8cpp_a5bcad47b596f32300f541fb55c663131}
+\hypertarget{fortrancode_8cpp_a83eb8adc12438a58a8c5e174f757554d}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Import@{Import}}
+\index{Import@{Import}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Import}]{\setlength{\rightskip}{0pt plus 5cm}\#define Import~10}\label{fortrancode_8cpp_a83eb8adc12438a58a8c5e174f757554d}
+\hypertarget{fortrancode_8cpp_aa3d063564f6ab16f6d408b8369d0e9ff}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!I\+N\+I\+T\+I\+A\+L@{I\+N\+I\+T\+I\+A\+L}}
+\index{I\+N\+I\+T\+I\+A\+L@{I\+N\+I\+T\+I\+A\+L}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{I\+N\+I\+T\+I\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+I\+T\+I\+A\+L~0}\label{fortrancode_8cpp_aa3d063564f6ab16f6d408b8369d0e9ff}
+\hypertarget{fortrancode_8cpp_ac58f2c111cc9989c86db2a7dc4fd84ca}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!I\+N\+T16\+\_\+\+M\+A\+X@{I\+N\+T16\+\_\+\+M\+A\+X}}
+\index{I\+N\+T16\+\_\+\+M\+A\+X@{I\+N\+T16\+\_\+\+M\+A\+X}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{I\+N\+T16\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T16\+\_\+\+M\+A\+X~(32767)}\label{fortrancode_8cpp_ac58f2c111cc9989c86db2a7dc4fd84ca}
+\hypertarget{fortrancode_8cpp_ad4e9955955b27624963643eac448118a}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!I\+N\+T16\+\_\+\+M\+I\+N@{I\+N\+T16\+\_\+\+M\+I\+N}}
+\index{I\+N\+T16\+\_\+\+M\+I\+N@{I\+N\+T16\+\_\+\+M\+I\+N}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{I\+N\+T16\+\_\+\+M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T16\+\_\+\+M\+I\+N~(-\/32767-\/1)}\label{fortrancode_8cpp_ad4e9955955b27624963643eac448118a}
+\hypertarget{fortrancode_8cpp_a181807730d4a375f848ba139813ce04f}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!I\+N\+T32\+\_\+\+M\+A\+X@{I\+N\+T32\+\_\+\+M\+A\+X}}
+\index{I\+N\+T32\+\_\+\+M\+A\+X@{I\+N\+T32\+\_\+\+M\+A\+X}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{I\+N\+T32\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T32\+\_\+\+M\+A\+X~(2147483647)}\label{fortrancode_8cpp_a181807730d4a375f848ba139813ce04f}
+\hypertarget{fortrancode_8cpp_a688eb21a22db27c2b2bd5836943cdcbe}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!I\+N\+T32\+\_\+\+M\+I\+N@{I\+N\+T32\+\_\+\+M\+I\+N}}
+\index{I\+N\+T32\+\_\+\+M\+I\+N@{I\+N\+T32\+\_\+\+M\+I\+N}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{I\+N\+T32\+\_\+\+M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T32\+\_\+\+M\+I\+N~(-\/2147483647-\/1)}\label{fortrancode_8cpp_a688eb21a22db27c2b2bd5836943cdcbe}
+\hypertarget{fortrancode_8cpp_aaf7f29f45f1a513b4748a4e5014ddf6a}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!I\+N\+T8\+\_\+\+M\+A\+X@{I\+N\+T8\+\_\+\+M\+A\+X}}
+\index{I\+N\+T8\+\_\+\+M\+A\+X@{I\+N\+T8\+\_\+\+M\+A\+X}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{I\+N\+T8\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T8\+\_\+\+M\+A\+X~(127)}\label{fortrancode_8cpp_aaf7f29f45f1a513b4748a4e5014ddf6a}
+\hypertarget{fortrancode_8cpp_aadcf2a81af243df333b31efa6461ab8e}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!I\+N\+T8\+\_\+\+M\+I\+N@{I\+N\+T8\+\_\+\+M\+I\+N}}
+\index{I\+N\+T8\+\_\+\+M\+I\+N@{I\+N\+T8\+\_\+\+M\+I\+N}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{I\+N\+T8\+\_\+\+M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T8\+\_\+\+M\+I\+N~(-\/128)}\label{fortrancode_8cpp_aadcf2a81af243df333b31efa6461ab8e}
+\hypertarget{fortrancode_8cpp_a09e8313d350d50a798ca891a28872f51}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Parameterlist@{Parameterlist}}
+\index{Parameterlist@{Parameterlist}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Parameterlist}]{\setlength{\rightskip}{0pt plus 5cm}\#define Parameterlist~14}\label{fortrancode_8cpp_a09e8313d350d50a798ca891a28872f51}
+\hypertarget{fortrancode_8cpp_a835f10dd1ab4bf9a80c4cd80ee6e3058}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!R\+E\+J\+E\+C\+T@{R\+E\+J\+E\+C\+T}}
+\index{R\+E\+J\+E\+C\+T@{R\+E\+J\+E\+C\+T}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{R\+E\+J\+E\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+J\+E\+C\+T}\label{fortrancode_8cpp_a835f10dd1ab4bf9a80c4cd80ee6e3058}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\{ \(\backslash\)
+*\hyperlink{fortrancode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = (yy\_hold\_char); \textcolor{comment}{/* undo effects of setting up fortrancodeYYtext */} 
+      \hyperlink{fortrancode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{\(\backslash\)}
+\hyperlink{fortrancode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = (yy\_full\_match); \textcolor{comment}{/* restore poss. backed-over text */} \(\backslash\)
+(yy\_lp) = (yy\_full\_lp); \textcolor{comment}{/* restore orig. accepting pos. */} \(\backslash\)
+(yy\_state\_ptr) = (yy\_full\_state); \textcolor{comment}{/* restore orig. state */} \hyperlink{constexp_8cpp_a86a21c2101611f87781b40b111e65aac}{\(\backslash\)}
+\hyperlink{constexp_8cpp_a86a21c2101611f87781b40b111e65aac}{yy\_current\_state} = *(yy\_state\_ptr); \textcolor{comment}{/* restore curr. state */} \(\backslash\)
+++(yy\_lp); \(\backslash\)
+goto find\_rule; \(\backslash\)
+\}
+\end{DoxyCode}
+\hypertarget{fortrancode_8cpp_a991581d134a6f84d55be043b6e34afd7}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Start@{Start}}
+\index{Start@{Start}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Start}]{\setlength{\rightskip}{0pt plus 5cm}\#define Start~1}\label{fortrancode_8cpp_a991581d134a6f84d55be043b6e34afd7}
+\hypertarget{fortrancode_8cpp_ad3834cab10a0d63f8168683208864a90}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!String@{String}}
+\index{String@{String}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{String}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf String}~15}\label{fortrancode_8cpp_ad3834cab10a0d63f8168683208864a90}
+\hypertarget{fortrancode_8cpp_a9754cabc94b8f98dc228327ce01f0661}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Sub\+Call@{Sub\+Call}}
+\index{Sub\+Call@{Sub\+Call}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Sub\+Call}]{\setlength{\rightskip}{0pt plus 5cm}\#define Sub\+Call~2}\label{fortrancode_8cpp_a9754cabc94b8f98dc228327ce01f0661}
+\hypertarget{fortrancode_8cpp_a12a6640aea50c03a59ed0a1ea09848cd}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Subprog@{Subprog}}
+\index{Subprog@{Subprog}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Subprog}]{\setlength{\rightskip}{0pt plus 5cm}\#define Subprog~6}\label{fortrancode_8cpp_a12a6640aea50c03a59ed0a1ea09848cd}
+\hypertarget{fortrancode_8cpp_ab7de3e12ff46bbed288e5bff267ed5fc}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Subprogend@{Subprogend}}
+\index{Subprogend@{Subprogend}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Subprogend}]{\setlength{\rightskip}{0pt plus 5cm}\#define Subprogend~16}\label{fortrancode_8cpp_ab7de3e12ff46bbed288e5bff267ed5fc}
+\hypertarget{fortrancode_8cpp_a3ea490c9b3617d4479bd80ef93cd5602}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!U\+I\+N\+T16\+\_\+\+M\+A\+X@{U\+I\+N\+T16\+\_\+\+M\+A\+X}}
+\index{U\+I\+N\+T16\+\_\+\+M\+A\+X@{U\+I\+N\+T16\+\_\+\+M\+A\+X}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{U\+I\+N\+T16\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+I\+N\+T16\+\_\+\+M\+A\+X~(65535\+U)}\label{fortrancode_8cpp_a3ea490c9b3617d4479bd80ef93cd5602}
+\hypertarget{fortrancode_8cpp_ab5eb23180f7cc12b7d6c04a8ec067fdd}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!U\+I\+N\+T32\+\_\+\+M\+A\+X@{U\+I\+N\+T32\+\_\+\+M\+A\+X}}
+\index{U\+I\+N\+T32\+\_\+\+M\+A\+X@{U\+I\+N\+T32\+\_\+\+M\+A\+X}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{U\+I\+N\+T32\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+I\+N\+T32\+\_\+\+M\+A\+X~(4294967295\+U)}\label{fortrancode_8cpp_ab5eb23180f7cc12b7d6c04a8ec067fdd}
+\hypertarget{fortrancode_8cpp_aeb4e270a084ee26fe73e799861bd0252}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!U\+I\+N\+T8\+\_\+\+M\+A\+X@{U\+I\+N\+T8\+\_\+\+M\+A\+X}}
+\index{U\+I\+N\+T8\+\_\+\+M\+A\+X@{U\+I\+N\+T8\+\_\+\+M\+A\+X}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{U\+I\+N\+T8\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+I\+N\+T8\+\_\+\+M\+A\+X~(255\+U)}\label{fortrancode_8cpp_aeb4e270a084ee26fe73e799861bd0252}
+\hypertarget{fortrancode_8cpp_a448a4e9041a09588332733c6846c770c}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!unput@{unput}}
+\index{unput@{unput}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{unput}]{\setlength{\rightskip}{0pt plus 5cm}\#define unput(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf c}}
+\end{DoxyParamCaption}
+)~yyunput( {\bf c}, ({\bf yytext\+\_\+ptr})  )}\label{fortrancode_8cpp_a448a4e9041a09588332733c6846c770c}
+\hypertarget{fortrancode_8cpp_a06d02452157eee38f25368bb6fc0011f}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Use@{Use}}
+\index{Use@{Use}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Use}]{\setlength{\rightskip}{0pt plus 5cm}\#define Use~8}\label{fortrancode_8cpp_a06d02452157eee38f25368bb6fc0011f}
+\hypertarget{fortrancode_8cpp_ad9ef1480444a9dfcf6563a28cef07981}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Use\+Only@{Use\+Only}}
+\index{Use\+Only@{Use\+Only}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Use\+Only}]{\setlength{\rightskip}{0pt plus 5cm}\#define Use\+Only~9}\label{fortrancode_8cpp_ad9ef1480444a9dfcf6563a28cef07981}
+\hypertarget{fortrancode_8cpp_a71ca89b3656acd0552f14949a571560b}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L@{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}}
+\index{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L@{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+A\+T\+\_\+\+B\+O\+L(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~({\bf Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}-\/$>$yy\+\_\+at\+\_\+bol)}\label{fortrancode_8cpp_a71ca89b3656acd0552f14949a571560b}
+\hypertarget{fortrancode_8cpp_a3cc40a460ad7df816678bcc05241e84c}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+B\+R\+E\+A\+K@{Y\+Y\+\_\+\+B\+R\+E\+A\+K}}
+\index{Y\+Y\+\_\+\+B\+R\+E\+A\+K@{Y\+Y\+\_\+\+B\+R\+E\+A\+K}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+R\+E\+A\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+R\+E\+A\+K~break;}\label{fortrancode_8cpp_a3cc40a460ad7df816678bcc05241e84c}
+\hypertarget{fortrancode_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E~262144}\label{fortrancode_8cpp_ae7e51116e747d3390e7a6cfc6532834c}
+\hypertarget{fortrancode_8cpp_ad689d97c15e807a6116ace7a420cea57}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+N\+G~2}\label{fortrancode_8cpp_ad689d97c15e807a6116ace7a420cea57}
+\hypertarget{fortrancode_8cpp_a53579db42834b88199458993912c646d}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+E\+W~0}\label{fortrancode_8cpp_a53579db42834b88199458993912c646d}
+\hypertarget{fortrancode_8cpp_a609d19f40900ecc2a5f812d9388c21fb}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+A\+L~1}\label{fortrancode_8cpp_a609d19f40900ecc2a5f812d9388c21fb}
+\hypertarget{fortrancode_8cpp_ac86ea8173dfcfc5c989d3295a77e2f95}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yy\+\_\+create\+\_\+buffer@{yy\+\_\+create\+\_\+buffer}}
+\index{yy\+\_\+create\+\_\+buffer@{yy\+\_\+create\+\_\+buffer}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yy\+\_\+create\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+create\+\_\+buffer~{\bf fortrancode\+Y\+Y\+\_\+create\+\_\+buffer}}\label{fortrancode_8cpp_ac86ea8173dfcfc5c989d3295a77e2f95}
+\hypertarget{fortrancode_8cpp_aa093d500a6330d06d8e4760c494fac33}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}}
+\index{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}\label{fortrancode_8cpp_aa093d500a6330d06d8e4760c494fac33}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+( (yy\_buffer\_stack) \(\backslash\)
+                          ? (yy\_buffer\_stack)[(yy\_buffer\_stack\_top)] \(\backslash\)
+                          : NULL)
+\end{DoxyCode}
+\hypertarget{fortrancode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}}
+\index{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+V\+A\+L\+U\+E~(yy\+\_\+buffer\+\_\+stack)\mbox{[}(yy\+\_\+buffer\+\_\+stack\+\_\+top)\mbox{]}}\label{fortrancode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}
+\hypertarget{fortrancode_8cpp_ae5b01ac2fa5a6ad5fb97559638abe686}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+D\+E\+C\+L@{Y\+Y\+\_\+\+D\+E\+C\+L}}
+\index{Y\+Y\+\_\+\+D\+E\+C\+L@{Y\+Y\+\_\+\+D\+E\+C\+L}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+D\+E\+C\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+D\+E\+C\+L~int {\bf fortrancode\+Y\+Ylex} (void)}\label{fortrancode_8cpp_ae5b01ac2fa5a6ad5fb97559638abe686}
+\hypertarget{fortrancode_8cpp_a7682c8d9cec0859408d2421fbe4a5570}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S@{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}}
+\index{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S@{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+D\+E\+C\+L\+\_\+\+I\+S\+\_\+\+O\+U\+R\+S~1}\label{fortrancode_8cpp_a7682c8d9cec0859408d2421fbe4a5570}
+\hypertarget{fortrancode_8cpp_ad1868c6b38b45af25a4a0f449912a808}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yy\+\_\+delete\+\_\+buffer@{yy\+\_\+delete\+\_\+buffer}}
+\index{yy\+\_\+delete\+\_\+buffer@{yy\+\_\+delete\+\_\+buffer}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yy\+\_\+delete\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+delete\+\_\+buffer~{\bf fortrancode\+Y\+Y\+\_\+delete\+\_\+buffer}}\label{fortrancode_8cpp_ad1868c6b38b45af25a4a0f449912a808}
+\hypertarget{fortrancode_8cpp_acc3486d769af4e4b2820346a0093cc79}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+O\+N}\label{fortrancode_8cpp_acc3486d769af4e4b2820346a0093cc79}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+(\hyperlink{fortrancode_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\_ptr}) = \hyperlink{fortrancode_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}; \hyperlink{fortrancode_8cpp_a6ae2b834beeff1e67bcc3c5f91cb5a4f}{\(\backslash\)}
+\hyperlink{fortrancode_8cpp_a6ae2b834beeff1e67bcc3c5f91cb5a4f}{    fortrancodeYYleng} = (\hyperlink{fortrancode_8cpp_ad557845057f187eec4be07e2717d2afa}{yy\_size\_t}) (\hyperlink{fortrancode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} - 
+      \hyperlink{fortrancode_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}); \(\backslash\)
+    (yy\_hold\_char) = *\hyperlink{fortrancode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp}; \(\backslash\)
+    *\hyperlink{fortrancode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = \textcolor{charliteral}{'\(\backslash\)0'}; \(\backslash\)
+    (yy\_c\_buf\_p) = \hyperlink{fortrancode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp};
+\end{DoxyCode}
+\hypertarget{fortrancode_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}}
+\index{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R~67}\label{fortrancode_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}
+\hypertarget{fortrancode_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}}
+\index{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+A\+R~0}\label{fortrancode_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}
+\hypertarget{fortrancode_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E@{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}}
+\index{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E@{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E~2}\label{fortrancode_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}
+\hypertarget{fortrancode_8cpp_a26938d921de835f6183c02e54cf08828}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E@{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}}
+\index{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E@{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E~void $\ast$}\label{fortrancode_8cpp_a26938d921de835f6183c02e54cf08828}
+\hypertarget{fortrancode_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R@{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}}
+\index{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R@{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf msg}}
+\end{DoxyParamCaption}
+)~yy\+\_\+fatal\+\_\+error( {\bf msg} )}\label{fortrancode_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}
+\hypertarget{fortrancode_8cpp_a301f4439c9b191c80db45f5b1a8c7269}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yy\+\_\+flex\+\_\+debug@{yy\+\_\+flex\+\_\+debug}}
+\index{yy\+\_\+flex\+\_\+debug@{yy\+\_\+flex\+\_\+debug}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yy\+\_\+flex\+\_\+debug}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+flex\+\_\+debug~{\bf fortrancode\+Y\+Y\+\_\+flex\+\_\+debug}}\label{fortrancode_8cpp_a301f4439c9b191c80db45f5b1a8c7269}
+\hypertarget{fortrancode_8cpp_a243ca1d30872935faf05ea5118ed6fdc}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N~2}\label{fortrancode_8cpp_a243ca1d30872935faf05ea5118ed6fdc}
+\hypertarget{fortrancode_8cpp_a90f9d458829400869e47efb68a865677}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N~5}\label{fortrancode_8cpp_a90f9d458829400869e47efb68a865677}
+\hypertarget{fortrancode_8cpp_ac676bd06869180ea493e9b6d7c078dbb}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+S\+U\+B\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N~35}\label{fortrancode_8cpp_ac676bd06869180ea493e9b6d7c078dbb}
+\hypertarget{fortrancode_8cpp_ab01a4c7245136f22a63acac7c0ceb343}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yy\+\_\+flush\+\_\+buffer@{yy\+\_\+flush\+\_\+buffer}}
+\index{yy\+\_\+flush\+\_\+buffer@{yy\+\_\+flush\+\_\+buffer}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yy\+\_\+flush\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+flush\+\_\+buffer~{\bf fortrancode\+Y\+Y\+\_\+flush\+\_\+buffer}}\label{fortrancode_8cpp_ab01a4c7245136f22a63acac7c0ceb343}
+\hypertarget{fortrancode_8cpp_ac5d478d90ea9a2ecd43d579067a2e89d}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}}
+\index{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R@{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+E\+R~{\bf fortrancode\+Y\+Y\+\_\+flush\+\_\+buffer}({\bf Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R} )}\label{fortrancode_8cpp_ac5d478d90ea9a2ecd43d579067a2e89d}
+\hypertarget{fortrancode_8cpp_a633f0b53ce61259dee93c2398f1674f0}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+F\+T\+N\+\_\+\+R\+E\+J\+E\+C\+T@{Y\+Y\+\_\+\+F\+T\+N\+\_\+\+R\+E\+J\+E\+C\+T}}
+\index{Y\+Y\+\_\+\+F\+T\+N\+\_\+\+R\+E\+J\+E\+C\+T@{Y\+Y\+\_\+\+F\+T\+N\+\_\+\+R\+E\+J\+E\+C\+T}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+T\+N\+\_\+\+R\+E\+J\+E\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+T\+N\+\_\+\+R\+E\+J\+E\+C\+T~\{{\bf yy\+\_\+end} = {\bf yy\+\_\+my\+\_\+start}; {\bf yy\+\_\+my\+\_\+start} = {\bf yy\+\_\+old\+\_\+start}; {\bf R\+E\+J\+E\+C\+T};\}}\label{fortrancode_8cpp_a633f0b53ce61259dee93c2398f1674f0}
+\hypertarget{fortrancode_8cpp_a9a0fdbfa8e6dc0e59c2015a0f1e663c2}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+F\+T\+N\+\_\+\+R\+E\+S\+E\+T@{Y\+Y\+\_\+\+F\+T\+N\+\_\+\+R\+E\+S\+E\+T}}
+\index{Y\+Y\+\_\+\+F\+T\+N\+\_\+\+R\+E\+S\+E\+T@{Y\+Y\+\_\+\+F\+T\+N\+\_\+\+R\+E\+S\+E\+T}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+F\+T\+N\+\_\+\+R\+E\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+F\+T\+N\+\_\+\+R\+E\+S\+E\+T~\{{\bf yy\+\_\+old\+\_\+start} = 0; {\bf yy\+\_\+my\+\_\+start} = 0; {\bf yy\+\_\+end} = 1;\}}\label{fortrancode_8cpp_a9a0fdbfa8e6dc0e59c2015a0f1e663c2}
+\hypertarget{fortrancode_8cpp_aa14efad9f9c24106a3e3398a4f6621c2}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yy\+\_\+init\+\_\+buffer@{yy\+\_\+init\+\_\+buffer}}
+\index{yy\+\_\+init\+\_\+buffer@{yy\+\_\+init\+\_\+buffer}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yy\+\_\+init\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+init\+\_\+buffer~fortrancode\+Y\+Y\+\_\+init\+\_\+buffer}\label{fortrancode_8cpp_aa14efad9f9c24106a3e3398a4f6621c2}
+\hypertarget{fortrancode_8cpp_aacfdca45fa4beb8b06172525a53c424a}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+I\+N\+P\+U\+T}}
+\index{Y\+Y\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+I\+N\+P\+U\+T}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+I\+N\+P\+U\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+I\+N\+P\+U\+T(
+\begin{DoxyParamCaption}
+\item[{}]{buf, }
+\item[{}]{result, }
+\item[{}]{max\+\_\+size}
+\end{DoxyParamCaption}
+)~result=yyread(buf,max\+\_\+size);}\label{fortrancode_8cpp_aacfdca45fa4beb8b06172525a53c424a}
+\hypertarget{fortrancode_8cpp_a1ae16e642a197fa4948998525813c6f5}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D@{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}}
+\index{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D@{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+I\+N\+T\+\_\+\+A\+L\+I\+G\+N\+E\+D~short int}\label{fortrancode_8cpp_a1ae16e642a197fa4948998525813c6f5}
+\hypertarget{fortrancode_8cpp_a12e5f3a76911433480bca7f4edba6119}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O@{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}}
+\index{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O@{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+L\+E\+S\+S\+\_\+\+L\+I\+N\+E\+N\+O(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_a12e5f3a76911433480bca7f4edba6119}
+\hypertarget{fortrancode_8cpp_a039fc377fd4784139d8706ba0ae229fa}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yy\+\_\+load\+\_\+buffer\+\_\+state@{yy\+\_\+load\+\_\+buffer\+\_\+state}}
+\index{yy\+\_\+load\+\_\+buffer\+\_\+state@{yy\+\_\+load\+\_\+buffer\+\_\+state}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yy\+\_\+load\+\_\+buffer\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+load\+\_\+buffer\+\_\+state~fortrancode\+Y\+Y\+\_\+load\+\_\+buffer\+\_\+state}\label{fortrancode_8cpp_a039fc377fd4784139d8706ba0ae229fa}
+\hypertarget{fortrancode_8cpp_a68792d73820bc46a71d3d4e613f0b977}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J@{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}}
+\index{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J@{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+D\+J~0}\label{fortrancode_8cpp_a68792d73820bc46a71d3d4e613f0b977}
+\hypertarget{fortrancode_8cpp_a15b85de192a189d5a31cdd518e001e6e}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E@{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}}
+\index{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E@{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+E\+V\+E\+R\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+V\+E~1}\label{fortrancode_8cpp_a15b85de192a189d5a31cdd518e001e6e}
+\hypertarget{fortrancode_8cpp_ab7eb911e18655f2f78e63afe5a8a4a12}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yy\+\_\+new\+\_\+buffer@{yy\+\_\+new\+\_\+buffer}}
+\index{yy\+\_\+new\+\_\+buffer@{yy\+\_\+new\+\_\+buffer}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yy\+\_\+new\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+new\+\_\+buffer~{\bf fortrancode\+Y\+Y\+\_\+create\+\_\+buffer}}\label{fortrancode_8cpp_ab7eb911e18655f2f78e63afe5a8a4a12}
+\hypertarget{fortrancode_8cpp_a0406739e64fb5750cf995d2ae68ce69d}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E@{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}}
+\index{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E@{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+L\+E~{\bf fortrancode\+Y\+Yrestart}({\bf fortrancode\+Y\+Yin}  )}\label{fortrancode_8cpp_a0406739e64fb5750cf995d2ae68ce69d}
+\hypertarget{fortrancode_8cpp_a85523a0c7d95c059d251b4e9829947aa}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}}
+\index{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T@{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+O\+\_\+\+I\+N\+P\+U\+T~1}\label{fortrancode_8cpp_a85523a0c7d95c059d251b4e9829947aa}
+\hypertarget{fortrancode_8cpp_ac3eedc6d2e3e4c9b2bacd0f1ebeab98a}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+N\+O\+\_\+\+T\+O\+P\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+N\+O\+\_\+\+T\+O\+P\+\_\+\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+\_\+\+N\+O\+\_\+\+T\+O\+P\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+N\+O\+\_\+\+T\+O\+P\+\_\+\+S\+T\+A\+T\+E}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+O\+\_\+\+T\+O\+P\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+O\+\_\+\+T\+O\+P\+\_\+\+S\+T\+A\+T\+E~1}\label{fortrancode_8cpp_ac3eedc6d2e3e4c9b2bacd0f1ebeab98a}
+\hypertarget{fortrancode_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+N\+U\+L\+L@{Y\+Y\+\_\+\+N\+U\+L\+L}}
+\index{Y\+Y\+\_\+\+N\+U\+L\+L@{Y\+Y\+\_\+\+N\+U\+L\+L}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+U\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+U\+L\+L~0}\label{fortrancode_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}
+\hypertarget{fortrancode_8cpp_ae558785bb896e090901c2b905f6790c6}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S@{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}}
+\index{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S@{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+E\+S~66}\label{fortrancode_8cpp_ae558785bb896e090901c2b905f6790c6}
+\hypertarget{fortrancode_8cpp_aab1491ceccb1c95c14320b2903773a1c}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}}
+\index{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E~262144}\label{fortrancode_8cpp_aab1491ceccb1c95c14320b2903773a1c}
+\hypertarget{fortrancode_8cpp_a56858d18c7eda4f53664496ef566f651}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T@{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T@{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+E\+T}\label{fortrancode_8cpp_a56858d18c7eda4f53664496ef566f651}
+\hypertarget{fortrancode_8cpp_a690504b662e4281515bf12722df178ba}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P@{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}}
+\index{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P@{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+U\+P}\label{fortrancode_8cpp_a690504b662e4281515bf12722df178ba}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} ( \hyperlink{fortrancode_8cpp_a6ae2b834beeff1e67bcc3c5f91cb5a4f}{fortrancodeYYleng} > 0 ) \hyperlink{fortrancode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{fortrancode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{        YY\_CURRENT\_BUFFER\_LVALUE}->yy\_at\_bol = \(\backslash\)
+                (\hyperlink{fortrancode_8cpp_a8ae7f8fc5819b5f9a8d2969cb8acc16b}{fortrancodeYYtext}[\hyperlink{fortrancode_8cpp_a6ae2b834beeff1e67bcc3c5f91cb5a4f}{fortrancodeYYleng} - 1] == \textcolor{charliteral}{'\(\backslash\)n'}); 
+      \hyperlink{fortrancode_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{\(\backslash\)}
+\hyperlink{fortrancode_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{    YY\_USER\_ACTION}
+\end{DoxyCode}
+\hypertarget{fortrancode_8cpp_af1185350b7a92cf8aa5324c68850c8a6}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I@{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}}
+\index{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I@{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+U\+I(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf c}}
+\end{DoxyParamCaption}
+)~((unsigned int) (unsigned char) {\bf c})}\label{fortrancode_8cpp_af1185350b7a92cf8aa5324c68850c8a6}
+\hypertarget{fortrancode_8cpp_a12e30d13a76a94e78010db9996d39c50}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yy\+\_\+set\+\_\+bol@{yy\+\_\+set\+\_\+bol}}
+\index{yy\+\_\+set\+\_\+bol@{yy\+\_\+set\+\_\+bol}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yy\+\_\+set\+\_\+bol}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+set\+\_\+bol(
+\begin{DoxyParamCaption}
+\item[{}]{at\+\_\+bol}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_a12e30d13a76a94e78010db9996d39c50}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\{ \hyperlink{fortrancode_8cpp_ad4a65b873df5c05570846b5413b41dfd}{\(\backslash\)}
+\hyperlink{fortrancode_8cpp_ad4a65b873df5c05570846b5413b41dfd}{    if} ( ! \hyperlink{fortrancode_8cpp_aa093d500a6330d06d8e4760c494fac33}{YY\_CURRENT\_BUFFER} )\{\(\backslash\)
+        fortrancodeYYensure\_buffer\_stack (); \hyperlink{fortrancode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{fortrancode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{        YY\_CURRENT\_BUFFER\_LVALUE} =    \(\backslash\)
+            fortrancodeYY\_create\_buffer(\hyperlink{fortrancode_8cpp_a2aafd9df09912afde6ceda482ae61753}{fortrancodeYYin},
+      \hyperlink{fortrancode_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{YY\_BUF\_SIZE} ); \(\backslash\)
+    \} \hyperlink{fortrancode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{fortrancode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{    YY\_CURRENT\_BUFFER\_LVALUE}->yy\_at\_bol = at\_bol; \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{fortrancode_8cpp_ac56eb96366c08862bf0efe5d83d1fc4c}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yy\+\_\+set\+\_\+interactive@{yy\+\_\+set\+\_\+interactive}}
+\index{yy\+\_\+set\+\_\+interactive@{yy\+\_\+set\+\_\+interactive}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yy\+\_\+set\+\_\+interactive}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+set\+\_\+interactive(
+\begin{DoxyParamCaption}
+\item[{}]{is\+\_\+interactive}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_ac56eb96366c08862bf0efe5d83d1fc4c}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\{ \hyperlink{fortrancode_8cpp_ad4a65b873df5c05570846b5413b41dfd}{\(\backslash\)}
+\hyperlink{fortrancode_8cpp_ad4a65b873df5c05570846b5413b41dfd}{    if} ( ! \hyperlink{fortrancode_8cpp_aa093d500a6330d06d8e4760c494fac33}{YY\_CURRENT\_BUFFER} )\{ \(\backslash\)
+        fortrancodeYYensure\_buffer\_stack (); \hyperlink{fortrancode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{fortrancode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{        YY\_CURRENT\_BUFFER\_LVALUE} =    \(\backslash\)
+            fortrancodeYY\_create\_buffer(\hyperlink{fortrancode_8cpp_a2aafd9df09912afde6ceda482ae61753}{fortrancodeYYin},
+      \hyperlink{fortrancode_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{YY\_BUF\_SIZE} ); \(\backslash\)
+    \} \hyperlink{fortrancode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{\(\backslash\)}
+\hyperlink{fortrancode_8cpp_a817a6a24af62508b5a35f4bed5f56a2e}{    YY\_CURRENT\_BUFFER\_LVALUE}->yy\_is\_interactive = is\_interactive; \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{fortrancode_8cpp_ae1ef5933028cbc587d31328e53d11a99}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P@{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}}
+\index{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P@{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+A\+P}\label{fortrancode_8cpp_ae1ef5933028cbc587d31328e53d11a99}
+\hypertarget{fortrancode_8cpp_a8e14785f9eab7a997d659b25af9584c5}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+R\+T@{Y\+Y\+\_\+\+S\+T\+A\+R\+T}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+R\+T@{Y\+Y\+\_\+\+S\+T\+A\+R\+T}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+R\+T~(((yy\+\_\+start) -\/ 1) / 2)}\label{fortrancode_8cpp_a8e14785f9eab7a997d659b25af9584c5}
+\hypertarget{fortrancode_8cpp_a227e75c43b9e0cd41529974230be7e75}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R@{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R@{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+C\+R~25}\label{fortrancode_8cpp_a227e75c43b9e0cd41529974230be7e75}
+\hypertarget{fortrancode_8cpp_ac2f8b6fccdc516d96b02ac09a4dc01bd}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E~(({\bf Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E} + 2) $\ast$ sizeof({\bf yy\+\_\+state\+\_\+type}))}\label{fortrancode_8cpp_ac2f8b6fccdc516d96b02ac09a4dc01bd}
+\hypertarget{fortrancode_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+O\+F(
+\begin{DoxyParamCaption}
+\item[{}]{state}
+\end{DoxyParamCaption}
+)~({\bf Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R} + state + 1)}\label{fortrancode_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}
+\hypertarget{fortrancode_8cpp_a8aaa9e1fa7f13d6954d045ef973a9c84}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}\label{fortrancode_8cpp_a8aaa9e1fa7f13d6954d045ef973a9c84}
+\hypertarget{fortrancode_8cpp_a968d5b9e7e06a38bfca977b343d47d5c}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yy\+\_\+switch\+\_\+to\+\_\+buffer@{yy\+\_\+switch\+\_\+to\+\_\+buffer}}
+\index{yy\+\_\+switch\+\_\+to\+\_\+buffer@{yy\+\_\+switch\+\_\+to\+\_\+buffer}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yy\+\_\+switch\+\_\+to\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define yy\+\_\+switch\+\_\+to\+\_\+buffer~{\bf fortrancode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}}\label{fortrancode_8cpp_a968d5b9e7e06a38bfca977b343d47d5c}
+\hypertarget{fortrancode_8cpp_a7fce78ee876950ded902364014c917e6}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}}
+\index{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+H\+E\+A\+D\+\_\+\+M\+A\+S\+K~0x4000}\label{fortrancode_8cpp_a7fce78ee876950ded902364014c917e6}
+\hypertarget{fortrancode_8cpp_a76482842cdcaadf1dbdaf43df38765a2}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}}
+\index{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K@{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+R\+A\+I\+L\+I\+N\+G\+\_\+\+M\+A\+S\+K~0x2000}\label{fortrancode_8cpp_a76482842cdcaadf1dbdaf43df38765a2}
+\hypertarget{fortrancode_8cpp_aa79d63ed3ff8d2249baf1732a73089f5}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}\label{fortrancode_8cpp_aa79d63ed3ff8d2249baf1732a73089f5}
+\hypertarget{fortrancode_8cpp_ae0f2b0b5f04b2338367826b5670774f9}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}}
+\index{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T@{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+T\+Y\+P\+E\+D\+E\+F\+\_\+\+Y\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\+T}\label{fortrancode_8cpp_ae0f2b0b5f04b2338367826b5670774f9}
+\hypertarget{fortrancode_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}}
+\index{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N@{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+O\+N~\{{\bf yy\+\_\+old\+\_\+start} = {\bf yy\+\_\+my\+\_\+start}; {\bf yy\+\_\+my\+\_\+start} = {\bf yy\+\_\+end}; {\bf yy\+\_\+end} += {\bf fortrancode\+Y\+Yleng};\}}\label{fortrancode_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}
+\hypertarget{fortrancode_8cpp_a803397ab738ee8630166680646a2d913}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yyalloc@{yyalloc}}
+\index{yyalloc@{yyalloc}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yyalloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf yyalloc}~{\bf fortrancode\+Y\+Yalloc}}\label{fortrancode_8cpp_a803397ab738ee8630166680646a2d913}
+\hypertarget{fortrancode_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yyconst@{yyconst}}
+\index{yyconst@{yyconst}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yyconst}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyconst}\label{fortrancode_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}
+\hypertarget{fortrancode_8cpp_a4fa4368d47620ea80150b516e8884f6b}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yyfree@{yyfree}}
+\index{yyfree@{yyfree}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yyfree}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyfree~{\bf fortrancode\+Y\+Yfree}}\label{fortrancode_8cpp_a4fa4368d47620ea80150b516e8884f6b}
+\hypertarget{fortrancode_8cpp_aa789f4617e33fb99594cb04a3688a0c1}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yyin@{yyin}}
+\index{yyin@{yyin}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yyin}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyin~{\bf fortrancode\+Y\+Yin}}\label{fortrancode_8cpp_aa789f4617e33fb99594cb04a3688a0c1}
+\hypertarget{fortrancode_8cpp_afa07a629486cb790560bb95713ec7794}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yyleng@{yyleng}}
+\index{yyleng@{yyleng}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yyleng}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyleng~{\bf fortrancode\+Y\+Yleng}}\label{fortrancode_8cpp_afa07a629486cb790560bb95713ec7794}
+\hypertarget{fortrancode_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yyless@{yyless}}
+\index{yyless@{yyless}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yyless}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyless(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \(\backslash\)
+        \{ \(\backslash\)
+        \textcolor{comment}{/* Undo effects of setting up fortrancodeYYtext. */} \(\backslash\)
+        int yyless\_macro\_arg = (\hyperlink{058__bracket__recursion_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n}); \(\backslash\)
+        YY\_LESS\_LINENO(yyless\_macro\_arg);\(\backslash\)
+        *\hyperlink{fortrancode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = (yy\_hold\_char); \hyperlink{fortrancode_8cpp_a56858d18c7eda4f53664496ef566f651}{\(\backslash\)}
+\hyperlink{fortrancode_8cpp_a56858d18c7eda4f53664496ef566f651}{        YY\_RESTORE\_YY\_MORE\_OFFSET} \(\backslash\)
+        (yy\_c\_buf\_p) = \hyperlink{fortrancode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{yy\_cp} = \hyperlink{fortrancode_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp} + yyless\_macro\_arg - \hyperlink{fortrancode_8cpp_a68792d73820bc46a71d3d4e613f0b977}{YY\_MORE\_ADJ}; 
+      \hyperlink{fortrancode_8cpp_acc3486d769af4e4b2820346a0093cc79}{\(\backslash\)}
+\hyperlink{fortrancode_8cpp_acc3486d769af4e4b2820346a0093cc79}{        YY\_DO\_BEFORE\_ACTION}; \textcolor{comment}{/* set up fortrancodeYYtext again */} \(\backslash\)
+        \} \hyperlink{fortrancode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{\(\backslash\)}
+\hyperlink{fortrancode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{    while} ( 0 )
+\end{DoxyCode}
+\hypertarget{fortrancode_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yyless@{yyless}}
+\index{yyless@{yyless}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yyless}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyless(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf n}}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \(\backslash\)
+        \{ \(\backslash\)
+        \textcolor{comment}{/* Undo effects of setting up fortrancodeYYtext. */} \(\backslash\)
+        int yyless\_macro\_arg = (\hyperlink{058__bracket__recursion_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n}); \(\backslash\)
+        YY\_LESS\_LINENO(yyless\_macro\_arg);\hyperlink{fortrancode_8cpp_a8ae7f8fc5819b5f9a8d2969cb8acc16b}{\(\backslash\)}
+\hyperlink{fortrancode_8cpp_a8ae7f8fc5819b5f9a8d2969cb8acc16b}{        fortrancodeYYtext}[\hyperlink{fortrancode_8cpp_a6ae2b834beeff1e67bcc3c5f91cb5a4f}{fortrancodeYYleng}] = (yy\_hold\_char); \(\backslash\)
+        (yy\_c\_buf\_p) = \hyperlink{fortrancode_8cpp_a8ae7f8fc5819b5f9a8d2969cb8acc16b}{fortrancodeYYtext} + yyless\_macro\_arg; \(\backslash\)
+        (yy\_hold\_char) = *(yy\_c\_buf\_p); \(\backslash\)
+        *(yy\_c\_buf\_p) = \textcolor{charliteral}{'\(\backslash\)0'}; \hyperlink{fortrancode_8cpp_a6ae2b834beeff1e67bcc3c5f91cb5a4f}{\(\backslash\)}
+\hyperlink{fortrancode_8cpp_a6ae2b834beeff1e67bcc3c5f91cb5a4f}{        fortrancodeYYleng} = yyless\_macro\_arg; \(\backslash\)
+        \} \hyperlink{fortrancode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{\(\backslash\)}
+\hyperlink{fortrancode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{    while} ( 0 )
+\end{DoxyCode}
+\hypertarget{fortrancode_8cpp_a5611300548b2030d86b6ab9168132b88}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yylex@{yylex}}
+\index{yylex@{yylex}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yylex}]{\setlength{\rightskip}{0pt plus 5cm}\#define yylex~{\bf fortrancode\+Y\+Ylex}}\label{fortrancode_8cpp_a5611300548b2030d86b6ab9168132b88}
+\hypertarget{fortrancode_8cpp_ad71cf0fddcfe4f61de0929105b33226c}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yylineno@{yylineno}}
+\index{yylineno@{yylineno}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yylineno}]{\setlength{\rightskip}{0pt plus 5cm}\#define yylineno~{\bf fortrancode\+Y\+Ylineno}}\label{fortrancode_8cpp_ad71cf0fddcfe4f61de0929105b33226c}
+\hypertarget{fortrancode_8cpp_a745d37b5e002b2e5f93ad42ea7b554be}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yymore@{yymore}}
+\index{yymore@{yymore}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yymore}]{\setlength{\rightskip}{0pt plus 5cm}\#define yymore(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~yymore\+\_\+used\+\_\+but\+\_\+not\+\_\+detected}\label{fortrancode_8cpp_a745d37b5e002b2e5f93ad42ea7b554be}
+\hypertarget{fortrancode_8cpp_a4fd44867d448dcb6fc32ea004a15de54}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yyout@{yyout}}
+\index{yyout@{yyout}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yyout}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyout~{\bf fortrancode\+Y\+Yout}}\label{fortrancode_8cpp_a4fd44867d448dcb6fc32ea004a15de54}
+\hypertarget{fortrancode_8cpp_ab1eba250555ca003eb39387bb1a41d39}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yyrealloc@{yyrealloc}}
+\index{yyrealloc@{yyrealloc}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yyrealloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyrealloc~{\bf fortrancode\+Y\+Yrealloc}}\label{fortrancode_8cpp_ab1eba250555ca003eb39387bb1a41d39}
+\hypertarget{fortrancode_8cpp_a2259355ac49295f72feab070a34a9b11}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yyrestart@{yyrestart}}
+\index{yyrestart@{yyrestart}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yyrestart}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyrestart~{\bf fortrancode\+Y\+Yrestart}}\label{fortrancode_8cpp_a2259355ac49295f72feab070a34a9b11}
+\hypertarget{fortrancode_8cpp_a32b5b960944f946b192d54f672569cd9}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+S\+T\+A\+T\+E@{Y\+Y\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+S\+T\+A\+T\+E@{Y\+Y\+S\+T\+A\+T\+E}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+S\+T\+A\+T\+E~{\bf Y\+Y\+\_\+\+S\+T\+A\+R\+T}}\label{fortrancode_8cpp_a32b5b960944f946b192d54f672569cd9}
+\hypertarget{fortrancode_8cpp_a828cc83270f8f5bb1688e14dd4e28128}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E@{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}}
+\index{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E@{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+Y\+T\+A\+B\+L\+E\+S\+\_\+\+N\+A\+M\+E~\char`\"{}yytables\char`\"{}}\label{fortrancode_8cpp_a828cc83270f8f5bb1688e14dd4e28128}
+\hypertarget{fortrancode_8cpp_ac3286b18a2e91b4571b97df96a118e84}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yyterminate@{yyterminate}}
+\index{yyterminate@{yyterminate}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yyterminate}]{\setlength{\rightskip}{0pt plus 5cm}\#define yyterminate(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~return {\bf Y\+Y\+\_\+\+N\+U\+L\+L}}\label{fortrancode_8cpp_ac3286b18a2e91b4571b97df96a118e84}
+\hypertarget{fortrancode_8cpp_a0d71f919dbec1ffd74b2460fa7e5ac28}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yytext@{yytext}}
+\index{yytext@{yytext}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yytext}]{\setlength{\rightskip}{0pt plus 5cm}\#define yytext~{\bf fortrancode\+Y\+Ytext}}\label{fortrancode_8cpp_a0d71f919dbec1ffd74b2460fa7e5ac28}
+\hypertarget{fortrancode_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yytext\+\_\+ptr@{yytext\+\_\+ptr}}
+\index{yytext\+\_\+ptr@{yytext\+\_\+ptr}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yytext\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}\#define yytext\+\_\+ptr~{\bf fortrancode\+Y\+Ytext}}\label{fortrancode_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}
+\hypertarget{fortrancode_8cpp_a5be541efdb129f7cefb2437f52fe7359}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yywrap@{yywrap}}
+\index{yywrap@{yywrap}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yywrap}]{\setlength{\rightskip}{0pt plus 5cm}\#define yywrap~{\bf fortrancode\+Y\+Ywrap}}\label{fortrancode_8cpp_a5be541efdb129f7cefb2437f52fe7359}
+
+
+\subsection{Documentation des définitions de type}
+\hypertarget{fortrancode_8cpp_a2e73b2c75126814585525fb2e9d51159}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!flex\+\_\+int16\+\_\+t@{flex\+\_\+int16\+\_\+t}}
+\index{flex\+\_\+int16\+\_\+t@{flex\+\_\+int16\+\_\+t}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{flex\+\_\+int16\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef short int {\bf flex\+\_\+int16\+\_\+t}}\label{fortrancode_8cpp_a2e73b2c75126814585525fb2e9d51159}
+\hypertarget{fortrancode_8cpp_a838ce943cf44ef7769480714fc6c3ba9}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!flex\+\_\+int32\+\_\+t@{flex\+\_\+int32\+\_\+t}}
+\index{flex\+\_\+int32\+\_\+t@{flex\+\_\+int32\+\_\+t}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{flex\+\_\+int32\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf flex\+\_\+int32\+\_\+t}}\label{fortrancode_8cpp_a838ce943cf44ef7769480714fc6c3ba9}
+\hypertarget{fortrancode_8cpp_a7b0840dff4a2ef1702118aa12264b2a7}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!flex\+\_\+int8\+\_\+t@{flex\+\_\+int8\+\_\+t}}
+\index{flex\+\_\+int8\+\_\+t@{flex\+\_\+int8\+\_\+t}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{flex\+\_\+int8\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed char {\bf flex\+\_\+int8\+\_\+t}}\label{fortrancode_8cpp_a7b0840dff4a2ef1702118aa12264b2a7}
+\hypertarget{fortrancode_8cpp_ac50cdb9eefbef83a1cec89e3a7f6e1d2}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!flex\+\_\+uint16\+\_\+t@{flex\+\_\+uint16\+\_\+t}}
+\index{flex\+\_\+uint16\+\_\+t@{flex\+\_\+uint16\+\_\+t}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{flex\+\_\+uint16\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short int {\bf flex\+\_\+uint16\+\_\+t}}\label{fortrancode_8cpp_ac50cdb9eefbef83a1cec89e3a7f6e1d2}
+\hypertarget{fortrancode_8cpp_a36869712de12820c73aae736762e8e88}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!flex\+\_\+uint32\+\_\+t@{flex\+\_\+uint32\+\_\+t}}
+\index{flex\+\_\+uint32\+\_\+t@{flex\+\_\+uint32\+\_\+t}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{flex\+\_\+uint32\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf flex\+\_\+uint32\+\_\+t}}\label{fortrancode_8cpp_a36869712de12820c73aae736762e8e88}
+\hypertarget{fortrancode_8cpp_a0fac5ea484f64e75dbe6eba4aa61750c}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!flex\+\_\+uint8\+\_\+t@{flex\+\_\+uint8\+\_\+t}}
+\index{flex\+\_\+uint8\+\_\+t@{flex\+\_\+uint8\+\_\+t}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{flex\+\_\+uint8\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf flex\+\_\+uint8\+\_\+t}}\label{fortrancode_8cpp_a0fac5ea484f64e75dbe6eba4aa61750c}
+\hypertarget{fortrancode_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf yy\+\_\+buffer\+\_\+state}$\ast$ {\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}\label{fortrancode_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}
+\hypertarget{fortrancode_8cpp_a1f324b3cb0839eeb90145f0274e6946e}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+C\+H\+A\+R}}
+\index{Y\+Y\+\_\+\+C\+H\+A\+R@{Y\+Y\+\_\+\+C\+H\+A\+R}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+C\+H\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf Y\+Y\+\_\+\+C\+H\+A\+R}}\label{fortrancode_8cpp_a1f324b3cb0839eeb90145f0274e6946e}
+\hypertarget{fortrancode_8cpp_ad557845057f187eec4be07e2717d2afa}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yy\+\_\+size\+\_\+t@{yy\+\_\+size\+\_\+t}}
+\index{yy\+\_\+size\+\_\+t@{yy\+\_\+size\+\_\+t}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yy\+\_\+size\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef size\+\_\+t {\bf yy\+\_\+size\+\_\+t}}\label{fortrancode_8cpp_ad557845057f187eec4be07e2717d2afa}
+\hypertarget{fortrancode_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yy\+\_\+state\+\_\+type@{yy\+\_\+state\+\_\+type}}
+\index{yy\+\_\+state\+\_\+type@{yy\+\_\+state\+\_\+type}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yy\+\_\+state\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf yy\+\_\+state\+\_\+type}}\label{fortrancode_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{fortrancode_8cpp_ae36a6419adf0035417c6b0f888715772}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Y\+\_\+create\+\_\+buffer@{fortrancode\+Y\+Y\+\_\+create\+\_\+buffer}}
+\index{fortrancode\+Y\+Y\+\_\+create\+\_\+buffer@{fortrancode\+Y\+Y\+\_\+create\+\_\+buffer}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Y\+\_\+create\+\_\+buffer(\+F\+I\+L\+E $\ast$file, int size)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} fortrancode\+Y\+Y\+\_\+create\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{file, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_ae36a6419adf0035417c6b0f888715772}
+Allocate and initialize an input buffer state. 
+\begin{DoxyParams}{Paramètres}
+{\em file} & \hyperlink{class_a}{A} readable stream. \\
+\hline
+{\em size} & The character buffer size in bytes. When in doubt, use {\ttfamily Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+Z\+E}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the allocated buffer state. 
+\end{DoxyReturn}
+\hypertarget{fortrancode_8cpp_ac62703a90140b4ca5b273a85fe800d41}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Y\+\_\+delete\+\_\+buffer@{fortrancode\+Y\+Y\+\_\+delete\+\_\+buffer}}
+\index{fortrancode\+Y\+Y\+\_\+delete\+\_\+buffer@{fortrancode\+Y\+Y\+\_\+delete\+\_\+buffer}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Y\+\_\+delete\+\_\+buffer(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E b)}]{\setlength{\rightskip}{0pt plus 5cm}void fortrancode\+Y\+Y\+\_\+delete\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{b}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_ac62703a90140b4ca5b273a85fe800d41}
+Destroy the buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em b} & a buffer created with \hyperlink{fortrancode_8cpp_ae36a6419adf0035417c6b0f888715772}{fortrancode\+Y\+Y\+\_\+create\+\_\+buffer()} \\
+\hline
+\end{DoxyParams}
+\hypertarget{fortrancode_8cpp_a005e102a7a94ad56c0dc052c0d316d89}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Y\+\_\+flush\+\_\+buffer@{fortrancode\+Y\+Y\+\_\+flush\+\_\+buffer}}
+\index{fortrancode\+Y\+Y\+\_\+flush\+\_\+buffer@{fortrancode\+Y\+Y\+\_\+flush\+\_\+buffer}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Y\+\_\+flush\+\_\+buffer(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E b)}]{\setlength{\rightskip}{0pt plus 5cm}void fortrancode\+Y\+Y\+\_\+flush\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{b}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_a005e102a7a94ad56c0dc052c0d316d89}
+Discard all buffered characters. On the next scan, Y\+Y\+\_\+\+I\+N\+P\+U\+T will be called. 
+\begin{DoxyParams}{Paramètres}
+{\em b} & the buffer state to be flushed, usually {\ttfamily Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+E\+R}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{fortrancode_8cpp_a97b6fab8857dd561d10ab72615f12970}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Y\+\_\+scan\+\_\+buffer@{fortrancode\+Y\+Y\+\_\+scan\+\_\+buffer}}
+\index{fortrancode\+Y\+Y\+\_\+scan\+\_\+buffer@{fortrancode\+Y\+Y\+\_\+scan\+\_\+buffer}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Y\+\_\+scan\+\_\+buffer(char $\ast$base, yy\+\_\+size\+\_\+t size)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} fortrancode\+Y\+Y\+\_\+scan\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{base, }
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{size}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_a97b6fab8857dd561d10ab72615f12970}
+Setup the input buffer state to scan directly from a user-\/specified character buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em base} & the character buffer \\
+\hline
+{\em size} & the size in bytes of the character buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the newly allocated buffer state object. 
+\end{DoxyReturn}
+\hypertarget{fortrancode_8cpp_a10147db891604291b47adfcd368fe1c2}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Y\+\_\+scan\+\_\+bytes@{fortrancode\+Y\+Y\+\_\+scan\+\_\+bytes}}
+\index{fortrancode\+Y\+Y\+\_\+scan\+\_\+bytes@{fortrancode\+Y\+Y\+\_\+scan\+\_\+bytes}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Y\+\_\+scan\+\_\+bytes(yyconst char $\ast$bytes, yy\+\_\+size\+\_\+t len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} fortrancode\+Y\+Y\+\_\+scan\+\_\+bytes (
+\begin{DoxyParamCaption}
+\item[{{\bf yyconst} char $\ast$}]{yybytes, }
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{\+\_\+yybytes\+\_\+len}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_a10147db891604291b47adfcd368fe1c2}
+Setup the input buffer state to scan the given bytes. The next call to \hyperlink{fortrancode_8cpp_ad3da989a320451d19e0e3bee9f0f2f08}{fortrancode\+Y\+Ylex()} will scan from a {\itshape copy} of {\itshape bytes}. 
+\begin{DoxyParams}{Paramètres}
+{\em bytes} & the byte buffer to scan \\
+\hline
+{\em len} & the number of bytes in the buffer pointed to by {\itshape bytes}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the newly allocated buffer state object. 
+\end{DoxyReturn}
+\hypertarget{fortrancode_8cpp_af908c4865f1eb2f8e04e9a8752b70f8d}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Y\+\_\+scan\+\_\+string@{fortrancode\+Y\+Y\+\_\+scan\+\_\+string}}
+\index{fortrancode\+Y\+Y\+\_\+scan\+\_\+string@{fortrancode\+Y\+Y\+\_\+scan\+\_\+string}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Y\+\_\+scan\+\_\+string(yyconst char $\ast$yy\+\_\+str)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E} fortrancode\+Y\+Y\+\_\+scan\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{{\bf yyconst} char $\ast$}]{yystr}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_af908c4865f1eb2f8e04e9a8752b70f8d}
+Setup the input buffer state to scan a string. The next call to \hyperlink{fortrancode_8cpp_ad3da989a320451d19e0e3bee9f0f2f08}{fortrancode\+Y\+Ylex()} will scan from a {\itshape copy} of {\itshape str}. 
+\begin{DoxyParams}{Paramètres}
+{\em yystr} & a N\+U\+L-\/terminated string to scan\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+the newly allocated buffer state object. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If you want to scan bytes that may contain N\+U\+L values, then use \hyperlink{fortrancode_8cpp_a10147db891604291b47adfcd368fe1c2}{fortrancode\+Y\+Y\+\_\+scan\+\_\+bytes()} instead. 
+\end{DoxyNote}
+\hypertarget{fortrancode_8cpp_aec8490145da7bfdc8cb0c3452ee58678}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer@{fortrancode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}}
+\index{fortrancode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer@{fortrancode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E new\+\_\+buffer)}]{\setlength{\rightskip}{0pt plus 5cm}void fortrancode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{new\+\_\+buffer}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_aec8490145da7bfdc8cb0c3452ee58678}
+Switch to a different input buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em new\+\_\+buffer} & The new input buffer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{fortrancode_8cpp_ae05b18dcea66200bf09ca6ca4bf561ac}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Yalloc@{fortrancode\+Y\+Yalloc}}
+\index{fortrancode\+Y\+Yalloc@{fortrancode\+Y\+Yalloc}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Yalloc(yy\+\_\+size\+\_\+t)}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ fortrancode\+Y\+Yalloc (
+\begin{DoxyParamCaption}
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{size}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_ae05b18dcea66200bf09ca6ca4bf561ac}
+\hypertarget{fortrancode_8cpp_ad332742eb805482fc1390b0a0e632c45}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Ydummy@{fortrancode\+Y\+Ydummy}}
+\index{fortrancode\+Y\+Ydummy@{fortrancode\+Y\+Ydummy}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Ydummy()}]{\setlength{\rightskip}{0pt plus 5cm}void fortrancode\+Y\+Ydummy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_ad332742eb805482fc1390b0a0e632c45}
+\hypertarget{fortrancode_8cpp_a84d5cc9edfd00e023bd9717888760568}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Yfree@{fortrancode\+Y\+Yfree}}
+\index{fortrancode\+Y\+Yfree@{fortrancode\+Y\+Yfree}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Yfree(void $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void fortrancode\+Y\+Yfree (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_a84d5cc9edfd00e023bd9717888760568}
+\hypertarget{fortrancode_8cpp_aaa901d717afb6916f6c8890d24748b74}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Yget\+\_\+debug@{fortrancode\+Y\+Yget\+\_\+debug}}
+\index{fortrancode\+Y\+Yget\+\_\+debug@{fortrancode\+Y\+Yget\+\_\+debug}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Yget\+\_\+debug(void)}]{\setlength{\rightskip}{0pt plus 5cm}int fortrancode\+Y\+Yget\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_aaa901d717afb6916f6c8890d24748b74}
+\hypertarget{fortrancode_8cpp_a529572b2d3ed61439d58ea367f7f3c28}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Yget\+\_\+extra@{fortrancode\+Y\+Yget\+\_\+extra}}
+\index{fortrancode\+Y\+Yget\+\_\+extra@{fortrancode\+Y\+Yget\+\_\+extra}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Yget\+\_\+extra(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E} fortrancode\+Y\+Yget\+\_\+extra (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_a529572b2d3ed61439d58ea367f7f3c28}
+\hypertarget{fortrancode_8cpp_a3bf20ddbaa14289764b4dfba45cd8f4a}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Yget\+\_\+in@{fortrancode\+Y\+Yget\+\_\+in}}
+\index{fortrancode\+Y\+Yget\+\_\+in@{fortrancode\+Y\+Yget\+\_\+in}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Yget\+\_\+in(void)}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ fortrancode\+Y\+Yget\+\_\+in (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_a3bf20ddbaa14289764b4dfba45cd8f4a}
+Get the input stream. \hypertarget{fortrancode_8cpp_aad7ef58da027c5144c8f075b75f2c413}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Yget\+\_\+leng@{fortrancode\+Y\+Yget\+\_\+leng}}
+\index{fortrancode\+Y\+Yget\+\_\+leng@{fortrancode\+Y\+Yget\+\_\+leng}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Yget\+\_\+leng(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf yy\+\_\+size\+\_\+t} fortrancode\+Y\+Yget\+\_\+leng (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_aad7ef58da027c5144c8f075b75f2c413}
+Get the length of the current token. \hypertarget{fortrancode_8cpp_a0bf560347bd1c8cdf9a5779c2b95a23d}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Yget\+\_\+lineno@{fortrancode\+Y\+Yget\+\_\+lineno}}
+\index{fortrancode\+Y\+Yget\+\_\+lineno@{fortrancode\+Y\+Yget\+\_\+lineno}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Yget\+\_\+lineno(void)}]{\setlength{\rightskip}{0pt plus 5cm}int fortrancode\+Y\+Yget\+\_\+lineno (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_a0bf560347bd1c8cdf9a5779c2b95a23d}
+Get the current line number. \hypertarget{fortrancode_8cpp_aaf263cb7b436d7f0faeafbc48f416094}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Yget\+\_\+out@{fortrancode\+Y\+Yget\+\_\+out}}
+\index{fortrancode\+Y\+Yget\+\_\+out@{fortrancode\+Y\+Yget\+\_\+out}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Yget\+\_\+out(void)}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ fortrancode\+Y\+Yget\+\_\+out (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_aaf263cb7b436d7f0faeafbc48f416094}
+Get the output stream. \hypertarget{fortrancode_8cpp_a8f80a5567ec4b4807d7a82f8b2c086ae}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Yget\+\_\+text@{fortrancode\+Y\+Yget\+\_\+text}}
+\index{fortrancode\+Y\+Yget\+\_\+text@{fortrancode\+Y\+Yget\+\_\+text}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Yget\+\_\+text(void)}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ fortrancode\+Y\+Yget\+\_\+text (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_a8f80a5567ec4b4807d7a82f8b2c086ae}
+Get the current token. \hypertarget{fortrancode_8cpp_ad3da989a320451d19e0e3bee9f0f2f08}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Ylex@{fortrancode\+Y\+Ylex}}
+\index{fortrancode\+Y\+Ylex@{fortrancode\+Y\+Ylex}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Ylex(void)}]{\setlength{\rightskip}{0pt plus 5cm}int fortrancode\+Y\+Ylex (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_ad3da989a320451d19e0e3bee9f0f2f08}
+\hypertarget{fortrancode_8cpp_a6c33315d8a6aaa5267565c771b930051}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Ylex\+\_\+destroy@{fortrancode\+Y\+Ylex\+\_\+destroy}}
+\index{fortrancode\+Y\+Ylex\+\_\+destroy@{fortrancode\+Y\+Ylex\+\_\+destroy}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Ylex\+\_\+destroy(void)}]{\setlength{\rightskip}{0pt plus 5cm}int fortrancode\+Y\+Ylex\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_a6c33315d8a6aaa5267565c771b930051}
+\hypertarget{fortrancode_8cpp_a1bc575e8e96e1f8d152ff4adeff86710}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Ypop\+\_\+buffer\+\_\+state@{fortrancode\+Y\+Ypop\+\_\+buffer\+\_\+state}}
+\index{fortrancode\+Y\+Ypop\+\_\+buffer\+\_\+state@{fortrancode\+Y\+Ypop\+\_\+buffer\+\_\+state}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Ypop\+\_\+buffer\+\_\+state(void)}]{\setlength{\rightskip}{0pt plus 5cm}void fortrancode\+Y\+Ypop\+\_\+buffer\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_a1bc575e8e96e1f8d152ff4adeff86710}
+Removes and deletes the top of the stack, if present. The next element becomes the new top. \hypertarget{fortrancode_8cpp_a6963c62cfec195502a62592c41983748}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Ypush\+\_\+buffer\+\_\+state@{fortrancode\+Y\+Ypush\+\_\+buffer\+\_\+state}}
+\index{fortrancode\+Y\+Ypush\+\_\+buffer\+\_\+state@{fortrancode\+Y\+Ypush\+\_\+buffer\+\_\+state}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Ypush\+\_\+buffer\+\_\+state(\+Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E new\+\_\+buffer)}]{\setlength{\rightskip}{0pt plus 5cm}void fortrancode\+Y\+Ypush\+\_\+buffer\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+T\+E}}]{new\+\_\+buffer}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_a6963c62cfec195502a62592c41983748}
+Pushes the new state onto the stack. The new state becomes the current state. This function will allocate the stack if necessary. 
+\begin{DoxyParams}{Paramètres}
+{\em new\+\_\+buffer} & The new state. \\
+\hline
+\end{DoxyParams}
+\hypertarget{fortrancode_8cpp_aed7471c0a46db189456c5ab0dcd41f06}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Yrealloc@{fortrancode\+Y\+Yrealloc}}
+\index{fortrancode\+Y\+Yrealloc@{fortrancode\+Y\+Yrealloc}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Yrealloc(void $\ast$, yy\+\_\+size\+\_\+t)}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ fortrancode\+Y\+Yrealloc (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr, }
+\item[{{\bf yy\+\_\+size\+\_\+t}}]{size}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_aed7471c0a46db189456c5ab0dcd41f06}
+\hypertarget{fortrancode_8cpp_a8ebc83c3fbdb5aa3f10f96abbaa78393}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Yrestart@{fortrancode\+Y\+Yrestart}}
+\index{fortrancode\+Y\+Yrestart@{fortrancode\+Y\+Yrestart}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Yrestart(\+F\+I\+L\+E $\ast$input\+\_\+file)}]{\setlength{\rightskip}{0pt plus 5cm}void fortrancode\+Y\+Yrestart (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{input\+\_\+file}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_a8ebc83c3fbdb5aa3f10f96abbaa78393}
+Immediately switch to a different input stream. 
+\begin{DoxyParams}{Paramètres}
+{\em input\+\_\+file} & \hyperlink{class_a}{A} readable stream.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function does not reset the start condition to {\ttfamily I\+N\+I\+T\+I\+A\+L} . 
+\end{DoxyNote}
+\hypertarget{fortrancode_8cpp_aadc78da354e1b858867bc89723726070}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Yset\+\_\+debug@{fortrancode\+Y\+Yset\+\_\+debug}}
+\index{fortrancode\+Y\+Yset\+\_\+debug@{fortrancode\+Y\+Yset\+\_\+debug}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Yset\+\_\+debug(int debug\+\_\+flag)}]{\setlength{\rightskip}{0pt plus 5cm}void fortrancode\+Y\+Yset\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{int}]{debug\+\_\+flag}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_aadc78da354e1b858867bc89723726070}
+\hypertarget{fortrancode_8cpp_ae30eaaf9f121c53d1c1e92a68da4f104}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Yset\+\_\+extra@{fortrancode\+Y\+Yset\+\_\+extra}}
+\index{fortrancode\+Y\+Yset\+\_\+extra@{fortrancode\+Y\+Yset\+\_\+extra}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Yset\+\_\+extra(\+Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E user\+\_\+defined)}]{\setlength{\rightskip}{0pt plus 5cm}void fortrancode\+Y\+Yset\+\_\+extra (
+\begin{DoxyParamCaption}
+\item[{{\bf Y\+Y\+\_\+\+E\+X\+T\+R\+A\+\_\+\+T\+Y\+P\+E}}]{user\+\_\+defined}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_ae30eaaf9f121c53d1c1e92a68da4f104}
+\hypertarget{fortrancode_8cpp_aa2c95bcb17e12596152ddb669163d77a}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Yset\+\_\+in@{fortrancode\+Y\+Yset\+\_\+in}}
+\index{fortrancode\+Y\+Yset\+\_\+in@{fortrancode\+Y\+Yset\+\_\+in}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Yset\+\_\+in(\+F\+I\+L\+E $\ast$in\+\_\+str)}]{\setlength{\rightskip}{0pt plus 5cm}void fortrancode\+Y\+Yset\+\_\+in (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{in\+\_\+str}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_aa2c95bcb17e12596152ddb669163d77a}
+Set the input stream. This does not discard the current input buffer. 
+\begin{DoxyParams}{Paramètres}
+{\em in\+\_\+str} & \hyperlink{class_a}{A} readable stream.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{fortrancode_8cpp_aec8490145da7bfdc8cb0c3452ee58678}{fortrancode\+Y\+Y\+\_\+switch\+\_\+to\+\_\+buffer} 
+\end{DoxySeeAlso}
+\hypertarget{fortrancode_8cpp_a92348639b0bac0bc262790b7abba9fa2}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Yset\+\_\+lineno@{fortrancode\+Y\+Yset\+\_\+lineno}}
+\index{fortrancode\+Y\+Yset\+\_\+lineno@{fortrancode\+Y\+Yset\+\_\+lineno}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Yset\+\_\+lineno(int line\+\_\+number)}]{\setlength{\rightskip}{0pt plus 5cm}void fortrancode\+Y\+Yset\+\_\+lineno (
+\begin{DoxyParamCaption}
+\item[{int}]{line\+\_\+number}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_a92348639b0bac0bc262790b7abba9fa2}
+Set the current line number. 
+\begin{DoxyParams}{Paramètres}
+{\em line\+\_\+number} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{fortrancode_8cpp_aec57d5403414e8a7d0b746e37cd2c1e0}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Yset\+\_\+out@{fortrancode\+Y\+Yset\+\_\+out}}
+\index{fortrancode\+Y\+Yset\+\_\+out@{fortrancode\+Y\+Yset\+\_\+out}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Yset\+\_\+out(\+F\+I\+L\+E $\ast$out\+\_\+str)}]{\setlength{\rightskip}{0pt plus 5cm}void fortrancode\+Y\+Yset\+\_\+out (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{out\+\_\+str}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_aec57d5403414e8a7d0b746e37cd2c1e0}
+\hypertarget{fortrancode_8cpp_ad4a65b873df5c05570846b5413b41dfd}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!if@{if}}
+\index{if@{if}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{if("!(yy\+\_\+init))}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{!}]{yy\+\_\+init}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_ad4a65b873df5c05570846b5413b41dfd}
+\hypertarget{fortrancode_8cpp_ab4155ffea05dab2dafae68fd88a0517f}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!isatty@{isatty}}
+\index{isatty@{isatty}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{isatty(int)}]{\setlength{\rightskip}{0pt plus 5cm}int isatty (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_ab4155ffea05dab2dafae68fd88a0517f}
+\hypertarget{fortrancode_8cpp_a606f2fa004c65faa4364c5b9045a2114}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!parse\+Fortran\+Code@{parse\+Fortran\+Code}}
+\index{parse\+Fortran\+Code@{parse\+Fortran\+Code}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{parse\+Fortran\+Code(\+Code\+Output\+Interface \&od, const char $\ast$class\+Name, const Q\+C\+String \&s, bool ex\+Block, const char $\ast$ex\+Name, File\+Def $\ast$fd, int start\+Line, int end\+Line, bool inline\+Fragment, Member\+Def $\ast$member\+Def, bool, Definition $\ast$search\+Ctx, bool collect\+X\+Refs, Fortran\+Format format)}]{\setlength{\rightskip}{0pt plus 5cm}void parse\+Fortran\+Code (
+\begin{DoxyParamCaption}
+\item[{{\bf Code\+Output\+Interface} \&}]{od, }
+\item[{const char $\ast$}]{class\+Name, }
+\item[{const {\bf Q\+C\+String} \&}]{s, }
+\item[{{\bf bool}}]{ex\+Block, }
+\item[{const char $\ast$}]{ex\+Name, }
+\item[{{\bf File\+Def} $\ast$}]{fd, }
+\item[{int}]{start\+Line, }
+\item[{int}]{end\+Line, }
+\item[{{\bf bool}}]{inline\+Fragment, }
+\item[{{\bf Member\+Def} $\ast$}]{member\+Def, }
+\item[{{\bf bool}}]{, }
+\item[{{\bf Definition} $\ast$}]{search\+Ctx, }
+\item[{{\bf bool}}]{collect\+X\+Refs, }
+\item[{{\bf Fortran\+Format}}]{format}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_a606f2fa004c65faa4364c5b9045a2114}
+\hypertarget{fortrancode_8cpp_a4d60ec1afc4309e30e686400f692b1b2}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!reset\+Fortran\+Code\+Parser\+State@{reset\+Fortran\+Code\+Parser\+State}}
+\index{reset\+Fortran\+Code\+Parser\+State@{reset\+Fortran\+Code\+Parser\+State}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{reset\+Fortran\+Code\+Parser\+State()}]{\setlength{\rightskip}{0pt plus 5cm}void reset\+Fortran\+Code\+Parser\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_a4d60ec1afc4309e30e686400f692b1b2}
+\hypertarget{fortrancode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!while@{while}}
+\index{while@{while}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{while(1)}]{\setlength{\rightskip}{0pt plus 5cm}while (
+\begin{DoxyParamCaption}
+\item[{1}]{}
+\end{DoxyParamCaption}
+)}\label{fortrancode_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}
+
+
+\subsection{Documentation des variables}
+\hypertarget{fortrancode_8cpp_ad182c7a53af22425b6bfb530e5103464}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Y\+\_\+flex\+\_\+debug@{fortrancode\+Y\+Y\+\_\+flex\+\_\+debug}}
+\index{fortrancode\+Y\+Y\+\_\+flex\+\_\+debug@{fortrancode\+Y\+Y\+\_\+flex\+\_\+debug}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Y\+\_\+flex\+\_\+debug}]{\setlength{\rightskip}{0pt plus 5cm}int fortrancode\+Y\+Y\+\_\+flex\+\_\+debug = 0}\label{fortrancode_8cpp_ad182c7a53af22425b6bfb530e5103464}
+\hypertarget{fortrancode_8cpp_a2aafd9df09912afde6ceda482ae61753}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Yin@{fortrancode\+Y\+Yin}}
+\index{fortrancode\+Y\+Yin@{fortrancode\+Y\+Yin}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Yin}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ fortrancode\+Y\+Yin = (F\+I\+L\+E $\ast$) 0}\label{fortrancode_8cpp_a2aafd9df09912afde6ceda482ae61753}
+\hypertarget{fortrancode_8cpp_a6ae2b834beeff1e67bcc3c5f91cb5a4f}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Yleng@{fortrancode\+Y\+Yleng}}
+\index{fortrancode\+Y\+Yleng@{fortrancode\+Y\+Yleng}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Yleng}]{\setlength{\rightskip}{0pt plus 5cm}{\bf yy\+\_\+size\+\_\+t} fortrancode\+Y\+Yleng}\label{fortrancode_8cpp_a6ae2b834beeff1e67bcc3c5f91cb5a4f}
+\hypertarget{fortrancode_8cpp_a74a2c9f1b54facbdd351937ef67ac4e2}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Ylineno@{fortrancode\+Y\+Ylineno}}
+\index{fortrancode\+Y\+Ylineno@{fortrancode\+Y\+Ylineno}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Ylineno}]{\setlength{\rightskip}{0pt plus 5cm}int fortrancode\+Y\+Ylineno = 1}\label{fortrancode_8cpp_a74a2c9f1b54facbdd351937ef67ac4e2}
+\hypertarget{fortrancode_8cpp_a5aec14805e4ef0862b816c23088cd76c}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Yout@{fortrancode\+Y\+Yout}}
+\index{fortrancode\+Y\+Yout@{fortrancode\+Y\+Yout}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Yout}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E $\ast$ fortrancode\+Y\+Yout = (F\+I\+L\+E $\ast$) 0}\label{fortrancode_8cpp_a5aec14805e4ef0862b816c23088cd76c}
+\hypertarget{fortrancode_8cpp_a8ae7f8fc5819b5f9a8d2969cb8acc16b}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!fortrancode\+Y\+Ytext@{fortrancode\+Y\+Ytext}}
+\index{fortrancode\+Y\+Ytext@{fortrancode\+Y\+Ytext}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{fortrancode\+Y\+Ytext}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ fortrancode\+Y\+Ytext}\label{fortrancode_8cpp_a8ae7f8fc5819b5f9a8d2969cb8acc16b}
+\hypertarget{fortrancode_8cpp_a7ffc8c947830757dd87ad202a6823edd}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yy\+\_\+act@{yy\+\_\+act}}
+\index{yy\+\_\+act@{yy\+\_\+act}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yy\+\_\+act}]{\setlength{\rightskip}{0pt plus 5cm}register int yy\+\_\+act}\label{fortrancode_8cpp_a7ffc8c947830757dd87ad202a6823edd}
+\hypertarget{fortrancode_8cpp_a71cf769ce518e8687bf8999b278c65f4}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yy\+\_\+bp@{yy\+\_\+bp}}
+\index{yy\+\_\+bp@{yy\+\_\+bp}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yy\+\_\+bp}]{\setlength{\rightskip}{0pt plus 5cm}register char $\ast$ yy\+\_\+bp}\label{fortrancode_8cpp_a71cf769ce518e8687bf8999b278c65f4}
+\hypertarget{fortrancode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yy\+\_\+cp@{yy\+\_\+cp}}
+\index{yy\+\_\+cp@{yy\+\_\+cp}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yy\+\_\+cp}]{\setlength{\rightskip}{0pt plus 5cm}register char$\ast$ yy\+\_\+cp}\label{fortrancode_8cpp_ab98daea4ec951dfa966b5ca0f8133d38}
+\hypertarget{fortrancode_8cpp_abcefb20c54ce0f92452cfbb9cf657670}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!Y\+Y\+\_\+\+D\+E\+C\+L@{Y\+Y\+\_\+\+D\+E\+C\+L}}
+\index{Y\+Y\+\_\+\+D\+E\+C\+L@{Y\+Y\+\_\+\+D\+E\+C\+L}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{Y\+Y\+\_\+\+D\+E\+C\+L}]{\setlength{\rightskip}{0pt plus 5cm}Y\+Y\+\_\+\+D\+E\+C\+L}\label{fortrancode_8cpp_abcefb20c54ce0f92452cfbb9cf657670}
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}
+\{
+    \textcolor{keyword}{register} \hyperlink{code_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{yy\_state\_type} \hyperlink{constexp_8cpp_a86a21c2101611f87781b40b111e65aac}{yy\_current\_state}
+\end{DoxyCode}
+The main scanner function which does all the work. \hypertarget{fortrancode_8cpp_adc3fff33a8db22a36f05baec1001a010}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yy\+\_\+end@{yy\+\_\+end}}
+\index{yy\+\_\+end@{yy\+\_\+end}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yy\+\_\+end}]{\setlength{\rightskip}{0pt plus 5cm}int yy\+\_\+end = 1}\label{fortrancode_8cpp_adc3fff33a8db22a36f05baec1001a010}
+\hypertarget{fortrancode_8cpp_a66a71125f0f01a2a8d1a3608807695fa}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yy\+\_\+my\+\_\+start@{yy\+\_\+my\+\_\+start}}
+\index{yy\+\_\+my\+\_\+start@{yy\+\_\+my\+\_\+start}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yy\+\_\+my\+\_\+start}]{\setlength{\rightskip}{0pt plus 5cm}int yy\+\_\+my\+\_\+start = 0}\label{fortrancode_8cpp_a66a71125f0f01a2a8d1a3608807695fa}
+\hypertarget{fortrancode_8cpp_ab0517027b61f63c8a563733d6e813ad1}{}\index{fortrancode.\+cpp@{fortrancode.\+cpp}!yy\+\_\+old\+\_\+start@{yy\+\_\+old\+\_\+start}}
+\index{yy\+\_\+old\+\_\+start@{yy\+\_\+old\+\_\+start}!fortrancode.\+cpp@{fortrancode.\+cpp}}
+\subsubsection[{yy\+\_\+old\+\_\+start}]{\setlength{\rightskip}{0pt plus 5cm}int yy\+\_\+old\+\_\+start = 0}\label{fortrancode_8cpp_ab0517027b61f63c8a563733d6e813ad1}

@@ -1,0 +1,683 @@
+\hypertarget{class_q_file_info}{}\section{Référence de la classe Q\+File\+Info}
+\label{class_q_file_info}\index{Q\+File\+Info@{Q\+File\+Info}}
+
+
+The \hyperlink{class_q_file_info}{Q\+File\+Info} class provides system-\/independent file information.  
+
+
+
+
+{\ttfamily \#include $<$qfileinfo.\+h$>$}
+
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9}{Permission\+Spec} \{ \\*
+\hyperlink{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9adcf47b5d887584386f8fe007cb242d40}{Read\+User} = 0400, 
+\hyperlink{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9a9487edd08b766013a3c7510e3c251cb5}{Write\+User} = 0200, 
+\hyperlink{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9a4b80903745c02b36295208c49b07adf2}{Exe\+User} = 0100, 
+\hyperlink{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9ade06bbfb0db36e83c4cbc6e5f991ce5b}{Read\+Group} = 0040, 
+\\*
+\hyperlink{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9a9990af2fdefec643c0961b5f3537a91c}{Write\+Group} = 0020, 
+\hyperlink{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9afa337c105efd68b6fb1758f8acb6bc09}{Exe\+Group} = 0010, 
+\hyperlink{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9a51ce0caaed54ef7bced906770ae957f5}{Read\+Other} = 0004, 
+\hyperlink{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9a37622a8bf9d69abc6491953c9e9837be}{Write\+Other} = 0002, 
+\\*
+\hyperlink{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9ad1df4a67168c2200766f62a876fc4366}{Exe\+Other} = 0001
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_file_info_a7cfa76234a4b4c22f071a41452c5f7df}{Q\+File\+Info} ()
+\item 
+\hyperlink{class_q_file_info_a0b6a4788de6ee6c2b66a0841cd212bbe}{Q\+File\+Info} (const \hyperlink{class_q_string}{Q\+String} \&file)
+\item 
+\hyperlink{class_q_file_info_a33f5eaacd649938cf6a915817384c1f4}{Q\+File\+Info} (const \hyperlink{class_q_file}{Q\+File} \&)
+\item 
+\hyperlink{class_q_file_info_a6d57e31d5a4a8e6b6d405d2dd68641b5}{Q\+File\+Info} (const \hyperlink{class_q_dir}{Q\+Dir} \&, const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_file_info_aabf62d1b0490784be027aa3de085bec1}{file\+Name})
+\item 
+\hyperlink{class_q_file_info_ab147e0bd29337bd3d8d911c5666a941a}{Q\+File\+Info} (const \hyperlink{class_q_file_info}{Q\+File\+Info} \&)
+\item 
+\hyperlink{class_q_file_info_a37e6d4bbfffdd1b9d055923f3f0f4d7c}{$\sim$\+Q\+File\+Info} ()
+\item 
+\hyperlink{class_q_file_info}{Q\+File\+Info} \& \hyperlink{class_q_file_info_aa2a8e3037097440bf77f07d1c51f0369}{operator=} (const \hyperlink{class_q_file_info}{Q\+File\+Info} \&)
+\item 
+void \hyperlink{class_q_file_info_a6215e0e8c9466ee7db82c13259655b98}{set\+File} (const \hyperlink{class_q_string}{Q\+String} \&file)
+\item 
+void \hyperlink{class_q_file_info_a9a90b344f26a58641fa784efbaa3ce6e}{set\+File} (const \hyperlink{class_q_file}{Q\+File} \&)
+\item 
+void \hyperlink{class_q_file_info_a12f26e174efbe009fbda56c5344db89a}{set\+File} (const \hyperlink{class_q_dir}{Q\+Dir} \&, const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_file_info_aabf62d1b0490784be027aa3de085bec1}{file\+Name})
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_info_aef52b667c4809f0e0061c6f39ab72aea}{exists} () const 
+\item 
+void \hyperlink{class_q_file_info_aed469b2b04fe04a80424e8d94f7d9978}{refresh} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_info_a964c4089a9a867128055209651c01867}{caching} () const 
+\item 
+void \hyperlink{class_q_file_info_a9f2d5de0b83ff0c42b0004574ec9ddf5}{set\+Caching} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_file_info_a33f601c76f569d2a7e412c6737415115}{file\+Path} () const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_file_info_aabf62d1b0490784be027aa3de085bec1}{file\+Name} () const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_file_info_acfaefbbf6f28d9733d51b699dcf30fc7}{abs\+File\+Path} () const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_file_info_ad92985ac2917cca9a05bcff8d78b97b1}{base\+Name} () const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_file_info_a2f5d2e6e6a0ddfbb52976de7a97c7a2c}{extension} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} complete=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E}) const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_file_info_a57e435be78208b888116a1b7e9408d7e}{dir\+Path} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} abs\+Path=\hyperlink{qglobal_8h_a10e004b6916e78ff4ea8379be80b80cc}{F\+A\+L\+S\+E}) const 
+\item 
+\hyperlink{class_q_dir}{Q\+Dir} \hyperlink{class_q_file_info_ab15cdf011c680004885a5c30cbcbfbf2}{dir} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} abs\+Path=\hyperlink{qglobal_8h_a10e004b6916e78ff4ea8379be80b80cc}{F\+A\+L\+S\+E}) const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_info_a0982c9e0a0397b2341bad4137dd4b44c}{is\+Readable} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_info_a1a3d14c1df303bc9174eea52a1dbccd6}{is\+Writable} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_info_ae43ad39dbb61fa3befc2555282d54717}{is\+Executable} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_info_a5bb164facc2c9197c74868cfce06c14a}{is\+Relative} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_info_a3a4b0328b3fd423e0cfb0747445760b8}{convert\+To\+Abs} ()
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_info_aede7d40196ddb197e303518f76f04fa3}{is\+File} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_info_a93aecba4bcd72253d925e6028e8756f8}{is\+Dir} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_info_a5c902fd9a150a1479a9fa6155aba9136}{is\+Sym\+Link} () const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_file_info_a8d871b8ef2390811b5bf0546394173d2}{read\+Link} () const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_file_info_a1f295bc64cd357225f9c9fd6185b55d3}{owner} () const 
+\item 
+\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{class_q_file_info_a09d4e3b703ba0f98b3c83e8d44d2acc9}{owner\+Id} () const 
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_file_info_a47564fd62e9b11a39a2521cd0c085505}{group} () const 
+\item 
+\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{class_q_file_info_ab907c9a7bc4e8990107cc832f3979963}{group\+Id} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_info_a4c3fe59a5d16f62320645d617259ccb7}{permission} (int permission\+Spec) const 
+\item 
+\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{class_q_file_info_a0828a6759b013f6d05a5579ba60c21d4}{size} () const 
+\item 
+\hyperlink{class_q_date_time}{Q\+Date\+Time} \hyperlink{class_q_file_info_a849c009637765455d956a43871cf57ee}{last\+Modified} () const 
+\item 
+\hyperlink{class_q_date_time}{Q\+Date\+Time} \hyperlink{class_q_file_info_a76ff81425f8249238925960b4a6d670b}{last\+Read} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+The \hyperlink{class_q_file_info}{Q\+File\+Info} class provides system-\/independent file information. 
+
+\hyperlink{class_q_file_info}{Q\+File\+Info} provides information about a file\textquotesingle{}s name and position (path) in the file system, its access rights and whether it is a directory or a symbolic link. Its size and last modified/read times are also available.
+
+To speed up performance \hyperlink{class_q_file_info}{Q\+File\+Info} caches information about the file. Since files can be changed by other users or programs, or even by other parts of the same program there is a function that refreshes the file information; \hyperlink{class_q_file_info_aed469b2b04fe04a80424e8d94f7d9978}{refresh()}. If you would rather like a \hyperlink{class_q_file_info}{Q\+File\+Info} to access the file system every time you request information from it, you can call the function set\+Caching( F\+A\+L\+S\+E ).
+
+\hyperlink{class_a}{A} \hyperlink{class_q_file_info}{Q\+File\+Info} can point to a file using either a relative or an absolute file path. Absolute file paths begin with the directory separator (\textquotesingle{}/\textquotesingle{}) or a drive specification (not applicable to U\+N\+I\+X). Relative file names begin with a directory name or a file name and specify a path relative to the current directory. An example of an absolute path is the string \char`\"{}/tmp/quartz\char`\"{}. \hyperlink{class_a}{A} relative path might look like \char`\"{}src/fatlib\char`\"{}. You can use the function \hyperlink{class_q_file_info_a5bb164facc2c9197c74868cfce06c14a}{is\+Relative()} to check if a \hyperlink{class_q_file_info}{Q\+File\+Info} is using a relative or an absolute file path. You can call the function \hyperlink{class_q_file_info_a3a4b0328b3fd423e0cfb0747445760b8}{convert\+To\+Abs()} to convert a relative \hyperlink{class_q_file_info}{Q\+File\+Info} to an absolute one.
+
+If you need to read and traverse directories, see the \hyperlink{class_q_dir}{Q\+Dir} class. 
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9}{}\index{Q\+File\+Info@{Q\+File\+Info}!Permission\+Spec@{Permission\+Spec}}
+\index{Permission\+Spec@{Permission\+Spec}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{Permission\+Spec}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Q\+File\+Info\+::\+Permission\+Spec}}\label{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Read\+User@{Read\+User}!Q\+File\+Info@{Q\+File\+Info}}\index{Q\+File\+Info@{Q\+File\+Info}!Read\+User@{Read\+User}}\item[{\em 
+\hypertarget{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9adcf47b5d887584386f8fe007cb242d40}{}Read\+User\label{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9adcf47b5d887584386f8fe007cb242d40}
+}]\index{Write\+User@{Write\+User}!Q\+File\+Info@{Q\+File\+Info}}\index{Q\+File\+Info@{Q\+File\+Info}!Write\+User@{Write\+User}}\item[{\em 
+\hypertarget{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9a9487edd08b766013a3c7510e3c251cb5}{}Write\+User\label{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9a9487edd08b766013a3c7510e3c251cb5}
+}]\index{Exe\+User@{Exe\+User}!Q\+File\+Info@{Q\+File\+Info}}\index{Q\+File\+Info@{Q\+File\+Info}!Exe\+User@{Exe\+User}}\item[{\em 
+\hypertarget{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9a4b80903745c02b36295208c49b07adf2}{}Exe\+User\label{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9a4b80903745c02b36295208c49b07adf2}
+}]\index{Read\+Group@{Read\+Group}!Q\+File\+Info@{Q\+File\+Info}}\index{Q\+File\+Info@{Q\+File\+Info}!Read\+Group@{Read\+Group}}\item[{\em 
+\hypertarget{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9ade06bbfb0db36e83c4cbc6e5f991ce5b}{}Read\+Group\label{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9ade06bbfb0db36e83c4cbc6e5f991ce5b}
+}]\index{Write\+Group@{Write\+Group}!Q\+File\+Info@{Q\+File\+Info}}\index{Q\+File\+Info@{Q\+File\+Info}!Write\+Group@{Write\+Group}}\item[{\em 
+\hypertarget{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9a9990af2fdefec643c0961b5f3537a91c}{}Write\+Group\label{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9a9990af2fdefec643c0961b5f3537a91c}
+}]\index{Exe\+Group@{Exe\+Group}!Q\+File\+Info@{Q\+File\+Info}}\index{Q\+File\+Info@{Q\+File\+Info}!Exe\+Group@{Exe\+Group}}\item[{\em 
+\hypertarget{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9afa337c105efd68b6fb1758f8acb6bc09}{}Exe\+Group\label{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9afa337c105efd68b6fb1758f8acb6bc09}
+}]\index{Read\+Other@{Read\+Other}!Q\+File\+Info@{Q\+File\+Info}}\index{Q\+File\+Info@{Q\+File\+Info}!Read\+Other@{Read\+Other}}\item[{\em 
+\hypertarget{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9a51ce0caaed54ef7bced906770ae957f5}{}Read\+Other\label{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9a51ce0caaed54ef7bced906770ae957f5}
+}]\index{Write\+Other@{Write\+Other}!Q\+File\+Info@{Q\+File\+Info}}\index{Q\+File\+Info@{Q\+File\+Info}!Write\+Other@{Write\+Other}}\item[{\em 
+\hypertarget{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9a37622a8bf9d69abc6491953c9e9837be}{}Write\+Other\label{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9a37622a8bf9d69abc6491953c9e9837be}
+}]\index{Exe\+Other@{Exe\+Other}!Q\+File\+Info@{Q\+File\+Info}}\index{Q\+File\+Info@{Q\+File\+Info}!Exe\+Other@{Exe\+Other}}\item[{\em 
+\hypertarget{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9ad1df4a67168c2200766f62a876fc4366}{}Exe\+Other\label{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9ad1df4a67168c2200766f62a876fc4366}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_file_info_a7cfa76234a4b4c22f071a41452c5f7df}{}\index{Q\+File\+Info@{Q\+File\+Info}!Q\+File\+Info@{Q\+File\+Info}}
+\index{Q\+File\+Info@{Q\+File\+Info}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{Q\+File\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+File\+Info\+::\+Q\+File\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_file_info_a7cfa76234a4b4c22f071a41452c5f7df}
+Constructs a new empty \hyperlink{class_q_file_info}{Q\+File\+Info}. \hypertarget{class_q_file_info_a0b6a4788de6ee6c2b66a0841cd212bbe}{}\index{Q\+File\+Info@{Q\+File\+Info}!Q\+File\+Info@{Q\+File\+Info}}
+\index{Q\+File\+Info@{Q\+File\+Info}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{Q\+File\+Info(const Q\+String \&file)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+File\+Info\+::\+Q\+File\+Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{file}
+\end{DoxyParamCaption}
+)}\label{class_q_file_info_a0b6a4788de6ee6c2b66a0841cd212bbe}
+Constructs a new \hyperlink{class_q_file_info}{Q\+File\+Info} that gives information about the given file. The string given can be an absolute or a relative file path.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} set\+File(\+Q\+String ), \hyperlink{class_q_file_info_a5bb164facc2c9197c74868cfce06c14a}{is\+Relative()}, \hyperlink{class_q_dir_a61b45775b8b1e2d9ebe069e481f5dc9d}{Q\+Dir\+::set\+Current()}, \hyperlink{class_q_dir_a500524767f07a8cf127392859cc41d49}{Q\+Dir\+::is\+Relative\+Path()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a33f5eaacd649938cf6a915817384c1f4}{}\index{Q\+File\+Info@{Q\+File\+Info}!Q\+File\+Info@{Q\+File\+Info}}
+\index{Q\+File\+Info@{Q\+File\+Info}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{Q\+File\+Info(const Q\+File \&)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+File\+Info\+::\+Q\+File\+Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+File} \&}]{file}
+\end{DoxyParamCaption}
+)}\label{class_q_file_info_a33f5eaacd649938cf6a915817384c1f4}
+Constructs a new \hyperlink{class_q_file_info}{Q\+File\+Info} that gives information about {\itshape file}.
+
+If the file has a relative path, the \hyperlink{class_q_file_info}{Q\+File\+Info} will also have one.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a5bb164facc2c9197c74868cfce06c14a}{is\+Relative()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a6d57e31d5a4a8e6b6d405d2dd68641b5}{}\index{Q\+File\+Info@{Q\+File\+Info}!Q\+File\+Info@{Q\+File\+Info}}
+\index{Q\+File\+Info@{Q\+File\+Info}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{Q\+File\+Info(const Q\+Dir \&, const Q\+String \&file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+File\+Info\+::\+Q\+File\+Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Dir} \&}]{d, }
+\item[{const {\bf Q\+String} \&}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{class_q_file_info_a6d57e31d5a4a8e6b6d405d2dd68641b5}
+Constructs a new \hyperlink{class_q_file_info}{Q\+File\+Info} that gives information about the file named {\itshape file\+Name} in the directory {\itshape d}.
+
+If the directory has a relative path, the \hyperlink{class_q_file_info}{Q\+File\+Info} will also have one.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a5bb164facc2c9197c74868cfce06c14a}{is\+Relative()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_ab147e0bd29337bd3d8d911c5666a941a}{}\index{Q\+File\+Info@{Q\+File\+Info}!Q\+File\+Info@{Q\+File\+Info}}
+\index{Q\+File\+Info@{Q\+File\+Info}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{Q\+File\+Info(const Q\+File\+Info \&)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+File\+Info\+::\+Q\+File\+Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+File\+Info} \&}]{fi}
+\end{DoxyParamCaption}
+)}\label{class_q_file_info_ab147e0bd29337bd3d8d911c5666a941a}
+Constructs a new \hyperlink{class_q_file_info}{Q\+File\+Info} that is a copy of {\itshape fi}. \hypertarget{class_q_file_info_a37e6d4bbfffdd1b9d055923f3f0f4d7c}{}\index{Q\+File\+Info@{Q\+File\+Info}!````~Q\+File\+Info@{$\sim$\+Q\+File\+Info}}
+\index{````~Q\+File\+Info@{$\sim$\+Q\+File\+Info}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{$\sim$\+Q\+File\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+File\+Info\+::$\sim$\+Q\+File\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_file_info_a37e6d4bbfffdd1b9d055923f3f0f4d7c}
+Destructs the \hyperlink{class_q_file_info}{Q\+File\+Info}. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_file_info_acfaefbbf6f28d9733d51b699dcf30fc7}{}\index{Q\+File\+Info@{Q\+File\+Info}!abs\+File\+Path@{abs\+File\+Path}}
+\index{abs\+File\+Path@{abs\+File\+Path}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{abs\+File\+Path() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+File\+Info\+::abs\+File\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_acfaefbbf6f28d9733d51b699dcf30fc7}
+Returns the absolute path name.
+
+The absolute path name is the file name including the absolute path. If the \hyperlink{class_q_file_info}{Q\+File\+Info} is absolute (i.\+e. not relative) this function will return the same string as \hyperlink{class_q_file_info_a33f601c76f569d2a7e412c6737415115}{file\+Path()}.
+
+Note that this function can be time-\/consuming under U\+N\+I\+X. (in the order of milliseconds on a 486 D\+X2/66 running Linux).
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a5bb164facc2c9197c74868cfce06c14a}{is\+Relative()}, \hyperlink{class_q_file_info_a33f601c76f569d2a7e412c6737415115}{file\+Path()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_ad92985ac2917cca9a05bcff8d78b97b1}{}\index{Q\+File\+Info@{Q\+File\+Info}!base\+Name@{base\+Name}}
+\index{base\+Name@{base\+Name}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{base\+Name() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+File\+Info\+::base\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_ad92985ac2917cca9a05bcff8d78b97b1}
+Returns the base name of the file.
+
+The base name consists of all characters in the file name up to (but not including) the first \textquotesingle{}.\textquotesingle{} character. The path is not included.
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_file_info}{QFileInfo} fi( \textcolor{stringliteral}{"/tmp/abdomen.lower"} );
+\hyperlink{class_q_string}{QString} base = fi.\hyperlink{class_q_file_info_ad92985ac2917cca9a05bcff8d78b97b1}{baseName}();        \textcolor{comment}{// base = "abdomen"}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_aabf62d1b0490784be027aa3de085bec1}{file\+Name()}, \hyperlink{class_q_file_info_a2f5d2e6e6a0ddfbb52976de7a97c7a2c}{extension()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a964c4089a9a867128055209651c01867}{}\index{Q\+File\+Info@{Q\+File\+Info}!caching@{caching}}
+\index{caching@{caching}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{caching() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+Info\+::caching (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_file_info_a964c4089a9a867128055209651c01867}
+Returns T\+R\+U\+E if caching is enabled. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a9f2d5de0b83ff0c42b0004574ec9ddf5}{set\+Caching()}, \hyperlink{class_q_file_info_aed469b2b04fe04a80424e8d94f7d9978}{refresh()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a3a4b0328b3fd423e0cfb0747445760b8}{}\index{Q\+File\+Info@{Q\+File\+Info}!convert\+To\+Abs@{convert\+To\+Abs}}
+\index{convert\+To\+Abs@{convert\+To\+Abs}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{convert\+To\+Abs()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+Info\+::convert\+To\+Abs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_file_info_a3a4b0328b3fd423e0cfb0747445760b8}
+Converts the file path name to an absolute path.
+
+If it is already absolute nothing is done.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a33f601c76f569d2a7e412c6737415115}{file\+Path()}, \hyperlink{class_q_file_info_a5bb164facc2c9197c74868cfce06c14a}{is\+Relative()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_ab15cdf011c680004885a5c30cbcbfbf2}{}\index{Q\+File\+Info@{Q\+File\+Info}!dir@{dir}}
+\index{dir@{dir}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{dir(bool abs\+Path=\+F\+A\+L\+S\+E) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Dir} Q\+File\+Info\+::dir (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{abs\+Path = {\ttfamily {\bf F\+A\+L\+S\+E}}}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_ab15cdf011c680004885a5c30cbcbfbf2}
+Returns the directory path of the file.
+
+If the \hyperlink{class_q_file_info}{Q\+File\+Info} is relative and {\itshape abs\+Path} is F\+A\+L\+S\+E, the \hyperlink{class_q_dir}{Q\+Dir} will be relative, otherwise it will be absolute.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a57e435be78208b888116a1b7e9408d7e}{dir\+Path()}, \hyperlink{class_q_file_info_a33f601c76f569d2a7e412c6737415115}{file\+Path()}, \hyperlink{class_q_file_info_aabf62d1b0490784be027aa3de085bec1}{file\+Name()}, \hyperlink{class_q_file_info_a5bb164facc2c9197c74868cfce06c14a}{is\+Relative()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a57e435be78208b888116a1b7e9408d7e}{}\index{Q\+File\+Info@{Q\+File\+Info}!dir\+Path@{dir\+Path}}
+\index{dir\+Path@{dir\+Path}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{dir\+Path(bool abs\+Path=\+F\+A\+L\+S\+E) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+File\+Info\+::dir\+Path (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{abs\+Path = {\ttfamily {\bf F\+A\+L\+S\+E}}}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_a57e435be78208b888116a1b7e9408d7e}
+Returns the directory path of the file.
+
+If {\itshape abs\+Path} is T\+R\+U\+E an absolute path is always returned.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_ab15cdf011c680004885a5c30cbcbfbf2}{dir()}, \hyperlink{class_q_file_info_a33f601c76f569d2a7e412c6737415115}{file\+Path()}, \hyperlink{class_q_file_info_aabf62d1b0490784be027aa3de085bec1}{file\+Name()}, \hyperlink{class_q_file_info_a5bb164facc2c9197c74868cfce06c14a}{is\+Relative()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_aef52b667c4809f0e0061c6f39ab72aea}{}\index{Q\+File\+Info@{Q\+File\+Info}!exists@{exists}}
+\index{exists@{exists}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{exists() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+Info\+::exists (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_aef52b667c4809f0e0061c6f39ab72aea}
+Returns T\+R\+U\+E if the file pointed to exists, otherwise F\+A\+L\+S\+E. \hypertarget{class_q_file_info_a2f5d2e6e6a0ddfbb52976de7a97c7a2c}{}\index{Q\+File\+Info@{Q\+File\+Info}!extension@{extension}}
+\index{extension@{extension}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{extension(bool complete=\+T\+R\+U\+E) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+File\+Info\+::extension (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{complete = {\ttfamily {\bf T\+R\+U\+E}}}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_a2f5d2e6e6a0ddfbb52976de7a97c7a2c}
+Returns the extension name of the file.
+
+If {\itshape complete} is T\+R\+U\+E (the default), \hyperlink{class_q_file_info_a2f5d2e6e6a0ddfbb52976de7a97c7a2c}{extension()} returns the string of all characters in the file name after (but not including) the first \textquotesingle{}.\textquotesingle{} character. For a file named \char`\"{}archive.\+tar.\+gz\char`\"{} this returns \char`\"{}tar.\+gz\char`\"{}.
+
+If {\itshape complete} is F\+A\+L\+S\+E, \hyperlink{class_q_file_info_a2f5d2e6e6a0ddfbb52976de7a97c7a2c}{extension()} returns the string of all characters in the file name after (but not including) the last \textquotesingle{}.\textquotesingle{} character. For a file named \char`\"{}archive.\+tar.\+gz\char`\"{} this returns \char`\"{}gz\char`\"{}.
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_file_info}{QFileInfo} fi( \textcolor{stringliteral}{"lex.yy.c"} );
+\hyperlink{class_q_string}{QString} ext = fi.\hyperlink{class_q_file_info_a2f5d2e6e6a0ddfbb52976de7a97c7a2c}{extension}();        \textcolor{comment}{// ext = "yy.c"}
+\hyperlink{class_q_string}{QString} ext = fi.\hyperlink{class_q_file_info_a2f5d2e6e6a0ddfbb52976de7a97c7a2c}{extension}( \hyperlink{qglobal_8h_a10e004b6916e78ff4ea8379be80b80cc}{FALSE} ); \textcolor{comment}{// ext = "c"}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_aabf62d1b0490784be027aa3de085bec1}{file\+Name()}, \hyperlink{class_q_file_info_ad92985ac2917cca9a05bcff8d78b97b1}{base\+Name()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_aabf62d1b0490784be027aa3de085bec1}{}\index{Q\+File\+Info@{Q\+File\+Info}!file\+Name@{file\+Name}}
+\index{file\+Name@{file\+Name}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{file\+Name() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+File\+Info\+::file\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_aabf62d1b0490784be027aa3de085bec1}
+Returns the name of the file, the file path is not included.
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_file_info}{QFileInfo} fi( \textcolor{stringliteral}{"/tmp/abdomen.lower"} );
+\hyperlink{class_q_string}{QString} name = fi.\hyperlink{class_q_file_info_aabf62d1b0490784be027aa3de085bec1}{fileName}();        \textcolor{comment}{// name = "abdomen.lower"}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a5bb164facc2c9197c74868cfce06c14a}{is\+Relative()}, \hyperlink{class_q_file_info_a33f601c76f569d2a7e412c6737415115}{file\+Path()}, \hyperlink{class_q_file_info_ad92985ac2917cca9a05bcff8d78b97b1}{base\+Name()}, \hyperlink{class_q_file_info_a2f5d2e6e6a0ddfbb52976de7a97c7a2c}{extension()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a33f601c76f569d2a7e412c6737415115}{}\index{Q\+File\+Info@{Q\+File\+Info}!file\+Path@{file\+Path}}
+\index{file\+Path@{file\+Path}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{file\+Path() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+File\+Info\+::file\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_a33f601c76f569d2a7e412c6737415115}
+Returns the name, i.\+e. the file name including the path (which can be absolute or relative).
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a5bb164facc2c9197c74868cfce06c14a}{is\+Relative()}, \hyperlink{class_q_file_info_acfaefbbf6f28d9733d51b699dcf30fc7}{abs\+File\+Path()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a47564fd62e9b11a39a2521cd0c085505}{}\index{Q\+File\+Info@{Q\+File\+Info}!group@{group}}
+\index{group@{group}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{group() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+File\+Info\+::group (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_a47564fd62e9b11a39a2521cd0c085505}
+Returns the group the file belongs to.
+
+On systems where files do not have groups this function always returns 0.
+
+Note that this function can be time-\/consuming under U\+N\+I\+X (in the order of milliseconds on a 486 D\+X2/66 running Linux).
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_ab907c9a7bc4e8990107cc832f3979963}{group\+Id()}, \hyperlink{class_q_file_info_a1f295bc64cd357225f9c9fd6185b55d3}{owner()}, \hyperlink{class_q_file_info_a09d4e3b703ba0f98b3c83e8d44d2acc9}{owner\+Id()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_ab907c9a7bc4e8990107cc832f3979963}{}\index{Q\+File\+Info@{Q\+File\+Info}!group\+Id@{group\+Id}}
+\index{group\+Id@{group\+Id}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{group\+Id() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint} Q\+File\+Info\+::group\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_ab907c9a7bc4e8990107cc832f3979963}
+Returns the id of the group the file belongs to.
+
+On systems where files do not have groups this function always returns ((uind) -\/2).
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a47564fd62e9b11a39a2521cd0c085505}{group()}, \hyperlink{class_q_file_info_a1f295bc64cd357225f9c9fd6185b55d3}{owner()}, \hyperlink{class_q_file_info_a09d4e3b703ba0f98b3c83e8d44d2acc9}{owner\+Id()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a93aecba4bcd72253d925e6028e8756f8}{}\index{Q\+File\+Info@{Q\+File\+Info}!is\+Dir@{is\+Dir}}
+\index{is\+Dir@{is\+Dir}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{is\+Dir() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+Info\+::is\+Dir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_a93aecba4bcd72253d925e6028e8756f8}
+Returns T\+R\+U\+E if we are pointing to a directory or a symbolic link to a directory. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_aede7d40196ddb197e303518f76f04fa3}{is\+File()}, \hyperlink{class_q_file_info_a5c902fd9a150a1479a9fa6155aba9136}{is\+Sym\+Link()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_ae43ad39dbb61fa3befc2555282d54717}{}\index{Q\+File\+Info@{Q\+File\+Info}!is\+Executable@{is\+Executable}}
+\index{is\+Executable@{is\+Executable}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{is\+Executable() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+Info\+::is\+Executable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_ae43ad39dbb61fa3befc2555282d54717}
+Returns T\+R\+U\+E if the file is executable. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a0982c9e0a0397b2341bad4137dd4b44c}{is\+Readable()}, \hyperlink{class_q_file_info_a1a3d14c1df303bc9174eea52a1dbccd6}{is\+Writable()}, \hyperlink{class_q_file_info_a4c3fe59a5d16f62320645d617259ccb7}{permission()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_aede7d40196ddb197e303518f76f04fa3}{}\index{Q\+File\+Info@{Q\+File\+Info}!is\+File@{is\+File}}
+\index{is\+File@{is\+File}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{is\+File() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+Info\+::is\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_aede7d40196ddb197e303518f76f04fa3}
+Returns T\+R\+U\+E if we are pointing to a real file. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a93aecba4bcd72253d925e6028e8756f8}{is\+Dir()}, \hyperlink{class_q_file_info_a5c902fd9a150a1479a9fa6155aba9136}{is\+Sym\+Link()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a0982c9e0a0397b2341bad4137dd4b44c}{}\index{Q\+File\+Info@{Q\+File\+Info}!is\+Readable@{is\+Readable}}
+\index{is\+Readable@{is\+Readable}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{is\+Readable() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+Info\+::is\+Readable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_a0982c9e0a0397b2341bad4137dd4b44c}
+Returns T\+R\+U\+E if the file is readable. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a1a3d14c1df303bc9174eea52a1dbccd6}{is\+Writable()}, \hyperlink{class_q_file_info_ae43ad39dbb61fa3befc2555282d54717}{is\+Executable()}, \hyperlink{class_q_file_info_a4c3fe59a5d16f62320645d617259ccb7}{permission()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a5bb164facc2c9197c74868cfce06c14a}{}\index{Q\+File\+Info@{Q\+File\+Info}!is\+Relative@{is\+Relative}}
+\index{is\+Relative@{is\+Relative}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{is\+Relative() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+Info\+::is\+Relative (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_a5bb164facc2c9197c74868cfce06c14a}
+Returns T\+R\+U\+E if the file path name is relative to the current directory, F\+A\+L\+S\+E if the path is absolute (e.\+g. under U\+N\+I\+X a path is relative if it does not start with a \textquotesingle{}/\textquotesingle{}).
+
+According to Einstein this function should always return T\+R\+U\+E. \hypertarget{class_q_file_info_a5c902fd9a150a1479a9fa6155aba9136}{}\index{Q\+File\+Info@{Q\+File\+Info}!is\+Sym\+Link@{is\+Sym\+Link}}
+\index{is\+Sym\+Link@{is\+Sym\+Link}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{is\+Sym\+Link() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+Info\+::is\+Sym\+Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_a5c902fd9a150a1479a9fa6155aba9136}
+Returns T\+R\+U\+E if we are pointing to a symbolic link. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_aede7d40196ddb197e303518f76f04fa3}{is\+File()}, \hyperlink{class_q_file_info_a93aecba4bcd72253d925e6028e8756f8}{is\+Dir()}, \hyperlink{class_q_file_info_a8d871b8ef2390811b5bf0546394173d2}{read\+Link()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a1a3d14c1df303bc9174eea52a1dbccd6}{}\index{Q\+File\+Info@{Q\+File\+Info}!is\+Writable@{is\+Writable}}
+\index{is\+Writable@{is\+Writable}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{is\+Writable() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+Info\+::is\+Writable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_a1a3d14c1df303bc9174eea52a1dbccd6}
+Returns T\+R\+U\+E if the file is writable. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a0982c9e0a0397b2341bad4137dd4b44c}{is\+Readable()}, \hyperlink{class_q_file_info_ae43ad39dbb61fa3befc2555282d54717}{is\+Executable()}, \hyperlink{class_q_file_info_a4c3fe59a5d16f62320645d617259ccb7}{permission()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a849c009637765455d956a43871cf57ee}{}\index{Q\+File\+Info@{Q\+File\+Info}!last\+Modified@{last\+Modified}}
+\index{last\+Modified@{last\+Modified}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{last\+Modified() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Date\+Time} Q\+File\+Info\+::last\+Modified (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_a849c009637765455d956a43871cf57ee}
+Returns the date and time when the file was last modified. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a76ff81425f8249238925960b4a6d670b}{last\+Read()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a76ff81425f8249238925960b4a6d670b}{}\index{Q\+File\+Info@{Q\+File\+Info}!last\+Read@{last\+Read}}
+\index{last\+Read@{last\+Read}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{last\+Read() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Date\+Time} Q\+File\+Info\+::last\+Read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_a76ff81425f8249238925960b4a6d670b}
+Returns the date and time when the file was last read (accessed).
+
+On systems that do not support last read times, the modification time is returned.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a849c009637765455d956a43871cf57ee}{last\+Modified()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_aa2a8e3037097440bf77f07d1c51f0369}{}\index{Q\+File\+Info@{Q\+File\+Info}!operator=@{operator=}}
+\index{operator=@{operator=}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{operator=(const Q\+File\+Info \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+File\+Info} \& Q\+File\+Info\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+File\+Info} \&}]{fi}
+\end{DoxyParamCaption}
+)}\label{class_q_file_info_aa2a8e3037097440bf77f07d1c51f0369}
+Makes a copy of {\itshape fi} and assigns it to this \hyperlink{class_q_file_info}{Q\+File\+Info}. \hypertarget{class_q_file_info_a1f295bc64cd357225f9c9fd6185b55d3}{}\index{Q\+File\+Info@{Q\+File\+Info}!owner@{owner}}
+\index{owner@{owner}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{owner() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+File\+Info\+::owner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_a1f295bc64cd357225f9c9fd6185b55d3}
+Returns the owner of the file.
+
+On systems where files do not have owners this function returns 0.
+
+Note that this function can be time-\/consuming under U\+N\+I\+X. (in the order of milliseconds on a 486 D\+X2/66 running Linux).
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a09d4e3b703ba0f98b3c83e8d44d2acc9}{owner\+Id()}, \hyperlink{class_q_file_info_a47564fd62e9b11a39a2521cd0c085505}{group()}, \hyperlink{class_q_file_info_ab907c9a7bc4e8990107cc832f3979963}{group\+Id()}
+\end{DoxySeeAlso}
+Returns the owner of the file.
+
+On systems where files do not have owners this function returns a null string.
+
+Note that this function can be time-\/consuming under U\+N\+I\+X. (in the order of milliseconds on a 486 D\+X2/66 running Linux).
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a09d4e3b703ba0f98b3c83e8d44d2acc9}{owner\+Id()}, \hyperlink{class_q_file_info_a47564fd62e9b11a39a2521cd0c085505}{group()}, \hyperlink{class_q_file_info_ab907c9a7bc4e8990107cc832f3979963}{group\+Id()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a09d4e3b703ba0f98b3c83e8d44d2acc9}{}\index{Q\+File\+Info@{Q\+File\+Info}!owner\+Id@{owner\+Id}}
+\index{owner\+Id@{owner\+Id}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{owner\+Id() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint} Q\+File\+Info\+::owner\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_a09d4e3b703ba0f98b3c83e8d44d2acc9}
+Returns the id of the owner of the file.
+
+On systems where files do not have owners this function returns ((uint) -\/2).
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a1f295bc64cd357225f9c9fd6185b55d3}{owner()}, \hyperlink{class_q_file_info_a47564fd62e9b11a39a2521cd0c085505}{group()}, \hyperlink{class_q_file_info_ab907c9a7bc4e8990107cc832f3979963}{group\+Id()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a4c3fe59a5d16f62320645d617259ccb7}{}\index{Q\+File\+Info@{Q\+File\+Info}!permission@{permission}}
+\index{permission@{permission}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{permission(int permission\+Spec) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+Info\+::permission (
+\begin{DoxyParamCaption}
+\item[{int}]{permission\+Spec}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_a4c3fe59a5d16f62320645d617259ccb7}
+Tests for file permissions. The {\itshape permission\+Spec} argument can be several flags of type Permission\+Spec or\textquotesingle{}ed together to check for permission combinations.
+
+On systems where files do not have permissions this function always returns T\+R\+U\+E.
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_file_info}{QFileInfo} fi( \textcolor{stringliteral}{"/tmp/tonsils"} );
+\textcolor{keywordflow}{if} ( fi.\hyperlink{class_q_file_info_a4c3fe59a5d16f62320645d617259ccb7}{permission}( \hyperlink{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9a9487edd08b766013a3c7510e3c251cb5}{QFileInfo::WriteUser} | 
+      \hyperlink{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9ade06bbfb0db36e83c4cbc6e5f991ce5b}{QFileInfo::ReadGroup} ) )
+\hyperlink{qglobal_8cpp_addd9b8ef474319fc95ba80d46fbd1e94}{qWarning}( \textcolor{stringliteral}{"Tonsils can be changed by me, and the group can read them."});
+\textcolor{keywordflow}{if} ( fi.\hyperlink{class_q_file_info_a4c3fe59a5d16f62320645d617259ccb7}{permission}( \hyperlink{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9a9990af2fdefec643c0961b5f3537a91c}{QFileInfo::WriteGroup} | 
+      \hyperlink{class_q_file_info_a7fa0cd94ba7f096133efda899aeafab9a37622a8bf9d69abc6491953c9e9837be}{QFileInfo::WriteOther} ) )
+\hyperlink{qglobal_8cpp_addd9b8ef474319fc95ba80d46fbd1e94}{qWarning}( \textcolor{stringliteral}{"Danger! Tonsils can be changed by the group or others!"} );
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a0982c9e0a0397b2341bad4137dd4b44c}{is\+Readable()}, \hyperlink{class_q_file_info_a1a3d14c1df303bc9174eea52a1dbccd6}{is\+Writable()}, \hyperlink{class_q_file_info_ae43ad39dbb61fa3befc2555282d54717}{is\+Executable()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a8d871b8ef2390811b5bf0546394173d2}{}\index{Q\+File\+Info@{Q\+File\+Info}!read\+Link@{read\+Link}}
+\index{read\+Link@{read\+Link}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{read\+Link() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+File\+Info\+::read\+Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_a8d871b8ef2390811b5bf0546394173d2}
+Returns the name a symlink points to, or a null \hyperlink{class_q_string}{Q\+String} if the object does not refer to a symbolic link.
+
+This name may not represent an existing file; it is only a string. \hyperlink{class_q_file_info_aef52b667c4809f0e0061c6f39ab72aea}{Q\+File\+Info\+::exists()} returns T\+R\+U\+E if the symlink points to an existing file.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_aef52b667c4809f0e0061c6f39ab72aea}{exists()}, \hyperlink{class_q_file_info_a5c902fd9a150a1479a9fa6155aba9136}{is\+Sym\+Link()}, \hyperlink{class_q_file_info_a93aecba4bcd72253d925e6028e8756f8}{is\+Dir()}, \hyperlink{class_q_file_info_aede7d40196ddb197e303518f76f04fa3}{is\+File()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_aed469b2b04fe04a80424e8d94f7d9978}{}\index{Q\+File\+Info@{Q\+File\+Info}!refresh@{refresh}}
+\index{refresh@{refresh}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{refresh() const }]{\setlength{\rightskip}{0pt plus 5cm}void Q\+File\+Info\+::refresh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_aed469b2b04fe04a80424e8d94f7d9978}
+Refresh the information about the file, i.\+e. read in information from the file system the next time a cached property is fetched.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a9f2d5de0b83ff0c42b0004574ec9ddf5}{set\+Caching()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a9f2d5de0b83ff0c42b0004574ec9ddf5}{}\index{Q\+File\+Info@{Q\+File\+Info}!set\+Caching@{set\+Caching}}
+\index{set\+Caching@{set\+Caching}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{set\+Caching(bool)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+File\+Info\+::set\+Caching (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{enable}
+\end{DoxyParamCaption}
+)}\label{class_q_file_info_a9f2d5de0b83ff0c42b0004574ec9ddf5}
+Enables caching of file information if {\itshape enable} is T\+R\+U\+E, or disables it if {\itshape enable} is F\+A\+L\+S\+E.
+
+When caching is enabled, \hyperlink{class_q_file_info}{Q\+File\+Info} reads the file information the first time
+
+Caching is enabled by default.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_aed469b2b04fe04a80424e8d94f7d9978}{refresh()}, \hyperlink{class_q_file_info_a964c4089a9a867128055209651c01867}{caching()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a6215e0e8c9466ee7db82c13259655b98}{}\index{Q\+File\+Info@{Q\+File\+Info}!set\+File@{set\+File}}
+\index{set\+File@{set\+File}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{set\+File(const Q\+String \&file)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+File\+Info\+::set\+File (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{file}
+\end{DoxyParamCaption}
+)}\label{class_q_file_info_a6215e0e8c9466ee7db82c13259655b98}
+Sets the file to obtain information about.
+
+The string given can be an absolute or a relative file path. Absolute file paths begin with the directory separator (e.\+g. \textquotesingle{}/\textquotesingle{} under U\+N\+I\+X) or a drive specification (not applicable to U\+N\+I\+X). Relative file names begin with a directory name or a file name and specify a path relative to the current directory.
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include <\hyperlink{qfileinfo_8h}{qfileinfo.h}>}
+\textcolor{preprocessor}{#include <\hyperlink{qdir_8h}{qdir.h}>}
+
+\textcolor{keywordtype}{void} test()
+\{
+\hyperlink{class_q_string}{QString} absolute = \textcolor{stringliteral}{"/liver/aorta"};
+\hyperlink{class_q_string}{QString} relative = \textcolor{stringliteral}{"liver/aorta"};
+\hyperlink{class_q_file_info}{QFileInfo} fi1( absolute );
+\hyperlink{class_q_file_info}{QFileInfo} fi2( relative );
+
+\hyperlink{class_q_dir_a61b45775b8b1e2d9ebe069e481f5dc9d}{QDir::setCurrent}( \hyperlink{class_q_dir_a66d4102cf6087d51057f8fbd0028def9}{QDir::rootDirPath}() );
+          \textcolor{comment}{// fi1 and fi2 now point to the same file}
+
+\hyperlink{class_q_dir_a61b45775b8b1e2d9ebe069e481f5dc9d}{QDir::setCurrent}( \textcolor{stringliteral}{"/tmp"} );
+          \textcolor{comment}{// fi1 now points to "/liver/aorta",}
+          \textcolor{comment}{// while fi2 points to "/tmp/liver/aorta"}
+\}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a5bb164facc2c9197c74868cfce06c14a}{is\+Relative()}, \hyperlink{class_q_dir_a61b45775b8b1e2d9ebe069e481f5dc9d}{Q\+Dir\+::set\+Current()}, \hyperlink{class_q_dir_a500524767f07a8cf127392859cc41d49}{Q\+Dir\+::is\+Relative\+Path()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a9a90b344f26a58641fa784efbaa3ce6e}{}\index{Q\+File\+Info@{Q\+File\+Info}!set\+File@{set\+File}}
+\index{set\+File@{set\+File}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{set\+File(const Q\+File \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+File\+Info\+::set\+File (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+File} \&}]{file}
+\end{DoxyParamCaption}
+)}\label{class_q_file_info_a9a90b344f26a58641fa784efbaa3ce6e}
+Sets the file to obtain information about.
+
+If the file has a relative path, the \hyperlink{class_q_file_info}{Q\+File\+Info} will also have one.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a5bb164facc2c9197c74868cfce06c14a}{is\+Relative()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a12f26e174efbe009fbda56c5344db89a}{}\index{Q\+File\+Info@{Q\+File\+Info}!set\+File@{set\+File}}
+\index{set\+File@{set\+File}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{set\+File(const Q\+Dir \&, const Q\+String \&file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+File\+Info\+::set\+File (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Dir} \&}]{d, }
+\item[{const {\bf Q\+String} \&}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{class_q_file_info_a12f26e174efbe009fbda56c5344db89a}
+Sets the file to obtains information about to {\itshape file\+Name} in the directory {\itshape d}.
+
+If the directory has a relative path, the \hyperlink{class_q_file_info}{Q\+File\+Info} will also have one.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_info_a5bb164facc2c9197c74868cfce06c14a}{is\+Relative()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_info_a0828a6759b013f6d05a5579ba60c21d4}{}\index{Q\+File\+Info@{Q\+File\+Info}!size@{size}}
+\index{size@{size}!Q\+File\+Info@{Q\+File\+Info}}
+\subsubsection[{size() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint} Q\+File\+Info\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_info_a0828a6759b013f6d05a5579ba60c21d4}
+Returns the file size in bytes, or 0 if the file does not exist if the size cannot be fetched. 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qfileinfo_8h}{qfileinfo.\+h}\item 
+qtools/\hyperlink{qfileinfo_8cpp}{qfileinfo.\+cpp}\item 
+qtools/\hyperlink{qfileinfo__unix_8cpp}{qfileinfo\+\_\+unix.\+cpp}\item 
+qtools/\hyperlink{qfileinfo__win32_8cpp}{qfileinfo\+\_\+win32.\+cpp}\end{DoxyCompactItemize}

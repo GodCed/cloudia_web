@@ -1,0 +1,97 @@
+\hypertarget{qtl_8h}{}\section{Référence du fichier qtools/qtl.h}
+\label{qtl_8h}\index{qtools/qtl.\+h@{qtools/qtl.\+h}}
+{\ttfamily \#include \char`\"{}qtextstream.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qstring.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_q_text_o_stream_iterator}{Q\+Text\+O\+Stream\+Iterator$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Input\+Iterator , class Output\+Iterator $>$ }\\Output\+Iterator \hyperlink{qtl_8h_a4038a9cab6d965f6fc62babe3b5a22e6}{q\+Copy} (Input\+Iterator \+\_\+begin, Input\+Iterator \+\_\+end, Output\+Iterator \+\_\+dest)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{qtl_8h_a2516f19f53bef26e28346bed8fc24b32}{q\+Swap} (T \&\+\_\+value1, T \&\+\_\+value2)
+\item 
+{\footnotesize template$<$class Input\+Iterator $>$ }\\void \hyperlink{qtl_8h_aed508e0118549c943d14915b3c9a193d}{q\+Bubble\+Sort} (Input\+Iterator \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b}, Input\+Iterator \hyperlink{060__command__switch_8tcl_aff65a51a703804e0ad1adbcfd76c86f8}{e})
+\item 
+{\footnotesize template$<$class Container $>$ }\\void \hyperlink{qtl_8h_a376c2924267e90f9a9b5e74dbe9db499}{q\+Bubble\+Sort} (Container \&\hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})
+\item 
+{\footnotesize template$<$class Value $>$ }\\void \hyperlink{qtl_8h_a56fc21cb303bee09f0a2fe7b9c5b8959}{q\+Heap\+Sort\+Push\+Down} (Value $\ast$heap, int first, int last)
+\item 
+{\footnotesize template$<$class Input\+Iterator , class Value $>$ }\\void \hyperlink{qtl_8h_a632af6a632eecd132e824cbe94bc9b24}{q\+Heap\+Sort\+Helper} (Input\+Iterator \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b}, Input\+Iterator \hyperlink{060__command__switch_8tcl_aff65a51a703804e0ad1adbcfd76c86f8}{e}, Value, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{060__command__switch_8tcl_acdde3cd86eb2421ce8dbb2e85227d368}{n})
+\item 
+{\footnotesize template$<$class Input\+Iterator $>$ }\\void \hyperlink{qtl_8h_a6600ed7d73f6b27aae12d2ce7d07c89a}{q\+Heap\+Sort} (Input\+Iterator \hyperlink{060__command__switch_8tcl_a68bdb74c144118d936931c46f75d4b3e}{b}, Input\+Iterator \hyperlink{060__command__switch_8tcl_aff65a51a703804e0ad1adbcfd76c86f8}{e})
+\item 
+{\footnotesize template$<$class Container $>$ }\\void \hyperlink{qtl_8h_a7dc05ee10f92890723db4d93f5da1397}{q\+Heap\+Sort} (Container \&\hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{qtl_8h_aed508e0118549c943d14915b3c9a193d}{}\index{qtl.\+h@{qtl.\+h}!q\+Bubble\+Sort@{q\+Bubble\+Sort}}
+\index{q\+Bubble\+Sort@{q\+Bubble\+Sort}!qtl.\+h@{qtl.\+h}}
+\subsubsection[{q\+Bubble\+Sort(\+Input\+Iterator b, Input\+Iterator e)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Input\+Iterator $>$ void q\+Bubble\+Sort (
+\begin{DoxyParamCaption}
+\item[{Input\+Iterator}]{b, }
+\item[{Input\+Iterator}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qtl_8h_aed508e0118549c943d14915b3c9a193d}
+\hypertarget{qtl_8h_a376c2924267e90f9a9b5e74dbe9db499}{}\index{qtl.\+h@{qtl.\+h}!q\+Bubble\+Sort@{q\+Bubble\+Sort}}
+\index{q\+Bubble\+Sort@{q\+Bubble\+Sort}!qtl.\+h@{qtl.\+h}}
+\subsubsection[{q\+Bubble\+Sort(\+Container \&c)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container $>$ void q\+Bubble\+Sort (
+\begin{DoxyParamCaption}
+\item[{Container \&}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qtl_8h_a376c2924267e90f9a9b5e74dbe9db499}
+\hypertarget{qtl_8h_a4038a9cab6d965f6fc62babe3b5a22e6}{}\index{qtl.\+h@{qtl.\+h}!q\+Copy@{q\+Copy}}
+\index{q\+Copy@{q\+Copy}!qtl.\+h@{qtl.\+h}}
+\subsubsection[{q\+Copy(\+Input\+Iterator \+\_\+begin, Input\+Iterator \+\_\+end, Output\+Iterator \+\_\+dest)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Input\+Iterator , class Output\+Iterator $>$ Output\+Iterator q\+Copy (
+\begin{DoxyParamCaption}
+\item[{Input\+Iterator}]{\+\_\+begin, }
+\item[{Input\+Iterator}]{\+\_\+end, }
+\item[{Output\+Iterator}]{\+\_\+dest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qtl_8h_a4038a9cab6d965f6fc62babe3b5a22e6}
+\hypertarget{qtl_8h_a6600ed7d73f6b27aae12d2ce7d07c89a}{}\index{qtl.\+h@{qtl.\+h}!q\+Heap\+Sort@{q\+Heap\+Sort}}
+\index{q\+Heap\+Sort@{q\+Heap\+Sort}!qtl.\+h@{qtl.\+h}}
+\subsubsection[{q\+Heap\+Sort(\+Input\+Iterator b, Input\+Iterator e)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Input\+Iterator $>$ void q\+Heap\+Sort (
+\begin{DoxyParamCaption}
+\item[{Input\+Iterator}]{b, }
+\item[{Input\+Iterator}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qtl_8h_a6600ed7d73f6b27aae12d2ce7d07c89a}
+\hypertarget{qtl_8h_a7dc05ee10f92890723db4d93f5da1397}{}\index{qtl.\+h@{qtl.\+h}!q\+Heap\+Sort@{q\+Heap\+Sort}}
+\index{q\+Heap\+Sort@{q\+Heap\+Sort}!qtl.\+h@{qtl.\+h}}
+\subsubsection[{q\+Heap\+Sort(\+Container \&c)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container $>$ void q\+Heap\+Sort (
+\begin{DoxyParamCaption}
+\item[{Container \&}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qtl_8h_a7dc05ee10f92890723db4d93f5da1397}
+\hypertarget{qtl_8h_a632af6a632eecd132e824cbe94bc9b24}{}\index{qtl.\+h@{qtl.\+h}!q\+Heap\+Sort\+Helper@{q\+Heap\+Sort\+Helper}}
+\index{q\+Heap\+Sort\+Helper@{q\+Heap\+Sort\+Helper}!qtl.\+h@{qtl.\+h}}
+\subsubsection[{q\+Heap\+Sort\+Helper(\+Input\+Iterator b, Input\+Iterator e, Value, uint n)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Input\+Iterator , class Value $>$ void q\+Heap\+Sort\+Helper (
+\begin{DoxyParamCaption}
+\item[{Input\+Iterator}]{b, }
+\item[{Input\+Iterator}]{e, }
+\item[{Value}]{, }
+\item[{{\bf uint}}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qtl_8h_a632af6a632eecd132e824cbe94bc9b24}
+\hypertarget{qtl_8h_a56fc21cb303bee09f0a2fe7b9c5b8959}{}\index{qtl.\+h@{qtl.\+h}!q\+Heap\+Sort\+Push\+Down@{q\+Heap\+Sort\+Push\+Down}}
+\index{q\+Heap\+Sort\+Push\+Down@{q\+Heap\+Sort\+Push\+Down}!qtl.\+h@{qtl.\+h}}
+\subsubsection[{q\+Heap\+Sort\+Push\+Down(\+Value $\ast$heap, int first, int last)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Value $>$ void q\+Heap\+Sort\+Push\+Down (
+\begin{DoxyParamCaption}
+\item[{Value $\ast$}]{heap, }
+\item[{int}]{first, }
+\item[{int}]{last}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qtl_8h_a56fc21cb303bee09f0a2fe7b9c5b8959}
+\hypertarget{qtl_8h_a2516f19f53bef26e28346bed8fc24b32}{}\index{qtl.\+h@{qtl.\+h}!q\+Swap@{q\+Swap}}
+\index{q\+Swap@{q\+Swap}!qtl.\+h@{qtl.\+h}}
+\subsubsection[{q\+Swap(\+T \&\+\_\+value1, T \&\+\_\+value2)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void q\+Swap (
+\begin{DoxyParamCaption}
+\item[{T \&}]{\+\_\+value1, }
+\item[{T \&}]{\+\_\+value2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qtl_8h_a2516f19f53bef26e28346bed8fc24b32}

@@ -1,0 +1,32 @@
+var connection = require('../db.js');
+
+
+module.exports = function (req, res) {
+    if(req.method == 'GET') {
+        get(req, res);
+    } else {
+        other(req, res);
+    }
+};
+
+function get(req, res){
+    console.log(connection);
+    connection.query('SELECT * from station', function(err, rows, fields) {
+        if(!err) {
+            var name_list = {station: Array()};
+            for(var i = 0; i < rows.length; ++i)
+                name_list.station.push(rows[i]);
+            
+            res.contentType('application/json');
+            res.setHeader("Access-Control-Allow-Origin", "*");
+            res.send(JSON.stringify(name_list));
+        } else {
+            res.send('Db query failed');
+            console.log(err.toString());
+        }
+    });
+}
+
+function other(req, res){
+    res.send('Not found.');
+}

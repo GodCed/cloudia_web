@@ -1,0 +1,107 @@
+\hypertarget{class_graph_handler}{}\section{Référence de la classe Graph\+Handler}
+\label{class_graph_handler}\index{Graph\+Handler@{Graph\+Handler}}
+
+
+{\ttfamily \#include $<$graphhandler.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Graph\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.509434cm]{class_graph_handler}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graph_handler_a51f06fa9225e0f5d074972db4b063d2d}{Graph\+Handler} (\hyperlink{class_i_base_handler}{I\+Base\+Handler} $\ast$parent, const char $\ast$end\+Tag)
+\item 
+virtual \hyperlink{class_graph_handler_a6b0d53248b0e2c2bac728a6db448236c}{$\sim$\+Graph\+Handler} ()
+\item 
+void \hyperlink{class_graph_handler_a5da61c7fea27c41f6bf6bd793a72ae1c}{start\+Graph} (const \hyperlink{class_q_xml_attributes}{Q\+Xml\+Attributes} \&attrib)
+\item 
+void \hyperlink{class_graph_handler_a6485764ae40328b3f94b49ab43293287}{end\+Graph} ()
+\item 
+void \hyperlink{class_graph_handler_a681595998c8b91270b3522456cfca6c8}{start\+Node} (const \hyperlink{class_q_xml_attributes}{Q\+Xml\+Attributes} \&attrib)
+\item 
+\hyperlink{class_node_handler}{Node\+Handler} $\ast$ \hyperlink{class_graph_handler_a8558cadcad38d2f56b1edafb2d4bc4ae}{get\+Node\+By\+Id} (const \hyperlink{class_q_string}{Q\+String} \&id) const 
+\item 
+virtual \hyperlink{class_i_node_iterator}{I\+Node\+Iterator} $\ast$ \hyperlink{class_graph_handler_abe41abd519d96a3ee62e6fd9dc4ee5a8}{nodes} () const 
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_graph_handler_ac5a1d2c6036b7ba1894a7c3b8d96a312}{Node\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_graph_handler_a51f06fa9225e0f5d074972db4b063d2d}{}\index{Graph\+Handler@{Graph\+Handler}!Graph\+Handler@{Graph\+Handler}}
+\index{Graph\+Handler@{Graph\+Handler}!Graph\+Handler@{Graph\+Handler}}
+\subsubsection[{Graph\+Handler(\+I\+Base\+Handler $\ast$parent, const char $\ast$end\+Tag)}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+Handler\+::\+Graph\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Base\+Handler} $\ast$}]{parent, }
+\item[{const char $\ast$}]{end\+Tag}
+\end{DoxyParamCaption}
+)}\label{class_graph_handler_a51f06fa9225e0f5d074972db4b063d2d}
+\hypertarget{class_graph_handler_a6b0d53248b0e2c2bac728a6db448236c}{}\index{Graph\+Handler@{Graph\+Handler}!````~Graph\+Handler@{$\sim$\+Graph\+Handler}}
+\index{````~Graph\+Handler@{$\sim$\+Graph\+Handler}!Graph\+Handler@{Graph\+Handler}}
+\subsubsection[{$\sim$\+Graph\+Handler()}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+Handler\+::$\sim$\+Graph\+Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_graph_handler_a6b0d53248b0e2c2bac728a6db448236c}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_graph_handler_a6485764ae40328b3f94b49ab43293287}{}\index{Graph\+Handler@{Graph\+Handler}!end\+Graph@{end\+Graph}}
+\index{end\+Graph@{end\+Graph}!Graph\+Handler@{Graph\+Handler}}
+\subsubsection[{end\+Graph()}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+Handler\+::end\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_graph_handler_a6485764ae40328b3f94b49ab43293287}
+\hypertarget{class_graph_handler_a8558cadcad38d2f56b1edafb2d4bc4ae}{}\index{Graph\+Handler@{Graph\+Handler}!get\+Node\+By\+Id@{get\+Node\+By\+Id}}
+\index{get\+Node\+By\+Id@{get\+Node\+By\+Id}!Graph\+Handler@{Graph\+Handler}}
+\subsubsection[{get\+Node\+By\+Id(const Q\+String \&id) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node\+Handler} $\ast$ Graph\+Handler\+::get\+Node\+By\+Id (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{id}
+\end{DoxyParamCaption}
+) const}\label{class_graph_handler_a8558cadcad38d2f56b1edafb2d4bc4ae}
+\hypertarget{class_graph_handler_abe41abd519d96a3ee62e6fd9dc4ee5a8}{}\index{Graph\+Handler@{Graph\+Handler}!nodes@{nodes}}
+\index{nodes@{nodes}!Graph\+Handler@{Graph\+Handler}}
+\subsubsection[{nodes() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Node\+Iterator} $\ast$ Graph\+Handler\+::nodes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_graph_handler_abe41abd519d96a3ee62e6fd9dc4ee5a8}
+
+
+Implémente \hyperlink{class_i_graph_a013481bb03c951bab9ca84be208a8d53}{I\+Graph}.
+
+\hypertarget{class_graph_handler_a5da61c7fea27c41f6bf6bd793a72ae1c}{}\index{Graph\+Handler@{Graph\+Handler}!start\+Graph@{start\+Graph}}
+\index{start\+Graph@{start\+Graph}!Graph\+Handler@{Graph\+Handler}}
+\subsubsection[{start\+Graph(const Q\+Xml\+Attributes \&attrib)}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+Handler\+::start\+Graph (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Xml\+Attributes} \&}]{attrib}
+\end{DoxyParamCaption}
+)}\label{class_graph_handler_a5da61c7fea27c41f6bf6bd793a72ae1c}
+\hypertarget{class_graph_handler_a681595998c8b91270b3522456cfca6c8}{}\index{Graph\+Handler@{Graph\+Handler}!start\+Node@{start\+Node}}
+\index{start\+Node@{start\+Node}!Graph\+Handler@{Graph\+Handler}}
+\subsubsection[{start\+Node(const Q\+Xml\+Attributes \&attrib)}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+Handler\+::start\+Node (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Xml\+Attributes} \&}]{attrib}
+\end{DoxyParamCaption}
+)}\label{class_graph_handler_a681595998c8b91270b3522456cfca6c8}
+
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_graph_handler_ac5a1d2c6036b7ba1894a7c3b8d96a312}{}\index{Graph\+Handler@{Graph\+Handler}!Node\+Iterator@{Node\+Iterator}}
+\index{Node\+Iterator@{Node\+Iterator}!Graph\+Handler@{Graph\+Handler}}
+\subsubsection[{Node\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Node\+Iterator}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_graph_handler_ac5a1d2c6036b7ba1894a7c3b8d96a312}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+addon/doxmlparser/src/\hyperlink{graphhandler_8h}{graphhandler.\+h}\item 
+addon/doxmlparser/src/\hyperlink{graphhandler_8cpp}{graphhandler.\+cpp}\end{DoxyCompactItemize}

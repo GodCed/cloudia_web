@@ -1,0 +1,143 @@
+\hypertarget{class_debug}{}\section{Référence de la classe Debug}
+\label{class_debug}\index{Debug@{Debug}}
+
+
+{\ttfamily \#include $<$debug.\+h$>$}
+
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_debug_a9e0b892a8030a4f64076850777991c96}{Debug\+Mask} \{ \\*
+\hyperlink{class_debug_a9e0b892a8030a4f64076850777991c96aa1079d9a4345660aa3e283c322fd12f3}{Quiet} = 0x00000000, 
+\hyperlink{class_debug_a9e0b892a8030a4f64076850777991c96ac4d3bb469126ba5f5ba50c724219edf5}{Find\+Members} = 0x00000001, 
+\hyperlink{class_debug_a9e0b892a8030a4f64076850777991c96a6988d421a5b346541cb4f804054562a4}{Functions} = 0x00000002, 
+\hyperlink{class_debug_a9e0b892a8030a4f64076850777991c96a442859fe9afb29937aeeac886b911f64}{Variables} = 0x00000004, 
+\\*
+\hyperlink{class_debug_a9e0b892a8030a4f64076850777991c96aec63880706f2286cd7ca9057bf407e2f}{Preprocessor} = 0x00000008, 
+\hyperlink{class_debug_a9e0b892a8030a4f64076850777991c96ae45530210daeb78c35e1b4c078277c8f}{Classes} = 0x00000010, 
+\hyperlink{class_debug_a9e0b892a8030a4f64076850777991c96af158610d0a0e6dd08ec7cab215168fa5}{Comment\+Cnv} = 0x00000020, 
+\hyperlink{class_debug_a9e0b892a8030a4f64076850777991c96afeb3ede15e44e56c363351c25efd2504}{Comment\+Scan} = 0x00000040, 
+\\*
+\hyperlink{class_debug_a9e0b892a8030a4f64076850777991c96ab57325adbf79149e4bd7a010d6e83499}{Validate} = 0x00000080, 
+\hyperlink{class_debug_a9e0b892a8030a4f64076850777991c96a92b8cea26e6d5e2a5d3d04b63686bb2b}{Print\+Tree} = 0x00000100, 
+\hyperlink{class_debug_a9e0b892a8030a4f64076850777991c96a9cbd5d3516ffd3fe86238779edb2f7c5}{Time} = 0x00000200, 
+\hyperlink{class_debug_a9e0b892a8030a4f64076850777991c96a8dbe64e9ab683833c1ea7252649058a3}{Ext\+Cmd} = 0x00000400, 
+\\*
+\hyperlink{class_debug_a9e0b892a8030a4f64076850777991c96a4e7a964cec1d0423c74ab7045c1f6f6d}{Markdown} = 0x00000800, 
+\hyperlink{class_debug_a9e0b892a8030a4f64076850777991c96a5e47cf9df9552fe30480288b70288d72}{Filter\+Output} = 0x00001000, 
+\hyperlink{class_debug_a9e0b892a8030a4f64076850777991c96a0c1d42bd6b09e5427669a49f082e823b}{Lex} = 0x00002000
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_debug_a5d86ffebf96f9f75b6c957db5f831da3}{print} (\hyperlink{class_debug_a9e0b892a8030a4f64076850777991c96}{Debug\+Mask} mask, int prio, const char $\ast$fmt,...)
+\item 
+static int \hyperlink{class_debug_a24711079b52ca1e61539e7caa4ca61d8}{set\+Flag} (const char $\ast$label)
+\item 
+static void \hyperlink{class_debug_a1e78a9cfc37f50990e7701d56f7bf207}{clear\+Flag} (const char $\ast$label)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_debug_a92b0668ebfb43903d82ad112bf6c84e1}{is\+Flag\+Set} (\hyperlink{class_debug_a9e0b892a8030a4f64076850777991c96}{Debug\+Mask} mask)
+\item 
+static void \hyperlink{class_debug_a9a7dd2cc5af4551bf2d34ce8ba5a78b7}{print\+Flags} (void)
+\item 
+static void \hyperlink{class_debug_a666b610770dd7b7c0a87f2415aefe7d9}{set\+Priority} (int \hyperlink{060__command__switch_8tcl_a15229b450f26d8fa1c10bea4f3279f4d}{p})
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Class containing a print function for diagnostics. 
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{class_debug_a9e0b892a8030a4f64076850777991c96}{}\index{Debug@{Debug}!Debug\+Mask@{Debug\+Mask}}
+\index{Debug\+Mask@{Debug\+Mask}!Debug@{Debug}}
+\subsubsection[{Debug\+Mask}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Debug\+::\+Debug\+Mask}}\label{class_debug_a9e0b892a8030a4f64076850777991c96}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Quiet@{Quiet}!Debug@{Debug}}\index{Debug@{Debug}!Quiet@{Quiet}}\item[{\em 
+\hypertarget{class_debug_a9e0b892a8030a4f64076850777991c96aa1079d9a4345660aa3e283c322fd12f3}{}Quiet\label{class_debug_a9e0b892a8030a4f64076850777991c96aa1079d9a4345660aa3e283c322fd12f3}
+}]\index{Find\+Members@{Find\+Members}!Debug@{Debug}}\index{Debug@{Debug}!Find\+Members@{Find\+Members}}\item[{\em 
+\hypertarget{class_debug_a9e0b892a8030a4f64076850777991c96ac4d3bb469126ba5f5ba50c724219edf5}{}Find\+Members\label{class_debug_a9e0b892a8030a4f64076850777991c96ac4d3bb469126ba5f5ba50c724219edf5}
+}]\index{Functions@{Functions}!Debug@{Debug}}\index{Debug@{Debug}!Functions@{Functions}}\item[{\em 
+\hypertarget{class_debug_a9e0b892a8030a4f64076850777991c96a6988d421a5b346541cb4f804054562a4}{}Functions\label{class_debug_a9e0b892a8030a4f64076850777991c96a6988d421a5b346541cb4f804054562a4}
+}]\index{Variables@{Variables}!Debug@{Debug}}\index{Debug@{Debug}!Variables@{Variables}}\item[{\em 
+\hypertarget{class_debug_a9e0b892a8030a4f64076850777991c96a442859fe9afb29937aeeac886b911f64}{}Variables\label{class_debug_a9e0b892a8030a4f64076850777991c96a442859fe9afb29937aeeac886b911f64}
+}]\index{Preprocessor@{Preprocessor}!Debug@{Debug}}\index{Debug@{Debug}!Preprocessor@{Preprocessor}}\item[{\em 
+\hypertarget{class_debug_a9e0b892a8030a4f64076850777991c96aec63880706f2286cd7ca9057bf407e2f}{}Preprocessor\label{class_debug_a9e0b892a8030a4f64076850777991c96aec63880706f2286cd7ca9057bf407e2f}
+}]\index{Classes@{Classes}!Debug@{Debug}}\index{Debug@{Debug}!Classes@{Classes}}\item[{\em 
+\hypertarget{class_debug_a9e0b892a8030a4f64076850777991c96ae45530210daeb78c35e1b4c078277c8f}{}Classes\label{class_debug_a9e0b892a8030a4f64076850777991c96ae45530210daeb78c35e1b4c078277c8f}
+}]\index{Comment\+Cnv@{Comment\+Cnv}!Debug@{Debug}}\index{Debug@{Debug}!Comment\+Cnv@{Comment\+Cnv}}\item[{\em 
+\hypertarget{class_debug_a9e0b892a8030a4f64076850777991c96af158610d0a0e6dd08ec7cab215168fa5}{}Comment\+Cnv\label{class_debug_a9e0b892a8030a4f64076850777991c96af158610d0a0e6dd08ec7cab215168fa5}
+}]\index{Comment\+Scan@{Comment\+Scan}!Debug@{Debug}}\index{Debug@{Debug}!Comment\+Scan@{Comment\+Scan}}\item[{\em 
+\hypertarget{class_debug_a9e0b892a8030a4f64076850777991c96afeb3ede15e44e56c363351c25efd2504}{}Comment\+Scan\label{class_debug_a9e0b892a8030a4f64076850777991c96afeb3ede15e44e56c363351c25efd2504}
+}]\index{Validate@{Validate}!Debug@{Debug}}\index{Debug@{Debug}!Validate@{Validate}}\item[{\em 
+\hypertarget{class_debug_a9e0b892a8030a4f64076850777991c96ab57325adbf79149e4bd7a010d6e83499}{}Validate\label{class_debug_a9e0b892a8030a4f64076850777991c96ab57325adbf79149e4bd7a010d6e83499}
+}]\index{Print\+Tree@{Print\+Tree}!Debug@{Debug}}\index{Debug@{Debug}!Print\+Tree@{Print\+Tree}}\item[{\em 
+\hypertarget{class_debug_a9e0b892a8030a4f64076850777991c96a92b8cea26e6d5e2a5d3d04b63686bb2b}{}Print\+Tree\label{class_debug_a9e0b892a8030a4f64076850777991c96a92b8cea26e6d5e2a5d3d04b63686bb2b}
+}]\index{Time@{Time}!Debug@{Debug}}\index{Debug@{Debug}!Time@{Time}}\item[{\em 
+\hypertarget{class_debug_a9e0b892a8030a4f64076850777991c96a9cbd5d3516ffd3fe86238779edb2f7c5}{}Time\label{class_debug_a9e0b892a8030a4f64076850777991c96a9cbd5d3516ffd3fe86238779edb2f7c5}
+}]\index{Ext\+Cmd@{Ext\+Cmd}!Debug@{Debug}}\index{Debug@{Debug}!Ext\+Cmd@{Ext\+Cmd}}\item[{\em 
+\hypertarget{class_debug_a9e0b892a8030a4f64076850777991c96a8dbe64e9ab683833c1ea7252649058a3}{}Ext\+Cmd\label{class_debug_a9e0b892a8030a4f64076850777991c96a8dbe64e9ab683833c1ea7252649058a3}
+}]\index{Markdown@{Markdown}!Debug@{Debug}}\index{Debug@{Debug}!Markdown@{Markdown}}\item[{\em 
+\hypertarget{class_debug_a9e0b892a8030a4f64076850777991c96a4e7a964cec1d0423c74ab7045c1f6f6d}{}Markdown\label{class_debug_a9e0b892a8030a4f64076850777991c96a4e7a964cec1d0423c74ab7045c1f6f6d}
+}]\index{Filter\+Output@{Filter\+Output}!Debug@{Debug}}\index{Debug@{Debug}!Filter\+Output@{Filter\+Output}}\item[{\em 
+\hypertarget{class_debug_a9e0b892a8030a4f64076850777991c96a5e47cf9df9552fe30480288b70288d72}{}Filter\+Output\label{class_debug_a9e0b892a8030a4f64076850777991c96a5e47cf9df9552fe30480288b70288d72}
+}]\index{Lex@{Lex}!Debug@{Debug}}\index{Debug@{Debug}!Lex@{Lex}}\item[{\em 
+\hypertarget{class_debug_a9e0b892a8030a4f64076850777991c96a0c1d42bd6b09e5427669a49f082e823b}{}Lex\label{class_debug_a9e0b892a8030a4f64076850777991c96a0c1d42bd6b09e5427669a49f082e823b}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_debug_a1e78a9cfc37f50990e7701d56f7bf207}{}\index{Debug@{Debug}!clear\+Flag@{clear\+Flag}}
+\index{clear\+Flag@{clear\+Flag}!Debug@{Debug}}
+\subsubsection[{clear\+Flag(const char $\ast$label)}]{\setlength{\rightskip}{0pt plus 5cm}void Debug\+::clear\+Flag (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{label}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_debug_a1e78a9cfc37f50990e7701d56f7bf207}
+\hypertarget{class_debug_a92b0668ebfb43903d82ad112bf6c84e1}{}\index{Debug@{Debug}!is\+Flag\+Set@{is\+Flag\+Set}}
+\index{is\+Flag\+Set@{is\+Flag\+Set}!Debug@{Debug}}
+\subsubsection[{is\+Flag\+Set(\+Debug\+Mask mask)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Debug\+::is\+Flag\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf Debug\+Mask}}]{mask}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_debug_a92b0668ebfb43903d82ad112bf6c84e1}
+\hypertarget{class_debug_a5d86ffebf96f9f75b6c957db5f831da3}{}\index{Debug@{Debug}!print@{print}}
+\index{print@{print}!Debug@{Debug}}
+\subsubsection[{print(\+Debug\+Mask mask, int prio, const char $\ast$fmt,...)}]{\setlength{\rightskip}{0pt plus 5cm}void Debug\+::print (
+\begin{DoxyParamCaption}
+\item[{{\bf Debug\+Mask}}]{mask, }
+\item[{int}]{prio, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_debug_a5d86ffebf96f9f75b6c957db5f831da3}
+\hypertarget{class_debug_a9a7dd2cc5af4551bf2d34ce8ba5a78b7}{}\index{Debug@{Debug}!print\+Flags@{print\+Flags}}
+\index{print\+Flags@{print\+Flags}!Debug@{Debug}}
+\subsubsection[{print\+Flags(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Debug\+::print\+Flags (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_debug_a9a7dd2cc5af4551bf2d34ce8ba5a78b7}
+\hypertarget{class_debug_a24711079b52ca1e61539e7caa4ca61d8}{}\index{Debug@{Debug}!set\+Flag@{set\+Flag}}
+\index{set\+Flag@{set\+Flag}!Debug@{Debug}}
+\subsubsection[{set\+Flag(const char $\ast$label)}]{\setlength{\rightskip}{0pt plus 5cm}int Debug\+::set\+Flag (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{label}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_debug_a24711079b52ca1e61539e7caa4ca61d8}
+\hypertarget{class_debug_a666b610770dd7b7c0a87f2415aefe7d9}{}\index{Debug@{Debug}!set\+Priority@{set\+Priority}}
+\index{set\+Priority@{set\+Priority}!Debug@{Debug}}
+\subsubsection[{set\+Priority(int p)}]{\setlength{\rightskip}{0pt plus 5cm}void Debug\+::set\+Priority (
+\begin{DoxyParamCaption}
+\item[{int}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_debug_a666b610770dd7b7c0a87f2415aefe7d9}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{src_2debug_8h}{debug.\+h}\item 
+src/\hyperlink{src_2debug_8cpp}{debug.\+cpp}\end{DoxyCompactItemize}

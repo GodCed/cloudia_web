@@ -1,0 +1,209 @@
+\hypertarget{markdown_8cpp}{}\section{Référence du fichier src/markdown.cpp}
+\label{markdown_8cpp}\index{src/markdown.\+cpp@{src/markdown.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$qglobal.\+h$>$}\\*
+{\ttfamily \#include $<$qregexp.\+h$>$}\\*
+{\ttfamily \#include $<$qfileinfo.\+h$>$}\\*
+{\ttfamily \#include $<$qdict.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}markdown.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}growbuf.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}debug.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doxygen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}commentscan.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}entry.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bufstr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}commentcnv.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}section.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_link_ref}{Link\+Ref}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{markdown_8cpp_a9a0934c417cd4e7eb4175f8b67473ae0}{is\+Id\+Char}(\hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+\#define \hyperlink{markdown_8cpp_a40d3090d3cb97c1026a8828f308c765d}{is\+Open\+Emph\+Char}(\hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+\#define \hyperlink{markdown_8cpp_ae014e192391a150ed4f5d5baff1bda5a}{ignore\+Close\+Emph\+Char}(\hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\item 
+\#define \hyperlink{markdown_8cpp_a8651540cb26651ce580fdc9504e7fdf2}{is\+Li\+Tag}(\hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})
+\end{DoxyCompactItemize}
+\subsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef int($\ast$ \hyperlink{markdown_8cpp_afced4fee8412eb34f5c347523573e025}{action\+\_\+t}) (\hyperlink{class_grow_buf}{Grow\+Buf} \&out, const char $\ast$data, int offset, int size)
+\end{DoxyCompactItemize}
+\subsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{markdown_8cpp_acdfaca60ec19c0265bac2692d7982726}{Alignment} \{ \hyperlink{markdown_8cpp_acdfaca60ec19c0265bac2692d7982726a4258b9785acff3438d08d41ddb4439d9}{Align\+None}, 
+\hyperlink{markdown_8cpp_acdfaca60ec19c0265bac2692d7982726a291bdf1a2284d5648efc75ee78fbeb4c}{Align\+Left}, 
+\hyperlink{markdown_8cpp_acdfaca60ec19c0265bac2692d7982726afed76d6718c0a44a25c5e19ae8fb51d1}{Align\+Center}, 
+\hyperlink{markdown_8cpp_acdfaca60ec19c0265bac2692d7982726a4758d977046d9c084a0eaf7434fd29e1}{Align\+Right}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{markdown_8cpp_ac3bb1789abc2534eb3826e810df324d5}{find\+Table\+Columns} (const char $\ast$data, int size, int \&start, int \&end, int \&columns)
+\item 
+void \hyperlink{markdown_8cpp_a39cd5143e32ad7559bf04fce9e1030c3}{write\+One\+Line\+Header\+Or\+Ruler} (\hyperlink{class_grow_buf}{Grow\+Buf} \&out, const char $\ast$data, int size)
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{markdown_8cpp_a5e43bcd5980e3c770272cf4885cefaec}{process\+Markdown} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&file\+Name, const int line\+Nr, \hyperlink{class_entry}{Entry} $\ast$\hyperlink{060__command__switch_8tcl_aff65a51a703804e0ad1adbcfd76c86f8}{e}, const \hyperlink{class_q_c_string}{Q\+C\+String} \&input)
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{markdown_8cpp_a0a158f67dd586087dac0e968ea384f09}{markdown\+File\+Name\+To\+Id} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&file\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{markdown_8cpp_ade474436ee7fd57bc2ed66945290d4d2}{code\+Block\+Indent} = 4
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{markdown_8cpp_ae014e192391a150ed4f5d5baff1bda5a}{}\index{markdown.\+cpp@{markdown.\+cpp}!ignore\+Close\+Emph\+Char@{ignore\+Close\+Emph\+Char}}
+\index{ignore\+Close\+Emph\+Char@{ignore\+Close\+Emph\+Char}!markdown.\+cpp@{markdown.\+cpp}}
+\subsubsection[{ignore\+Close\+Emph\+Char}]{\setlength{\rightskip}{0pt plus 5cm}\#define ignore\+Close\+Emph\+Char(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf i}}
+\end{DoxyParamCaption}
+)}\label{markdown_8cpp_ae014e192391a150ed4f5d5baff1bda5a}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+(data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]==\textcolor{charliteral}{'('}  || data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]==\textcolor{charliteral}{'\{'} || data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]==\textcolor{charliteral}{'['} || data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]==\textcolor{charliteral}{'<'} || \(\backslash\)
+   data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]==\textcolor{charliteral}{'='}  || data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]==\textcolor{charliteral}{'+'} || data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]==\textcolor{charliteral}{'-'} || data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]==\textcolor{charliteral}{'\(\backslash\)\(\backslash\)'} || \(\backslash\)
+   data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]==\textcolor{charliteral}{'@'})
+\end{DoxyCode}
+\hypertarget{markdown_8cpp_a9a0934c417cd4e7eb4175f8b67473ae0}{}\index{markdown.\+cpp@{markdown.\+cpp}!is\+Id\+Char@{is\+Id\+Char}}
+\index{is\+Id\+Char@{is\+Id\+Char}!markdown.\+cpp@{markdown.\+cpp}}
+\subsubsection[{is\+Id\+Char}]{\setlength{\rightskip}{0pt plus 5cm}\#define is\+Id\+Char(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf i}}
+\end{DoxyParamCaption}
+)}\label{markdown_8cpp_a9a0934c417cd4e7eb4175f8b67473ae0}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+((data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]>=\textcolor{charliteral}{'a'} && data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]<=\textcolor{charliteral}{'z'}) || \(\backslash\)
+   (data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]>=\textcolor{charliteral}{'A'} && data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]<=\textcolor{charliteral}{'Z'}) || \(\backslash\)
+   (data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]>=\textcolor{charliteral}{'0'} && data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]<=\textcolor{charliteral}{'9'}) || \(\backslash\)
+   (((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}])>=0x80))
+\end{DoxyCode}
+\hypertarget{markdown_8cpp_a8651540cb26651ce580fdc9504e7fdf2}{}\index{markdown.\+cpp@{markdown.\+cpp}!is\+Li\+Tag@{is\+Li\+Tag}}
+\index{is\+Li\+Tag@{is\+Li\+Tag}!markdown.\+cpp@{markdown.\+cpp}}
+\subsubsection[{is\+Li\+Tag}]{\setlength{\rightskip}{0pt plus 5cm}\#define is\+Li\+Tag(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf i}}
+\end{DoxyParamCaption}
+)}\label{markdown_8cpp_a8651540cb26651ce580fdc9504e7fdf2}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+(data[(\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})]==\textcolor{charliteral}{'<'} && \(\backslash\)
+   (data[(\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})+1]==\textcolor{charliteral}{'l'} || data[(\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})+1]==\textcolor{charliteral}{'L'}) && \(\backslash\)
+   (data[(\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})+2]==\textcolor{charliteral}{'i'} || data[(\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})+2]==\textcolor{charliteral}{'I'}) && \(\backslash\)
+   (data[(\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i})+3]==\textcolor{charliteral}{'>'}))
+\end{DoxyCode}
+\hypertarget{markdown_8cpp_a40d3090d3cb97c1026a8828f308c765d}{}\index{markdown.\+cpp@{markdown.\+cpp}!is\+Open\+Emph\+Char@{is\+Open\+Emph\+Char}}
+\index{is\+Open\+Emph\+Char@{is\+Open\+Emph\+Char}!markdown.\+cpp@{markdown.\+cpp}}
+\subsubsection[{is\+Open\+Emph\+Char}]{\setlength{\rightskip}{0pt plus 5cm}\#define is\+Open\+Emph\+Char(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf i}}
+\end{DoxyParamCaption}
+)}\label{markdown_8cpp_a40d3090d3cb97c1026a8828f308c765d}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+(data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]==\textcolor{charliteral}{'\(\backslash\)n'} || data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]==\textcolor{charliteral}{' '} || data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]==\textcolor{charliteral}{'\(\backslash\)''} || data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]==\textcolor{charliteral}{'<'} || \(\backslash\)
+   data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]==\textcolor{charliteral}{'\{'}  || data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]==\textcolor{charliteral}{'('} || data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]==\textcolor{charliteral}{'['}  || data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]==\textcolor{charliteral}{','} || \(\backslash\)
+   data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]==\textcolor{charliteral}{':'}  || data[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}]==\textcolor{charliteral}{';'})
+\end{DoxyCode}
+
+
+\subsection{Documentation des définitions de type}
+\hypertarget{markdown_8cpp_afced4fee8412eb34f5c347523573e025}{}\index{markdown.\+cpp@{markdown.\+cpp}!action\+\_\+t@{action\+\_\+t}}
+\index{action\+\_\+t@{action\+\_\+t}!markdown.\+cpp@{markdown.\+cpp}}
+\subsubsection[{action\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef int($\ast$ action\+\_\+t) ({\bf Grow\+Buf} \&out, const char $\ast$data, int offset, int size)}\label{markdown_8cpp_afced4fee8412eb34f5c347523573e025}
+
+
+\subsection{Documentation du type de l\textquotesingle{}énumération}
+\hypertarget{markdown_8cpp_acdfaca60ec19c0265bac2692d7982726}{}\index{markdown.\+cpp@{markdown.\+cpp}!Alignment@{Alignment}}
+\index{Alignment@{Alignment}!markdown.\+cpp@{markdown.\+cpp}}
+\subsubsection[{Alignment}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Alignment}}\label{markdown_8cpp_acdfaca60ec19c0265bac2692d7982726}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Align\+None@{Align\+None}!markdown.\+cpp@{markdown.\+cpp}}\index{markdown.\+cpp@{markdown.\+cpp}!Align\+None@{Align\+None}}\item[{\em 
+\hypertarget{markdown_8cpp_acdfaca60ec19c0265bac2692d7982726a4258b9785acff3438d08d41ddb4439d9}{}Align\+None\label{markdown_8cpp_acdfaca60ec19c0265bac2692d7982726a4258b9785acff3438d08d41ddb4439d9}
+}]\index{Align\+Left@{Align\+Left}!markdown.\+cpp@{markdown.\+cpp}}\index{markdown.\+cpp@{markdown.\+cpp}!Align\+Left@{Align\+Left}}\item[{\em 
+\hypertarget{markdown_8cpp_acdfaca60ec19c0265bac2692d7982726a291bdf1a2284d5648efc75ee78fbeb4c}{}Align\+Left\label{markdown_8cpp_acdfaca60ec19c0265bac2692d7982726a291bdf1a2284d5648efc75ee78fbeb4c}
+}]\index{Align\+Center@{Align\+Center}!markdown.\+cpp@{markdown.\+cpp}}\index{markdown.\+cpp@{markdown.\+cpp}!Align\+Center@{Align\+Center}}\item[{\em 
+\hypertarget{markdown_8cpp_acdfaca60ec19c0265bac2692d7982726afed76d6718c0a44a25c5e19ae8fb51d1}{}Align\+Center\label{markdown_8cpp_acdfaca60ec19c0265bac2692d7982726afed76d6718c0a44a25c5e19ae8fb51d1}
+}]\index{Align\+Right@{Align\+Right}!markdown.\+cpp@{markdown.\+cpp}}\index{markdown.\+cpp@{markdown.\+cpp}!Align\+Right@{Align\+Right}}\item[{\em 
+\hypertarget{markdown_8cpp_acdfaca60ec19c0265bac2692d7982726a4758d977046d9c084a0eaf7434fd29e1}{}Align\+Right\label{markdown_8cpp_acdfaca60ec19c0265bac2692d7982726a4758d977046d9c084a0eaf7434fd29e1}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{markdown_8cpp_ac3bb1789abc2534eb3826e810df324d5}{}\index{markdown.\+cpp@{markdown.\+cpp}!find\+Table\+Columns@{find\+Table\+Columns}}
+\index{find\+Table\+Columns@{find\+Table\+Columns}!markdown.\+cpp@{markdown.\+cpp}}
+\subsubsection[{find\+Table\+Columns(const char $\ast$data, int size, int \&start, int \&end, int \&columns)}]{\setlength{\rightskip}{0pt plus 5cm}int find\+Table\+Columns (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{int}]{size, }
+\item[{int \&}]{start, }
+\item[{int \&}]{end, }
+\item[{int \&}]{columns}
+\end{DoxyParamCaption}
+)}\label{markdown_8cpp_ac3bb1789abc2534eb3826e810df324d5}
+Finds the location of the table\textquotesingle{}s contains in the string {\itshape data}. Only one line will be inspected. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em data} & pointer to the string buffer. \\
+\hline
+\mbox{\tt in}  & {\em size} & the size of the buffer. \\
+\hline
+\mbox{\tt out}  & {\em start} & offset of the first character of the table content \\
+\hline
+\mbox{\tt out}  & {\em end} & offset of the last character of the table content \\
+\hline
+\mbox{\tt out}  & {\em columns} & number of table columns found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+The offset until the next line in the buffer. 
+\end{DoxyReturn}
+\hypertarget{markdown_8cpp_a0a158f67dd586087dac0e968ea384f09}{}\index{markdown.\+cpp@{markdown.\+cpp}!markdown\+File\+Name\+To\+Id@{markdown\+File\+Name\+To\+Id}}
+\index{markdown\+File\+Name\+To\+Id@{markdown\+File\+Name\+To\+Id}!markdown.\+cpp@{markdown.\+cpp}}
+\subsubsection[{markdown\+File\+Name\+To\+Id(const Q\+C\+String \&file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} markdown\+File\+Name\+To\+Id (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{markdown_8cpp_a0a158f67dd586087dac0e968ea384f09}
+\hypertarget{markdown_8cpp_a5e43bcd5980e3c770272cf4885cefaec}{}\index{markdown.\+cpp@{markdown.\+cpp}!process\+Markdown@{process\+Markdown}}
+\index{process\+Markdown@{process\+Markdown}!markdown.\+cpp@{markdown.\+cpp}}
+\subsubsection[{process\+Markdown(const Q\+C\+String \&file\+Name, const int line\+Nr, Entry $\ast$e, const Q\+C\+String \&input)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} process\+Markdown (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{file\+Name, }
+\item[{const int}]{line\+Nr, }
+\item[{{\bf Entry} $\ast$}]{e, }
+\item[{const {\bf Q\+C\+String} \&}]{s}
+\end{DoxyParamCaption}
+)}\label{markdown_8cpp_a5e43bcd5980e3c770272cf4885cefaec}
+processes string {\itshape s} and converts markdown into doxygen/html commands. \hypertarget{markdown_8cpp_a39cd5143e32ad7559bf04fce9e1030c3}{}\index{markdown.\+cpp@{markdown.\+cpp}!write\+One\+Line\+Header\+Or\+Ruler@{write\+One\+Line\+Header\+Or\+Ruler}}
+\index{write\+One\+Line\+Header\+Or\+Ruler@{write\+One\+Line\+Header\+Or\+Ruler}!markdown.\+cpp@{markdown.\+cpp}}
+\subsubsection[{write\+One\+Line\+Header\+Or\+Ruler(\+Grow\+Buf \&out, const char $\ast$data, int size)}]{\setlength{\rightskip}{0pt plus 5cm}void write\+One\+Line\+Header\+Or\+Ruler (
+\begin{DoxyParamCaption}
+\item[{{\bf Grow\+Buf} \&}]{out, }
+\item[{const char $\ast$}]{data, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{markdown_8cpp_a39cd5143e32ad7559bf04fce9e1030c3}
+
+
+\subsection{Documentation des variables}
+\hypertarget{markdown_8cpp_ade474436ee7fd57bc2ed66945290d4d2}{}\index{markdown.\+cpp@{markdown.\+cpp}!code\+Block\+Indent@{code\+Block\+Indent}}
+\index{code\+Block\+Indent@{code\+Block\+Indent}!markdown.\+cpp@{markdown.\+cpp}}
+\subsubsection[{code\+Block\+Indent}]{\setlength{\rightskip}{0pt plus 5cm}const int code\+Block\+Indent = 4}\label{markdown_8cpp_ade474436ee7fd57bc2ed66945290d4d2}

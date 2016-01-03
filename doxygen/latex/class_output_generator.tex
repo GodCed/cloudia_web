@@ -1,0 +1,1890 @@
+\hypertarget{class_output_generator}{}\section{Référence de la classe Output\+Generator}
+\label{class_output_generator}\index{Output\+Generator@{Output\+Generator}}
+
+
+{\ttfamily \#include $<$outputgen.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Output\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.544304cm]{class_output_generator}
+\end{center}
+\end{figure}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cf}{Output\+Type} \{ \\*
+\hyperlink{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfa60460668b0f6b570f3ec84e48b53f4cf}{Html}, 
+\hyperlink{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfaa80d6ff5f1d2bb8514fe7da749ce8dda}{Latex}, 
+\hyperlink{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfa1c0c53e266b0c5a29ba3ab795811340d}{Man}, 
+\hyperlink{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfa0beb497266ccc7f49ea597556e58914e}{R\+T\+F}, 
+\\*
+\hyperlink{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfac2e6889ca4538412c55c0f22866e3c0b}{X\+M\+L}, 
+\hyperlink{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfa58caa6924f3437894cd040f5f6b3ceba}{D\+E\+F}, 
+\hyperlink{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfa225b135493e52f986c11789674a76204}{Perl}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_output_generator_a6f6f6c92438ea4e7553e317d5bb17660}{Output\+Generator} ()
+\item 
+virtual \hyperlink{class_output_generator_acd612f19fca6b44811a3320f9a5044fd}{$\sim$\+Output\+Generator} ()
+\item 
+virtual void \hyperlink{class_output_generator_a393e80a1e7b5ef29f6b9e1990ba615ce}{enable} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a140c11a13a0fbf1c958fac25746a12b7}{disable} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a6bd7a39cecc998dd5f743638e835903f}{enable\+If} (\hyperlink{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cf}{Output\+Type} \hyperlink{060__command__switch_8tcl_a495e7a4ede0831107e9d435080a7c268}{o})=0
+\item 
+virtual void \hyperlink{class_output_generator_ac41cafbb9ae5b0d32870984e4fabe651}{disable\+If} (\hyperlink{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cf}{Output\+Type} \hyperlink{060__command__switch_8tcl_a495e7a4ede0831107e9d435080a7c268}{o})=0
+\item 
+virtual void \hyperlink{class_output_generator_ae0d39ce32032866a4394aa5e8942be15}{disable\+If\+Not} (\hyperlink{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cf}{Output\+Type} \hyperlink{060__command__switch_8tcl_a495e7a4ede0831107e9d435080a7c268}{o})=0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_output_generator_a802995a552743934a30dd82aae42694b}{is\+Enabled} (\hyperlink{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cf}{Output\+Type} \hyperlink{060__command__switch_8tcl_a495e7a4ede0831107e9d435080a7c268}{o})=0
+\item 
+virtual \hyperlink{class_output_generator}{Output\+Generator} $\ast$ \hyperlink{class_output_generator_ad366efdcaa9df2638110e5ce50efc71d}{get} (\hyperlink{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cf}{Output\+Type} \hyperlink{060__command__switch_8tcl_a495e7a4ede0831107e9d435080a7c268}{o})=0
+\item 
+void \hyperlink{class_output_generator_a719c9ddbba9ba72ec4881c4c61cccf8b}{start\+Plain\+File} (const char $\ast$name)
+\item 
+void \hyperlink{class_output_generator_aaacf2b4efc09a2c06b9dd8cc2af69046}{end\+Plain\+File} ()
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_output_generator_a6758159bcacd76033b73d35603bc9ea8}{is\+Enabled} () const 
+\item 
+void \hyperlink{class_output_generator_a0e96bd0b61096478ec0eecfee3f609df}{push\+Generator\+State} ()
+\item 
+void \hyperlink{class_output_generator_ae8e915381e39d9c92674d7cb0e0e6589}{pop\+Generator\+State} ()
+\item 
+virtual void \hyperlink{class_output_generator_ac0b25a3af7edb8a631f21f34184f9a97}{write\+Doc} (\hyperlink{class_doc_node}{Doc\+Node} $\ast$, \hyperlink{class_definition}{Definition} $\ast$ctx, \hyperlink{class_member_def}{Member\+Def} $\ast$md)=0
+\item 
+virtual void \hyperlink{class_output_generator_a8c04cb480935a4f94b5391b97d01d5fb}{start\+File} (const char $\ast$name, const char $\ast$man\+Name, const char $\ast$title)=0
+\item 
+virtual void \hyperlink{class_output_generator_a6f93852b3d43ab8a63be1e46f10eb8fd}{write\+Search\+Info} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_ac8f9e609b1f2633a07c5560cc1eb4dc9}{write\+Footer} (const char $\ast$nav\+Path)=0
+\item 
+virtual void \hyperlink{class_output_generator_acdf48180d14b1d720286049195ad1c6a}{end\+File} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_ab8164b995688984ec7613485758a1af3}{start\+Index\+Section} (\hyperlink{index_8h_aec03800047ada46460eb75113cfee322}{Index\+Sections})=0
+\item 
+virtual void \hyperlink{class_output_generator_a04f3624f96d78d2cf07813e7ef759f3f}{end\+Index\+Section} (\hyperlink{index_8h_aec03800047ada46460eb75113cfee322}{Index\+Sections})=0
+\item 
+virtual void \hyperlink{class_output_generator_a92ddc60cab560b9e4a65bcd504cb779d}{write\+Page\+Link} (const char $\ast$, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})=0
+\item 
+virtual void \hyperlink{class_output_generator_aca2e001836d8cf6ae5e6d98bd9467b5b}{start\+Project\+Number} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_abb659e1d0c5d99f3a85751a321bca262}{end\+Project\+Number} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_ab3319043929bc785eeb2edfbeadc5088}{write\+Style\+Info} (int part)=0
+\item 
+virtual void \hyperlink{class_output_generator_a2a88fa84eb821cbc46ebe77293db0564}{start\+Title\+Head} (const char $\ast$)=0
+\item 
+virtual void \hyperlink{class_output_generator_a77b6fef939339086beec891ac1769781}{end\+Title\+Head} (const char $\ast$\hyperlink{class_output_generator_a9bb808101dbeae7732bb0fa66cad9176}{file\+Name}, const char $\ast$name)=0
+\item 
+virtual void \hyperlink{class_output_generator_a620605e68ebc9176a544eda7073bf039}{start\+Index\+List\+Item} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_ac4911ae06d09bc207a4e0f9da24516bc}{end\+Index\+List\+Item} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_adc617e6eaee65cfad74e0b8c07aab27d}{start\+Index\+List} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_af6f79555b9c01ffcf0d119d483271aa5}{end\+Index\+List} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a6db4df81706e050d26df7083977e5da9}{start\+Index\+Key} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a5c036e61acf5fe91e2372b16263fef5c}{end\+Index\+Key} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a8b7df4e8d1c8c35c96ed72a1dd88dfc3}{start\+Index\+Value} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})=0
+\item 
+virtual void \hyperlink{class_output_generator_a197393fc4473bb893a83f36369df1552}{end\+Index\+Value} (const char $\ast$, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})=0
+\item 
+virtual void \hyperlink{class_output_generator_afbc31c1a5eaecbcf45e16c4a16d747f7}{start\+Index\+Item} (const char $\ast$ref, const char $\ast$\hyperlink{class_output_generator_aed5ad11c3844cdf71ec6fee6c1c84286}{file})=0
+\item 
+virtual void \hyperlink{class_output_generator_ad573d99d60efb03de6afcec74237b89c}{end\+Index\+Item} (const char $\ast$ref, const char $\ast$\hyperlink{class_output_generator_aed5ad11c3844cdf71ec6fee6c1c84286}{file})=0
+\item 
+virtual void \hyperlink{class_output_generator_a567cedbeeb6ffa8f65893976e4c246d9}{start\+Group\+Header} (int)=0
+\item 
+virtual void \hyperlink{class_output_generator_a16003f13c40bcbb34bbe04eb13633637}{end\+Group\+Header} (int)=0
+\item 
+virtual void \hyperlink{class_output_generator_a3dcfbf917012cf7e133f6876750ca29b}{start\+Member\+Sections} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a68c7d0afc95708807a5e623a7e9bb9db}{end\+Member\+Sections} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a60a86f83cd8878a315820831c66f7e55}{start\+Header\+Section} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a0be4290a396c38e39361a1a23f331730}{end\+Header\+Section} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a7af0bd09e06461de70675d9512a2f67e}{start\+Member\+Header} (const char $\ast$anchor)=0
+\item 
+virtual void \hyperlink{class_output_generator_a59dd3993aedf7baf7465b67d4327335e}{end\+Member\+Header} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a6c10a744bfe79da169794579d92c6f38}{start\+Member\+Subtitle} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a0c56a25591efb4a9b38da70757dfe46c}{end\+Member\+Subtitle} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a79d92b273b6678f0484f507f9aeed930}{start\+Member\+Doc\+List} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_adac2120718344406921dc07cd60c8ead}{end\+Member\+Doc\+List} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a55bfc9535965545c98a07fd5e94ccfde}{start\+Member\+List} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_af3e875ff86510c53f355c024cc3a574d}{end\+Member\+List} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a75c7b7e0e20ce30957ed49fd1d1d246d}{start\+Inline\+Header} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a02b0b97eaa17e069eda7cc7f3e794a91}{end\+Inline\+Header} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a13587c69b6272779d38b6bc2a45fbfd5}{start\+Anon\+Type\+Scope} (int)=0
+\item 
+virtual void \hyperlink{class_output_generator_a3cf66346a0594b1987811bc258b598f6}{end\+Anon\+Type\+Scope} (int)=0
+\item 
+virtual void \hyperlink{class_output_generator_a626142e0dd357e23058573aff5299eb6}{start\+Member\+Item} (const char $\ast$, int, const char $\ast$)=0
+\item 
+virtual void \hyperlink{class_output_generator_aac81201cfd0dedc7635bc81913906335}{end\+Member\+Item} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_af221e843bf8828e9dcb45faea48c8af2}{start\+Member\+Template\+Params} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a0175d6eb2630de31743136c083d0cb84}{end\+Member\+Template\+Params} (const char $\ast$, const char $\ast$)=0
+\item 
+virtual void \hyperlink{class_output_generator_aea2631f3e52efb116a4b3375755024c8}{start\+Member\+Group\+Header} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})=0
+\item 
+virtual void \hyperlink{class_output_generator_a585ab0b649dad9edf7b78e8f1ec20885}{end\+Member\+Group\+Header} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a0b3d9ddaa7d63cea43081ac17ce5e96b}{start\+Member\+Group\+Docs} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a7debb7a4d6584e8855e7dc9ce0594d99}{end\+Member\+Group\+Docs} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a1cc976995007c64aa044d98da900d09f}{start\+Member\+Group} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a6b020947c7d4cd3a2d2d8c0993fbb4e3}{end\+Member\+Group} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})=0
+\item 
+virtual void \hyperlink{class_output_generator_a0df59cf6b0b238b48b139c7bfe5fb901}{insert\+Member\+Align} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})=0
+\item 
+virtual void \hyperlink{class_output_generator_a9cd56ff964c1d6a592b25dd7fd036d23}{start\+Member\+Doc} (const char $\ast$, const char $\ast$, const char $\ast$, const char $\ast$, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})=0
+\item 
+virtual void \hyperlink{class_output_generator_adcab4ec924ae47924fdc3492a06d432b}{end\+Member\+Doc} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})=0
+\item 
+virtual void \hyperlink{class_output_generator_ace0718073cbb95ce1908405e6eda095b}{start\+Doxy\+Anchor} (const char $\ast$f\+Name, const char $\ast$man\+Name, const char $\ast$anchor, const char $\ast$name, const char $\ast$args)=0
+\item 
+virtual void \hyperlink{class_output_generator_a59ba4ed87cf4c2bb55f231679d52268a}{end\+Doxy\+Anchor} (const char $\ast$\hyperlink{class_output_generator_a9bb808101dbeae7732bb0fa66cad9176}{file\+Name}, const char $\ast$anchor)=0
+\item 
+virtual void \hyperlink{class_output_generator_afcb9acfea2d7a6f0a340287632aea4e8}{write\+Latex\+Spacing} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a2b0f7e8400fa8bfa7b973ed25f2c4366}{write\+Start\+Anno\+Item} (const char $\ast$type, const char $\ast$\hyperlink{class_output_generator_aed5ad11c3844cdf71ec6fee6c1c84286}{file}, const char $\ast$path, const char $\ast$name)=0
+\item 
+virtual void \hyperlink{class_output_generator_a29c6763f7d6f708fc5d3e7dc2c0ce1f4}{write\+End\+Anno\+Item} (const char $\ast$name)=0
+\item 
+virtual void \hyperlink{class_output_generator_a5b6d67bd4820cdd2fa503b0065615406}{start\+Member\+Description} (const char $\ast$anchor, const char $\ast$inherit\+Id)=0
+\item 
+virtual void \hyperlink{class_output_generator_af7f56035354567686d15ab77e1f6f31d}{end\+Member\+Description} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_aeb5b5670178926771b6a649239f15444}{start\+Member\+Declaration} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_af22783eb794097cdfb783cfb29f60f3e}{end\+Member\+Declaration} (const char $\ast$anchor, const char $\ast$inherit\+Id)=0
+\item 
+virtual void \hyperlink{class_output_generator_a272f99f415b7e8b6ead453cd9e714b8e}{write\+Inherited\+Section\+Title} (const char $\ast$id, const char $\ast$ref, const char $\ast$\hyperlink{class_output_generator_aed5ad11c3844cdf71ec6fee6c1c84286}{file}, const char $\ast$anchor, const char $\ast$title, const char $\ast$name)=0
+\item 
+virtual void \hyperlink{class_output_generator_a1fe795813bf725fb63b19a1cf463bdfa}{start\+Indent} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a6d0ae2ff84f31ce7c3d964668dc31154}{end\+Indent} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_aa0d18fb8ce1251b97619c90061a697d8}{write\+Synopsis} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_af4dbb13368da9a7fee2c7ed3bb4bd8ea}{start\+Class\+Diagram} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a72364e74e0d834f01c2b5f5db5665c77}{end\+Class\+Diagram} (const \hyperlink{class_class_diagram}{Class\+Diagram} \&, const char $\ast$, const char $\ast$)=0
+\item 
+virtual void \hyperlink{class_output_generator_a60efbd7467b31058030731fe084a9db5}{start\+Dot\+Graph} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a3b268fc536acaca12748c9a729bd4a0b}{end\+Dot\+Graph} (const \hyperlink{class_dot_class_graph}{Dot\+Class\+Graph} \&\hyperlink{060__command__switch_8tcl_af08b4b5bfa9edf0b0a7dee1c2b2c29e0}{g})=0
+\item 
+virtual void \hyperlink{class_output_generator_a8f015b38b836904858cc1cd34f44363f}{start\+Incl\+Dep\+Graph} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a4bae4acba787ae56c9851ff5651ecff4}{end\+Incl\+Dep\+Graph} (const \hyperlink{class_dot_incl_dep_graph}{Dot\+Incl\+Dep\+Graph} \&\hyperlink{060__command__switch_8tcl_af08b4b5bfa9edf0b0a7dee1c2b2c29e0}{g})=0
+\item 
+virtual void \hyperlink{class_output_generator_a5c001113ef669b2043a9abbf1326f286}{start\+Group\+Collaboration} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_ae0b99fc498e233c94240869ec423cb54}{end\+Group\+Collaboration} (const \hyperlink{class_dot_group_collaboration}{Dot\+Group\+Collaboration} \&\hyperlink{060__command__switch_8tcl_af08b4b5bfa9edf0b0a7dee1c2b2c29e0}{g})=0
+\item 
+virtual void \hyperlink{class_output_generator_ace8e9a8d3c193fe5b50f19d07882a51a}{start\+Call\+Graph} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a8e13dc9a74d4a508a314d328c9ee5841}{end\+Call\+Graph} (const \hyperlink{class_dot_call_graph}{Dot\+Call\+Graph} \&\hyperlink{060__command__switch_8tcl_af08b4b5bfa9edf0b0a7dee1c2b2c29e0}{g})=0
+\item 
+virtual void \hyperlink{class_output_generator_a02c3701bf94326612c1b4fcaf16c4011}{start\+Dir\+Dep\+Graph} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a5e97157957f1f86880eae04e4f0a202d}{end\+Dir\+Dep\+Graph} (const \hyperlink{class_dot_dir_deps}{Dot\+Dir\+Deps} \&\hyperlink{060__command__switch_8tcl_af08b4b5bfa9edf0b0a7dee1c2b2c29e0}{g})=0
+\item 
+virtual void \hyperlink{class_output_generator_ae5cf1278fa98872e8e40764af2499558}{write\+Graphical\+Hierarchy} (const \hyperlink{class_dot_gfx_hierarchy_table}{Dot\+Gfx\+Hierarchy\+Table} \&\hyperlink{060__command__switch_8tcl_af08b4b5bfa9edf0b0a7dee1c2b2c29e0}{g})=0
+\item 
+virtual void \hyperlink{class_output_generator_ac1235b655cd828140b9c76f4ca1f4040}{start\+Quick\+Indices} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_ac772c3fa9b9fb938598b67b8251a1787}{end\+Quick\+Indices} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a7ca68513534b42f774af0615039298af}{write\+Split\+Bar} (const char $\ast$)=0
+\item 
+virtual void \hyperlink{class_output_generator_a782d69569d902413c0029b12cd4ea2d6}{write\+Navigation\+Path} (const char $\ast$)=0
+\item 
+virtual void \hyperlink{class_output_generator_a4a253e01f787c22716b14709344535ab}{write\+Logo} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_ade0bf7d098652c8592a8790d6de80a7e}{write\+Quick\+Links} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} compact, \hyperlink{index_8h_a6643b7765422a7eb577f0b2ed8fb2e09}{Highlighted\+Item} hli, const char $\ast$\hyperlink{class_output_generator_aed5ad11c3844cdf71ec6fee6c1c84286}{file})=0
+\item 
+virtual void \hyperlink{class_output_generator_aa27b1e7554ca5a8f4d80bf82bc1666d6}{write\+Summary\+Link} (const char $\ast$\hyperlink{class_output_generator_aed5ad11c3844cdf71ec6fee6c1c84286}{file}, const char $\ast$anchor, const char $\ast$title, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} first)=0
+\item 
+virtual void \hyperlink{class_output_generator_a21231e6bba1594e5327e8e150e39355c}{start\+Contents} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a62d0b8915ba8cbae0e0703794bcae68a}{end\+Contents} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_ae06da65c60fe1508152999a76c3b8d80}{start\+Text\+Block} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})=0
+\item 
+virtual void \hyperlink{class_output_generator_a53f79d9816008132480d3d454e14251b}{end\+Text\+Block} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})=0
+\item 
+virtual void \hyperlink{class_output_generator_a12d53790300c52b68bc0715ab05507d2}{last\+Index\+Page} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_acbb6ecd186cadcea8526b54e2ba7d166}{start\+Member\+Doc\+Prefix\+Item} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a8fa59aa64d420ced1d1784f7b2ddaa79}{end\+Member\+Doc\+Prefix\+Item} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a8646f44dc5c56ef3f6d5fa3f667cd223}{start\+Member\+Doc\+Name} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})=0
+\item 
+virtual void \hyperlink{class_output_generator_a02431abad8b2d94216a0530cf08b3dca}{end\+Member\+Doc\+Name} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a76af87c960b045eafa035b77307aaf75}{start\+Parameter\+Type} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}, const char $\ast$key)=0
+\item 
+virtual void \hyperlink{class_output_generator_a8c701cf1050103eee69d57b409640dea}{end\+Parameter\+Type} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_ac56057350d3b14b63238bf4325792f82}{start\+Parameter\+Name} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})=0
+\item 
+virtual void \hyperlink{class_output_generator_a69b117731ab42b3985713760b270a1a5}{end\+Parameter\+Name} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})=0
+\item 
+virtual void \hyperlink{class_output_generator_a92e7646944e62d50ede52caa18c39266}{start\+Parameter\+List} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})=0
+\item 
+virtual void \hyperlink{class_output_generator_acc2f021cf85b5cb83716c51e3dc7d44f}{end\+Parameter\+List} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a4c4d0ff79434d93b42b8e0c7c42fa5d1}{exception\+Entry} (const char $\ast$, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})=0
+\item 
+virtual void \hyperlink{class_output_generator_a745e4b1d9843812a09c4410aa43084b0}{start\+Constraint\+List} (const char $\ast$)=0
+\item 
+virtual void \hyperlink{class_output_generator_abce5f3b4a1104ca8cea00f19f0d803c0}{start\+Constraint\+Param} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_afacff7ea600037f0e6fc29207f06332e}{end\+Constraint\+Param} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a6f24ed1e9572bbc6de4c533129a4d28a}{start\+Constraint\+Type} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a7abed59bb311949ab7cae21a009485cf}{end\+Constraint\+Type} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a81ade540356d6c7669c6c701bde02e10}{start\+Constraint\+Docs} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a079c2400a911349969e61531d72c554e}{end\+Constraint\+Docs} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a0998d070dc2c5d9ba203a8c58b7b1b73}{end\+Constraint\+List} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a8eb36caa0f5a620b42d7e332fb849ae4}{start\+Member\+Doc\+Simple} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_acf16c793f7f93b9508382eaec818f7f8}{end\+Member\+Doc\+Simple} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a590cf1aa2c7061dd15916a1459690445}{start\+Inline\+Member\+Type} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_abae7a78f520dbd4336d093b8580bc5dd}{end\+Inline\+Member\+Type} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a0a3424e053c9ce5e63f5c8f3805aa940}{start\+Inline\+Member\+Name} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a64fd29eded2398a03ab98de61423f9be}{end\+Inline\+Member\+Name} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a6f40ca8e90e8167136b678efbe6bf131}{start\+Inline\+Member\+Doc} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a59987a7b4a41789d80dd788b0f65c434}{end\+Inline\+Member\+Doc} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_af317d904e65624244c58368deabcba55}{start\+Labels} ()=0
+\item 
+virtual void \hyperlink{class_output_generator_a40864f2cdb9de3605965ec2912c3709d}{write\+Label} (const char $\ast$, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool})=0
+\item 
+virtual void \hyperlink{class_output_generator_a13875bb6d9d678dac1ae21b3ad97127a}{end\+Labels} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_f_text_stream}{F\+Text\+Stream} \hyperlink{class_output_generator_a55a40a8215efe6adc4d0a587ad9a46bc}{t}
+\item 
+\hyperlink{class_q_file}{Q\+File} $\ast$ \hyperlink{class_output_generator_aed5ad11c3844cdf71ec6fee6c1c84286}{file}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_output_generator_a9bb808101dbeae7732bb0fa66cad9176}{file\+Name}
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_output_generator_ac64b8818d57bbe250f647d7b10edd45e}{dir}
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_output_generator_a1e1299d64814f58ac06b257992291f9f}{active}
+\item 
+\hyperlink{class_q_stack}{Q\+Stack}$<$ \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} $>$ $\ast$ \hyperlink{class_output_generator_ac734ecb37a17e3b4fa46f249ab495697}{gen\+Stack}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Abstract output generator.
+
+Subclass this class to add support for a new output format 
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cf}{}\index{Output\+Generator@{Output\+Generator}!Output\+Type@{Output\+Type}}
+\index{Output\+Type@{Output\+Type}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{Output\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Output\+Generator\+::\+Output\+Type}}\label{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cf}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Html@{Html}!Output\+Generator@{Output\+Generator}}\index{Output\+Generator@{Output\+Generator}!Html@{Html}}\item[{\em 
+\hypertarget{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfa60460668b0f6b570f3ec84e48b53f4cf}{}Html\label{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfa60460668b0f6b570f3ec84e48b53f4cf}
+}]\index{Latex@{Latex}!Output\+Generator@{Output\+Generator}}\index{Output\+Generator@{Output\+Generator}!Latex@{Latex}}\item[{\em 
+\hypertarget{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfaa80d6ff5f1d2bb8514fe7da749ce8dda}{}Latex\label{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfaa80d6ff5f1d2bb8514fe7da749ce8dda}
+}]\index{Man@{Man}!Output\+Generator@{Output\+Generator}}\index{Output\+Generator@{Output\+Generator}!Man@{Man}}\item[{\em 
+\hypertarget{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfa1c0c53e266b0c5a29ba3ab795811340d}{}Man\label{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfa1c0c53e266b0c5a29ba3ab795811340d}
+}]\index{R\+T\+F@{R\+T\+F}!Output\+Generator@{Output\+Generator}}\index{Output\+Generator@{Output\+Generator}!R\+T\+F@{R\+T\+F}}\item[{\em 
+\hypertarget{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfa0beb497266ccc7f49ea597556e58914e}{}R\+T\+F\label{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfa0beb497266ccc7f49ea597556e58914e}
+}]\index{X\+M\+L@{X\+M\+L}!Output\+Generator@{Output\+Generator}}\index{Output\+Generator@{Output\+Generator}!X\+M\+L@{X\+M\+L}}\item[{\em 
+\hypertarget{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfac2e6889ca4538412c55c0f22866e3c0b}{}X\+M\+L\label{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfac2e6889ca4538412c55c0f22866e3c0b}
+}]\index{D\+E\+F@{D\+E\+F}!Output\+Generator@{Output\+Generator}}\index{Output\+Generator@{Output\+Generator}!D\+E\+F@{D\+E\+F}}\item[{\em 
+\hypertarget{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfa58caa6924f3437894cd040f5f6b3ceba}{}D\+E\+F\label{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfa58caa6924f3437894cd040f5f6b3ceba}
+}]\index{Perl@{Perl}!Output\+Generator@{Output\+Generator}}\index{Output\+Generator@{Output\+Generator}!Perl@{Perl}}\item[{\em 
+\hypertarget{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfa225b135493e52f986c11789674a76204}{}Perl\label{class_output_generator_ab79b5d3c19d95c8a5929c07f5b2918cfa225b135493e52f986c11789674a76204}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_output_generator_a6f6f6c92438ea4e7553e317d5bb17660}{}\index{Output\+Generator@{Output\+Generator}!Output\+Generator@{Output\+Generator}}
+\index{Output\+Generator@{Output\+Generator}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{Output\+Generator()}]{\setlength{\rightskip}{0pt plus 5cm}Output\+Generator\+::\+Output\+Generator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_output_generator_a6f6f6c92438ea4e7553e317d5bb17660}
+\hypertarget{class_output_generator_acd612f19fca6b44811a3320f9a5044fd}{}\index{Output\+Generator@{Output\+Generator}!````~Output\+Generator@{$\sim$\+Output\+Generator}}
+\index{````~Output\+Generator@{$\sim$\+Output\+Generator}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{$\sim$\+Output\+Generator()}]{\setlength{\rightskip}{0pt plus 5cm}Output\+Generator\+::$\sim$\+Output\+Generator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_output_generator_acd612f19fca6b44811a3320f9a5044fd}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_output_generator_a140c11a13a0fbf1c958fac25746a12b7}{}\index{Output\+Generator@{Output\+Generator}!disable@{disable}}
+\index{disable@{disable}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{disable()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::disable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a140c11a13a0fbf1c958fac25746a12b7}
+
+
+Implémenté dans \hyperlink{class_html_generator_abbcaec5ceb199f2c5f91c983d6482692}{Html\+Generator}, \hyperlink{class_latex_generator_a289220be2f2fd7ce0796d223c975f5d7}{Latex\+Generator}, \hyperlink{class_man_generator_a8e677c969a92c05ad55e89383215e9a4}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_aae28ca70077d65fd1b3dcd9ec9781e05}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_ac41cafbb9ae5b0d32870984e4fabe651}{}\index{Output\+Generator@{Output\+Generator}!disable\+If@{disable\+If}}
+\index{disable\+If@{disable\+If}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{disable\+If(\+Output\+Type o)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::disable\+If (
+\begin{DoxyParamCaption}
+\item[{{\bf Output\+Type}}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_ac41cafbb9ae5b0d32870984e4fabe651}
+
+
+Implémenté dans \hyperlink{class_html_generator_a93a1f46b032bba0f0971ca648d011b09}{Html\+Generator}, \hyperlink{class_latex_generator_a58b8a5cb3f4030d219a4e0ecd4861e23}{Latex\+Generator}, \hyperlink{class_man_generator_a3730f076f025f7969c1e804c553a1201}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a35fbaedd73a1f52ea24a04199d8f415c}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_ae0d39ce32032866a4394aa5e8942be15}{}\index{Output\+Generator@{Output\+Generator}!disable\+If\+Not@{disable\+If\+Not}}
+\index{disable\+If\+Not@{disable\+If\+Not}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{disable\+If\+Not(\+Output\+Type o)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::disable\+If\+Not (
+\begin{DoxyParamCaption}
+\item[{{\bf Output\+Type}}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_ae0d39ce32032866a4394aa5e8942be15}
+
+
+Implémenté dans \hyperlink{class_html_generator_a25743230b0993020e7962d589a242676}{Html\+Generator}, \hyperlink{class_latex_generator_aab82db46a5d5e0c2ffdbbc97c75bd742}{Latex\+Generator}, \hyperlink{class_man_generator_a840a5fe6338fc2ff32570933e6a6b741}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a1c9164aa856f5977128a8253a1f64426}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a393e80a1e7b5ef29f6b9e1990ba615ce}{}\index{Output\+Generator@{Output\+Generator}!enable@{enable}}
+\index{enable@{enable}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{enable()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::enable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a393e80a1e7b5ef29f6b9e1990ba615ce}
+
+
+Implémenté dans \hyperlink{class_html_generator_a329452241150ab304dc08438851521de}{Html\+Generator}, \hyperlink{class_latex_generator_a908ea4d8fe8f25df93dd7e62e8dcdaaa}{Latex\+Generator}, \hyperlink{class_man_generator_a952257b104ee73181e50ac3617e6c8ba}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_adc782b62f471353f7b535052bd8e16c1}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a6bd7a39cecc998dd5f743638e835903f}{}\index{Output\+Generator@{Output\+Generator}!enable\+If@{enable\+If}}
+\index{enable\+If@{enable\+If}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{enable\+If(\+Output\+Type o)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::enable\+If (
+\begin{DoxyParamCaption}
+\item[{{\bf Output\+Type}}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a6bd7a39cecc998dd5f743638e835903f}
+
+
+Implémenté dans \hyperlink{class_html_generator_aee9e3887cd11cb8457f2549df91dadf1}{Html\+Generator}, \hyperlink{class_latex_generator_a52aa0664e4c94c3ec080a4f89a5ac001}{Latex\+Generator}, \hyperlink{class_man_generator_a6a9253a0f036c4f8fbb9c8dc908d36e2}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a21f14b800414d41657e55e6e57fc66ef}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a3cf66346a0594b1987811bc258b598f6}{}\index{Output\+Generator@{Output\+Generator}!end\+Anon\+Type\+Scope@{end\+Anon\+Type\+Scope}}
+\index{end\+Anon\+Type\+Scope@{end\+Anon\+Type\+Scope}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Anon\+Type\+Scope(int)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Anon\+Type\+Scope (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a3cf66346a0594b1987811bc258b598f6}
+
+
+Implémenté dans \hyperlink{class_html_generator_ac6ab49e31bbc29399c976e5049fdbd2a}{Html\+Generator}, \hyperlink{class_latex_generator_a1f90504c74c14b0632ed5bf2bb4ef029}{Latex\+Generator}, \hyperlink{class_man_generator_a680b0b24f66dc9038bb9d97dede6c309}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a99b1d699a7530ecb1542c9a76bc60cb0}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a8e13dc9a74d4a508a314d328c9ee5841}{}\index{Output\+Generator@{Output\+Generator}!end\+Call\+Graph@{end\+Call\+Graph}}
+\index{end\+Call\+Graph@{end\+Call\+Graph}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Call\+Graph(const Dot\+Call\+Graph \&g)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Call\+Graph (
+\begin{DoxyParamCaption}
+\item[{const {\bf Dot\+Call\+Graph} \&}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a8e13dc9a74d4a508a314d328c9ee5841}
+
+
+Implémenté dans \hyperlink{class_html_generator_a7a304cc5507fac3e1501a5d442c70157}{Html\+Generator}, \hyperlink{class_latex_generator_a04796ce1fdfb4dedbbe17b1fdffca000}{Latex\+Generator}, \hyperlink{class_man_generator_afe6604d384542e566b828739a2c683cd}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_ad99bf9b3a8b9221c89d0c8bb5e5665e5}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a72364e74e0d834f01c2b5f5db5665c77}{}\index{Output\+Generator@{Output\+Generator}!end\+Class\+Diagram@{end\+Class\+Diagram}}
+\index{end\+Class\+Diagram@{end\+Class\+Diagram}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Class\+Diagram(const Class\+Diagram \&, const char $\ast$, const char $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Class\+Diagram (
+\begin{DoxyParamCaption}
+\item[{const {\bf Class\+Diagram} \&}]{, }
+\item[{const char $\ast$}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a72364e74e0d834f01c2b5f5db5665c77}
+
+
+Implémenté dans \hyperlink{class_html_generator_a3884a61305d09d1ecbddfb0bc0fe2733}{Html\+Generator}, \hyperlink{class_latex_generator_a0225710e54247e934ce69e8d009979e3}{Latex\+Generator}, \hyperlink{class_man_generator_ac37a68b10d76cc5d8a1125e5060b5211}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a1115a488adc5c7ea481cbf6c3cd9eb0a}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a079c2400a911349969e61531d72c554e}{}\index{Output\+Generator@{Output\+Generator}!end\+Constraint\+Docs@{end\+Constraint\+Docs}}
+\index{end\+Constraint\+Docs@{end\+Constraint\+Docs}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Constraint\+Docs()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Constraint\+Docs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a079c2400a911349969e61531d72c554e}
+
+
+Implémenté dans \hyperlink{class_html_generator_a5bd3b6d393908c6fd052f52658df64bf}{Html\+Generator}, \hyperlink{class_latex_generator_a46875df306394c532e545e2d7f599e6c}{Latex\+Generator}, \hyperlink{class_man_generator_af4014137523e746f07ce3d970b2bac53}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a24addae2fe4889afd85e29b6a19829fd}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a0998d070dc2c5d9ba203a8c58b7b1b73}{}\index{Output\+Generator@{Output\+Generator}!end\+Constraint\+List@{end\+Constraint\+List}}
+\index{end\+Constraint\+List@{end\+Constraint\+List}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Constraint\+List()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Constraint\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a0998d070dc2c5d9ba203a8c58b7b1b73}
+
+
+Implémenté dans \hyperlink{class_html_generator_aaa12c82f9806096e567f4441e89b4fbc}{Html\+Generator}, \hyperlink{class_latex_generator_a2efc2387efe483773b46ac00f82d13cc}{Latex\+Generator}, \hyperlink{class_man_generator_adbc0ed48b04dc681013a923ce25f5042}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_ac2a79257f2d23883d6254038588a2267}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_afacff7ea600037f0e6fc29207f06332e}{}\index{Output\+Generator@{Output\+Generator}!end\+Constraint\+Param@{end\+Constraint\+Param}}
+\index{end\+Constraint\+Param@{end\+Constraint\+Param}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Constraint\+Param()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Constraint\+Param (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_afacff7ea600037f0e6fc29207f06332e}
+
+
+Implémenté dans \hyperlink{class_html_generator_ae0379d1142e0189d0f4a1d236b76501c}{Html\+Generator}, \hyperlink{class_latex_generator_aa5de32252d0077923cc12a3b85680f0a}{Latex\+Generator}, \hyperlink{class_man_generator_a2269ac68c06f0006836ee3b271384cbb}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a0f1f278d86d5c44964308faaaea24b1b}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a7abed59bb311949ab7cae21a009485cf}{}\index{Output\+Generator@{Output\+Generator}!end\+Constraint\+Type@{end\+Constraint\+Type}}
+\index{end\+Constraint\+Type@{end\+Constraint\+Type}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Constraint\+Type()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Constraint\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a7abed59bb311949ab7cae21a009485cf}
+
+
+Implémenté dans \hyperlink{class_html_generator_af424c10d553610d4a099e533632db5a8}{Html\+Generator}, \hyperlink{class_latex_generator_a752b5bd6ac615dee39c6c9c9e296f1dd}{Latex\+Generator}, \hyperlink{class_man_generator_a6fc86f040a965fab5351b5cf8f354ffe}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a8bdab63308f7a7ee418e03264f03bbc3}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a62d0b8915ba8cbae0e0703794bcae68a}{}\index{Output\+Generator@{Output\+Generator}!end\+Contents@{end\+Contents}}
+\index{end\+Contents@{end\+Contents}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Contents()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Contents (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a62d0b8915ba8cbae0e0703794bcae68a}
+
+
+Implémenté dans \hyperlink{class_html_generator_ada62c0664d53d3e22fffae0503a860f2}{Html\+Generator}, \hyperlink{class_latex_generator_aac3b9ac454e3d4ba7d4de3bb9a1c4c6b}{Latex\+Generator}, \hyperlink{class_man_generator_ad218e5e4ee607d35a82476f6866d3dc0}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a51da5e989909409618e46e6d161948ed}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a5e97157957f1f86880eae04e4f0a202d}{}\index{Output\+Generator@{Output\+Generator}!end\+Dir\+Dep\+Graph@{end\+Dir\+Dep\+Graph}}
+\index{end\+Dir\+Dep\+Graph@{end\+Dir\+Dep\+Graph}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Dir\+Dep\+Graph(const Dot\+Dir\+Deps \&g)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Dir\+Dep\+Graph (
+\begin{DoxyParamCaption}
+\item[{const {\bf Dot\+Dir\+Deps} \&}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a5e97157957f1f86880eae04e4f0a202d}
+
+
+Implémenté dans \hyperlink{class_html_generator_a6b8ce5266f910a0bec4fc48a41c35f49}{Html\+Generator}, \hyperlink{class_latex_generator_abe85ace3e82260352e73fc91fc787423}{Latex\+Generator}, \hyperlink{class_man_generator_a8b3fafcb2963a874643dcacbc378a58f}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_ad8d3f8ef96f02dc4d0bb75e7ebd2a28e}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a3b268fc536acaca12748c9a729bd4a0b}{}\index{Output\+Generator@{Output\+Generator}!end\+Dot\+Graph@{end\+Dot\+Graph}}
+\index{end\+Dot\+Graph@{end\+Dot\+Graph}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Dot\+Graph(const Dot\+Class\+Graph \&g)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Dot\+Graph (
+\begin{DoxyParamCaption}
+\item[{const {\bf Dot\+Class\+Graph} \&}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a3b268fc536acaca12748c9a729bd4a0b}
+
+
+Implémenté dans \hyperlink{class_html_generator_a58adba1813ebabd879074371cd56819c}{Html\+Generator}, \hyperlink{class_latex_generator_a32fb1304b77bc952caeaa77da648fd2d}{Latex\+Generator}, \hyperlink{class_man_generator_aedc67f1074ac8e6281c395700bf6e9e5}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a7fe78cf6bb451f3d63cd46e45633db92}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a59ba4ed87cf4c2bb55f231679d52268a}{}\index{Output\+Generator@{Output\+Generator}!end\+Doxy\+Anchor@{end\+Doxy\+Anchor}}
+\index{end\+Doxy\+Anchor@{end\+Doxy\+Anchor}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Doxy\+Anchor(const char $\ast$file\+Name, const char $\ast$anchor)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Doxy\+Anchor (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name, }
+\item[{const char $\ast$}]{anchor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a59ba4ed87cf4c2bb55f231679d52268a}
+
+
+Implémenté dans \hyperlink{class_html_generator_a30d8f13a6cd2cdebefe09ac764b6081e}{Html\+Generator}, \hyperlink{class_latex_generator_a559ff209839486737e1fe0bea3badd1f}{Latex\+Generator}, \hyperlink{class_man_generator_a47b84c3d099ed32ac6ad1875c84ccd24}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a9498b4ab1e6143b700a3ee68e72c39a1}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_acdf48180d14b1d720286049195ad1c6a}{}\index{Output\+Generator@{Output\+Generator}!end\+File@{end\+File}}
+\index{end\+File@{end\+File}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+File()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_acdf48180d14b1d720286049195ad1c6a}
+
+
+Implémenté dans \hyperlink{class_html_generator_aecd9da9f7e9201df51cfe46ab71c6e30}{Html\+Generator}, \hyperlink{class_latex_generator_a3f6c0d82d907c01684a159c6aa8fa880}{Latex\+Generator}, \hyperlink{class_man_generator_a15c31d2c71f0155387f7a94586e867ee}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_aa98dac9076dd84b77670d69a119e6745}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_ae0b99fc498e233c94240869ec423cb54}{}\index{Output\+Generator@{Output\+Generator}!end\+Group\+Collaboration@{end\+Group\+Collaboration}}
+\index{end\+Group\+Collaboration@{end\+Group\+Collaboration}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Group\+Collaboration(const Dot\+Group\+Collaboration \&g)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Group\+Collaboration (
+\begin{DoxyParamCaption}
+\item[{const {\bf Dot\+Group\+Collaboration} \&}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_ae0b99fc498e233c94240869ec423cb54}
+
+
+Implémenté dans \hyperlink{class_html_generator_a9c522d8f611e8008f413d1887ee31d4a}{Html\+Generator}, \hyperlink{class_latex_generator_a4f5a9cd27f543d3e22e0c1cb3decc429}{Latex\+Generator}, \hyperlink{class_man_generator_ac3c761549d50b8dc14ca497ab9b319e8}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a7da95182ca80804b84d0fcd6db5d1d2f}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a16003f13c40bcbb34bbe04eb13633637}{}\index{Output\+Generator@{Output\+Generator}!end\+Group\+Header@{end\+Group\+Header}}
+\index{end\+Group\+Header@{end\+Group\+Header}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Group\+Header(int)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Group\+Header (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a16003f13c40bcbb34bbe04eb13633637}
+
+
+Implémenté dans \hyperlink{class_html_generator_abfe85b944b5ebe2ca5455d44ea755c8d}{Html\+Generator}, \hyperlink{class_latex_generator_ab3f17e3b2554190c3f5440e02ef20cd6}{Latex\+Generator}, \hyperlink{class_man_generator_a826a7e069686709295c162b2b2db7e25}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a50b5dd2478b90fdeef6df695f4f27bf9}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a0be4290a396c38e39361a1a23f331730}{}\index{Output\+Generator@{Output\+Generator}!end\+Header\+Section@{end\+Header\+Section}}
+\index{end\+Header\+Section@{end\+Header\+Section}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Header\+Section()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Header\+Section (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a0be4290a396c38e39361a1a23f331730}
+
+
+Implémenté dans \hyperlink{class_html_generator_a164f820134d45aaac56a60fe05b62963}{Html\+Generator}, \hyperlink{class_latex_generator_ac28872ad91e4d83b68a7a948b341c0d6}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_af0d6ecfbd929b6bf84515c7a9c0c912f}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_aeaaf8704bdcaec06d4fe435491962d50}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a4bae4acba787ae56c9851ff5651ecff4}{}\index{Output\+Generator@{Output\+Generator}!end\+Incl\+Dep\+Graph@{end\+Incl\+Dep\+Graph}}
+\index{end\+Incl\+Dep\+Graph@{end\+Incl\+Dep\+Graph}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Incl\+Dep\+Graph(const Dot\+Incl\+Dep\+Graph \&g)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Incl\+Dep\+Graph (
+\begin{DoxyParamCaption}
+\item[{const {\bf Dot\+Incl\+Dep\+Graph} \&}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a4bae4acba787ae56c9851ff5651ecff4}
+
+
+Implémenté dans \hyperlink{class_html_generator_a5ea9e86d0086fed794d619899f4014d7}{Html\+Generator}, \hyperlink{class_latex_generator_adf3644a1a735b0f1109400e8733c2b9d}{Latex\+Generator}, \hyperlink{class_man_generator_afb39cce552d143492bd625cd0a0dd0dc}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a0d0f1c8866d426ab365991e625655294}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a6d0ae2ff84f31ce7c3d964668dc31154}{}\index{Output\+Generator@{Output\+Generator}!end\+Indent@{end\+Indent}}
+\index{end\+Indent@{end\+Indent}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Indent()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Indent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a6d0ae2ff84f31ce7c3d964668dc31154}
+
+
+Implémenté dans \hyperlink{class_html_generator_ac8a600145a8b33e3dc984a0cb834d859}{Html\+Generator}, \hyperlink{class_latex_generator_a424ac60d3215a138bd4e50227c0e4445}{Latex\+Generator}, \hyperlink{class_man_generator_a1d28184243c9614854f089a76a340f23}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a9693d67a2739f84501b2110cba6e5662}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_ad573d99d60efb03de6afcec74237b89c}{}\index{Output\+Generator@{Output\+Generator}!end\+Index\+Item@{end\+Index\+Item}}
+\index{end\+Index\+Item@{end\+Index\+Item}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Index\+Item(const char $\ast$ref, const char $\ast$file)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Index\+Item (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ref, }
+\item[{const char $\ast$}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_ad573d99d60efb03de6afcec74237b89c}
+
+
+Implémenté dans \hyperlink{class_html_generator_af6cae0eaf27fd2124f46fe009a045e51}{Html\+Generator}, \hyperlink{class_latex_generator_aa13c2f059e998cf6d794a3cf22d98591}{Latex\+Generator}, \hyperlink{class_man_generator_a5902ca975ce0716970c7de209d5be303}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a41f94838ad89b0979c7fdb5e7d31d792}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a5c036e61acf5fe91e2372b16263fef5c}{}\index{Output\+Generator@{Output\+Generator}!end\+Index\+Key@{end\+Index\+Key}}
+\index{end\+Index\+Key@{end\+Index\+Key}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Index\+Key()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Index\+Key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a5c036e61acf5fe91e2372b16263fef5c}
+
+
+Implémenté dans \hyperlink{class_html_generator_a5f89e089a71b9463223efd7ad08a5d37}{Html\+Generator}, \hyperlink{class_latex_generator_ad9348eb54c1c58051655ecd83f2dd84d}{Latex\+Generator}, \hyperlink{class_man_generator_ae60fe67ecdfd731f94c129a767e2a296}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_ac4ecc7a87cc163316582f02afa7e1cfd}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_af6f79555b9c01ffcf0d119d483271aa5}{}\index{Output\+Generator@{Output\+Generator}!end\+Index\+List@{end\+Index\+List}}
+\index{end\+Index\+List@{end\+Index\+List}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Index\+List()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Index\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_af6f79555b9c01ffcf0d119d483271aa5}
+
+
+Implémenté dans \hyperlink{class_html_generator_ab387bea7212012b16c44c1a3fdae04e3}{Html\+Generator}, \hyperlink{class_latex_generator_aa4fdc9d768a181ac189572077cc824ed}{Latex\+Generator}, \hyperlink{class_man_generator_a34fbcb10cccc244f8233e2c0bc3584be}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a44a83f3406938de95a8d4fbdce61f619}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_ac4911ae06d09bc207a4e0f9da24516bc}{}\index{Output\+Generator@{Output\+Generator}!end\+Index\+List\+Item@{end\+Index\+List\+Item}}
+\index{end\+Index\+List\+Item@{end\+Index\+List\+Item}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Index\+List\+Item()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Index\+List\+Item (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_ac4911ae06d09bc207a4e0f9da24516bc}
+
+
+Implémenté dans \hyperlink{class_html_generator_a219b3a869630c6155761687cdf8a4965}{Html\+Generator}, \hyperlink{class_latex_generator_aab6f467db6d8d3cdb5d3e07e085eb640}{Latex\+Generator}, \hyperlink{class_man_generator_ae568d65474b86966690b7d9770f30f0d}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a87ab7629737717515752d5a71b068f96}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a04f3624f96d78d2cf07813e7ef759f3f}{}\index{Output\+Generator@{Output\+Generator}!end\+Index\+Section@{end\+Index\+Section}}
+\index{end\+Index\+Section@{end\+Index\+Section}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Index\+Section(\+Index\+Sections)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Index\+Section (
+\begin{DoxyParamCaption}
+\item[{{\bf Index\+Sections}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a04f3624f96d78d2cf07813e7ef759f3f}
+
+
+Implémenté dans \hyperlink{class_html_generator_a4f525285e864992a9e9004293c6dcf72}{Html\+Generator}, \hyperlink{class_latex_generator_a6380cb1cf2ed1498d638b889fe4165ca}{Latex\+Generator}, \hyperlink{class_man_generator_aa098d1eeb8758aa1b4626380c3848395}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_ab7173f5690754ef15cbcdb256b05d657}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a197393fc4473bb893a83f36369df1552}{}\index{Output\+Generator@{Output\+Generator}!end\+Index\+Value@{end\+Index\+Value}}
+\index{end\+Index\+Value@{end\+Index\+Value}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Index\+Value(const char $\ast$, bool)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Index\+Value (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{{\bf bool}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a197393fc4473bb893a83f36369df1552}
+
+
+Implémenté dans \hyperlink{class_html_generator_a7693faad26cf924dd428b9ad0d7e95a0}{Html\+Generator}, \hyperlink{class_latex_generator_a3acbbf4994f9f80a676192ec476e0b5a}{Latex\+Generator}, \hyperlink{class_man_generator_a6ad3a6b5074c75aa9dbe2e48a88d575d}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a0fd9b7f98db0eb16bd0e5d67696c4def}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a02b0b97eaa17e069eda7cc7f3e794a91}{}\index{Output\+Generator@{Output\+Generator}!end\+Inline\+Header@{end\+Inline\+Header}}
+\index{end\+Inline\+Header@{end\+Inline\+Header}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Inline\+Header()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Inline\+Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a02b0b97eaa17e069eda7cc7f3e794a91}
+
+
+Implémenté dans \hyperlink{class_html_generator_ad6bac26d91f76820e6776ab3d8a09558}{Html\+Generator}, \hyperlink{class_latex_generator_acdfb80dc630e5257ba36c40a3a9e8c06}{Latex\+Generator}, \hyperlink{class_man_generator_aca092428ce78c39b6a3a6e1e8fc66769}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a264502d6589fff99ab0e01f3600cad57}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a59987a7b4a41789d80dd788b0f65c434}{}\index{Output\+Generator@{Output\+Generator}!end\+Inline\+Member\+Doc@{end\+Inline\+Member\+Doc}}
+\index{end\+Inline\+Member\+Doc@{end\+Inline\+Member\+Doc}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Inline\+Member\+Doc()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Inline\+Member\+Doc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a59987a7b4a41789d80dd788b0f65c434}
+
+
+Implémenté dans \hyperlink{class_html_generator_aa746fa4cf5bc3c2708a549b2fa4a4e78}{Html\+Generator}, \hyperlink{class_latex_generator_ad923c683685b854937c49870db835f48}{Latex\+Generator}, \hyperlink{class_man_generator_ac6140ac8dcdd0c2e53b8e4002c56e2eb}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a20f66586492ba04de6f0a6c57e4aefa6}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a64fd29eded2398a03ab98de61423f9be}{}\index{Output\+Generator@{Output\+Generator}!end\+Inline\+Member\+Name@{end\+Inline\+Member\+Name}}
+\index{end\+Inline\+Member\+Name@{end\+Inline\+Member\+Name}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Inline\+Member\+Name()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Inline\+Member\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a64fd29eded2398a03ab98de61423f9be}
+
+
+Implémenté dans \hyperlink{class_html_generator_a696f93dbb5aa57ed49c272049cff3bb2}{Html\+Generator}, \hyperlink{class_latex_generator_ab92ba4ec639de4be31f04be7333de37a}{Latex\+Generator}, \hyperlink{class_man_generator_abeb4bc9d427b3cbd413966341177887e}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a561f25430fb6b34b5c014cf63a183ead}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_abae7a78f520dbd4336d093b8580bc5dd}{}\index{Output\+Generator@{Output\+Generator}!end\+Inline\+Member\+Type@{end\+Inline\+Member\+Type}}
+\index{end\+Inline\+Member\+Type@{end\+Inline\+Member\+Type}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Inline\+Member\+Type()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Inline\+Member\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_abae7a78f520dbd4336d093b8580bc5dd}
+
+
+Implémenté dans \hyperlink{class_html_generator_abf118ca2952e998a7bf92872cbd27d78}{Html\+Generator}, \hyperlink{class_latex_generator_abc814eeab82521846cf18686f8d92fac}{Latex\+Generator}, \hyperlink{class_man_generator_abd751e3031872460ad18adcd0fcbe327}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a1dc76b499c4addde663e6c07abad3083}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a13875bb6d9d678dac1ae21b3ad97127a}{}\index{Output\+Generator@{Output\+Generator}!end\+Labels@{end\+Labels}}
+\index{end\+Labels@{end\+Labels}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Labels()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Labels (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a13875bb6d9d678dac1ae21b3ad97127a}
+
+
+Implémenté dans \hyperlink{class_html_generator_a4a2190f8892cd76339ee7fcd827e48fc}{Html\+Generator}, \hyperlink{class_latex_generator_a5272a911be5eb0d70470fee6c11830bb}{Latex\+Generator}, \hyperlink{class_man_generator_ad66fe9b4b75de372b5bd1669d554c5ee}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a05613171c01f474ba7684b7ef619421e}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_af22783eb794097cdfb783cfb29f60f3e}{}\index{Output\+Generator@{Output\+Generator}!end\+Member\+Declaration@{end\+Member\+Declaration}}
+\index{end\+Member\+Declaration@{end\+Member\+Declaration}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Member\+Declaration(const char $\ast$anchor, const char $\ast$inherit\+Id)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Member\+Declaration (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{anchor, }
+\item[{const char $\ast$}]{inherit\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_af22783eb794097cdfb783cfb29f60f3e}
+
+
+Implémenté dans \hyperlink{class_html_generator_a9b8cedda7c063179e583296294606469}{Html\+Generator}, \hyperlink{class_latex_generator_aef5e24c5148ee8bbd44f3714d7245222}{Latex\+Generator}, \hyperlink{class_man_generator_a99c9249b28b3ec0a01bc379abca51448}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_af6b3e0830a873ad488dd3f2773f7ec15}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_af7f56035354567686d15ab77e1f6f31d}{}\index{Output\+Generator@{Output\+Generator}!end\+Member\+Description@{end\+Member\+Description}}
+\index{end\+Member\+Description@{end\+Member\+Description}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Member\+Description()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Member\+Description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_af7f56035354567686d15ab77e1f6f31d}
+
+
+Implémenté dans \hyperlink{class_html_generator_a8a2091bbac16931ce0f519f43658cf37}{Html\+Generator}, \hyperlink{class_latex_generator_ac73e2b21e08541913b49077b57772b81}{Latex\+Generator}, \hyperlink{class_man_generator_a79c75e33f0931c60403f1f8c17f12808}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a0917bcbff0ed93c3f75da305b0f2f1be}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_adcab4ec924ae47924fdc3492a06d432b}{}\index{Output\+Generator@{Output\+Generator}!end\+Member\+Doc@{end\+Member\+Doc}}
+\index{end\+Member\+Doc@{end\+Member\+Doc}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Member\+Doc(bool)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Member\+Doc (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_adcab4ec924ae47924fdc3492a06d432b}
+
+
+Implémenté dans \hyperlink{class_html_generator_a7f7fbce45b7f8eb55fb12fe3c4c1740a}{Html\+Generator}, \hyperlink{class_latex_generator_a51b9aabafad0c3536c40033e4a200e58}{Latex\+Generator}, \hyperlink{class_man_generator_aa4f870d246564655e89f9d50647e5df0}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_abebabde334843d95b88db4521ea89ead}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_adac2120718344406921dc07cd60c8ead}{}\index{Output\+Generator@{Output\+Generator}!end\+Member\+Doc\+List@{end\+Member\+Doc\+List}}
+\index{end\+Member\+Doc\+List@{end\+Member\+Doc\+List}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Member\+Doc\+List()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Member\+Doc\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_adac2120718344406921dc07cd60c8ead}
+
+
+Implémenté dans \hyperlink{class_html_generator_aadbd63f36bef8a7c5f34bf64ff656276}{Html\+Generator}, \hyperlink{class_latex_generator_a6e886d2519d4bfeff8d4023713ff59e5}{Latex\+Generator}, \hyperlink{class_man_generator_afc88f71ad193093bf9e390e3c42599de}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_ac0999848e2812490e2abbdfe8502756a}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a02431abad8b2d94216a0530cf08b3dca}{}\index{Output\+Generator@{Output\+Generator}!end\+Member\+Doc\+Name@{end\+Member\+Doc\+Name}}
+\index{end\+Member\+Doc\+Name@{end\+Member\+Doc\+Name}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Member\+Doc\+Name()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Member\+Doc\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a02431abad8b2d94216a0530cf08b3dca}
+
+
+Implémenté dans \hyperlink{class_html_generator_a4b86a0067f27e69bbfedd0d97e6eb3d9}{Html\+Generator}, \hyperlink{class_latex_generator_a713efa446810af93ba9b8c3aaf91117c}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_acfea2f35d2c8a760082bc8ad6d0e18fc}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_af1309137ca207483ff87c122694f83ce}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a8fa59aa64d420ced1d1784f7b2ddaa79}{}\index{Output\+Generator@{Output\+Generator}!end\+Member\+Doc\+Prefix\+Item@{end\+Member\+Doc\+Prefix\+Item}}
+\index{end\+Member\+Doc\+Prefix\+Item@{end\+Member\+Doc\+Prefix\+Item}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Member\+Doc\+Prefix\+Item()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Member\+Doc\+Prefix\+Item (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a8fa59aa64d420ced1d1784f7b2ddaa79}
+
+
+Implémenté dans \hyperlink{class_html_generator_a0cacf6a5a55ada9f6f8688e06ce831b7}{Html\+Generator}, \hyperlink{class_latex_generator_a17d04d4fbf1106ab3e32053830b65a55}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_a68512a40b063e43eba868aab90a993fc}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_a477bbfac640dbc619568ac3a097b3e4e}{Man\+Generator}.
+
+\hypertarget{class_output_generator_acf16c793f7f93b9508382eaec818f7f8}{}\index{Output\+Generator@{Output\+Generator}!end\+Member\+Doc\+Simple@{end\+Member\+Doc\+Simple}}
+\index{end\+Member\+Doc\+Simple@{end\+Member\+Doc\+Simple}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Member\+Doc\+Simple()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Member\+Doc\+Simple (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_acf16c793f7f93b9508382eaec818f7f8}
+
+
+Implémenté dans \hyperlink{class_html_generator_a1fdc8266bc0a32185f41ca73bfe73c9f}{Html\+Generator}, \hyperlink{class_latex_generator_a4d3f427461fc381eee9b513d3f5f0a84}{Latex\+Generator}, \hyperlink{class_man_generator_a04b270ad1abc310fb118e4acfb66f770}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_ace3134035ce9c2fb226778477bdf9428}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a6b020947c7d4cd3a2d2d8c0993fbb4e3}{}\index{Output\+Generator@{Output\+Generator}!end\+Member\+Group@{end\+Member\+Group}}
+\index{end\+Member\+Group@{end\+Member\+Group}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Member\+Group(bool)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Member\+Group (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a6b020947c7d4cd3a2d2d8c0993fbb4e3}
+
+
+Implémenté dans \hyperlink{class_r_t_f_generator_ab5e5ec2c8550abaeb2a55db71c88b37f}{R\+T\+F\+Generator}, \hyperlink{class_html_generator_a35213747d61865984f261d3fb7487e9d}{Html\+Generator}, \hyperlink{class_latex_generator_a7e4061ce114f8c12c4137582541771af}{Latex\+Generator}, et \hyperlink{class_man_generator_a93050bd4f7fd8c3181a65b7967b167ea}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a7debb7a4d6584e8855e7dc9ce0594d99}{}\index{Output\+Generator@{Output\+Generator}!end\+Member\+Group\+Docs@{end\+Member\+Group\+Docs}}
+\index{end\+Member\+Group\+Docs@{end\+Member\+Group\+Docs}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Member\+Group\+Docs()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Member\+Group\+Docs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a7debb7a4d6584e8855e7dc9ce0594d99}
+
+
+Implémenté dans \hyperlink{class_r_t_f_generator_a2524bede1266f057580c80da775fae4d}{R\+T\+F\+Generator}, \hyperlink{class_html_generator_a9881dc5213e18e6423d421326f833116}{Html\+Generator}, \hyperlink{class_latex_generator_a75f69fc27fd975f0203456390c498490}{Latex\+Generator}, et \hyperlink{class_man_generator_a60f94edabac05693a5c536c90ef45aaa}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a585ab0b649dad9edf7b78e8f1ec20885}{}\index{Output\+Generator@{Output\+Generator}!end\+Member\+Group\+Header@{end\+Member\+Group\+Header}}
+\index{end\+Member\+Group\+Header@{end\+Member\+Group\+Header}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Member\+Group\+Header()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Member\+Group\+Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a585ab0b649dad9edf7b78e8f1ec20885}
+
+
+Implémenté dans \hyperlink{class_r_t_f_generator_a1f6522cf46fdbcbc824a04c981fe1561}{R\+T\+F\+Generator}, \hyperlink{class_html_generator_ace78ed06d9ae28b81837172a3a5fc167}{Html\+Generator}, \hyperlink{class_latex_generator_ac4339024ccc0da904106eaf6df9514a5}{Latex\+Generator}, et \hyperlink{class_man_generator_af4486862ca19909c0ae2489e0343673d}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a59dd3993aedf7baf7465b67d4327335e}{}\index{Output\+Generator@{Output\+Generator}!end\+Member\+Header@{end\+Member\+Header}}
+\index{end\+Member\+Header@{end\+Member\+Header}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Member\+Header()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Member\+Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a59dd3993aedf7baf7465b67d4327335e}
+
+
+Implémenté dans \hyperlink{class_html_generator_a9188640d2baf3775008ebcde5d94873d}{Html\+Generator}, \hyperlink{class_latex_generator_aab0f11e3d9ce4eec99f4c9253e90d42c}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_abeb6f88fba52b06469815b77955c08c4}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_ae8b551cb5b57bdafb99421c7d22b96e7}{Man\+Generator}.
+
+\hypertarget{class_output_generator_aac81201cfd0dedc7635bc81913906335}{}\index{Output\+Generator@{Output\+Generator}!end\+Member\+Item@{end\+Member\+Item}}
+\index{end\+Member\+Item@{end\+Member\+Item}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Member\+Item()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Member\+Item (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_aac81201cfd0dedc7635bc81913906335}
+
+
+Implémenté dans \hyperlink{class_html_generator_ade88472c29491eace2d40696d9566ddd}{Html\+Generator}, \hyperlink{class_latex_generator_abc987c69dce26f3ae3b8b10aeb4e4ce6}{Latex\+Generator}, \hyperlink{class_man_generator_a0bf54b0520a592a870ae4d310c4890b2}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_adfbb9b8fb310181f9c66383d6ebe84b7}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_af3e875ff86510c53f355c024cc3a574d}{}\index{Output\+Generator@{Output\+Generator}!end\+Member\+List@{end\+Member\+List}}
+\index{end\+Member\+List@{end\+Member\+List}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Member\+List()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Member\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_af3e875ff86510c53f355c024cc3a574d}
+
+
+Implémenté dans \hyperlink{class_html_generator_abc6943cf14aadd65c338ef5664e22975}{Html\+Generator}, \hyperlink{class_latex_generator_ae48dfc57c572fe5004850c809697f1c7}{Latex\+Generator}, \hyperlink{class_man_generator_a0ee830ccc307c8123fffe69bd869ee41}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a026c22840d726a32660cc3d4d58b0c79}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a68c7d0afc95708807a5e623a7e9bb9db}{}\index{Output\+Generator@{Output\+Generator}!end\+Member\+Sections@{end\+Member\+Sections}}
+\index{end\+Member\+Sections@{end\+Member\+Sections}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Member\+Sections()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Member\+Sections (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a68c7d0afc95708807a5e623a7e9bb9db}
+
+
+Implémenté dans \hyperlink{class_html_generator_a60d8489e48efdf2a04d56ff3fcadbe1c}{Html\+Generator}, \hyperlink{class_latex_generator_a11bd307d045459052bcc3e096bf4ecd5}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_aff41f57d28ce59191f7527212ebdccb3}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_a860d52eda1510b0c06177ac90c18b850}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a0c56a25591efb4a9b38da70757dfe46c}{}\index{Output\+Generator@{Output\+Generator}!end\+Member\+Subtitle@{end\+Member\+Subtitle}}
+\index{end\+Member\+Subtitle@{end\+Member\+Subtitle}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Member\+Subtitle()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Member\+Subtitle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a0c56a25591efb4a9b38da70757dfe46c}
+
+
+Implémenté dans \hyperlink{class_html_generator_a3f449b4e7f55848442238528a7c19931}{Html\+Generator}, \hyperlink{class_latex_generator_a1df0ae4d268f904add9bbfc67ee31797}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_a4009bce7747144b2da4a0c348979530a}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_a2338bc0695c2c43e905266bd6178db98}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a0175d6eb2630de31743136c083d0cb84}{}\index{Output\+Generator@{Output\+Generator}!end\+Member\+Template\+Params@{end\+Member\+Template\+Params}}
+\index{end\+Member\+Template\+Params@{end\+Member\+Template\+Params}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Member\+Template\+Params(const char $\ast$, const char $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Member\+Template\+Params (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a0175d6eb2630de31743136c083d0cb84}
+
+
+Implémenté dans \hyperlink{class_html_generator_a00ef5d813c7c390a878bde39fff5cf89}{Html\+Generator}, \hyperlink{class_latex_generator_a3911278e93403187061551fb65a14910}{Latex\+Generator}, \hyperlink{class_man_generator_a0fdb9af50bb49e0451dfbff090410358}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a6b09bc398bb77e562c3847c94ef1d663}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_acc2f021cf85b5cb83716c51e3dc7d44f}{}\index{Output\+Generator@{Output\+Generator}!end\+Parameter\+List@{end\+Parameter\+List}}
+\index{end\+Parameter\+List@{end\+Parameter\+List}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Parameter\+List()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Parameter\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_acc2f021cf85b5cb83716c51e3dc7d44f}
+
+
+Implémenté dans \hyperlink{class_html_generator_a09ba0b9e2623bb31767342f4a8834451}{Html\+Generator}, \hyperlink{class_latex_generator_a1fc0b7df8467ffd55521e9dfeceaf280}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_a14ea701758cd22aac57c4701b91b3094}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_add87f53c9277adfe77e311096b616d8d}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a69b117731ab42b3985713760b270a1a5}{}\index{Output\+Generator@{Output\+Generator}!end\+Parameter\+Name@{end\+Parameter\+Name}}
+\index{end\+Parameter\+Name@{end\+Parameter\+Name}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Parameter\+Name(bool, bool, bool)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Parameter\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{, }
+\item[{{\bf bool}}]{, }
+\item[{{\bf bool}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a69b117731ab42b3985713760b270a1a5}
+
+
+Implémenté dans \hyperlink{class_html_generator_abd64a3a25b75672c9944ec32d014f55a}{Html\+Generator}, \hyperlink{class_latex_generator_a01834cb7728e046c253ab8a86efbfdb1}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_acc9e432934e2b1decdf1be6dbaa4f5f2}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_a9b26c28be8f8e51f9d8c2d3bcf5af505}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a8c701cf1050103eee69d57b409640dea}{}\index{Output\+Generator@{Output\+Generator}!end\+Parameter\+Type@{end\+Parameter\+Type}}
+\index{end\+Parameter\+Type@{end\+Parameter\+Type}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Parameter\+Type()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Parameter\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a8c701cf1050103eee69d57b409640dea}
+
+
+Implémenté dans \hyperlink{class_html_generator_a7acf2aede403e63af3a43d412894a480}{Html\+Generator}, \hyperlink{class_latex_generator_a65c0693470afbba9f9cb4c013e3029cc}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_afa91e226899991dfdc3996ee1f6f87c2}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_abc642fb37525e494dc01a2b9450fa516}{Man\+Generator}.
+
+\hypertarget{class_output_generator_aaacf2b4efc09a2c06b9dd8cc2af69046}{}\index{Output\+Generator@{Output\+Generator}!end\+Plain\+File@{end\+Plain\+File}}
+\index{end\+Plain\+File@{end\+Plain\+File}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Plain\+File()}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+Generator\+::end\+Plain\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_output_generator_aaacf2b4efc09a2c06b9dd8cc2af69046}
+\hypertarget{class_output_generator_abb659e1d0c5d99f3a85751a321bca262}{}\index{Output\+Generator@{Output\+Generator}!end\+Project\+Number@{end\+Project\+Number}}
+\index{end\+Project\+Number@{end\+Project\+Number}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Project\+Number()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Project\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_abb659e1d0c5d99f3a85751a321bca262}
+
+
+Implémenté dans \hyperlink{class_html_generator_a56bb1fc7587fe00fbe3fb3cf6c9973ac}{Html\+Generator}, \hyperlink{class_latex_generator_a2bb769f495adda2f9b6e01aea5bd1eba}{Latex\+Generator}, \hyperlink{class_man_generator_ab9165a61b79e3e2f6bb7a6be7fb3b592}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a9ccc768a46f45f0f49bb41f25f108dab}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_ac772c3fa9b9fb938598b67b8251a1787}{}\index{Output\+Generator@{Output\+Generator}!end\+Quick\+Indices@{end\+Quick\+Indices}}
+\index{end\+Quick\+Indices@{end\+Quick\+Indices}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Quick\+Indices()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Quick\+Indices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_ac772c3fa9b9fb938598b67b8251a1787}
+
+
+Implémenté dans \hyperlink{class_html_generator_a72052df688b371d1b3fe83ec95273e78}{Html\+Generator}, \hyperlink{class_latex_generator_a8a107eb66c8340cc33fdfde6dac04861}{Latex\+Generator}, \hyperlink{class_man_generator_a61560f36bab8608c98e9cf89fd5371bb}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a1e804272e7498124acf895be2bcdb35a}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a53f79d9816008132480d3d454e14251b}{}\index{Output\+Generator@{Output\+Generator}!end\+Text\+Block@{end\+Text\+Block}}
+\index{end\+Text\+Block@{end\+Text\+Block}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Text\+Block(bool)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Text\+Block (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a53f79d9816008132480d3d454e14251b}
+
+
+Implémenté dans \hyperlink{class_html_generator_a10c142119a0926773b499872108305db}{Html\+Generator}, \hyperlink{class_latex_generator_a57dadc601e009ee68a09494b3d400caa}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_a21fd75f623286b74383a3ad6579c022b}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_ae9eec8226a8e5cdf4e1f39a540bc104a}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a77b6fef939339086beec891ac1769781}{}\index{Output\+Generator@{Output\+Generator}!end\+Title\+Head@{end\+Title\+Head}}
+\index{end\+Title\+Head@{end\+Title\+Head}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{end\+Title\+Head(const char $\ast$file\+Name, const char $\ast$name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::end\+Title\+Head (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a77b6fef939339086beec891ac1769781}
+
+
+Implémenté dans \hyperlink{class_html_generator_a44202d0de92814df8521f373adc257d9}{Html\+Generator}, \hyperlink{class_latex_generator_a264ba2c261bfce85495574f970f26c67}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_a881f413de3acd54c6bd5977c4add08d4}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_a3bf5507570176973698d86176b3ecb08}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a4c4d0ff79434d93b42b8e0c7c42fa5d1}{}\index{Output\+Generator@{Output\+Generator}!exception\+Entry@{exception\+Entry}}
+\index{exception\+Entry@{exception\+Entry}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{exception\+Entry(const char $\ast$, bool)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::exception\+Entry (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{{\bf bool}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a4c4d0ff79434d93b42b8e0c7c42fa5d1}
+
+
+Implémenté dans \hyperlink{class_html_generator_a74f27361593c1219f23c3b9f0cb49e66}{Html\+Generator}, \hyperlink{class_latex_generator_aefc737619fba908076b28515814983a2}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_abf4fe54e26bf5f3e362cab1f0825b6a5}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_ae747187a714e7c5465432a9171388804}{Man\+Generator}.
+
+\hypertarget{class_output_generator_ad366efdcaa9df2638110e5ce50efc71d}{}\index{Output\+Generator@{Output\+Generator}!get@{get}}
+\index{get@{get}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{get(\+Output\+Type o)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Output\+Generator}$\ast$ Output\+Generator\+::get (
+\begin{DoxyParamCaption}
+\item[{{\bf Output\+Type}}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_ad366efdcaa9df2638110e5ce50efc71d}
+
+
+Implémenté dans \hyperlink{class_html_generator_add83ad0454d010cc31da65d1bfff3c8a}{Html\+Generator}, \hyperlink{class_latex_generator_aa2afcbb2b9455fa24d37a27d6e705d76}{Latex\+Generator}, \hyperlink{class_man_generator_a00f9039d2fae7e493948ade8f7ba4062}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a24e81556aafd0e14948cd96f1dbefc46}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a0df59cf6b0b238b48b139c7bfe5fb901}{}\index{Output\+Generator@{Output\+Generator}!insert\+Member\+Align@{insert\+Member\+Align}}
+\index{insert\+Member\+Align@{insert\+Member\+Align}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{insert\+Member\+Align(bool)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::insert\+Member\+Align (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a0df59cf6b0b238b48b139c7bfe5fb901}
+
+
+Implémenté dans \hyperlink{class_html_generator_a9342c375b88fae1c32c8aa9620142ee1}{Html\+Generator}, \hyperlink{class_latex_generator_ab4c418164024ead6645f1c8526887862}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_aeae50b322d39c2db900f5bc883cb4519}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_a7304b66d658ba124c84d4553772f27a6}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a802995a552743934a30dd82aae42694b}{}\index{Output\+Generator@{Output\+Generator}!is\+Enabled@{is\+Enabled}}
+\index{is\+Enabled@{is\+Enabled}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{is\+Enabled(\+Output\+Type o)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} Output\+Generator\+::is\+Enabled (
+\begin{DoxyParamCaption}
+\item[{{\bf Output\+Type}}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a802995a552743934a30dd82aae42694b}
+
+
+Implémenté dans \hyperlink{class_html_generator_a22b1c974e6510a41a082d801606cefa0}{Html\+Generator}, \hyperlink{class_latex_generator_ac772a07025c6fa4affeb9fd0e3c5033c}{Latex\+Generator}, \hyperlink{class_man_generator_ab1988ae55ad31aa4314452d277cd8d47}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a6bccbf01f966c68264db6a07ec459cb0}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a6758159bcacd76033b73d35603bc9ea8}{}\index{Output\+Generator@{Output\+Generator}!is\+Enabled@{is\+Enabled}}
+\index{is\+Enabled@{is\+Enabled}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{is\+Enabled() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Output\+Generator\+::is\+Enabled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_output_generator_a6758159bcacd76033b73d35603bc9ea8}
+\hypertarget{class_output_generator_a12d53790300c52b68bc0715ab05507d2}{}\index{Output\+Generator@{Output\+Generator}!last\+Index\+Page@{last\+Index\+Page}}
+\index{last\+Index\+Page@{last\+Index\+Page}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{last\+Index\+Page()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::last\+Index\+Page (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a12d53790300c52b68bc0715ab05507d2}
+
+
+Implémenté dans \hyperlink{class_html_generator_a91b2b5d349350e74a92c1c51ff9eec8f}{Html\+Generator}, \hyperlink{class_r_t_f_generator_ab8e8c04376e00b1486850c8f76d01e85}{R\+T\+F\+Generator}, \hyperlink{class_man_generator_a20a2522333b26065dd45251026189ba0}{Man\+Generator}, et \hyperlink{class_latex_generator_a5bd03c7e1a88abb8d5445bec8581b2aa}{Latex\+Generator}.
+
+\hypertarget{class_output_generator_ae8e915381e39d9c92674d7cb0e0e6589}{}\index{Output\+Generator@{Output\+Generator}!pop\+Generator\+State@{pop\+Generator\+State}}
+\index{pop\+Generator\+State@{pop\+Generator\+State}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{pop\+Generator\+State()}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+Generator\+::pop\+Generator\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_output_generator_ae8e915381e39d9c92674d7cb0e0e6589}
+\hypertarget{class_output_generator_a0e96bd0b61096478ec0eecfee3f609df}{}\index{Output\+Generator@{Output\+Generator}!push\+Generator\+State@{push\+Generator\+State}}
+\index{push\+Generator\+State@{push\+Generator\+State}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{push\+Generator\+State()}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+Generator\+::push\+Generator\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_output_generator_a0e96bd0b61096478ec0eecfee3f609df}
+\hypertarget{class_output_generator_a13587c69b6272779d38b6bc2a45fbfd5}{}\index{Output\+Generator@{Output\+Generator}!start\+Anon\+Type\+Scope@{start\+Anon\+Type\+Scope}}
+\index{start\+Anon\+Type\+Scope@{start\+Anon\+Type\+Scope}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Anon\+Type\+Scope(int)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Anon\+Type\+Scope (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a13587c69b6272779d38b6bc2a45fbfd5}
+
+
+Implémenté dans \hyperlink{class_html_generator_af9db4bdc3231e939587cce7efbc1e56e}{Html\+Generator}, \hyperlink{class_latex_generator_a320eca9524c1041ffffcffc5784d2272}{Latex\+Generator}, \hyperlink{class_man_generator_a7650162849d46081499953d5a16b6bbf}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_abb1984b3f75a50b57e68fff9570a608e}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_ace8e9a8d3c193fe5b50f19d07882a51a}{}\index{Output\+Generator@{Output\+Generator}!start\+Call\+Graph@{start\+Call\+Graph}}
+\index{start\+Call\+Graph@{start\+Call\+Graph}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Call\+Graph()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Call\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_ace8e9a8d3c193fe5b50f19d07882a51a}
+
+
+Implémenté dans \hyperlink{class_html_generator_ad02b96924b42a2f2ac3e511dbbb587c2}{Html\+Generator}, \hyperlink{class_latex_generator_a0efcfff69a3e26f29f186b9d626128c3}{Latex\+Generator}, \hyperlink{class_man_generator_ace53641e16c7bf64fbddc79178e6fc52}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a337a29f3c9a3031dd9926d56be1a3732}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_af4dbb13368da9a7fee2c7ed3bb4bd8ea}{}\index{Output\+Generator@{Output\+Generator}!start\+Class\+Diagram@{start\+Class\+Diagram}}
+\index{start\+Class\+Diagram@{start\+Class\+Diagram}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Class\+Diagram()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Class\+Diagram (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_af4dbb13368da9a7fee2c7ed3bb4bd8ea}
+
+
+Implémenté dans \hyperlink{class_html_generator_a1c8b9863208e217cf6642951ef006498}{Html\+Generator}, \hyperlink{class_latex_generator_aee32e115984402a2d4b49c4a7d153a53}{Latex\+Generator}, \hyperlink{class_man_generator_a68a8a44e48aa4441ed8f522f4f88dc75}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_ac5ecece390049b98cf025a674bf70f75}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a81ade540356d6c7669c6c701bde02e10}{}\index{Output\+Generator@{Output\+Generator}!start\+Constraint\+Docs@{start\+Constraint\+Docs}}
+\index{start\+Constraint\+Docs@{start\+Constraint\+Docs}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Constraint\+Docs()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Constraint\+Docs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a81ade540356d6c7669c6c701bde02e10}
+
+
+Implémenté dans \hyperlink{class_html_generator_a5ec6842686db43cbb2eb75eaef551472}{Html\+Generator}, \hyperlink{class_latex_generator_a88eb70bdc53db662b4b4292ca3fafbb3}{Latex\+Generator}, \hyperlink{class_man_generator_a1f03a92bea2c4acbefdfc92123dd9734}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a8ea3d45327f68ad2e47a4e5298602f9d}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a745e4b1d9843812a09c4410aa43084b0}{}\index{Output\+Generator@{Output\+Generator}!start\+Constraint\+List@{start\+Constraint\+List}}
+\index{start\+Constraint\+List@{start\+Constraint\+List}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Constraint\+List(const char $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Constraint\+List (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a745e4b1d9843812a09c4410aa43084b0}
+
+
+Implémenté dans \hyperlink{class_html_generator_aa5851d60541e79c0a0539e7206d85803}{Html\+Generator}, \hyperlink{class_latex_generator_a675d59502d27b460e2387404a98a6dcd}{Latex\+Generator}, \hyperlink{class_man_generator_a0f2e73868294b926079a00988aa11723}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a2f057ad3fcf66b3c6a736fe1bc0c891c}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_abce5f3b4a1104ca8cea00f19f0d803c0}{}\index{Output\+Generator@{Output\+Generator}!start\+Constraint\+Param@{start\+Constraint\+Param}}
+\index{start\+Constraint\+Param@{start\+Constraint\+Param}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Constraint\+Param()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Constraint\+Param (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_abce5f3b4a1104ca8cea00f19f0d803c0}
+
+
+Implémenté dans \hyperlink{class_html_generator_aac02dbee22fe7d3ff29081b4833981aa}{Html\+Generator}, \hyperlink{class_latex_generator_ae6ec7c8f63ab59e21b67d94098598226}{Latex\+Generator}, \hyperlink{class_man_generator_a0093d745b94f89f5812c48dbdce045e7}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a0dece267723511baafa87912d4a348f5}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a6f24ed1e9572bbc6de4c533129a4d28a}{}\index{Output\+Generator@{Output\+Generator}!start\+Constraint\+Type@{start\+Constraint\+Type}}
+\index{start\+Constraint\+Type@{start\+Constraint\+Type}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Constraint\+Type()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Constraint\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a6f24ed1e9572bbc6de4c533129a4d28a}
+
+
+Implémenté dans \hyperlink{class_html_generator_a6fefa778c71da8dc9bd4a28461a1da52}{Html\+Generator}, \hyperlink{class_latex_generator_a25d8896cd81e657b37775af2a331761d}{Latex\+Generator}, \hyperlink{class_man_generator_a626fe47f183f5e46f31a51dc2f18c26f}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a8e83a67681925ae6b55615edcca9c265}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a21231e6bba1594e5327e8e150e39355c}{}\index{Output\+Generator@{Output\+Generator}!start\+Contents@{start\+Contents}}
+\index{start\+Contents@{start\+Contents}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Contents()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Contents (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a21231e6bba1594e5327e8e150e39355c}
+
+
+Implémenté dans \hyperlink{class_html_generator_a54eaa6e2b9fe8f3aee9eff264da2449e}{Html\+Generator}, \hyperlink{class_latex_generator_a226b22a047a903fed1b3d30dad5e41ac}{Latex\+Generator}, \hyperlink{class_man_generator_a3e53f87fe3a92cd4116370bb3207f2aa}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a59a9e3d72221d5ca1cd6d37ac243b3bc}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a02c3701bf94326612c1b4fcaf16c4011}{}\index{Output\+Generator@{Output\+Generator}!start\+Dir\+Dep\+Graph@{start\+Dir\+Dep\+Graph}}
+\index{start\+Dir\+Dep\+Graph@{start\+Dir\+Dep\+Graph}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Dir\+Dep\+Graph()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Dir\+Dep\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a02c3701bf94326612c1b4fcaf16c4011}
+
+
+Implémenté dans \hyperlink{class_html_generator_ae98ba8c8ff63e688bc33af4114507335}{Html\+Generator}, \hyperlink{class_latex_generator_abc79ee7e0a83ce1b804189f74d55d899}{Latex\+Generator}, \hyperlink{class_man_generator_a6b4472b2eefeb5376c745f25bf4f0311}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_ae1d2a7d98e8b0933b8000b7ba646fe08}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a60efbd7467b31058030731fe084a9db5}{}\index{Output\+Generator@{Output\+Generator}!start\+Dot\+Graph@{start\+Dot\+Graph}}
+\index{start\+Dot\+Graph@{start\+Dot\+Graph}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Dot\+Graph()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Dot\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a60efbd7467b31058030731fe084a9db5}
+
+
+Implémenté dans \hyperlink{class_html_generator_ab0139c0d7abf7bca982e9d4360b4ed34}{Html\+Generator}, \hyperlink{class_latex_generator_a0b8173550d071d48f622c079d6644766}{Latex\+Generator}, \hyperlink{class_man_generator_a0b197f55abd7fe194183ecee7aebe800}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_ac284549ad668918d625e7fa824920f3c}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_ace0718073cbb95ce1908405e6eda095b}{}\index{Output\+Generator@{Output\+Generator}!start\+Doxy\+Anchor@{start\+Doxy\+Anchor}}
+\index{start\+Doxy\+Anchor@{start\+Doxy\+Anchor}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Doxy\+Anchor(const char $\ast$f\+Name, const char $\ast$man\+Name, const char $\ast$anchor, const char $\ast$name, const char $\ast$args)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Doxy\+Anchor (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{f\+Name, }
+\item[{const char $\ast$}]{man\+Name, }
+\item[{const char $\ast$}]{anchor, }
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_ace0718073cbb95ce1908405e6eda095b}
+
+
+Implémenté dans \hyperlink{class_html_generator_a677520cd44ba8306cbaf15387d34d1cd}{Html\+Generator}, \hyperlink{class_latex_generator_a9150e3ed0cc728e11d3d73f7d1965a81}{Latex\+Generator}, \hyperlink{class_man_generator_a76c670385ec8cf1dccf4f4f16494e79b}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a502ee48a2bb36ef2f0891dc5e48d30f8}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a8c04cb480935a4f94b5391b97d01d5fb}{}\index{Output\+Generator@{Output\+Generator}!start\+File@{start\+File}}
+\index{start\+File@{start\+File}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+File(const char $\ast$name, const char $\ast$man\+Name, const char $\ast$title)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{man\+Name, }
+\item[{const char $\ast$}]{title}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a8c04cb480935a4f94b5391b97d01d5fb}
+
+
+Implémenté dans \hyperlink{class_html_generator_ab0a5eb800f902fc308dd418901bf8c0f}{Html\+Generator}, \hyperlink{class_latex_generator_a4658c98545414c4147d7e589f844c83c}{Latex\+Generator}, \hyperlink{class_man_generator_a694e4eb58c60cf927b2dc0b764756274}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a8f2619c60318190461202909303cdd64}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a5c001113ef669b2043a9abbf1326f286}{}\index{Output\+Generator@{Output\+Generator}!start\+Group\+Collaboration@{start\+Group\+Collaboration}}
+\index{start\+Group\+Collaboration@{start\+Group\+Collaboration}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Group\+Collaboration()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Group\+Collaboration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a5c001113ef669b2043a9abbf1326f286}
+
+
+Implémenté dans \hyperlink{class_html_generator_a0c2ea1971421f937a4bceaea76aba95a}{Html\+Generator}, \hyperlink{class_latex_generator_afda9dc899675e9f29af32a30812a5c8b}{Latex\+Generator}, \hyperlink{class_man_generator_a0e3edd731a18f4410530e8e32bbabb4f}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a1cca2a1e8279bfe2a81c5c175f3e8a3e}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a567cedbeeb6ffa8f65893976e4c246d9}{}\index{Output\+Generator@{Output\+Generator}!start\+Group\+Header@{start\+Group\+Header}}
+\index{start\+Group\+Header@{start\+Group\+Header}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Group\+Header(int)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Group\+Header (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a567cedbeeb6ffa8f65893976e4c246d9}
+
+
+Implémenté dans \hyperlink{class_html_generator_a1368991b5988b527dc0c5b0b05cbb5b1}{Html\+Generator}, \hyperlink{class_latex_generator_ad2a9b94fc5f35298fc6a1e96c3b1b7d4}{Latex\+Generator}, \hyperlink{class_man_generator_a69dbc09e1398a0f64796d28a45642bba}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a75318686aaf9a1d10be4fb9c7f90c98f}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a60a86f83cd8878a315820831c66f7e55}{}\index{Output\+Generator@{Output\+Generator}!start\+Header\+Section@{start\+Header\+Section}}
+\index{start\+Header\+Section@{start\+Header\+Section}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Header\+Section()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Header\+Section (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a60a86f83cd8878a315820831c66f7e55}
+
+
+Implémenté dans \hyperlink{class_html_generator_a966c1d75a00ae4494356fd94b2d2c1bf}{Html\+Generator}, \hyperlink{class_latex_generator_a5e472c9aacb7d71ac64c6d6c71fdf1a0}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_ac7b3d7b5f30f3d12a9168c63d8558b01}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_a070bbb4b1984e6f82dd4798f1ac325da}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a8f015b38b836904858cc1cd34f44363f}{}\index{Output\+Generator@{Output\+Generator}!start\+Incl\+Dep\+Graph@{start\+Incl\+Dep\+Graph}}
+\index{start\+Incl\+Dep\+Graph@{start\+Incl\+Dep\+Graph}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Incl\+Dep\+Graph()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Incl\+Dep\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a8f015b38b836904858cc1cd34f44363f}
+
+
+Implémenté dans \hyperlink{class_html_generator_a681694b9fbcedc15903e51c95016f711}{Html\+Generator}, \hyperlink{class_latex_generator_ae34e761905a08ff5ec95bcd9668729a3}{Latex\+Generator}, \hyperlink{class_man_generator_a6c38d1f8f00d0cf2c5c69417e54aa446}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_af71f39a74552eca540f9ce3ec6ecaaaf}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a1fe795813bf725fb63b19a1cf463bdfa}{}\index{Output\+Generator@{Output\+Generator}!start\+Indent@{start\+Indent}}
+\index{start\+Indent@{start\+Indent}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Indent()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Indent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a1fe795813bf725fb63b19a1cf463bdfa}
+
+
+Implémenté dans \hyperlink{class_html_generator_aafe5fc8d00e32357b60fd4e0b0c8e0e7}{Html\+Generator}, \hyperlink{class_latex_generator_a74eea0dc8113265d289a01f7f59fcf39}{Latex\+Generator}, \hyperlink{class_man_generator_a02774d23b0846b52af4c0b76e0db6c0f}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a4dd78ad24988675c5a4b38ff3a5a120a}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_afbc31c1a5eaecbcf45e16c4a16d747f7}{}\index{Output\+Generator@{Output\+Generator}!start\+Index\+Item@{start\+Index\+Item}}
+\index{start\+Index\+Item@{start\+Index\+Item}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Index\+Item(const char $\ast$ref, const char $\ast$file)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Index\+Item (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ref, }
+\item[{const char $\ast$}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_afbc31c1a5eaecbcf45e16c4a16d747f7}
+
+
+Implémenté dans \hyperlink{class_html_generator_a02517c155d2b9fe903d33424927a95ac}{Html\+Generator}, \hyperlink{class_latex_generator_ab0de1c1879b785306e363c0a69b424f0}{Latex\+Generator}, \hyperlink{class_man_generator_a51cec6b9dc4026bfb5369b9f2285e76f}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_afdc11b7bd35a07d07d516e7f746b0b23}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a6db4df81706e050d26df7083977e5da9}{}\index{Output\+Generator@{Output\+Generator}!start\+Index\+Key@{start\+Index\+Key}}
+\index{start\+Index\+Key@{start\+Index\+Key}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Index\+Key()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Index\+Key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a6db4df81706e050d26df7083977e5da9}
+
+
+Implémenté dans \hyperlink{class_html_generator_a61aabe55582849829fd4197d389f5843}{Html\+Generator}, \hyperlink{class_latex_generator_a770f8b7576f164f5fe756aa5d08dabb8}{Latex\+Generator}, \hyperlink{class_man_generator_abe1776365631974d6789cb6fceef5d62}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a5cd7e617c40987804564ebf0cdab7efa}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_adc617e6eaee65cfad74e0b8c07aab27d}{}\index{Output\+Generator@{Output\+Generator}!start\+Index\+List@{start\+Index\+List}}
+\index{start\+Index\+List@{start\+Index\+List}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Index\+List()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Index\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_adc617e6eaee65cfad74e0b8c07aab27d}
+
+
+Implémenté dans \hyperlink{class_html_generator_a72550760e6a0c1c45a5667923b08f736}{Html\+Generator}, \hyperlink{class_latex_generator_a322f5fe4d3e171b290a04ba48f3d6bdd}{Latex\+Generator}, \hyperlink{class_man_generator_a9c1a9e6d28d35c61d8bada0b3df54135}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_afe73f8487ef0728a9f1f3814ce38d813}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a620605e68ebc9176a544eda7073bf039}{}\index{Output\+Generator@{Output\+Generator}!start\+Index\+List\+Item@{start\+Index\+List\+Item}}
+\index{start\+Index\+List\+Item@{start\+Index\+List\+Item}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Index\+List\+Item()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Index\+List\+Item (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a620605e68ebc9176a544eda7073bf039}
+
+
+Implémenté dans \hyperlink{class_html_generator_a528f8a53cd93274bdbb70c93be532101}{Html\+Generator}, \hyperlink{class_latex_generator_a5a1c59d49dcb899c53adb5958e31cd4d}{Latex\+Generator}, \hyperlink{class_man_generator_ab4387706fb5b4d1d0f1bfdab7a077ce1}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a5effd10391cb320e9876ab54fab79cfa}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_ab8164b995688984ec7613485758a1af3}{}\index{Output\+Generator@{Output\+Generator}!start\+Index\+Section@{start\+Index\+Section}}
+\index{start\+Index\+Section@{start\+Index\+Section}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Index\+Section(\+Index\+Sections)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Index\+Section (
+\begin{DoxyParamCaption}
+\item[{{\bf Index\+Sections}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_ab8164b995688984ec7613485758a1af3}
+
+
+Implémenté dans \hyperlink{class_html_generator_a686b599d09c8254a8d28589aa18e2ca1}{Html\+Generator}, \hyperlink{class_latex_generator_a94d916061c6268e319d34645f8cd84f6}{Latex\+Generator}, \hyperlink{class_man_generator_a16139edbbc00e57e3b17c803b36dff22}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a861891a016c0c096a0e218017cf4865f}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a8b7df4e8d1c8c35c96ed72a1dd88dfc3}{}\index{Output\+Generator@{Output\+Generator}!start\+Index\+Value@{start\+Index\+Value}}
+\index{start\+Index\+Value@{start\+Index\+Value}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Index\+Value(bool)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Index\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a8b7df4e8d1c8c35c96ed72a1dd88dfc3}
+
+
+Implémenté dans \hyperlink{class_html_generator_a5a650d7a723ffd19f31485454ca3d2ff}{Html\+Generator}, \hyperlink{class_latex_generator_ac6e9c546b62660982e877f448e30b2a1}{Latex\+Generator}, \hyperlink{class_man_generator_ab554eb3dc18eceac143faf9ca3d29859}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a7eaa22d62032e7783ddce216aaae5c9a}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a75c7b7e0e20ce30957ed49fd1d1d246d}{}\index{Output\+Generator@{Output\+Generator}!start\+Inline\+Header@{start\+Inline\+Header}}
+\index{start\+Inline\+Header@{start\+Inline\+Header}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Inline\+Header()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Inline\+Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a75c7b7e0e20ce30957ed49fd1d1d246d}
+
+
+Implémenté dans \hyperlink{class_html_generator_ad5d757feeb81868a9cf577256b29cdb4}{Html\+Generator}, \hyperlink{class_latex_generator_a4f882c4c4f0b324aa4e8b90a3669f4e3}{Latex\+Generator}, \hyperlink{class_man_generator_aa3087d26fc36bd95bebf71f9a92fa404}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a619545578f99c0642f9d2f82dba69468}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a6f40ca8e90e8167136b678efbe6bf131}{}\index{Output\+Generator@{Output\+Generator}!start\+Inline\+Member\+Doc@{start\+Inline\+Member\+Doc}}
+\index{start\+Inline\+Member\+Doc@{start\+Inline\+Member\+Doc}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Inline\+Member\+Doc()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Inline\+Member\+Doc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a6f40ca8e90e8167136b678efbe6bf131}
+
+
+Implémenté dans \hyperlink{class_html_generator_aba254fc8b8e76527e995671a36619228}{Html\+Generator}, \hyperlink{class_latex_generator_af315eca185ea2b54cafe21c589550051}{Latex\+Generator}, \hyperlink{class_man_generator_afcb07fc4770fc15d8de94c9896f79bae}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_af4b8acfdf0cb5e33d0760a6bdde6322d}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a0a3424e053c9ce5e63f5c8f3805aa940}{}\index{Output\+Generator@{Output\+Generator}!start\+Inline\+Member\+Name@{start\+Inline\+Member\+Name}}
+\index{start\+Inline\+Member\+Name@{start\+Inline\+Member\+Name}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Inline\+Member\+Name()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Inline\+Member\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a0a3424e053c9ce5e63f5c8f3805aa940}
+
+
+Implémenté dans \hyperlink{class_html_generator_aea75d506f4ee65a94d2d168de6bd9344}{Html\+Generator}, \hyperlink{class_latex_generator_ab5f38cdf65246dfa8b1c36a3273ed3cf}{Latex\+Generator}, \hyperlink{class_man_generator_adcf4b862758e2dc7e82c41f5a8a349fd}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_ae83e7d998c1bae062c0d0ac838a4227b}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a590cf1aa2c7061dd15916a1459690445}{}\index{Output\+Generator@{Output\+Generator}!start\+Inline\+Member\+Type@{start\+Inline\+Member\+Type}}
+\index{start\+Inline\+Member\+Type@{start\+Inline\+Member\+Type}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Inline\+Member\+Type()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Inline\+Member\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a590cf1aa2c7061dd15916a1459690445}
+
+
+Implémenté dans \hyperlink{class_html_generator_ad8d74d63c27a79721411b61f079b1d23}{Html\+Generator}, \hyperlink{class_latex_generator_a44918d04425a332e92e30465f7e05a64}{Latex\+Generator}, \hyperlink{class_man_generator_a6be4bb76041b91204e6acc46d525ef06}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a28120fbd546b11d4d783b1752d9b3bfa}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_af317d904e65624244c58368deabcba55}{}\index{Output\+Generator@{Output\+Generator}!start\+Labels@{start\+Labels}}
+\index{start\+Labels@{start\+Labels}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Labels()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Labels (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_af317d904e65624244c58368deabcba55}
+
+
+Implémenté dans \hyperlink{class_html_generator_a117a5517c516573c07e780c560651619}{Html\+Generator}, \hyperlink{class_latex_generator_a71809b49388e139615299e801e09ab89}{Latex\+Generator}, \hyperlink{class_man_generator_aeee5f7cf35dd6749a0bbd65b5bfe6c0e}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a7ac65450689663a29331090a1329ea75}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_aeb5b5670178926771b6a649239f15444}{}\index{Output\+Generator@{Output\+Generator}!start\+Member\+Declaration@{start\+Member\+Declaration}}
+\index{start\+Member\+Declaration@{start\+Member\+Declaration}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Member\+Declaration()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Member\+Declaration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_aeb5b5670178926771b6a649239f15444}
+
+
+Implémenté dans \hyperlink{class_html_generator_a16eb9767a8460f94d578bc9c0e62b581}{Html\+Generator}, \hyperlink{class_latex_generator_a960022ab73b0ed3a206ab0213a441ecf}{Latex\+Generator}, \hyperlink{class_man_generator_a19e8526336e7686234452bfe36420858}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a733845745c3daac9a3700cedbbfc170a}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a5b6d67bd4820cdd2fa503b0065615406}{}\index{Output\+Generator@{Output\+Generator}!start\+Member\+Description@{start\+Member\+Description}}
+\index{start\+Member\+Description@{start\+Member\+Description}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Member\+Description(const char $\ast$anchor, const char $\ast$inherit\+Id)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Member\+Description (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{anchor, }
+\item[{const char $\ast$}]{inherit\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a5b6d67bd4820cdd2fa503b0065615406}
+
+
+Implémenté dans \hyperlink{class_html_generator_a15f4314a8389df51f3470e22cec6a72d}{Html\+Generator}, \hyperlink{class_latex_generator_a287b481674a16a94961ad4e54f8fbb98}{Latex\+Generator}, \hyperlink{class_man_generator_a8526e7060cc73cb4bac07aadf7bbbac9}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_acddb6637fb551b498568a0e1fc89a54a}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a9cd56ff964c1d6a592b25dd7fd036d23}{}\index{Output\+Generator@{Output\+Generator}!start\+Member\+Doc@{start\+Member\+Doc}}
+\index{start\+Member\+Doc@{start\+Member\+Doc}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Member\+Doc(const char $\ast$, const char $\ast$, const char $\ast$, const char $\ast$, bool)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Member\+Doc (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{const char $\ast$}]{, }
+\item[{const char $\ast$}]{, }
+\item[{const char $\ast$}]{, }
+\item[{{\bf bool}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a9cd56ff964c1d6a592b25dd7fd036d23}
+
+
+Implémenté dans \hyperlink{class_html_generator_ae893cf7910d9badc2e92a008317fc237}{Html\+Generator}, \hyperlink{class_latex_generator_a3dda78cce756957b3aa1dc249798acea}{Latex\+Generator}, \hyperlink{class_man_generator_a16622bebadf9257bfb46939f3f892a58}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a3284d9085181fa0a6e01c47d0c54073d}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a79d92b273b6678f0484f507f9aeed930}{}\index{Output\+Generator@{Output\+Generator}!start\+Member\+Doc\+List@{start\+Member\+Doc\+List}}
+\index{start\+Member\+Doc\+List@{start\+Member\+Doc\+List}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Member\+Doc\+List()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Member\+Doc\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a79d92b273b6678f0484f507f9aeed930}
+
+
+Implémenté dans \hyperlink{class_html_generator_a1d6acde43c3f5608a64cc8f3ec90738d}{Html\+Generator}, \hyperlink{class_latex_generator_acc1d5f45c86faebbfa1e193aa6a9724a}{Latex\+Generator}, \hyperlink{class_man_generator_a94d12a8dc22ce00643f7bec9e0362029}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_aa34bc87c9ef0a6de2da83d975614a3ce}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a8646f44dc5c56ef3f6d5fa3f667cd223}{}\index{Output\+Generator@{Output\+Generator}!start\+Member\+Doc\+Name@{start\+Member\+Doc\+Name}}
+\index{start\+Member\+Doc\+Name@{start\+Member\+Doc\+Name}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Member\+Doc\+Name(bool)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Member\+Doc\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a8646f44dc5c56ef3f6d5fa3f667cd223}
+
+
+Implémenté dans \hyperlink{class_html_generator_a9067c50404d75e969e8463bc4dbb98a5}{Html\+Generator}, \hyperlink{class_latex_generator_a766f5d12e18478011232ee61c796f019}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_a41596d84398c2606da472fca0ee74b9b}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_a3620ad41b729c1de0d0b96c730048c50}{Man\+Generator}.
+
+\hypertarget{class_output_generator_acbb6ecd186cadcea8526b54e2ba7d166}{}\index{Output\+Generator@{Output\+Generator}!start\+Member\+Doc\+Prefix\+Item@{start\+Member\+Doc\+Prefix\+Item}}
+\index{start\+Member\+Doc\+Prefix\+Item@{start\+Member\+Doc\+Prefix\+Item}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Member\+Doc\+Prefix\+Item()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Member\+Doc\+Prefix\+Item (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_acbb6ecd186cadcea8526b54e2ba7d166}
+
+
+Implémenté dans \hyperlink{class_html_generator_aafaa04b511a0cf5281d58f7700bf0c09}{Html\+Generator}, \hyperlink{class_latex_generator_a6d8f9a15963805434419a016ffbe9219}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_ad99cf6bdad8dcd97ed7179afdb78f2d1}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_a4528a4f96f3c5c490534fa5df750bace}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a8eb36caa0f5a620b42d7e332fb849ae4}{}\index{Output\+Generator@{Output\+Generator}!start\+Member\+Doc\+Simple@{start\+Member\+Doc\+Simple}}
+\index{start\+Member\+Doc\+Simple@{start\+Member\+Doc\+Simple}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Member\+Doc\+Simple()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Member\+Doc\+Simple (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a8eb36caa0f5a620b42d7e332fb849ae4}
+
+
+Implémenté dans \hyperlink{class_html_generator_a852efa4f8d249b6dc242be737f078be4}{Html\+Generator}, \hyperlink{class_latex_generator_a82bea191b6d5a6dc61e31ec36115e975}{Latex\+Generator}, \hyperlink{class_man_generator_a28f3366da25f1b84830c17ccc2f54cae}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_ad6e9c55c3c64a4b8f635eb8817bf10ea}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a1cc976995007c64aa044d98da900d09f}{}\index{Output\+Generator@{Output\+Generator}!start\+Member\+Group@{start\+Member\+Group}}
+\index{start\+Member\+Group@{start\+Member\+Group}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Member\+Group()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Member\+Group (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a1cc976995007c64aa044d98da900d09f}
+
+
+Implémenté dans \hyperlink{class_r_t_f_generator_ae91c2a65ed12a3deb00353aaa00501c8}{R\+T\+F\+Generator}, \hyperlink{class_html_generator_aec0d118a7c03a3d6a4253110e35ed48e}{Html\+Generator}, \hyperlink{class_latex_generator_af2b5da0352920bfb5d889ff92b751b70}{Latex\+Generator}, et \hyperlink{class_man_generator_a5e1024895e01040f9f207aa96d838998}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a0b3d9ddaa7d63cea43081ac17ce5e96b}{}\index{Output\+Generator@{Output\+Generator}!start\+Member\+Group\+Docs@{start\+Member\+Group\+Docs}}
+\index{start\+Member\+Group\+Docs@{start\+Member\+Group\+Docs}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Member\+Group\+Docs()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Member\+Group\+Docs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a0b3d9ddaa7d63cea43081ac17ce5e96b}
+
+
+Implémenté dans \hyperlink{class_r_t_f_generator_ac0a0b210fb4152a3b97c6374ee19c662}{R\+T\+F\+Generator}, \hyperlink{class_html_generator_a70302c8014e5ddb69b5d90181de906d0}{Html\+Generator}, \hyperlink{class_latex_generator_a0c1c92164bf40215e01c128cd6d4dc62}{Latex\+Generator}, et \hyperlink{class_man_generator_a66ae1d09997555850f799cd41639939e}{Man\+Generator}.
+
+\hypertarget{class_output_generator_aea2631f3e52efb116a4b3375755024c8}{}\index{Output\+Generator@{Output\+Generator}!start\+Member\+Group\+Header@{start\+Member\+Group\+Header}}
+\index{start\+Member\+Group\+Header@{start\+Member\+Group\+Header}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Member\+Group\+Header(bool)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Member\+Group\+Header (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_aea2631f3e52efb116a4b3375755024c8}
+
+
+Implémenté dans \hyperlink{class_r_t_f_generator_a4125302b52972a717fb8797da60d8124}{R\+T\+F\+Generator}, \hyperlink{class_html_generator_ad543e576da74cbcbe768b364d774f95c}{Html\+Generator}, \hyperlink{class_latex_generator_a82e907a0ee2aaaf3ef300d8b2314bacc}{Latex\+Generator}, et \hyperlink{class_man_generator_ad61671374ab1bf2fe21d21b7589330c0}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a7af0bd09e06461de70675d9512a2f67e}{}\index{Output\+Generator@{Output\+Generator}!start\+Member\+Header@{start\+Member\+Header}}
+\index{start\+Member\+Header@{start\+Member\+Header}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Member\+Header(const char $\ast$anchor)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Member\+Header (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{anchor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a7af0bd09e06461de70675d9512a2f67e}
+
+
+Implémenté dans \hyperlink{class_html_generator_a247480c65e9a473c4f82533ac4f2a8aa}{Html\+Generator}, \hyperlink{class_latex_generator_a5282254f8665289d08a7e8f1589f98c9}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_af2fb1a0850bbfd2fec3e0c17ea78cefd}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_a9212bdddd633ce485be92c5536c4b145}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a626142e0dd357e23058573aff5299eb6}{}\index{Output\+Generator@{Output\+Generator}!start\+Member\+Item@{start\+Member\+Item}}
+\index{start\+Member\+Item@{start\+Member\+Item}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Member\+Item(const char $\ast$, int, const char $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Member\+Item (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{int}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a626142e0dd357e23058573aff5299eb6}
+
+
+Implémenté dans \hyperlink{class_html_generator_a47a6941c01a7eeee2002cad26423562e}{Html\+Generator}, \hyperlink{class_latex_generator_acf2b05084bb0905ea84c4bfcc634cbee}{Latex\+Generator}, \hyperlink{class_man_generator_a6a562eabf8ab73b8a9fd0790b441e15c}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_ad148e67bb61bb3c7dd7392e7a2786353}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a55bfc9535965545c98a07fd5e94ccfde}{}\index{Output\+Generator@{Output\+Generator}!start\+Member\+List@{start\+Member\+List}}
+\index{start\+Member\+List@{start\+Member\+List}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Member\+List()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Member\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a55bfc9535965545c98a07fd5e94ccfde}
+
+
+Implémenté dans \hyperlink{class_html_generator_a0d33ac771fd697fbc6eaf4991d340b08}{Html\+Generator}, \hyperlink{class_latex_generator_a8c936a9bdcd8c892387318b3f947fb1e}{Latex\+Generator}, \hyperlink{class_man_generator_a364cef63b278c64d8a3b9b6db37395cb}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_aa4311935ebcc3dc94c2aa1d0da50ce4d}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a3dcfbf917012cf7e133f6876750ca29b}{}\index{Output\+Generator@{Output\+Generator}!start\+Member\+Sections@{start\+Member\+Sections}}
+\index{start\+Member\+Sections@{start\+Member\+Sections}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Member\+Sections()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Member\+Sections (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a3dcfbf917012cf7e133f6876750ca29b}
+
+
+Implémenté dans \hyperlink{class_html_generator_ab81f4238abee6baf6234c1a94a03df18}{Html\+Generator}, \hyperlink{class_latex_generator_a23972d083807cc9cb2c16c599724d3d1}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_a9a1d6fe62762d3b98b98955a73c78f83}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_a712f6f2ffa6fcc93d783510760a7a337}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a6c10a744bfe79da169794579d92c6f38}{}\index{Output\+Generator@{Output\+Generator}!start\+Member\+Subtitle@{start\+Member\+Subtitle}}
+\index{start\+Member\+Subtitle@{start\+Member\+Subtitle}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Member\+Subtitle()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Member\+Subtitle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a6c10a744bfe79da169794579d92c6f38}
+
+
+Implémenté dans \hyperlink{class_html_generator_a71af5b3b4b0ffb7f7f664a7d8205547d}{Html\+Generator}, \hyperlink{class_latex_generator_a0fbe7f7867a9ba49681196d415c37a1a}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_a345410be789206cba4ff9a83c2c35f10}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_a8401b5bb326a6aeea489f930cdbd6b73}{Man\+Generator}.
+
+\hypertarget{class_output_generator_af221e843bf8828e9dcb45faea48c8af2}{}\index{Output\+Generator@{Output\+Generator}!start\+Member\+Template\+Params@{start\+Member\+Template\+Params}}
+\index{start\+Member\+Template\+Params@{start\+Member\+Template\+Params}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Member\+Template\+Params()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Member\+Template\+Params (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_af221e843bf8828e9dcb45faea48c8af2}
+
+
+Implémenté dans \hyperlink{class_html_generator_a70e7950bdda5af04b71a58bc3f6e368f}{Html\+Generator}, \hyperlink{class_latex_generator_ab5f3a94b36ee1eb5086432b5dd6d2f26}{Latex\+Generator}, \hyperlink{class_man_generator_ad67219f83aa99539fc34e2142a734811}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a61df52cef3429c7db462e28a3f39937c}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a92e7646944e62d50ede52caa18c39266}{}\index{Output\+Generator@{Output\+Generator}!start\+Parameter\+List@{start\+Parameter\+List}}
+\index{start\+Parameter\+List@{start\+Parameter\+List}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Parameter\+List(bool)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Parameter\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a92e7646944e62d50ede52caa18c39266}
+
+
+Implémenté dans \hyperlink{class_html_generator_aaec3b60d1bf3226721458402a321c9fe}{Html\+Generator}, \hyperlink{class_latex_generator_a43b8d2c9eaee906a8db13b6191a774b1}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_a2739446e6fe0e80105d5a0f010e46a6f}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_ac6c153743231aa2e67b39ce527869a8d}{Man\+Generator}.
+
+\hypertarget{class_output_generator_ac56057350d3b14b63238bf4325792f82}{}\index{Output\+Generator@{Output\+Generator}!start\+Parameter\+Name@{start\+Parameter\+Name}}
+\index{start\+Parameter\+Name@{start\+Parameter\+Name}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Parameter\+Name(bool)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Parameter\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_ac56057350d3b14b63238bf4325792f82}
+
+
+Implémenté dans \hyperlink{class_html_generator_a8da2ad5820039d49072240e3e1bdd582}{Html\+Generator}, \hyperlink{class_latex_generator_a6491b06249ad6fba41a74ef88392abe9}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_adb57207e0840acb6350fef7e23604657}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_af739d0bdac7bc933cd49aac0c91733fb}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a76af87c960b045eafa035b77307aaf75}{}\index{Output\+Generator@{Output\+Generator}!start\+Parameter\+Type@{start\+Parameter\+Type}}
+\index{start\+Parameter\+Type@{start\+Parameter\+Type}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Parameter\+Type(bool, const char $\ast$key)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Parameter\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{, }
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a76af87c960b045eafa035b77307aaf75}
+
+
+Implémenté dans \hyperlink{class_html_generator_abff728b4734da738d2e0deb552efce08}{Html\+Generator}, \hyperlink{class_latex_generator_a90a51ed6c4e424d3cf86ff1d61e8126c}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_a62b97ac9e8fb0b5b1f43258dab52a221}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_a113e5a32a7a3bc816a3348956a41113e}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a719c9ddbba9ba72ec4881c4c61cccf8b}{}\index{Output\+Generator@{Output\+Generator}!start\+Plain\+File@{start\+Plain\+File}}
+\index{start\+Plain\+File@{start\+Plain\+File}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Plain\+File(const char $\ast$name)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+Generator\+::start\+Plain\+File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\label{class_output_generator_a719c9ddbba9ba72ec4881c4c61cccf8b}
+\hypertarget{class_output_generator_aca2e001836d8cf6ae5e6d98bd9467b5b}{}\index{Output\+Generator@{Output\+Generator}!start\+Project\+Number@{start\+Project\+Number}}
+\index{start\+Project\+Number@{start\+Project\+Number}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Project\+Number()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Project\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_aca2e001836d8cf6ae5e6d98bd9467b5b}
+
+
+Implémenté dans \hyperlink{class_html_generator_a68e4cfb8ef2701dd7a6d6bceeda1e55a}{Html\+Generator}, \hyperlink{class_latex_generator_a35d152d0defd8ec3cc319e1b1717e87a}{Latex\+Generator}, \hyperlink{class_man_generator_a9e8739b09bd5788c0b44711d9bbe1fbb}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a3f1521b0b98bf4b73eb1bb77ed1ec191}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_ac1235b655cd828140b9c76f4ca1f4040}{}\index{Output\+Generator@{Output\+Generator}!start\+Quick\+Indices@{start\+Quick\+Indices}}
+\index{start\+Quick\+Indices@{start\+Quick\+Indices}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Quick\+Indices()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Quick\+Indices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_ac1235b655cd828140b9c76f4ca1f4040}
+
+
+Implémenté dans \hyperlink{class_html_generator_ac19bda7a07fbdf7069a7601e97dc2276}{Html\+Generator}, \hyperlink{class_latex_generator_a3fe16e2419736f6bdaffa0652997d0ef}{Latex\+Generator}, \hyperlink{class_man_generator_a955d39d6b1272951e9c3696e55a7e97f}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_aa9a8e0a9531e1dd82931a2a8c0572500}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_ae06da65c60fe1508152999a76c3b8d80}{}\index{Output\+Generator@{Output\+Generator}!start\+Text\+Block@{start\+Text\+Block}}
+\index{start\+Text\+Block@{start\+Text\+Block}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Text\+Block(bool)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Text\+Block (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_ae06da65c60fe1508152999a76c3b8d80}
+
+
+Implémenté dans \hyperlink{class_html_generator_ad3b0577be9211daec92334e0969b7530}{Html\+Generator}, \hyperlink{class_latex_generator_aecbc8d579dde1ce7f186d1ffe31340e4}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_a7a31ccfd4c4f1392c8dfa3a08a6141d6}{R\+T\+F\+Generator}, et \hyperlink{class_man_generator_a920fb8d9e9cdcc0959069d9f0f7a4ff4}{Man\+Generator}.
+
+\hypertarget{class_output_generator_a2a88fa84eb821cbc46ebe77293db0564}{}\index{Output\+Generator@{Output\+Generator}!start\+Title\+Head@{start\+Title\+Head}}
+\index{start\+Title\+Head@{start\+Title\+Head}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{start\+Title\+Head(const char $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::start\+Title\+Head (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a2a88fa84eb821cbc46ebe77293db0564}
+
+
+Implémenté dans \hyperlink{class_html_generator_aa2d4c7b39f08d95acd0b73d0ba7a2c64}{Html\+Generator}, \hyperlink{class_latex_generator_ab1e643c939b347638fcc36c2cb6c6f86}{Latex\+Generator}, \hyperlink{class_man_generator_ab7edd0149d49b267b295f7e45f05c1b3}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a34dec5a4a5407eab6924ed8245581198}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_ac0b25a3af7edb8a631f21f34184f9a97}{}\index{Output\+Generator@{Output\+Generator}!write\+Doc@{write\+Doc}}
+\index{write\+Doc@{write\+Doc}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{write\+Doc(\+Doc\+Node $\ast$, Definition $\ast$ctx, Member\+Def $\ast$md)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::write\+Doc (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Node} $\ast$}]{, }
+\item[{{\bf Definition} $\ast$}]{ctx, }
+\item[{{\bf Member\+Def} $\ast$}]{md}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_ac0b25a3af7edb8a631f21f34184f9a97}
+
+
+Implémenté dans \hyperlink{class_html_generator_afb2332948f5e53d82d8299fe158da0a9}{Html\+Generator}, \hyperlink{class_latex_generator_a450603f1d10ea9800c40f7b1fb4d97bf}{Latex\+Generator}, \hyperlink{class_man_generator_adfcb88add542e7342f4b8c3faa737511}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a0d8c73e39b915db738f68dddaf437370}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a29c6763f7d6f708fc5d3e7dc2c0ce1f4}{}\index{Output\+Generator@{Output\+Generator}!write\+End\+Anno\+Item@{write\+End\+Anno\+Item}}
+\index{write\+End\+Anno\+Item@{write\+End\+Anno\+Item}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{write\+End\+Anno\+Item(const char $\ast$name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::write\+End\+Anno\+Item (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a29c6763f7d6f708fc5d3e7dc2c0ce1f4}
+
+
+Implémenté dans \hyperlink{class_html_generator_a12fde29ab455bf9f9080a3b24fca5365}{Html\+Generator}, \hyperlink{class_latex_generator_a693962a41191433fd5ded47259149358}{Latex\+Generator}, \hyperlink{class_man_generator_afda450fa7e610bf25690ca6211a3bf8e}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_ae39a707b688f116c4e5574b52091af49}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_ac8f9e609b1f2633a07c5560cc1eb4dc9}{}\index{Output\+Generator@{Output\+Generator}!write\+Footer@{write\+Footer}}
+\index{write\+Footer@{write\+Footer}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{write\+Footer(const char $\ast$nav\+Path)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::write\+Footer (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{nav\+Path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_ac8f9e609b1f2633a07c5560cc1eb4dc9}
+
+
+Implémenté dans \hyperlink{class_html_generator_a53e64fb26be1bf0e61e5f8d6fe1f1509}{Html\+Generator}, \hyperlink{class_latex_generator_afc74e3c16856f30b050edebf0e83416e}{Latex\+Generator}, \hyperlink{class_man_generator_a1b05b289f0788338aa5c6cbafcbc1264}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a2f413cd0dd806141416ba6b3b165f6ff}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_ae5cf1278fa98872e8e40764af2499558}{}\index{Output\+Generator@{Output\+Generator}!write\+Graphical\+Hierarchy@{write\+Graphical\+Hierarchy}}
+\index{write\+Graphical\+Hierarchy@{write\+Graphical\+Hierarchy}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{write\+Graphical\+Hierarchy(const Dot\+Gfx\+Hierarchy\+Table \&g)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::write\+Graphical\+Hierarchy (
+\begin{DoxyParamCaption}
+\item[{const {\bf Dot\+Gfx\+Hierarchy\+Table} \&}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_ae5cf1278fa98872e8e40764af2499558}
+
+
+Implémenté dans \hyperlink{class_html_generator_aa3618ecfc5f53f11a7f26bd4bb6d432f}{Html\+Generator}, \hyperlink{class_latex_generator_a837cdd6757718e6c2aac97fade95d2b7}{Latex\+Generator}, \hyperlink{class_man_generator_a29e42193144cbcafd32527f0bf85c7e3}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_ad14ce0697f892a9bac69cabf734fb057}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a272f99f415b7e8b6ead453cd9e714b8e}{}\index{Output\+Generator@{Output\+Generator}!write\+Inherited\+Section\+Title@{write\+Inherited\+Section\+Title}}
+\index{write\+Inherited\+Section\+Title@{write\+Inherited\+Section\+Title}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{write\+Inherited\+Section\+Title(const char $\ast$id, const char $\ast$ref, const char $\ast$file, const char $\ast$anchor, const char $\ast$title, const char $\ast$name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::write\+Inherited\+Section\+Title (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{id, }
+\item[{const char $\ast$}]{ref, }
+\item[{const char $\ast$}]{file, }
+\item[{const char $\ast$}]{anchor, }
+\item[{const char $\ast$}]{title, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a272f99f415b7e8b6ead453cd9e714b8e}
+
+
+Implémenté dans \hyperlink{class_html_generator_a125754fb3b5f8986ed030a33e8d53de0}{Html\+Generator}, \hyperlink{class_latex_generator_ab220991e00f47ee214d913afb0dcde0e}{Latex\+Generator}, \hyperlink{class_man_generator_a69751a9ead6f0704b5656143c137877d}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_aaeb7e296fe3ca59058849fbee8340eb6}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a40864f2cdb9de3605965ec2912c3709d}{}\index{Output\+Generator@{Output\+Generator}!write\+Label@{write\+Label}}
+\index{write\+Label@{write\+Label}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{write\+Label(const char $\ast$, bool)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::write\+Label (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{{\bf bool}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a40864f2cdb9de3605965ec2912c3709d}
+
+
+Implémenté dans \hyperlink{class_html_generator_a76009494c2f987f8a95cb79f0fc80250}{Html\+Generator}, \hyperlink{class_latex_generator_a9eb12e8e19b14d1597b58663df0475cd}{Latex\+Generator}, \hyperlink{class_man_generator_aa736a1bd30e274a211288af68c7fa900}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a21da1a74e7ed943dc3cf613ecd23791f}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_afcb9acfea2d7a6f0a340287632aea4e8}{}\index{Output\+Generator@{Output\+Generator}!write\+Latex\+Spacing@{write\+Latex\+Spacing}}
+\index{write\+Latex\+Spacing@{write\+Latex\+Spacing}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{write\+Latex\+Spacing()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::write\+Latex\+Spacing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_afcb9acfea2d7a6f0a340287632aea4e8}
+
+
+Implémenté dans \hyperlink{class_html_generator_a2dc6c95466bf497d2912cb15d184b53d}{Html\+Generator}, \hyperlink{class_latex_generator_a9ca2b0c10ac902436350642079fbd56b}{Latex\+Generator}, \hyperlink{class_man_generator_adc7746d2f225bc7742dc0fd23fd9bf1e}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a1b58b1600ad492690fc1c83b7c6c9803}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a4a253e01f787c22716b14709344535ab}{}\index{Output\+Generator@{Output\+Generator}!write\+Logo@{write\+Logo}}
+\index{write\+Logo@{write\+Logo}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{write\+Logo()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::write\+Logo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a4a253e01f787c22716b14709344535ab}
+
+
+Implémenté dans \hyperlink{class_html_generator_a6f2d8ea4be1a4586c32c8217d7716422}{Html\+Generator}, \hyperlink{class_latex_generator_a82e0611e3440955d89a6978936d22cec}{Latex\+Generator}, \hyperlink{class_man_generator_abc49b9aa742057e1cbbea917451de6d7}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a94f7432f76fdcce01b1706170cd6c433}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a782d69569d902413c0029b12cd4ea2d6}{}\index{Output\+Generator@{Output\+Generator}!write\+Navigation\+Path@{write\+Navigation\+Path}}
+\index{write\+Navigation\+Path@{write\+Navigation\+Path}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{write\+Navigation\+Path(const char $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::write\+Navigation\+Path (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a782d69569d902413c0029b12cd4ea2d6}
+
+
+Implémenté dans \hyperlink{class_html_generator_aea25a87c7877cf9a4bb04c4e63debacf}{Html\+Generator}, \hyperlink{class_latex_generator_a166d8ecd50b8a231cf90896faf6ee337}{Latex\+Generator}, \hyperlink{class_man_generator_a51eac301eeb71972b89a4ac6be9fd6b5}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_ae9e70a811ebae6face08d0c2c019af16}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a92ddc60cab560b9e4a65bcd504cb779d}{}\index{Output\+Generator@{Output\+Generator}!write\+Page\+Link@{write\+Page\+Link}}
+\index{write\+Page\+Link@{write\+Page\+Link}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{write\+Page\+Link(const char $\ast$, bool)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::write\+Page\+Link (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{{\bf bool}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a92ddc60cab560b9e4a65bcd504cb779d}
+
+
+Implémenté dans \hyperlink{class_html_generator_a17175f9f54dbfcc611c728ef0efdcfb3}{Html\+Generator}, \hyperlink{class_latex_generator_a78988d6557001983a64797823dd49343}{Latex\+Generator}, \hyperlink{class_man_generator_a526966444ebff24c3afc9129280a0636}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a1a5220608be92b1cf666ec6d77df6c15}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_ade0bf7d098652c8592a8790d6de80a7e}{}\index{Output\+Generator@{Output\+Generator}!write\+Quick\+Links@{write\+Quick\+Links}}
+\index{write\+Quick\+Links@{write\+Quick\+Links}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{write\+Quick\+Links(bool compact, Highlighted\+Item hli, const char $\ast$file)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::write\+Quick\+Links (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{compact, }
+\item[{{\bf Highlighted\+Item}}]{hli, }
+\item[{const char $\ast$}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_ade0bf7d098652c8592a8790d6de80a7e}
+
+
+Implémenté dans \hyperlink{class_html_generator_aa4c36c4fe46af1be803d39f7b1d95a41}{Html\+Generator}, \hyperlink{class_latex_generator_acd7e692f462fed94bbe820d5bb4c82a0}{Latex\+Generator}, \hyperlink{class_man_generator_aa821cd7a40d325d026c59dbd78221b98}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a7bfd450f1bfcdb82217da1e88646f030}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a6f93852b3d43ab8a63be1e46f10eb8fd}{}\index{Output\+Generator@{Output\+Generator}!write\+Search\+Info@{write\+Search\+Info}}
+\index{write\+Search\+Info@{write\+Search\+Info}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{write\+Search\+Info()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::write\+Search\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a6f93852b3d43ab8a63be1e46f10eb8fd}
+
+
+Implémenté dans \hyperlink{class_html_generator_aa60e46a4d67ca28c8676a97ad0968069}{Html\+Generator}, \hyperlink{class_latex_generator_add0395c556a2d1b36d7d75c81473fb78}{Latex\+Generator}, \hyperlink{class_man_generator_a96fbf7763c494b5d68e80e8c66517e30}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a2bbe7d3fc41e5d54ad3dd1549ead2a50}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a7ca68513534b42f774af0615039298af}{}\index{Output\+Generator@{Output\+Generator}!write\+Split\+Bar@{write\+Split\+Bar}}
+\index{write\+Split\+Bar@{write\+Split\+Bar}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{write\+Split\+Bar(const char $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::write\+Split\+Bar (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a7ca68513534b42f774af0615039298af}
+
+
+Implémenté dans \hyperlink{class_html_generator_a9856409be5e34cb9f7461e9c6076b8e9}{Html\+Generator}, \hyperlink{class_latex_generator_a03cf7304fa966648d6b43b16b9d71c47}{Latex\+Generator}, \hyperlink{class_man_generator_a07aea6047475012679e979aca5d23038}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a94c98bdf4ad6589a902e283cb3a31995}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_a2b0f7e8400fa8bfa7b973ed25f2c4366}{}\index{Output\+Generator@{Output\+Generator}!write\+Start\+Anno\+Item@{write\+Start\+Anno\+Item}}
+\index{write\+Start\+Anno\+Item@{write\+Start\+Anno\+Item}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{write\+Start\+Anno\+Item(const char $\ast$type, const char $\ast$file, const char $\ast$path, const char $\ast$name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::write\+Start\+Anno\+Item (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{file, }
+\item[{const char $\ast$}]{path, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_a2b0f7e8400fa8bfa7b973ed25f2c4366}
+
+
+Implémenté dans \hyperlink{class_html_generator_ae9cfa1c13442d21af2b84dd56ee9667d}{Html\+Generator}, \hyperlink{class_latex_generator_a21b7b03364f200aa447b2a403aaa8fd8}{Latex\+Generator}, \hyperlink{class_man_generator_a8a403fb64475a8a08a959176fdd754f0}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a655778fe3ac63c361fa4a349b71a2cc6}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_ab3319043929bc785eeb2edfbeadc5088}{}\index{Output\+Generator@{Output\+Generator}!write\+Style\+Info@{write\+Style\+Info}}
+\index{write\+Style\+Info@{write\+Style\+Info}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{write\+Style\+Info(int part)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::write\+Style\+Info (
+\begin{DoxyParamCaption}
+\item[{int}]{part}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_ab3319043929bc785eeb2edfbeadc5088}
+
+
+Implémenté dans \hyperlink{class_html_generator_a67494e4d92c2b6f4bf19a51ab9417659}{Html\+Generator}, \hyperlink{class_latex_generator_ac1feab4756dc9795d056b72cc74379e4}{Latex\+Generator}, \hyperlink{class_man_generator_a9d0f82f72d8efcf0aec1b73010cb5399}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_a0aaaee80191b38b7e17a7c460b1bc0ed}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_aa27b1e7554ca5a8f4d80bf82bc1666d6}{}\index{Output\+Generator@{Output\+Generator}!write\+Summary\+Link@{write\+Summary\+Link}}
+\index{write\+Summary\+Link@{write\+Summary\+Link}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{write\+Summary\+Link(const char $\ast$file, const char $\ast$anchor, const char $\ast$title, bool first)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::write\+Summary\+Link (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file, }
+\item[{const char $\ast$}]{anchor, }
+\item[{const char $\ast$}]{title, }
+\item[{{\bf bool}}]{first}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_aa27b1e7554ca5a8f4d80bf82bc1666d6}
+
+
+Implémenté dans \hyperlink{class_html_generator_aea30e4c7f7f5ff602bdbee818d1f06cc}{Html\+Generator}, \hyperlink{class_latex_generator_a95e5d18bdec50446a0ba6f4b8c894ec3}{Latex\+Generator}, \hyperlink{class_man_generator_a984f33b43c990060e1472c97ed167304}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_acdcae4f58554de53360da212e0d9065a}{R\+T\+F\+Generator}.
+
+\hypertarget{class_output_generator_aa0d18fb8ce1251b97619c90061a697d8}{}\index{Output\+Generator@{Output\+Generator}!write\+Synopsis@{write\+Synopsis}}
+\index{write\+Synopsis@{write\+Synopsis}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{write\+Synopsis()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+Generator\+::write\+Synopsis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_generator_aa0d18fb8ce1251b97619c90061a697d8}
+
+
+Implémenté dans \hyperlink{class_html_generator_a80d44096489c83020c550122705afd66}{Html\+Generator}, \hyperlink{class_latex_generator_aa53e33f421454ff463a11eb0b0a7afc5}{Latex\+Generator}, \hyperlink{class_man_generator_aec39420ccf2c964a39c97e79e1d2cbc0}{Man\+Generator}, et \hyperlink{class_r_t_f_generator_ab563733ac3c9c90d116f7d3d24719bcc}{R\+T\+F\+Generator}.
+
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_output_generator_a1e1299d64814f58ac06b257992291f9f}{}\index{Output\+Generator@{Output\+Generator}!active@{active}}
+\index{active@{active}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{active}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Output\+Generator\+::active\hspace{0.3cm}{\ttfamily [protected]}}\label{class_output_generator_a1e1299d64814f58ac06b257992291f9f}
+\hypertarget{class_output_generator_ac64b8818d57bbe250f647d7b10edd45e}{}\index{Output\+Generator@{Output\+Generator}!dir@{dir}}
+\index{dir@{dir}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{dir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Output\+Generator\+::dir\hspace{0.3cm}{\ttfamily [protected]}}\label{class_output_generator_ac64b8818d57bbe250f647d7b10edd45e}
+\hypertarget{class_output_generator_aed5ad11c3844cdf71ec6fee6c1c84286}{}\index{Output\+Generator@{Output\+Generator}!file@{file}}
+\index{file@{file}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{file}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+File}$\ast$ Output\+Generator\+::file\hspace{0.3cm}{\ttfamily [protected]}}\label{class_output_generator_aed5ad11c3844cdf71ec6fee6c1c84286}
+\hypertarget{class_output_generator_a9bb808101dbeae7732bb0fa66cad9176}{}\index{Output\+Generator@{Output\+Generator}!file\+Name@{file\+Name}}
+\index{file\+Name@{file\+Name}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{file\+Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Output\+Generator\+::file\+Name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_output_generator_a9bb808101dbeae7732bb0fa66cad9176}
+\hypertarget{class_output_generator_ac734ecb37a17e3b4fa46f249ab495697}{}\index{Output\+Generator@{Output\+Generator}!gen\+Stack@{gen\+Stack}}
+\index{gen\+Stack@{gen\+Stack}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{gen\+Stack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Stack}$<${\bf bool}$>$$\ast$ Output\+Generator\+::gen\+Stack\hspace{0.3cm}{\ttfamily [protected]}}\label{class_output_generator_ac734ecb37a17e3b4fa46f249ab495697}
+\hypertarget{class_output_generator_a55a40a8215efe6adc4d0a587ad9a46bc}{}\index{Output\+Generator@{Output\+Generator}!t@{t}}
+\index{t@{t}!Output\+Generator@{Output\+Generator}}
+\subsubsection[{t}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+Text\+Stream} Output\+Generator\+::t\hspace{0.3cm}{\ttfamily [protected]}}\label{class_output_generator_a55a40a8215efe6adc4d0a587ad9a46bc}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{outputgen_8h}{outputgen.\+h}\item 
+src/\hyperlink{outputgen_8cpp}{outputgen.\+cpp}\end{DoxyCompactItemize}

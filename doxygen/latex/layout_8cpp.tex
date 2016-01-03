@@ -1,0 +1,123 @@
+\hypertarget{layout_8cpp}{}\section{Référence du fichier src/layout.cpp}
+\label{layout_8cpp}\index{src/layout.\+cpp@{src/layout.\+cpp}}
+{\ttfamily \#include \char`\"{}layout.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}language.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}vhdldocgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doxygen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}version.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$qxml.\+h$>$}\\*
+{\ttfamily \#include $<$qfile.\+h$>$}\\*
+{\ttfamily \#include $<$qstring.\+h$>$}\\*
+{\ttfamily \#include $<$qfileinfo.\+h$>$}\\*
+{\ttfamily \#include $<$qtextstream.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}layout\+\_\+default.\+xml.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_layout_parser}{Layout\+Parser}
+\item 
+class \hyperlink{class_layout_error_handler}{Layout\+Error\+Handler}
+\item 
+class \hyperlink{class_layout_doc_manager_1_1_private}{Layout\+Doc\+Manager\+::\+Private}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{layout_8cpp_a135f7a8ddc49e8a0a902a2a471e9576f}{A\+D\+D\+\_\+\+O\+P\+T\+I\+O\+N}(lang\+Id,  text)~\char`\"{}$\vert$\char`\"{}+\hyperlink{class_q_c_string}{Q\+C\+String}().set\+Num(lang\+Id)+\char`\"{}=\char`\"{}+text
+\item 
+\#define \hyperlink{layout_8cpp_a4d407e593030bf10184513591190ccd7}{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+1\+\_\+\+O\+P\+T\+I\+O\+N}(def,  lang\+Id1,  text1)~def+\hyperlink{layout_8cpp_a135f7a8ddc49e8a0a902a2a471e9576f}{A\+D\+D\+\_\+\+O\+P\+T\+I\+O\+N}(lang\+Id1,text1)
+\item 
+\#define \hyperlink{layout_8cpp_acc6c6f36519aad0c4957508e3dbae52b}{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+2\+\_\+\+O\+P\+T\+I\+O\+N\+S}(def,  lang\+Id1,  text1,  lang\+Id2,  text2)~\hyperlink{layout_8cpp_a4d407e593030bf10184513591190ccd7}{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+1\+\_\+\+O\+P\+T\+I\+O\+N}(def,lang\+Id1,text1)+\hyperlink{layout_8cpp_a135f7a8ddc49e8a0a902a2a471e9576f}{A\+D\+D\+\_\+\+O\+P\+T\+I\+O\+N}(lang\+Id2,text2)
+\item 
+\#define \hyperlink{layout_8cpp_a1fc8f2b0a4c5691f1c75fa9c8c9bf507}{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+3\+\_\+\+O\+P\+T\+I\+O\+N\+S}(def,  lang\+Id1,  text1,  lang\+Id2,  text2,  lang\+Id3,  text3)~\hyperlink{layout_8cpp_acc6c6f36519aad0c4957508e3dbae52b}{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+2\+\_\+\+O\+P\+T\+I\+O\+N\+S}(def,lang\+Id1,text1,lang\+Id2,text2)+\hyperlink{layout_8cpp_a135f7a8ddc49e8a0a902a2a471e9576f}{A\+D\+D\+\_\+\+O\+P\+T\+I\+O\+N}(lang\+Id3,text3)
+\item 
+\#define \hyperlink{layout_8cpp_ae129a522592780da277b682c27adeb7e}{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+4\+\_\+\+O\+P\+T\+I\+O\+N\+S}(def,  lang\+Id1,  text1,  lang\+Id2,  text2,  lang\+Id3,  text3,  lang\+Id4,  text4)~\hyperlink{layout_8cpp_a1fc8f2b0a4c5691f1c75fa9c8c9bf507}{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+3\+\_\+\+O\+P\+T\+I\+O\+N\+S}(def,lang\+Id1,text1,lang\+Id2,text2,lang\+Id3,text3)+\hyperlink{layout_8cpp_a135f7a8ddc49e8a0a902a2a471e9576f}{A\+D\+D\+\_\+\+O\+P\+T\+I\+O\+N}(lang\+Id4,text4)
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{layout_8cpp_a4a068ddae0b7c753f7b1c3cb109518cd}{write\+Default\+Layout\+File} (const char $\ast$file\+Name)
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{layout_8cpp_af079449c7fca1ffd687c7b964cceb15c}{extract\+Language\+Specific\+Title} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&input, \hyperlink{types_8h_a9974623ce72fc23df5d64426b9178bf2}{Src\+Lang\+Ext} lang)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{layout_8cpp_a135f7a8ddc49e8a0a902a2a471e9576f}{}\index{layout.\+cpp@{layout.\+cpp}!A\+D\+D\+\_\+\+O\+P\+T\+I\+O\+N@{A\+D\+D\+\_\+\+O\+P\+T\+I\+O\+N}}
+\index{A\+D\+D\+\_\+\+O\+P\+T\+I\+O\+N@{A\+D\+D\+\_\+\+O\+P\+T\+I\+O\+N}!layout.\+cpp@{layout.\+cpp}}
+\subsubsection[{A\+D\+D\+\_\+\+O\+P\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+D\+D\+\_\+\+O\+P\+T\+I\+O\+N(
+\begin{DoxyParamCaption}
+\item[{}]{lang\+Id, }
+\item[{}]{text}
+\end{DoxyParamCaption}
+)~\char`\"{}$\vert$\char`\"{}+{\bf Q\+C\+String}().set\+Num(lang\+Id)+\char`\"{}=\char`\"{}+text}\label{layout_8cpp_a135f7a8ddc49e8a0a902a2a471e9576f}
+\hypertarget{layout_8cpp_a4d407e593030bf10184513591190ccd7}{}\index{layout.\+cpp@{layout.\+cpp}!C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+1\+\_\+\+O\+P\+T\+I\+O\+N@{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+1\+\_\+\+O\+P\+T\+I\+O\+N}}
+\index{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+1\+\_\+\+O\+P\+T\+I\+O\+N@{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+1\+\_\+\+O\+P\+T\+I\+O\+N}!layout.\+cpp@{layout.\+cpp}}
+\subsubsection[{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+1\+\_\+\+O\+P\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+1\+\_\+\+O\+P\+T\+I\+O\+N(
+\begin{DoxyParamCaption}
+\item[{}]{def, }
+\item[{}]{lang\+Id1, }
+\item[{}]{text1}
+\end{DoxyParamCaption}
+)~def+{\bf A\+D\+D\+\_\+\+O\+P\+T\+I\+O\+N}(lang\+Id1,text1)}\label{layout_8cpp_a4d407e593030bf10184513591190ccd7}
+\hypertarget{layout_8cpp_acc6c6f36519aad0c4957508e3dbae52b}{}\index{layout.\+cpp@{layout.\+cpp}!C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+2\+\_\+\+O\+P\+T\+I\+O\+N\+S@{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+2\+\_\+\+O\+P\+T\+I\+O\+N\+S}}
+\index{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+2\+\_\+\+O\+P\+T\+I\+O\+N\+S@{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+2\+\_\+\+O\+P\+T\+I\+O\+N\+S}!layout.\+cpp@{layout.\+cpp}}
+\subsubsection[{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+2\+\_\+\+O\+P\+T\+I\+O\+N\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+2\+\_\+\+O\+P\+T\+I\+O\+N\+S(
+\begin{DoxyParamCaption}
+\item[{}]{def, }
+\item[{}]{lang\+Id1, }
+\item[{}]{text1, }
+\item[{}]{lang\+Id2, }
+\item[{}]{text2}
+\end{DoxyParamCaption}
+)~{\bf C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+1\+\_\+\+O\+P\+T\+I\+O\+N}(def,lang\+Id1,text1)+{\bf A\+D\+D\+\_\+\+O\+P\+T\+I\+O\+N}(lang\+Id2,text2)}\label{layout_8cpp_acc6c6f36519aad0c4957508e3dbae52b}
+\hypertarget{layout_8cpp_a1fc8f2b0a4c5691f1c75fa9c8c9bf507}{}\index{layout.\+cpp@{layout.\+cpp}!C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+3\+\_\+\+O\+P\+T\+I\+O\+N\+S@{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+3\+\_\+\+O\+P\+T\+I\+O\+N\+S}}
+\index{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+3\+\_\+\+O\+P\+T\+I\+O\+N\+S@{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+3\+\_\+\+O\+P\+T\+I\+O\+N\+S}!layout.\+cpp@{layout.\+cpp}}
+\subsubsection[{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+3\+\_\+\+O\+P\+T\+I\+O\+N\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+3\+\_\+\+O\+P\+T\+I\+O\+N\+S(
+\begin{DoxyParamCaption}
+\item[{}]{def, }
+\item[{}]{lang\+Id1, }
+\item[{}]{text1, }
+\item[{}]{lang\+Id2, }
+\item[{}]{text2, }
+\item[{}]{lang\+Id3, }
+\item[{}]{text3}
+\end{DoxyParamCaption}
+)~{\bf C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+2\+\_\+\+O\+P\+T\+I\+O\+N\+S}(def,lang\+Id1,text1,lang\+Id2,text2)+{\bf A\+D\+D\+\_\+\+O\+P\+T\+I\+O\+N}(lang\+Id3,text3)}\label{layout_8cpp_a1fc8f2b0a4c5691f1c75fa9c8c9bf507}
+\hypertarget{layout_8cpp_ae129a522592780da277b682c27adeb7e}{}\index{layout.\+cpp@{layout.\+cpp}!C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+4\+\_\+\+O\+P\+T\+I\+O\+N\+S@{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+4\+\_\+\+O\+P\+T\+I\+O\+N\+S}}
+\index{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+4\+\_\+\+O\+P\+T\+I\+O\+N\+S@{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+4\+\_\+\+O\+P\+T\+I\+O\+N\+S}!layout.\+cpp@{layout.\+cpp}}
+\subsubsection[{C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+4\+\_\+\+O\+P\+T\+I\+O\+N\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+4\+\_\+\+O\+P\+T\+I\+O\+N\+S(
+\begin{DoxyParamCaption}
+\item[{}]{def, }
+\item[{}]{lang\+Id1, }
+\item[{}]{text1, }
+\item[{}]{lang\+Id2, }
+\item[{}]{text2, }
+\item[{}]{lang\+Id3, }
+\item[{}]{text3, }
+\item[{}]{lang\+Id4, }
+\item[{}]{text4}
+\end{DoxyParamCaption}
+)~{\bf C\+O\+M\+P\+I\+L\+E\+\_\+\+F\+O\+R\+\_\+3\+\_\+\+O\+P\+T\+I\+O\+N\+S}(def,lang\+Id1,text1,lang\+Id2,text2,lang\+Id3,text3)+{\bf A\+D\+D\+\_\+\+O\+P\+T\+I\+O\+N}(lang\+Id4,text4)}\label{layout_8cpp_ae129a522592780da277b682c27adeb7e}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{layout_8cpp_af079449c7fca1ffd687c7b964cceb15c}{}\index{layout.\+cpp@{layout.\+cpp}!extract\+Language\+Specific\+Title@{extract\+Language\+Specific\+Title}}
+\index{extract\+Language\+Specific\+Title@{extract\+Language\+Specific\+Title}!layout.\+cpp@{layout.\+cpp}}
+\subsubsection[{extract\+Language\+Specific\+Title(const Q\+C\+String \&input, Src\+Lang\+Ext lang)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} extract\+Language\+Specific\+Title (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{input, }
+\item[{{\bf Src\+Lang\+Ext}}]{lang}
+\end{DoxyParamCaption}
+)}\label{layout_8cpp_af079449c7fca1ffd687c7b964cceb15c}
+\hypertarget{layout_8cpp_a4a068ddae0b7c753f7b1c3cb109518cd}{}\index{layout.\+cpp@{layout.\+cpp}!write\+Default\+Layout\+File@{write\+Default\+Layout\+File}}
+\index{write\+Default\+Layout\+File@{write\+Default\+Layout\+File}!layout.\+cpp@{layout.\+cpp}}
+\subsubsection[{write\+Default\+Layout\+File(const char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Default\+Layout\+File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{layout_8cpp_a4a068ddae0b7c753f7b1c3cb109518cd}

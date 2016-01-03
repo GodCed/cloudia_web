@@ -1,0 +1,157 @@
+\hypertarget{class_buf_str}{}\section{Référence de la classe Buf\+Str}
+\label{class_buf_str}\index{Buf\+Str@{Buf\+Str}}
+
+
+Buffer used to store strings.  
+
+
+
+
+{\ttfamily \#include $<$bufstr.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_buf_str_ad752ce74eb8d9ca7d546836f09ba448b}{Buf\+Str} (int \hyperlink{class_buf_str_a4554519665ffeb764a8edbaf4f10d92c}{size})
+\item 
+\hyperlink{class_buf_str_aceb0e03981b7c20ee59616b2ecde261a}{$\sim$\+Buf\+Str} ()
+\item 
+void \hyperlink{class_buf_str_a36ec062edea86b33b794eeab37f32b1c}{add\+Char} (char \hyperlink{060__command__switch_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c})
+\item 
+void \hyperlink{class_buf_str_a81957fec77e64ad1a7c75e2994d903ec}{add\+Array} (const char $\ast$\hyperlink{060__command__switch_8tcl_ab08ae027fc5777bc4f0629f1b60b35db}{a}, int len)
+\item 
+void \hyperlink{class_buf_str_a9cc2457c5bf9f46db797dbf5c86f7be2}{skip} (\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+void \hyperlink{class_buf_str_a11fc0e89dd066db9395751269c6a761f}{shrink} (\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} newlen)
+\item 
+void \hyperlink{class_buf_str_af87ab9881190162554a0ace539be4b75}{resize} (\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} newlen)
+\item 
+int \hyperlink{class_buf_str_a4554519665ffeb764a8edbaf4f10d92c}{size} () const 
+\item 
+char $\ast$ \hyperlink{class_buf_str_a366417fab189ed2b6a2c6a834623d51d}{data} () const 
+\item 
+char \& \hyperlink{class_buf_str_a6bfff13e0f1a32c7183d0515df4ff2fe}{at} (\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{060__command__switch_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}) const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_buf_str_ab8686c113e0dfb864031f680fc32af90}{is\+Empty} () const 
+\item 
+\hyperlink{class_buf_str_a297a176c378703c5ff616bbae3e36e7c}{operator const char $\ast$} () const 
+\item 
+\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{class_buf_str_a15a1b0488ef8d61f34f6fb12ddb30078}{cur\+Pos} () const 
+\item 
+void \hyperlink{class_buf_str_a583b684f2a7ad02fadbe9caef14af656}{drop\+From\+Start} (\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} bytes)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Buffer used to store strings. 
+
+This buffer is used append characters and strings. It will automatically resize itself, yet provide efficient random access to the content. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_buf_str_ad752ce74eb8d9ca7d546836f09ba448b}{}\index{Buf\+Str@{Buf\+Str}!Buf\+Str@{Buf\+Str}}
+\index{Buf\+Str@{Buf\+Str}!Buf\+Str@{Buf\+Str}}
+\subsubsection[{Buf\+Str(int size)}]{\setlength{\rightskip}{0pt plus 5cm}Buf\+Str\+::\+Buf\+Str (
+\begin{DoxyParamCaption}
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_buf_str_ad752ce74eb8d9ca7d546836f09ba448b}
+\hypertarget{class_buf_str_aceb0e03981b7c20ee59616b2ecde261a}{}\index{Buf\+Str@{Buf\+Str}!````~Buf\+Str@{$\sim$\+Buf\+Str}}
+\index{````~Buf\+Str@{$\sim$\+Buf\+Str}!Buf\+Str@{Buf\+Str}}
+\subsubsection[{$\sim$\+Buf\+Str()}]{\setlength{\rightskip}{0pt plus 5cm}Buf\+Str\+::$\sim$\+Buf\+Str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_buf_str_aceb0e03981b7c20ee59616b2ecde261a}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_buf_str_a81957fec77e64ad1a7c75e2994d903ec}{}\index{Buf\+Str@{Buf\+Str}!add\+Array@{add\+Array}}
+\index{add\+Array@{add\+Array}!Buf\+Str@{Buf\+Str}}
+\subsubsection[{add\+Array(const char $\ast$a, int len)}]{\setlength{\rightskip}{0pt plus 5cm}void Buf\+Str\+::add\+Array (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_buf_str_a81957fec77e64ad1a7c75e2994d903ec}
+\hypertarget{class_buf_str_a36ec062edea86b33b794eeab37f32b1c}{}\index{Buf\+Str@{Buf\+Str}!add\+Char@{add\+Char}}
+\index{add\+Char@{add\+Char}!Buf\+Str@{Buf\+Str}}
+\subsubsection[{add\+Char(char c)}]{\setlength{\rightskip}{0pt plus 5cm}void Buf\+Str\+::add\+Char (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_buf_str_a36ec062edea86b33b794eeab37f32b1c}
+\hypertarget{class_buf_str_a6bfff13e0f1a32c7183d0515df4ff2fe}{}\index{Buf\+Str@{Buf\+Str}!at@{at}}
+\index{at@{at}!Buf\+Str@{Buf\+Str}}
+\subsubsection[{at(uint i) const }]{\setlength{\rightskip}{0pt plus 5cm}char\& Buf\+Str\+::at (
+\begin{DoxyParamCaption}
+\item[{{\bf uint}}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_buf_str_a6bfff13e0f1a32c7183d0515df4ff2fe}
+\hypertarget{class_buf_str_a15a1b0488ef8d61f34f6fb12ddb30078}{}\index{Buf\+Str@{Buf\+Str}!cur\+Pos@{cur\+Pos}}
+\index{cur\+Pos@{cur\+Pos}!Buf\+Str@{Buf\+Str}}
+\subsubsection[{cur\+Pos() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint} Buf\+Str\+::cur\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_buf_str_a15a1b0488ef8d61f34f6fb12ddb30078}
+\hypertarget{class_buf_str_a366417fab189ed2b6a2c6a834623d51d}{}\index{Buf\+Str@{Buf\+Str}!data@{data}}
+\index{data@{data}!Buf\+Str@{Buf\+Str}}
+\subsubsection[{data() const }]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Buf\+Str\+::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_buf_str_a366417fab189ed2b6a2c6a834623d51d}
+\hypertarget{class_buf_str_a583b684f2a7ad02fadbe9caef14af656}{}\index{Buf\+Str@{Buf\+Str}!drop\+From\+Start@{drop\+From\+Start}}
+\index{drop\+From\+Start@{drop\+From\+Start}!Buf\+Str@{Buf\+Str}}
+\subsubsection[{drop\+From\+Start(uint bytes)}]{\setlength{\rightskip}{0pt plus 5cm}void Buf\+Str\+::drop\+From\+Start (
+\begin{DoxyParamCaption}
+\item[{{\bf uint}}]{bytes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_buf_str_a583b684f2a7ad02fadbe9caef14af656}
+\hypertarget{class_buf_str_ab8686c113e0dfb864031f680fc32af90}{}\index{Buf\+Str@{Buf\+Str}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!Buf\+Str@{Buf\+Str}}
+\subsubsection[{is\+Empty() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Buf\+Str\+::is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_buf_str_ab8686c113e0dfb864031f680fc32af90}
+\hypertarget{class_buf_str_a297a176c378703c5ff616bbae3e36e7c}{}\index{Buf\+Str@{Buf\+Str}!operator const char $\ast$@{operator const char $\ast$}}
+\index{operator const char $\ast$@{operator const char $\ast$}!Buf\+Str@{Buf\+Str}}
+\subsubsection[{operator const char $\ast$() const }]{\setlength{\rightskip}{0pt plus 5cm}Buf\+Str\+::operator const char $\ast$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_buf_str_a297a176c378703c5ff616bbae3e36e7c}
+\hypertarget{class_buf_str_af87ab9881190162554a0ace539be4b75}{}\index{Buf\+Str@{Buf\+Str}!resize@{resize}}
+\index{resize@{resize}!Buf\+Str@{Buf\+Str}}
+\subsubsection[{resize(uint newlen)}]{\setlength{\rightskip}{0pt plus 5cm}void Buf\+Str\+::resize (
+\begin{DoxyParamCaption}
+\item[{{\bf uint}}]{newlen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_buf_str_af87ab9881190162554a0ace539be4b75}
+\hypertarget{class_buf_str_a11fc0e89dd066db9395751269c6a761f}{}\index{Buf\+Str@{Buf\+Str}!shrink@{shrink}}
+\index{shrink@{shrink}!Buf\+Str@{Buf\+Str}}
+\subsubsection[{shrink(uint newlen)}]{\setlength{\rightskip}{0pt plus 5cm}void Buf\+Str\+::shrink (
+\begin{DoxyParamCaption}
+\item[{{\bf uint}}]{newlen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_buf_str_a11fc0e89dd066db9395751269c6a761f}
+\hypertarget{class_buf_str_a4554519665ffeb764a8edbaf4f10d92c}{}\index{Buf\+Str@{Buf\+Str}!size@{size}}
+\index{size@{size}!Buf\+Str@{Buf\+Str}}
+\subsubsection[{size() const }]{\setlength{\rightskip}{0pt plus 5cm}int Buf\+Str\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_buf_str_a4554519665ffeb764a8edbaf4f10d92c}
+\hypertarget{class_buf_str_a9cc2457c5bf9f46db797dbf5c86f7be2}{}\index{Buf\+Str@{Buf\+Str}!skip@{skip}}
+\index{skip@{skip}!Buf\+Str@{Buf\+Str}}
+\subsubsection[{skip(uint s)}]{\setlength{\rightskip}{0pt plus 5cm}void Buf\+Str\+::skip (
+\begin{DoxyParamCaption}
+\item[{{\bf uint}}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_buf_str_a9cc2457c5bf9f46db797dbf5c86f7be2}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{bufstr_8h}{bufstr.\+h}\end{DoxyCompactItemize}

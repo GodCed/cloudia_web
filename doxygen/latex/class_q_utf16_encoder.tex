@@ -1,0 +1,47 @@
+\hypertarget{class_q_utf16_encoder}{}\section{Référence de la classe Q\+Utf16\+Encoder}
+\label{class_q_utf16_encoder}\index{Q\+Utf16\+Encoder@{Q\+Utf16\+Encoder}}
+Graphe d\textquotesingle{}héritage de Q\+Utf16\+Encoder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_utf16_encoder}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_utf16_encoder_a4d21cad1f8afb87f21130b33ecad5c53}{Q\+Utf16\+Encoder} ()
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_q_utf16_encoder_abe6f23ccae2a17021d4906e9f5e76ae6}{from\+Unicode} (const \hyperlink{class_q_string}{Q\+String} \&uc, int \&len\+\_\+in\+\_\+out)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_utf16_encoder_a4d21cad1f8afb87f21130b33ecad5c53}{}\index{Q\+Utf16\+Encoder@{Q\+Utf16\+Encoder}!Q\+Utf16\+Encoder@{Q\+Utf16\+Encoder}}
+\index{Q\+Utf16\+Encoder@{Q\+Utf16\+Encoder}!Q\+Utf16\+Encoder@{Q\+Utf16\+Encoder}}
+\subsubsection[{Q\+Utf16\+Encoder()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Utf16\+Encoder\+::\+Q\+Utf16\+Encoder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_utf16_encoder_a4d21cad1f8afb87f21130b33ecad5c53}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_utf16_encoder_abe6f23ccae2a17021d4906e9f5e76ae6}{}\index{Q\+Utf16\+Encoder@{Q\+Utf16\+Encoder}!from\+Unicode@{from\+Unicode}}
+\index{from\+Unicode@{from\+Unicode}!Q\+Utf16\+Encoder@{Q\+Utf16\+Encoder}}
+\subsubsection[{from\+Unicode(const Q\+String \&uc, int \&len\+\_\+in\+\_\+out)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Q\+Utf16\+Encoder\+::from\+Unicode (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{uc, }
+\item[{int \&}]{len\+In\+Out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_q_utf16_encoder_abe6f23ccae2a17021d4906e9f5e76ae6}
+Converts {\itshape len\+In\+Out} characters (not bytes) from {\itshape uc}, producing a \hyperlink{class_q_c_string}{Q\+C\+String}. {\itshape len\+In\+Out} will also be set to the \hyperlink{class_q_c_string_a70bdaa04f2325aee395c4e1ccc1c942c}{length} of the result (in bytes).
+
+The encoder is free to record state to use when subsequent calls are made to this function (for example, it might change modes with escape sequences if needed during the encoding of one string, then assume that mode applies when a subsequent call begins). 
+
+Implémente \hyperlink{class_q_text_encoder_a3b199427ee9b7f862fe65811165dbbfa}{Q\+Text\+Encoder}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qutfcodec_8cpp}{qutfcodec.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,245 @@
+\hypertarget{class_code_output_interface}{}\section{Référence de la classe Code\+Output\+Interface}
+\label{class_code_output_interface}\index{Code\+Output\+Interface@{Code\+Output\+Interface}}
+
+
+{\ttfamily \#include $<$outputgen.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Code\+Output\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.590909cm]{class_code_output_interface}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_code_output_interface_a09fd2fd0be98227359200de7ab89c7e6}{$\sim$\+Code\+Output\+Interface} ()
+\item 
+virtual void \hyperlink{class_code_output_interface_aa29a5eedda08596ace50ed5b59c8ae7f}{codify} (const char $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})=0
+\item 
+virtual void \hyperlink{class_code_output_interface_a102e2b7f40916c75b79871307f5bb674}{write\+Code\+Link} (const char $\ast$ref, const char $\ast$file, const char $\ast$anchor, const char $\ast$name, const char $\ast$tooltip)=0
+\item 
+virtual void \hyperlink{class_code_output_interface_a8115646785b65e292480c2e4e969b389}{write\+Line\+Number} (const char $\ast$ref, const char $\ast$file, const char $\ast$anchor, int line\+Number)=0
+\item 
+virtual void \hyperlink{class_code_output_interface_a4326ca642f6ec228466ae310622f73ad}{write\+Tooltip} (const char $\ast$id, const \hyperlink{struct_doc_link_info}{Doc\+Link\+Info} \&doc\+Info, const char $\ast$decl, const char $\ast$desc, const \hyperlink{struct_source_link_info}{Source\+Link\+Info} \&def\+Info, const \hyperlink{struct_source_link_info}{Source\+Link\+Info} \&decl\+Info)=0
+\item 
+virtual void \hyperlink{class_code_output_interface_a080d71d457de084ce2b3245bca5a0d68}{start\+Code\+Line} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} has\+Line\+Numbers)=0
+\item 
+virtual void \hyperlink{class_code_output_interface_afac5763eafc78f93b82691fb9a6dcff7}{end\+Code\+Line} ()=0
+\item 
+virtual void \hyperlink{class_code_output_interface_ac90f75968cdcf127e0b02938bdb49d87}{start\+Font\+Class} (const char $\ast$cls\+Name)=0
+\item 
+virtual void \hyperlink{class_code_output_interface_a2b8ac05a391dae36793aa3aa8714a0f6}{end\+Font\+Class} ()=0
+\item 
+virtual void \hyperlink{class_code_output_interface_a1f6394c4ef7c4143de90bcaf3a65c0b4}{write\+Code\+Anchor} (const char $\ast$name)=0
+\item 
+virtual void \hyperlink{class_code_output_interface_a67a190860748597bd65b4cfc313797d3}{set\+Current\+Doc} (\hyperlink{class_definition}{Definition} $\ast$context, const char $\ast$anchor, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} is\+Source\+File)=0
+\item 
+virtual void \hyperlink{class_code_output_interface_a2734a8371d6e710620ad238ed8de118e}{add\+Word} (const char $\ast$word, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} hi\+Priority)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Output interface for code parser. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_code_output_interface_a09fd2fd0be98227359200de7ab89c7e6}{}\index{Code\+Output\+Interface@{Code\+Output\+Interface}!````~Code\+Output\+Interface@{$\sim$\+Code\+Output\+Interface}}
+\index{````~Code\+Output\+Interface@{$\sim$\+Code\+Output\+Interface}!Code\+Output\+Interface@{Code\+Output\+Interface}}
+\subsubsection[{$\sim$\+Code\+Output\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Code\+Output\+Interface\+::$\sim$\+Code\+Output\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_code_output_interface_a09fd2fd0be98227359200de7ab89c7e6}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_code_output_interface_a2734a8371d6e710620ad238ed8de118e}{}\index{Code\+Output\+Interface@{Code\+Output\+Interface}!add\+Word@{add\+Word}}
+\index{add\+Word@{add\+Word}!Code\+Output\+Interface@{Code\+Output\+Interface}}
+\subsubsection[{add\+Word(const char $\ast$word, bool hi\+Priority)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Code\+Output\+Interface\+::add\+Word (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{word, }
+\item[{{\bf bool}}]{hi\+Priority}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_code_output_interface_a2734a8371d6e710620ad238ed8de118e}
+
+
+Implémenté dans \hyperlink{class_output_list_a909e6711f00132f53f9576ccf4e409be}{Output\+List}, \hyperlink{class_x_m_l_code_generator_ad881d483a68619cc88b9022f85f116ea}{X\+M\+L\+Code\+Generator}, \hyperlink{class_latex_generator_a04cf15ca0b9c9a231adbe7e42436a1cf}{Latex\+Generator}, \hyperlink{class_docbook_code_generator_ad935ade67aa122c6a67120d6e401ea78}{Docbook\+Code\+Generator}, \hyperlink{class_r_t_f_generator_af386b517dfdb4b5b5c02cfd2bae5761e}{R\+T\+F\+Generator}, \hyperlink{class_man_generator_af92adee00e581b1275adef04effe1699}{Man\+Generator}, \hyperlink{class_html_generator_ab80e35069bed2aadfd28912897ff59c8}{Html\+Generator}, \hyperlink{class_dev_null_code_doc_interface_a8ea71442357b2793532f7bab3a9f6319}{Dev\+Null\+Code\+Doc\+Interface}, \hyperlink{class_x_ref_dummy_code_generator_a3dfe2201a5c05c81151f82c37223ed6b}{X\+Ref\+Dummy\+Code\+Generator}, et \hyperlink{class_html_code_generator_a589f4d1ffce901b424bcbc0db0808471}{Html\+Code\+Generator}.
+
+\hypertarget{class_code_output_interface_aa29a5eedda08596ace50ed5b59c8ae7f}{}\index{Code\+Output\+Interface@{Code\+Output\+Interface}!codify@{codify}}
+\index{codify@{codify}!Code\+Output\+Interface@{Code\+Output\+Interface}}
+\subsubsection[{codify(const char $\ast$s)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Code\+Output\+Interface\+::codify (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_code_output_interface_aa29a5eedda08596ace50ed5b59c8ae7f}
+Writes an code fragment to the output. This function should keep spaces visible, should break lines at a newline and should convert tabs to the right number of spaces. 
+
+Implémenté dans \hyperlink{class_x_m_l_code_generator_a40ff443bfb15f9f862f8bd3ceb50ce89}{X\+M\+L\+Code\+Generator}, \hyperlink{class_docbook_code_generator_a7c2c177e3e6e0485e9806a75b45bd7a3}{Docbook\+Code\+Generator}, \hyperlink{class_output_list_a81c7d3f51fa62b85c2699830f7170ccd}{Output\+List}, \hyperlink{class_html_generator_a574ab87e7aa9b92c11248027912851bc}{Html\+Generator}, \hyperlink{class_latex_generator_a0013e3c0a103883ba879974c92b5a989}{Latex\+Generator}, \hyperlink{class_man_generator_a6e70bf6444a4e6d5db43f5bbb7b6b125}{Man\+Generator}, \hyperlink{class_r_t_f_generator_a331ca74e622c48bbbcad7e02139a6bfb}{R\+T\+F\+Generator}, \hyperlink{class_dev_null_code_doc_interface_a75e60fd56c45e70af39b3b926e76d53f}{Dev\+Null\+Code\+Doc\+Interface}, \hyperlink{class_x_ref_dummy_code_generator_a81331d5775ec9ff49ef03ebc8c0a0dae}{X\+Ref\+Dummy\+Code\+Generator}, et \hyperlink{class_html_code_generator_aa482ae62b65a2fd1cc6cda022e88c920}{Html\+Code\+Generator}.
+
+\hypertarget{class_code_output_interface_afac5763eafc78f93b82691fb9a6dcff7}{}\index{Code\+Output\+Interface@{Code\+Output\+Interface}!end\+Code\+Line@{end\+Code\+Line}}
+\index{end\+Code\+Line@{end\+Code\+Line}!Code\+Output\+Interface@{Code\+Output\+Interface}}
+\subsubsection[{end\+Code\+Line()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Code\+Output\+Interface\+::end\+Code\+Line (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_code_output_interface_afac5763eafc78f93b82691fb9a6dcff7}
+Ends a line of code started with \hyperlink{class_code_output_interface_a080d71d457de084ce2b3245bca5a0d68}{start\+Code\+Line()} 
+
+Implémenté dans \hyperlink{class_x_m_l_code_generator_a47927ff273870cc7713f2d20e8c2beb3}{X\+M\+L\+Code\+Generator}, \hyperlink{class_output_list_a0e08c34eb6d9058342d0bd7fdc2a453d}{Output\+List}, \hyperlink{class_docbook_code_generator_ab457dd3ab8b99073d9d2cc6f566bb712}{Docbook\+Code\+Generator}, \hyperlink{class_latex_generator_a87b0106936769e1226310df32ec5e1a6}{Latex\+Generator}, \hyperlink{class_man_generator_a0f0040036147c71754651d0701029f70}{Man\+Generator}, \hyperlink{class_r_t_f_generator_a3f63e2fedfb61f656e35df2054a6d772}{R\+T\+F\+Generator}, \hyperlink{class_html_generator_a509e9b78f035f58e533cef4f79bf5401}{Html\+Generator}, \hyperlink{class_dev_null_code_doc_interface_a5aeb9fdbb29f60058c55adecefab457a}{Dev\+Null\+Code\+Doc\+Interface}, \hyperlink{class_x_ref_dummy_code_generator_a6b4a0fd7e9d9b39e05bf65f7dcc1021e}{X\+Ref\+Dummy\+Code\+Generator}, et \hyperlink{class_html_code_generator_ab0909b2a97301c8da4fcbf83831c84b3}{Html\+Code\+Generator}.
+
+\hypertarget{class_code_output_interface_a2b8ac05a391dae36793aa3aa8714a0f6}{}\index{Code\+Output\+Interface@{Code\+Output\+Interface}!end\+Font\+Class@{end\+Font\+Class}}
+\index{end\+Font\+Class@{end\+Font\+Class}!Code\+Output\+Interface@{Code\+Output\+Interface}}
+\subsubsection[{end\+Font\+Class()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Code\+Output\+Interface\+::end\+Font\+Class (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_code_output_interface_a2b8ac05a391dae36793aa3aa8714a0f6}
+Ends a block started with \hyperlink{class_code_output_interface_ac90f75968cdcf127e0b02938bdb49d87}{start\+Font\+Class()} 
+
+Implémenté dans \hyperlink{class_output_list_a484c1bcfcffe7a6cb94316ac8df64b61}{Output\+List}, \hyperlink{class_x_m_l_code_generator_adbf57d4544dc1c27571b472f3990a385}{X\+M\+L\+Code\+Generator}, \hyperlink{class_latex_generator_a553927a6db74aca325fa50bd666b44b0}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_a8753e9a10c126e0f8b9af7ff9783afcd}{R\+T\+F\+Generator}, \hyperlink{class_docbook_code_generator_a06537ef3f7d9c2cb4b9b0293f43d9151}{Docbook\+Code\+Generator}, \hyperlink{class_man_generator_a35a79c6fc4ee7bd9eeadb74181e368d1}{Man\+Generator}, \hyperlink{class_html_generator_aca25e58aa19b44b41de489dc966e4b5d}{Html\+Generator}, \hyperlink{class_dev_null_code_doc_interface_adb2939da13563e88a225059de3d767e5}{Dev\+Null\+Code\+Doc\+Interface}, \hyperlink{class_x_ref_dummy_code_generator_a9a502e533ffc65e8db2b84e07a0d468a}{X\+Ref\+Dummy\+Code\+Generator}, et \hyperlink{class_html_code_generator_a8efe5c697dc169b24b5e7da7cf54305e}{Html\+Code\+Generator}.
+
+\hypertarget{class_code_output_interface_a67a190860748597bd65b4cfc313797d3}{}\index{Code\+Output\+Interface@{Code\+Output\+Interface}!set\+Current\+Doc@{set\+Current\+Doc}}
+\index{set\+Current\+Doc@{set\+Current\+Doc}!Code\+Output\+Interface@{Code\+Output\+Interface}}
+\subsubsection[{set\+Current\+Doc(\+Definition $\ast$context, const char $\ast$anchor, bool is\+Source\+File)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Code\+Output\+Interface\+::set\+Current\+Doc (
+\begin{DoxyParamCaption}
+\item[{{\bf Definition} $\ast$}]{context, }
+\item[{const char $\ast$}]{anchor, }
+\item[{{\bf bool}}]{is\+Source\+File}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_code_output_interface_a67a190860748597bd65b4cfc313797d3}
+
+
+Implémenté dans \hyperlink{class_output_list_a5465259b203bfc5430ebcf7821feb11d}{Output\+List}, \hyperlink{class_x_m_l_code_generator_a914538997a35d89bea60f82f2357dbba}{X\+M\+L\+Code\+Generator}, \hyperlink{class_latex_generator_af5df048a8317a74877a26dd2a17bac8b}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_a38af98ffc41789449c0204dcde02b7dd}{R\+T\+F\+Generator}, \hyperlink{class_docbook_code_generator_a22d996b1a717f7b76904cb63a21d1de2}{Docbook\+Code\+Generator}, \hyperlink{class_man_generator_a2b9d9b85061921cbb368b96e152bc918}{Man\+Generator}, \hyperlink{class_html_generator_a36829b23efe3855373db99bac3e9998d}{Html\+Generator}, \hyperlink{class_dev_null_code_doc_interface_aef9f575fa448694b1354e213634f3e95}{Dev\+Null\+Code\+Doc\+Interface}, \hyperlink{class_x_ref_dummy_code_generator_a7265159a7ae0ab4da18f2f9455bfc891}{X\+Ref\+Dummy\+Code\+Generator}, et \hyperlink{class_html_code_generator_a6ac7fde67764c26857967eed883eb36b}{Html\+Code\+Generator}.
+
+\hypertarget{class_code_output_interface_a080d71d457de084ce2b3245bca5a0d68}{}\index{Code\+Output\+Interface@{Code\+Output\+Interface}!start\+Code\+Line@{start\+Code\+Line}}
+\index{start\+Code\+Line@{start\+Code\+Line}!Code\+Output\+Interface@{Code\+Output\+Interface}}
+\subsubsection[{start\+Code\+Line(bool has\+Line\+Numbers)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Code\+Output\+Interface\+::start\+Code\+Line (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{has\+Line\+Numbers}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_code_output_interface_a080d71d457de084ce2b3245bca5a0d68}
+
+
+Implémenté dans \hyperlink{class_x_m_l_code_generator_a44719eff2d9d919cd24aca0f6313b3ea}{X\+M\+L\+Code\+Generator}, \hyperlink{class_output_list_a4676ca4801912753ba2c5af4f38cb951}{Output\+List}, \hyperlink{class_docbook_code_generator_aa6af9297cbb2be8c975d0d123cf6d3b1}{Docbook\+Code\+Generator}, \hyperlink{class_latex_generator_a9bfa7242e97eca8f1d795245bb98fa37}{Latex\+Generator}, \hyperlink{class_man_generator_a2690c4b3d068da46f8a6804d43fd34e7}{Man\+Generator}, \hyperlink{class_r_t_f_generator_abd342f1207b80ca7ef8badcf659a0b58}{R\+T\+F\+Generator}, \hyperlink{class_html_generator_ab89f82b354a626585bf1ff5a793ad5db}{Html\+Generator}, \hyperlink{class_dev_null_code_doc_interface_a3a63c468ba7f134f5f5cfc5867a81e3a}{Dev\+Null\+Code\+Doc\+Interface}, \hyperlink{class_x_ref_dummy_code_generator_af53c0624cbc5f7a42b8232a3c9255d23}{X\+Ref\+Dummy\+Code\+Generator}, et \hyperlink{class_html_code_generator_afbc2414a5387b977150b015dfbd16c10}{Html\+Code\+Generator}.
+
+\hypertarget{class_code_output_interface_ac90f75968cdcf127e0b02938bdb49d87}{}\index{Code\+Output\+Interface@{Code\+Output\+Interface}!start\+Font\+Class@{start\+Font\+Class}}
+\index{start\+Font\+Class@{start\+Font\+Class}!Code\+Output\+Interface@{Code\+Output\+Interface}}
+\subsubsection[{start\+Font\+Class(const char $\ast$cls\+Name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Code\+Output\+Interface\+::start\+Font\+Class (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{cls\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_code_output_interface_ac90f75968cdcf127e0b02938bdb49d87}
+Starts a block with a certain meaning. Used for syntax highlighting, which elements of the same type are rendered using the same \textquotesingle{}font class\textquotesingle{}. 
+\begin{DoxyParams}{Paramètres}
+{\em cls\+Name} & The category name. \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \hyperlink{class_output_list_ace178947661035b39f4dc9076595c24f}{Output\+List}, \hyperlink{class_x_m_l_code_generator_aa6d0288952109fba1efe98d82e863b70}{X\+M\+L\+Code\+Generator}, \hyperlink{class_latex_generator_a9d6086d408fbbda70d328c5cbdff56fb}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_a84114371fc0f3865e0321c2df8ce0ae9}{R\+T\+F\+Generator}, \hyperlink{class_man_generator_a4bafda26799458d289c507fad6690de9}{Man\+Generator}, \hyperlink{class_docbook_code_generator_ab39e3a862244d1c8926895d69240ca0d}{Docbook\+Code\+Generator}, \hyperlink{class_html_generator_aa600cc24896060a68612e3db6efb7dbf}{Html\+Generator}, \hyperlink{class_dev_null_code_doc_interface_a8489329a11f50e9d9ab1a3a67d306a51}{Dev\+Null\+Code\+Doc\+Interface}, \hyperlink{class_x_ref_dummy_code_generator_a5c53cb36c03f583b7b236e482a0a6693}{X\+Ref\+Dummy\+Code\+Generator}, et \hyperlink{class_html_code_generator_ae7eaca4c34eeb6bf1aeaf0ac5ce4257b}{Html\+Code\+Generator}.
+
+\hypertarget{class_code_output_interface_a1f6394c4ef7c4143de90bcaf3a65c0b4}{}\index{Code\+Output\+Interface@{Code\+Output\+Interface}!write\+Code\+Anchor@{write\+Code\+Anchor}}
+\index{write\+Code\+Anchor@{write\+Code\+Anchor}!Code\+Output\+Interface@{Code\+Output\+Interface}}
+\subsubsection[{write\+Code\+Anchor(const char $\ast$name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Code\+Output\+Interface\+::write\+Code\+Anchor (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_code_output_interface_a1f6394c4ef7c4143de90bcaf3a65c0b4}
+Write an anchor to a source listing. 
+\begin{DoxyParams}{Paramètres}
+{\em name} & The name of the anchor. \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \hyperlink{class_output_list_ad40cf8ca8c6289590afa5871b8d5d9a0}{Output\+List}, \hyperlink{class_x_m_l_code_generator_a2c6ae0bc633493d36a2b517c44ebb8f4}{X\+M\+L\+Code\+Generator}, \hyperlink{class_latex_generator_a8f95b3ffc6a7404a308befa3da25b0ef}{Latex\+Generator}, \hyperlink{class_r_t_f_generator_a01b1cb771ecbdb9da62b21c980d1a5ae}{R\+T\+F\+Generator}, \hyperlink{class_man_generator_a15b2642afa851662afe60fb00d4b20fb}{Man\+Generator}, \hyperlink{class_docbook_code_generator_ac0f7f4cd4fec98da2855978adf786a04}{Docbook\+Code\+Generator}, \hyperlink{class_html_generator_a9e2528347c04b6f07dd9263441dbcf4f}{Html\+Generator}, \hyperlink{class_dev_null_code_doc_interface_abfa6f09f69831c231f0fe7bb095b8fc4}{Dev\+Null\+Code\+Doc\+Interface}, \hyperlink{class_x_ref_dummy_code_generator_aae68bc8b3e507f39d5613d2840c5f10b}{X\+Ref\+Dummy\+Code\+Generator}, et \hyperlink{class_html_code_generator_a89ec8d4b9eb2b5162b4d9a7cab209b4a}{Html\+Code\+Generator}.
+
+\hypertarget{class_code_output_interface_a102e2b7f40916c75b79871307f5bb674}{}\index{Code\+Output\+Interface@{Code\+Output\+Interface}!write\+Code\+Link@{write\+Code\+Link}}
+\index{write\+Code\+Link@{write\+Code\+Link}!Code\+Output\+Interface@{Code\+Output\+Interface}}
+\subsubsection[{write\+Code\+Link(const char $\ast$ref, const char $\ast$file, const char $\ast$anchor, const char $\ast$name, const char $\ast$tooltip)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Code\+Output\+Interface\+::write\+Code\+Link (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ref, }
+\item[{const char $\ast$}]{file, }
+\item[{const char $\ast$}]{anchor, }
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{tooltip}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_code_output_interface_a102e2b7f40916c75b79871307f5bb674}
+Writes a link to an object in a code fragment. 
+\begin{DoxyParams}{Paramètres}
+{\em ref} & If this is non-\/zero, the object is to be found in an external documentation file. \\
+\hline
+{\em file} & The file in which the object is located. \\
+\hline
+{\em anchor} & The anchor uniquely identifying the object within the file. \\
+\hline
+{\em name} & The text to display as a placeholder for the link. \\
+\hline
+{\em tooltip} & The tooltip to display when the mouse is on the link. \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \hyperlink{class_x_m_l_code_generator_aa0e45ec4ffd221b96f0af9202a098a29}{X\+M\+L\+Code\+Generator}, \hyperlink{class_docbook_code_generator_aecf4ade98ac3d63f22e3632f7dfb987a}{Docbook\+Code\+Generator}, \hyperlink{class_output_list_adebe51dec7320f28fe291d5e1dae740c}{Output\+List}, \hyperlink{class_html_generator_a91b156be8ac84d8a2a8a88e7adf0869b}{Html\+Generator}, \hyperlink{class_latex_generator_af7b390d37f164fa8a094541e95be2bd0}{Latex\+Generator}, \hyperlink{class_man_generator_ac4d91e5763d584238139d65d873e9f64}{Man\+Generator}, \hyperlink{class_r_t_f_generator_ad598f8811fde4d3b1849c2e9b92a6686}{R\+T\+F\+Generator}, \hyperlink{class_dev_null_code_doc_interface_a44ad7fe7fba94cb200fd0d53642b1909}{Dev\+Null\+Code\+Doc\+Interface}, \hyperlink{class_x_ref_dummy_code_generator_a06d3c79e75348534d7fd21ef2ac17137}{X\+Ref\+Dummy\+Code\+Generator}, et \hyperlink{class_html_code_generator_a5098b373d91b9674cc399132a321f040}{Html\+Code\+Generator}.
+
+\hypertarget{class_code_output_interface_a8115646785b65e292480c2e4e969b389}{}\index{Code\+Output\+Interface@{Code\+Output\+Interface}!write\+Line\+Number@{write\+Line\+Number}}
+\index{write\+Line\+Number@{write\+Line\+Number}!Code\+Output\+Interface@{Code\+Output\+Interface}}
+\subsubsection[{write\+Line\+Number(const char $\ast$ref, const char $\ast$file, const char $\ast$anchor, int line\+Number)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Code\+Output\+Interface\+::write\+Line\+Number (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ref, }
+\item[{const char $\ast$}]{file, }
+\item[{const char $\ast$}]{anchor, }
+\item[{int}]{line\+Number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_code_output_interface_a8115646785b65e292480c2e4e969b389}
+Writes the line number of a source listing 
+\begin{DoxyParams}{Paramètres}
+{\em ref} & External reference (when imported from a tag file) \\
+\hline
+{\em file} & The file part of the \hyperlink{struct_u_r_l}{U\+R\+L} pointing to the docs. \\
+\hline
+{\em anchor} & The anchor part of the \hyperlink{struct_u_r_l}{U\+R\+L} pointing to the docs. \\
+\hline
+{\em line\+Number} & The line number to write \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \hyperlink{class_x_m_l_code_generator_af06c584af323f840eb54a2ab98acd8c2}{X\+M\+L\+Code\+Generator}, \hyperlink{class_output_list_a9472c77d09f7049b64dbad0c4ba13ccd}{Output\+List}, \hyperlink{class_docbook_code_generator_a0230dcc0e6ee8d3323571df44c5178ba}{Docbook\+Code\+Generator}, \hyperlink{class_latex_generator_a02bd7806ea67c323b902b2311811eb2b}{Latex\+Generator}, \hyperlink{class_man_generator_a3fe4aad0243fbecd3b746448a9373d3c}{Man\+Generator}, \hyperlink{class_r_t_f_generator_a4e6a13e14340ff6585c305d3c9b55c4f}{R\+T\+F\+Generator}, \hyperlink{class_html_generator_a042fed032c729b4a5e44b9a7c86385a7}{Html\+Generator}, \hyperlink{class_dev_null_code_doc_interface_a32188c740a455bab278f9098212b8fec}{Dev\+Null\+Code\+Doc\+Interface}, \hyperlink{class_x_ref_dummy_code_generator_a512157ca96e7b26f8b6827362a2a3ba0}{X\+Ref\+Dummy\+Code\+Generator}, et \hyperlink{class_html_code_generator_a926369daa75db9967dc5c6f818b5b406}{Html\+Code\+Generator}.
+
+\hypertarget{class_code_output_interface_a4326ca642f6ec228466ae310622f73ad}{}\index{Code\+Output\+Interface@{Code\+Output\+Interface}!write\+Tooltip@{write\+Tooltip}}
+\index{write\+Tooltip@{write\+Tooltip}!Code\+Output\+Interface@{Code\+Output\+Interface}}
+\subsubsection[{write\+Tooltip(const char $\ast$id, const Doc\+Link\+Info \&doc\+Info, const char $\ast$decl, const char $\ast$desc, const Source\+Link\+Info \&def\+Info, const Source\+Link\+Info \&decl\+Info)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Code\+Output\+Interface\+::write\+Tooltip (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{id, }
+\item[{const {\bf Doc\+Link\+Info} \&}]{doc\+Info, }
+\item[{const char $\ast$}]{decl, }
+\item[{const char $\ast$}]{desc, }
+\item[{const {\bf Source\+Link\+Info} \&}]{def\+Info, }
+\item[{const {\bf Source\+Link\+Info} \&}]{decl\+Info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_code_output_interface_a4326ca642f6ec228466ae310622f73ad}
+Writes a tool tip definition 
+\begin{DoxyParams}{Paramètres}
+{\em id} & unique identifier for the tooltip \\
+\hline
+{\em doc\+Info} & Info about the symbol\textquotesingle{}s documentation. \\
+\hline
+{\em decl} & full declaration of the symbol (for functions) \\
+\hline
+{\em desc} & brief description for the symbol \\
+\hline
+{\em def\+Info} & Info about the symbol\textquotesingle{}s definition in the source code \\
+\hline
+{\em decl\+Info} & Info about the symbol\textquotesingle{}s declaration in the source code \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \hyperlink{class_x_m_l_code_generator_afe5258b3e63958ce81ce4895d9ce2334}{X\+M\+L\+Code\+Generator}, \hyperlink{class_docbook_code_generator_a5ce309cd68be3ce9eabbd2e522c1c286}{Docbook\+Code\+Generator}, \hyperlink{class_output_list_a3cebc68a6a4524ef4b78c4e81d5127eb}{Output\+List}, \hyperlink{class_html_generator_ad21a9b170d8f644619f287a233c6b549}{Html\+Generator}, \hyperlink{class_latex_generator_aa25f1930cd87edac4db7452bddb05825}{Latex\+Generator}, \hyperlink{class_man_generator_a8ec440b278091bf61579f35cd8237a25}{Man\+Generator}, \hyperlink{class_r_t_f_generator_a06e0455dd78d9d79ea51e6d31e6877fe}{R\+T\+F\+Generator}, \hyperlink{class_dev_null_code_doc_interface_a3f251d7e2651aa943adf84c35e27d094}{Dev\+Null\+Code\+Doc\+Interface}, \hyperlink{class_x_ref_dummy_code_generator_ab174d5a290293c32246eb01ccb937645}{X\+Ref\+Dummy\+Code\+Generator}, et \hyperlink{class_html_code_generator_a6edc5ab4a379a6edfaac4e4c36db4178}{Html\+Code\+Generator}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{outputgen_8h}{outputgen.\+h}\end{DoxyCompactItemize}

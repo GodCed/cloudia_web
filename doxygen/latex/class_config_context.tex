@@ -1,0 +1,85 @@
+\hypertarget{class_config_context}{}\section{Référence de la classe Config\+Context}
+\label{class_config_context}\index{Config\+Context@{Config\+Context}}
+
+
+{\ttfamily \#include $<$context.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Config\+Context\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_config_context}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_config_context_1_1_private}{Private}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_template_variant}{Template\+Variant} \hyperlink{class_config_context_acdf5915040b29592410d712eccfd4b11}{get} (const char $\ast$name) const 
+\item 
+virtual int \hyperlink{class_config_context_a6e870043f96de613f7f00e10aa57359e}{add\+Ref} ()
+\item 
+virtual int \hyperlink{class_config_context_a56eb8523197fa488cb099b47808b7ba7}{release} ()
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_config_context}{Config\+Context} $\ast$ \hyperlink{class_config_context_ac23123d89936c3646711f891d5ad31da}{alloc} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_config_context_a6e870043f96de613f7f00e10aa57359e}{}\index{Config\+Context@{Config\+Context}!add\+Ref@{add\+Ref}}
+\index{add\+Ref@{add\+Ref}!Config\+Context@{Config\+Context}}
+\subsubsection[{add\+Ref()}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Config\+Context\+::add\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_config_context_a6e870043f96de613f7f00e10aa57359e}
+Increase object\textquotesingle{}s reference count 
+
+Implémente \hyperlink{class_template_struct_intf_a05fe97ad47633beb326f69686faed581}{Template\+Struct\+Intf}.
+
+\hypertarget{class_config_context_ac23123d89936c3646711f891d5ad31da}{}\index{Config\+Context@{Config\+Context}!alloc@{alloc}}
+\index{alloc@{alloc}!Config\+Context@{Config\+Context}}
+\subsubsection[{alloc()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Config\+Context}$\ast$ Config\+Context\+::alloc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_config_context_ac23123d89936c3646711f891d5ad31da}
+\hypertarget{class_config_context_acdf5915040b29592410d712eccfd4b11}{}\index{Config\+Context@{Config\+Context}!get@{get}}
+\index{get@{get}!Config\+Context@{Config\+Context}}
+\subsubsection[{get(const char $\ast$name) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Variant} Config\+Context\+::get (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_config_context_acdf5915040b29592410d712eccfd4b11}
+Gets the value for a field name. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em name} & The name of the field. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_template_struct_intf_afd77683d121b5b6aebc8b6648c46ee20}{Template\+Struct\+Intf}.
+
+\hypertarget{class_config_context_a56eb8523197fa488cb099b47808b7ba7}{}\index{Config\+Context@{Config\+Context}!release@{release}}
+\index{release@{release}!Config\+Context@{Config\+Context}}
+\subsubsection[{release()}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Config\+Context\+::release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_config_context_a56eb8523197fa488cb099b47808b7ba7}
+Decreases object\textquotesingle{}s referenc count, destroy object if 0 
+
+Implémente \hyperlink{class_template_struct_intf_a3dce7dd29d3f66a8080b40578e8a5045}{Template\+Struct\+Intf}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{context_8h}{context.\+h}\item 
+src/\hyperlink{context_8cpp}{context.\+cpp}\end{DoxyCompactItemize}

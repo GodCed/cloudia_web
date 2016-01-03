@@ -1,0 +1,100 @@
+\hypertarget{class_s_dict_1_1_iterator}{}\section{Référence de la classe S\+Dict$<$ T $>$\+:\+:Iterator}
+\label{class_s_dict_1_1_iterator}\index{S\+Dict$<$ T $>$\+::\+Iterator@{S\+Dict$<$ T $>$\+::\+Iterator}}
+
+
+{\ttfamily \#include $<$sortdict.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_s_dict_1_1_iterator_a0c8bd359d5c6e57123216f52130b95bc}{Iterator} (const \hyperlink{class_s_dict}{S\+Dict}$<$ T $>$ \&dict)
+\item 
+virtual \hyperlink{class_s_dict_1_1_iterator_a2b2dc67f8c7bf160bba90c79083edcd2}{$\sim$\+Iterator} ()
+\item 
+T $\ast$ \hyperlink{class_s_dict_1_1_iterator_a89f954f53860fef0f7495c292f663150}{to\+First} () const 
+\item 
+T $\ast$ \hyperlink{class_s_dict_1_1_iterator_a70b2fd3b028bc71c0f39ff8d89fa34ea}{to\+Last} () const 
+\item 
+T $\ast$ \hyperlink{class_s_dict_1_1_iterator_a7cb5c4e3c6cc381a4568bf8b2e93af15}{current} () const 
+\item 
+T $\ast$ \hyperlink{class_s_dict_1_1_iterator_ab3172aa53d339348bab5208611044908}{operator++} ()
+\item 
+T $\ast$ \hyperlink{class_s_dict_1_1_iterator_ab660d0dacf804b314112c5ac9ea41714}{operator-\/-\/} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\subsubsection*{template$<$class T$>$class S\+Dict$<$ T $>$\+::\+Iterator}
+
+Simple iterator for \hyperlink{class_s_dict}{S\+Dict}. It iterates in the order in which the elements are stored. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_s_dict_1_1_iterator_a0c8bd359d5c6e57123216f52130b95bc}{}\index{S\+Dict\+::\+Iterator@{S\+Dict\+::\+Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!S\+Dict\+::\+Iterator@{S\+Dict\+::\+Iterator}}
+\subsubsection[{Iterator(const S\+Dict$<$ T $>$ \&dict)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+Dict}$<$ T $>$\+::Iterator\+::\+Iterator (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+Dict}$<$ T $>$ \&}]{dict}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_dict_1_1_iterator_a0c8bd359d5c6e57123216f52130b95bc}
+Create an iterator given the dictionary. \hypertarget{class_s_dict_1_1_iterator_a2b2dc67f8c7bf160bba90c79083edcd2}{}\index{S\+Dict\+::\+Iterator@{S\+Dict\+::\+Iterator}!````~Iterator@{$\sim$\+Iterator}}
+\index{````~Iterator@{$\sim$\+Iterator}!S\+Dict\+::\+Iterator@{S\+Dict\+::\+Iterator}}
+\subsubsection[{$\sim$\+Iterator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+Dict}$<$ T $>$\+::Iterator\+::$\sim$\+Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_dict_1_1_iterator_a2b2dc67f8c7bf160bba90c79083edcd2}
+Destroys the dictionary 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_s_dict_1_1_iterator_a7cb5c4e3c6cc381a4568bf8b2e93af15}{}\index{S\+Dict\+::\+Iterator@{S\+Dict\+::\+Iterator}!current@{current}}
+\index{current@{current}!S\+Dict\+::\+Iterator@{S\+Dict\+::\+Iterator}}
+\subsubsection[{current() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf S\+Dict}$<$ T $>$\+::Iterator\+::current (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_dict_1_1_iterator_a7cb5c4e3c6cc381a4568bf8b2e93af15}
+Returns the current compound \hypertarget{class_s_dict_1_1_iterator_ab3172aa53d339348bab5208611044908}{}\index{S\+Dict\+::\+Iterator@{S\+Dict\+::\+Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!S\+Dict\+::\+Iterator@{S\+Dict\+::\+Iterator}}
+\subsubsection[{operator++()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf S\+Dict}$<$ T $>$\+::Iterator\+::operator++ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_dict_1_1_iterator_ab3172aa53d339348bab5208611044908}
+Moves the iterator to the next element. \begin{DoxyReturn}{Renvoie}
+the new \char`\"{}current\char`\"{} element, or zero if the iterator was already pointing at the last element. 
+\end{DoxyReturn}
+\hypertarget{class_s_dict_1_1_iterator_ab660d0dacf804b314112c5ac9ea41714}{}\index{S\+Dict\+::\+Iterator@{S\+Dict\+::\+Iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!S\+Dict\+::\+Iterator@{S\+Dict\+::\+Iterator}}
+\subsubsection[{operator-\/-\/()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf S\+Dict}$<$ T $>$\+::Iterator\+::operator-\/-\/ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_dict_1_1_iterator_ab660d0dacf804b314112c5ac9ea41714}
+Moves the iterator to the previous element. \begin{DoxyReturn}{Renvoie}
+the new \char`\"{}current\char`\"{} element, or zero if the iterator was already pointing at the first element. 
+\end{DoxyReturn}
+\hypertarget{class_s_dict_1_1_iterator_a89f954f53860fef0f7495c292f663150}{}\index{S\+Dict\+::\+Iterator@{S\+Dict\+::\+Iterator}!to\+First@{to\+First}}
+\index{to\+First@{to\+First}!S\+Dict\+::\+Iterator@{S\+Dict\+::\+Iterator}}
+\subsubsection[{to\+First() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf S\+Dict}$<$ T $>$\+::Iterator\+::to\+First (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_dict_1_1_iterator_a89f954f53860fef0f7495c292f663150}
+Set the iterator to the first element in the list. \begin{DoxyReturn}{Renvoie}
+The first compound, or zero if the list was empty. 
+\end{DoxyReturn}
+\hypertarget{class_s_dict_1_1_iterator_a70b2fd3b028bc71c0f39ff8d89fa34ea}{}\index{S\+Dict\+::\+Iterator@{S\+Dict\+::\+Iterator}!to\+Last@{to\+Last}}
+\index{to\+Last@{to\+Last}!S\+Dict\+::\+Iterator@{S\+Dict\+::\+Iterator}}
+\subsubsection[{to\+Last() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf S\+Dict}$<$ T $>$\+::Iterator\+::to\+Last (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_dict_1_1_iterator_a70b2fd3b028bc71c0f39ff8d89fa34ea}
+Set the iterator to the last element in the list. \begin{DoxyReturn}{Renvoie}
+The first compound, or zero if the list was empty. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{sortdict_8h}{sortdict.\+h}\end{DoxyCompactItemize}

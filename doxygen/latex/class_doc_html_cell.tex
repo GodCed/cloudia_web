@@ -1,0 +1,226 @@
+\hypertarget{class_doc_html_cell}{}\section{Référence de la classe Doc\+Html\+Cell}
+\label{class_doc_html_cell}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+
+
+{\ttfamily \#include $<$docparser.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Doc\+Html\+Cell\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doc_html_cell}
+\end{center}
+\end{figure}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_doc_html_cell_a1bfba233eb785db3496ea2a82d9a2136}{Alignment} \{ \hyperlink{class_doc_html_cell_a1bfba233eb785db3496ea2a82d9a2136a8dd1ecd8df71ef42303c2b64fd73804f}{Left}, 
+\hyperlink{class_doc_html_cell_a1bfba233eb785db3496ea2a82d9a2136a65214529ecca545b977a6edf61de84c4}{Right}, 
+\hyperlink{class_doc_html_cell_a1bfba233eb785db3496ea2a82d9a2136a6bf57086c5c581a2d4905ad7cfbec3e0}{Center}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_html_cell_a408005d09b36012a9aa432df386a8ed0}{Doc\+Html\+Cell} (\hyperlink{class_doc_node}{Doc\+Node} $\ast$\hyperlink{class_doc_node_a990d8b983962776a647e6231d38bd329}{parent}, const \hyperlink{class_html_attrib_list}{Html\+Attrib\+List} \&\hyperlink{class_doc_html_cell_a44edb472040558280343bd63bcc6192a}{attribs}, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_doc_html_cell_aec60f6b9943eb73cc5e0e9fd930aec15}{is\+Heading})
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_doc_html_cell_aec60f6b9943eb73cc5e0e9fd930aec15}{is\+Heading} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_doc_html_cell_abc25e29d4e00822b9f40217da6e00cc7}{is\+First} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_doc_html_cell_ad0ee2ef185bd6cee0a7c23488b07bd7e}{is\+Last} () const 
+\item 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadb}{Kind} \hyperlink{class_doc_html_cell_a3875c8b0c463b0b436baf054f7ed78d7}{kind} () const 
+\item 
+void \hyperlink{class_doc_html_cell_a52cc927e1684777332944884f2ee9869}{accept} (\hyperlink{class_doc_visitor}{Doc\+Visitor} $\ast$v)
+\item 
+void \hyperlink{class_doc_html_cell_ab472d7aee599717c94c69ab137310d2c}{mark\+First} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} v=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E})
+\item 
+void \hyperlink{class_doc_html_cell_a50c10a42581d4ae558776aa2d7528cd2}{mark\+Last} (\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} v=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E})
+\item 
+const \hyperlink{class_html_attrib_list}{Html\+Attrib\+List} \& \hyperlink{class_doc_html_cell_a44edb472040558280343bd63bcc6192a}{attribs} () const 
+\item 
+int \hyperlink{class_doc_html_cell_ad1dda118e2ea47235f3880e56ae6e2a8}{parse} ()
+\item 
+int \hyperlink{class_doc_html_cell_aa5b43dd579348e1e8e4df010176bd928}{parse\+Xml} ()
+\item 
+int \hyperlink{class_doc_html_cell_aa4c684008ade32fcdb495bbd704a9076}{row\+Index} () const 
+\item 
+int \hyperlink{class_doc_html_cell_a41c7147ac0961be935af0971f11be512}{column\+Index} () const 
+\item 
+int \hyperlink{class_doc_html_cell_aa463d34188413d319524346a62134520}{row\+Span} () const 
+\item 
+int \hyperlink{class_doc_html_cell_a9ca338b39cc12afce3825dad90a3faf1}{col\+Span} () const 
+\item 
+\hyperlink{class_doc_html_cell_a1bfba233eb785db3496ea2a82d9a2136}{Alignment} \hyperlink{class_doc_html_cell_abacb9832f6ab6f767c0162eb95f758c1}{alignment} () const 
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_doc_html_cell_a1f7413118a8c0d90c891a2695a7cb90d}{Doc\+Html\+Table}
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Node representing a H\+T\+M\+L table cell 
+
+\subsection{Documentation des énumérations membres}
+\hypertarget{class_doc_html_cell_a1bfba233eb785db3496ea2a82d9a2136}{}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!Alignment@{Alignment}}
+\index{Alignment@{Alignment}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+\subsubsection[{Alignment}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Doc\+Html\+Cell\+::\+Alignment}}\label{class_doc_html_cell_a1bfba233eb785db3496ea2a82d9a2136}
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Left@{Left}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!Left@{Left}}\item[{\em 
+\hypertarget{class_doc_html_cell_a1bfba233eb785db3496ea2a82d9a2136a8dd1ecd8df71ef42303c2b64fd73804f}{}Left\label{class_doc_html_cell_a1bfba233eb785db3496ea2a82d9a2136a8dd1ecd8df71ef42303c2b64fd73804f}
+}]\index{Right@{Right}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!Right@{Right}}\item[{\em 
+\hypertarget{class_doc_html_cell_a1bfba233eb785db3496ea2a82d9a2136a65214529ecca545b977a6edf61de84c4}{}Right\label{class_doc_html_cell_a1bfba233eb785db3496ea2a82d9a2136a65214529ecca545b977a6edf61de84c4}
+}]\index{Center@{Center}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!Center@{Center}}\item[{\em 
+\hypertarget{class_doc_html_cell_a1bfba233eb785db3496ea2a82d9a2136a6bf57086c5c581a2d4905ad7cfbec3e0}{}Center\label{class_doc_html_cell_a1bfba233eb785db3496ea2a82d9a2136a6bf57086c5c581a2d4905ad7cfbec3e0}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_doc_html_cell_a408005d09b36012a9aa432df386a8ed0}{}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+\subsubsection[{Doc\+Html\+Cell(\+Doc\+Node $\ast$parent, const Html\+Attrib\+List \&attribs, bool is\+Heading)}]{\setlength{\rightskip}{0pt plus 5cm}Doc\+Html\+Cell\+::\+Doc\+Html\+Cell (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Node} $\ast$}]{parent, }
+\item[{const {\bf Html\+Attrib\+List} \&}]{attribs, }
+\item[{{\bf bool}}]{is\+Heading}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_html_cell_a408005d09b36012a9aa432df386a8ed0}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_doc_html_cell_a52cc927e1684777332944884f2ee9869}{}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!accept@{accept}}
+\index{accept@{accept}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+\subsubsection[{accept(\+Doc\+Visitor $\ast$v)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Html\+Cell\+::accept (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Visitor} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_html_cell_a52cc927e1684777332944884f2ee9869}
+Acceptor function for node visitors. Part of the visitor pattern. 
+\begin{DoxyParams}{Paramètres}
+{\em v} & Abstract visitor. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_doc_node_a5303a550cbe6395663bf9b9dad28cbf1}{Doc\+Node}.
+
+\hypertarget{class_doc_html_cell_abacb9832f6ab6f767c0162eb95f758c1}{}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!alignment@{alignment}}
+\index{alignment@{alignment}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+\subsubsection[{alignment() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Doc\+Html\+Cell\+::\+Alignment} Doc\+Html\+Cell\+::alignment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_doc_html_cell_abacb9832f6ab6f767c0162eb95f758c1}
+\hypertarget{class_doc_html_cell_a44edb472040558280343bd63bcc6192a}{}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!attribs@{attribs}}
+\index{attribs@{attribs}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+\subsubsection[{attribs() const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Html\+Attrib\+List}\& Doc\+Html\+Cell\+::attribs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_html_cell_a44edb472040558280343bd63bcc6192a}
+\hypertarget{class_doc_html_cell_a9ca338b39cc12afce3825dad90a3faf1}{}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!col\+Span@{col\+Span}}
+\index{col\+Span@{col\+Span}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+\subsubsection[{col\+Span() const }]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Html\+Cell\+::col\+Span (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_doc_html_cell_a9ca338b39cc12afce3825dad90a3faf1}
+\hypertarget{class_doc_html_cell_a41c7147ac0961be935af0971f11be512}{}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!column\+Index@{column\+Index}}
+\index{column\+Index@{column\+Index}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+\subsubsection[{column\+Index() const }]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Html\+Cell\+::column\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_html_cell_a41c7147ac0961be935af0971f11be512}
+\hypertarget{class_doc_html_cell_abc25e29d4e00822b9f40217da6e00cc7}{}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!is\+First@{is\+First}}
+\index{is\+First@{is\+First}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+\subsubsection[{is\+First() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Doc\+Html\+Cell\+::is\+First (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_html_cell_abc25e29d4e00822b9f40217da6e00cc7}
+\hypertarget{class_doc_html_cell_aec60f6b9943eb73cc5e0e9fd930aec15}{}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!is\+Heading@{is\+Heading}}
+\index{is\+Heading@{is\+Heading}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+\subsubsection[{is\+Heading() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Doc\+Html\+Cell\+::is\+Heading (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_html_cell_aec60f6b9943eb73cc5e0e9fd930aec15}
+\hypertarget{class_doc_html_cell_ad0ee2ef185bd6cee0a7c23488b07bd7e}{}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!is\+Last@{is\+Last}}
+\index{is\+Last@{is\+Last}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+\subsubsection[{is\+Last() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Doc\+Html\+Cell\+::is\+Last (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_html_cell_ad0ee2ef185bd6cee0a7c23488b07bd7e}
+\hypertarget{class_doc_html_cell_a3875c8b0c463b0b436baf054f7ed78d7}{}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!kind@{kind}}
+\index{kind@{kind}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kind} Doc\+Html\+Cell\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_html_cell_a3875c8b0c463b0b436baf054f7ed78d7}
+Returns the kind of node. Provides runtime type information 
+
+Implémente \hyperlink{class_doc_node_a92d4aaa169a813ded919aa858024c809}{Doc\+Node}.
+
+\hypertarget{class_doc_html_cell_ab472d7aee599717c94c69ab137310d2c}{}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!mark\+First@{mark\+First}}
+\index{mark\+First@{mark\+First}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+\subsubsection[{mark\+First(bool v=\+T\+R\+U\+E)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Html\+Cell\+::mark\+First (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{v = {\ttfamily {\bf T\+R\+U\+E}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_html_cell_ab472d7aee599717c94c69ab137310d2c}
+\hypertarget{class_doc_html_cell_a50c10a42581d4ae558776aa2d7528cd2}{}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!mark\+Last@{mark\+Last}}
+\index{mark\+Last@{mark\+Last}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+\subsubsection[{mark\+Last(bool v=\+T\+R\+U\+E)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Html\+Cell\+::mark\+Last (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{v = {\ttfamily {\bf T\+R\+U\+E}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_html_cell_a50c10a42581d4ae558776aa2d7528cd2}
+\hypertarget{class_doc_html_cell_ad1dda118e2ea47235f3880e56ae6e2a8}{}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!parse@{parse}}
+\index{parse@{parse}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+\subsubsection[{parse()}]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Html\+Cell\+::parse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_doc_html_cell_ad1dda118e2ea47235f3880e56ae6e2a8}
+\hypertarget{class_doc_html_cell_aa5b43dd579348e1e8e4df010176bd928}{}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!parse\+Xml@{parse\+Xml}}
+\index{parse\+Xml@{parse\+Xml}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+\subsubsection[{parse\+Xml()}]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Html\+Cell\+::parse\+Xml (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_doc_html_cell_aa5b43dd579348e1e8e4df010176bd928}
+\hypertarget{class_doc_html_cell_aa4c684008ade32fcdb495bbd704a9076}{}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!row\+Index@{row\+Index}}
+\index{row\+Index@{row\+Index}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+\subsubsection[{row\+Index() const }]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Html\+Cell\+::row\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_html_cell_aa4c684008ade32fcdb495bbd704a9076}
+\hypertarget{class_doc_html_cell_aa463d34188413d319524346a62134520}{}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!row\+Span@{row\+Span}}
+\index{row\+Span@{row\+Span}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+\subsubsection[{row\+Span() const }]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Html\+Cell\+::row\+Span (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_doc_html_cell_aa463d34188413d319524346a62134520}
+
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{class_doc_html_cell_a1f7413118a8c0d90c891a2695a7cb90d}{}\index{Doc\+Html\+Cell@{Doc\+Html\+Cell}!Doc\+Html\+Table@{Doc\+Html\+Table}}
+\index{Doc\+Html\+Table@{Doc\+Html\+Table}!Doc\+Html\+Cell@{Doc\+Html\+Cell}}
+\subsubsection[{Doc\+Html\+Table}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Doc\+Html\+Table}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_doc_html_cell_a1f7413118a8c0d90c891a2695a7cb90d}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{docparser_8h}{docparser.\+h}\item 
+src/\hyperlink{docparser_8cpp}{docparser.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,89 @@
+\hypertarget{class_doc_html_desc_data}{}\section{Référence de la classe Doc\+Html\+Desc\+Data}
+\label{class_doc_html_desc_data}\index{Doc\+Html\+Desc\+Data@{Doc\+Html\+Desc\+Data}}
+
+
+{\ttfamily \#include $<$docparser.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Doc\+Html\+Desc\+Data\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doc_html_desc_data}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_html_desc_data_ae326119d544a16082f417b43abe3b6b5}{Doc\+Html\+Desc\+Data} (\hyperlink{class_doc_node}{Doc\+Node} $\ast$\hyperlink{class_doc_node_a990d8b983962776a647e6231d38bd329}{parent})
+\item 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadb}{Kind} \hyperlink{class_doc_html_desc_data_a2a4d493b0a381d7b877a88427710c336}{kind} () const 
+\item 
+const \hyperlink{class_html_attrib_list}{Html\+Attrib\+List} \& \hyperlink{class_doc_html_desc_data_a60b0a31bc2fb6758c039385c4a7e9a4c}{attribs} () const 
+\item 
+void \hyperlink{class_doc_html_desc_data_a4c69206e824affc9734c2a02c2ec912e}{accept} (\hyperlink{class_doc_visitor}{Doc\+Visitor} $\ast$v)
+\item 
+int \hyperlink{class_doc_html_desc_data_ae3eeaf6df34a38595797546e019224b8}{parse} ()
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Node representing a H\+T\+M\+L description data 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_doc_html_desc_data_ae326119d544a16082f417b43abe3b6b5}{}\index{Doc\+Html\+Desc\+Data@{Doc\+Html\+Desc\+Data}!Doc\+Html\+Desc\+Data@{Doc\+Html\+Desc\+Data}}
+\index{Doc\+Html\+Desc\+Data@{Doc\+Html\+Desc\+Data}!Doc\+Html\+Desc\+Data@{Doc\+Html\+Desc\+Data}}
+\subsubsection[{Doc\+Html\+Desc\+Data(\+Doc\+Node $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Doc\+Html\+Desc\+Data\+::\+Doc\+Html\+Desc\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Node} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_html_desc_data_ae326119d544a16082f417b43abe3b6b5}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_doc_html_desc_data_a4c69206e824affc9734c2a02c2ec912e}{}\index{Doc\+Html\+Desc\+Data@{Doc\+Html\+Desc\+Data}!accept@{accept}}
+\index{accept@{accept}!Doc\+Html\+Desc\+Data@{Doc\+Html\+Desc\+Data}}
+\subsubsection[{accept(\+Doc\+Visitor $\ast$v)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Html\+Desc\+Data\+::accept (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Visitor} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_html_desc_data_a4c69206e824affc9734c2a02c2ec912e}
+Acceptor function for node visitors. Part of the visitor pattern. 
+\begin{DoxyParams}{Paramètres}
+{\em v} & Abstract visitor. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_doc_node_a5303a550cbe6395663bf9b9dad28cbf1}{Doc\+Node}.
+
+\hypertarget{class_doc_html_desc_data_a60b0a31bc2fb6758c039385c4a7e9a4c}{}\index{Doc\+Html\+Desc\+Data@{Doc\+Html\+Desc\+Data}!attribs@{attribs}}
+\index{attribs@{attribs}!Doc\+Html\+Desc\+Data@{Doc\+Html\+Desc\+Data}}
+\subsubsection[{attribs() const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Html\+Attrib\+List}\& Doc\+Html\+Desc\+Data\+::attribs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_html_desc_data_a60b0a31bc2fb6758c039385c4a7e9a4c}
+\hypertarget{class_doc_html_desc_data_a2a4d493b0a381d7b877a88427710c336}{}\index{Doc\+Html\+Desc\+Data@{Doc\+Html\+Desc\+Data}!kind@{kind}}
+\index{kind@{kind}!Doc\+Html\+Desc\+Data@{Doc\+Html\+Desc\+Data}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kind} Doc\+Html\+Desc\+Data\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_html_desc_data_a2a4d493b0a381d7b877a88427710c336}
+Returns the kind of node. Provides runtime type information 
+
+Implémente \hyperlink{class_doc_node_a92d4aaa169a813ded919aa858024c809}{Doc\+Node}.
+
+\hypertarget{class_doc_html_desc_data_ae3eeaf6df34a38595797546e019224b8}{}\index{Doc\+Html\+Desc\+Data@{Doc\+Html\+Desc\+Data}!parse@{parse}}
+\index{parse@{parse}!Doc\+Html\+Desc\+Data@{Doc\+Html\+Desc\+Data}}
+\subsubsection[{parse()}]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Html\+Desc\+Data\+::parse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_doc_html_desc_data_ae3eeaf6df34a38595797546e019224b8}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{docparser_8h}{docparser.\+h}\item 
+src/\hyperlink{docparser_8cpp}{docparser.\+cpp}\end{DoxyCompactItemize}

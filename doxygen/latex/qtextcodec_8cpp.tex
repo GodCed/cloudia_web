@@ -1,0 +1,71 @@
+\hypertarget{qtextcodec_8cpp}{}\section{Référence du fichier qtools/qtextcodec.cpp}
+\label{qtextcodec_8cpp}\index{qtools/qtextcodec.\+cpp@{qtools/qtextcodec.\+cpp}}
+{\ttfamily \#include \char`\"{}qtextcodec.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qinternallist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qutfcodec.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qfile.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qstrlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qstring.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$locale.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_q_text_stateless_encoder}{Q\+Text\+Stateless\+Encoder}
+\item 
+class \hyperlink{class_q_text_stateless_decoder}{Q\+Text\+Stateless\+Decoder}
+\item 
+struct \hyperlink{struct_q_multi_byte_unicode_table}{Q\+Multi\+Byte\+Unicode\+Table}
+\item 
+class \hyperlink{class_q_text_codec_from_i_o_d_decoder}{Q\+Text\+Codec\+From\+I\+O\+D\+Decoder}
+\item 
+class \hyperlink{class_q_text_codec_from_i_o_d}{Q\+Text\+Codec\+From\+I\+O\+D}
+\item 
+class \hyperlink{class_q_simple_text_codec}{Q\+Simple\+Text\+Codec}
+\item 
+class \hyperlink{class_q_latin1_codec}{Q\+Latin1\+Codec}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{qtextcodec_8cpp_a5963bff39c701bf7f8220cb09799151c}{C\+H\+A\+I\+N\+E\+D}~0xffff
+\item 
+\#define \hyperlink{qtextcodec_8cpp_a46acd00348eea7d50b56d3650c99eaf5}{L\+A\+S\+T\+\_\+\+M\+I\+B}~2259
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{qtextcodec_8cpp_a6848945e8e6aee1aba933fbd532a8639}{qt\+\_\+set\+\_\+locale\+\_\+codec} (\hyperlink{class_q_text_codec}{Q\+Text\+Codec} $\ast$codec)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{qtextcodec_8cpp_a5963bff39c701bf7f8220cb09799151c}{}\index{qtextcodec.\+cpp@{qtextcodec.\+cpp}!C\+H\+A\+I\+N\+E\+D@{C\+H\+A\+I\+N\+E\+D}}
+\index{C\+H\+A\+I\+N\+E\+D@{C\+H\+A\+I\+N\+E\+D}!qtextcodec.\+cpp@{qtextcodec.\+cpp}}
+\subsubsection[{C\+H\+A\+I\+N\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+A\+I\+N\+E\+D~0xffff}\label{qtextcodec_8cpp_a5963bff39c701bf7f8220cb09799151c}
+\hypertarget{qtextcodec_8cpp_a46acd00348eea7d50b56d3650c99eaf5}{}\index{qtextcodec.\+cpp@{qtextcodec.\+cpp}!L\+A\+S\+T\+\_\+\+M\+I\+B@{L\+A\+S\+T\+\_\+\+M\+I\+B}}
+\index{L\+A\+S\+T\+\_\+\+M\+I\+B@{L\+A\+S\+T\+\_\+\+M\+I\+B}!qtextcodec.\+cpp@{qtextcodec.\+cpp}}
+\subsubsection[{L\+A\+S\+T\+\_\+\+M\+I\+B}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+S\+T\+\_\+\+M\+I\+B~2259}\label{qtextcodec_8cpp_a46acd00348eea7d50b56d3650c99eaf5}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{qtextcodec_8cpp_a6848945e8e6aee1aba933fbd532a8639}{}\index{qtextcodec.\+cpp@{qtextcodec.\+cpp}!qt\+\_\+set\+\_\+locale\+\_\+codec@{qt\+\_\+set\+\_\+locale\+\_\+codec}}
+\index{qt\+\_\+set\+\_\+locale\+\_\+codec@{qt\+\_\+set\+\_\+locale\+\_\+codec}!qtextcodec.\+cpp@{qtextcodec.\+cpp}}
+\subsubsection[{qt\+\_\+set\+\_\+locale\+\_\+codec(\+Q\+Text\+Codec $\ast$codec)}]{\setlength{\rightskip}{0pt plus 5cm}void qt\+\_\+set\+\_\+locale\+\_\+codec (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Text\+Codec} $\ast$}]{codec}
+\end{DoxyParamCaption}
+)}\label{qtextcodec_8cpp_a6848945e8e6aee1aba933fbd532a8639}
+
+
+\subsection{Documentation des variables}
+\hypertarget{qtextcodec_8cpp_a067a00d3965ca879847daf3c8c224ee6}{}\index{qtextcodec.\+cpp@{qtextcodec.\+cpp}!cs@{cs}}
+\index{cs@{cs}!qtextcodec.\+cpp@{qtextcodec.\+cpp}}
+\subsubsection[{cs}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ cs}\label{qtextcodec_8cpp_a067a00d3965ca879847daf3c8c224ee6}
+\hypertarget{qtextcodec_8cpp_aca6df2f6e00e0b706e267293baed2153}{}\index{qtextcodec.\+cpp@{qtextcodec.\+cpp}!mib@{mib}}
+\index{mib@{mib}!qtextcodec.\+cpp@{qtextcodec.\+cpp}}
+\subsubsection[{mib}]{\setlength{\rightskip}{0pt plus 5cm}int mib}\label{qtextcodec_8cpp_aca6df2f6e00e0b706e267293baed2153}
+\hypertarget{qtextcodec_8cpp_a48ca6217f9d5d1de9776060e1a8dbe58}{}\index{qtextcodec.\+cpp@{qtextcodec.\+cpp}!values@{values}}
+\index{values@{values}!qtextcodec.\+cpp@{qtextcodec.\+cpp}}
+\subsubsection[{values}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+\_\+\+U\+I\+N\+T16} values\mbox{[}128\mbox{]}}\label{qtextcodec_8cpp_a48ca6217f9d5d1de9776060e1a8dbe58}

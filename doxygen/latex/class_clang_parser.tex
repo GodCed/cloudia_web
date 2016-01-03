@@ -1,0 +1,105 @@
+\hypertarget{class_clang_parser}{}\section{Référence de la classe Clang\+Parser}
+\label{class_clang_parser}\index{Clang\+Parser@{Clang\+Parser}}
+
+
+Wrapper for to let libclang assisted parsing.  
+
+
+
+
+{\ttfamily \#include $<$clangparser.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_clang_parser_a6e336d45ecc4ec146bab1696fb26bd77}{start} (const char $\ast$file\+Name, \hyperlink{class_q_str_list}{Q\+Str\+List} \&files\+In\+Translation\+Unit)
+\item 
+void \hyperlink{class_clang_parser_a6b4d5e7994ee8d875f5f9bf67e8550e1}{switch\+To\+File} (const char $\ast$file\+Name)
+\item 
+void \hyperlink{class_clang_parser_ac7ccfd4ea36fc8c347e8f794109678c8}{finish} ()
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_clang_parser_a2617d0cd62525f13d53a896247ac75d6}{lookup} (\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} line, const char $\ast$symbol)
+\item 
+void \hyperlink{class_clang_parser_a85070c801afbece678e44e5af2cf4c4b}{write\+Sources} (\hyperlink{class_code_output_interface}{Code\+Output\+Interface} \&ol, \hyperlink{class_file_def}{File\+Def} $\ast$fd)
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_clang_parser}{Clang\+Parser} $\ast$ \hyperlink{class_clang_parser_add1060dd5febd4664f6038a87d87b8cd}{instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Wrapper for to let libclang assisted parsing. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_clang_parser_ac7ccfd4ea36fc8c347e8f794109678c8}{}\index{Clang\+Parser@{Clang\+Parser}!finish@{finish}}
+\index{finish@{finish}!Clang\+Parser@{Clang\+Parser}}
+\subsubsection[{finish()}]{\setlength{\rightskip}{0pt plus 5cm}void Clang\+Parser\+::finish (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_clang_parser_ac7ccfd4ea36fc8c347e8f794109678c8}
+Finishes parsing a translation unit. Free any resources that were needed for parsing. \hypertarget{class_clang_parser_add1060dd5febd4664f6038a87d87b8cd}{}\index{Clang\+Parser@{Clang\+Parser}!instance@{instance}}
+\index{instance@{instance}!Clang\+Parser@{Clang\+Parser}}
+\subsubsection[{instance()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Clang\+Parser} $\ast$ Clang\+Parser\+::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_clang_parser_add1060dd5febd4664f6038a87d87b8cd}
+Returns the one and only instance of the class \hypertarget{class_clang_parser_a2617d0cd62525f13d53a896247ac75d6}{}\index{Clang\+Parser@{Clang\+Parser}!lookup@{lookup}}
+\index{lookup@{lookup}!Clang\+Parser@{Clang\+Parser}}
+\subsubsection[{lookup(uint line, const char $\ast$symbol)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Clang\+Parser\+::lookup (
+\begin{DoxyParamCaption}
+\item[{{\bf uint}}]{line, }
+\item[{const char $\ast$}]{symbol}
+\end{DoxyParamCaption}
+)}\label{class_clang_parser_a2617d0cd62525f13d53a896247ac75d6}
+Looks for {\itshape symbol} which should be found at {\itshape line} and returns a clang unique reference to the symbol. \hypertarget{class_clang_parser_a6e336d45ecc4ec146bab1696fb26bd77}{}\index{Clang\+Parser@{Clang\+Parser}!start@{start}}
+\index{start@{start}!Clang\+Parser@{Clang\+Parser}}
+\subsubsection[{start(const char $\ast$file\+Name, Q\+Str\+List \&files\+In\+Translation\+Unit)}]{\setlength{\rightskip}{0pt plus 5cm}void Clang\+Parser\+::start (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name, }
+\item[{{\bf Q\+Str\+List} \&}]{files\+In\+Translation\+Unit}
+\end{DoxyParamCaption}
+)}\label{class_clang_parser_a6e336d45ecc4ec146bab1696fb26bd77}
+Start parsing a file. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em file\+Name} & The name of the file to parse. \\
+\hline
+\mbox{\tt in,out}  & {\em files\+In\+Translation\+Unit} & Other files that are part of the input and included by the file. The function will return a subset of the files, only including the onces that were actually found during parsing. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_clang_parser_a6b4d5e7994ee8d875f5f9bf67e8550e1}{}\index{Clang\+Parser@{Clang\+Parser}!switch\+To\+File@{switch\+To\+File}}
+\index{switch\+To\+File@{switch\+To\+File}!Clang\+Parser@{Clang\+Parser}}
+\subsubsection[{switch\+To\+File(const char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Clang\+Parser\+::switch\+To\+File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{class_clang_parser_a6b4d5e7994ee8d875f5f9bf67e8550e1}
+Switches to another file within the translation unit started with \hyperlink{class_clang_parser_a6e336d45ecc4ec146bab1696fb26bd77}{start()}. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em file\+Name} & The name of the file to switch to. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_clang_parser_a85070c801afbece678e44e5af2cf4c4b}{}\index{Clang\+Parser@{Clang\+Parser}!write\+Sources@{write\+Sources}}
+\index{write\+Sources@{write\+Sources}!Clang\+Parser@{Clang\+Parser}}
+\subsubsection[{write\+Sources(\+Code\+Output\+Interface \&ol, File\+Def $\ast$fd)}]{\setlength{\rightskip}{0pt plus 5cm}void Clang\+Parser\+::write\+Sources (
+\begin{DoxyParamCaption}
+\item[{{\bf Code\+Output\+Interface} \&}]{ol, }
+\item[{{\bf File\+Def} $\ast$}]{fd}
+\end{DoxyParamCaption}
+)}\label{class_clang_parser_a85070c801afbece678e44e5af2cf4c4b}
+writes the syntax highlighted source code for a file 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt out}  & {\em ol} & The output generator list to write to. \\
+\hline
+\mbox{\tt in}  & {\em fd} & The file to write sources for. \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{clangparser_8h}{clangparser.\+h}\item 
+src/\hyperlink{clangparser_8cpp}{clangparser.\+cpp}\end{DoxyCompactItemize}

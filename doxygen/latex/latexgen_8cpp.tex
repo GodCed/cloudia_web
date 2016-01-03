@@ -1,0 +1,60 @@
+\hypertarget{latexgen_8cpp}{}\section{Référence du fichier src/latexgen.cpp}
+\label{latexgen_8cpp}\index{src/latexgen.\+cpp@{src/latexgen.\+cpp}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$qdir.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}latexgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doxygen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}diagram.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}language.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}version.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dot.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pagedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}docparser.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}latexdocvisitor.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dirdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cite.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}groupdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}classlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}namespacedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}filename.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}resourcemgr.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{latexgen_8cpp_a9a7f04a1060dfff4cad9f82379053257}{C\+O\+P\+Y\+C\+H\+A\+R}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{latexgen_8cpp_a9a7f04a1060dfff4cad9f82379053257}{}\index{latexgen.\+cpp@{latexgen.\+cpp}!C\+O\+P\+Y\+C\+H\+A\+R@{C\+O\+P\+Y\+C\+H\+A\+R}}
+\index{C\+O\+P\+Y\+C\+H\+A\+R@{C\+O\+P\+Y\+C\+H\+A\+R}!latexgen.\+cpp@{latexgen.\+cpp}}
+\subsubsection[{C\+O\+P\+Y\+C\+H\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+P\+Y\+C\+H\+A\+R(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{latexgen_8cpp_a9a7f04a1060dfff4cad9f82379053257}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                           \(\backslash\)
+                     result[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}++]=\hyperlink{058__bracket__recursion_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c}; \hyperlink{058__bracket__recursion_8tcl_a15229b450f26d8fa1c10bea4f3279f4d}{p}++;                          \(\backslash\)
+                     if (\hyperlink{058__bracket__recursion_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c}<0) \textcolor{comment}{/* multibyte utf-8 character */}     \(\backslash\)
+                     \{                                            \(\backslash\)
+                       \textcolor{comment}{/* 1xxx.xxxx: >=2 byte character */}        \(\backslash\)
+                       result[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}++]=*\hyperlink{058__bracket__recursion_8tcl_a15229b450f26d8fa1c10bea4f3279f4d}{p}++;                          \(\backslash\)
+                       if (((\hyperlink{qglobal_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar})\hyperlink{058__bracket__recursion_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c}&0xE0)==0xE0)                 \(\backslash\)
+                       \{                                          \(\backslash\)
+                         \textcolor{comment}{/* 111x.xxxx: >=3 byte character */}      \(\backslash\)
+                         result[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}++]=*\hyperlink{058__bracket__recursion_8tcl_a15229b450f26d8fa1c10bea4f3279f4d}{p}++;                        \(\backslash\)
+                       \}                                          \(\backslash\)
+                       if (((\hyperlink{qglobal_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar})\hyperlink{058__bracket__recursion_8tcl_ab14f56bc3bd7680490ece4ad7815465f}{c}&0xF0)==0xF0)                 \(\backslash\)
+                       \{                                          \(\backslash\)
+                         \textcolor{comment}{/* 1111.xxxx: 4 byte character */}        \(\backslash\)
+                         result[\hyperlink{058__bracket__recursion_8tcl_a8c90afd4641b25be86bd09983c3cbee0}{i}++]=*\hyperlink{058__bracket__recursion_8tcl_a15229b450f26d8fa1c10bea4f3279f4d}{p}++;                        \(\backslash\)
+                       \}                                          \(\backslash\)
+                     \}                                            \(\backslash\)
+                     col++;                                       \(\backslash\)
+                   \} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}

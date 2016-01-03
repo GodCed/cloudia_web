@@ -1,0 +1,45 @@
+\hypertarget{store_8cpp}{}\section{Référence du fichier src/store.cpp}
+\label{store_8cpp}\index{src/store.\+cpp@{src/store.\+cpp}}
+{\ttfamily \#include \char`\"{}store.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}portable.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{store_8cpp_ad51ded0bbd705f02f73fc60c0b721ced}{B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E}~512
+\item 
+\#define \hyperlink{store_8cpp_a2d1dd869a7f043a8facaeda76d90cc94}{B\+L\+O\+C\+K\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+S\+I\+Z\+E}~sizeof(\hyperlink{portable_8h_a25423a5b429a3ee0610315d93938bd0b}{portable\+\_\+off\+\_\+t})
+\item 
+\#define \hyperlink{store_8cpp_a48719c666442ea9a1bfec4962815a816}{A\+S\+S\+E\+R\+T\+S\+\_\+\+E\+N\+A\+B\+L\+E\+D}
+\item 
+\#define \hyperlink{store_8cpp_aa3c9237f6f2d171d83b10865783a41a6}{S\+T\+O\+R\+E\+\_\+\+A\+S\+S\+E\+R\+T}(x)~assert(x)
+\item 
+\#define \hyperlink{store_8cpp_a24c404e832a998fe601b8182271e4cd4}{U\+S\+E\+\_\+\+F\+T\+E\+L\+L}~0
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{store_8cpp_a48719c666442ea9a1bfec4962815a816}{}\index{store.\+cpp@{store.\+cpp}!A\+S\+S\+E\+R\+T\+S\+\_\+\+E\+N\+A\+B\+L\+E\+D@{A\+S\+S\+E\+R\+T\+S\+\_\+\+E\+N\+A\+B\+L\+E\+D}}
+\index{A\+S\+S\+E\+R\+T\+S\+\_\+\+E\+N\+A\+B\+L\+E\+D@{A\+S\+S\+E\+R\+T\+S\+\_\+\+E\+N\+A\+B\+L\+E\+D}!store.\+cpp@{store.\+cpp}}
+\subsubsection[{A\+S\+S\+E\+R\+T\+S\+\_\+\+E\+N\+A\+B\+L\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+S\+S\+E\+R\+T\+S\+\_\+\+E\+N\+A\+B\+L\+E\+D}\label{store_8cpp_a48719c666442ea9a1bfec4962815a816}
+\hypertarget{store_8cpp_a2d1dd869a7f043a8facaeda76d90cc94}{}\index{store.\+cpp@{store.\+cpp}!B\+L\+O\+C\+K\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+S\+I\+Z\+E@{B\+L\+O\+C\+K\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+S\+I\+Z\+E}}
+\index{B\+L\+O\+C\+K\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+S\+I\+Z\+E@{B\+L\+O\+C\+K\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+S\+I\+Z\+E}!store.\+cpp@{store.\+cpp}}
+\subsubsection[{B\+L\+O\+C\+K\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+L\+O\+C\+K\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+S\+I\+Z\+E~sizeof({\bf portable\+\_\+off\+\_\+t})}\label{store_8cpp_a2d1dd869a7f043a8facaeda76d90cc94}
+\hypertarget{store_8cpp_ad51ded0bbd705f02f73fc60c0b721ced}{}\index{store.\+cpp@{store.\+cpp}!B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E@{B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E}}
+\index{B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E@{B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E}!store.\+cpp@{store.\+cpp}}
+\subsubsection[{B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E~512}\label{store_8cpp_ad51ded0bbd705f02f73fc60c0b721ced}
+\hypertarget{store_8cpp_aa3c9237f6f2d171d83b10865783a41a6}{}\index{store.\+cpp@{store.\+cpp}!S\+T\+O\+R\+E\+\_\+\+A\+S\+S\+E\+R\+T@{S\+T\+O\+R\+E\+\_\+\+A\+S\+S\+E\+R\+T}}
+\index{S\+T\+O\+R\+E\+\_\+\+A\+S\+S\+E\+R\+T@{S\+T\+O\+R\+E\+\_\+\+A\+S\+S\+E\+R\+T}!store.\+cpp@{store.\+cpp}}
+\subsubsection[{S\+T\+O\+R\+E\+\_\+\+A\+S\+S\+E\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+O\+R\+E\+\_\+\+A\+S\+S\+E\+R\+T(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~assert(x)}\label{store_8cpp_aa3c9237f6f2d171d83b10865783a41a6}
+\hypertarget{store_8cpp_a24c404e832a998fe601b8182271e4cd4}{}\index{store.\+cpp@{store.\+cpp}!U\+S\+E\+\_\+\+F\+T\+E\+L\+L@{U\+S\+E\+\_\+\+F\+T\+E\+L\+L}}
+\index{U\+S\+E\+\_\+\+F\+T\+E\+L\+L@{U\+S\+E\+\_\+\+F\+T\+E\+L\+L}!store.\+cpp@{store.\+cpp}}
+\subsubsection[{U\+S\+E\+\_\+\+F\+T\+E\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+E\+\_\+\+F\+T\+E\+L\+L~0}\label{store_8cpp_a24c404e832a998fe601b8182271e4cd4}

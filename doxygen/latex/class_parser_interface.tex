@@ -1,0 +1,203 @@
+\hypertarget{class_parser_interface}{}\section{Référence de la classe Parser\+Interface}
+\label{class_parser_interface}\index{Parser\+Interface@{Parser\+Interface}}
+
+
+Abstract interface for programming language parsers.  
+
+
+
+
+{\ttfamily \#include $<$parserintf.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Parser\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{class_parser_interface}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_parser_interface_ac468c7abd84cd5ab1263555d3f95f1ee}{$\sim$\+Parser\+Interface} ()
+\item 
+virtual void \hyperlink{class_parser_interface_a72478f87ead5fde10d7d6bbe32a73024}{start\+Translation\+Unit} (const char $\ast$file\+Name)=0
+\item 
+virtual void \hyperlink{class_parser_interface_af3acd64c6a33852e2e46e7288eb9c9cf}{finish\+Translation\+Unit} ()=0
+\item 
+virtual void \hyperlink{class_parser_interface_a09ced377e619d40b7339187bad88341e}{parse\+Input} (const char $\ast$file\+Name, const char $\ast$file\+Buf, \hyperlink{class_entry}{Entry} $\ast$root, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} same\+Translation\+Unit, \hyperlink{class_q_str_list}{Q\+Str\+List} \&files\+In\+Same\+Translation\+Unit)=0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_parser_interface_a36c669b17b64a6e3847f27d70a5398d2}{needs\+Preprocessing} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&extension)=0
+\item 
+virtual void \hyperlink{class_parser_interface_a2ffc28f9dd7c47e2581376a573426395}{parse\+Code} (\hyperlink{class_code_output_interface}{Code\+Output\+Interface} \&code\+Out\+Intf, const char $\ast$scope\+Name, const \hyperlink{class_q_c_string}{Q\+C\+String} \&input, \hyperlink{types_8h_a9974623ce72fc23df5d64426b9178bf2}{Src\+Lang\+Ext} lang, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} is\+Example\+Block, const char $\ast$example\+Name=0, \hyperlink{class_file_def}{File\+Def} $\ast$file\+Def=0, int start\+Line=-\/1, int end\+Line=-\/1, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} inline\+Fragment=\hyperlink{qglobal_8h_a10e004b6916e78ff4ea8379be80b80cc}{F\+A\+L\+S\+E}, \hyperlink{class_member_def}{Member\+Def} $\ast$member\+Def=0, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} show\+Line\+Numbers=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E}, \hyperlink{class_definition}{Definition} $\ast$search\+Ctx=0, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{tclscanner_8cpp_ac23b94d6976d5bb0c9f1885c5a2e7a53}{collect\+X\+Refs}=\hyperlink{qglobal_8h_a04a6422a52070f0dc478693da640242b}{T\+R\+U\+E})=0
+\item 
+virtual void \hyperlink{class_parser_interface_aee4fccd1865a4e8a6b9f2896811104ca}{reset\+Code\+Parser\+State} ()=0
+\item 
+virtual void \hyperlink{class_parser_interface_a5ebf0f524a296845befa22c85a4cc80b}{parse\+Prototype} (const char $\ast$text)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Abstract interface for programming language parsers. 
+
+By implementing the methods of this interface one can add a new language parser to doxygen. The parser can make use of the comment block parser to parse the contents of special comment blocks. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_parser_interface_ac468c7abd84cd5ab1263555d3f95f1ee}{}\index{Parser\+Interface@{Parser\+Interface}!````~Parser\+Interface@{$\sim$\+Parser\+Interface}}
+\index{````~Parser\+Interface@{$\sim$\+Parser\+Interface}!Parser\+Interface@{Parser\+Interface}}
+\subsubsection[{$\sim$\+Parser\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Parser\+Interface\+::$\sim$\+Parser\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_parser_interface_ac468c7abd84cd5ab1263555d3f95f1ee}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_parser_interface_af3acd64c6a33852e2e46e7288eb9c9cf}{}\index{Parser\+Interface@{Parser\+Interface}!finish\+Translation\+Unit@{finish\+Translation\+Unit}}
+\index{finish\+Translation\+Unit@{finish\+Translation\+Unit}!Parser\+Interface@{Parser\+Interface}}
+\subsubsection[{finish\+Translation\+Unit()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Parser\+Interface\+::finish\+Translation\+Unit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_parser_interface_af3acd64c6a33852e2e46e7288eb9c9cf}
+Called after all files in a translation unit have been processed. 
+
+Implémenté dans \hyperlink{class_v_h_d_l_language_scanner_a1c08cc94a1cd79fdaf8a102935089445}{V\+H\+D\+L\+Language\+Scanner}, \hyperlink{class_python_language_scanner_a97ca623055615c143e63ea98be819f86}{Python\+Language\+Scanner}, \hyperlink{class_c_language_scanner_a03f5004bda27f5c73f3b9d74d9064b99}{C\+Language\+Scanner}, \hyperlink{class_fortran_language_scanner_abf5a872f1e3bd81f5a285e9586869def}{Fortran\+Language\+Scanner}, \hyperlink{class_markdown_file_parser_adaf4aeedc27abe4dd8cc4a58d59b298f}{Markdown\+File\+Parser}, \hyperlink{class_tcl_language_scanner_a187804b0bf0a0043bad0f1a752224909}{Tcl\+Language\+Scanner}, \hyperlink{class_x_m_l_scanner_a00b3082e888d6bd670fdc31e52b79606}{X\+M\+L\+Scanner}, et \hyperlink{class_file_parser_a08ab809441600d2ace9508c040bc3943}{File\+Parser}.
+
+\hypertarget{class_parser_interface_a36c669b17b64a6e3847f27d70a5398d2}{}\index{Parser\+Interface@{Parser\+Interface}!needs\+Preprocessing@{needs\+Preprocessing}}
+\index{needs\+Preprocessing@{needs\+Preprocessing}!Parser\+Interface@{Parser\+Interface}}
+\subsubsection[{needs\+Preprocessing(const Q\+C\+String \&extension)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} Parser\+Interface\+::needs\+Preprocessing (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{extension}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_parser_interface_a36c669b17b64a6e3847f27d70a5398d2}
+Returns T\+R\+U\+E if the language identified by {\itshape extension} needs the \hyperlink{class_c}{C} preprocessor to be run before feed the result to the input parser. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_parser_interface_a09ced377e619d40b7339187bad88341e}{parse\+Input()} 
+\end{DoxySeeAlso}
+
+
+Implémenté dans \hyperlink{class_v_h_d_l_language_scanner_ae36ed4aad0a9dc9beed5afa3e831a5ee}{V\+H\+D\+L\+Language\+Scanner}, \hyperlink{class_python_language_scanner_a7c6ce0a95e477374182374a9f5bb2e2f}{Python\+Language\+Scanner}, \hyperlink{class_c_language_scanner_a88315d1d6591098e284bd2b91d4ba233}{C\+Language\+Scanner}, \hyperlink{class_fortran_language_scanner_a94620ec6b6cf583dccd2544671e9e578}{Fortran\+Language\+Scanner}, \hyperlink{class_markdown_file_parser_ae53b811156b426b03f4ea8f634141133}{Markdown\+File\+Parser}, \hyperlink{class_tcl_language_scanner_ab3a4ec9c04dbcf8bb75cd1552c774f5e}{Tcl\+Language\+Scanner}, \hyperlink{class_x_m_l_scanner_aee7d6327a9e55cd3b965a21f707ed0a5}{X\+M\+L\+Scanner}, et \hyperlink{class_file_parser_acf9bb5f92915a547a6638a07e63b9100}{File\+Parser}.
+
+\hypertarget{class_parser_interface_a2ffc28f9dd7c47e2581376a573426395}{}\index{Parser\+Interface@{Parser\+Interface}!parse\+Code@{parse\+Code}}
+\index{parse\+Code@{parse\+Code}!Parser\+Interface@{Parser\+Interface}}
+\subsubsection[{parse\+Code(\+Code\+Output\+Interface \&code\+Out\+Intf, const char $\ast$scope\+Name, const Q\+C\+String \&input, Src\+Lang\+Ext lang, bool is\+Example\+Block, const char $\ast$example\+Name=0, File\+Def $\ast$file\+Def=0, int start\+Line=-\/1, int end\+Line=-\/1, bool inline\+Fragment=\+F\+A\+L\+S\+E, Member\+Def $\ast$member\+Def=0, bool show\+Line\+Numbers=\+T\+R\+U\+E, Definition $\ast$search\+Ctx=0, bool collect\+X\+Refs=\+T\+R\+U\+E)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Parser\+Interface\+::parse\+Code (
+\begin{DoxyParamCaption}
+\item[{{\bf Code\+Output\+Interface} \&}]{code\+Out\+Intf, }
+\item[{const char $\ast$}]{scope\+Name, }
+\item[{const {\bf Q\+C\+String} \&}]{input, }
+\item[{{\bf Src\+Lang\+Ext}}]{lang, }
+\item[{{\bf bool}}]{is\+Example\+Block, }
+\item[{const char $\ast$}]{example\+Name = {\ttfamily 0}, }
+\item[{{\bf File\+Def} $\ast$}]{file\+Def = {\ttfamily 0}, }
+\item[{int}]{start\+Line = {\ttfamily -\/1}, }
+\item[{int}]{end\+Line = {\ttfamily -\/1}, }
+\item[{{\bf bool}}]{inline\+Fragment = {\ttfamily {\bf F\+A\+L\+S\+E}}, }
+\item[{{\bf Member\+Def} $\ast$}]{member\+Def = {\ttfamily 0}, }
+\item[{{\bf bool}}]{show\+Line\+Numbers = {\ttfamily {\bf T\+R\+U\+E}}, }
+\item[{{\bf Definition} $\ast$}]{search\+Ctx = {\ttfamily 0}, }
+\item[{{\bf bool}}]{collect\+X\+Refs = {\ttfamily {\bf T\+R\+U\+E}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_parser_interface_a2ffc28f9dd7c47e2581376a573426395}
+Parses a source file or fragment with the goal to produce highlighted and cross-\/referenced output. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em code\+Out\+Intf} & Abstract interface for writing the result. \\
+\hline
+\mbox{\tt in}  & {\em lang} & The programming language of the code fragment. \\
+\hline
+\mbox{\tt in}  & {\em scope\+Name} & Name of scope to which the code belongs. \\
+\hline
+\mbox{\tt in}  & {\em input} & Actual code in the form of a string \\
+\hline
+\mbox{\tt in}  & {\em is\+Example\+Block} & T\+R\+U\+E iff the code is part of an example. \\
+\hline
+\mbox{\tt in}  & {\em example\+Name} & Name of the example. \\
+\hline
+\mbox{\tt in}  & {\em file\+Def} & File definition to which the code is associated. \\
+\hline
+\mbox{\tt in}  & {\em start\+Line} & Starting line in case of a code fragment. \\
+\hline
+\mbox{\tt in}  & {\em end\+Line} & Ending line of the code fragment. \\
+\hline
+\mbox{\tt in}  & {\em inline\+Fragment} & Code fragment that is to be shown inline as part of the documentation. \\
+\hline
+\mbox{\tt in}  & {\em member\+Def} & Member definition to which the code is associated (non null in case of an inline fragment for a member). \\
+\hline
+\mbox{\tt in}  & {\em show\+Line\+Numbers} & if set to T\+R\+U\+E and also file\+Def is not 0, line numbers will be added to the source fragement \\
+\hline
+\mbox{\tt in}  & {\em search\+Ctx} & context under which search data has to be stored. \\
+\hline
+\mbox{\tt in}  & {\em collect\+X\+Refs} & collect cross-\/reference relations. \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \hyperlink{class_v_h_d_l_language_scanner_a50e725c43fa209d4caad04c214bbb1f2}{V\+H\+D\+L\+Language\+Scanner}, \hyperlink{class_python_language_scanner_a0920a8f0a1fc295f0e9c240aee99012c}{Python\+Language\+Scanner}, \hyperlink{class_c_language_scanner_a1d8d53789892f16d48fc90878d825f76}{C\+Language\+Scanner}, \hyperlink{class_fortran_language_scanner_a76c29cd4656300093fba9179184a4a7c}{Fortran\+Language\+Scanner}, \hyperlink{class_markdown_file_parser_a4413366ce7b6f7e41a2b232ce2ad6170}{Markdown\+File\+Parser}, \hyperlink{class_tcl_language_scanner_a25f39e49124e2201c4a12d7ff1247b30}{Tcl\+Language\+Scanner}, \hyperlink{class_x_m_l_scanner_a63895d17bafedb76a06399c80eecd840}{X\+M\+L\+Scanner}, et \hyperlink{class_file_parser_aa9db12f7a11ecbd929a1998fc4ef3b3c}{File\+Parser}.
+
+\hypertarget{class_parser_interface_a09ced377e619d40b7339187bad88341e}{}\index{Parser\+Interface@{Parser\+Interface}!parse\+Input@{parse\+Input}}
+\index{parse\+Input@{parse\+Input}!Parser\+Interface@{Parser\+Interface}}
+\subsubsection[{parse\+Input(const char $\ast$file\+Name, const char $\ast$file\+Buf, Entry $\ast$root, bool same\+Translation\+Unit, Q\+Str\+List \&files\+In\+Same\+Translation\+Unit)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Parser\+Interface\+::parse\+Input (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name, }
+\item[{const char $\ast$}]{file\+Buf, }
+\item[{{\bf Entry} $\ast$}]{root, }
+\item[{{\bf bool}}]{same\+Translation\+Unit, }
+\item[{{\bf Q\+Str\+List} \&}]{files\+In\+Same\+Translation\+Unit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_parser_interface_a09ced377e619d40b7339187bad88341e}
+Parses a single input file with the goal to build an \hyperlink{class_entry}{Entry} tree. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em file\+Name} & The full name of the file. \\
+\hline
+\mbox{\tt in}  & {\em file\+Buf} & The contents of the file (zero terminated). \\
+\hline
+\mbox{\tt in,out}  & {\em root} & The root of the tree of \hyperlink{class_entry}{Entry} $\ast$nodes representing the information extracted from the file. \\
+\hline
+\mbox{\tt in}  & {\em same\+Translation\+Unit} & T\+R\+U\+E if this file was found in the same translation unit (in the files\+In\+Same\+Translation\+Unit list returned for another file). \\
+\hline
+\mbox{\tt in,out}  & {\em files\+In\+Same\+Translation\+Unit} & other files expected to be found in the same translation unit (used for libclang) \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \hyperlink{class_v_h_d_l_language_scanner_a604cae09257525fbca32c10ffeb6e961}{V\+H\+D\+L\+Language\+Scanner}, \hyperlink{class_python_language_scanner_a6848c585fe2a19cd36ed34540dc3fdce}{Python\+Language\+Scanner}, \hyperlink{class_c_language_scanner_a0a92c2f77d7b78987e8dad149a2f4171}{C\+Language\+Scanner}, \hyperlink{class_fortran_language_scanner_a6f2e7fa4a4d46ae48289cd135f9f495d}{Fortran\+Language\+Scanner}, \hyperlink{class_markdown_file_parser_a56e4994924ce8ac7710e2a1da0f98807}{Markdown\+File\+Parser}, \hyperlink{class_tcl_language_scanner_a0c1673d0753d4fa415de90aa7d875e0e}{Tcl\+Language\+Scanner}, \hyperlink{class_x_m_l_scanner_ad7b6e344f24e73a8757937a806b5931a}{X\+M\+L\+Scanner}, et \hyperlink{class_file_parser_a129994a05caded4f7bfe5d30945f008b}{File\+Parser}.
+
+\hypertarget{class_parser_interface_a5ebf0f524a296845befa22c85a4cc80b}{}\index{Parser\+Interface@{Parser\+Interface}!parse\+Prototype@{parse\+Prototype}}
+\index{parse\+Prototype@{parse\+Prototype}!Parser\+Interface@{Parser\+Interface}}
+\subsubsection[{parse\+Prototype(const char $\ast$text)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Parser\+Interface\+::parse\+Prototype (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{text}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_parser_interface_a5ebf0f524a296845befa22c85a4cc80b}
+Callback function called by the comment block scanner. It provides a string {\itshape text} containing the prototype of a function or variable. The parser should parse this and store the information in the \hyperlink{class_entry}{Entry} node that corresponds with the node for which the comment block parser was invoked. 
+
+Implémenté dans \hyperlink{class_v_h_d_l_language_scanner_a10bbe28441f011a5de49705e1a64db00}{V\+H\+D\+L\+Language\+Scanner}, \hyperlink{class_python_language_scanner_a114cb3ee5e45f0eb07829faa2868e31e}{Python\+Language\+Scanner}, \hyperlink{class_x_m_l_scanner_afee3f3cec27ae00c00b6fcdd78476edb}{X\+M\+L\+Scanner}, \hyperlink{class_c_language_scanner_afabfbfe6ca101e1d0d02fed9d197cad1}{C\+Language\+Scanner}, \hyperlink{class_fortran_language_scanner_a8ae8487e02f24ee625ad804b9bda78b3}{Fortran\+Language\+Scanner}, \hyperlink{class_markdown_file_parser_a5579fefcfe5512e79abfe55fd508fc95}{Markdown\+File\+Parser}, \hyperlink{class_tcl_language_scanner_ad39889d754478f3bd641c92c3fdb2247}{Tcl\+Language\+Scanner}, et \hyperlink{class_file_parser_a810fbf1258dcc4d4d87711499a7f7454}{File\+Parser}.
+
+\hypertarget{class_parser_interface_aee4fccd1865a4e8a6b9f2896811104ca}{}\index{Parser\+Interface@{Parser\+Interface}!reset\+Code\+Parser\+State@{reset\+Code\+Parser\+State}}
+\index{reset\+Code\+Parser\+State@{reset\+Code\+Parser\+State}!Parser\+Interface@{Parser\+Interface}}
+\subsubsection[{reset\+Code\+Parser\+State()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Parser\+Interface\+::reset\+Code\+Parser\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_parser_interface_aee4fccd1865a4e8a6b9f2896811104ca}
+Resets the state of the code parser. Since multiple code fragments can together form a single example, an explicit function is used to reset the code parser state. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_parser_interface_a2ffc28f9dd7c47e2581376a573426395}{parse\+Code()} 
+\end{DoxySeeAlso}
+
+
+Implémenté dans \hyperlink{class_v_h_d_l_language_scanner_a67461c7de314e7f414fb70d5735727c3}{V\+H\+D\+L\+Language\+Scanner}, \hyperlink{class_python_language_scanner_a7d8f587a1753e7d04dee2b5ddbc6c1df}{Python\+Language\+Scanner}, \hyperlink{class_c_language_scanner_a2d569ccde3f87597741b3cde8efb3af5}{C\+Language\+Scanner}, \hyperlink{class_fortran_language_scanner_a431c7d79af2cd6b93081f3db7cdaf1c0}{Fortran\+Language\+Scanner}, \hyperlink{class_markdown_file_parser_a78b5337fc2b6a6dd1ee5ce104005e566}{Markdown\+File\+Parser}, \hyperlink{class_tcl_language_scanner_abb80856bb640644a4eaeeac91a427b45}{Tcl\+Language\+Scanner}, \hyperlink{class_x_m_l_scanner_a77da43900e68df9a111eb45546d94fd4}{X\+M\+L\+Scanner}, et \hyperlink{class_file_parser_af8af94eb387a7ed046f52bc36d2f615a}{File\+Parser}.
+
+\hypertarget{class_parser_interface_a72478f87ead5fde10d7d6bbe32a73024}{}\index{Parser\+Interface@{Parser\+Interface}!start\+Translation\+Unit@{start\+Translation\+Unit}}
+\index{start\+Translation\+Unit@{start\+Translation\+Unit}!Parser\+Interface@{Parser\+Interface}}
+\subsubsection[{start\+Translation\+Unit(const char $\ast$file\+Name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Parser\+Interface\+::start\+Translation\+Unit (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_parser_interface_a72478f87ead5fde10d7d6bbe32a73024}
+Starts processing a translation unit (source files + headers). After this call \hyperlink{class_parser_interface_a09ced377e619d40b7339187bad88341e}{parse\+Input()} is called with same\+Translation\+Unit set to F\+A\+L\+S\+E. If \hyperlink{class_parser_interface_a09ced377e619d40b7339187bad88341e}{parse\+Input()} returns additional include files, these are also processed using \hyperlink{class_parser_interface_a09ced377e619d40b7339187bad88341e}{parse\+Input()} with same\+Translation\+Unit set to T\+R\+U\+E. After that \hyperlink{class_parser_interface_af3acd64c6a33852e2e46e7288eb9c9cf}{finish\+Translation\+Unit()} is called. 
+
+Implémenté dans \hyperlink{class_v_h_d_l_language_scanner_a57e38f82bcb0ab8af7d6dabe131ad394}{V\+H\+D\+L\+Language\+Scanner}, \hyperlink{class_python_language_scanner_ae67929ac5a3d38fc925157f7a5f43497}{Python\+Language\+Scanner}, \hyperlink{class_c_language_scanner_a8b667ac29ed52d3374f0df39a63d4c73}{C\+Language\+Scanner}, \hyperlink{class_fortran_language_scanner_a571f9440b581ce6fdc1b15c08427932d}{Fortran\+Language\+Scanner}, \hyperlink{class_markdown_file_parser_a82d0d8fad0f6772a9862eb3d9190127d}{Markdown\+File\+Parser}, \hyperlink{class_tcl_language_scanner_a60ddc698e1b483f71f4ce4ca4bffb512}{Tcl\+Language\+Scanner}, \hyperlink{class_x_m_l_scanner_a105515420268054f9ff54bd60793cfbb}{X\+M\+L\+Scanner}, et \hyperlink{class_file_parser_a4a8fa3af665adaca443c02ddd3d13d7d}{File\+Parser}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{parserintf_8h}{parserintf.\+h}\end{DoxyCompactItemize}

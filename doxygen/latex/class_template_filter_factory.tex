@@ -1,0 +1,71 @@
+\hypertarget{class_template_filter_factory}{}\section{Référence de la classe Template\+Filter\+Factory}
+\label{class_template_filter_factory}\index{Template\+Filter\+Factory@{Template\+Filter\+Factory}}
+
+
+Factory singleton for registering and creating filters.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_template_filter_factory_1_1_auto_register}{Auto\+Register}
+\begin{DoxyCompactList}\small\item\em Helper class for registering a filter function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_template_variant}{Template\+Variant}( \hyperlink{class_template_filter_factory_a22cc28c6d4d6a45817e237b4d5174c34}{Filter\+Function}) (const \hyperlink{class_template_variant}{Template\+Variant} \&v, const \hyperlink{class_template_variant}{Template\+Variant} \&arg)
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_template_variant}{Template\+Variant} \hyperlink{class_template_filter_factory_a7d6386ee3984212371e66efaa44f6ffa}{apply} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&name, const \hyperlink{class_template_variant}{Template\+Variant} \&v, const \hyperlink{class_template_variant}{Template\+Variant} \&arg, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \&ok)
+\item 
+void \hyperlink{class_template_filter_factory_a3f8c7b962da1c89d8d2839faf19e688f}{register\+Filter} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&name, \hyperlink{class_template_filter_factory_a22cc28c6d4d6a45817e237b4d5174c34}{Filter\+Function} $\ast$\hyperlink{036__link_8c_affb6da6cff1b57cdf8efc0123dceac9b}{func})
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_template_filter_factory}{Template\+Filter\+Factory} $\ast$ \hyperlink{class_template_filter_factory_a553dc85390cf5bffc2dff949fb2e6963}{instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Factory singleton for registering and creating filters. 
+
+\subsection{Documentation des définitions de type membres}
+\hypertarget{class_template_filter_factory_a22cc28c6d4d6a45817e237b4d5174c34}{}\index{Template\+Filter\+Factory@{Template\+Filter\+Factory}!Filter\+Function@{Filter\+Function}}
+\index{Filter\+Function@{Filter\+Function}!Template\+Filter\+Factory@{Template\+Filter\+Factory}}
+\subsubsection[{Filter\+Function}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Template\+Variant}( Template\+Filter\+Factory\+::\+Filter\+Function) (const {\bf Template\+Variant} \&v, const {\bf Template\+Variant} \&arg)}\label{class_template_filter_factory_a22cc28c6d4d6a45817e237b4d5174c34}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_template_filter_factory_a7d6386ee3984212371e66efaa44f6ffa}{}\index{Template\+Filter\+Factory@{Template\+Filter\+Factory}!apply@{apply}}
+\index{apply@{apply}!Template\+Filter\+Factory@{Template\+Filter\+Factory}}
+\subsubsection[{apply(const Q\+C\+String \&name, const Template\+Variant \&v, const Template\+Variant \&arg, bool \&ok)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Variant} Template\+Filter\+Factory\+::apply (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{name, }
+\item[{const {\bf Template\+Variant} \&}]{v, }
+\item[{const {\bf Template\+Variant} \&}]{arg, }
+\item[{{\bf bool} \&}]{ok}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_filter_factory_a7d6386ee3984212371e66efaa44f6ffa}
+\hypertarget{class_template_filter_factory_a553dc85390cf5bffc2dff949fb2e6963}{}\index{Template\+Filter\+Factory@{Template\+Filter\+Factory}!instance@{instance}}
+\index{instance@{instance}!Template\+Filter\+Factory@{Template\+Filter\+Factory}}
+\subsubsection[{instance()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Template\+Filter\+Factory}$\ast$ Template\+Filter\+Factory\+::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_template_filter_factory_a553dc85390cf5bffc2dff949fb2e6963}
+\hypertarget{class_template_filter_factory_a3f8c7b962da1c89d8d2839faf19e688f}{}\index{Template\+Filter\+Factory@{Template\+Filter\+Factory}!register\+Filter@{register\+Filter}}
+\index{register\+Filter@{register\+Filter}!Template\+Filter\+Factory@{Template\+Filter\+Factory}}
+\subsubsection[{register\+Filter(const Q\+C\+String \&name, Filter\+Function $\ast$func)}]{\setlength{\rightskip}{0pt plus 5cm}void Template\+Filter\+Factory\+::register\+Filter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{name, }
+\item[{{\bf Filter\+Function} $\ast$}]{func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_template_filter_factory_a3f8c7b962da1c89d8d2839faf19e688f}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{template_8cpp}{template.\+cpp}\end{DoxyCompactItemize}

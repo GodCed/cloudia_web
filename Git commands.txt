@@ -1,0 +1,87 @@
+Lister les branch  (Local ET distantes):
+	git branch �v -a
+
+Pour changer de branch :
+	git checkout <branch>
+
+Pour commiter un changement sur la branch :
+	git add -A		 // Ajoute tous les nouveaux fichiers
+	git commit -m "message"  // Ajoute un commentaire aux modifications 
+	git push origin/<branch> // Pousse les modifications sur <branch>
+
+
+
+
+L'utiliter des branches:
+
+Disons que le ficher text.txt soit le seul fichier du projet initial <master>.
+Lorsque nous changeons de branch exemple:
+	git branch �v -a
+		 <branch1>
+		 <branch2>
+		 <branch3>
+		*<master>
+		 remotes/origin/<branh1>
+		 remotes/origin/<branh2>
+		 remotes/origin/<branh3>
+		 remotes/origin/<HEAD>
+		 remotes/origin/<master>
+
+	git checkout <branch1>
+
+	git branch �v -a
+		*<branch1>
+		 <branch2>
+		 <branch3>
+		 <master>
+		 remotes/origin/<branh1>
+		 remotes/origin/<branh2>
+		 remotes/origin/<branh3>
+		 remotes/origin/<HEAD>
+		 remotes/origin/<master>
+
+A ce moment, si le "master a bien fait son travail... on retrouve le fichier text.txt 
+dans le r�pertoire ou a �t� cloner le projet.
+
+Par la suite l'utilisateur apporte un changement dans la branch disons la cr�ation d'un
+fichier, soit copy.txt 
+
+Alors, <branch1> comprends text.txt et copy.txt 
+
+---RISQUES DE PERTE DE DONN�ES DANS LE CAS CONTRAIRE---
+Pour changer de branch l'utilisateur devra d'abord  <<pusher sur son origin>> les modifications
+---RISQUES DE PERTE DE DONN�ES DANS LE CAS CONTRAIRE---
+	git add -A		 
+	git commit -m "message"  
+	git push origin/<branch1> 
+	
+	git checkout <branch2>
+
+A ce moment, les modifications ont �t� apport�s dans le r�pertoire LOCAL
+C'est � dire que copy.txt n'apparait plus. Par cond�quent, text.txt est le seul fichier
+du r�pertoire local de <branch2> 
+
+Disons que text.txt n'est plus n�cessaire dans le projet et que l'on veut enlever ce fichier dans la <branch2>
+	git rm text.txt
+	git commit -m "remove text.txt"
+	git push origin <branch2>
+
+
+Pour fusionner le tout, on doit <<merger>> � partir de <master> donc pour chaque branch on doit faire 
+	git checkout <master>
+	git merge <branch1>
+	git merge <branch2>
+
+G�rer les conflicts:
+	git mergetool
+	
+Finalement, le r�pertoire contient seulement le fichier copy.txt
+
+Pour rebaser la branch sur l'un des r�pertoire (copie de <master> sur branche actuel <branch>)
+	git branch --track <branch> origin/<branch>
+	git checkout <branch>
+	git merge master
+	git push origin <branch>
+
+
+

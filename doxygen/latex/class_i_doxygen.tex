@@ -1,0 +1,264 @@
+\hypertarget{class_i_doxygen}{}\section{Référence de la classe I\+Doxygen}
+\label{class_i_doxygen}\index{I\+Doxygen@{I\+Doxygen}}
+
+
+{\ttfamily \#include $<$doxmlintf.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de I\+Doxygen\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_doxygen}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_i_compound_iterator}{I\+Compound\+Iterator} $\ast$ \hyperlink{class_i_doxygen_ad6bef278ea486b463323b2be87990a67}{compounds} () const  =0
+\item 
+virtual \hyperlink{class_i_compound}{I\+Compound} $\ast$ \hyperlink{class_i_doxygen_a797d66e139fe7638e27d917d97c9087c}{compound\+By\+Id} (const char $\ast$id) const  =0
+\item 
+virtual \hyperlink{class_i_compound}{I\+Compound} $\ast$ \hyperlink{class_i_doxygen_a0dbd98de15bb5cbb7c5952f245a13f9b}{compound\+By\+Name} (const char $\ast$name) const  =0
+\item 
+virtual \hyperlink{class_i_compound}{I\+Compound} $\ast$ \hyperlink{class_i_doxygen_acdc5189b5001911bc9f36cdc7a247617}{member\+By\+Id} (const char $\ast$id) const  =0
+\item 
+virtual \hyperlink{class_i_compound_iterator}{I\+Compound\+Iterator} $\ast$ \hyperlink{class_i_doxygen_af80f63c939655a2b1fa715f0ff6b1f39}{member\+By\+Name} (const char $\ast$name) const  =0
+\item 
+virtual void \hyperlink{class_i_doxygen_a6865961012ad8e6c19b7575488046045}{release} ()=0
+\item 
+virtual void \hyperlink{class_i_doxygen_ae8e3759ffc6d64684dc500855f6fead6}{set\+Debug\+Level} (int level)=0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_i_doxygen_a7959d93fba77caddee37b6d8370c10f0}{read\+X\+M\+L\+Dir} (const char $\ast$xml\+Dir\+Name)=0
+\item 
+virtual \hyperlink{class_i_compound_iterator}{I\+Compound\+Iterator} $\ast$ \hyperlink{class_i_doxygen_ad6bef278ea486b463323b2be87990a67}{compounds} () const  =0
+\item 
+virtual \hyperlink{class_i_compound}{I\+Compound} $\ast$ \hyperlink{class_i_doxygen_a797d66e139fe7638e27d917d97c9087c}{compound\+By\+Id} (const char $\ast$id) const  =0
+\item 
+virtual \hyperlink{class_i_compound}{I\+Compound} $\ast$ \hyperlink{class_i_doxygen_a0dbd98de15bb5cbb7c5952f245a13f9b}{compound\+By\+Name} (const char $\ast$name) const  =0
+\item 
+virtual \hyperlink{class_i_compound}{I\+Compound} $\ast$ \hyperlink{class_i_doxygen_acdc5189b5001911bc9f36cdc7a247617}{member\+By\+Id} (const char $\ast$id) const  =0
+\item 
+virtual \hyperlink{class_i_compound_iterator}{I\+Compound\+Iterator} $\ast$ \hyperlink{class_i_doxygen_af80f63c939655a2b1fa715f0ff6b1f39}{member\+By\+Name} (const char $\ast$name) const  =0
+\item 
+virtual void \hyperlink{class_i_doxygen_a6865961012ad8e6c19b7575488046045}{release} ()=0
+\item 
+virtual void \hyperlink{class_i_doxygen_ae8e3759ffc6d64684dc500855f6fead6}{set\+Debug\+Level} (int level)=0
+\item 
+virtual \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_i_doxygen_a7959d93fba77caddee37b6d8370c10f0}{read\+X\+M\+L\+Dir} (const char $\ast$xml\+Dir\+Name)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Root node of the object model. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_i_doxygen_a797d66e139fe7638e27d917d97c9087c}{}\index{I\+Doxygen@{I\+Doxygen}!compound\+By\+Id@{compound\+By\+Id}}
+\index{compound\+By\+Id@{compound\+By\+Id}!I\+Doxygen@{I\+Doxygen}}
+\subsubsection[{compound\+By\+Id(const char $\ast$id) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\+Compound}$\ast$ I\+Doxygen\+::compound\+By\+Id (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_doxygen_a797d66e139fe7638e27d917d97c9087c}
+Returns a compound given its unique {\itshape id}. If you have a compound id this function is much more efficient than iterating over the compound list. Returns 0 if the id is not valid. 
+
+Implémenté dans \hyperlink{class_main_handler_acbde80540526c236ae20d56521b29539}{Main\+Handler}.
+
+\hypertarget{class_i_doxygen_a797d66e139fe7638e27d917d97c9087c}{}\index{I\+Doxygen@{I\+Doxygen}!compound\+By\+Id@{compound\+By\+Id}}
+\index{compound\+By\+Id@{compound\+By\+Id}!I\+Doxygen@{I\+Doxygen}}
+\subsubsection[{compound\+By\+Id(const char $\ast$id) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\+Compound}$\ast$ I\+Doxygen\+::compound\+By\+Id (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_doxygen_a797d66e139fe7638e27d917d97c9087c}
+Returns a compound given its unique {\itshape id}. If you have a compound id this function is much more efficient than iterating over the compound list. Returns 0 if the id is not valid. 
+
+Implémenté dans \hyperlink{class_main_handler_acbde80540526c236ae20d56521b29539}{Main\+Handler}.
+
+\hypertarget{class_i_doxygen_a0dbd98de15bb5cbb7c5952f245a13f9b}{}\index{I\+Doxygen@{I\+Doxygen}!compound\+By\+Name@{compound\+By\+Name}}
+\index{compound\+By\+Name@{compound\+By\+Name}!I\+Doxygen@{I\+Doxygen}}
+\subsubsection[{compound\+By\+Name(const char $\ast$name) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\+Compound}$\ast$ I\+Doxygen\+::compound\+By\+Name (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_doxygen_a0dbd98de15bb5cbb7c5952f245a13f9b}
+Returns a compound given its name (including the scope). Returns 0 if the name is not found in the project. 
+
+Implémenté dans \hyperlink{class_main_handler_a290767a8ef3301ec6a9353fa16539c1c}{Main\+Handler}.
+
+\hypertarget{class_i_doxygen_a0dbd98de15bb5cbb7c5952f245a13f9b}{}\index{I\+Doxygen@{I\+Doxygen}!compound\+By\+Name@{compound\+By\+Name}}
+\index{compound\+By\+Name@{compound\+By\+Name}!I\+Doxygen@{I\+Doxygen}}
+\subsubsection[{compound\+By\+Name(const char $\ast$name) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\+Compound}$\ast$ I\+Doxygen\+::compound\+By\+Name (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_doxygen_a0dbd98de15bb5cbb7c5952f245a13f9b}
+Returns a compound given its name (including the scope). Returns 0 if the name is not found in the project. 
+
+Implémenté dans \hyperlink{class_main_handler_a290767a8ef3301ec6a9353fa16539c1c}{Main\+Handler}.
+
+\hypertarget{class_i_doxygen_ad6bef278ea486b463323b2be87990a67}{}\index{I\+Doxygen@{I\+Doxygen}!compounds@{compounds}}
+\index{compounds@{compounds}!I\+Doxygen@{I\+Doxygen}}
+\subsubsection[{compounds() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\+Compound\+Iterator}$\ast$ I\+Doxygen\+::compounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_doxygen_ad6bef278ea486b463323b2be87990a67}
+Returns an iterator that can be used to iterate over the list of compounds found in the project. 
+
+Implémenté dans \hyperlink{class_main_handler_a38f1d4046c78ae3253bd613f2bc3edc4}{Main\+Handler}.
+
+\hypertarget{class_i_doxygen_ad6bef278ea486b463323b2be87990a67}{}\index{I\+Doxygen@{I\+Doxygen}!compounds@{compounds}}
+\index{compounds@{compounds}!I\+Doxygen@{I\+Doxygen}}
+\subsubsection[{compounds() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\+Compound\+Iterator}$\ast$ I\+Doxygen\+::compounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_doxygen_ad6bef278ea486b463323b2be87990a67}
+Returns an iterator that can be used to iterate over the list of compounds found in the project. 
+
+Implémenté dans \hyperlink{class_main_handler_a38f1d4046c78ae3253bd613f2bc3edc4}{Main\+Handler}.
+
+\hypertarget{class_i_doxygen_acdc5189b5001911bc9f36cdc7a247617}{}\index{I\+Doxygen@{I\+Doxygen}!member\+By\+Id@{member\+By\+Id}}
+\index{member\+By\+Id@{member\+By\+Id}!I\+Doxygen@{I\+Doxygen}}
+\subsubsection[{member\+By\+Id(const char $\ast$id) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\+Compound}$\ast$ I\+Doxygen\+::member\+By\+Id (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_doxygen_acdc5189b5001911bc9f36cdc7a247617}
+Returns an interface to a compound containing a member given it the member\textquotesingle{}s id. Given the \hyperlink{class_i_compound}{I\+Compound} interface one can use the same id to obtain the \hyperlink{class_i_member}{I\+Member} interface. 
+\begin{DoxyParams}{Paramètres}
+{\em id} & The member id. \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \hyperlink{class_main_handler_a7924b35d39533fd0136ecc585eeac120}{Main\+Handler}.
+
+\hypertarget{class_i_doxygen_acdc5189b5001911bc9f36cdc7a247617}{}\index{I\+Doxygen@{I\+Doxygen}!member\+By\+Id@{member\+By\+Id}}
+\index{member\+By\+Id@{member\+By\+Id}!I\+Doxygen@{I\+Doxygen}}
+\subsubsection[{member\+By\+Id(const char $\ast$id) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\+Compound}$\ast$ I\+Doxygen\+::member\+By\+Id (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_doxygen_acdc5189b5001911bc9f36cdc7a247617}
+Returns an interface to a compound containing a member given it the member\textquotesingle{}s id. Given the \hyperlink{class_i_compound}{I\+Compound} interface one can use the same id to obtain the \hyperlink{class_i_member}{I\+Member} interface. 
+\begin{DoxyParams}{Paramètres}
+{\em id} & The member id. \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \hyperlink{class_main_handler_a7924b35d39533fd0136ecc585eeac120}{Main\+Handler}.
+
+\hypertarget{class_i_doxygen_af80f63c939655a2b1fa715f0ff6b1f39}{}\index{I\+Doxygen@{I\+Doxygen}!member\+By\+Name@{member\+By\+Name}}
+\index{member\+By\+Name@{member\+By\+Name}!I\+Doxygen@{I\+Doxygen}}
+\subsubsection[{member\+By\+Name(const char $\ast$name) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\+Compound\+Iterator}$\ast$ I\+Doxygen\+::member\+By\+Name (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_doxygen_af80f63c939655a2b1fa715f0ff6b1f39}
+Returns a list of all compounds containing at least one members with a certain name. Each compound can be asked to return the list of members with that name. 
+\begin{DoxyParams}{Paramètres}
+{\em name} & The name of the member. \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \hyperlink{class_main_handler_a2f22677c80c656599044358c1dee1c29}{Main\+Handler}.
+
+\hypertarget{class_i_doxygen_af80f63c939655a2b1fa715f0ff6b1f39}{}\index{I\+Doxygen@{I\+Doxygen}!member\+By\+Name@{member\+By\+Name}}
+\index{member\+By\+Name@{member\+By\+Name}!I\+Doxygen@{I\+Doxygen}}
+\subsubsection[{member\+By\+Name(const char $\ast$name) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\+Compound\+Iterator}$\ast$ I\+Doxygen\+::member\+By\+Name (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_doxygen_af80f63c939655a2b1fa715f0ff6b1f39}
+Returns a list of all compounds containing at least one members with a certain name. Each compound can be asked to return the list of members with that name. 
+\begin{DoxyParams}{Paramètres}
+{\em name} & The name of the member. \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \hyperlink{class_main_handler_a2f22677c80c656599044358c1dee1c29}{Main\+Handler}.
+
+\hypertarget{class_i_doxygen_a7959d93fba77caddee37b6d8370c10f0}{}\index{I\+Doxygen@{I\+Doxygen}!read\+X\+M\+L\+Dir@{read\+X\+M\+L\+Dir}}
+\index{read\+X\+M\+L\+Dir@{read\+X\+M\+L\+Dir}!I\+Doxygen@{I\+Doxygen}}
+\subsubsection[{read\+X\+M\+L\+Dir(const char $\ast$xml\+Dir\+Name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} I\+Doxygen\+::read\+X\+M\+L\+Dir (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{xml\+Dir\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_doxygen_a7959d93fba77caddee37b6d8370c10f0}
+Reads an X\+M\+L directory produced by doxygen and builds up a data structure representing the contents of the X\+M\+L files in the directory. 
+
+Implémenté dans \hyperlink{class_main_handler_a09e7e0c5e69be2b2aa5dc91cb77721d8}{Main\+Handler}.
+
+\hypertarget{class_i_doxygen_a7959d93fba77caddee37b6d8370c10f0}{}\index{I\+Doxygen@{I\+Doxygen}!read\+X\+M\+L\+Dir@{read\+X\+M\+L\+Dir}}
+\index{read\+X\+M\+L\+Dir@{read\+X\+M\+L\+Dir}!I\+Doxygen@{I\+Doxygen}}
+\subsubsection[{read\+X\+M\+L\+Dir(const char $\ast$xml\+Dir\+Name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} I\+Doxygen\+::read\+X\+M\+L\+Dir (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{xml\+Dir\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_doxygen_a7959d93fba77caddee37b6d8370c10f0}
+Reads an X\+M\+L directory produced by doxygen and builds up a data structure representing the contents of the X\+M\+L files in the directory. 
+
+Implémenté dans \hyperlink{class_main_handler_a09e7e0c5e69be2b2aa5dc91cb77721d8}{Main\+Handler}.
+
+\hypertarget{class_i_doxygen_a6865961012ad8e6c19b7575488046045}{}\index{I\+Doxygen@{I\+Doxygen}!release@{release}}
+\index{release@{release}!I\+Doxygen@{I\+Doxygen}}
+\subsubsection[{release()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\+Doxygen\+::release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_doxygen_a6865961012ad8e6c19b7575488046045}
+Releases the memory for the object hierarchy obtained by created\+Objec\+Model\+From\+X\+M\+L(). First release all iterators before calling this function. 
+
+Implémenté dans \hyperlink{class_main_handler_a1f9507df93308fe3002cc2d97bd8c8be}{Main\+Handler}.
+
+\hypertarget{class_i_doxygen_a6865961012ad8e6c19b7575488046045}{}\index{I\+Doxygen@{I\+Doxygen}!release@{release}}
+\index{release@{release}!I\+Doxygen@{I\+Doxygen}}
+\subsubsection[{release()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\+Doxygen\+::release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_doxygen_a6865961012ad8e6c19b7575488046045}
+Releases the memory for the object hierarchy obtained by created\+Objec\+Model\+From\+X\+M\+L(). First release all iterators before calling this function. 
+
+Implémenté dans \hyperlink{class_main_handler_a1f9507df93308fe3002cc2d97bd8c8be}{Main\+Handler}.
+
+\hypertarget{class_i_doxygen_ae8e3759ffc6d64684dc500855f6fead6}{}\index{I\+Doxygen@{I\+Doxygen}!set\+Debug\+Level@{set\+Debug\+Level}}
+\index{set\+Debug\+Level@{set\+Debug\+Level}!I\+Doxygen@{I\+Doxygen}}
+\subsubsection[{set\+Debug\+Level(int level)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\+Doxygen\+::set\+Debug\+Level (
+\begin{DoxyParamCaption}
+\item[{int}]{level}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_doxygen_ae8e3759ffc6d64684dc500855f6fead6}
+Sets the debug level.
+\begin{DoxyItemize}
+\item 0 all debugging messages are disabled (the default).
+\item 1 display important messages only
+\item 2 display any messages. 
+\end{DoxyItemize}
+
+Implémenté dans \hyperlink{class_main_handler_a4856c87039eb9235d0fa7e10d8912e55}{Main\+Handler}.
+
+\hypertarget{class_i_doxygen_ae8e3759ffc6d64684dc500855f6fead6}{}\index{I\+Doxygen@{I\+Doxygen}!set\+Debug\+Level@{set\+Debug\+Level}}
+\index{set\+Debug\+Level@{set\+Debug\+Level}!I\+Doxygen@{I\+Doxygen}}
+\subsubsection[{set\+Debug\+Level(int level)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\+Doxygen\+::set\+Debug\+Level (
+\begin{DoxyParamCaption}
+\item[{int}]{level}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_doxygen_ae8e3759ffc6d64684dc500855f6fead6}
+Sets the debug level.
+\begin{DoxyItemize}
+\item 0 all debugging messages are disabled (the default).
+\item 1 display important messages only
+\item 2 display any messages. 
+\end{DoxyItemize}
+
+Implémenté dans \hyperlink{class_main_handler_a4856c87039eb9235d0fa7e10d8912e55}{Main\+Handler}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+addon/doxmlparser/include/\hyperlink{include_2doxmlintf_8h}{doxmlintf.\+h}\end{DoxyCompactItemize}

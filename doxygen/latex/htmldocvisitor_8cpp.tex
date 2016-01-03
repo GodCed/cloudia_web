@@ -1,0 +1,57 @@
+\hypertarget{htmldocvisitor_8cpp}{}\section{Référence du fichier src/htmldocvisitor.cpp}
+\label{htmldocvisitor_8cpp}\index{src/htmldocvisitor.\+cpp@{src/htmldocvisitor.\+cpp}}
+{\ttfamily \#include $<$qdir.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}htmldocvisitor.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}docparser.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}language.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doxygen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}outputgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dot.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}htmlgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}parserintf.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}msc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dia.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}vhdldocgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}filedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}memberdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}htmlentity.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}plantuml.\+h\char`\"{}}\\*
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{htmldocvisitor_8cpp_acb0f9a09276fa5f945dcbef9f07d6945}{is\+First\+Child\+Node} (T $\ast$parent, \hyperlink{class_doc_node}{Doc\+Node} $\ast$node)
+\item 
+{\footnotesize template$<$class T $>$ }\\\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{htmldocvisitor_8cpp_a49ab9a492de3811483c8037b88eb3f20}{is\+Last\+Child\+Node} (T $\ast$parent, \hyperlink{class_doc_node}{Doc\+Node} $\ast$node)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{htmldocvisitor_8cpp_a5a5f1b2fd55be983b1e437a8d6bb9291}{is\+Separated\+Paragraph} (\hyperlink{class_doc_simple_sect}{Doc\+Simple\+Sect} $\ast$parent, \hyperlink{class_doc_para}{Doc\+Para} $\ast$par)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{htmldocvisitor_8cpp_acb0f9a09276fa5f945dcbef9f07d6945}{}\index{htmldocvisitor.\+cpp@{htmldocvisitor.\+cpp}!is\+First\+Child\+Node@{is\+First\+Child\+Node}}
+\index{is\+First\+Child\+Node@{is\+First\+Child\+Node}!htmldocvisitor.\+cpp@{htmldocvisitor.\+cpp}}
+\subsubsection[{is\+First\+Child\+Node(\+T $\ast$parent, Doc\+Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf bool} is\+First\+Child\+Node (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{parent, }
+\item[{{\bf Doc\+Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{htmldocvisitor_8cpp_acb0f9a09276fa5f945dcbef9f07d6945}
+\hypertarget{htmldocvisitor_8cpp_a49ab9a492de3811483c8037b88eb3f20}{}\index{htmldocvisitor.\+cpp@{htmldocvisitor.\+cpp}!is\+Last\+Child\+Node@{is\+Last\+Child\+Node}}
+\index{is\+Last\+Child\+Node@{is\+Last\+Child\+Node}!htmldocvisitor.\+cpp@{htmldocvisitor.\+cpp}}
+\subsubsection[{is\+Last\+Child\+Node(\+T $\ast$parent, Doc\+Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf bool} is\+Last\+Child\+Node (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{parent, }
+\item[{{\bf Doc\+Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{htmldocvisitor_8cpp_a49ab9a492de3811483c8037b88eb3f20}
+\hypertarget{htmldocvisitor_8cpp_a5a5f1b2fd55be983b1e437a8d6bb9291}{}\index{htmldocvisitor.\+cpp@{htmldocvisitor.\+cpp}!is\+Separated\+Paragraph@{is\+Separated\+Paragraph}}
+\index{is\+Separated\+Paragraph@{is\+Separated\+Paragraph}!htmldocvisitor.\+cpp@{htmldocvisitor.\+cpp}}
+\subsubsection[{is\+Separated\+Paragraph(\+Doc\+Simple\+Sect $\ast$parent, Doc\+Para $\ast$par)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} is\+Separated\+Paragraph (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Simple\+Sect} $\ast$}]{parent, }
+\item[{{\bf Doc\+Para} $\ast$}]{par}
+\end{DoxyParamCaption}
+)}\label{htmldocvisitor_8cpp_a5a5f1b2fd55be983b1e437a8d6bb9291}

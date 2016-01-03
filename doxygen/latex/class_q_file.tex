@@ -1,0 +1,719 @@
+\hypertarget{class_q_file}{}\section{Référence de la classe Q\+File}
+\label{class_q_file}\index{Q\+File@{Q\+File}}
+
+
+The \hyperlink{class_q_file}{Q\+File} class is an I/\+O device that operates on files.  
+
+
+
+
+{\ttfamily \#include $<$qfile.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Q\+File\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_file}
+\end{center}
+\end{figure}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_q_c_string}{Q\+C\+String}($\ast$ \hyperlink{class_q_file_abc28a2af8ddad44c42b316e9f15af9c2}{Encoder\+Fn}) (const \hyperlink{class_q_string}{Q\+String} \&file\+Name)
+\item 
+typedef \hyperlink{class_q_string}{Q\+String}($\ast$ \hyperlink{class_q_file_a79dc4d72e10f49d4430b299ebc34ec9e}{Decoder\+Fn}) (const \hyperlink{class_q_c_string}{Q\+C\+String} \&localfile\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_file_a4594575fa1a7d3ff40250fb52362cdf9}{Q\+File} ()
+\item 
+\hyperlink{class_q_file_a2f6f03b893a6accdf03672698154c0ac}{Q\+File} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_file_a11386f4dcc83a4688c829bba80a1dcab}{name})
+\item 
+virtual \hyperlink{class_q_file_acc10a60e8d9d8b873a43ab9be0b5c137}{$\sim$\+Q\+File} ()
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_file_a11386f4dcc83a4688c829bba80a1dcab}{name} () const 
+\item 
+void \hyperlink{class_q_file_aedc2f51f8c46021cfb4ae82bae0e3b2d}{set\+Name} (const \hyperlink{class_q_string}{Q\+String} \&\hyperlink{class_q_file_a11386f4dcc83a4688c829bba80a1dcab}{name})
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_a92e45baef18c7ed566cfe51837e8c7ae}{exists} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_a57d95ea99c22b455ef0fa232299eba11}{remove} ()
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_af10aeafc303904f98b74be9752d2aa43}{open} (int)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_af97fe0dd1ca0aa8b0a0c72b726a32860}{open} (int, F\+I\+L\+E $\ast$)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_ac09fbb92aa5fe9e11c6d282e12a72ae5}{open} (int, int)
+\item 
+void \hyperlink{class_q_file_ac0d8375a5ea7d4503545d7c68dcf58e1}{close} ()
+\item 
+void \hyperlink{class_q_file_a6d450a55bc3a8145fd33a7ee08051830}{flush} ()
+\item 
+\hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} \hyperlink{class_q_file_af95320aee4ba0fc3c8702293bca112da}{size} () const 
+\item 
+int \hyperlink{class_q_file_a8cbf8e411026fa37903b1ab8e023c59c}{at} () const 
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_aa2f5e380a549e7d3043cf41ac8c57eba}{at} (int)
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_a5e18b20b642940db9e23fe211a57ce9e}{at\+End} () const 
+\item 
+int \hyperlink{class_q_file_ab9a42e65a2fcd51bae5f2a186ff5bee5}{read\+Block} (char $\ast$data, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+int \hyperlink{class_q_file_a47e0572e396a6e953d14ba69bf733cea}{write\+Block} (const char $\ast$data, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+int \hyperlink{class_q_file_a04e15f86aa48622ddb7c7e81c7cc7613}{write\+Block} (const \hyperlink{qcstring_8h_ad6a390648110655c217fe072d45fbcf5}{Q\+Byte\+Array} \&data)
+\item 
+int \hyperlink{class_q_file_af95c756ce6ff9f597ff1d21c8384d777}{read\+Line} (char $\ast$data, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} maxlen)
+\item 
+int \hyperlink{class_q_file_a324c017d391658a8eacf5b35932f5f87}{read\+Line} (\hyperlink{class_q_string}{Q\+String} \&, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} maxlen)
+\item 
+int \hyperlink{class_q_file_a1c18e1a16e6f92ba8f19177824707f78}{getch} ()
+\item 
+int \hyperlink{class_q_file_af331c4e27024f12383958e65c6a828a3}{putch} (int)
+\item 
+int \hyperlink{class_q_file_afb01a04cda09b3cc61babb5d334a052c}{ungetch} (int)
+\item 
+int \hyperlink{class_q_file_a22ddaca9166daa9d390edb0d14397033}{handle} () const 
+\item 
+\hyperlink{qglobal_8h_aecfc3c54bd29ad5964e1c1c3ccbf89df}{int64} \hyperlink{class_q_file_a4f36a1ed8332ce2eafb0852981ef7a1d}{pos} () const 
+\item 
+\hyperlink{qglobal_8h_aecfc3c54bd29ad5964e1c1c3ccbf89df}{int64} \hyperlink{class_q_file_af5a806623250b78c5aa02a10b16effc7}{to\+End} ()
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_affb1708c3feb5bb734f4486a7bcced1a}{seek} (\hyperlink{qglobal_8h_aecfc3c54bd29ad5964e1c1c3ccbf89df}{int64} \hyperlink{class_q_file_a4f36a1ed8332ce2eafb0852981ef7a1d}{pos})
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_q_file_ad016ade1aca4b965ebb54d8bfb93d4bf}{encode\+Name} (const \hyperlink{class_q_string}{Q\+String} \&file\+Name)
+\item 
+static \hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_file_ad9bf876589a366445a443cb8c7ef4df4}{decode\+Name} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&local\+File\+Name)
+\item 
+static void \hyperlink{class_q_file_a634585187a63a52cc02d7c4578492666}{set\+Encoding\+Function} (\hyperlink{class_q_file_abc28a2af8ddad44c42b316e9f15af9c2}{Encoder\+Fn})
+\item 
+static void \hyperlink{class_q_file_aa71ab03f9a14cc35fe1e70dd9a392806}{set\+Decoding\+Function} (\hyperlink{class_q_file_a79dc4d72e10f49d4430b299ebc34ec9e}{Decoder\+Fn})
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_a11a21bf641a2bda6fd2f992881f73f72}{exists} (const \hyperlink{class_q_string}{Q\+String} \&file\+Name)
+\item 
+static \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_aab5e02ed6b84c93b140ec6b346d41ff6}{remove} (const \hyperlink{class_q_string}{Q\+String} \&file\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_string}{Q\+String} \hyperlink{class_q_file_ae088d4677b272210ec510c55454930a4}{fn}
+\item 
+F\+I\+L\+E $\ast$ \hyperlink{class_q_file_a1ff87fa1a08ce3d4d8ae87252f4be11a}{fh}
+\item 
+int \hyperlink{class_q_file_a69672951d3fc9e9a61f51e93eab34fc9}{fd}
+\item 
+int \hyperlink{class_q_file_add1ff97139b091dcca4f3958c3dbd484}{length}
+\item 
+\hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool} \hyperlink{class_q_file_ab437c510371962db31e7184e913b3cad}{ext\+\_\+f}
+\item 
+void $\ast$ \hyperlink{class_q_file_aa1970afffb4d3157497d2e5556dc2228}{d}
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+The \hyperlink{class_q_file}{Q\+File} class is an I/\+O device that operates on files. 
+
+\hyperlink{class_q_file}{Q\+File} is an I/\+O device for reading and writing binary and text files. \hyperlink{class_a}{A} \hyperlink{class_q_file}{Q\+File} may be used by itself (read\+Block and write\+Block) or by more conveniently using \hyperlink{class_q_data_stream}{Q\+Data\+Stream} or \hyperlink{class_q_text_stream}{Q\+Text\+Stream}.
+
+Here is a code fragment that uses \hyperlink{class_q_text_stream}{Q\+Text\+Stream} to read a text file line by line. It prints each line with a line number. 
+\begin{DoxyCode}
+\hyperlink{class_q_file}{QFile} \hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}(\textcolor{stringliteral}{"file.txt"});
+\textcolor{keywordflow}{if} ( \hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}.open(\hyperlink{qiodevice_8h_ab5766c5e147f3dfced5890741f22063a}{IO\_ReadOnly}) ) \{    \textcolor{comment}{// file opened successfully}
+\hyperlink{class_q_text_stream}{QTextStream} \hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}( &\hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f} );      \textcolor{comment}{// use a text stream}
+\hyperlink{class_q_string}{QString} s;
+\textcolor{keywordtype}{int} n = 1;
+\textcolor{keywordflow}{while} ( !\hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}.eof() ) \{      \textcolor{comment}{// until end of file...}
+    s = \hyperlink{058__bracket__recursion_8tcl_a69e959f6901827e4d8271aeaa5fba0fc}{t}.readLine();     \textcolor{comment}{// line of text excluding '\(\backslash\)n'}
+    printf( \textcolor{stringliteral}{"%3d: %s\(\backslash\)n"}, n++, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)s );
+\}
+\hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}.close();
+\}
+\end{DoxyCode}
+
+
+The \hyperlink{class_q_file_info}{Q\+File\+Info} class holds detailed information about a file, such as access permissions, file dates and file types.
+
+The \hyperlink{class_q_dir}{Q\+Dir} class manages directories and lists of file names.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream}, \hyperlink{class_q_text_stream}{Q\+Text\+Stream} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des définitions de type membres}
+\hypertarget{class_q_file_a79dc4d72e10f49d4430b299ebc34ec9e}{}\index{Q\+File@{Q\+File}!Decoder\+Fn@{Decoder\+Fn}}
+\index{Decoder\+Fn@{Decoder\+Fn}!Q\+File@{Q\+File}}
+\subsubsection[{Decoder\+Fn}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Q\+String}($\ast$ Q\+File\+::\+Decoder\+Fn) (const {\bf Q\+C\+String} \&localfile\+Name)}\label{class_q_file_a79dc4d72e10f49d4430b299ebc34ec9e}
+\hypertarget{class_q_file_abc28a2af8ddad44c42b316e9f15af9c2}{}\index{Q\+File@{Q\+File}!Encoder\+Fn@{Encoder\+Fn}}
+\index{Encoder\+Fn@{Encoder\+Fn}!Q\+File@{Q\+File}}
+\subsubsection[{Encoder\+Fn}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Q\+C\+String}($\ast$ Q\+File\+::\+Encoder\+Fn) (const {\bf Q\+String} \&file\+Name)}\label{class_q_file_abc28a2af8ddad44c42b316e9f15af9c2}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_file_a4594575fa1a7d3ff40250fb52362cdf9}{}\index{Q\+File@{Q\+File}!Q\+File@{Q\+File}}
+\index{Q\+File@{Q\+File}!Q\+File@{Q\+File}}
+\subsubsection[{Q\+File()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+File\+::\+Q\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_file_a4594575fa1a7d3ff40250fb52362cdf9}
+Constructs a \hyperlink{class_q_file}{Q\+File} with no name. \hypertarget{class_q_file_a2f6f03b893a6accdf03672698154c0ac}{}\index{Q\+File@{Q\+File}!Q\+File@{Q\+File}}
+\index{Q\+File@{Q\+File}!Q\+File@{Q\+File}}
+\subsubsection[{Q\+File(const Q\+String \&name)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+File\+::\+Q\+File (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{name}
+\end{DoxyParamCaption}
+)}\label{class_q_file_a2f6f03b893a6accdf03672698154c0ac}
+Constructs a \hyperlink{class_q_file}{Q\+File} with a file name {\itshape name}. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_aedc2f51f8c46021cfb4ae82bae0e3b2d}{set\+Name()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_acc10a60e8d9d8b873a43ab9be0b5c137}{}\index{Q\+File@{Q\+File}!````~Q\+File@{$\sim$\+Q\+File}}
+\index{````~Q\+File@{$\sim$\+Q\+File}!Q\+File@{Q\+File}}
+\subsubsection[{$\sim$\+Q\+File()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+File\+::$\sim$\+Q\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_file_acc10a60e8d9d8b873a43ab9be0b5c137}
+Destructs a \hyperlink{class_q_file}{Q\+File}. Calls \hyperlink{class_q_file_ac0d8375a5ea7d4503545d7c68dcf58e1}{close()}. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_q_file_a8cbf8e411026fa37903b1ab8e023c59c}{}\index{Q\+File@{Q\+File}!at@{at}}
+\index{at@{at}!Q\+File@{Q\+File}}
+\subsubsection[{at() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+File\+::at (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_q_file_a8cbf8e411026fa37903b1ab8e023c59c}
+Returns the file index. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_af95320aee4ba0fc3c8702293bca112da}{size()} 
+\end{DoxySeeAlso}
+
+
+Réimplémentée à partir de \hyperlink{class_q_i_o_device_ae87e9d1d92b870e96ed04de97d7638f3}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_file_aa2f5e380a549e7d3043cf41ac8c57eba}{}\index{Q\+File@{Q\+File}!at@{at}}
+\index{at@{at}!Q\+File@{Q\+File}}
+\subsubsection[{at(int)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+::at (
+\begin{DoxyParamCaption}
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_file_aa2f5e380a549e7d3043cf41ac8c57eba}
+Sets the file index to {\itshape pos}. Returns T\+R\+U\+E if successful, otherwise F\+A\+L\+S\+E.
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_file}{QFile} \hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}( \textcolor{stringliteral}{"data.bin"} );
+\hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}.open( \hyperlink{qiodevice_8h_ab5766c5e147f3dfced5890741f22063a}{IO\_ReadOnly} );            \textcolor{comment}{// index set to 0}
+\hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}.at( 100 );              \textcolor{comment}{// set index to 100}
+\hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}.at( \hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}.at()+50 );                \textcolor{comment}{// set index to 150}
+\hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}.at( \hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}.size()-80 );          \textcolor{comment}{// set index to 80 before EOF}
+\hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f}.close();
+\end{DoxyCode}
+
+
+\begin{DoxyWarning}{Avertissement}
+The result is undefined if the file was \hyperlink{class_q_file_af10aeafc303904f98b74be9752d2aa43}{opened} using the {\ttfamily I\+O\+\_\+\+Append} specifier.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_af95320aee4ba0fc3c8702293bca112da}{size()}, \hyperlink{class_q_file_af10aeafc303904f98b74be9752d2aa43}{open()} 
+\end{DoxySeeAlso}
+
+
+Réimplémentée à partir de \hyperlink{class_q_i_o_device_a14643fc1c2e05c2addd1ecc03bd98017}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_file_a5e18b20b642940db9e23fe211a57ce9e}{}\index{Q\+File@{Q\+File}!at\+End@{at\+End}}
+\index{at\+End@{at\+End}!Q\+File@{Q\+File}}
+\subsubsection[{at\+End() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+::at\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_file_a5e18b20b642940db9e23fe211a57ce9e}
+Returns T\+R\+U\+E if the end of file has been reached, otherwise F\+A\+L\+S\+E. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_af95320aee4ba0fc3c8702293bca112da}{size()} 
+\end{DoxySeeAlso}
+
+
+Réimplémentée à partir de \hyperlink{class_q_i_o_device_a857ac5294bd88a1308e4c998af81f490}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_file_ac0d8375a5ea7d4503545d7c68dcf58e1}{}\index{Q\+File@{Q\+File}!close@{close}}
+\index{close@{close}!Q\+File@{Q\+File}}
+\subsubsection[{close()}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+File\+::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_file_ac0d8375a5ea7d4503545d7c68dcf58e1}
+Closes an open file.
+
+The file is not closed if it was opened with an existing file handle. If the existing file handle is a {\ttfamily F\+I\+L\+E$\ast$}, the file is flushed. If the existing file handle is an {\ttfamily int} file descriptor, nothing is done to the file.
+
+Some \char`\"{}write-\/behind\char`\"{} filesystems may report an unspecified error on closing the file. These errors only indicate that something may have gone wrong since the previous \hyperlink{class_q_file_af10aeafc303904f98b74be9752d2aa43}{open()}. In such a case \hyperlink{class_q_i_o_device_ae9449ef16bf1b3687ab0916fdabcdd54}{status()} reports I\+O\+\_\+\+Unspecified\+Error after \hyperlink{class_q_file_ac0d8375a5ea7d4503545d7c68dcf58e1}{close()}, otherwise I\+O\+\_\+\+Ok.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_af10aeafc303904f98b74be9752d2aa43}{open()}, \hyperlink{class_q_file_a6d450a55bc3a8145fd33a7ee08051830}{flush()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_a01a9ddac5d964b5b6a1f10005bf28a4f}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_file_ad9bf876589a366445a443cb8c7ef4df4}{}\index{Q\+File@{Q\+File}!decode\+Name@{decode\+Name}}
+\index{decode\+Name@{decode\+Name}!Q\+File@{Q\+File}}
+\subsubsection[{decode\+Name(const Q\+C\+String \&local\+File\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+File\+::decode\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{local\+File\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_file_ad9bf876589a366445a443cb8c7ef4df4}
+This does the reverse of \hyperlink{class_q_file_ad016ade1aca4b965ebb54d8bfb93d4bf}{Q\+File\+::encode\+Name()}.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_aa71ab03f9a14cc35fe1e70dd9a392806}{set\+Decoding\+Function()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_ad016ade1aca4b965ebb54d8bfb93d4bf}{}\index{Q\+File@{Q\+File}!encode\+Name@{encode\+Name}}
+\index{encode\+Name@{encode\+Name}!Q\+File@{Q\+File}}
+\subsubsection[{encode\+Name(const Q\+String \&file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Q\+File\+::encode\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_file_ad016ade1aca4b965ebb54d8bfb93d4bf}
+When you use \hyperlink{class_q_file}{Q\+File}, \hyperlink{class_q_file_info}{Q\+File\+Info}, and \hyperlink{class_q_dir}{Q\+Dir} to access the filesystem with Qt, you can use Unicode filenames. On Unix, these filenames are converted to an 8-\/bit encoding. If you want to do your own file I/\+O on Unix, you should convert the filename using this function. On Windows N\+T, Unicode filenames are supported directly in the filesystem and this function should be avoided. On Windows 95, non-\/\+Latin1 locales are not supported at this time.
+
+By default, this function converts to the local 8-\/bit encoding determined by the user\textquotesingle{}s locale. This is sufficient for filenames that the user chooses. Filenames hard-\/coded into the application should only use 7-\/bit A\+S\+C\+I\+I filename characters.
+
+The conversion scheme can be changed using \hyperlink{class_q_file_a634585187a63a52cc02d7c4578492666}{set\+Encoding\+Function()}. This might be useful if you wish to give the user an option to store in filenames in U\+T\+F-\/8, etc., but beware that such filenames would probably then be unrecognizable when seen by other programs.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_ad9bf876589a366445a443cb8c7ef4df4}{decode\+Name()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_a92e45baef18c7ed566cfe51837e8c7ae}{}\index{Q\+File@{Q\+File}!exists@{exists}}
+\index{exists@{exists}!Q\+File@{Q\+File}}
+\subsubsection[{exists() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+::exists (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_a92e45baef18c7ed566cfe51837e8c7ae}
+Returns T\+R\+U\+E if this file exists, otherwise F\+A\+L\+S\+E. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_a11386f4dcc83a4688c829bba80a1dcab}{name()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_a11a21bf641a2bda6fd2f992881f73f72}{}\index{Q\+File@{Q\+File}!exists@{exists}}
+\index{exists@{exists}!Q\+File@{Q\+File}}
+\subsubsection[{exists(const Q\+String \&file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+::exists (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_file_a11a21bf641a2bda6fd2f992881f73f72}
+Returns T\+R\+U\+E if the file given by {\itshape file\+Name} exists, otherwise F\+A\+L\+S\+E. \hypertarget{class_q_file_a6d450a55bc3a8145fd33a7ee08051830}{}\index{Q\+File@{Q\+File}!flush@{flush}}
+\index{flush@{flush}!Q\+File@{Q\+File}}
+\subsubsection[{flush()}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+File\+::flush (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_file_a6d450a55bc3a8145fd33a7ee08051830}
+Flushes the file buffer to the disk.
+
+\hyperlink{class_q_file_ac0d8375a5ea7d4503545d7c68dcf58e1}{close()} also flushes the file buffer. 
+
+Implémente \hyperlink{class_q_i_o_device_a39eccb592ae076fbc42108a3d590fb43}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_file_a1c18e1a16e6f92ba8f19177824707f78}{}\index{Q\+File@{Q\+File}!getch@{getch}}
+\index{getch@{getch}!Q\+File@{Q\+File}}
+\subsubsection[{getch()}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+File\+::getch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_file_a1c18e1a16e6f92ba8f19177824707f78}
+Reads a single byte/character from the file.
+
+Returns the byte/character read, or -\/1 if the end of the file has been reached.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_af331c4e27024f12383958e65c6a828a3}{putch()}, \hyperlink{class_q_file_afb01a04cda09b3cc61babb5d334a052c}{ungetch()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_a7cef61d66023f9cda6b0912082bd19fc}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_file_a22ddaca9166daa9d390edb0d14397033}{}\index{Q\+File@{Q\+File}!handle@{handle}}
+\index{handle@{handle}!Q\+File@{Q\+File}}
+\subsubsection[{handle() const }]{\setlength{\rightskip}{0pt plus 5cm}int Q\+File\+::handle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_a22ddaca9166daa9d390edb0d14397033}
+Returns the file handle of the file.
+
+This is a small positive integer, suitable for use with \hyperlink{class_c}{C} library functions such as fdopen() and fcntl(), as well as with Q\+Socket\+Notifier.
+
+If the file is not open or there is an error, \hyperlink{class_q_file_a22ddaca9166daa9d390edb0d14397033}{handle()} returns -\/1.
+
+\begin{DoxySeeAlso}{Voir également}
+Q\+Socket\+Notifier 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_a11386f4dcc83a4688c829bba80a1dcab}{}\index{Q\+File@{Q\+File}!name@{name}}
+\index{name@{name}!Q\+File@{Q\+File}}
+\subsubsection[{name() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+File\+::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_file_a11386f4dcc83a4688c829bba80a1dcab}
+Returns the name set by \hyperlink{class_q_file_aedc2f51f8c46021cfb4ae82bae0e3b2d}{set\+Name()}. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_aedc2f51f8c46021cfb4ae82bae0e3b2d}{set\+Name()}, \hyperlink{class_q_file_info_aabf62d1b0490784be027aa3de085bec1}{Q\+File\+Info\+::file\+Name()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_af10aeafc303904f98b74be9752d2aa43}{}\index{Q\+File@{Q\+File}!open@{open}}
+\index{open@{open}!Q\+File@{Q\+File}}
+\subsubsection[{open(int)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+::open (
+\begin{DoxyParamCaption}
+\item[{int}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_file_af10aeafc303904f98b74be9752d2aa43}
+Opens the file specified by the file name currently set, using the mode {\itshape m}. Returns T\+R\+U\+E if successful, otherwise F\+A\+L\+S\+E.
+
+The mode parameter {\itshape m} must be a combination of the following flags\+: 
+\begin{DoxyItemize}
+\item {\ttfamily I\+O\+\_\+\+Raw} specified raw (non-\/buffered) file access. 
+\item {\ttfamily I\+O\+\_\+\+Read\+Only} opens the file in read-\/only mode. 
+\item {\ttfamily I\+O\+\_\+\+Write\+Only} opens the file in write-\/only mode (and truncates). 
+\item {\ttfamily I\+O\+\_\+\+Read\+Write} opens the file in read/write mode, equivalent to {\ttfamily }(I\+O\+\_\+\+Read\+Only$\vert$\+I\+O\+\_\+\+Write\+Only). 
+\item {\ttfamily I\+O\+\_\+\+Append} opens the file in append mode. This mode is very useful when you want to write something to a log file. The file index is set to the end of the file. Note that the result is undefined if you position the file index manually using \hyperlink{class_q_file_a8cbf8e411026fa37903b1ab8e023c59c}{at()} in append mode. 
+\item {\ttfamily I\+O\+\_\+\+Truncate} truncates the file. 
+\item {\ttfamily I\+O\+\_\+\+Translate} enables carriage returns and linefeed translation for text files under M\+S-\/\+D\+O\+S, Windows and O\+S/2. 
+\end{DoxyItemize}
+
+The raw access mode is best when I/\+O is block-\/operated using 4k\+B block size or greater. Buffered access works better when reading small portions of data at a time.
+
+{\bfseries Important\+:} When working with buffered files, data may not be written to the file at once. Call \hyperlink{class_q_file_a6d450a55bc3a8145fd33a7ee08051830}{flush} to make sure the data is really written.
+
+\begin{DoxyWarning}{Avertissement}
+We have experienced problems with some \hyperlink{class_c}{C} libraries when a buffered file is opened for both reading and writing. If a read operation takes place immediately after a write operation, the read buffer contains garbage data. Worse, the same garbage is written to the file. Calling \hyperlink{class_q_file_a6d450a55bc3a8145fd33a7ee08051830}{flush()} before \hyperlink{class_q_file_ab9a42e65a2fcd51bae5f2a186ff5bee5}{read\+Block()} solved this problem.
+\end{DoxyWarning}
+If the file does not exist and {\ttfamily I\+O\+\_\+\+Write\+Only} or {\ttfamily I\+O\+\_\+\+Read\+Write} is specified, it is created.
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_file}{QFile} \hyperlink{namespacesettings_a4007f853424556c5066a8d19b256ac0f}{f1}( \textcolor{stringliteral}{"/tmp/data.bin"} );
+\hyperlink{class_q_file}{QFile} \hyperlink{namespaceversion_ab584c69a59e4cd6b0d5ac80b1f445303}{f2}( \textcolor{stringliteral}{"readme.txt"} );
+\hyperlink{namespacesettings_a4007f853424556c5066a8d19b256ac0f}{f1}.open( \hyperlink{qiodevice_8h_aa3c5084b903562dc4fb8613ec5148148}{IO\_Raw} | \hyperlink{qiodevice_8h_a69bfa1f7d1434237360ca27f7205dc48}{IO\_ReadWrite} | \hyperlink{qiodevice_8h_aa11e3a79f9f0d77a201d7f6cd9bb31ee}{IO\_Append} );
+\hyperlink{namespaceversion_ab584c69a59e4cd6b0d5ac80b1f445303}{f2}.open( \hyperlink{qiodevice_8h_ab5766c5e147f3dfced5890741f22063a}{IO\_ReadOnly} | \hyperlink{qiodevice_8h_a466fd293b2caad191a67f8b182ea2bf6}{IO\_Translate} );
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_a11386f4dcc83a4688c829bba80a1dcab}{name()}, \hyperlink{class_q_file_ac0d8375a5ea7d4503545d7c68dcf58e1}{close()}, \hyperlink{class_q_i_o_device_a6d846c9a59c3ae8f57cf86405caba2a4}{is\+Open()}, \hyperlink{class_q_file_a6d450a55bc3a8145fd33a7ee08051830}{flush()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_ae4046ae7bf4d4cee1010239973314e42}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_file_af97fe0dd1ca0aa8b0a0c72b726a32860}{}\index{Q\+File@{Q\+File}!open@{open}}
+\index{open@{open}!Q\+File@{Q\+File}}
+\subsubsection[{open(int, F\+I\+L\+E $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+::open (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{F\+I\+L\+E $\ast$}]{f}
+\end{DoxyParamCaption}
+)}\label{class_q_file_af97fe0dd1ca0aa8b0a0c72b726a32860}
+Opens a file in the mode {\itshape m} using an existing file handle {\itshape f}. Returns T\+R\+U\+E if successful, otherwise F\+A\+L\+S\+E.
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include <stdio.h>}
+
+\textcolor{keywordtype}{void} printError( \textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg )
+\{
+\hyperlink{class_q_file}{QFile} \hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f};
+f.\hyperlink{class_q_file_af10aeafc303904f98b74be9752d2aa43}{open}( \hyperlink{qiodevice_8h_aee87f60968e118b038a637b83ccc4017}{IO\_WriteOnly}, stderr );
+f.\hyperlink{class_q_file_a47e0572e396a6e953d14ba69bf733cea}{writeBlock}( msg, \hyperlink{qcstring_8h_a3b643fd7b6ac80bd23e29c3d3d907a82}{qstrlen}(msg) );    \textcolor{comment}{// write to stderr}
+f.\hyperlink{class_q_file_ac0d8375a5ea7d4503545d7c68dcf58e1}{close}();
+\}
+\end{DoxyCode}
+
+
+When a \hyperlink{class_q_file}{Q\+File} is opened using this function, \hyperlink{class_q_file_ac0d8375a5ea7d4503545d7c68dcf58e1}{close()} does not actually close the file, only flushes it.
+
+\begin{DoxyWarning}{Avertissement}
+If {\itshape f} is {\ttfamily stdin}, {\ttfamily stdout}, {\ttfamily stderr}, you may not be able to seek. See \hyperlink{class_q_i_o_device_a9a00f8fae2ab8591c195b847c02009ba}{Q\+I\+O\+Device\+::is\+Sequential\+Access()} for more information.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_ac0d8375a5ea7d4503545d7c68dcf58e1}{close()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_ac09fbb92aa5fe9e11c6d282e12a72ae5}{}\index{Q\+File@{Q\+File}!open@{open}}
+\index{open@{open}!Q\+File@{Q\+File}}
+\subsubsection[{open(int, int)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+::open (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{f}
+\end{DoxyParamCaption}
+)}\label{class_q_file_ac09fbb92aa5fe9e11c6d282e12a72ae5}
+Opens a file in the mode {\itshape m} using an existing file descriptor {\itshape f}. Returns T\+R\+U\+E if successful, otherwise F\+A\+L\+S\+E.
+
+When a \hyperlink{class_q_file}{Q\+File} is opened using this function, \hyperlink{class_q_file_ac0d8375a5ea7d4503545d7c68dcf58e1}{close()} does not actually close the file.
+
+\begin{DoxyWarning}{Avertissement}
+If {\itshape f} is one of 0 (stdin), 1 (stdout) or 2 (stderr), you may not be able to seek. \hyperlink{class_q_file_af95320aee4ba0fc3c8702293bca112da}{size()} is set to {\ttfamily I\+N\+T\+\_\+\+M\+A\+X} (in limits.\+h).
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_ac0d8375a5ea7d4503545d7c68dcf58e1}{close()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_a4f36a1ed8332ce2eafb0852981ef7a1d}{}\index{Q\+File@{Q\+File}!pos@{pos}}
+\index{pos@{pos}!Q\+File@{Q\+File}}
+\subsubsection[{pos() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf int64} Q\+File\+::pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_q_file_a4f36a1ed8332ce2eafb0852981ef7a1d}
+\hypertarget{class_q_file_af331c4e27024f12383958e65c6a828a3}{}\index{Q\+File@{Q\+File}!putch@{putch}}
+\index{putch@{putch}!Q\+File@{Q\+File}}
+\subsubsection[{putch(int)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+File\+::putch (
+\begin{DoxyParamCaption}
+\item[{int}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_file_af331c4e27024f12383958e65c6a828a3}
+Writes the character {\itshape ch} to the file.
+
+Returns {\itshape ch}, or -\/1 if some error occurred.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_a1c18e1a16e6f92ba8f19177824707f78}{getch()}, \hyperlink{class_q_file_afb01a04cda09b3cc61babb5d334a052c}{ungetch()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_a5de5c1c1cba7ca36ba93289e30cd3029}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_file_ab9a42e65a2fcd51bae5f2a186ff5bee5}{}\index{Q\+File@{Q\+File}!read\+Block@{read\+Block}}
+\index{read\+Block@{read\+Block}!Q\+File@{Q\+File}}
+\subsubsection[{read\+Block(char $\ast$data, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+File\+::read\+Block (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{p, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_file_ab9a42e65a2fcd51bae5f2a186ff5bee5}
+Reads at most {\itshape len} bytes from the file into {\itshape p} and returns the number of bytes actually read.
+
+Returns -\/1 if a serious error occurred.
+
+\begin{DoxyWarning}{Avertissement}
+We have experienced problems with some \hyperlink{class_c}{C} libraries when a buffered file is opened for both reading and writing. If a read operation takes place immediately after a write operation, the read buffer contains garbage data. Worse, the same garbage is written to the file. Calling \hyperlink{class_q_file_a6d450a55bc3a8145fd33a7ee08051830}{flush()} before \hyperlink{class_q_file_ab9a42e65a2fcd51bae5f2a186ff5bee5}{read\+Block()} solved this problem.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_a47e0572e396a6e953d14ba69bf733cea}{write\+Block()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_a71f10647e4bd98141f45362b9a06983a}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_file_af95c756ce6ff9f597ff1d21c8384d777}{}\index{Q\+File@{Q\+File}!read\+Line@{read\+Line}}
+\index{read\+Line@{read\+Line}!Q\+File@{Q\+File}}
+\subsubsection[{read\+Line(char $\ast$data, uint maxlen)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+File\+::read\+Line (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{p, }
+\item[{{\bf uint}}]{maxlen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_file_af95c756ce6ff9f597ff1d21c8384d777}
+Reads a line of text.
+
+Reads bytes from the file until end-\/of-\/line is reached, or up to {\itshape maxlen} bytes, and returns the number of bytes read, or -\/1 in case of error. The terminating newline is not stripped.
+
+This function is efficient only for buffered files. Avoid \hyperlink{class_q_file_af95c756ce6ff9f597ff1d21c8384d777}{read\+Line()} for files that have been opened with the {\ttfamily I\+O\+\_\+\+Raw} flag.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_ab9a42e65a2fcd51bae5f2a186ff5bee5}{read\+Block()}, \hyperlink{class_q_text_stream_a0bed0242d7c3f17289df88fdecad6afa}{Q\+Text\+Stream\+::read\+Line()} 
+\end{DoxySeeAlso}
+
+
+Réimplémentée à partir de \hyperlink{class_q_i_o_device_a4dc865ffcb5b7896ff8f9a1d828e4c0e}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_file_a324c017d391658a8eacf5b35932f5f87}{}\index{Q\+File@{Q\+File}!read\+Line@{read\+Line}}
+\index{read\+Line@{read\+Line}!Q\+File@{Q\+File}}
+\subsubsection[{read\+Line(\+Q\+String \&, uint maxlen)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+File\+::read\+Line (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+String} \&}]{s, }
+\item[{{\bf uint}}]{maxlen}
+\end{DoxyParamCaption}
+)}\label{class_q_file_a324c017d391658a8eacf5b35932f5f87}
+Reads a line of text.
+
+Reads bytes from the file until end-\/of-\/line is reached, or up to {\itshape maxlen} bytes, and returns the number of bytes read, or -\/1 in case of error. The terminating newline is not stripped.
+
+This function is efficient only for buffered files. Avoid \hyperlink{class_q_file_af95c756ce6ff9f597ff1d21c8384d777}{read\+Line()} for files that have been opened with the {\ttfamily I\+O\+\_\+\+Raw} flag.
+
+Note that the string is read as plain Latin1 bytes, not Unicode.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_ab9a42e65a2fcd51bae5f2a186ff5bee5}{read\+Block()}, \hyperlink{class_q_text_stream_a0bed0242d7c3f17289df88fdecad6afa}{Q\+Text\+Stream\+::read\+Line()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_a57d95ea99c22b455ef0fa232299eba11}{}\index{Q\+File@{Q\+File}!remove@{remove}}
+\index{remove@{remove}!Q\+File@{Q\+File}}
+\subsubsection[{remove()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+::remove (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_file_a57d95ea99c22b455ef0fa232299eba11}
+Removes the file specified by the file name currently set. Returns T\+R\+U\+E if successful, otherwise F\+A\+L\+S\+E.
+
+The file is closed before it is removed. \hypertarget{class_q_file_aab5e02ed6b84c93b140ec6b346d41ff6}{}\index{Q\+File@{Q\+File}!remove@{remove}}
+\index{remove@{remove}!Q\+File@{Q\+File}}
+\subsubsection[{remove(const Q\+String \&file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+::remove (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_file_aab5e02ed6b84c93b140ec6b346d41ff6}
+Removes the file {\itshape file\+Name}. Returns T\+R\+U\+E if successful, otherwise F\+A\+L\+S\+E. \hypertarget{class_q_file_affb1708c3feb5bb734f4486a7bcced1a}{}\index{Q\+File@{Q\+File}!seek@{seek}}
+\index{seek@{seek}!Q\+File@{Q\+File}}
+\subsubsection[{seek(int64 pos)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+::seek (
+\begin{DoxyParamCaption}
+\item[{{\bf int64}}]{pos}
+\end{DoxyParamCaption}
+)}\label{class_q_file_affb1708c3feb5bb734f4486a7bcced1a}
+\hypertarget{class_q_file_aa71ab03f9a14cc35fe1e70dd9a392806}{}\index{Q\+File@{Q\+File}!set\+Decoding\+Function@{set\+Decoding\+Function}}
+\index{set\+Decoding\+Function@{set\+Decoding\+Function}!Q\+File@{Q\+File}}
+\subsubsection[{set\+Decoding\+Function(\+Decoder\+Fn)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+File\+::set\+Decoding\+Function (
+\begin{DoxyParamCaption}
+\item[{{\bf Decoder\+Fn}}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_file_aa71ab03f9a14cc35fe1e70dd9a392806}
+Sets the function for decoding 8-\/bit filenames. The default uses the locale-\/specific 8-\/bit encoding.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_ad016ade1aca4b965ebb54d8bfb93d4bf}{encode\+Name()}, \hyperlink{class_q_file_ad9bf876589a366445a443cb8c7ef4df4}{decode\+Name()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_a634585187a63a52cc02d7c4578492666}{}\index{Q\+File@{Q\+File}!set\+Encoding\+Function@{set\+Encoding\+Function}}
+\index{set\+Encoding\+Function@{set\+Encoding\+Function}!Q\+File@{Q\+File}}
+\subsubsection[{set\+Encoding\+Function(\+Encoder\+Fn)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+File\+::set\+Encoding\+Function (
+\begin{DoxyParamCaption}
+\item[{{\bf Encoder\+Fn}}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_q_file_a634585187a63a52cc02d7c4578492666}
+Sets the function for encoding Unicode filenames. The default encodes in the locale-\/specific 8-\/bit encoding.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_ad016ade1aca4b965ebb54d8bfb93d4bf}{encode\+Name()} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_aedc2f51f8c46021cfb4ae82bae0e3b2d}{}\index{Q\+File@{Q\+File}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!Q\+File@{Q\+File}}
+\subsubsection[{set\+Name(const Q\+String \&name)}]{\setlength{\rightskip}{0pt plus 5cm}void Q\+File\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+String} \&}]{name}
+\end{DoxyParamCaption}
+)}\label{class_q_file_aedc2f51f8c46021cfb4ae82bae0e3b2d}
+Sets the name of the file. The name can include an absolute directory path or it can be a name or a path relative to the current directory.
+
+Do not call this function if the file has already been opened.
+
+Note that if the name is relative \hyperlink{class_q_file}{Q\+File} does not associate it with the current directory. If you change directory before calling \hyperlink{class_q_file_af10aeafc303904f98b74be9752d2aa43}{open()}, open uses the new current directory.
+
+\hyperlink{struct_example}{Example}\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_file}{QFile} \hyperlink{namespaceversion_adc2f36e5bef89e3881981af504e0e31d}{f};
+\hyperlink{class_q_dir_a61b45775b8b1e2d9ebe069e481f5dc9d}{QDir::setCurrent}( \textcolor{stringliteral}{"/tmp"} );
+f.\hyperlink{class_q_file_aedc2f51f8c46021cfb4ae82bae0e3b2d}{setName}( \textcolor{stringliteral}{"readme.txt"} );
+\hyperlink{class_q_dir_a61b45775b8b1e2d9ebe069e481f5dc9d}{QDir::setCurrent}( \textcolor{stringliteral}{"/home"} );
+f.\hyperlink{class_q_file_af10aeafc303904f98b74be9752d2aa43}{open}( \hyperlink{qiodevice_8h_ab5766c5e147f3dfced5890741f22063a}{IO\_ReadOnly} );      \textcolor{comment}{// opens "/home/readme.txt" under UNIX}
+\end{DoxyCode}
+
+
+Also note that the directory separator \textquotesingle{}/\textquotesingle{} works for all operating systems supported by Qt.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_a11386f4dcc83a4688c829bba80a1dcab}{name()}, \hyperlink{class_q_file_info}{Q\+File\+Info}, \hyperlink{class_q_dir}{Q\+Dir} 
+\end{DoxySeeAlso}
+\hypertarget{class_q_file_af95320aee4ba0fc3c8702293bca112da}{}\index{Q\+File@{Q\+File}!size@{size}}
+\index{size@{size}!Q\+File@{Q\+File}}
+\subsubsection[{size() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint} Q\+File\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_file_af95320aee4ba0fc3c8702293bca112da}
+Returns the file size. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_a8cbf8e411026fa37903b1ab8e023c59c}{at()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_ab94989478f8bd6742f6bfcd27926341e}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_file_af5a806623250b78c5aa02a10b16effc7}{}\index{Q\+File@{Q\+File}!to\+End@{to\+End}}
+\index{to\+End@{to\+End}!Q\+File@{Q\+File}}
+\subsubsection[{to\+End()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int64} Q\+File\+::to\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_q_file_af5a806623250b78c5aa02a10b16effc7}
+\hypertarget{class_q_file_afb01a04cda09b3cc61babb5d334a052c}{}\index{Q\+File@{Q\+File}!ungetch@{ungetch}}
+\index{ungetch@{ungetch}!Q\+File@{Q\+File}}
+\subsubsection[{ungetch(int)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+File\+::ungetch (
+\begin{DoxyParamCaption}
+\item[{int}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_file_afb01a04cda09b3cc61babb5d334a052c}
+Puts the character {\itshape ch} back into the file and decrements the index if it is not zero.
+
+This function is normally called to \char`\"{}undo\char`\"{} a \hyperlink{class_q_file_a1c18e1a16e6f92ba8f19177824707f78}{getch()} operation.
+
+Returns {\itshape ch}, or -\/1 if some error occurred.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_a1c18e1a16e6f92ba8f19177824707f78}{getch()}, \hyperlink{class_q_file_af331c4e27024f12383958e65c6a828a3}{putch()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_aae3d67422103e8fc0411297b1d62c29a}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_file_a47e0572e396a6e953d14ba69bf733cea}{}\index{Q\+File@{Q\+File}!write\+Block@{write\+Block}}
+\index{write\+Block@{write\+Block}!Q\+File@{Q\+File}}
+\subsubsection[{write\+Block(const char $\ast$data, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+File\+::write\+Block (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_q_file_a47e0572e396a6e953d14ba69bf733cea}
+Writes {\itshape len} bytes from {\itshape p} to the file and returns the number of bytes actually written.
+
+Returns -\/1 if a serious error occurred.
+
+\begin{DoxyWarning}{Avertissement}
+When working with buffered files, data may not be written to the file at once. Call \hyperlink{class_q_file_a6d450a55bc3a8145fd33a7ee08051830}{flush()} to make sure the data is really written.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{class_q_file_ab9a42e65a2fcd51bae5f2a186ff5bee5}{read\+Block()} 
+\end{DoxySeeAlso}
+
+
+Implémente \hyperlink{class_q_i_o_device_a5d937df1bde2f956872dd54e077807d1}{Q\+I\+O\+Device}.
+
+\hypertarget{class_q_file_a04e15f86aa48622ddb7c7e81c7cc7613}{}\index{Q\+File@{Q\+File}!write\+Block@{write\+Block}}
+\index{write\+Block@{write\+Block}!Q\+File@{Q\+File}}
+\subsubsection[{write\+Block(const Q\+Byte\+Array \&data)}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+File\+::write\+Block (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+Byte\+Array} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_file_a04e15f86aa48622ddb7c7e81c7cc7613}
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_q_file_aa1970afffb4d3157497d2e5556dc2228}{}\index{Q\+File@{Q\+File}!d@{d}}
+\index{d@{d}!Q\+File@{Q\+File}}
+\subsubsection[{d}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ Q\+File\+::d\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_file_aa1970afffb4d3157497d2e5556dc2228}
+\hypertarget{class_q_file_ab437c510371962db31e7184e913b3cad}{}\index{Q\+File@{Q\+File}!ext\+\_\+f@{ext\+\_\+f}}
+\index{ext\+\_\+f@{ext\+\_\+f}!Q\+File@{Q\+File}}
+\subsubsection[{ext\+\_\+f}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Q\+File\+::ext\+\_\+f\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_file_ab437c510371962db31e7184e913b3cad}
+\hypertarget{class_q_file_a69672951d3fc9e9a61f51e93eab34fc9}{}\index{Q\+File@{Q\+File}!fd@{fd}}
+\index{fd@{fd}!Q\+File@{Q\+File}}
+\subsubsection[{fd}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+File\+::fd\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_file_a69672951d3fc9e9a61f51e93eab34fc9}
+\hypertarget{class_q_file_a1ff87fa1a08ce3d4d8ae87252f4be11a}{}\index{Q\+File@{Q\+File}!fh@{fh}}
+\index{fh@{fh}!Q\+File@{Q\+File}}
+\subsubsection[{fh}]{\setlength{\rightskip}{0pt plus 5cm}F\+I\+L\+E$\ast$ Q\+File\+::fh\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_file_a1ff87fa1a08ce3d4d8ae87252f4be11a}
+\hypertarget{class_q_file_ae088d4677b272210ec510c55454930a4}{}\index{Q\+File@{Q\+File}!fn@{fn}}
+\index{fn@{fn}!Q\+File@{Q\+File}}
+\subsubsection[{fn}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+String} Q\+File\+::fn\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_file_ae088d4677b272210ec510c55454930a4}
+\hypertarget{class_q_file_add1ff97139b091dcca4f3958c3dbd484}{}\index{Q\+File@{Q\+File}!length@{length}}
+\index{length@{length}!Q\+File@{Q\+File}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}int Q\+File\+::length\hspace{0.3cm}{\ttfamily [protected]}}\label{class_q_file_add1ff97139b091dcca4f3958c3dbd484}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qfile_8h}{qfile.\+h}\item 
+qtools/\hyperlink{qfile_8cpp}{qfile.\+cpp}\item 
+qtools/\hyperlink{qfile__unix_8cpp}{qfile\+\_\+unix.\+cpp}\item 
+qtools/\hyperlink{qfile__win32_8cpp}{qfile\+\_\+win32.\+cpp}\end{DoxyCompactItemize}

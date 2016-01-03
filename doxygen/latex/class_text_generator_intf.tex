@@ -1,0 +1,81 @@
+\hypertarget{class_text_generator_intf}{}\section{Référence de la classe Text\+Generator\+Intf}
+\label{class_text_generator_intf}\index{Text\+Generator\+Intf@{Text\+Generator\+Intf}}
+
+
+{\ttfamily \#include $<$util.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Text\+Generator\+Intf\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.627907cm]{class_text_generator_intf}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_text_generator_intf_a1d8bb006c0d74515154f55506e5e0748}{$\sim$\+Text\+Generator\+Intf} ()
+\item 
+virtual void \hyperlink{class_text_generator_intf_a246866c847ad919b03a0178fadd43657}{write\+String} (const char $\ast$, \hyperlink{qglobal_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}) const  =0
+\item 
+virtual void \hyperlink{class_text_generator_intf_af4c3d22223809b86ddac1cfd7ee5dc69}{write\+Break} (int indent) const  =0
+\item 
+virtual void \hyperlink{class_text_generator_intf_a378305b6b281e7a96521d78a303e4763}{write\+Link} (const char $\ast$ext\+Ref, const char $\ast$file, const char $\ast$anchor, const char $\ast$text) const  =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Abstract interface for a hyperlinked text fragment. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_text_generator_intf_a1d8bb006c0d74515154f55506e5e0748}{}\index{Text\+Generator\+Intf@{Text\+Generator\+Intf}!````~Text\+Generator\+Intf@{$\sim$\+Text\+Generator\+Intf}}
+\index{````~Text\+Generator\+Intf@{$\sim$\+Text\+Generator\+Intf}!Text\+Generator\+Intf@{Text\+Generator\+Intf}}
+\subsubsection[{$\sim$\+Text\+Generator\+Intf()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Text\+Generator\+Intf\+::$\sim$\+Text\+Generator\+Intf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_text_generator_intf_a1d8bb006c0d74515154f55506e5e0748}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_text_generator_intf_af4c3d22223809b86ddac1cfd7ee5dc69}{}\index{Text\+Generator\+Intf@{Text\+Generator\+Intf}!write\+Break@{write\+Break}}
+\index{write\+Break@{write\+Break}!Text\+Generator\+Intf@{Text\+Generator\+Intf}}
+\subsubsection[{write\+Break(int indent) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Text\+Generator\+Intf\+::write\+Break (
+\begin{DoxyParamCaption}
+\item[{int}]{indent}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_text_generator_intf_af4c3d22223809b86ddac1cfd7ee5dc69}
+
+
+Implémenté dans \hyperlink{class_text_generator_html_a097800ac4b8adab2380d2bd48adc3cc1}{Text\+Generator\+Html}, \hyperlink{class_text_generator_x_m_l_impl_a3a332f937ec0e37e48f3f6fe656bb200}{Text\+Generator\+X\+M\+L\+Impl}, \hyperlink{class_text_generator_docbook_impl_a8a539fcbc77039d9b8bec7f6617bad62}{Text\+Generator\+Docbook\+Impl}, et \hyperlink{class_text_generator_o_l_impl_a0bcf0edafe3dfa799a2c3cf452212bed}{Text\+Generator\+O\+L\+Impl}.
+
+\hypertarget{class_text_generator_intf_a378305b6b281e7a96521d78a303e4763}{}\index{Text\+Generator\+Intf@{Text\+Generator\+Intf}!write\+Link@{write\+Link}}
+\index{write\+Link@{write\+Link}!Text\+Generator\+Intf@{Text\+Generator\+Intf}}
+\subsubsection[{write\+Link(const char $\ast$ext\+Ref, const char $\ast$file, const char $\ast$anchor, const char $\ast$text) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Text\+Generator\+Intf\+::write\+Link (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ext\+Ref, }
+\item[{const char $\ast$}]{file, }
+\item[{const char $\ast$}]{anchor, }
+\item[{const char $\ast$}]{text}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_text_generator_intf_a378305b6b281e7a96521d78a303e4763}
+
+
+Implémenté dans \hyperlink{class_text_generator_html_a3163cfa6f8af1ac710f4fb5b32629fe9}{Text\+Generator\+Html}, \hyperlink{class_text_generator_x_m_l_impl_aac2287968d80270761c8de6070298445}{Text\+Generator\+X\+M\+L\+Impl}, \hyperlink{class_text_generator_docbook_impl_a5fed19be0cb83b69fac2579715c18402}{Text\+Generator\+Docbook\+Impl}, et \hyperlink{class_text_generator_o_l_impl_a3580d240ebc06ae4245b22905b94dfe3}{Text\+Generator\+O\+L\+Impl}.
+
+\hypertarget{class_text_generator_intf_a246866c847ad919b03a0178fadd43657}{}\index{Text\+Generator\+Intf@{Text\+Generator\+Intf}!write\+String@{write\+String}}
+\index{write\+String@{write\+String}!Text\+Generator\+Intf@{Text\+Generator\+Intf}}
+\subsubsection[{write\+String(const char $\ast$, bool) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Text\+Generator\+Intf\+::write\+String (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{{\bf bool}}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_text_generator_intf_a246866c847ad919b03a0178fadd43657}
+
+
+Implémenté dans \hyperlink{class_text_generator_html_a74bd0f01ca5c670581a9056a25a8a9a4}{Text\+Generator\+Html}, \hyperlink{class_text_generator_x_m_l_impl_a8c635c7e02a40f50f2ae1a4416daa67e}{Text\+Generator\+X\+M\+L\+Impl}, \hyperlink{class_text_generator_docbook_impl_a88dd87629b351caf150ae057d37d6591}{Text\+Generator\+Docbook\+Impl}, et \hyperlink{class_text_generator_o_l_impl_a54a566e4ea32832b71e315e77c183d49}{Text\+Generator\+O\+L\+Impl}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{util_8h}{util.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,69 @@
+\hypertarget{class_q_text_o_stream}{}\section{Référence de la classe Q\+Text\+O\+Stream}
+\label{class_q_text_o_stream}\index{Q\+Text\+O\+Stream@{Q\+Text\+O\+Stream}}
+
+
+\hyperlink{class_a}{A} convenience class for output streams.  
+
+
+
+
+{\ttfamily \#include $<$qtextstream.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Q\+Text\+O\+Stream\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_text_o_stream}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_text_o_stream_a8d26b74ba9b234926bb03c369f8f2df5}{Q\+Text\+O\+Stream} (\hyperlink{class_q_string}{Q\+String} $\ast$\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s})
+\item 
+\hyperlink{class_q_text_o_stream_a048dde107de3d3bf8b01f9fe5c7da1ae}{Q\+Text\+O\+Stream} (\hyperlink{qcstring_8h_ad6a390648110655c217fe072d45fbcf5}{Q\+Byte\+Array} ba)
+\item 
+\hyperlink{class_q_text_o_stream_a9ae5cb7afb0fea378476e2607fd9ee30}{Q\+Text\+O\+Stream} (F\+I\+L\+E $\ast$\hyperlink{060__command__switch_8tcl_af6830d2c644b45088ea8f1f74a46b778}{f})
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+\hyperlink{class_a}{A} convenience class for output streams. 
+
+For simple tasks, code should be simple. Hence this class is a shorthand to avoid passing the {\itshape mode} argument to the normal \hyperlink{class_q_text_stream}{Q\+Text\+Stream} constructors.
+
+This makes it easy for example, to write things like this\+: 
+\begin{DoxyCode}
+\hyperlink{class_q_string}{QString} result;
+\hyperlink{class_q_text_o_stream_a8d26b74ba9b234926bb03c369f8f2df5}{QTextOStream}(&result) << \textcolor{stringliteral}{"pi = "} << 3.14;
+\end{DoxyCode}
+ 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_q_text_o_stream_a8d26b74ba9b234926bb03c369f8f2df5}{}\index{Q\+Text\+O\+Stream@{Q\+Text\+O\+Stream}!Q\+Text\+O\+Stream@{Q\+Text\+O\+Stream}}
+\index{Q\+Text\+O\+Stream@{Q\+Text\+O\+Stream}!Q\+Text\+O\+Stream@{Q\+Text\+O\+Stream}}
+\subsubsection[{Q\+Text\+O\+Stream(\+Q\+String $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Text\+O\+Stream\+::\+Q\+Text\+O\+Stream (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+String} $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_o_stream_a8d26b74ba9b234926bb03c369f8f2df5}
+Constructs a stream to write to string {\itshape s}. \hypertarget{class_q_text_o_stream_a048dde107de3d3bf8b01f9fe5c7da1ae}{}\index{Q\+Text\+O\+Stream@{Q\+Text\+O\+Stream}!Q\+Text\+O\+Stream@{Q\+Text\+O\+Stream}}
+\index{Q\+Text\+O\+Stream@{Q\+Text\+O\+Stream}!Q\+Text\+O\+Stream@{Q\+Text\+O\+Stream}}
+\subsubsection[{Q\+Text\+O\+Stream(\+Q\+Byte\+Array ba)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Text\+O\+Stream\+::\+Q\+Text\+O\+Stream (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Byte\+Array}}]{ba}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_o_stream_a048dde107de3d3bf8b01f9fe5c7da1ae}
+Constructs a stream to write to the array {\itshape ba}. \hypertarget{class_q_text_o_stream_a9ae5cb7afb0fea378476e2607fd9ee30}{}\index{Q\+Text\+O\+Stream@{Q\+Text\+O\+Stream}!Q\+Text\+O\+Stream@{Q\+Text\+O\+Stream}}
+\index{Q\+Text\+O\+Stream@{Q\+Text\+O\+Stream}!Q\+Text\+O\+Stream@{Q\+Text\+O\+Stream}}
+\subsubsection[{Q\+Text\+O\+Stream(\+F\+I\+L\+E $\ast$f)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Text\+O\+Stream\+::\+Q\+Text\+O\+Stream (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_q_text_o_stream_a9ae5cb7afb0fea378476e2607fd9ee30}
+Constructs a stream to write to the file {\itshape f}. 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+qtools/\hyperlink{qtextstream_8h}{qtextstream.\+h}\item 
+qtools/\hyperlink{qtextstream_8cpp}{qtextstream.\+cpp}\end{DoxyCompactItemize}

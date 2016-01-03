@@ -1,0 +1,150 @@
+\hypertarget{class_ref_list}{}\section{Référence de la classe Ref\+List}
+\label{class_ref_list}\index{Ref\+List@{Ref\+List}}
+
+
+{\ttfamily \#include $<$reflist.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_ref_list_ae3dccd8cef3a09ed34c6fb611766875b}{add\+Ref\+Item} ()
+\item 
+\hyperlink{struct_ref_item}{Ref\+Item} $\ast$ \hyperlink{class_ref_list_af047154431d78b27f413e14cadc1d15e}{get\+Ref\+Item} (int todo\+Item\+Id)
+\item 
+\hyperlink{struct_ref_item}{Ref\+Item} $\ast$ \hyperlink{class_ref_list_a065a043b7798849b1b97734b39ff3e85}{get\+First\+Ref\+Item} ()
+\item 
+\hyperlink{struct_ref_item}{Ref\+Item} $\ast$ \hyperlink{class_ref_list_a29659cc06bbde1e0b3a2b968ae333927}{get\+Next\+Ref\+Item} ()
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_ref_list_a2ab3866977ce58fab559d6f03d7a5d4c}{list\+Name} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_ref_list_a03cb43018d1d4c530efdf823fb001a74}{page\+Title} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_ref_list_a1117ef561ab6571432c676ce57d6d49c}{section\+Title} () const 
+\item 
+\hyperlink{class_ref_list_a53383174c5d9adbffbfaf6b7680b5d34}{Ref\+List} (const char $\ast$\hyperlink{class_ref_list_a2ab3866977ce58fab559d6f03d7a5d4c}{list\+Name}, const char $\ast$\hyperlink{class_ref_list_a03cb43018d1d4c530efdf823fb001a74}{page\+Title}, const char $\ast$sec\+Title)
+\item 
+\hyperlink{class_ref_list_a24ed19af8e396ebb4c196ab7a6805901}{$\sim$\+Ref\+List} ()
+\item 
+void \hyperlink{class_ref_list_ab6dc34e95c0e8c36a07fe57de27fc6dd}{insert\+Into\+List} (const char $\ast$key, \hyperlink{struct_ref_item}{Ref\+Item} $\ast$item)
+\item 
+void \hyperlink{class_ref_list_a1fb6f991a5826241faab676ba08fb5e3}{generate\+Page} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+List of cross-\/referenced items
+
+This class represents a list of items that are put at a certain point in the documentation by some special command and are collected in a list. The items cross-\/reference the documentation and the list.
+
+Examples are the todo list, the test list and the bug list, introduced by the \textbackslash{}todo, \textbackslash{}test, and \textbackslash{}bug commands respectively. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_ref_list_a53383174c5d9adbffbfaf6b7680b5d34}{}\index{Ref\+List@{Ref\+List}!Ref\+List@{Ref\+List}}
+\index{Ref\+List@{Ref\+List}!Ref\+List@{Ref\+List}}
+\subsubsection[{Ref\+List(const char $\ast$list\+Name, const char $\ast$page\+Title, const char $\ast$sec\+Title)}]{\setlength{\rightskip}{0pt plus 5cm}Ref\+List\+::\+Ref\+List (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{list\+Name, }
+\item[{const char $\ast$}]{page\+Title, }
+\item[{const char $\ast$}]{sec\+Title}
+\end{DoxyParamCaption}
+)}\label{class_ref_list_a53383174c5d9adbffbfaf6b7680b5d34}
+Create a list of items that are cross referenced with documentation blocks 
+\begin{DoxyParams}{Paramètres}
+{\em list\+Name} & \hyperlink{class_string}{String} representing the name of the list. \\
+\hline
+{\em page\+Title} & \hyperlink{class_string}{String} representing the title of the list page. \\
+\hline
+{\em sec\+Title} & \hyperlink{class_string}{String} representing the title of the section. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ref_list_a24ed19af8e396ebb4c196ab7a6805901}{}\index{Ref\+List@{Ref\+List}!````~Ref\+List@{$\sim$\+Ref\+List}}
+\index{````~Ref\+List@{$\sim$\+Ref\+List}!Ref\+List@{Ref\+List}}
+\subsubsection[{$\sim$\+Ref\+List()}]{\setlength{\rightskip}{0pt plus 5cm}Ref\+List\+::$\sim$\+Ref\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_ref_list_a24ed19af8e396ebb4c196ab7a6805901}
+Destroy the todo list. Currently not called! 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_ref_list_ae3dccd8cef3a09ed34c6fb611766875b}{}\index{Ref\+List@{Ref\+List}!add\+Ref\+Item@{add\+Ref\+Item}}
+\index{add\+Ref\+Item@{add\+Ref\+Item}!Ref\+List@{Ref\+List}}
+\subsubsection[{add\+Ref\+Item()}]{\setlength{\rightskip}{0pt plus 5cm}int Ref\+List\+::add\+Ref\+Item (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_ref_list_ae3dccd8cef3a09ed34c6fb611766875b}
+Adds a new item to the list. \begin{DoxyReturn}{Renvoie}
+\hyperlink{class_a}{A} unique id for this item. 
+\end{DoxyReturn}
+\hypertarget{class_ref_list_a1fb6f991a5826241faab676ba08fb5e3}{}\index{Ref\+List@{Ref\+List}!generate\+Page@{generate\+Page}}
+\index{generate\+Page@{generate\+Page}!Ref\+List@{Ref\+List}}
+\subsubsection[{generate\+Page()}]{\setlength{\rightskip}{0pt plus 5cm}void Ref\+List\+::generate\+Page (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_ref_list_a1fb6f991a5826241faab676ba08fb5e3}
+\hypertarget{class_ref_list_a065a043b7798849b1b97734b39ff3e85}{}\index{Ref\+List@{Ref\+List}!get\+First\+Ref\+Item@{get\+First\+Ref\+Item}}
+\index{get\+First\+Ref\+Item@{get\+First\+Ref\+Item}!Ref\+List@{Ref\+List}}
+\subsubsection[{get\+First\+Ref\+Item()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ref\+Item} $\ast$ Ref\+List\+::get\+First\+Ref\+Item (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_ref_list_a065a043b7798849b1b97734b39ff3e85}
+Returns the first item in the dictionary or 0 if non is available. Items are not sorted. \hypertarget{class_ref_list_a29659cc06bbde1e0b3a2b968ae333927}{}\index{Ref\+List@{Ref\+List}!get\+Next\+Ref\+Item@{get\+Next\+Ref\+Item}}
+\index{get\+Next\+Ref\+Item@{get\+Next\+Ref\+Item}!Ref\+List@{Ref\+List}}
+\subsubsection[{get\+Next\+Ref\+Item()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ref\+Item} $\ast$ Ref\+List\+::get\+Next\+Ref\+Item (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_ref_list_a29659cc06bbde1e0b3a2b968ae333927}
+Returns the next item in the dictionary or 0 if we are at the end of the list. Items are not sorted. \hypertarget{class_ref_list_af047154431d78b27f413e14cadc1d15e}{}\index{Ref\+List@{Ref\+List}!get\+Ref\+Item@{get\+Ref\+Item}}
+\index{get\+Ref\+Item@{get\+Ref\+Item}!Ref\+List@{Ref\+List}}
+\subsubsection[{get\+Ref\+Item(int todo\+Item\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ref\+Item} $\ast$ Ref\+List\+::get\+Ref\+Item (
+\begin{DoxyParamCaption}
+\item[{int}]{item\+Id}
+\end{DoxyParamCaption}
+)}\label{class_ref_list_af047154431d78b27f413e14cadc1d15e}
+Returns an item given it\textquotesingle{}s id that is obtained with \hyperlink{class_ref_list_ae3dccd8cef3a09ed34c6fb611766875b}{add\+Ref\+Item()} 
+\begin{DoxyParams}{Paramètres}
+{\em item\+Id} & item\textquotesingle{}s identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{class_a}{A} pointer to the todo item\textquotesingle{}s structure. 
+\end{DoxyReturn}
+\hypertarget{class_ref_list_ab6dc34e95c0e8c36a07fe57de27fc6dd}{}\index{Ref\+List@{Ref\+List}!insert\+Into\+List@{insert\+Into\+List}}
+\index{insert\+Into\+List@{insert\+Into\+List}!Ref\+List@{Ref\+List}}
+\subsubsection[{insert\+Into\+List(const char $\ast$key, Ref\+Item $\ast$item)}]{\setlength{\rightskip}{0pt plus 5cm}void Ref\+List\+::insert\+Into\+List (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{{\bf Ref\+Item} $\ast$}]{item}
+\end{DoxyParamCaption}
+)}\label{class_ref_list_ab6dc34e95c0e8c36a07fe57de27fc6dd}
+\hypertarget{class_ref_list_a2ab3866977ce58fab559d6f03d7a5d4c}{}\index{Ref\+List@{Ref\+List}!list\+Name@{list\+Name}}
+\index{list\+Name@{list\+Name}!Ref\+List@{Ref\+List}}
+\subsubsection[{list\+Name() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Ref\+List\+::list\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_ref_list_a2ab3866977ce58fab559d6f03d7a5d4c}
+Returns the name of the list as set in the constructor. \hypertarget{class_ref_list_a03cb43018d1d4c530efdf823fb001a74}{}\index{Ref\+List@{Ref\+List}!page\+Title@{page\+Title}}
+\index{page\+Title@{page\+Title}!Ref\+List@{Ref\+List}}
+\subsubsection[{page\+Title() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Ref\+List\+::page\+Title (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_ref_list_a03cb43018d1d4c530efdf823fb001a74}
+\hypertarget{class_ref_list_a1117ef561ab6571432c676ce57d6d49c}{}\index{Ref\+List@{Ref\+List}!section\+Title@{section\+Title}}
+\index{section\+Title@{section\+Title}!Ref\+List@{Ref\+List}}
+\subsubsection[{section\+Title() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Ref\+List\+::section\+Title (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_ref_list_a1117ef561ab6571432c676ce57d6d49c}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{reflist_8h}{reflist.\+h}\item 
+src/\hyperlink{reflist_8cpp}{reflist.\+cpp}\end{DoxyCompactItemize}

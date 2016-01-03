@@ -1,0 +1,129 @@
+\hypertarget{qcstring_8cpp}{}\section{Référence du fichier qtools/qcstring.cpp}
+\label{qcstring_8cpp}\index{qtools/qcstring.\+cpp@{qtools/qcstring.\+cpp}}
+{\ttfamily \#include \char`\"{}qcstring.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}qgstring.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$qstring.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdarg.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$qregexp.\+h$>$}\\*
+{\ttfamily \#include $<$qdatastream.\+h$>$}\\*
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{qcstring_8cpp_a21ef2b35159aac99237b964defb63d47}{qmemmove} (void $\ast$dst, const void $\ast$src, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+char $\ast$ \hyperlink{qcstring_8cpp_abdd6c227ab76c35389823f0b7f00e4a0}{qstrdup} (const char $\ast$str)
+\item 
+char $\ast$ \hyperlink{qcstring_8cpp_ae30da0d2256117302f02fb8734a51062}{qstrncpy} (char $\ast$dst, const char $\ast$src, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+int \hyperlink{qcstring_8cpp_a3fcf9e9f5dafe61787ad66adae5a1e85}{qstricmp} (const char $\ast$str1, const char $\ast$str2)
+\item 
+int \hyperlink{qcstring_8cpp_abb43189be0795527aeba8e2a8adb564c}{qstrnicmp} (const char $\ast$str1, const char $\ast$str2, \hyperlink{qglobal_8h_a4d3943ddea65db7163a58e6c7e8df95a}{uint} len)
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{qcstring_8cpp_ac86ff53b19794fef7fea8c936019daed}{operator$<$$<$} (\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, const \hyperlink{qcstring_8h_ad6a390648110655c217fe072d45fbcf5}{Q\+Byte\+Array} \&\hyperlink{060__command__switch_8tcl_ab08ae027fc5777bc4f0629f1b60b35db}{a})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{qcstring_8cpp_ad46210d808387580fac7cc9663513c2b}{operator$>$$>$} (\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{qcstring_8h_ad6a390648110655c217fe072d45fbcf5}{Q\+Byte\+Array} \&\hyperlink{060__command__switch_8tcl_ab08ae027fc5777bc4f0629f1b60b35db}{a})
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{qcstring_8cpp_a1086f50b13b9df831442aaf7fa8e3898}{operator$<$$<$} (\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, const \hyperlink{class_q_c_string}{Q\+C\+String} \&str)
+\item 
+\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \& \hyperlink{qcstring_8cpp_a381c5ce14bc646d5f0ccdbfae0f8637c}{operator$>$$>$} (\hyperlink{class_q_data_stream}{Q\+Data\+Stream} \&\hyperlink{060__command__switch_8tcl_a011c73f2dbb87635a3b4206c72355f6e}{s}, \hyperlink{class_q_c_string}{Q\+C\+String} \&str)
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{qcstring_8cpp_a5fb5736e56e0c7707364330ddb9e1f1a}{operator+} (const \hyperlink{class_q_c_string}{Q\+C\+String} \&s1, const \hyperlink{class_q_g_string}{Q\+G\+String} \&s2)
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{qcstring_8cpp_a566aa96c288112fd66cf8f42d06e2842}{operator+} (const \hyperlink{class_q_g_string}{Q\+G\+String} \&s1, const \hyperlink{class_q_c_string}{Q\+C\+String} \&s2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{qcstring_8cpp_a5fb5736e56e0c7707364330ddb9e1f1a}{}\index{qcstring.\+cpp@{qcstring.\+cpp}!operator+@{operator+}}
+\index{operator+@{operator+}!qcstring.\+cpp@{qcstring.\+cpp}}
+\subsubsection[{operator+(const Q\+C\+String \&s1, const Q\+G\+String \&s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+C\+String} \&}]{s1, }
+\item[{const {\bf Q\+G\+String} \&}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8cpp_a5fb5736e56e0c7707364330ddb9e1f1a}
+\hypertarget{qcstring_8cpp_a566aa96c288112fd66cf8f42d06e2842}{}\index{qcstring.\+cpp@{qcstring.\+cpp}!operator+@{operator+}}
+\index{operator+@{operator+}!qcstring.\+cpp@{qcstring.\+cpp}}
+\subsubsection[{operator+(const Q\+G\+String \&s1, const Q\+C\+String \&s2)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\+G\+String} \&}]{s1, }
+\item[{const {\bf Q\+C\+String} \&}]{s2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{qcstring_8cpp_a566aa96c288112fd66cf8f42d06e2842}
+\hypertarget{qcstring_8cpp_ac86ff53b19794fef7fea8c936019daed}{}\index{qcstring.\+cpp@{qcstring.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!qcstring.\+cpp@{qcstring.\+cpp}}
+\subsubsection[{operator$<$$<$(\+Q\+Data\+Stream \&s, const Q\+Byte\+Array \&a)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream}\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Data\+Stream} \&}]{s, }
+\item[{const {\bf Q\+Byte\+Array} \&}]{a}
+\end{DoxyParamCaption}
+)}\label{qcstring_8cpp_ac86ff53b19794fef7fea8c936019daed}
+\hypertarget{qcstring_8cpp_a1086f50b13b9df831442aaf7fa8e3898}{}\index{qcstring.\+cpp@{qcstring.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!qcstring.\+cpp@{qcstring.\+cpp}}
+\subsubsection[{operator$<$$<$(\+Q\+Data\+Stream \&s, const Q\+C\+String \&str)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream}\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Data\+Stream} \&}]{s, }
+\item[{const {\bf Q\+C\+String} \&}]{str}
+\end{DoxyParamCaption}
+)}\label{qcstring_8cpp_a1086f50b13b9df831442aaf7fa8e3898}
+\hypertarget{qcstring_8cpp_ad46210d808387580fac7cc9663513c2b}{}\index{qcstring.\+cpp@{qcstring.\+cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!qcstring.\+cpp@{qcstring.\+cpp}}
+\subsubsection[{operator$>$$>$(\+Q\+Data\+Stream \&s, Q\+Byte\+Array \&a)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream}\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Data\+Stream} \&}]{s, }
+\item[{{\bf Q\+Byte\+Array} \&}]{a}
+\end{DoxyParamCaption}
+)}\label{qcstring_8cpp_ad46210d808387580fac7cc9663513c2b}
+\hypertarget{qcstring_8cpp_a381c5ce14bc646d5f0ccdbfae0f8637c}{}\index{qcstring.\+cpp@{qcstring.\+cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!qcstring.\+cpp@{qcstring.\+cpp}}
+\subsubsection[{operator$>$$>$(\+Q\+Data\+Stream \&s, Q\+C\+String \&str)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Data\+Stream}\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Data\+Stream} \&}]{s, }
+\item[{{\bf Q\+C\+String} \&}]{str}
+\end{DoxyParamCaption}
+)}\label{qcstring_8cpp_a381c5ce14bc646d5f0ccdbfae0f8637c}
+\hypertarget{qcstring_8cpp_a21ef2b35159aac99237b964defb63d47}{}\index{qcstring.\+cpp@{qcstring.\+cpp}!qmemmove@{qmemmove}}
+\index{qmemmove@{qmemmove}!qcstring.\+cpp@{qcstring.\+cpp}}
+\subsubsection[{qmemmove(void $\ast$dst, const void $\ast$src, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ qmemmove (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{dst, }
+\item[{const void $\ast$}]{src, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)}\label{qcstring_8cpp_a21ef2b35159aac99237b964defb63d47}
+\hypertarget{qcstring_8cpp_abdd6c227ab76c35389823f0b7f00e4a0}{}\index{qcstring.\+cpp@{qcstring.\+cpp}!qstrdup@{qstrdup}}
+\index{qstrdup@{qstrdup}!qcstring.\+cpp@{qcstring.\+cpp}}
+\subsubsection[{qstrdup(const char $\ast$str)}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ qstrdup (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\label{qcstring_8cpp_abdd6c227ab76c35389823f0b7f00e4a0}
+\hypertarget{qcstring_8cpp_a3fcf9e9f5dafe61787ad66adae5a1e85}{}\index{qcstring.\+cpp@{qcstring.\+cpp}!qstricmp@{qstricmp}}
+\index{qstricmp@{qstricmp}!qcstring.\+cpp@{qcstring.\+cpp}}
+\subsubsection[{qstricmp(const char $\ast$str1, const char $\ast$str2)}]{\setlength{\rightskip}{0pt plus 5cm}int qstricmp (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str1, }
+\item[{const char $\ast$}]{str2}
+\end{DoxyParamCaption}
+)}\label{qcstring_8cpp_a3fcf9e9f5dafe61787ad66adae5a1e85}
+\hypertarget{qcstring_8cpp_ae30da0d2256117302f02fb8734a51062}{}\index{qcstring.\+cpp@{qcstring.\+cpp}!qstrncpy@{qstrncpy}}
+\index{qstrncpy@{qstrncpy}!qcstring.\+cpp@{qcstring.\+cpp}}
+\subsubsection[{qstrncpy(char $\ast$dst, const char $\ast$src, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ qstrncpy (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dst, }
+\item[{const char $\ast$}]{src, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)}\label{qcstring_8cpp_ae30da0d2256117302f02fb8734a51062}
+\hypertarget{qcstring_8cpp_abb43189be0795527aeba8e2a8adb564c}{}\index{qcstring.\+cpp@{qcstring.\+cpp}!qstrnicmp@{qstrnicmp}}
+\index{qstrnicmp@{qstrnicmp}!qcstring.\+cpp@{qcstring.\+cpp}}
+\subsubsection[{qstrnicmp(const char $\ast$str1, const char $\ast$str2, uint len)}]{\setlength{\rightskip}{0pt plus 5cm}int qstrnicmp (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str1, }
+\item[{const char $\ast$}]{str2, }
+\item[{{\bf uint}}]{len}
+\end{DoxyParamCaption}
+)}\label{qcstring_8cpp_abb43189be0795527aeba8e2a8adb564c}

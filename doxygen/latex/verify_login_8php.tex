@@ -1,0 +1,66 @@
+\hypertarget{verify_login_8php}{\section{Référence du fichier /home/www/public\-\_\-html/dev/controllers/account/log\-\_\-in/verify\-Login.php}
+\label{verify_login_8php}\index{/home/www/public\-\_\-html/dev/controllers/account/log\-\_\-in/verify\-Login.\-php@{/home/www/public\-\_\-html/dev/controllers/account/log\-\_\-in/verify\-Login.\-php}}
+}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{forgot__password__result_8php_ab625f12aec73d0a4f0bc8286f088ec1f}{if}(verify\-Username\-Login()\&\&\hyperlink{verify_login_8php_a969d3c0f7b25cfb69ecbcf931f97a5f8}{verify\-Password\-Login}()) \hyperlink{verify_login_8php_a6ba56bf7fdae3fb98a0f1ee818d5ac8a}{verify\-Username\-Login} ()
+\item 
+\hyperlink{verify_login_8php_a969d3c0f7b25cfb69ecbcf931f97a5f8}{verify\-Password\-Login} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{verify_login_8php_a84dc6f144c3be815ccad38c60fa27409}{\$\-Pseudo\-\_\-login} = N\-U\-L\-L
+\item 
+\hyperlink{verify_login_8php_a86bc4d20608407aa4b4a7940aaef6002}{\$\-Password\-\_\-login} = N\-U\-L\-L
+\item 
+\hyperlink{verify_login_8php_a5767baa45643e3308557b6235c1624f3}{\$acces\-\_\-granted} = N\-U\-L\-L
+\item 
+\hyperlink{verify_login_8php_a77cc6ebf3902e67557ab5de9317a11c2}{\$\-User} = new \hyperlink{class_user}{User}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{verify_login_8php_a969d3c0f7b25cfb69ecbcf931f97a5f8}{\index{verify\-Login.\-php@{verify\-Login.\-php}!verify\-Password\-Login@{verify\-Password\-Login}}
+\index{verify\-Password\-Login@{verify\-Password\-Login}!verifyLogin.php@{verify\-Login.\-php}}
+\subsubsection[{verify\-Password\-Login}]{\setlength{\rightskip}{0pt plus 5cm}verify\-Password\-Login (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{verify_login_8php_a969d3c0f7b25cfb69ecbcf931f97a5f8}
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{verify_login_8php_a969d3c0f7b25cfb69ecbcf931f97a5f8}{verify\-Password\-Login()} Password field can't be empty 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Renvoie}
+boolean F\-A\-L\-S\-E == empty, T\-R\-U\-E == Filled 
+\end{DoxyReturn}
+\hypertarget{verify_login_8php_a6ba56bf7fdae3fb98a0f1ee818d5ac8a}{\index{verify\-Login.\-php@{verify\-Login.\-php}!verify\-Username\-Login@{verify\-Username\-Login}}
+\index{verify\-Username\-Login@{verify\-Username\-Login}!verifyLogin.php@{verify\-Login.\-php}}
+\subsubsection[{verify\-Username\-Login}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} (verify\-Username\-Login()\&\&{\bf verify\-Password\-Login}()) verify\-Username\-Login (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{verify_login_8php_a6ba56bf7fdae3fb98a0f1ee818d5ac8a}
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{verify_login_8php_a6ba56bf7fdae3fb98a0f1ee818d5ac8a}{verify\-Username\-Login()} \hyperlink{class_user}{User} field can't be empty 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Renvoie}
+boolean F\-A\-L\-S\-E == empty, T\-R\-U\-E == Filled 
+\end{DoxyReturn}
+$<$ P\-H\-P session 
+
+\subsection{Documentation des variables}
+\hypertarget{verify_login_8php_a5767baa45643e3308557b6235c1624f3}{\index{verify\-Login.\-php@{verify\-Login.\-php}!\$acces\-\_\-granted@{\$acces\-\_\-granted}}
+\index{\$acces\-\_\-granted@{\$acces\-\_\-granted}!verifyLogin.php@{verify\-Login.\-php}}
+\subsubsection[{\$acces\-\_\-granted}]{\setlength{\rightskip}{0pt plus 5cm}\$acces\-\_\-granted = N\-U\-L\-L}}\label{verify_login_8php_a5767baa45643e3308557b6235c1624f3}
+Acces granted or denied \hypertarget{verify_login_8php_a86bc4d20608407aa4b4a7940aaef6002}{\index{verify\-Login.\-php@{verify\-Login.\-php}!\$\-Password\-\_\-login@{\$\-Password\-\_\-login}}
+\index{\$\-Password\-\_\-login@{\$\-Password\-\_\-login}!verifyLogin.php@{verify\-Login.\-php}}
+\subsubsection[{\$\-Password\-\_\-login}]{\setlength{\rightskip}{0pt plus 5cm}\$Password\-\_\-login = N\-U\-L\-L}}\label{verify_login_8php_a86bc4d20608407aa4b4a7940aaef6002}
+Password of username (tempo.) \hypertarget{verify_login_8php_a84dc6f144c3be815ccad38c60fa27409}{\index{verify\-Login.\-php@{verify\-Login.\-php}!\$\-Pseudo\-\_\-login@{\$\-Pseudo\-\_\-login}}
+\index{\$\-Pseudo\-\_\-login@{\$\-Pseudo\-\_\-login}!verifyLogin.php@{verify\-Login.\-php}}
+\subsubsection[{\$\-Pseudo\-\_\-login}]{\setlength{\rightskip}{0pt plus 5cm}\$Pseudo\-\_\-login = N\-U\-L\-L}}\label{verify_login_8php_a84dc6f144c3be815ccad38c60fa27409}
+Username \hypertarget{verify_login_8php_a77cc6ebf3902e67557ab5de9317a11c2}{\index{verify\-Login.\-php@{verify\-Login.\-php}!\$\-User@{\$\-User}}
+\index{\$\-User@{\$\-User}!verifyLogin.php@{verify\-Login.\-php}}
+\subsubsection[{\$\-User}]{\setlength{\rightskip}{0pt plus 5cm}\${\bf User} = new {\bf User}()}}\label{verify_login_8php_a77cc6ebf3902e67557ab5de9317a11c2}
+The \hyperlink{class_user}{User} object 

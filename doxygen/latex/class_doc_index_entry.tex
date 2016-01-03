@@ -1,0 +1,109 @@
+\hypertarget{class_doc_index_entry}{}\section{Référence de la classe Doc\+Index\+Entry}
+\label{class_doc_index_entry}\index{Doc\+Index\+Entry@{Doc\+Index\+Entry}}
+
+
+{\ttfamily \#include $<$docparser.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Doc\+Index\+Entry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doc_index_entry}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_index_entry_a9e5a1d9e1d68e7da638b3f87bc658a9d}{Doc\+Index\+Entry} (\hyperlink{class_doc_node}{Doc\+Node} $\ast$\hyperlink{class_doc_node_a990d8b983962776a647e6231d38bd329}{parent}, \hyperlink{class_definition}{Definition} $\ast$\hyperlink{class_doc_index_entry_adb25dfc3075c605bd043e665e20a40f0}{scope}, \hyperlink{class_member_def}{Member\+Def} $\ast$md)
+\item 
+\hyperlink{class_doc_node_aebd16e89ca590d84cbd40543ea5faadb}{Kind} \hyperlink{class_doc_index_entry_ad0521249b714be998798243d517e1a00}{kind} () const 
+\item 
+int \hyperlink{class_doc_index_entry_a32f8c84b803b04fd2de18d647593c8fe}{parse} ()
+\item 
+\hyperlink{class_definition}{Definition} $\ast$ \hyperlink{class_doc_index_entry_adb25dfc3075c605bd043e665e20a40f0}{scope} () const 
+\item 
+\hyperlink{class_member_def}{Member\+Def} $\ast$ \hyperlink{class_doc_index_entry_a47f20499d08e7410b7b0635c1b58f574}{member} () const 
+\item 
+\hyperlink{class_q_c_string}{Q\+C\+String} \hyperlink{class_doc_index_entry_a76552fc2727e4dfc1d7240ba25694230}{entry} () const 
+\item 
+void \hyperlink{class_doc_index_entry_a509e4da75e8dbfaf40488509357c6e3c}{accept} (\hyperlink{class_doc_visitor}{Doc\+Visitor} $\ast$v)
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Node representing an entry in the index. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_doc_index_entry_a9e5a1d9e1d68e7da638b3f87bc658a9d}{}\index{Doc\+Index\+Entry@{Doc\+Index\+Entry}!Doc\+Index\+Entry@{Doc\+Index\+Entry}}
+\index{Doc\+Index\+Entry@{Doc\+Index\+Entry}!Doc\+Index\+Entry@{Doc\+Index\+Entry}}
+\subsubsection[{Doc\+Index\+Entry(\+Doc\+Node $\ast$parent, Definition $\ast$scope, Member\+Def $\ast$md)}]{\setlength{\rightskip}{0pt plus 5cm}Doc\+Index\+Entry\+::\+Doc\+Index\+Entry (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Node} $\ast$}]{parent, }
+\item[{{\bf Definition} $\ast$}]{scope, }
+\item[{{\bf Member\+Def} $\ast$}]{md}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_index_entry_a9e5a1d9e1d68e7da638b3f87bc658a9d}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_doc_index_entry_a509e4da75e8dbfaf40488509357c6e3c}{}\index{Doc\+Index\+Entry@{Doc\+Index\+Entry}!accept@{accept}}
+\index{accept@{accept}!Doc\+Index\+Entry@{Doc\+Index\+Entry}}
+\subsubsection[{accept(\+Doc\+Visitor $\ast$v)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Index\+Entry\+::accept (
+\begin{DoxyParamCaption}
+\item[{{\bf Doc\+Visitor} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_index_entry_a509e4da75e8dbfaf40488509357c6e3c}
+Acceptor function for node visitors. Part of the visitor pattern. 
+\begin{DoxyParams}{Paramètres}
+{\em v} & Abstract visitor. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_doc_node_a5303a550cbe6395663bf9b9dad28cbf1}{Doc\+Node}.
+
+\hypertarget{class_doc_index_entry_a76552fc2727e4dfc1d7240ba25694230}{}\index{Doc\+Index\+Entry@{Doc\+Index\+Entry}!entry@{entry}}
+\index{entry@{entry}!Doc\+Index\+Entry@{Doc\+Index\+Entry}}
+\subsubsection[{entry() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+C\+String} Doc\+Index\+Entry\+::entry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_index_entry_a76552fc2727e4dfc1d7240ba25694230}
+\hypertarget{class_doc_index_entry_ad0521249b714be998798243d517e1a00}{}\index{Doc\+Index\+Entry@{Doc\+Index\+Entry}!kind@{kind}}
+\index{kind@{kind}!Doc\+Index\+Entry@{Doc\+Index\+Entry}}
+\subsubsection[{kind() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kind} Doc\+Index\+Entry\+::kind (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_doc_index_entry_ad0521249b714be998798243d517e1a00}
+Returns the kind of node. Provides runtime type information 
+
+Implémente \hyperlink{class_doc_node_a92d4aaa169a813ded919aa858024c809}{Doc\+Node}.
+
+\hypertarget{class_doc_index_entry_a47f20499d08e7410b7b0635c1b58f574}{}\index{Doc\+Index\+Entry@{Doc\+Index\+Entry}!member@{member}}
+\index{member@{member}!Doc\+Index\+Entry@{Doc\+Index\+Entry}}
+\subsubsection[{member() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Member\+Def}$\ast$ Doc\+Index\+Entry\+::member (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_index_entry_a47f20499d08e7410b7b0635c1b58f574}
+\hypertarget{class_doc_index_entry_a32f8c84b803b04fd2de18d647593c8fe}{}\index{Doc\+Index\+Entry@{Doc\+Index\+Entry}!parse@{parse}}
+\index{parse@{parse}!Doc\+Index\+Entry@{Doc\+Index\+Entry}}
+\subsubsection[{parse()}]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Index\+Entry\+::parse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_doc_index_entry_a32f8c84b803b04fd2de18d647593c8fe}
+\hypertarget{class_doc_index_entry_adb25dfc3075c605bd043e665e20a40f0}{}\index{Doc\+Index\+Entry@{Doc\+Index\+Entry}!scope@{scope}}
+\index{scope@{scope}!Doc\+Index\+Entry@{Doc\+Index\+Entry}}
+\subsubsection[{scope() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Definition}$\ast$ Doc\+Index\+Entry\+::scope (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_doc_index_entry_adb25dfc3075c605bd043e665e20a40f0}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{docparser_8h}{docparser.\+h}\item 
+src/\hyperlink{docparser_8cpp}{docparser.\+cpp}\end{DoxyCompactItemize}

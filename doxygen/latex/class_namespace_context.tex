@@ -1,0 +1,85 @@
+\hypertarget{class_namespace_context}{}\section{Référence de la classe Namespace\+Context}
+\label{class_namespace_context}\index{Namespace\+Context@{Namespace\+Context}}
+
+
+{\ttfamily \#include $<$context.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Namespace\+Context\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_namespace_context}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_namespace_context_1_1_private}{Private}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_template_variant}{Template\+Variant} \hyperlink{class_namespace_context_ae8076ef0388a6ca106b263fd61774231}{get} (const char $\ast$name) const 
+\item 
+virtual int \hyperlink{class_namespace_context_a796dffc7c1fbe50fc7aeb9c6fd072205}{add\+Ref} ()
+\item 
+virtual int \hyperlink{class_namespace_context_ab7009613a99e733dd82347c46963808c}{release} ()
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_namespace_context}{Namespace\+Context} $\ast$ \hyperlink{class_namespace_context_a9e82bba7d2da7bef305c2a247f609591}{alloc} (\hyperlink{class_namespace_def}{Namespace\+Def} $\ast$nd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_namespace_context_a796dffc7c1fbe50fc7aeb9c6fd072205}{}\index{Namespace\+Context@{Namespace\+Context}!add\+Ref@{add\+Ref}}
+\index{add\+Ref@{add\+Ref}!Namespace\+Context@{Namespace\+Context}}
+\subsubsection[{add\+Ref()}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Namespace\+Context\+::add\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_namespace_context_a796dffc7c1fbe50fc7aeb9c6fd072205}
+Increase object\textquotesingle{}s reference count 
+
+Implémente \hyperlink{class_template_struct_intf_a05fe97ad47633beb326f69686faed581}{Template\+Struct\+Intf}.
+
+\hypertarget{class_namespace_context_a9e82bba7d2da7bef305c2a247f609591}{}\index{Namespace\+Context@{Namespace\+Context}!alloc@{alloc}}
+\index{alloc@{alloc}!Namespace\+Context@{Namespace\+Context}}
+\subsubsection[{alloc(\+Namespace\+Def $\ast$nd)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Namespace\+Context}$\ast$ Namespace\+Context\+::alloc (
+\begin{DoxyParamCaption}
+\item[{{\bf Namespace\+Def} $\ast$}]{nd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_namespace_context_a9e82bba7d2da7bef305c2a247f609591}
+\hypertarget{class_namespace_context_ae8076ef0388a6ca106b263fd61774231}{}\index{Namespace\+Context@{Namespace\+Context}!get@{get}}
+\index{get@{get}!Namespace\+Context@{Namespace\+Context}}
+\subsubsection[{get(const char $\ast$name) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Variant} Namespace\+Context\+::get (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_namespace_context_ae8076ef0388a6ca106b263fd61774231}
+Gets the value for a field name. 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em name} & The name of the field. \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{class_template_struct_intf_afd77683d121b5b6aebc8b6648c46ee20}{Template\+Struct\+Intf}.
+
+\hypertarget{class_namespace_context_ab7009613a99e733dd82347c46963808c}{}\index{Namespace\+Context@{Namespace\+Context}!release@{release}}
+\index{release@{release}!Namespace\+Context@{Namespace\+Context}}
+\subsubsection[{release()}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Namespace\+Context\+::release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_namespace_context_ab7009613a99e733dd82347c46963808c}
+Decreases object\textquotesingle{}s referenc count, destroy object if 0 
+
+Implémente \hyperlink{class_template_struct_intf_a3dce7dd29d3f66a8080b40578e8a5045}{Template\+Struct\+Intf}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{context_8h}{context.\+h}\item 
+src/\hyperlink{context_8cpp}{context.\+cpp}\end{DoxyCompactItemize}

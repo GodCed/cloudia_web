@@ -1,0 +1,199 @@
+\hypertarget{context_8cpp}{}\section{Référence du fichier src/context.cpp}
+\label{context_8cpp}\index{src/context.\+cpp@{src/context.\+cpp}}
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$qdir.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}context.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}index.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}classlist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doxygen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}namespacedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}filedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pagedef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}groupdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}version.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}language.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}message.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}vhdldocgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}filename.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dirdef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}docparser.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}htmlgen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}htmldocvisitor.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dot.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}diagram.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}example.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}membername.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}parserintf.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}portable.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}arguments.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_context_globals}{Context\+Globals}
+\item 
+class \hyperlink{class_scoped_ptr}{Scoped\+Ptr$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Scoped smart pointer. \end{DoxyCompactList}\item 
+class \hyperlink{class_shared_ptr}{Shared\+Ptr$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Reference counting smart pointer. \end{DoxyCompactList}\item 
+class \hyperlink{class_generic_const_iterator}{Generic\+Const\+Iterator}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_template}{Template} List iterator support. \end{DoxyCompactList}\item 
+class \hyperlink{class_generic_node_list_context}{Generic\+Node\+List\+Context}
+\begin{DoxyCompactList}\small\item\em standard template list implementation \end{DoxyCompactList}\item 
+class \hyperlink{class_property_mapper}{Property\+Mapper}
+\begin{DoxyCompactList}\small\item\em Helper class to map a property name to a handler member function. \end{DoxyCompactList}\item 
+class \hyperlink{class_config_context_1_1_private}{Config\+Context\+::\+Private}
+\item 
+class \hyperlink{class_doxygen_context_1_1_private}{Doxygen\+Context\+::\+Private}
+\item 
+class \hyperlink{class_translate_context_1_1_private}{Translate\+Context\+::\+Private}
+\item 
+class \hyperlink{class_definition_context}{Definition\+Context$<$ T $>$}
+\item 
+class \hyperlink{class_include_info_context_1_1_private}{Include\+Info\+Context\+::\+Private}
+\item 
+class \hyperlink{class_include_info_list_context_1_1_private}{Include\+Info\+List\+Context\+::\+Private}
+\item 
+class \hyperlink{class_class_context_1_1_private}{Class\+Context\+::\+Private}
+\item 
+class \hyperlink{class_namespace_context_1_1_private}{Namespace\+Context\+::\+Private}
+\item 
+class \hyperlink{class_file_context_1_1_private}{File\+Context\+::\+Private}
+\item 
+class \hyperlink{class_dir_context_1_1_private}{Dir\+Context\+::\+Private}
+\item 
+class \hyperlink{class_page_context_1_1_private}{Page\+Context\+::\+Private}
+\item 
+class \hyperlink{class_text_generator_html}{Text\+Generator\+Html}
+\item 
+class \hyperlink{class_text_generator_factory}{Text\+Generator\+Factory}
+\item 
+class \hyperlink{class_member_context_1_1_private}{Member\+Context\+::\+Private}
+\item 
+class \hyperlink{class_module_context_1_1_private}{Module\+Context\+::\+Private}
+\item 
+class \hyperlink{class_class_list_context_1_1_private}{Class\+List\+Context\+::\+Private}
+\item 
+class \hyperlink{class_class_index_context_1_1_private}{Class\+Index\+Context\+::\+Private}
+\item 
+class \hyperlink{class_class_hierarchy_context_1_1_private}{Class\+Hierarchy\+Context\+::\+Private}
+\item 
+class \hyperlink{class_nesting_node_context_1_1_private}{Nesting\+Node\+Context\+::\+Private}
+\item 
+class \hyperlink{class_nesting_context_1_1_private}{Nesting\+Context\+::\+Private}
+\item 
+class \hyperlink{class_class_tree_context_1_1_private}{Class\+Tree\+Context\+::\+Private}
+\item 
+class \hyperlink{class_namespace_list_context_1_1_private}{Namespace\+List\+Context\+::\+Private}
+\item 
+class \hyperlink{class_namespace_tree_context_1_1_private}{Namespace\+Tree\+Context\+::\+Private}
+\item 
+class \hyperlink{class_file_list_context_1_1_private}{File\+List\+Context\+::\+Private}
+\item 
+class \hyperlink{class_dir_list_context_1_1_private}{Dir\+List\+Context\+::\+Private}
+\item 
+class \hyperlink{class_used_files_context_1_1_private}{Used\+Files\+Context\+::\+Private}
+\item 
+class \hyperlink{class_file_tree_context_1_1_private}{File\+Tree\+Context\+::\+Private}
+\item 
+class \hyperlink{class_page_tree_context_1_1_private}{Page\+Tree\+Context\+::\+Private}
+\item 
+class \hyperlink{class_page_list_context_1_1_private}{Page\+List\+Context\+::\+Private}
+\item 
+class \hyperlink{class_module_list_context_1_1_private}{Module\+List\+Context\+::\+Private}
+\item 
+class \hyperlink{class_module_tree_context_1_1_private}{Module\+Tree\+Context\+::\+Private}
+\item 
+class \hyperlink{class_nav_path_elem_context_1_1_private}{Nav\+Path\+Elem\+Context\+::\+Private}
+\item 
+class \hyperlink{class_example_list_context_1_1_private}{Example\+List\+Context\+::\+Private}
+\item 
+class \hyperlink{class_globals_index_context_1_1_private}{Globals\+Index\+Context\+::\+Private}
+\item 
+class \hyperlink{class_class_members_index_context_1_1_private}{Class\+Members\+Index\+Context\+::\+Private}
+\item 
+class \hyperlink{class_namespace_members_index_context_1_1_private}{Namespace\+Members\+Index\+Context\+::\+Private}
+\item 
+class \hyperlink{class_inheritance_graph_context_1_1_private}{Inheritance\+Graph\+Context\+::\+Private}
+\item 
+class \hyperlink{class_inheritance_node_context_1_1_private}{Inheritance\+Node\+Context\+::\+Private}
+\item 
+class \hyperlink{class_inheritance_list_context_1_1_private}{Inheritance\+List\+Context\+::\+Private}
+\item 
+class \hyperlink{class_member_list_context_1_1_private}{Member\+List\+Context\+::\+Private}
+\item 
+class \hyperlink{class_member_info_context_1_1_private}{Member\+Info\+Context\+::\+Private}
+\item 
+class \hyperlink{class_all_members_list_context_1_1_private}{All\+Members\+List\+Context\+::\+Private}
+\item 
+class \hyperlink{class_member_group_info_context_1_1_private}{Member\+Group\+Info\+Context\+::\+Private}
+\item 
+class \hyperlink{class_member_group_list_context_1_1_private}{Member\+Group\+List\+Context\+::\+Private}
+\item 
+class \hyperlink{class_member_list_info_context_1_1_private}{Member\+List\+Info\+Context\+::\+Private}
+\item 
+class \hyperlink{class_inherited_member_info_context_1_1_private}{Inherited\+Member\+Info\+Context\+::\+Private}
+\item 
+class \hyperlink{class_inherited_member_info_list_context_1_1_private}{Inherited\+Member\+Info\+List\+Context\+::\+Private}
+\item 
+class \hyperlink{class_argument_context_1_1_private}{Argument\+Context\+::\+Private}
+\item 
+class \hyperlink{class_argument_list_context_1_1_private}{Argument\+List\+Context\+::\+Private}
+\item 
+class \hyperlink{class_html_escaper}{Html\+Escaper}
+\item 
+class \hyperlink{class_html_spaceless}{Html\+Spaceless}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{context_8cpp_a8f1a0ed62e6ffb13a524f49dee4f593b}{A\+D\+D\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y}(name)~add\+Property(\#name,this,\&Private\+::name);
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_template_variant}{Template\+Variant} \hyperlink{context_8cpp_a8d9199aef7496fd4b10853efbb7b4003}{create\+Linked\+Text} (\hyperlink{class_definition}{Definition} $\ast$def, const \hyperlink{class_q_c_string}{Q\+C\+String} \&rel\+Path, const \hyperlink{class_q_c_string}{Q\+C\+String} \&text)
+\item 
+void \hyperlink{context_8cpp_a8434e7e4dd13bb6f45b499a6f5de33b2}{generate\+Output\+Via\+Template} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_context_globals}{Context\+Globals} \hyperlink{context_8cpp_a724776344ddb439e21a1a2e39221c0b6}{g\+\_\+globals}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{context_8cpp_a8f1a0ed62e6ffb13a524f49dee4f593b}{}\index{context.\+cpp@{context.\+cpp}!A\+D\+D\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y@{A\+D\+D\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y}}
+\index{A\+D\+D\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y@{A\+D\+D\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y}!context.\+cpp@{context.\+cpp}}
+\subsubsection[{A\+D\+D\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+D\+D\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y(
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)~add\+Property(\#name,this,\&Private\+::name);}\label{context_8cpp_a8f1a0ed62e6ffb13a524f49dee4f593b}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{context_8cpp_a8d9199aef7496fd4b10853efbb7b4003}{}\index{context.\+cpp@{context.\+cpp}!create\+Linked\+Text@{create\+Linked\+Text}}
+\index{create\+Linked\+Text@{create\+Linked\+Text}!context.\+cpp@{context.\+cpp}}
+\subsubsection[{create\+Linked\+Text(\+Definition $\ast$def, const Q\+C\+String \&rel\+Path, const Q\+C\+String \&text)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Template\+Variant} create\+Linked\+Text (
+\begin{DoxyParamCaption}
+\item[{{\bf Definition} $\ast$}]{def, }
+\item[{const {\bf Q\+C\+String} \&}]{rel\+Path, }
+\item[{const {\bf Q\+C\+String} \&}]{text}
+\end{DoxyParamCaption}
+)}\label{context_8cpp_a8d9199aef7496fd4b10853efbb7b4003}
+\hypertarget{context_8cpp_a8434e7e4dd13bb6f45b499a6f5de33b2}{}\index{context.\+cpp@{context.\+cpp}!generate\+Output\+Via\+Template@{generate\+Output\+Via\+Template}}
+\index{generate\+Output\+Via\+Template@{generate\+Output\+Via\+Template}!context.\+cpp@{context.\+cpp}}
+\subsubsection[{generate\+Output\+Via\+Template()}]{\setlength{\rightskip}{0pt plus 5cm}void generate\+Output\+Via\+Template (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{context_8cpp_a8434e7e4dd13bb6f45b499a6f5de33b2}
+
+
+\subsection{Documentation des variables}
+\hypertarget{context_8cpp_a724776344ddb439e21a1a2e39221c0b6}{}\index{context.\+cpp@{context.\+cpp}!g\+\_\+globals@{g\+\_\+globals}}
+\index{g\+\_\+globals@{g\+\_\+globals}!context.\+cpp@{context.\+cpp}}
+\subsubsection[{g\+\_\+globals}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf Context\+Globals}  g\+\_\+globals}\label{context_8cpp_a724776344ddb439e21a1a2e39221c0b6}
